@@ -1,0 +1,16 @@
+[29-Oct-2015 07:06:05 UTC] PHP Fatal error:  Call to undefined function Illuminate\Foundation\Bootstrap\mb_internal_encoding() in /home/buttoncommission/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php on line 43
+[29-Oct-2015 07:15:29 UTC] PHP Fatal error:  Call to undefined function Illuminate\Foundation\Bootstrap\mb_internal_encoding() in /home/buttoncommission/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php on line 43
+[29-Oct-2015 07:15:31 UTC] PHP Fatal error:  Call to undefined function Illuminate\Foundation\Bootstrap\mb_internal_encoding() in /home/buttoncommission/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php on line 43
+[29-Oct-2015 08:32:39 UTC] PHP Fatal error:  Call to undefined function Illuminate\Foundation\Bootstrap\mb_internal_encoding() in /home/buttoncommission/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php on line 43
+[29-Oct-2015 10:49:16 UTC] PHP Fatal error:  Call to undefined function Illuminate\Validation\mb_strlen() in /home/buttoncommission/vendor/laravel/framework/src/Illuminate/Validation/Validator.php on line 987
+[29-Oct-2015 11:05:09 UTC] PHP Fatal error:  Call to undefined function Illuminate\Validation\mb_strlen() in /home/buttoncommission/vendor/laravel/framework/src/Illuminate/Validation/Validator.php on line 987
+[29-Oct-2015 11:05:14 UTC] PHP Fatal error:  Call to undefined function Illuminate\Validation\mb_strlen() in /home/buttoncommission/vendor/laravel/framework/src/Illuminate/Validation/Validator.php on line 987
+[29-Oct-2015 12:55:04 UTC] PHP Fatal error:  Call to a member function fullSlug() on a non-object in /home/buttoncommission/storage/framework/views/a9f7bb10d66c03716b7180f3900d4102-EN on line 3
+[29-Oct-2015 12:55:48 UTC] PHP Fatal error:  Call to a member function fullSlug() on a non-object in /home/buttoncommission/storage/framework/views/a9f7bb10d66c03716b7180f3900d4102-EN on line 3
+[29-Oct-2015 13:01:07 UTC] PHP Fatal error:  Call to a member function fullSlug() on a non-object in /home/buttoncommission/storage/framework/views/a9f7bb10d66c03716b7180f3900d4102-EN on line 3
+[29-Oct-2015 13:08:39 UTC] PHP Fatal error:  Call to a member function fullSlug() on a non-object in /home/buttoncommission/storage/framework/views/a9f7bb10d66c03716b7180f3900d4102-EN on line 3
+[29-Oct-2015 13:09:33 UTC] PHP Fatal error:  Call to a member function fullSlug() on a non-object in /home/buttoncommission/storage/framework/views/a9f7bb10d66c03716b7180f3900d4102-EN on line 3
+[29-Oct-2015 13:54:13 UTC] PHP Fatal error:  Call to a member function fullSlug() on a non-object in /home/buttoncommission/storage/framework/views/a9f7bb10d66c03716b7180f3900d4102-EN on line 3
+[29-Oct-2015 13:59:23 UTC] PHP Fatal error:  Call to a member function fullSlug() on a non-object in /home/buttoncommission/storage/framework/views/a9f7bb10d66c03716b7180f3900d4102-EN on line 3
+[29-Oct-2015 14:01:07 UTC] PHP Fatal error:  Call to a member function fullSlug() on a non-object in /home/buttoncommission/storage/framework/views/a9f7bb10d66c03716b7180f3900d4102-EN on line 4
+[29-Oct-2015 14:01:14 UTC] PHP Fatal error:  Call to a member function fullSlug() on a non-object in /home/buttoncommission/storage/framework/views/a9f7bb10d66c03716b7180f3900d4102-EN on line 4

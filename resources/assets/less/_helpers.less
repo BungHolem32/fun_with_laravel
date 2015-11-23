@@ -1,0 +1,43 @@
+@import "animate/animate";
+
+.rt{
+  float: @right;
+}
+.lt{
+  float: @left;
+}
+
+.marg-t{margin-top: 1em;}
+.marg-b{margin-bottom: 1em;}
+.marg-l{margin-left: 1em;}
+.marg-r{margin-right: 1em;}
+.padd-t{padding-top: 1em;}
+.padd-b{padding-bottom: 1em;}
+.padd-l{padding-left: 1em;}
+.padd-r{padding-right: 1em;}
+.marg-db-t{margin-top: 2em;}
+.marg-db-b{margin-bottom: 2em;}
+.marg-db-l{margin-left: 2em;}
+.marg-db-r{margin-right: 2em;}
+.padd-db-t{padding-top: 2em;}
+.padd-db-b{padding-bottom: 2em;}
+.padd-db-l{padding-left: 2em;}
+.padd-db-r{padding-right: 2em;}
+.marg-hf-t{margin-top: 0.5em;}
+.marg-hf-b{margin-bottom: 0.5em;}
+.marg-hf-l{margin-left: 0.5em;}
+.marg-hf-r{margin-right: 0.5em;}
+.padd-hf-t{padding-top: 0.5em;}
+.padd-hf-b{padding-bottom: 0.5em;}
+.padd-hf-l{padding-left: 0.5em;}
+.padd-hf-r{padding-right: 0.5em;}
+
+
+.generate-widths(@n, @i: 0) when (@i =< @n) {
+  .w-@{i} {
+    width: percentage(@i / 100);
+    float: @left;
+  }
+  .generate-widths(@n, (@i + 5));
+}
+.generate-widths(100);

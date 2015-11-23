@@ -1,0 +1,121 @@
+body {
+    background-color: #111111;
+    background: rgba(0, 0, 0, 0) url("/img/clean/newback.jpg") repeat-x scroll 0 0;
+    display: compact;
+    height: 100%;
+}
+.yellow{
+
+    color:#F2B31D;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    font-weight: 500;
+}
+.monitor{
+    background: url("/img/clean/monitor.png");
+    background-repeat: no-repeat;
+    background-size: 682px 501px;
+    text-align: center;
+    background-position: center 0;
+}
+p{
+    text-align: center;
+}
+.video{
+    padding-top: 19px;
+    margin-bottom: 19px;
+}
+.hov{
+    margin-bottom: 65px;
+}
+.hov:hover {
+    opacity: 0.95;
+}
+.style1 {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+
+}
+.style2 {
+    color: #FF0000;
+    font-size: 36px;
+}
+.style3 {
+    color: #FFFF00;
+    font-size: 36px;
+}
+.style4 {color: #FFFFFF}
+
+
+
+.formwrap > .container{
+    text-align: center;
+    max-width: 625px;
+}
+.field{
+    margin-bottom: 5px;
+}
+.field > input, .field > select{
+    height: 44px;
+}
+
+.phoneFields > input {
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+
+
+
+
+/**   FORM STUFF BELOW  **/
+/*.valid input#phone{
+    background-color: #A2F3A2 !important;
+    !*border: #00A000 !important;*!
+}
+.error input#phone{
+    background-color: #F1C0C0 !important;
+    border: 1px solid #A00000 !important;
+}*/
+input#submit{
+    background-color: #F3BB34;
+    border: #000;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+}
+input#submit:hover{
+    background-color: #F3BB11;
+}
+
+
+
+input.error{
+    border: 1px solid #A00000;
+    background-color: #FFD7D7;
+}
+input.valid{
+    border: 1px solid #00A000;
+    background-color: #E4FFE4;
+}
+label.error{
+    color: red;
+    font-weight: normal;
+}
+
+div.loading {
+    position: relative;
+    background-color: #1C1C1C;
+    height: 172px;
+    top: -148px;
+    color: #fff;
+    font-size: 40px;
+}

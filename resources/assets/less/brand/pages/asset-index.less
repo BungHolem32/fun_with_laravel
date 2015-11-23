@@ -1,0 +1,124 @@
+
+.content-asset-index{
+  background-color: transparent;
+  //padding: 20px;
+  margin-bottom: 40px;
+  border: none;
+}
+
+.asset-lobby{
+  & > div{
+
+    margin-bottom: 40px;
+
+    & > div {
+      border: 1px solid #e0dfdf;
+      background-color: #fff;
+      height: 510px;
+      vertical-align: bottom;
+
+      p.foot{
+        display: block;
+        text-align: center;
+        margin-top: 14px;
+        text-transform: capitalize;
+        font-size: 18px;
+        font-family: @roboto-con;
+      }
+    }
+
+    h3 {
+      border-bottom: 1px solid #e0dfdf;
+      background-color: #f3f3f3;
+      color: #000;
+      padding: 12px;
+      font-size: 30px;
+      margin: 0;
+    }
+
+
+    .asset{
+      height: 100px;
+      position: relative;
+      border-bottom: 1px solid #e0dfdf;
+      width: 95%;
+      margin: 0 auto;
+
+      img{
+        margin: 30px 7px 10px 0;
+        float: @left;
+        display: block;
+        width: 57px;
+
+      }
+      .asset-title{
+        display: block;
+        color: @link-color;
+        font-family: @roboto-con;
+        font-size: 26px;
+        margin-top: 27px;
+        float: @left;
+        text-transform: uppercase;
+        small{
+          color: @gray-lightest;
+          display: block;
+          margin-top: -5px;
+          font-size: 20px;
+          text-transform: capitalize;
+        }
+      }
+
+      .changes{
+        display: inline-block;
+        position: absolute;
+        .left(53%);
+        height: 100px;
+      }
+      .change {
+        background-color: #f2f2f2;
+        border-radius: 3px;
+        border: 1px solid #d4d4d4;
+        bottom: 12px;
+        padding: 2px 3px 2px 3px;
+        font-family: @roboto-con;
+        font-size: 15px;
+        box-shadow: inset 1px 1px #d4d4d4;
+        float: @left;
+        min-width: 69px;
+        margin-top: 60px;
+        .margin-right(10px);
+        text-align: center;
+      }
+
+      .rate{
+        display: block;
+        color: @black;
+        font-size: 28px;
+        float: @left;
+        margin-top: 54px;
+        text-align: @left;
+      }
+
+      .up, .dn{
+        &:before{
+          font-size: 16px;
+        }
+      }
+      .up:before{
+        color: #469c00;
+        content: @fa-var-arrow-up;
+      }
+      .dn:before{
+        color: #aa0a0a;
+        content: @fa-var-arrow-down;
+      }
+    }
+
+  }
+
+}
+
+.assets .asset-lobby .asset .changes{
+  .left(auto);
+  .right(1%);
+}
