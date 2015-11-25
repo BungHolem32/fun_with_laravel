@@ -89,6 +89,7 @@ foreach($form->membersFields->getChildren() as $field){
     {!! $page->appendAsset(url('/js/vendor/phonelib/phoneLib.js')) !!}--}}
     {{--{!! $page->appendAsset(url('/js/vendor/phonelib/libphonenumber.js')) !!}--}}
     <script src="/js/vendor/phonelib/libphonenumber.js"></script>
+    <script src="/js/vendor/phonelib/prefixes.js"></script>
     <script type="text/javascript">
         {{-- THIS IS FOR IP 2 COUNTRY--}}
         var iso;
@@ -110,7 +111,11 @@ foreach($form->membersFields->getChildren() as $field){
         @if($form->switches->phoneLibCheck)
         {{-- THIS IS PHONE CHECK--}}
             $('#phone').on('keyup', function(){
-                $(this).valid();
+                $(this).valid(); // check phone validation
+            });
+            $('#prefix').on('keyup', function(){
+                 console.log(prefix[$(this).val()]); // change iso by prefix
+                iso = prefix[$(this).val()];
             });
             $.validator.addMethod("phoneLibCheck", function(value, element) {
                 var phoneUtil = i18n.phonenumbers.PhoneNumberUtil.getInstance();
