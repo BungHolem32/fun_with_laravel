@@ -68,10 +68,12 @@ class SpotApi
             $newData[$key] = $value;
         }
         $newData['Phone'] = $data['prefix'].$data['phone'];
-        $newData['campaignId'] = '96';
+        $newData['campaign'] = isset($data['campaign']) ? $data['campaign'] : "103";
 
-        //dd($newData);
-        //$data['RegistrationCountry']='225'; // TODO: ip2country
+        $location = json_decode(file_get_contents('http://api-v2.rboptions.com/locator/'.\Request::ip()));
+        $newData['registrationCountry']=$location->countryId;
+
+
         return $newData;
     }
 }

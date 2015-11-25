@@ -14,7 +14,7 @@
             @include('funnels.layouts._partials._video')
 
             <p align="center">
-                <a href="@include('funnels.layouts._partials._url',['url'=>$page->getFirstChild()->fullSlug()])" target="_self">
+                <a href="@include('funnels.layouts._partials._url',['url'=>$page->getFirstChild()->fullSlug().'?'.$_SERVER["QUERY_STRING"]])" target="_self">
                     <img src="/img/clean/button-new2.png" width="464" height="85" border="0" class="hov" />
                 </a>
             </p>

@@ -5,11 +5,26 @@
 
     RewriteEngine On
 
+
     # Redirect Trailing Slashes...
-    RewriteRule ^(.*)/$ /$1 [L,R=301]
+  #  RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    #RewriteCond %{HTTP_HOST} ^(www.)?feed4thought.net$
+    #RewriteRule ^(/)?$ funnel-clean [L]
+
+   # RewriteCond %{HTTP_HOST} ^feed4thought.net
+    #RewriteRule ^(.*) http://feed4thought.net/funnel-clean/ [L]
+
+    #RewriteCond %{HTTP_HOST} ^feed4thought\.net [NC]
+    #RewriteRule ^(.*)$ http://buttoncommissions.com/funnel-clean/$1 [p]
+    #RewriteRule ^ /funnel-clean [P]
+    #RewriteRule ^$ /funnel-clean [P]
 
     # Handle Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+
+
+
 </IfModule>

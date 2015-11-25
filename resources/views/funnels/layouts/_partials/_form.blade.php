@@ -28,7 +28,7 @@ foreach($form->membersFields->getChildren() as $field){
             </span>
         </div>
 
-        {!! Form::open(['url' => url('postForm'),
+        {!! Form::open(['url' => url('postForm').'?'.$_SERVER["QUERY_STRING"],
                         'id'=>'form',
                         'name'=>'accountForm',
                         'target'=>'_self',
