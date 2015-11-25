@@ -40,6 +40,11 @@
     </div>--}}
 
     <div class="form-group">
+        <h3><i class="fa fa-info-circle"></i> {!! Form::label('thankyoupage', 'Thank you page:') !!}</h3><small></small>
+        {!! Form::textarea('thankyoupage', $page['thankyoupage'], ['name'=>'mongo[thankyoupage]', 'class'=>'editor form-control']) !!}
+    </div>
+
+    <div class="form-group">
         <h3><i class="fa fa-info-circle"></i> {!! Form::label('riskStatment', 'Risk Statment:') !!}</h3><small>pass rs=1 Param to display</small>
         {!! Form::textarea('riskStatment', $page['riskStatment'], ['name'=>'mongo[riskStatment]', 'class'=>'editor form-control']) !!}
     </div>

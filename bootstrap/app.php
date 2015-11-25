@@ -20,6 +20,7 @@ if(!function_exists('br2nl')){
             return preg_replace('/\<br(\s*)?\/?\>/i', "\n", $string);
     }
 }
+
 if(!function_exists('mb_internal_encoding')){
 	function mb_internal_encoding(){}
 }

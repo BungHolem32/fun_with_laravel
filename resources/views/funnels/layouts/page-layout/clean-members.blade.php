@@ -26,6 +26,14 @@
                 </div>
             @endif
 
+            @if($page->getRoot()->thankyoupage->get())
+                <div id="thankyou" class="thankyou">
+                    <div class="thankyouWrapper">
+                        <div class="thankyouContent">{!! $page->getRoot()->thankyoupage !!}</div>
+                    </div>
+                </div>
+            @endif
+
         </div>
     </div>
 @endsection

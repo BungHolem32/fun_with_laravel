@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(!function_exists('mb_internal_encoding')){
+	function mb_internal_encoding($type){}
+}
 mb_internal_encoding('UTF-8');
 date_default_timezone_set('Europe/Rome');
 

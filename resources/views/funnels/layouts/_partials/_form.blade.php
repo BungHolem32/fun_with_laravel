@@ -142,9 +142,10 @@ foreach($form->membersFields->getChildren() as $field){
                     },
                     success: function(res) {
                         if(res.err === 0){
+                            $('div#thankyou').show();
                             setTimeout(function(){
                                 window.location = res.destination;
-                            }, 3000);
+                            }, 4000);
                         }
                         else{
                             alert(res.errs.error);
