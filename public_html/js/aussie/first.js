@@ -102,14 +102,9 @@ $('.q-section').each(function() {
 });
 
 $(document).ready(function(){
-
     // Target your .container, .wrapper, .post, etc.
 
     $("#HeaderVideoBlock, #videoBlock").fitVids();
-
-    $(".fancybox").fancybox({openEffect  : "fade",
-        closeEffect : "fade",
-        type : "image"});
 
 });
 
