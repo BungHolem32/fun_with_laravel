@@ -23,7 +23,7 @@ class FunnelController extends Base\AbstractFunnelController {
         //return view('funnels.funnelClean')->with('page', $page);
     }*/
 
-    public function getPageLayouts(){
+    /*public function getPageLayouts(){
         $temp = [];
         foreach(\File::files(base_path().'/resources/views/funnels/layouts/page-layout') as $pageLayout){
             $exo = explode('/', $pageLayout);
@@ -32,5 +32,5 @@ class FunnelController extends Base\AbstractFunnelController {
             $temp[$cont] = $cont;
         }
         return $temp;
-    }
+    }*/
 }

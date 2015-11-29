@@ -4,6 +4,7 @@
 
 @section('page-layout')
     <div align="center">
+
         {!! $page->htmlHeader !!}
         {!! $page->smallHeader !!}
         <div align="center" class="monitor">
@@ -13,11 +14,14 @@
             </video>--}}
             @include('funnels.layouts._partials._video')
 
-            <p align="center">
-                <a href="@include('funnels.layouts._partials._url',['url'=>$page->getFirstChild()->fullSlug().'?'.$_SERVER["QUERY_STRING"]])" target="_self">
-                    <img src="/img/clean/button-new2.png" width="464" height="85" border="0" class="hov" />
-                </a>
-            </p>
+            <form id="firstPage" action="{{url('postEmailForm').'?'.$_SERVER["QUERY_STRING"]}}" align="center">
+            {{--<form id="firstPage" action="@include('funnels.layouts._partials._url',['url'=>$page->getFirstChild()->fullSlug().'?'.$_SERVER["QUERY_STRING"]])" align="center">--}}
+                    @if($page->switches->showEmailField)
+                        <input id="firstPageSignUpMail" type="email" name="firstPageSignUpMail" placeholder="Your Email:" required="required" />
+                    @endif
+                    <input class="hov" type="submit" />
+                </form>
+
             <p><img src="/img/clean/sealsgg9.png" width="412" height="60" /></p>
         </div>
 
@@ -41,5 +45,8 @@
             var exitsplashpage = '{{$page->onExitPopup->link}}'; //http://nana10.co.il'; //http://clickxo.com/LP/10kBONUS.php?a_aid=tenbonus';
         </script>
         <script language="javascript" src="/js/ExitSplashScript.js"></script>
+        {!! $page->appendAsset(url('/js/vendor/jquery-1.11.2.min.js')) !!}
+        {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
+        {!! $page->appendAsset(url('/js/firstPage.js')) !!}
     @endif
 @append

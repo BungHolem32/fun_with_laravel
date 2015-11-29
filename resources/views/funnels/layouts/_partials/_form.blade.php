@@ -84,7 +84,6 @@ foreach($form->membersFields->getChildren() as $field){
 @section('bottom-scripts')
     {!! $page->appendAsset(url('/js/vendor/jquery-1.11.2.min.js')) !!}
     {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
-    {!! $page->appendAsset(url('/js/form.js')) !!}
     {{--{!! $page->appendAsset(url('/js/vendor/phonelib/closure-library/closure/goog/base.js')) !!}
     {!! $page->appendAsset(url('/js/vendor/phonelib/phoneLib.js')) !!}--}}
     {{--{!! $page->appendAsset(url('/js/vendor/phonelib/libphonenumber.js')) !!}--}}
