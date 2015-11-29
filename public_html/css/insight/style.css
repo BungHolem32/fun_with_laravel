@@ -513,3 +513,9 @@ a.ubm_banner:hover {
 .cat-box-content > .wide-news-item:not(:first-child) {
     margin-left: 10.3px;
 }
+
+.post-meta *:before {
+    content: '' !important;
+    display: none !important;
+    visibility: hidden;
+}
