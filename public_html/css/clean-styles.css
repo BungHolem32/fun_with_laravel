@@ -144,3 +144,42 @@ div.loading {
     color: #fff;
     font-size: 40px;
 }
+
+#firstPageSignUpMail{
+    display: block;
+    border: 0;
+    margin: 0 auto;
+    height: 85px;
+    width: 455px;
+    margin-bottom: 10px;
+    background: #E7B232;
+    font-size: 31px;
+    font-weight: bold;
+    text-shadow: 1px 0.4px 0 #d2d516;
+    -webkit-border-radius: 6px;  -moz-border-radius: 6px;  border-radius: 6px;
+    padding-left: 10px;
+}
+#firstPage input[type=submit]{
+    background: url('/img/clean/button-new2.png') no-repeat;
+    width: 464px;
+    height: 85px;
+    color: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+#firstPage label{
+    position: relative;
+    display: block;
+    max-width: 467px;
+    margin: 0 auto;
+}
+#firstPage label label.error{
+    position: absolute;
+    text-align: left;
+    top: 89px;
+    left: 3px;
+}
+#firstPage label input.error{
+    margin-bottom: 21px;
+}

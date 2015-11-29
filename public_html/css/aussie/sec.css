@@ -1,0 +1,299 @@
+
+.popup .seal {
+
+    float: right;
+
+    /*width: 230px;*/
+
+    margin-right: 25px;
+
+}
+
+.popup h1.grey {
+
+    margin: 0 0 0 0;
+
+    padding-left: 10px;
+
+    padding-top:12px;
+
+    overflow: hidden;
+
+    font-size: 35px;
+
+    font-family: 'Open Sans', Arial, sans-serif;
+
+}
+
+.grey {
+
+    color: #333333 !important;
+
+    font-family: 'Open Sans', Arial, sans-serif;
+
+}
+
+.binaryverifysealdiv .binaryverifytooltip {
+
+    display: none;
+
+    color: #000000;
+
+    position: absolute;
+
+    background-color: #FFFFFF;
+
+    height: auto;
+
+    width: 240px;
+
+    border-radius: 5px;
+
+    margin: 0px;
+
+    border: 1px solid #CCCCCC;
+
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+
+    padding-top: 5px;
+
+    padding-right: 10px;
+
+    padding-bottom: 5px;
+
+    padding-left: 10px;
+
+    right: 50%;
+
+    top: 10%;
+
+    z-index: 9;
+
+    -webkit-transition: all 0.25s linear 0s;
+
+    -moz-transition: all 0.25s linear 0s;
+
+    -ms-transition: all 0.25s linear 0s;
+
+    -o-transition: all 0.25s linear 0s;
+
+    transition: all 0.25s linear 0s;
+
+    -webkit-box-sizing: content-box !important;
+
+    -moz-box-sizing: content-box !important;
+
+    box-sizing: content-box !important;
+
+}
+
+.binaryverifysealdiv .binaryverifytooltip ul {
+
+    display: block;
+
+    padding: 0px;
+
+    margin: 0px;
+
+}
+
+.binaryverifysealdiv .binaryverifytooltip .arrow {
+
+    background-image: url("/img/aussie/tooltip-arrow-left.png");
+
+    display: block;
+
+    position: absolute;
+
+    right: -26px;
+
+    top: 10px;
+
+    height: 34px;
+
+    width: 26px;
+
+}
+
+.binaryverifysealdiv .binaryverifytooltip ul .title {
+
+    border-top-style: none;
+
+    border-right-style: none;
+
+    border-bottom-style: none;
+
+    border-left-style: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+}
+
+.binaryverifysealdiv .binaryverifytooltip ul li {
+
+    font-size: 11px;
+
+    float: none;
+
+    margin-top: 5px;
+
+    margin-right: 0px;
+
+    margin-bottom: 5px;
+
+    margin-left: 0px;
+
+    border-bottom-width: 1px;
+
+    border-bottom-style: solid;
+
+    border-bottom-color: #DDDDDD;
+
+    padding-bottom: 5px;
+
+    display: block;
+
+    height: 22px;
+
+    width: 245px;
+
+    border-right: none;
+
+    border-style: none;
+
+    background-color: #ffffff;
+
+    bottom: 0px;
+
+    box-shadow: none;
+
+    padding: 0px;
+
+}
+
+.binaryverifysealdiv .binaryverifytooltip ul li span {
+
+    font-weight: bold;
+
+    display: block;
+
+    float: left;
+
+    width: 100px;
+
+}
+
+.popup h4 {
+
+    font-size: 36px;
+
+}
+
+.binaryverifysealdiv img {
+
+    display: block;
+
+    margin-top: 0px auto;
+
+    margin-right: auto;
+
+    margin-bottom: 0px;
+
+    margin-left: auto;
+
+    height: 55px;
+
+}
+
+.LicensesLeft {
+    position: fixed;
+    z-index: 3;
+    width: 250px;
+    right: 5px;
+    bottom: 5px;
+    display: none;
+}
+.LicensesLeft>.BG {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    overflow: hidden;
+    text-indent: -9999px;
+    background: #fff;
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    -ms-box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.LicensesLeft>.in {
+    position: relative;
+    padding: 7px 10px 10px;
+}
+.LicensesLeft .N {
+    text-transform: uppercase;
+    font-size: 26px;
+    line-height: 30px;
+    font-family: 'Roboto Bold','trebuchet ms',arial,sans-serif;
+    padding-bottom: 10px;
+    letter-spacing: -1px;
+    text-align: center;
+}
+.LicensesLeft .N b {
+    color: #c00;
+    font-weight: normal;
+}
+.LicensesLeft .Bar {
+    position: relative;
+    text-align: -webkit-left;
+}
+.LicensesLeft .Button {
+    text-align: center;
+    padding-top: 10px;
+}
+.LicensesLeft .Bar>.BG {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    padding-top: 20px;
+    height: 0;
+    overflow: hidden;
+    font-size: 0;
+    background: url(/img/aussie/licenses_bar.png) 0 -20px repeat-x;
+}
+.LicensesLeft .Bar>.in>i {
+    display: block;
+    padding-top: 20px;
+    height: 0;
+    overflow: hidden;
+    font-size: 0;
+    background: url(/img/aussie/licenses_bar.png) 0 0 repeat-x;
+    position:relative;
+}
+.LicensesLeft .Button a:link, .LicensesLeft .Button a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+.LicensesLeft .Button a:link, .LicensesLeft .Button a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+.LicensesLeft .Button a {
+    display: inline-block;
+    vertical-align: top;
+    background: #66AC1C;
+    border: 1px solid #86CC3C;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    line-height: 24px;
+    padding: 0 7px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'trebuchet ms',arial,sans-serif;
+}
