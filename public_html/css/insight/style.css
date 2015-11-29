@@ -514,8 +514,31 @@ a.ubm_banner:hover {
     margin-left: 10.3px;
 }
 
+/*
 .post-meta *:before {
     content: '' !important;
     display: none !important;
     visibility: hidden;
+}
+*/
+
+.fa{
+    position: relative;
+    left: -27px;
+}
+
+
+span.tie-date:before, span.post-comments:before, span.post-views:before, span.post-meta-author:before, span.post-cats:before {
+    font-size: 0px;
+    width: 0px;
+}
+.fa {
+    position: relative;
+    left: -3px;
+    top: 0px;
+}
+
+.post-inner p.post-meta {
+    position: relative;
+    left: 5px;
 }
