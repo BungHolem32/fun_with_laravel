@@ -50,6 +50,7 @@ Route::group(['middleware' => 'auth', 'prefix'=>'admin'], function(){
 
     Route::post('dropzone', ['uses' => 'Admin\DropzoneController@upload'] );
     Route::get('dropzone/{id}', ['uses' => 'Admin\DropzoneController@load'] );
+    Route::delete('dropzone/{id}', ['uses' => 'Admin\DropzoneController@delete'] );
 
 
     Route::post('{slug}', function(){

@@ -39,6 +39,95 @@
         {!! Form::textarea('body', $page['body'], ['name'=>'mongo[body]', 'class'=>'editor form-control']) !!}
     </div>--}}
 
+    @com('dropzone')
+    <h3><i class="fa fa-flag"></i> Banners</h3>
+    <div class="form-group">
+        <ul action="/admin/dropzone" class="dropzone form-control" data-mongoname="banners">
+
+            @foreach($page->banners->pics->getChildrenKeys() as $k => $v)
+                <li class="documents_drop_file_thumb dz-image-preview">
+                    <div>
+
+                        <div class="documents_drop_file_thumb_image"><img src="/images/uploads/{{ $page->banners->pics->{$k}->pic }}" data-dz-thumbnail /></div>
+                        <div class="documents_drop_file_thumb_progress"><span class="dz-upload" data-dz-uploadprogress></span></div>
+                        {!! Form::hidden(null, $page->banners->pics->{$k}->pic, ['name'=>"mongo[banners][pics][{$k}][pic]", 'class'=>'form-control picurl', 'data-dz-pic'=>'']) !!}
+                        {!! Form::text(null, $page->banners->pics->{$k}->link, ['name'=>"mongo[banners][pics][{$k}][link]", 'class'=>'form-control', 'data-dz-link'=>'', 'placeholder'=>'Link']) !!}
+                        {!! Form::text(null, $page->banners->pics->{$k}->title, ['name'=>"mongo[banners][pics][{$k}][title]", 'class'=>'form-control', 'data-dz-title'=>'', 'placeholder'=>'Title']) !!}
+                        {!! Form::text(null, $page->banners->pics->{$k}->alt, ['name'=>"mongo[banners][pics][{$k}][alt]", 'class'=>'form-control', 'data-dz-alt'=>'', 'placeholder'=>'Alt']) !!}
+                        <div class="documents_drop_file_thumb_progress_status"><span data-dz-errormessage></span></div><div class="documents_drop_file_thumb_remove">
+                            <a class="dz-remove" href="javascript:undefined;" data-dz-remove="" data-mongokey="{{$page->banners->pics->{$k}->id}}"><i class="fa fa-trash"></i></a>
+                        </div>
+                        <div class="dz-size" data-dz-size></div>
+                    </div>
+                </li>
+            @endforeach
+        </ul>
+        <script type="template" class="dropzoneTemplate">
+            <li class="documents_drop_file_thumb dz-image-preview innerRepeat ui-sortable-handle">
+                <div>
+                    <div class="documents_drop_file_thumb_image"><img src="" data-dz-thumbnail=""></div>
+                    <div class="documents_drop_file_thumb_progress"><span class="dz-upload" data-dz-uploadprogress=""></span></div>
+                    <input name="mongo[default][pics][0][pic]" class="form-control picurl" data-dz-pic="" type="hidden" >
+                    <input name="mongo[default][pics][0][link]" class="form-control" data-dz-link="" type="text" placeholder="Link" value="">
+                    <input name="mongo[default][pics][0][title]" class="form-control" data-dz-title="" type="text" placeholder="Title" value="">
+                    <input name="mongo[default][pics][0][alt]" class="form-control" data-dz-alt="" type="text" placeholder="Alt" value="">
+                    <div class="documents_drop_file_thumb_progress_status"><span data-dz-errormessage=""></span></div>
+                    <div class="documents_drop_file_thumb_remove">
+                        <a class="dz-remove" href="javascript:undefined;" data-dz-remove=""><i class="fa fa-trash"></i></a>
+                    </div>
+                    <div class="dz-size" data-dz-size=""></div>
+                </div>
+            </li>
+        </script>
+    </div>
+
+    <h3><i class="fa fa-flag"></i> Banners Bottom</h3>
+    <div class="form-group">
+        <ul action="/admin/dropzone" class="dropzone form-control" data-mongoname="bannersBottom">
+
+            @foreach($page->bannersBottom->pics->getChildrenKeys() as $k => $v)
+                <li class="documents_drop_file_thumb dz-image-preview">
+                    <div>
+                        <div class="documents_drop_file_thumb_image"><img src="/images/uploads/{{ $page->bannersBottom->pics->{$k}->pic }}" data-dz-thumbnail /></div>
+                        <div class="documents_drop_file_thumb_progress"><span class="dz-upload" data-dz-uploadprogress></span></div>
+                        {!! Form::hidden(null, $page->bannersBottom->pics->{$k}->pic, ['name'=>"mongo[bannersBottom][pics][{$k}][pic]", 'class'=>'form-control picurl', 'data-dz-pic'=>'']) !!}
+                        {!! Form::text(null, $page->bannersBottom->pics->{$k}->link, ['name'=>"mongo[bannersBottom][pics][{$k}][link]", 'class'=>'form-control', 'data-dz-link'=>'', 'placeholder'=>'Link']) !!}
+                        {!! Form::text(null, $page->bannersBottom->pics->{$k}->title, ['name'=>"mongo[bannersBottom][pics][{$k}][title]", 'class'=>'form-control', 'data-dz-title'=>'', 'placeholder'=>'Title']) !!}
+                        {!! Form::text(null, $page->bannersBottom->pics->{$k}->alt, ['name'=>"mongo[bannersBottom][pics][{$k}][alt]", 'class'=>'form-control', 'data-dz-alt'=>'', 'placeholder'=>'Alt']) !!}
+                        <div class="documents_drop_file_thumb_progress_status"><span data-dz-errormessage></span></div><div class="documents_drop_file_thumb_remove">
+                            <a class="dz-remove" href="javascript:undefined;" data-dz-remove="" data-mongokey="{{$page->bannersBottom->pics->{$k}->id}}"><i class="fa fa-trash"></i></a>
+                        </div>
+                        <div class="dz-size" data-dz-size></div>
+                    </div>
+                </li>
+            @endforeach
+        </ul>
+        <script type="template" class="dropzoneTemplate">
+            <li class="documents_drop_file_thumb dz-image-preview innerRepeat ui-sortable-handle">
+                <div>
+                    <div class="documents_drop_file_thumb_image"><img src="" data-dz-thumbnail=""></div>
+                    <div class="documents_drop_file_thumb_progress"><span class="dz-upload" data-dz-uploadprogress=""></span></div>
+                    <input name="mongo[default][pics][0][pic]" class="form-control picurl" data-dz-pic="" type="hidden" >
+                    <input name="mongo[default][pics][0][link]" class="form-control" data-dz-link="" type="text" placeholder="Link" value="">
+                    <input name="mongo[default][pics][0][title]" class="form-control" data-dz-title="" type="text" placeholder="Title" value="">
+                    <input name="mongo[default][pics][0][alt]" class="form-control" data-dz-alt="" type="text" placeholder="Alt" value="">
+                    <div class="documents_drop_file_thumb_progress_status"><span data-dz-errormessage=""></span></div>
+                    <div class="documents_drop_file_thumb_remove">
+                        <a class="dz-remove" href="javascript:undefined;" data-dz-remove=""><i class="fa fa-trash"></i></a>
+                    </div>
+                    <div class="dz-size" data-dz-size=""></div>
+                </div>
+            </li>
+        </script>
+    </div>
+
+
+    <div class="form-group">
+        <h3><i class="fa fa-info-circle"></i> {!! Form::label('article', 'Article:') !!}</h3><small></small>
+        {!! Form::textarea('article', $page['article'], ['name'=>'mongo[article]', 'class'=>'editor form-control']) !!}
+    </div>
+
+
     <div class="form-group">
         <h3><i class="fa fa-info-circle"></i> {!! Form::label('thankyoupage', 'Thank you page:') !!}</h3><small></small>
         {!! Form::textarea('thankyoupage', $page['thankyoupage'], ['name'=>'mongo[thankyoupage]', 'class'=>'editor form-control']) !!}
@@ -65,48 +154,6 @@
 
 @section('editAside')
     <div class="row">
-
-        <h3><i class="fa fa-flag"></i> Banners</h3>
-        <table class="table table-hover multiple-mother">
-            <thead>
-            <tr>
-                <th> </th>
-                <th>banner</th>
-                <th> </th>
-            </tr>
-            </thead>
-            <tbody class="multiple sortableMongo">
-            @forelse($page->banners->getChildren() as $i => $field)
-                <tr class="mongo" data-id="{{ $field->id }}" data-num="{{ $i }}" data-name="mongo[banners]">
-                    <td></td>
-                    <td>
-                        <input data-name="picture" class="form-control" type="text" value="{{ $field->name }}">
-                        <input data-name="title" class="form-control" type="text" value="{{ $field->title }}">
-                        <input data-name="link" class="form-control" type="text" value="{{ $field->link }}">
-                    </td>
-                    <td><button class="del-mongo">Delete</button></td>
-                </tr>
-            @empty
-                <tr data-num="0" data-name="mongo[banners]">
-                    <td></td>
-                    <td>
-                        <input data-name="picture" class="form-control" type="text" value="">
-                        <input data-name="title" class="form-control" type="text" value="">
-                        <input data-name="link" class="form-control" type="text" value="">
-                    </td>
-                    <td></td>
-                </tr>
-            @endforelse
-            </tbody>
-            <tfoot>
-            <tr><td><button class="btn btn-primary addNewRow"><i class="fa fa-plus-square "></i></button></td></tr>
-            </tfoot>
-        </table>
-
-
-
-
-        <br><br>
         <h3><i class="fa fa-google"></i> Analytics & Scripts</h3>
         <div class="form-group">
             {!! Form::label('headScripts', 'before </head> Scripts:') !!}

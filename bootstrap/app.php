@@ -31,7 +31,7 @@ if(!function_exists('mb_strtoupper')){
 	function mb_strtoupper($str){return strtoupper($str);}
 }
 if(!function_exists('mb_substr')){
-	function mb_substr($str, $s, $l, $p=null){return substr($str, $s, $l, $p);}
+	function mb_substr($str, $s, $l, $p=null){return substr($str, $s, $l);}
 }
 if(!function_exists('mb_regex_encoding')){
 	function mb_regex_encoding(){return 'UTF-8';}

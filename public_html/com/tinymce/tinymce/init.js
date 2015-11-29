@@ -8,8 +8,10 @@ tinymce.init({
      "save table contextmenu directionality emoticons template paste textcolor"
      ],*/
 
-    valid_elements : "a[href|target=_blank],strong/b,div[align],br,i[class|alt|name]",
-    extended_valid_elements: "img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name]",
+    //valid_elements : "a[href|target=_blank],strong/b,div[class|align],br,i[class|alt|name]",
+    //extended_valid_elements: "img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name]",
+    valid_elements : "*[*]",
+
     forced_root_block : "",
     /*forced_root_block : false,
     force_p_newlines : false,

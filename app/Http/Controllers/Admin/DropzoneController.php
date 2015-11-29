@@ -31,7 +31,7 @@ class DropzoneController extends Controller {
 
         //$upload_success = \Input::upload('file', $directory, $filename);
         $upload_success = \Request::file('file')->move($directory, $filename);
-
+        //echo $directory.' - '.$filename;
         if( $upload_success ) {
             return \Response::json(['status'=>'success', 'filename'=>$filename, 'oldName'=>$file->getClientOriginalName()], 200);
         } else {
@@ -58,5 +58,19 @@ class DropzoneController extends Controller {
         }
         header('Content-Type: application/json');
         return json_encode($result);
+    }
+
+    public function delete($mongoKey){
+        $mongo = mongo::find($mongoKey);
+        $mongo->deleteSubtree(true);
+        $mongo->save();
+
+        $picFile = public_path().'/images/uploads/'.$mongo->pic;
+        if(file_exists($picFile) && is_file($picFile))
+            unlink($picFile);
+
+        // TODO: FIX THIS STUFF !!!
+        header('Content-Type: application/json');
+        return json_encode(['err'=>0]);
     }
 }
