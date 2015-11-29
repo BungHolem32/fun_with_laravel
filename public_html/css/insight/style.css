@@ -506,3 +506,10 @@ a.ubm_banner:hover {
     padding: 0px !important;
     margin: 0px !important;
 }
+
+.cat-box-content > .wide-news-item:not(:last-child){
+    margin-right: 0;
+}
+.cat-box-content > .wide-news-item:not(:first-child) {
+    margin-left: 10.3px;
+}
