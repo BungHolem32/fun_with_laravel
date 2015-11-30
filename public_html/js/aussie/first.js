@@ -86,9 +86,6 @@ function AddTrade() {
         html+='<tr rv-class-success="position.status | eq won" rv-show="position.status | not_eq open" class="success"><td rv-text="position.optionEndDate" align="center"><font style="font-family: \'Cabin\', sans-serif;"><span style="color:#1e387b; font-size:14px; font-weight:bold">'+name+'</span> just won a trade... </font></td><td class="payoutwon" align="center"><font style="font-family: \'Cabin\', sans-serif !important; font-size:16px; font-weight:bold">$ '+numberCom(payout)+'</font></td><td rv-text="position.optionEndDate" align="center"><font style="font-family: \'Cabin\', sans-serif;">'+getDateTime(i)+'</font></td><td align="center"><span rv-text="position.name"><font style="font-family: \'Cabin\', sans-serif;">'+xasset+'</span></font></td><td align="center"><span rv-text="position.status | capitalize" rv-class-label-success="position.status | eq won" rv-class-label-danger="position.status | eq lost" rv-class-label-info="position.status | tie_or_sold"><img src="/img/aussie/bluetick.png" height="20px"></span></td></tr>';
     }
     $("#trades").html(html);
-    /*$("#TOTAL").html("$"+numberCom(profit));
-     $("#WON").html("100 %");
-     $("#LOST").html("0 %");*/
 }
 AddTrade();
 
@@ -104,7 +101,12 @@ $('.q-section').each(function() {
 $(document).ready(function(){
     // Target your .container, .wrapper, .post, etc.
 
-    $("#HeaderVideoBlock, #videoBlock").fitVids();
+    //$("#HeaderVideoBlock, #videoBlock").fitVids();
+
+    $('.q-section').click(function(){
+        $(this).next().slideToggle()
+            .parent().siblings().find('.a-section').slideUp();
+    });
 
 });
 
