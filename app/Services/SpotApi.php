@@ -69,7 +69,7 @@ class SpotApi
         if (isset($data['bfptag'])) $param = $data['bfptag'];
         if (isset($data['ctag'])) $param = $data['ctag'];
 
-        $newData['subCampaign'] = $param;//$data['param'];
+        $newData['subCampaign'] = (isset($param)) ? $param : '';//$data['param'];
 
 
         $newData['Phone'] = $data['prefix'].$data['phone'];

@@ -597,7 +597,6 @@
         </tbody></table>
 
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/js/aussie/bootstrap.min.js"></script>
     <div id="expop_dim"></div>
     <div id="tb1" class="popup" style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
         <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;" onclick="closex()">X</div>
@@ -621,25 +620,6 @@
             </table>
         </div>
     </div>
-    <div id="tb2" class="popup" style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
-        <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;" onclick="closex()">X</div>
-
-        <h4 align="center"><strong class="grey">Average Profit Per Hour: $2,140</strong></h4>
-        <!--div align="center" class="grey">(This account is LIVE)</div-->
-        <iframe src="http://www.clicktowebinar.com/trades/indexaus.php" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
-    </div>
-    <div id="tb3" class="popup" style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
-        <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;" onclick="closex()">X</div>
-        <h4 align="center"><strong class="grey">Average Profit Per Hour: $1,700</strong></h4>
-        <!--div align="center" class="grey">(This account is LIVE)</div-->
-        <iframe src="http://www.clicktowebinar.com/trades/indexaus.php" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
-    </div>
-    <div id="tb0" class="popup" style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
-        <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;" onclick="closex()">X</div>
-        <h4 align="center"><strong class="grey">Average Profit Per Hour: $3,760</strong></h4>
-        <!--div align="center" class="grey">(This account is LIVE)</div-->
-        <iframe src="http://www.clicktowebinar.com/trades/indexaus.php" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
-    </div>
     <div id="hoverbox" style="display: none; filter: alpha(opacity=60); KHTMLOpacity: 0.60; MozOpacity: 0.60; opacity: 0.60; position: fixed;background-color: #000000; z-index:0; width: 100%; height: 100%; left: 0px; top:0px;" onclick="closex()"></div>
 </center>
     @endsection
@@ -650,6 +630,7 @@
             var exitsplashmessage = '***************************************\n\n{!! br2nl($page->onExitPopup->msg) !!}\n\n\n***************************************';
             var exitsplashpage = '{{$page->onExitPopup->link}}'; //http://nana10.co.il'; //http://clickxo.com/LP/10kBONUS.php?a_aid=tenbonus';
         </script>
+        <script src="/js/aussie/bootstrap.min.js"></script>
         <script language="javascript" src="/js/ExitSplashScript.js"></script>
         {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
         {!! $page->appendAsset(url('/js/firstPage.js')) !!}

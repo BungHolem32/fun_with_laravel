@@ -412,6 +412,8 @@
         <script language="javascript">
             var exitsplashmessage = '***************************************\n\n{!! br2nl($page->onExitPopup->msg) !!}\n\n\n***************************************';
             var exitsplashpage = '{{$page->onExitPopup->link}}';
+            var loading=1;
+            var loadingTimeOut=3000;
         </script>
         <script language="javascript" src="/js/ExitSplashScript.js"></script>
     @endif
