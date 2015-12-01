@@ -39,7 +39,7 @@
                             <td width="654" class="videowrap"><table width="650" border="0" cellspacing="0" cellpadding="0" bgcolor="#1e387b">
                                 <tr>
                                     <td height="370" bgcolor="#1e387b"><center>
-                                            <video class="first_em" height="348" width="622" autoplay="autoplay">
+                                            <video class="first_em" height="356" width="636" autoplay="autoplay">
                                                 <source src="/media/aussie/100sof1000s.mp4" type="video/mp4" />
                                             </video>
                                     </center></td>
@@ -410,10 +410,11 @@
 @section('bottom-scripts')
     @if(Request::get('epass')!=532)
         <script language="javascript">
-            var exitsplashmessage = '***************************************\n\n{!! br2nl($page->onExitPopup->msg) !!}\n\n\n***************************************';
+            var exitsplashmessage = '{!! strip_tags(br2nl($page->onExitPopup->msg)) !!}';
             var exitsplashpage = '{{$page->onExitPopup->link}}';
             var loading=1;
             var loadingTimeOut=3000;
+            var loadingMsg = '<div class="loading"><img src="/img/aussie/loadingBL2.gif" alt=""><div class="loading-text"> Registration is in progress.. </div></div>';
         </script>
         <script language="javascript" src="/js/ExitSplashScript.js"></script>
     @endif

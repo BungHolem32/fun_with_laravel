@@ -13,7 +13,7 @@
 
     @section('page-layout')
 <center>
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" background="/img/aussie/main/bg.png">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" background="/img/aussie/bg.png">
         <tbody><tr>
             <td height="134" valign="top"><center>
                 <img src="/img/aussie/tit.png" width="790" height="103" style="padding-bottom:-10px;">
@@ -30,7 +30,7 @@
                         <td width="654" class="videowrap"><table width="650" border="0" cellspacing="0" cellpadding="0" bgcolor="#1e387b">
                             <tbody><tr>
                                 <td height="370" bgcolor="#1e387b"><center>
-                                        <video class="first_em" height="348" width="622" autoplay="autoplay">
+                                        <video class="first_em" height="356" width="636" autoplay="autoplay">
                                             <source src="/media/aussie/100sof1000s.mp4" type="video/mp4" />
                                         </video>
 
@@ -42,44 +42,6 @@
                                 <div class="logos-container">
 
                                 </div>
-                                {{--<form class="form second" novalidate="novalidate">
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-6"></div>
-                                    <div class="col-md-12 registration-error"></div>
-                                    <div class="form-group col-xs-6">
-                                        <label for="first_name-form" class="sr-only">First Name</label>
-                                        <input data-placement="bottom" type="text" name="first_name" id="first_name-form" class="form-control" placeholder="First Name">
-                                    </div>
-                                    <div class="form-group col-xs-6">
-                                        <label for="last_name-form" class="sr-only">Last Name</label>
-                                        <input data-placement="bottom" type="text" name="last_name" id="last_name-form" class="form-control" placeholder="Last Name">
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="form-group col-xs-12">
-                                        <label for="email-form" class="sr-only">E-mail Address</label>
-                                        <input data-toggle="tooltip" type="email" name="email" id="email-form" class="form-control" placeholder="E-mail Address">
-                                    </div>
-                                    <div class="form-group col-xs-12">
-                                        <label for="password-form" class="sr-only">Choose A Password</label>
-                                        <input data-toggle="tooltip" type="password" name="password" id="password-form" class="form-control" placeholder="Choose A Password">
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="form-group col-xs-4 area-code-group">
-                                        <label for="area_code-form" class="sr-only">Area Code</label>
-                                        <input data-toggle="tooltip" type="text" name="area_code" id="area_code-form" class="form-control area-code" placeholder="Area Code" disabled="disabled">
-
-                                    </div>
-                                    <div class="form-group col-xs-8 phone-group">
-                                        <label for="phone-form" class="sr-only">Your Phone Number</label>
-                                        <input data-toggle="tooltip" type="text" name="phone" id="phone-form" class="form-control" placeholder="Your Phone Number">
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="form-group col-md-12 submit-button-group">
-
-                                        <input type="submit" id="js-registration-btn" class="btn btn-sm image-btn" />
-
-                                    </div>
-                                </form>--}}
                                 <div class="form second">
                                     @include('funnels.layouts._partials._form', ['funnelId' => $page->getParent()->id])
                                 </div>
@@ -627,8 +589,9 @@
 @section('bottom-scripts')
     @if(Request::get('epass')!=532)
         <script language="javascript">
-            var exitsplashmessage = '***************************************\n\n{!! br2nl($page->onExitPopup->msg) !!}\n\n\n***************************************';
+            var exitsplashmessage = '{!! strip_tags(br2nl($page->onExitPopup->msg)) !!}';
             var exitsplashpage = '{{$page->onExitPopup->link}}'; //http://nana10.co.il'; //http://clickxo.com/LP/10kBONUS.php?a_aid=tenbonus';
+            var loadingMsg = '<div class="loading"><img src="/img/aussie/loadingBL2.gif" alt=""><div class="loading-text"> Registration is in progress.. </div></div>';
         </script>
         <script src="/js/aussie/bootstrap.min.js"></script>
         <script language="javascript" src="/js/ExitSplashScript.js"></script>

@@ -1,5 +1,11 @@
 $(document).ready(function(){
-        if(!loadingTimeOut) var loadingTimeOut=0;
+
+    if(typeof loadingTimeOut == 'undefined')
+        loadingTimeOut=0;
+    if(typeof loadingMsg == 'undefined')
+        loadingMsg = '<div class="loading">Processing, please wait...<br/><i class="fa fa-refresh fa-spin"></i></div>';
+
+
         //$('form').on('submit', function(e){e.preventDefault();});
         $('form').on('submit', function(e){e.preventDefault();}).validate({
         submitHandler: function(form) {
@@ -12,7 +18,7 @@ $(document).ready(function(){
                 beforeSend: function(){
                     console.log('loading...');
                     if(loading)
-                        $(form).after('<div class="loading">Processing, please wait...<br/><i class="fa fa-refresh fa-spin"></i></div>');
+                        $(form).after(loadingMsg);
                 },
                 success: function(res) {
                     if(res.err === 0){
