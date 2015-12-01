@@ -45,7 +45,7 @@
                                     </center></td>
                                 </tr>
                             </table></td>
-                            <td width="326"><center>
+                            <td width="326" class="f_first"><center>
                                 <br>
                 <p style="font-family: 'Cabin', sans-serif; font-size:46px; color:#1e387b">START <strong>NOW</strong></p>
                 <br>
