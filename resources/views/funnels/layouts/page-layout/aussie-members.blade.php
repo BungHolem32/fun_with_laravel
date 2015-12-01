@@ -27,7 +27,7 @@
 
                 <table width="980" border="0" cellspacing="0" cellpadding="0">
                     <tbody><tr>
-                        <td width="654"><table width="650" border="0" cellspacing="0" cellpadding="0" bgcolor="#1e387b">
+                        <td width="654" class="videowrap"><table width="650" border="0" cellspacing="0" cellpadding="0" bgcolor="#1e387b">
                             <tbody><tr>
                                 <td height="370" bgcolor="#1e387b"><center>
                                         <video class="first_em" height="348" width="622" autoplay="autoplay">

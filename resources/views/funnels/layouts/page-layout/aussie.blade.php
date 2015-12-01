@@ -36,7 +36,7 @@
 
                     <table width="980" border="0" cellspacing="0" cellpadding="0">
                         <tr>
-                            <td width="654"><table width="650" border="0" cellspacing="0" cellpadding="0" bgcolor="#1e387b">
+                            <td width="654" class="videowrap"><table width="650" border="0" cellspacing="0" cellpadding="0" bgcolor="#1e387b">
                                 <tr>
                                     <td height="370" bgcolor="#1e387b"><center>
                                             <video class="first_em" height="348" width="622" autoplay="autoplay">
@@ -280,7 +280,7 @@
         <p>&nbsp;</p>
         <p style="font-family: 'Cabin', sans-serif; font-size:46px; color:#1e387b"><strong><a name="howitworks"></a>How The Aussie Method Works</strong></p>
         <p>&nbsp;</p>
-        <table width="921" border="0" cellspacing="0" cellpadding="0" background="/img/aussie/ipad.png">
+        <table class="videowrap" width="921" border="0" cellspacing="0" cellpadding="0" background="/img/aussie/ipad.png">
             <tr>
                 <td height="521" valign="top"><center>
                     <br>
