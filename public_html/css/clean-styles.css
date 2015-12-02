@@ -159,7 +159,7 @@ div.loading {
     -webkit-border-radius: 6px;  -moz-border-radius: 6px;  border-radius: 6px;
     padding-left: 10px;
 }
-#firstPage input[type=submit]{
+#firstP input[type=submit]{
     background: url('/img/clean/button-new2.png') no-repeat;
     width: 464px;
     height: 85px;
@@ -168,18 +168,18 @@ div.loading {
     outline: none;
     cursor: pointer;
 }
-#firstPage label{
+#firstP label{
     position: relative;
     display: block;
     max-width: 467px;
     margin: 0 auto;
 }
-#firstPage label label.error{
+#firstP label label.error{
     position: absolute;
     text-align: left;
     top: 89px;
     left: 3px;
 }
-#firstPage label input.error{
+#firstP label input.error{
     margin-bottom: 21px;
 }
