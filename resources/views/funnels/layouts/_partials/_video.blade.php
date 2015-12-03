@@ -9,36 +9,43 @@
         /***
          * short video intro?
          */
-        $cdn = 'http://p.media.chaki.netdna-cdn.com/vod/media.chaki';
-        $video_file = '/1_1.mp4';
+    if(!isset($video_url))
+        $video_url = (string) $page->video;
+        $videoFinaleLink = '';
         $video_secret = 'bRt249Jd4z5Cmx';
         $video_expire = time() + 3600; // one hour valid
         $continue_file = null;
-        if(array_key_exists('st', $_GET)){
+
+        $temp = explode( "/", $video_url);
+        $video_file = end($temp);
+        $video_url = rtrim($video_url, $video_file);
+
+        // ONLY work for original walter video -> we have an alternate video lengths (15, 30 secs)
+        if($video_file == '1_1.mp4' && array_key_exists('st', $_GET)){
             $known_sizes = [15, 30]; // new begin-segment sizes (e.g. 30 seconds, 1 minute) can be added here.
             // the vide name format must be
             // 	- 	1_1-0_[NUMBER_OF_SECONDS].mp4
             //	-	1_1-[NUMBER_OF_SECONDS]_end.mp4
             if(in_array($_GET['st'], $known_sizes)){
-                $video_file = '/1_1-0_'.$_GET['st'].'.mp4';
-                $continue_file = '/1_1-'.$_GET['st'].'_end.mp4';
+                $video_file = '1_1-0_'.$_GET['st'].'.mp4';
+                $continue_file = '1_1-'.$_GET['st'].'_end.mp4';
+            }
+
+            if($continue_file){
+                $continue_expire = time()+1800;
+                $continue_hash = str_replace('=', '', strtr(base64_encode(md5($video_secret .'/'.$continue_file . $continue_expire, true)), '+/', '-_'));
             }
         }
 
+        $video_hash = str_replace('=', '', strtr(base64_encode(md5($video_secret .'/'.$video_file . $video_expire, true)), '+/', '-_')); // Using binary hashing.
+        $videoFinaleLink = $video_url.$video_file."?st=".$video_hash."&e=".$video_expire;
 
-
-        //$video_file = '/1_1.mp4';
-        $video_hash = str_replace('=', '', strtr(base64_encode(md5($video_secret . $video_file . $video_expire, true)), '+/', '-_')); // Using binary hashing.
-
-        if($continue_file){
-            $continue_expire = time()+1800;
-            $continue_hash = str_replace('=', '', strtr(base64_encode(md5($video_secret . $continue_file . $continue_expire, true)), '+/', '-_'));
-        }
+        //$videoFinaleLink = 'http://p.media.chaki.netdna-cdn.com/vod/media.chaki/aussie/fs100.mp4';
     ?>
-    <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-button vjs-big-play-centered" controls preload="none" width="640" height="264"
-           poster="http://embed-0.wistia.com/deliveries/8757d7b2272358eb6196c1f8be2d4038d5be3c2d.jpg?image_crop_resized=640x360"
-           data-setup='{ "controls": true, "autoplay": true }'>
-        <source src="<?=$cdn?><?=$video_file."?st=".$video_hash."&e=".$video_expire;?>" type='video/mp4' />
+    <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-button vjs-big-play-centered" controls preload="none" width="{{ $w }}" height="{{ $h }}"
+           {{-- poster="http://embed-0.wistia.com/deliveries/8757d7b2272358eb6196c1f8be2d4038d5be3c2d.jpg?image_crop_resized=640x360" --}}
+           autoplay="autoplay">
+        <source src="{!! $videoFinaleLink !!}" type='video/mp4' />
         <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
     </video>
 @else

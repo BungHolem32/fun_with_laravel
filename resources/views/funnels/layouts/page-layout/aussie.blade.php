@@ -39,9 +39,9 @@
                             <td width="654" class="videowrap"><table width="650" border="0" cellspacing="0" cellpadding="0" bgcolor="#1e387b">
                                 <tr>
                                     <td height="370" bgcolor="#1e387b"><center>
-                                            <video class="first_em" height="356" width="636" autoplay="autoplay">
-                                                <source src="/media/aussie/100sof1000s.mp4" type="video/mp4" />
-                                            </video>
+                                        <div class="first_em">
+                                            @include('funnels.layouts._partials._video', ['w'=>636, 'h'=>356])
+                                        </div>
                                     </center></td>
                                 </tr>
                             </table></td>
@@ -287,9 +287,9 @@
                     <br>
                     <br>
                     <br>
-                        <video class="sec_em" width="680" height="400" autoplay="autoplay">
-                            <source src="/media/aussie/Aussie2.mp4" type="video/mp4" />
-                        </video>
+                        <div class="sec_em">
+                            @include('funnels.layouts._partials._video', ['video_url'=>'http://video.chaki.netdna-cdn.com/guide4f.mp4','w'=>663, 'h'=>385])
+                        </div>
                 </center></td>
             </tr>
         </table>

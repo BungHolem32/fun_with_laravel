@@ -21,7 +21,7 @@ $(document).ready(function(){
 
                 beforeSend: function(){
                     console.log('loading...');
-                    if(loading)
+                    if(typeof loadingTimeOut != 'undefined')
                         $(form).after(loadingMsg);
                 },
                 success: function(res) {

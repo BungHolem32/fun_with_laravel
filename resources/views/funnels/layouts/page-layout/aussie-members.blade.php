@@ -1,10 +1,3 @@
-<?php
-    $video_file = '/aussie/fs100.mp4';
-    $video_secret = 'bRt249Jd4z5Cmx';
-    $video_expire = time() + 3600; // one hour valid
-    $video_hash = str_replace('=', '', strtr(base64_encode(md5($video_secret . $video_file . $video_expire, true)), '+/', '-_')); // Using binary hashing.
-    $cdn = 'http://video.chaki.netdna-cdn.com';
-?>
 @section('head')
     <!-- Startup CSS -->
     {!! $page->appendAsset(url('/css/aussie/style.css')) !!}
@@ -36,10 +29,10 @@
                         <td width="654" class="videowrap"><table width="650" border="0" cellspacing="0" cellpadding="0" bgcolor="#1e387b">
                             <tbody><tr>
                                 <td height="370" bgcolor="#1e387b"><center>
-                                        <video class="first_em" height="356" width="636" id="example_video_1_html5_api" class="vjs-tech" preload="none" poster="" data-setup="{ &quot;controls&quot;: true, &quot;autoplay&quot;: true }" autoplay="">
-                                            <source src="<?php echo $cdn?><?php echo $video_file."?st=".$video_hash."&e=".$video_expire;?>" type="video/mp4">
-                                            <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-                                        </video>
+                                        <div class="first_em">
+                                            @include('funnels.layouts._partials._video', ['w'=>636, 'h'=>356])
+                                        </div>
+
                                 </center></td>
                             </tr>
                             </tbody></table></td>
