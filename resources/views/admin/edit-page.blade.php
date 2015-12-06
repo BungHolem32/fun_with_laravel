@@ -9,6 +9,9 @@
 <div class="row">
     {!! Form::open() !!}
     <div class="col-lg-8 bg-{{ strtolower(Request::local()->code) }} main-edit">
+        <div class="form-group first-save">
+            {!! Form::submit('save page', ['class'=>'btn btn-primary']) !!}
+        </div>
         <h1 class="animated rubberBand"><small>EDIT: </small>{{ $page->title }}</h1>
         <small>@include('admin.partials._breadcrumbs')</small>
         <h2>{{ $page->description }}</h2>
