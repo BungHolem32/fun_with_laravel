@@ -9499,3 +9499,12 @@ body {
     top: 4em;
   }
 }
+#topBar{
+  position: fixed;
+  background: #ededed;
+  z-index: 99;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 4px;
+}
