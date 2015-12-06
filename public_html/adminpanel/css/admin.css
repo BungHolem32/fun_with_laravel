@@ -9487,3 +9487,15 @@ body {
 }
 
 /*# sourceMappingURL=admin.css.map */
+
+
+
+/* add to less */
+@media(max-width: 768px){
+  .nav-circle-btns {
+    height: 156px;
+  }
+  .msgWrapper {
+    top: 4em;
+  }
+}
