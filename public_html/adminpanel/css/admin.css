@@ -9488,6 +9488,8 @@ body {
 
 /*# sourceMappingURL=admin.css.map */
 
-.first-save{
-  float: right;
+.first-save input{
+  float: left;
+  width: 221px;
+  margin: 10px 15px;
 }

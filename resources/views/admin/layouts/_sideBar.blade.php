@@ -31,6 +31,9 @@
                 </a>
             </div>
         </li>
+        <li class="first-save">
+            {!! Form::submit('save page', ['class'=>'btn btn-primary']) !!}
+        </li>
         <li class="search">
             <div class="col-lg-12">
                 <input class="searchPage form-control" type="text" placeholder="Search..."/>
