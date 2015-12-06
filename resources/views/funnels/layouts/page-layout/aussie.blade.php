@@ -1,11 +1,14 @@
 @section('head')
 
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    {{--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Cabin:400,500,600,700,400italic,500italic,600italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Cabin:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cabin:400,700' rel='stylesheet' type='text/css'>--}}
+
     <!-- Startup CSS -->
     {!! $page->appendAsset(url('/css/aussie/style.css')) !!}
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    {!! $page->appendAsset(url('/js/vendor/jquery-1.11.2.min.js')) !!}
+    {{--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>--}}
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="/js/aussie/html5shiv.js"></script>
@@ -47,14 +50,7 @@
                             <td width="654"><table width="650" border="0" cellspacing="0" cellpadding="0" bgcolor="#1e387b">
                                 <tr>
                                     <td height="370" bgcolor="#1e387b"><center>
-                                        <object id="player" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" name="player" width="640" height="360">
-                                            <param name="movie" value="player/player.swf" />
-                                            <param name="allowfullscreen" value="true" />
-                                            <param name="allowscriptaccess" value="always" />
-                                            <param name="wmode" value="opaque" />
-                                            <param name="flashvars" value="file=https://s3.amazonaws.com/aussiemill/100s+of+1000s.mp4&autostart=true&controlbar=none&showfsbutton=false&showicons=false"  />
-                                            <embed type="application/x-shockwave-flash" wmode="opaque" id="player2" name="player2" src="player/player.swf" width="640" height="360" allowscriptaccess="always" allowfullscreen="true" flashvars="file=https://s3.amazonaws.com/aussiemill/100s+of+1000s.mp4&autostart=true&controlbar=none&showfsbutton=false&showicons=false"/>
-                                        </object>
+                                            @include('funnels.layouts._partials._video')
                                     </center></td>
                                 </tr>
                             </table></td>
@@ -71,14 +67,16 @@
                     <br>
                     <input type="image" name="submit2" src="/img/aussie/buttonfree.png" style="outline: none;" />
                 </form>--}}
-                <form id="firstPage" action="/aussie-members/" align="center">
-                    <form id="firstPage" action="@include('funnels.layouts._partials._url',['url'=>$page->getFirstChild()->fullSlug().'?'.$_SERVER["QUERY_STRING"]])" align="center">
+
+                {!! Form::open(['url' => url('postEmailForm').'?'.$_SERVER["QUERY_STRING"], 'method'=>'post','align'=>'center']) !!}
+                {{--<form method="post" action="{{url('postEmailForm').'?'.$_SERVER["QUERY_STRING"]}}" align="center">--}}
                     <input type="hidden" name="pageId" value="{{ $page->id }}">
                     @if($page->switches->showEmailField)
-                        <input id="firstPageSignUpMail" type="email" name="firstPageSignUpMail" placeholder="YOUR EMAIL ADDRESS.." required="required" style="width:300px; text-align:center;" />
+                        <input id="firstPageSignUpMail" type="email" name="email" placeholder="YOUR EMAIL ADDRESS.." required="required" style="width:300px; text-align:center;" />
                     @endif
-                    <input type="submit" name="submit2" src="/img/aussie/buttonfree.png" style="outline: none; width:200px;" />
-                </form>
+                    <input type="submit" src="/img/aussie/buttonfree.png" style="outline: none; width:200px;" />
+                {!! Form::close() !!}
+
                 <br>
                 <img src="/img/aussie/certs.png" width="250">
             </center></td>
@@ -431,24 +429,21 @@
 
     @endsection
 
-    @section('bottom-scripts')
-        @if(Request::get('epass')!=532)
-            <!-- Placed at the end of the document so the pages load faster -->
-    {!! $page->appendAsset(url('/js/aussie/bootstrap.min.js')) !!}
-    {!! $page->appendAsset(url('/js/aussie/ketchup.all.js')) !!}
-    {!! $page->appendAsset(url('/js/aussie/contact_form.js')) !!}
-    {!! $page->appendAsset(url('/js/aussie/fitvids.js')) !!}
-    {!! $page->appendAsset(url('/js/aussie/funnel.min.js?v=1.1&product=aussier')) !!}
+@section('bottom-scripts')
+    @if(Request::get('epass')!=532)
+        <script language="javascript">
+            var exitsplashmessage = '***************************************\n\n{!! br2nl($page->onExitPopup->msg) !!}\n\n\n***************************************';
+            var exitsplashpage = '{{$page->onExitPopup->link}}';
+        </script>
+        <script language="javascript" src="/js/ExitSplashScript.js"></script>
+    @endif
 
-    <!--Responsive Video-->
-    <div id="expop_dim"></div>
-    <script language="javascript">
-        var exitsplashmessage = '*** WAIT RIGHT HERE.. I WANT TO GIVE YOU 100% FREE PROFITS!.. ***';
-        var exitsplashpage = 'exit1.php';
-    </script>
-{!! $page->appendAsset(url('/js/aussie/exit.js')) !!}
-{{--{!! $page->appendAsset(url('/js/vendor/jquery-1.11.2.min.js')) !!}--}}
+{!! $page->appendAsset(url('/js/aussie/bootstrap.min.js')) !!}
+{!! $page->appendAsset(url('/js/aussie/fitvids.js')) !!}
+{{--{!! $page->appendAsset(url('/js/aussie/ketchup.all.js')) !!}
+{!! $page->appendAsset(url('/js/aussie/contact_form.js')) !!}
+{!! $page->appendAsset(url('/js/aussie/funnel.min.js?v=1.1&product=aussier')) !!}--}}
+
 {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
 {!! $page->appendAsset(url('/js/firstPage.js')) !!}
-@endif
 @append

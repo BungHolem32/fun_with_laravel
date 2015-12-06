@@ -52,4 +52,15 @@ class FormController extends Controller {
         //return Redirect::back()->withInput()->withErrors($res);*/
     }
 
+    public function postEmailForm(){
+        $page = \App\Page::findOrFail(Request::get('pageId'));
+        $append = Request::all();
+        unset($append['_token']);
+        unset($append['pageId']);
+        $res['destination'] = $page->getFirstChild()->fullSlug().'?'.http_build_query($append);
+
+        // TODO: add mixpanel event fire here.
+        $res['err'] = 0;
+        echo json_encode($res);
+    }
 }

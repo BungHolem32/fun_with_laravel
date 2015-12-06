@@ -77,8 +77,9 @@ Route::group(['middleware' => 'auth', 'prefix'=>'admin'], function(){
  * Those beyond are for the users / costumer and NOT for admin purposes
  **/
 
-Route::get('getLocation', ['uses' => 'FormController@location'] );
-Route::post('postForm',   ['uses' => 'FormController@postForm'] );
+Route::get('getLocation',   ['uses' => 'FormController@location'] );
+Route::post('postForm',     ['uses' => 'FormController@postForm'] );
+Route::post('postEmailForm',['uses' => 'FormController@postEmailForm'] );
 
 Route::any('{slug}', ['middleware' => 'spotAuth', function(){
 

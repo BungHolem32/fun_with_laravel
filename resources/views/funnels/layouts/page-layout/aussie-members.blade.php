@@ -1,28 +1,25 @@
+<?php
+    $video_file = '/aussie/fs100.mp4';
+    $video_secret = 'bRt249Jd4z5Cmx';
+    $video_expire = time() + 3600; // one hour valid
+    $video_hash = str_replace('=', '', strtr(base64_encode(md5($video_secret . $video_file . $video_expire, true)), '+/', '-_')); // Using binary hashing.
+    $cdn = 'http://video.chaki.netdna-cdn.com';
+?>
 @section('head')
-
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Cabin:400,500,600,700,400italic,500italic,600italic,700italic" rel="stylesheet" type="text/css">
     <!-- Startup CSS -->
     {!! $page->appendAsset(url('/css/aussie/style.css')) !!}
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="/js/aussie/form.min.js"></script>
-    <script src="/js/aussie/custom.js"></script>
+    {!! $page->appendAsset(url('/js/vendor/jquery-1.11.2.min.js')) !!}
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="/js/aussie/html5shiv.js"></script>
     <script src="/js/aussie/respond.min.js"></script>
     <![endif]-->
-    <!-- Custom Google Font : Cabin (Choose other: http://www.google.com/fonts/ ) -->
-    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <!-- Add mousewheel plugin (this is optional) -->
-    <script type="text/javascript" src="/js/aussie/fancybox/jquery.mousewheel-3.0.6.pack.js"></script>
     <script type="text/javascript" src="/js/aussie/first.js"></script>
     @append
 
     @section('page-layout')
 <center>
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" background="/img/aussie/main/bg.png">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" background="/img/aussie/bg.png">
         <tbody><tr>
             <td height="134" valign="top"><center>
                 <img src="/img/aussie/tit.png" width="790" height="103" style="padding-bottom:-10px;">
@@ -36,17 +33,13 @@
 
                 <table width="980" border="0" cellspacing="0" cellpadding="0">
                     <tbody><tr>
-                        <td width="654"><table width="650" border="0" cellspacing="0" cellpadding="0" bgcolor="#1e387b">
+                        <td width="654" class="videowrap"><table width="650" border="0" cellspacing="0" cellpadding="0" bgcolor="#1e387b">
                             <tbody><tr>
                                 <td height="370" bgcolor="#1e387b"><center>
-                                    <object id="player" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" name="player" width="640" height="360">
-                                        <param name="movie" value="../player/player.swf">
-                                        <param name="allowfullscreen" value="true">
-                                        <param name="allowscriptaccess" value="always">
-                                        <param name="wmode" value="opaque">
-                                        <param name="flashvars" value="file=https://s3.amazonaws.com/aussiemill/100s+Broker.mp4&amp;autostart=true&amp;controlbar=none&amp;showfsbutton=false&amp;showicons=false">
-                                        <embed type="application/x-shockwave-flash" wmode="opaque" id="player2" name="player2" src="../player/player.swf" width="640" height="360" allowscriptaccess="always" allowfullscreen="true" flashvars="file=https://s3.amazonaws.com/aussiemill/100s+Broker.mp4&amp;autostart=true&amp;controlbar=none&amp;showfsbutton=false&amp;showicons=false">
-                                    </object>
+                                        <div class="first_em">
+                                            @include('funnels.layouts._partials._video', ['w'=>300, 'h'=>400])
+                                        </div>
+
                                 </center></td>
                             </tr>
                             </tbody></table></td>
@@ -55,50 +48,10 @@
                                 <div class="logos-container">
 
                                 </div>
-                                <form class="form" novalidate="novalidate">
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-6"></div>
-                                    <div class="col-md-12 registration-error"></div>
-                                    <div class="form-group col-xs-6">
-                                        <label for="first_name-form" class="sr-only">First Name</label>
-                                        <input data-placement="bottom" type="text" name="first_name" id="first_name-form" class="form-control" placeholder="First Name">
-                                        <img class="input-checkmark" src="//splitter.binarypromos.com/boaform/img/checkmark.png" alt="">
-                                    </div>
-                                    <div class="form-group col-xs-6">
-                                        <label for="last_name-form" class="sr-only">Last Name</label>
-                                        <input data-placement="bottom" type="text" name="last_name" id="last_name-form" class="form-control" placeholder="Last Name">
-                                        <img class="input-checkmark" src="//splitter.binarypromos.com/boaform/img/checkmark.png" alt="">
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="form-group col-xs-12">
-                                        <label for="email-form" class="sr-only">E-mail Address</label>
-                                        <input data-toggle="tooltip" type="email" name="email" id="email-form" class="form-control" placeholder="E-mail Address">
-                                        <img class="input-checkmark" src="//splitter.binarypromos.com/boaform/img/checkmark.png" alt="">
-                                    </div>
-                                    <div class="form-group col-xs-12">
-                                        <label for="password-form" class="sr-only">Choose A Password</label>
-                                        <input data-toggle="tooltip" type="password" name="password" id="password-form" class="form-control" placeholder="Choose A Password">
-                                        <img class="input-checkmark" src="//splitter.binarypromos.com/boaform/img/checkmark.png" alt="">
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="form-group col-xs-4 area-code-group">
-                                        <label for="area_code-form" class="sr-only">Area Code</label>
-                                        <input data-toggle="tooltip" type="text" name="area_code" id="area_code-form" class="form-control area-code" placeholder="Area Code" disabled="disabled">
-
-                                    </div>
-                                    <div class="form-group col-xs-8 phone-group">
-                                        <label for="phone-form" class="sr-only">Your Phone Number</label>
-                                        <input data-toggle="tooltip" type="text" name="phone" id="phone-form" class="form-control" placeholder="Your Phone Number">
-                                        <img class="input-checkmark" src="//splitter.binarypromos.com/boaform/img/checkmark.png" alt="">
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="form-group col-md-12 submit-button-group">
-
-                                        <button type="submit" id="js-registration-btn" class="btn btn-sm image-btn" style="background-image: url('/img/aussie/buttonfree.png')"></button>
-
-                                    </div>
-                                </form>
-                            </div></div>
+                                <div class="form second">
+                                    @include('funnels.layouts._partials._form', ['funnelId' => $page->getParent()->id])
+                                </div>
+                                </div>
                         </center></td>
                     </tr>
                     </tbody></table>
@@ -243,7 +196,7 @@
                 <p>&nbsp;</p>
                 <p style="font-family: 'Cabin', sans-serif; font-size:26px; color:#1e387b"><strong>LIVE MINUTE BY MINUTE UPDATING TWITTER AND FACEBOOK FEEDS</strong></p><strong>
 
-                <table width="921" border="0" cellspacing="0" cellpadding="0" background="/img/aussie/blank.png">
+                <table id="social" width="921" border="0" cellspacing="0" cellpadding="0" background="/img/aussie/blank.png">
                     <tbody><tr>
                         <td height="521"> <center><table width="100" border="0">
                             <tbody><tr>
@@ -612,15 +565,6 @@
         </tbody></table>
 
     <!-- Placed at the end of the document so the pages load faster -->
-    </script>
-    <script src="/js/aussie/jquery.js"></script>
-    <script src="/js/aussie/bootstrap.min.js"></script>
-    <script src="/js/aussie/ketchup.all.js"></script>
-    <script src="/js/aussie/contact_form.js"></script>
-
-    <!--Responsive Video-->
-
-    <script src="/js/aussie/fitvids.js"></script>
     <div id="expop_dim"></div>
     <div id="tb1" class="popup" style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
         <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;" onclick="closex()">X</div>
@@ -644,25 +588,6 @@
             </table>
         </div>
     </div>
-    <div id="tb2" class="popup" style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
-        <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;" onclick="closex()">X</div>
-
-        <h4 align="center"><strong class="grey">Average Profit Per Hour: $2,140</strong></h4>
-        <!--div align="center" class="grey">(This account is LIVE)</div-->
-        <iframe src="http://www.clicktowebinar.com/trades/indexaus.php" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
-    </div>
-    <div id="tb3" class="popup" style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
-        <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;" onclick="closex()">X</div>
-        <h4 align="center"><strong class="grey">Average Profit Per Hour: $1,700</strong></h4>
-        <!--div align="center" class="grey">(This account is LIVE)</div-->
-        <iframe src="http://www.clicktowebinar.com/trades/indexaus.php" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
-    </div>
-    <div id="tb0" class="popup" style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
-        <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;" onclick="closex()">X</div>
-        <h4 align="center"><strong class="grey">Average Profit Per Hour: $3,760</strong></h4>
-        <!--div align="center" class="grey">(This account is LIVE)</div-->
-        <iframe src="http://www.clicktowebinar.com/trades/indexaus.php" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
-    </div>
     <div id="hoverbox" style="display: none; filter: alpha(opacity=60); KHTMLOpacity: 0.60; MozOpacity: 0.60; opacity: 0.60; position: fixed;background-color: #000000; z-index:0; width: 100%; height: 100%; left: 0px; top:0px;" onclick="closex()"></div>
 </center>
     @endsection
@@ -670,11 +595,12 @@
 @section('bottom-scripts')
     @if(Request::get('epass')!=532)
         <script language="javascript">
-            var exitsplashmessage = '***************************************\n\n{!! br2nl($page->onExitPopup->msg) !!}\n\n\n***************************************';
+            var exitsplashmessage = '{!! strip_tags(br2nl($page->onExitPopup->msg)) !!}';
             var exitsplashpage = '{{$page->onExitPopup->link}}'; //http://nana10.co.il'; //http://clickxo.com/LP/10kBONUS.php?a_aid=tenbonus';
+            var loadingMsg = '<div class="loading"><img src="/img/aussie/loadingBL2.gif" alt=""><div class="loading-text"> Registration is in progress.. </div></div>';
         </script>
+        <script src="/js/aussie/bootstrap.min.js"></script>
         <script language="javascript" src="/js/ExitSplashScript.js"></script>
-        {!! $page->appendAsset(url('/js/vendor/jquery-1.11.2.min.js')) !!}
         {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
         {!! $page->appendAsset(url('/js/firstPage.js')) !!}
     @endif
