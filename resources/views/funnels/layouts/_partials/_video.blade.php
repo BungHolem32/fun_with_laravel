@@ -42,7 +42,7 @@
 
         //$videoFinaleLink = 'http://p.media.chaki.netdna-cdn.com/vod/media.chaki/aussie/fs100.mp4';
     ?>
-    <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-button vjs-big-play-centered" controls preload="none" width="{{ $w }}" height="{{ $h }}"
+    <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-button vjs-big-play-centered" controls preload="none"<?php (isset($w)) ? ' width="'.$w.'"' : ''; ?> <?php (isset($h)) ? ' height="'.$h.'"' : ''; ?>
            {{-- poster="http://embed-0.wistia.com/deliveries/8757d7b2272358eb6196c1f8be2d4038d5be3c2d.jpg?image_crop_resized=640x360" --}}
            autoplay="autoplay">
         <source src="{!! $videoFinaleLink !!}" type='video/mp4' />
