@@ -7,9 +7,6 @@
     <h2><span>$1,843,207.48 </span>IN 90 DAYS!</h2>
     <h3>Be sure your volume is up. Wait up to 10 seconds for video to load.</h3>
     <div class="ppl">
-     {{--   <video class="video" autoplay="">
-            <source src="http://cdnmediahosting.com/user29339cdn3/newproducts2014/freemoneynopromo.mp4" type="video/mp4">
-        </video>--}}
         @include('funnels.layouts._partials._video')
     </div>
 
