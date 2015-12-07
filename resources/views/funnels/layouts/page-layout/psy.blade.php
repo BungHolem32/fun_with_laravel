@@ -3,9 +3,7 @@
 @append
 
 @section('page-layout')
-    <h1><span>NOW LIVE: </span>FREE MONEY SYSTEM MADE ME</h1>
-    <h2><span>$1,843,207.48 </span>IN 90 DAYS!</h2>
-    <h3>Be sure your volume is up. Wait up to 10 seconds for video to load.</h3>
+    {!! $page->htmlHeader !!}
     <div class="ppl">
         @include('funnels.layouts._partials._video')
     </div>
