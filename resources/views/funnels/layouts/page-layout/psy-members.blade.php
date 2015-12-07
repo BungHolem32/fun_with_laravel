@@ -8,9 +8,23 @@
         @include('funnels.layouts._partials._video')
     </div>
 
-    {!! Form::open(['url' => url('postEmailForm').'?'.$_SERVER["QUERY_STRING"], 'method'=>'post']) !!}
-    <button class="submit ltr en"><span>FREE DOWNLOAD</span></button>
-    {!! Form::close() !!}
+    @include('funnels.layouts._partials._form', ['funnelId' => $page->getParent()->id])
+
+    @if(Request::get('rs'))
+        <div class="formwrap">
+            <div class="container">
+                {!! $page->getRoot()->riskStatment !!}
+            </div>
+        </div>
+    @endif
+
+    @if($page->getRoot()->thankyoupage->get())
+        <div id="thankyou" class="thankyou">
+            <div class="thankyouWrapper">
+                <div class="thankyouContent">{!! $page->getRoot()->thankyoupage !!}</div>
+            </div>
+        </div>
+    @endif
 
     <img class="cer" src="/img/psy/cer.png" />
 @endsection
