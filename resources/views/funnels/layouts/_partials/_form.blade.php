@@ -55,7 +55,7 @@ foreach($form->membersFields->getChildren() as $field){
                     @if($field[0] == 'text' || $field[0] == 'email' || $field[0] == 'password')
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 field">
                             {{--{!! Form::$field[0]($field[1], null, ['class'=>'form-control', 'placeholder'=>@ln($field[2]) !!}--}}
-                            <input type="{{ $field[0] }}" id="{{ $field[1] }}" class="form-control" name="{{ $field[1] }}" required="required" minlength="2" placeholder="@ln({{ $field[2] }})" data-cip-id="{{ $field[1] }}">
+                            <input value="{{Request::get($field[1])}}" type="{{ $field[0] }}" id="{{ $field[1] }}" class="form-control" name="{{ $field[1] }}" required="required" minlength="2" placeholder="@ln({{ $field[2] }})" data-cip-id="{{ $field[1] }}">
                         </div>
                     @elseif($field[0] == 'phone')
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 field phoneFields">
@@ -126,8 +126,10 @@ foreach($form->membersFields->getChildren() as $field){
             }, "Phone number not valid.");
         @endif
 
-        $('#form').on('submit', function(e){e.preventDefault();});
-        $('#form').validate({
+
+        if(typeof loadingMsg == 'undefined')
+            loadingMsg = '<div class="loading">Processing, please wait...<br/><i class="fa fa-refresh fa-spin"></i></div>';
+        $('#form').on('submit', function(e){e.preventDefault();}).validate({
             @if($form->switches->phoneLibCheck)
                 rules : {
                     phone : { phoneLibCheck : true }
@@ -142,7 +144,7 @@ foreach($form->membersFields->getChildren() as $field){
 
                     beforeSend: function(){
                         console.log('loading...');
-                        $(form).after('<div class="loading">Processing, please wait...<br/><i class="fa fa-refresh fa-spin"></i></div>');
+                        $(form).after(loadingMsg);
                     },
                     success: function(res) {
                         if(res.err === 0){

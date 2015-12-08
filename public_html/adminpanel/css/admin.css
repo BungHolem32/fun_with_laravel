@@ -9487,3 +9487,29 @@ body {
 }
 
 /*# sourceMappingURL=admin.css.map */
+
+
+
+/* add to less */
+@media(max-width: 768px){
+  .nav-circle-btns {
+    height: 156px;
+  }
+  .msgWrapper {
+    top: 4em;
+  }
+  #page-content-wrapper {
+    padding-top: 40px;
+  }
+}
+#topBar{
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  background: #ededed;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 4px;
+  margin-left: 9px;
+}

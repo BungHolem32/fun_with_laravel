@@ -26,7 +26,7 @@ class SpotApi
             $method = 'before'.$module.$command;
             $data = self::$method($data);
         }
-
+        //dd($data);
         return self::processAnswer(self::initCurl($data));
     }
 
@@ -62,16 +62,39 @@ class SpotApi
 
 
     private static function beforeCustomeradd($data){
-        $omitArray = ['_token', 'prefix', 'phone'];
+
+
+        if (isset($data['p'])) $param = $data['p'];
+        if (isset($data['param'])) $param = $data['param'];
+        if (isset($data['bfptag'])) $param = $data['bfptag'];
+        if (isset($data['ctag'])) $param = $data['ctag'];
+
+        $newData['subCampaign'] = (isset($param)) ? $param : '';//$data['param'];
+
+
+        $newData['Phone'] = $data['prefix'].$data['phone'];
+        $newData['gender'] = 'male';
+        $newData['birthday'] = '1974-10-10';
+
+        $newData['campaignId'] = isset($data['campaign']) ? $data['campaign'] : "29";
+        //if(isset($data['campaign']))
+        //    $newData['campaignId'] = $data['campaign'];
+
+        if(isset($data['aff_id']))
+            $newData['a_id'] = $data['aff_id'] ;
+
+        $omitArray = ['_token', 'prefix', 'phone', 'param', 'bfptag', 'p', 'ctag', 'campaign', 'aff_id'];
         foreach($data as $key => $value){
             if(!in_array($key, $omitArray))
             $newData[$key] = $value;
         }
-        $newData['Phone'] = $data['prefix'].$data['phone'];
-        $newData['campaign'] = isset($data['campaign']) ? $data['campaign'] : "103";
+
+
+        //dd($newData);
 
         $location = json_decode(file_get_contents('http://api-v2.rboptions.com/locator/'.\Request::ip()));
         $newData['registrationCountry']=$location->countryId;
+
 
 
         return $newData;

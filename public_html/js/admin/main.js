@@ -90,6 +90,12 @@ $( document ).ready(function() {
         $("#wrapper").toggleClass("toggled");
     });
 
+    // save page fixed button
+    $('.fa-floppy-o').on('click',function(){
+        $('.btn.btn-primary').trigger('click');
+        return false;
+    });
+
 
     /**
      * Deleting a page !!!

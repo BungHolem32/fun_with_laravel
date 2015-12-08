@@ -1,10 +1,3 @@
-<?php
-    $video_file = '/aussie/fs100.mp4';
-    $video_secret = 'bRt249Jd4z5Cmx';
-    $video_expire = time() + 3600; // one hour valid
-    $video_hash = str_replace('=', '', strtr(base64_encode(md5($video_secret . $video_file . $video_expire, true)), '+/', '-_')); // Using binary hashing.
-    $cdn = 'http://video.chaki.netdna-cdn.com';
-?>
 @section('head')
     <!-- Startup CSS -->
     {!! $page->appendAsset(url('/css/aussie/style.css')) !!}
@@ -37,7 +30,7 @@
                             <tbody><tr>
                                 <td height="370" bgcolor="#1e387b"><center>
                                         <div class="first_em">
-                                            @include('funnels.layouts._partials._video', ['w'=>300, 'h'=>400])
+                                            @include('funnels.layouts._partials._video', ['w'=>636, 'h'=>356])
                                         </div>
 
                                 </center></td>
