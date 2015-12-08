@@ -8,7 +8,7 @@ $(document).ready(function(){
         loadingTimeOut=0;
 
     if(typeof loadingMsg == 'undefined')
-        loadingMsg = '<div class="loading">Processing, please wait...<br/><i class="fa fa-refresh fa-spin"></i></div>';
+        loadingMsg = '<div class="loading"><span class="bg"></span>Processing, please wait...<br/><i class="fa fa-refresh fa-spin"></i></div>';
 
         //$('form').on('submit', function(e){e.preventDefault();});
         $('form').on('submit', function(e){e.preventDefault();}).validate({

@@ -14,7 +14,7 @@
             var exitsplashmessage = '{!! strip_tags(br2nl($page->onExitPopup->msg)) !!}';
             var exitsplashpage = '{{$page->onExitPopup->link}}';
             var loading=1;
-            var loadingTimeOut=3000;
+            var loadingTimeOut=1000;
             var loadingMsg = '<div class="loading"><img src="/img/aussie/loadingBL2.gif" alt=""><div class="loading-text"> Registration is in progress.. </div></div>';
         </script>
         <script language="javascript" src="/js/ExitSplashScript.js"></script>

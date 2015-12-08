@@ -1,5 +1,4 @@
 @section('head')
-<meta charset="UTF-8"/>
 {!! $page->appendAsset(url('/css/insight/style.css')) !!}
 <link rel='stylesheet' id='open-sans-css' href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=4.1.8' type='text/css' media='all'/>
 <link rel='stylesheet' id='Oswald-css' href='http://fonts.googleapis.com/css?family=Oswald%3Aregular%2C700&#038;ver=4.1.8' type='text/css' media='all'/>
