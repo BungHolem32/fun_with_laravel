@@ -1,9 +1,21 @@
+<?php
+    if(!isset($w)) $w = 640;
+    if(!isset($h)) $h = 360;
+    //if(!isset($poster)) $poster = '/images/LoadingAnim2.gif';
+    if(!isset($poster)) $poster = '';
+?>
+
+@section('bottom-scripts')
+    {!! $page->appendAsset(url('/js/video.js')) !!}
+@append
 
 @if(str_contains($page->video, 'youtube.com'))
     <div class="video">
-        <iframe id="ytplayer" type="text/html" width="640" height="360"
-                src="{!! $page->video !!}?autoplay=1&amp;origin=http://example.com&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;autohide=1" frameborder="0"></iframe>
+        <iframe id="ytplayer" type="text/html" width="{{ $w }}" height="{{ $h }}"
+            src="{!! $page->video !!}?autoplay=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;autohide=1" frameborder="0">
+        </iframe>
     </div>
+
 @elseif(str_contains($page->video, 'cdn.com'))
     <?php
         /***
@@ -11,6 +23,7 @@
          */
     if(!isset($video_url))
         $video_url = (string) $page->video;
+
         $videoFinaleLink = '';
         $video_secret = 'bRt249Jd4z5Cmx';
         $video_expire = time() + 3600; // one hour valid
@@ -42,15 +55,15 @@
 
         //$videoFinaleLink = 'http://p.media.chaki.netdna-cdn.com/vod/media.chaki/aussie/fs100.mp4';
     ?>
-    <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-button vjs-big-play-centered" controls preload="none"<?php (isset($w)) ? ' width="'.$w.'"' : ''; ?> <?php (isset($h)) ? ' height="'.$h.'"' : ''; ?>
-           {{-- poster="http://embed-0.wistia.com/deliveries/8757d7b2272358eb6196c1f8be2d4038d5be3c2d.jpg?image_crop_resized=640x360" --}}
-           autoplay="autoplay">
+    <video class="video" preload="none" width="{{ $w }}" height="{{ $h }}" autoplay="autoplay"
+           poster="{{ $poster }}">
         <source src="{!! $videoFinaleLink !!}" type='video/mp4' />
         <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
     </video>
 @else
-    <video class="video" width="640" height="360" autoplay>
+    <video class="video" preload="none" width="{{ $w }}" height="{{ $h }}" autoplay="autoplay">
         {{--http://cdnmediahosting.com/user29339cdn3/newproducts2014/fmsshortnewnov.mp4--}}
         <source src="{!! $page->video !!}" type="video/mp4" >
+        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
     </video>
 @endif

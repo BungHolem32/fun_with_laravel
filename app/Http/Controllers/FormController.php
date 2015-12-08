@@ -27,8 +27,8 @@ class FormController extends Controller {
     }
 
     public function location(){
-        $ip = '213.136.90.209';
-        //$ip = Request::ip();
+        //$ip = '213.136.90.209';
+        $ip = Request::ip();
         $location = file_get_contents('http://api-v2.rboptions.com/locator/'.$ip);
         echo $location;
     }
@@ -53,13 +53,13 @@ class FormController extends Controller {
     }
 
     public function postEmailForm(){
-        $page = \App\Page::findOrFail(Request::get('pageId'));
+        $page = \App\Page::find(Request::get('pageId'));
         $append = Request::all();
         unset($append['_token']);
         unset($append['pageId']);
-        $res['destination'] = $page->getFirstChild()->fullSlug().'?'.http_build_query($append);
-
-        // TODO: add mixpanel event fire here.
+        $res['destination'] = '/'.Request::local()->code.'/'.$page->getFirstChild()->fullSlug().'?'.http_build_query($append);
+        //$res['destination'] = 'testing';
+            // TODO: add mixpanel event fire here.
         $res['err'] = 0;
         echo json_encode($res);
     }

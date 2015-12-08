@@ -71,7 +71,6 @@ class SpotApi
 
         $newData['subCampaign'] = (isset($param)) ? $param : '';//$data['param'];
 
-
         $newData['Phone'] = $data['prefix'].$data['phone'];
         $newData['gender'] = 'male';
         $newData['birthday'] = '1974-10-10';
@@ -89,13 +88,9 @@ class SpotApi
             $newData[$key] = $value;
         }
 
-
         //dd($newData);
-
         $location = json_decode(file_get_contents('http://api-v2.rboptions.com/locator/'.\Request::ip()));
         $newData['registrationCountry']=$location->countryId;
-
-
 
         return $newData;
     }

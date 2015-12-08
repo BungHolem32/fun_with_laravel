@@ -2,6 +2,10 @@
     {!! $page->appendAsset(url('/css/clean-styles.css')) !!}
 @append
 
+@section('bottom-scripts')
+    {!! $page->appendAsset(url('/js/firstPage.js')) !!}
+@append
+
 @section('page-layout')
     <div align="center" id="firstP">
 
@@ -19,7 +23,7 @@
             {{--<form id="firstPage" action="@include('funnels.layouts._partials._url',['url'=>$page->getFirstChild()->fullSlug().'?'.$_SERVER["QUERY_STRING"]])" align="center">--}}
                 <input type="hidden" name="pageId" value="{{ $page->id }}">
                     @if($page->switches->showEmailField)
-                        <input id="firstPageSignUpMail" type="email" name="email" placeholder="Your Email:" required="required" />
+                        <input id="firstPageSignUpMail" type="email" name="email" placeholder="@ln(Email):" required="required" />
                     @endif
                 <input class="hov" type="submit" />
             {!! Form::close() !!}
@@ -39,16 +43,3 @@
 
     </div>
 @endsection
-
-@section('bottom-scripts')
-    @if(Request::get('epass')!=532)
-        <script language="javascript">
-            var exitsplashmessage = '***************************************\n\n{!! br2nl($page->onExitPopup->msg) !!}\n\n\n***************************************';
-            var exitsplashpage = '{{$page->onExitPopup->link}}';
-        </script>
-        <script language="javascript" src="/js/ExitSplashScript.js"></script>
-    @endif
-    {!! $page->appendAsset(url('/js/vendor/jquery-1.11.2.min.js')) !!}
-    {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
-    {!! $page->appendAsset(url('/js/firstPage.js')) !!}
-@append

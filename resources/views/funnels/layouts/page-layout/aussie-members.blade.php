@@ -1,17 +1,31 @@
 @section('head')
     <!-- Startup CSS -->
     {!! $page->appendAsset(url('/css/aussie/style.css')) !!}
-    {!! $page->appendAsset(url('/js/vendor/jquery-1.11.2.min.js')) !!}
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="/js/aussie/html5shiv.js"></script>
     <script src="/js/aussie/respond.min.js"></script>
     <![endif]-->
-    <script type="text/javascript" src="/js/aussie/first.js"></script>
-    @append
+    <script type="text/javascript" src="/js/aussie/first.js?v=1"></script>
+@append
 
-    @section('page-layout')
-<center>
+@section('bottom-scripts')
+    @if(Request::get('epass')!=532)
+        <script language="javascript">
+            var exitsplashmessage = '{!! strip_tags(br2nl($page->onExitPopup->msg)) !!}';
+            var exitsplashpage = '{{$page->onExitPopup->link}}'; //http://nana10.co.il'; //http://clickxo.com/LP/10kBONUS.php?a_aid=tenbonus';
+            var loadingMsg = '<div class="loading"><img src="/img/aussie/loadingBL2.gif" alt=""><div class="loading-text"> Registration is in progress.. </div></div>';
+        </script>
+        <script src="/js/aussie/bootstrap.min.js"></script>
+        <script language="javascript" src="/js/ExitSplashScript.js"></script>
+        {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
+        {!! $page->appendAsset(url('/js/firstPage.js')) !!}
+    @endif
+@append
+
+
+@section('page-layout')
+
     <table width="100%" border="0" cellspacing="0" cellpadding="0" background="/img/aussie/bg.png">
         <tbody><tr>
             <td height="134" valign="top"><center>
@@ -32,7 +46,6 @@
                                         <div class="first_em">
                                             @include('funnels.layouts._partials._video', ['w'=>636, 'h'=>356])
                                         </div>
-
                                 </center></td>
                             </tr>
                             </tbody></table></td>
@@ -43,7 +56,6 @@
                                 </div>
                                 <div class="form second">
                                     @include('funnels.layouts._partials._form', ['funnelId' => $page->getParent()->id])
-                                </div>
                                 </div>
                         </center></td>
                     </tr>
@@ -360,6 +372,7 @@
                             <td height="521" valign="top"><center>
                                 <br>
                                 <br>
+                             <div class="tradessectbg">
                                 <div class="tradessect">
                                     <table class="table table-striped table-bordered shadowed table-hover" id="positionsHistoryTable" style="background-color:#FFF;" bgcolor="#FFFFFF" width="820px">
                                         <thead>
@@ -473,7 +486,9 @@
                                              $("#LOST").html("0 %");*/
                                         }
                                         AddTrade();
-                                    </script></div></center></td>
+                                    </script></div>
+                                </div>
+                                </center></td>
                         </tr>
                         </tbody></table>
                     <br>
@@ -560,41 +575,33 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <div id="expop_dim"></div>
     <div id="tb1" class="popup" style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
-        <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;" onclick="closex()">X</div>
+        <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;" onClick="closex()">X</div>
+
         <h4 align="center"><strong class="grey">Average Profit Per Hour: $1,350</strong></h4>
-        <!--div align="center" class="grey">(This account is LIVE)</div-->
-        <div class="tradessect">
-            <table class="table table-striped table-bordered shadowed table-hover" id="positionsHistoryTable" style="background-color:#FFF;" bgcolor="#FFFFFF" width="820px">
-                <thead>
-                <tr>
-                    <th background="/img/aussie/topb.png"><font style="font-family: 'Cabin', sans-serif;; color:#000 !important;"><center>Aussie Method Member</center></font></th>
-                    <th background="/img/aussie/topb.png"><font style="font-family: 'Cabin', sans-serif;; color:#000 !important;"><center>Profit</center></font></th>
-                    <th background="/img/aussie/topb.png"><font style="font-family: 'Cabin', sans-serif;; color:#000 !important;"><center>Trade Time</center></font></th>
-                    <th background="/img/aussie/topb.png"><font style="font-family: 'Cabin', sans-serif;; color:#000 !important;"><center>
-                        Currency
-                    </center></font></th>
 
-
-                    <th background="/img/aussie/topb.png"><font style="font-family: 'Cabin', sans-serif;; color:#000 !important;"><center>Results</center></font></th>
-                </tr>
-                </thead>
-            </table>
-        </div>
+        <iframe src="/aussie/aussie-results" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
     </div>
-    <div id="hoverbox" style="display: none; filter: alpha(opacity=60); KHTMLOpacity: 0.60; MozOpacity: 0.60; opacity: 0.60; position: fixed;background-color: #000000; z-index:0; width: 100%; height: 100%; left: 0px; top:0px;" onclick="closex()"></div>
-</center>
-    @endsection
+    <div id="tb2" class="popup" style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
+        <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;" onClick="closex()">X</div>
 
-@section('bottom-scripts')
-    @if(Request::get('epass')!=532)
-        <script language="javascript">
-            var exitsplashmessage = '{!! strip_tags(br2nl($page->onExitPopup->msg)) !!}';
-            var exitsplashpage = '{{$page->onExitPopup->link}}'; //http://nana10.co.il'; //http://clickxo.com/LP/10kBONUS.php?a_aid=tenbonus';
-            var loadingMsg = '<div class="loading"><img src="/img/aussie/loadingBL2.gif" alt=""><div class="loading-text"> Registration is in progress.. </div></div>';
-        </script>
-        <script src="/js/aussie/bootstrap.min.js"></script>
-        <script language="javascript" src="/js/ExitSplashScript.js"></script>
-        {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
-        {!! $page->appendAsset(url('/js/firstPage.js')) !!}
-    @endif
-@append
+        <h4 align="center"><strong class="grey">Average Profit Per Hour: $2,140</strong></h4>
+
+        <iframe src="/aussie/aussie-results" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+    </div>
+    <div id="tb3" class="popup" style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
+        <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;" onClick="closex()">X</div>
+
+        <h4 align="center"><strong class="grey">Average Profit Per Hour: $1,700</strong></h4>
+
+        <iframe src="/aussie/aussie-results" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+    </div>
+    <div id="tb0" class="popup" style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
+        <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;" onClick="closex()">X</div>
+
+        <h4 align="center"><strong class="grey">Average Profit Per Hour: $3,760</strong></h4>
+
+        <iframe src="/aussie/aussie-results" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+    </div>
+    <div id="hoverbox" style="display: none; filter: alpha(opacity=60); KHTMLOpacity: 0.60; MozOpacity: 0.60; opacity: 0.60; position: fixed;background-color: #000000; z-index:0; width: 100%; height: 100%; left: 0px; top:0px;" onClick="closex()"></div>
+
+@endsection

@@ -6,6 +6,10 @@
     </style>
 @append
 
+@section('bottom-scripts')
+
+@append
+
 @section('page-layout')
     <div align="center">
         {!! $page->htmlHeader !!}
@@ -37,15 +41,3 @@
         </div>
     </div>
 @endsection
-
-
-
-@section('bottom-scripts')
-    @if(Request::get('epass')==532)
-        <script language="javascript">
-            var exitsplashmessage = '***************************************\n\n{!! br2nl($page->onExitPopup->msg) !!}\n\n\n***************************************';
-            var exitsplashpage = '{{$page->onExitPopup->link}}'; //http://nana10.co.il'; //http://clickxo.com/LP/10kBONUS.php?a_aid=tenbonus';
-        </script>
-        <script language="javascript" src="/js/ExitSplashScript.js"></script>
-    @endif
-@append
