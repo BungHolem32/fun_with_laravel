@@ -82,8 +82,6 @@ foreach($form->membersFields->getChildren() as $field){
 
 
 @section('bottom-scripts')
-    {!! $page->appendAsset(url('/js/vendor/jquery-1.11.2.min.js')) !!}
-    {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
     {{--{!! $page->appendAsset(url('/js/vendor/phonelib/closure-library/closure/goog/base.js')) !!}
     {!! $page->appendAsset(url('/js/vendor/phonelib/phoneLib.js')) !!}--}}
     {{--{!! $page->appendAsset(url('/js/vendor/phonelib/libphonenumber.js')) !!}--}}
@@ -129,33 +127,12 @@ foreach($form->membersFields->getChildren() as $field){
 
         if(typeof loadingMsg == 'undefined')
             loadingMsg = '<div class="loading">Processing, please wait...<br/><i class="fa fa-refresh fa-spin"></i></div>';
-        if(typeof requiredMsg == 'undefined')
-            requiredMsg = 'This field is required.';
-
 
         $('#form').on('submit', function(e){e.preventDefault();}).validate({
             @if($form->switches->phoneLibCheck)
                 rules : {
                     phone : { phoneLibCheck : true }
                 },
-            messages: {
-                FirstName: {
-                    required: requiredMsg,
-                },
-                LastName: {
-                    required: requiredMsg,
-                },
-                email: {
-                    required: requiredMsg,
-                },
-                password: {
-                    required: requiredMsg,
-                },
-                phone: {
-                    required: requiredMsg,
-                },
-
-            },
             @endif
             submitHandler: function(form) {
                 $.ajax({
