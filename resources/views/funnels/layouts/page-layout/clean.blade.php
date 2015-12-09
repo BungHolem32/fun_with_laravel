@@ -16,7 +16,7 @@
             {{--<video width="640" height="360" autoplay style="padding-top: 17px;">
                 <source src="http://cdnmediahosting.com/user29339cdn3/newproducts2014/freemoneynopromo.mp4" type="video/mp4" >
             </video>--}}
-            @include('funnels.layouts._partials._video', ['w'=>655, 'h'=>391])
+            @include('funnels.layouts._partials._video',  ['w'=>640, 'h'=>360])
 
             {!! Form::open(['url' => url('postEmailForm').'?'.$_SERVER["QUERY_STRING"], 'method'=>'post']) !!}
             {{--<form method="post" action="{{url('postEmailForm').'?'.$_SERVER["QUERY_STRING"]}}" align="center">--}}

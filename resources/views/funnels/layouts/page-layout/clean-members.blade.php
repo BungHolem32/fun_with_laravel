@@ -15,7 +15,7 @@
         {!! $page->htmlHeader !!}
         {!! $page->smallHeader !!}
         <div align="center" class="monitor">
-            @include('funnels.layouts._partials._video', ['w'=>655, 'h'=>391])
+            @include('funnels.layouts._partials._video', ['w'=>655, 'h'=>381])
             <p><img src="/img/clean/button-new3.png" width="464" height="85" border="0" class="hov" /></p>
 
             <div class="formwrap">
