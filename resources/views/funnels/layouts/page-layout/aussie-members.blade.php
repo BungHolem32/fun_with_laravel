@@ -6,6 +6,7 @@
     <script src="/js/aussie/html5shiv.js"></script>
     <script src="/js/aussie/respond.min.js"></script>
     <![endif]-->
+    {!! $page->appendAsset(url('/js/vendor/jquery-1.11.2.min.js')) !!}
     <script type="text/javascript" src="/js/aussie/first.js?v=1"></script>
 @append
 
@@ -15,11 +16,12 @@
             var exitsplashmessage = '{!! strip_tags(br2nl($page->onExitPopup->msg)) !!}';
             var exitsplashpage = '{{$page->onExitPopup->link}}'; //http://nana10.co.il'; //http://clickxo.com/LP/10kBONUS.php?a_aid=tenbonus';
             var loadingMsg = '<div class="loading"><img src="/img/aussie/loadingBL2.gif" alt=""><div class="loading-text"> Registration is in progress.. </div></div>';
+            var requiredMsg = '<span class="arrow_box"></span>This field is required.';
         </script>
         <script src="/js/aussie/bootstrap.min.js"></script>
         <script language="javascript" src="/js/ExitSplashScript.js"></script>
         {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
-        {!! $page->appendAsset(url('/js/firstPage.js')) !!}
+{{--        {!! $page->appendAsset(url('/js/firstPage.js')) !!}--}}
     @endif
 @append
 
