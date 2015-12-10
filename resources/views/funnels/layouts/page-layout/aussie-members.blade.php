@@ -13,13 +13,10 @@
 @section('bottom-scripts')
     @if(Request::get('epass')!=532)
         <script language="javascript">
-            var exitsplashmessage = '{!! strip_tags(br2nl($page->onExitPopup->msg)) !!}';
-            var exitsplashpage = '{{$page->onExitPopup->link}}'; //http://nana10.co.il'; //http://clickxo.com/LP/10kBONUS.php?a_aid=tenbonus';
             var loadingMsg = '<div class="loading"><img src="/img/aussie/loadingBL2.gif" alt=""><div class="loading-text"> Registration is in progress.. </div></div>';
             var requiredMsg = '<span class="arrow_box"></span>This field is required.';
         </script>
         <script src="/js/aussie/bootstrap.min.js"></script>
-        <script language="javascript" src="/js/ExitSplashScript.js"></script>
         {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
 {{--        {!! $page->appendAsset(url('/js/firstPage.js')) !!}--}}
     @endif
@@ -564,7 +561,7 @@
                                         Copyright 2015 Aussie Method. All Right Reserved.
                                     </center></td>
                                     <td><center>
-                                        <a href="aussie-terms/" target="_blank" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Privacy</a> | <a href="../terms.php" target="_blank" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Terms</a> | <a href="../terms.php" target="_blank" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Disclaimer</a> | <a href="mailto:support@aussiemethod.com" target="_blank" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Support</a>
+                                        <a href="aussie-terms/" target="_blank" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Privacy</a> | <a href="aussie-terms/" target="_blank" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Terms</a> | <a href="../terms.php" target="_blank" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Disclaimer</a> | <a href="mailto:support@aussiemethod.com" target="_blank" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Support</a>
                                     </center></td>
                                 </tr>
                                 </tbody></table>

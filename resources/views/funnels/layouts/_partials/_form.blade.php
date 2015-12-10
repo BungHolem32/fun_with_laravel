@@ -128,7 +128,7 @@ foreach($form->membersFields->getChildren() as $field){
         if(typeof loadingMsg == 'undefined')
             loadingMsg = '<div class="loading">Processing, please wait...<br/><i class="fa fa-refresh fa-spin"></i></div>';
 
-        $('#form').on('submit', function(e){e.preventDefault();}).validate({
+        $('#form').on('submit', function(e){ console.log('clicked'); PreventExitSplash = true; e.preventDefault();}).validate({
             @if($form->switches->phoneLibCheck)
                 rules : {
                     phone : { phoneLibCheck : true }

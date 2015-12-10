@@ -11,7 +11,7 @@ $(document).ready(function(){
         loadingMsg = '<div class="loading"><span class="bg"></span>Processing, please wait...<br/><i class="fa fa-refresh fa-spin"></i></div>';
 
         //$('form').on('submit', function(e){e.preventDefault();});
-        $('form').on('submit', function(e){e.preventDefault();}).validate({
+        $('form').on('submit', function(e){ PreventExitSplash = true; e.preventDefault();}).validate({
         submitHandler: function(form) {
             $.ajax({
                 url: form.action,
@@ -21,7 +21,7 @@ $(document).ready(function(){
 
                 beforeSend: function(){
                     console.log('loading...');
-                    if(typeof loadingTimeOut != 'undefined')
+                    if(typeof loading != 'undefined')
                         $(form).after(loadingMsg);
                 },
                 success: function(res) {

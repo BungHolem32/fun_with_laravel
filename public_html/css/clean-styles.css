@@ -124,12 +124,12 @@ div#thankyou .thankyouContent{
 }
 
 input.error{
-    border: 1px solid #A00000;
-    background-color: #FFD7D7;
+/*    border: 1px solid #A00000;
+    background-color: #fcdede;*/
 }
 input.valid{
     border: 1px solid #00A000;
-    background-color: #E4FFE4;
+    background-color: #c2fcc2;
 }
 label.error{
     color: red;
@@ -184,7 +184,7 @@ div.loading {
     margin-bottom: 21px;
 }
 #phone-error{
-    left: 136px;
+    left: 96px;
 }
 @media(max-width: 992px){
     .field > input, .field > select {
@@ -213,23 +213,45 @@ div.loading {
     display: none !important;
 }
 
-form[novalidate=novalidate]{
-    margin-top: 22px;
+form{
+    position: relative;
+    margin-top: 22px !important;
+}
+
+
+form input::-webkit-input-placeholder,
+form textarea::-webkit-input-placeholder {
+    color: #555;
+}
+form input:-moz-placeholder,
+form textarea:-moz-placeholder {
+    color: #555;
+}
+form input::-moz-placeholder,
+form textarea::-moz-placeholder {
+    color: #555;
+}
+form input:-ms-input-placeholder,
+form textarea:-ms-input-placeholder {
+    color: #555;
 }
 
 label.error {
     background: #fff;
-    border: 1px solid transparent;
+    border: 1px dashed #D68E7A;
     -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
     border-radius: 5px;
     font-size: 11px !important;
     line-height: 7px;
     padding: 3px;
-    color: red;
-    position: absolute;
+    color: #E56D4F;
+    position: absolute !important;
     top: -21px;
     width: 131px;
     left: 18px;
+    font-family: Arial;
+
 }
 
 label.error:after {
@@ -249,4 +271,9 @@ label.error:after {
 }
 #form #prefix{
     text-align: center !important;
+}
+
+.monitor form{
+    max-width: 503px;
+    margin: 0 auto;
 }

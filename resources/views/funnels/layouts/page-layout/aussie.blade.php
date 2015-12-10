@@ -9,19 +9,12 @@
 @append
 
 @section('bottom-scripts')
-    @if(Request::get('epass')!=532)
-        <script language="javascript">
-            var exitsplashmessage = '{!! strip_tags(br2nl($page->onExitPopup->msg)) !!}';
-            var exitsplashpage = '{{$page->onExitPopup->link}}';
-            var loading=1;
-            var loadingTimeOut=1000;
-            var loadingMsg = '<div class="loading"><img src="/img/aussie/loadingBL2.gif" alt=""><div class="loading-text"> Registration is in progress.. </div></div>';
-        </script>
-        <script language="javascript" src="/js/ExitSplashScript.js"></script>
-    @endif
-
+    <script language="javascript">
+        var loading=1;
+        var loadingTimeOut=1000;
+        var loadingMsg = '<div class="loading"><img src="/img/aussie/loadingBL2.gif" alt=""><div class="loading-text"> Registration is in progress.. </div></div>';
+    </script>
     {!! $page->appendAsset(url('/js/aussie/bootstrap.min.js')) !!}
-    {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
     {!! $page->appendAsset(url('/js/firstPage.js')) !!}
 @append
 

@@ -214,4 +214,7 @@
         return dateTime;
     }
 </script>
+    <script>
+        var dontUseExitMsg = 1;
+    </script>
 @endsection
