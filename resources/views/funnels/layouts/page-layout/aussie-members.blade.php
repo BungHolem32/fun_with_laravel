@@ -11,15 +11,12 @@
 @append
 
 @section('bottom-scripts')
-    @if(Request::get('epass')!=532)
         <script language="javascript">
             var loadingMsg = '<div class="loading"><img src="/img/aussie/loadingBL2.gif" alt=""><div class="loading-text"> Registration is in progress.. </div></div>';
             var requiredMsg = '<span class="arrow_box"></span>This field is required.';
         </script>
+        @com('funnel_scripts')
         <script src="/js/aussie/bootstrap.min.js"></script>
-        {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
-{{--        {!! $page->appendAsset(url('/js/firstPage.js')) !!}--}}
-    @endif
 @append
 
 
@@ -554,14 +551,17 @@
                 <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#1e387b" style="color:#090;">
                     <tbody><tr>
                         <td height="50" bgcolor="#1e387b"><center>
-                            <table width="880" border="0" cellspacing="0" cellpadding="0" style="color:#cedbff;">
+                            <table class="footer" width="880" border="0" cellspacing="0" cellpadding="0" style="color:#cedbff;">
                                 <tbody><tr>
                                     <!-- <td><Center>What is the Aussie Method?</Center></td>-->
                                     <td><center>
                                         Copyright 2015 Aussie Method. All Right Reserved.
                                     </center></td>
                                     <td><center>
-                                        <a href="aussie-terms/" target="_blank" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Privacy</a> | <a href="aussie-terms/" target="_blank" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Terms</a> | <a href="../terms.php" target="_blank" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Disclaimer</a> | <a href="mailto:support@aussiemethod.com" target="_blank" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Support</a>
+                                            @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Privacy', 'target'=>'_blank'])
+                                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'target'=>'_blank'])
+                                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Disclaimer', 'target'=>'_blank'])
+                                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Support', 'target'=>'_blank'])
                                     </center></td>
                                 </tr>
                                 </tbody></table>
@@ -578,28 +578,28 @@
 
         <h4 align="center"><strong class="grey">Average Profit Per Hour: $1,350</strong></h4>
 
-        <iframe src="/aussie/aussie-results" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+        <iframe src="/aussie/results" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
     </div>
     <div id="tb2" class="popup" style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
         <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;" onClick="closex()">X</div>
 
         <h4 align="center"><strong class="grey">Average Profit Per Hour: $2,140</strong></h4>
 
-        <iframe src="/aussie/aussie-results" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+        <iframe src="/aussie/results" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
     </div>
     <div id="tb3" class="popup" style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
         <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;" onClick="closex()">X</div>
 
         <h4 align="center"><strong class="grey">Average Profit Per Hour: $1,700</strong></h4>
 
-        <iframe src="/aussie/aussie-results" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+        <iframe src="/aussie/results" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
     </div>
     <div id="tb0" class="popup" style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
         <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;" onClick="closex()">X</div>
 
         <h4 align="center"><strong class="grey">Average Profit Per Hour: $3,760</strong></h4>
 
-        <iframe src="/aussie/aussie-results" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+        <iframe src="/aussie/results" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
     </div>
     <div id="hoverbox" style="display: none; filter: alpha(opacity=60); KHTMLOpacity: 0.60; MozOpacity: 0.60; opacity: 0.60; position: fixed;background-color: #000000; z-index:0; width: 100%; height: 100%; left: 0px; top:0px;" onClick="closex()"></div>
 

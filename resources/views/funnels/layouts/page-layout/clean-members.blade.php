@@ -7,7 +7,7 @@
 @append
 
 @section('bottom-scripts')
-
+    @com('funnel_scripts')
 @append
 
 @section('page-layout')
