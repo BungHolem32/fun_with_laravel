@@ -5165,7 +5165,7 @@ a.list-group-item-danger.active:focus {
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 16px;
+  /*font-size: 16px;*/
   color: inherit;
 }
 .panel-title > a {
@@ -9512,4 +9512,10 @@ body {
   border-radius: 10px;
   padding: 4px;
   margin-left: 9px;
+}
+
+/** to change from less **/
+.panel-title {
+  /*font-size: 16px;*/
+  font-weight: 100;
 }

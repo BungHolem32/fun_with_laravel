@@ -55,7 +55,7 @@ foreach($form->membersFields->getChildren() as $field){
                     @if($field[0] == 'text' || $field[0] == 'email' || $field[0] == 'password')
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 field">
                             {{--{!! Form::$field[0]($field[1], null, ['class'=>'form-control', 'placeholder'=>@ln($field[2]) !!}--}}
-                            <input value="{{Request::get($field[1])}}" type="{{ $field[0] }}" id="{{ $field[1] }}" class="form-control" name="{{ $field[1] }}" required="required" minlength="2" placeholder="@ln({{ $field[2] }})" data-cip-id="{{ $field[1] }}">
+                            <input value="{{Request::get($field[1])}}" {{!empty($_REQUEST[$field[1]]) ? 'disabled="disabled"' : ''}}  type="{{ $field[0] }}" id="{{ $field[1] }}" class="form-control" name="{{ $field[1] }}" required="required" minlength="2" placeholder="@ln({{ $field[2] }})" data-cip-id="{{ $field[1] }}">
                         </div>
                     @elseif($field[0] == 'phone')
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 field phoneFields">

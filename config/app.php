@@ -148,6 +148,8 @@ return [
 		'App\Providers\RouteServiceProvider',
         'App\Providers\ViewShareProvider',
 
+		//'App\Lib\Mixpanel',
+
 	],
 
 	/*

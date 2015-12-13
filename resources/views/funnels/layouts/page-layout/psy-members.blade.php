@@ -5,7 +5,7 @@
 @append
 
 @section('bottom-scripts')
-    {{--{!! $page->appendAsset(url('/js/firstPage.js')) !!}--}}
+    @com('funnel_scripts')
 @append
 
 @section('page-layout')

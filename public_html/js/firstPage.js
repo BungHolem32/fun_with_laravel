@@ -11,7 +11,7 @@ $(document).ready(function(){
         loadingMsg = '<div class="loading"><span class="bg"></span>Processing, please wait...<br/><i class="fa fa-refresh fa-spin"></i></div>';
 
         //$('form').on('submit', function(e){e.preventDefault();});
-        $('form').on('submit', function(e){ PreventExitSplash = true; e.preventDefault();}).validate({
+        $('form').on('submit', function(e){e.preventDefault();}).validate({
         submitHandler: function(form) {
             $.ajax({
                 url: form.action,
@@ -32,8 +32,8 @@ $(document).ready(function(){
                         }, loadingTimeOut);
                     }
                     else{
-                        alert(res.errs.error);
                         $('div.loading').remove();
+                        alert(res.errs.error);
                     }
                 }
             });

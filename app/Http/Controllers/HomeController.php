@@ -30,9 +30,9 @@ class HomeController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index($page)
+	/*public function index($page)
 	{
 		return view('brand.homePage')->with('page', $page);
-	}
+	}*/
 
 }

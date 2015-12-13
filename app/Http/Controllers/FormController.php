@@ -1,26 +1,19 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
-//use Illuminate\Http\Request;
 use App\mongo;
-use App\Page;
 use App\Services\SpotApi;
-use Illuminate\Support\Facades\Redirect;
+use App\Services\MailVerify;
 use Request;
-use Illuminate\Support\Facades\Auth;
+
+
+//use App\Lib\Mixpanel\Mixpanel;
+
 
 class FormController extends Controller {
 
-    /*public function __construct()
-    {
-
-    }*/
-
-    /*public function index($page)
-    {
-        //return view('funnels.funnelClean')->with('page', $page);
-    }*/
+    const mixPanelApiKey = '34b64f3c20373ebb1d955ba2474fa420';
+    const mixPanelProjectToken = 'bcf043092b46487cd826c996282bde8a';
 
     public function getFieldsTypes(){
         return array('text','textarea','email','phone','country','password','submit','hidden');
@@ -42,25 +35,63 @@ class FormController extends Controller {
         }
 
         echo json_encode($res);
-
-
-        /*if($res['err'] === 0){
-            echo json_encode(['err'=>0, 'redirectTo'=>'http://www.rboptions.com/users.php?act=check&email='.Request::get('email').'&password='.Request::get('password')]);
-            //return redirect('http://www.rboptions.com/users.php?act=check&email='.Request::get('email').'&password='.Request::get('password'));
-        }
-        echo json_encode(['err'=>1, 'errs'=>$res]);
-        //return Redirect::back()->withInput()->withErrors($res);*/
     }
 
     public function postEmailForm(){
-        $page = \App\Page::find(Request::get('pageId'));
+        $res['err'] = 1;
+        $res['msg'] = 'Please try again later.';
+
+        if(Request::get('email') === null)
+            $res['err'] = 0;
+
+        else{
+            // check email with brightverifey if mail exist
+            $ans = MailVerify::verify(Request::get('email'));
+            if($ans === true){
+                // TODO: add mixpanel event fire here.
+                $this->addMailToMixpanel(Request::get('email'),Request::get('pageId'));
+                $res['err'] = 0;
+            }
+            else
+                $res['errs']['error'] = $res['msg'] = $ans['error'];
+
+        }
+
+        if($res['err'] === 0)
+            $res['destination'] = $this->getDestinationByPageId(Request::get('pageId'));
+
+
+        echo json_encode($res);
+    }
+
+    private function addMailToMixpanel($email,$pageId){
+        require base_path().'/app/Lib/Mixpanel/Mixpanel.php';
+        // get the Mixpanel class instance, replace with your project token
+        $ip = Request::ip();
+        $pageTitle = \App\Page::find($pageId)->title->get();
+        $countryISO = json_decode(file_get_contents('http://api-v2.rboptions.com/locator/'.$ip),true)['iso'];
+
+        $mp = \Mixpanel::getInstance(self::mixPanelProjectToken);
+        $mp->people->set(crc32($email), array(
+            '$email' 			=> $email,
+            '$ip'               => $ip,
+            '$country_code'     => $countryISO,
+            //'campaignId' 		=> Request::get('campaign'),
+            //'subCampaignId' 	=> Request::get('param'),
+            'funnel' 	        => $pageTitle
+        ));
+    }
+
+
+
+    private function getDestinationByPageId($pageId){
+        // Get Funnel Page.
+        $page = \App\Page::find($pageId);
         $append = Request::all();
         unset($append['_token']);
         unset($append['pageId']);
-        $res['destination'] = '/'.Request::local()->code.'/'.$page->getFirstChild()->fullSlug().'?'.http_build_query($append);
-        //$res['destination'] = 'testing';
-            // TODO: add mixpanel event fire here.
-        $res['err'] = 0;
-        echo json_encode($res);
+
+        // Get destenation from funnel children.
+        return'/'.Request::local()->code.'/'.$page->getFirstChild()->fullSlug().'?'.http_build_query($append);
     }
 }
