@@ -1,5 +1,6 @@
 @section('page-layout')
     <link rel="stylesheet" href="/css/aussie/panel/style.css" />
+    <script src="/js/aussie/panel/custom.js"></script>
 
 
     {{-- TOP BANNER --}}
@@ -31,7 +32,7 @@
                         </a>
                     </li>
                     <li id="guided-tour">
-                        <a href="javascript:;" id="manual">
+                        <a class="guided-tour-start" href="javascript:;" id="manual">
                             <i class="fa fa-info-circle"></i> Guided Tour
                         </a>
                     </li>
@@ -96,6 +97,18 @@
                             </div>
                             <div class="main-content">
                                 <div id="rv-content">
+                                    {{-- Guide POPUPS --}}
+                                    <div id="guiders_overlay" style="display: none;"></div>
+                                    <div class="guider" id="_1" style="width: 400px; position: fixed; top: 195.333px; left: 597.5px; display: none;">  <div class="guiders_content">    <h1 class="guiders_title">Welcome to the Aussie Method Trading App!</h1>    <div class="guiders_close"></div>    <p class="guiders_description">We will now guide you briefly on how to use The automatic Aussie Method Trading App that will take the trading sessions for you.</p>    <div class="guiders_buttons_container">    <a class="guiders_button" href="javascript:void(0);">Close</a><a class="guiders_button" href="javascript:void(0);">Let's Start</a></div>  </div>  <div class="guiders_arrow">  </div></div>
+                                    <div class="guider" id="_2" style="width: 400px; display: none; position: absolute; top: 398.8px; left: 96px;">  <div class="guiders_content">    <h1 class="guiders_title">Deposit &amp; Activation</h1>    <div class="guiders_close"></div>    <p class="guiders_description">First click on the deposit button and fund your trading account with Big Option.</p>    <div class="guiders_buttons_container">    <a class="guiders_button" href="javascript:void(0);">Close</a><a class="guiders_button" href="javascript:void(0);">Next</a><a class="guiders_button" href="javascript:void(0);">Previous</a></div>  </div>  <div class="guiders_arrow guiders_arrow_up" style="left: 169px;">  </div></div>
+                                    <div class="guider" id="_3" style="width: 400px; display: none; position: absolute; top: 399.8px; left: 597.156px;">  <div class="guiders_content">    <h1 class="guiders_title">Deposit &amp; Activation</h1>    <div class="guiders_close"></div>    <p class="guiders_description">Then make sure your App status is on activated.</p>    <div class="guiders_buttons_container">    <a class="guiders_button" href="javascript:void(0);">Close</a><a class="guiders_button" href="javascript:void(0);">Next</a><a class="guiders_button" href="javascript:void(0);">Previous</a></div>  </div>  <div class="guiders_arrow guiders_arrow_up" style="left: 169px;">  </div></div>
+                                    <div class="guider" id="_4" style="width: 400px; display: none; position: absolute; top: -83.5px; left: 59.8px;">  <div class="guiders_content">    <h1 class="guiders_title">Balance Info</h1>    <div class="guiders_close"></div>    <p class="guiders_description">This is your balance with Big Option, Your balance is updated automatically.</p>    <div class="guiders_buttons_container">    <a class="guiders_button" href="javascript:void(0);">Close</a><a class="guiders_button" href="javascript:void(0);">Next</a><a class="guiders_button" href="javascript:void(0);">Previous</a></div>  </div>  <div class="guiders_arrow guiders_arrow_left" style="top: 73.5px;">  </div></div>
+                                    <div class="guider" id="_5" style="width: 400px; display: none; position: absolute; top: 389.8px; left: 1099.31px;">  <div class="guiders_content">    <h1 class="guiders_title">Amount</h1>    <div class="guiders_close"></div>    <p class="guiders_description">Please choose your preferred amount per each trade.</p>    <div class="guiders_buttons_container">    <a class="guiders_button" href="javascript:void(0);">Close</a><a class="guiders_button" href="javascript:void(0);">Next</a><a class="guiders_button" href="javascript:void(0);">Previous</a></div>  </div>  <div class="guiders_arrow guiders_arrow_up" style="left: 169px;">  </div></div>
+                                    <div class="guider" id="_6" style="width: 400px; display: none; position: absolute; top: 188.2px; left: 596.5px;">  <div class="guiders_content">    <h1 class="guiders_title">Running Positions</h1>    <div class="guiders_close"></div>    <p class="guiders_description">Here you can see Aussie Method Trading App searching for the best opportunity to trade for you. Once our system will find a good opportunity it will automatically execute the trading for you.</p>    <div class="guiders_buttons_container">    <a class="guiders_button" href="javascript:void(0);">Close</a><a class="guiders_button" href="javascript:void(0);">Next</a><a class="guiders_button" href="javascript:void(0);">Previous</a></div>  </div>  <div class="guiders_arrow guiders_arrow_down" style="left: 169px;">  </div></div>
+                                    <div class="guider" id="_7" style="width: 400px; display: none; position: absolute; top: 381.2px; left: 596.5px;">  <div class="guiders_content">    <h1 class="guiders_title">Trading History Panel</h1>    <div class="guiders_close"></div>    <p class="guiders_description">Here you can see the latest open and closed position made by the Aussie Method Trading App ONLY! Also you can see if the sessions expired in the money or not.</p>    <div class="guiders_buttons_container">    <a class="guiders_button" href="javascript:void(0);">Close</a><a class="guiders_button" href="javascript:void(0);">Next</a><a class="guiders_button" href="javascript:void(0);">Previous</a></div>  </div>  <div class="guiders_arrow guiders_arrow_down" style="left: 169px;">  </div></div>
+                                    <div class="guider" id="_8" style="width: 400px; display: none; position: absolute; top: 178.8px; left: 626.688px;">  <div class="guiders_content">    <h1 class="guiders_title">Broker Trading Area</h1>    <div class="guiders_close"></div>    <p class="guiders_description">If you wish to go to the official Big Option site, you can click on this button. On the broker's site you can find more information about the binary options industry, promotions, and more assets you can trade on by yourself without using Aussie Method Trading App recommendations.</p>    <div class="guiders_buttons_container">    <a class="guiders_button" href="javascript:void(0);">Close</a><a class="guiders_button" href="javascript:void(0);">Next</a><a class="guiders_button" href="javascript:void(0);">Previous</a></div>  </div>  <div class="guiders_arrow guiders_arrow_up" style="left: 169px;">  </div></div>
+                                    <div class="guider" id="_9" style="width: 400px; display: none; position: absolute; top: -110.5px; left: 59.8px;">  <div class="guiders_content">    <h1 class="guiders_title">Account Details</h1>    <div class="guiders_close"></div>    <p class="guiders_description">Here you can see your profile details, if you would like to change your details, please contact Aussie Method Trading App support.</p>    <div class="guiders_buttons_container">    <a class="guiders_button" href="javascript:void(0);">Done</a><a class="guiders_button" href="javascript:void(0);">Previous</a></div>  </div>  <div class="guiders_arrow guiders_arrow_left" style="top: 100.5px;">  </div></div>
+                                    {{-- Modal POPUPS --}}
                                     <div class="modal fade" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="depositModalLabel" aria-hidden="true" data-backdrop="static" style="display: none;">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
@@ -750,4 +763,5 @@
 			Copyright © Aussie Method.
 	</span>
     </footer>
+
 @endsection
