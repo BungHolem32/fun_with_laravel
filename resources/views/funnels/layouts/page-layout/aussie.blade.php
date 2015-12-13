@@ -14,7 +14,8 @@
         var loadingTimeOut=1000;
         var loadingMsg = '<div class="loading"><img src="/img/aussie/loadingBL2.gif" alt=""><div class="loading-text"> Registration is in progress.. </div></div>';
     </script>
-    {!! $page->appendAsset(url('/js/aussie/bootstrap.min.js')) !!}
+    @com('funnel_scripts')
+    <script src="/js/aussie/bootstrap.min.js"></script>
     {!! $page->appendAsset(url('/js/firstPage.js')) !!}
 @append
 
@@ -295,8 +296,8 @@
                 <br>
                 <br>
                 <br>
-                    <div class="sec_em">
-                        @include('funnels.layouts._partials._video', ['video_url'=>'http://video.chaki.netdna-cdn.com/guide4f.mp4','w'=>663, 'h'=>385])
+                    <div class="sec_em onscroll_video">
+                        @include('funnels.layouts._partials._video', ['video_url'=>'http://video.chaki.netdna-cdn.com/guide4f.mp4','w'=>663, 'h'=>385,'autoplay'=>'false'])
                     </div>
             </center></td>
         </tr>
@@ -396,14 +397,17 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#1e387b" style="color:#090;">
     <tr>
         <td height="50" bgcolor="#1e387b"><center>
-            <table width="880" border="0" cellspacing="0" cellpadding="0" style="color:#cedbff;">
+            <table class="footer" width="880" border="0" cellspacing="0" cellpadding="0" style="color:#cedbff;">
                 <tr>
                     <!-- <td><Center>What is the Aussie Method?</Center></td>-->
                     <td><Center>
                         Copyright 2015 Aussie Method. All Right Reserved.
                     </Center></td>
                     <td><Center>
-                        <a href="aussie-terms/" target="_blank" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Privacy</a> | <a href="aussie-terms/" target="_blank" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Terms</a> | <a href="aussie-terms/" target="_blank" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Disclaimer</a> | <a href="mailto:support@aussiemethod.com" target="_blank" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Support</a>
+                            @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Privacy', 'target'=>'_blank'])
+                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'target'=>'_blank'])
+                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Disclaimer', 'target'=>'_blank'])
+                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Support', 'target'=>'_blank'])
                     </Center></td>
                 </tr>
             </table>

@@ -108,6 +108,15 @@ $(document).ready(function(){
             .parent().siblings().find('.a-section').slideUp();
     });
 
+// load video if scroll
+    $(window).on('scroll',function(){
+        if($('.onscroll_video').length>0)
+            if(($(window).scrollTop()+200)>($('.onscroll_video').offset().top-$('.onscroll_video').parent().height()) && !$('.onscroll_video video').hasClass('on')){
+                $('.onscroll_video video').addClass('on').get(0).play();
+                console.log('.onscroll_video video');
+
+            }
+    });
 });
 
 
@@ -194,4 +203,5 @@ function mkchange()
     }
 }
 setInterval(mkchange,13600);
+
 

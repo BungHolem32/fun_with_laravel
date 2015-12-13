@@ -3,6 +3,7 @@
 @append
 
 @section('bottom-scripts')
+    @com('funnel_scripts')
     {!! $page->appendAsset(url('/js/firstPage.js')) !!}
 @append
 
