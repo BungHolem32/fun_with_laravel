@@ -114,7 +114,6 @@ $(document).ready(function(){
             if(($(window).scrollTop()+200)>($('.onscroll_video').offset().top-$('.onscroll_video').parent().height()) && !$('.onscroll_video video').hasClass('on')){
                 $('.onscroll_video video').addClass('on').get(0).play();
                 console.log('.onscroll_video video');
-
             }
     });
 });
