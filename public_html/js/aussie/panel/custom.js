@@ -1,9 +1,11 @@
+var guider = 0, debug = 0;
+
 $(document).ready(function(){
-    var guider = 0, debug = 0;
 
     //showLoading:    $('.getLoading').show().find('.inside').html('');
     // ajax's to        $('.openTrades').html()  ||   $('.historyTrades').html()
     // on and off:     On click .startTrade ||    .stopTrade
+    // and when deposit change deposit=1;
 
     //guide popups
     $('.guided-tour-start').on('click',function(){
@@ -33,7 +35,6 @@ $(document).ready(function(){
 
     if(debug == 0) {
         // first popup
-        $('#welcomeModal').addClass('fade').addClass('in').fadeIn();
         $('html').addClass('noscrolly');
 
         $('.close').on('click', function () {
@@ -43,16 +44,19 @@ $(document).ready(function(){
 
         $('#welcomeModal .close,#welcomeModal button').on('click', function () {
             $(this).closest('.modal').fadeOut('fast');
-            $('#formDepositModal').addClass('fade').addClass('in').fadeIn();
+            setTimeout(function(){
+                $('#formDepositModal').fadeIn();
+            },300);
             $('html').addClass('noscrolly');
         });
 
         // need deposit=something to disable deposit popup every click
         if (typeof deposit == 'undefined') {
             $('a').on('click', function () {
-                if(!$(this).hasClass('guided-tour-start') && !$(this).parent().hasClass('guiders_buttons_container'))
+                if(!$(this).hasClass('guided-tour-start') && !$(this).parent().hasClass('guiders_buttons_container')){
                     $('#formDepositModal').fadeIn();
-                $('html').addClass('noscrolly');
+                    $('html').addClass('noscrolly');
+                }
                 return false;
             });
         }

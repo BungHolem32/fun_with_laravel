@@ -1,7 +1,41 @@
-.form-options,.or,.signup{
-    display: table;
-    margin: 10px auto;
+/* animateCSS */
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
 }
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+/** custom **/
 .form-options button,.or button,.signup a{
     margin-left: 5px;
 }
@@ -36,4 +70,25 @@ html.noscrolly{
     right: 1%;
     font-size: 15px;
     line-height: 62px;
+}
+
+body,.bg-login{
+    height: 100%;
+}
+
+.bg-login form{
+    max-width: 460px;
+    margin: 0 auto;
+}
+
+.bg-login .form-control{
+    margin-bottom: 17px;
+}
+.bg-login .form-options{
+    margin-top: 32px;
+}
+
+.bg-login .bfloat {
+    font-weight: 100;
+    font-size: 19px;
 }
