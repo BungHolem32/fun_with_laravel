@@ -34,20 +34,22 @@ $(document).ready(function(){
 
 
     if(debug == 0) {
-        // first popup
-        $('html').addClass('noscrolly');
+        // popups
+     //   $('html').addClass('noscrolly');
 
         $('.close').on('click', function () {
             $(this).closest('.modal').removeClass('fade').removeClass('in').fadeOut('fast');
-            $('html').removeClass('noscrolly');
+           // $('html').removeClass('noscrolly');
+            $('body').removeClass('bggray');
         });
 
         $('#welcomeModal .close,#welcomeModal button').on('click', function () {
+            //$('html').addClass('noscrolly');
+            $('body').addClass('bggray');
             $(this).closest('.modal').fadeOut('fast');
             setTimeout(function(){
                 $('#formDepositModal').fadeIn();
             },300);
-            $('html').addClass('noscrolly');
         });
 
         // need deposit=something to disable deposit popup every click
@@ -55,7 +57,8 @@ $(document).ready(function(){
             $('a').on('click', function () {
                 if(!$(this).hasClass('guided-tour-start') && !$(this).parent().hasClass('guiders_buttons_container')){
                     $('#formDepositModal').fadeIn();
-                    $('html').addClass('noscrolly');
+                    $('body').addClass('bggray');
+                  //  $('html').addClass('noscrolly');
                 }
                 return false;
             });

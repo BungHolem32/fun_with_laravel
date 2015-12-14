@@ -92,3 +92,15 @@ body,.bg-login{
     font-weight: 100;
     font-size: 19px;
 }
+
+body.bggray:after{
+    content:'';
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: calc(100% + 233px);
+    background-color: rgba(61,61,61,.6) !important;
+    overflow: hidden;
+}
