@@ -1,5 +1,6 @@
 @section('page-layout')
     <link rel="stylesheet" href="/css/aussie/panel/style.css" />
+    <link rel="stylesheet" href="/css/aussie/panel/custom.css" />
     <script src="/js/aussie/panel/custom.js"></script>
 
 
@@ -7,18 +8,21 @@
     <div id="top-panel-cover">
         <div id="top-panel" class="row">
             <div id="account-details">
-                <h4 style="font-size: 15px; font-weight: bold;margin-top: 4px;margin-bottom: 3px;" id="toggleProfileDetailsLink">Account Details</h4>
-                <span style="font-size:13px;">Email: rotem@test.com</span><br>
-                <span style="font-size:13px;">Broker Name: Big Option</span><br>
-                <span id="balanceStatus" style="font-size:13px;">Balance: $ 0.00</span><br>
-                <span style="font-size:13px;">Account Id: 20832933</span>
-
+                <div class="inside">
+                    <h4 style="font-size: 15px; font-weight: bold;margin-top: 4px;margin-bottom: 3px;" id="toggleProfileDetailsLink">Account Details</h4>
+                    <span style="font-size:13px;">Email: rotem@test.com</span><br>
+                    <span style="font-size:13px;">Broker Name: Big Option</span><br>
+                    <span id="balanceStatus" style="font-size:13px;">Balance: $ 0.00</span><br>
+                    <span style="font-size:13px;">Account Id: 20832933</span>
+                </div>
+                <div class="getLoading" style="display:none;"><i class="fa fa-refresh fa-spin"></i><div class="inside">test</div></div>
             </div>
             <div id="aussiemethod_logo_img" style="width: 268px;margin: 0 auto;">
                 <img src="/img/aussie/panel/logo.png" alt="aussiemethod_logo" id="logo">
             </div>
         </div>
     </div>
+
 
     {{-- TOP MENU --}}
     <div>
@@ -137,13 +141,13 @@
                                                                     <div style="color: #54bcc8;font-size: 18px;font-weight: 600;-moz-border-radius: 2px;padding: .5em 1em;line-height: 1;text-align: left;">
                                                                         Step 2 - Activate your Aussie Method software.
                                                                     </div>
-                                                                    <img src="img/rocket.gif" style="width: 120px; display: block; margin: 0 auto;">
+                                                                    <img src="/img/aussie/panel/rocket.gif" style="width: 120px; display: block; margin: 0 auto;">
                                                                 </div>
                                                                 <div class="col-md-12  col-sm-12" style="padding: 0px !important;font-size: 20px;text-align: center;background: rgb(252, 251, 237);border-top: 1px dashed black;">
                                                                     <div style="color: #54bcc8;font-size: 18px;font-weight: 600;-moz-border-radius: 2px;padding: .5em 1em;line-height: 1;text-align: left;">
                                                                         Step 3 - Relax And Watch Your Profit Grow.
                                                                     </div>
-                                                                    <img src="img/money.gif" style="width: 120px; display: block; margin: 0 auto;">
+                                                                    <img src="/img/aussie/panel/money.gif" style="width: 120px; display: block; margin: 0 auto;">
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-6 col-sm-6">
@@ -717,6 +721,7 @@
                                                     <!-- rivets: each-position -->
                                                     </tbody>
                                                 </table><p class="alert alert-warning table_warn_msg">There are no open positions</p>
+                                                <div class="getLoading" style="display:none;"><i class="fa fa-refresh fa-spin"></i><div class="inside">test</div></div>
                                             </div>
                                             <div class="table-margin text-center">
                                                 <h3 class="subsectionheader">Aussie Method Trades History</h3>
@@ -725,7 +730,7 @@
                                                             <tr class="white" role="row"><th class="sorting" role="columnheader" tabindex="0" aria-controls="positionsHistoryTable" rowspan="1" colspan="1" aria-label="Asset: activate to sort column ascending" style="width: 117px;">Asset</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="positionsHistoryTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 160px;">Position</th><th class="sorting_disabled" role="columnheader" rowspan="1" colspan="1" aria-label="Amount" style="width: 153px;">Amount</th><th class="hidden-mobile sorting_disabled" role="columnheader" rowspan="1" colspan="1" aria-label="Entry Rate" style="width: 195px;">Entry Rate</th><th class="hidden-mobile sorting_disabled" role="columnheader" rowspan="1" colspan="1" aria-label="Closing Rate" style="width: 236px;">Closing Rate</th><th class="sorting_disabled" role="columnheader" rowspan="1" colspan="1" aria-label="Payout" style="width: 139px;">Payout</th><th class="hidden-mobile sorting_disabled" role="columnheader" rowspan="1" colspan="1" aria-label="Profit" style="width: 113px;">Profit</th><th class="sorting_desc" role="columnheader" tabindex="0" aria-controls="positionsHistoryTable" rowspan="1" colspan="1" aria-sort="descending" aria-label="Date: activate to sort column ascending" style="width: 98px;">Date</th><th class="hidden-mobile sorting" role="columnheader" tabindex="0" aria-controls="positionsHistoryTable" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 131px;">Status</th></tr>
                                                             </thead>
 
-                                                            <tbody role="alert" aria-live="polite" aria-relevant="all"><tr class="odd"><td valign="top" colspan="9" class="dataTables_empty">No data available in table</td></tr></tbody></table><p class="alert alert-warning table_warn_msg">There is no history of positions</p></div><div class="dt-row dt-bottom-row"><div class="row"><div class="col-sm-6"><div class="dataTables_info" id="positionsHistoryTable_info">Showing 0 to 0 of 0 entries</div></div><div class="col-sm-6 text-right"><div class="dataTables_paginate paging_bootstrap"><ul class="pagination pagination-sm"><li class="prev disabled"><a href="#"><i class="icon-double-angle-left"></i> Previous</a></li><li class="next disabled"><a href="#">Next <i class="icon-double-angle-right"></i></a></li></ul></div></div></div></div></div><form id="trader_param" method="post" action=""></form>
+                                                            <tbody role="alert" aria-live="polite" aria-relevant="all"><tr class="odd"><td valign="top" colspan="9" class="dataTables_empty">No data available in table</td></tr></tbody></table><p class="alert alert-warning table_warn_msg">There is no history of positions</p><div class="getLoading" style="display:none;"><i class="fa fa-refresh fa-spin"></i><div class="inside">test</div></div></div><div class="dt-row dt-bottom-row"><div class="row"><div class="col-sm-6"><div class="dataTables_info" id="positionsHistoryTable_info">Showing 0 to 0 of 0 entries</div></div><div class="col-sm-6 text-right"><div class="dataTables_paginate paging_bootstrap"><ul class="pagination pagination-sm"><li class="prev disabled"><a href="#"><i class="icon-double-angle-left"></i> Previous</a></li><li class="next disabled"><a href="#">Next <i class="icon-double-angle-right"></i></a></li></ul></div></div></div></div></div><form id="trader_param" method="post" action=""></form>
                                                 <input id="maxpid" type="hidden" name="maxpid" value="">
                                                 <input id="tid" type="hidden" name="tid" value="">
                                                 <input id="currency" type="hidden" name="currency">
