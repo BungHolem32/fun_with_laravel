@@ -35,21 +35,22 @@ class OpenAccountController extends Controller {
 
     public static function login(){
         $data = \Request::all();
-        $ans = \Customer::login($data);
-        if(\Customer::isLogged()){
-            echo json_encode(['redirect'=>\Customer::getFirstPage()]);
+        $ans = Customer::login($data);
+        /*if(Customer::isLogged()){
+            echo json_encode(['redirect'=> self::getFirstPage()]);
         } else {
             echo json_encode($ans);
-        }
+        }*/
+        return \Redirect::back();
     }
 
     public static function ajaxLogout(){
-        \Customer::logout();
+        Customer::logout();
         return 'loggedout';
     }
 
     public static function logout(){
-        \Customer::logout();
+        Customer::logout();
         return \Redirect::to('/');
     }
 
@@ -68,4 +69,16 @@ class OpenAccountController extends Controller {
         return $temp;
     }
 
+    public static function getFirstPage(){
+        /*if(Customer::get()->financial['balance']){
+            // 19 is trade page
+            // 30 is the page id for credit page
+            $redirect = '/'.\Request::local()->code.'/'.Page::fullSlugStatic(19);
+            //$redirect = URL::route('trade', ['lang'=>$this->language['code']]);
+        }else{
+            $redirect = '/'.\Request::local()->code.'/'.Page::fullSlugStatic(30);
+            //$redirect = URL::route('deposit/credit', ['lang'=>$this->language['code']]);
+        }
+        return $redirect;*/
+    }
 }

@@ -41,6 +41,10 @@ class Customer
         return self::$instance;
     }
 
+    public function __get($key){
+        return self::get()->$key;
+    }
+
     private function setup($data){
         $currencySymbol = [
             'USD' => '$',
@@ -65,22 +69,22 @@ class Customer
         else return $data;
     }
 
-    public function isLogged(){
-        return $this->isLogged;
+    public static function isLogged(){
+        return self::get()->isLogged;
     }
 
-    public function login($data){
-        $ans = $this->verifyLogin($data);
+    public static function login($data){
+        $ans = self::verifyLogin($data);
         if(isset($ans) && $ans['err'] === 0){
-            $this->setup($ans);
-            \Session::put('spotCustomer', $this);
+            self::get()->setup($ans);
+            \Session::put('spotCustomer', self::get());
             \Session::save();
-            return $this;
+            return self::get();
         }
         return json_encode($ans);
     }
 
-    private function verifyLogin($data){
+    private static function verifyLogin($data){
         $temp = [];
         if(isset($data['email']) && isset($data['password'])) {
             $temp['FILTER']['email'] = $data['email'];
@@ -90,7 +94,7 @@ class Customer
     }
 
 
-    public function logout(){
+    public static function logout(){
         foreach ( $_COOKIE as $key => $value ) {
             setcookie( $key, null, -1, '/', '.rboptions.com' );
         }
@@ -98,11 +102,10 @@ class Customer
         \Session::flush();
     }
 
-    public function setSpotAuthToken(){
+    private function setSpotAuthToken(){
         $authKey = md5(uniqid($this->id));
         //$u['customerId'] = $customer['id'];
         //$data = self::clearFields($u);
-
         $ans = SpotApi::sendRequest('Customer', 'edit', ['authKey'=>$authKey, 'customerId'=>$this->id]);
         if($ans['status']['operation_status'] == 'successful'){
             $this->auth = [
@@ -113,20 +116,6 @@ class Customer
             Log::error('Failed to set Spot auth token', $ans);
         }
     }
-
-    public function getFirstPage(){
-        if($this->financial['balance']){
-            // 19 is trade page
-            // 30 is the page id for credit page
-            $redirect = '/'.\Request::local()->code.'/'.Page::fullSlugStatic(19);
-            //$redirect = URL::route('trade', ['lang'=>$this->language['code']]);
-        }else{
-            $redirect = '/'.\Request::local()->code.'/'.Page::fullSlugStatic(30);
-            //$redirect = URL::route('deposit/credit', ['lang'=>$this->language['code']]);
-        }
-        return $redirect;
-    }
-
 
 }
 

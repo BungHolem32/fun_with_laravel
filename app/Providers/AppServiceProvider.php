@@ -31,9 +31,9 @@ class AppServiceProvider extends ServiceProvider {
 			'App\Services\Registrar'
 		);
 
-		$this->app->bind('customer', function(){
+		/*$this->app->bind('customer', function(){
 			return \App\Customer::get();
-		});
+		});*/
 	}
 
 }
