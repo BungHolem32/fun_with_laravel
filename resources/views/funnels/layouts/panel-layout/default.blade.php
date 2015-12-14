@@ -583,7 +583,7 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
-                                                                                <button type="submit" id="reg-btn" class="btn btn-primary deposit-fund-btn">Get Me Started </button>
+                                                                                <button type="submit" id="depositBtn" class="btn btn-primary deposit-fund-btn">Get Me Started </button>
                                                                             </div>
                                                                         </div>
                                                                     </form>
