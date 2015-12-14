@@ -3,6 +3,7 @@
 
 use App\Http\Requests;
 use App\Page;
+use App\Customer;
 use App\Services\SpotApi;
 
 
@@ -21,15 +22,11 @@ class OpenAccountController extends Controller {
         'authKey'
     ];
 
-
-
 	public function store(){
-        $data = self::clearFields($this->preapreFields());
-        dd($data);
+        $data = self::clearFields($this->prepareFields());
         $ans = SpotApi::sendRequest('Customer', 'add', $data);
-        if($ans['err'] === 0 && $this->verifyLogin($data)){
-            $redirect = '/'.\Request::local()->code.'/'.Page::fullSlugStatic(18);
-            echo json_encode(['redirect'=>$redirect]);
+        if($ans['err'] === 0 && $customer = $this->verifyLogin($data)){
+            echo json_encode(['redirect'=>$customer->getFirstPage()]);
         } else {
             echo json_encode($ans);
         }
@@ -38,37 +35,26 @@ class OpenAccountController extends Controller {
 
     public static function login(){
         $data = \Request::all();
-        if($ans = self::verifyLogin($data)){
-            $redirect = '/'.\Request::local()->code.'/'.Page::fullSlugStatic(19);
-            echo json_encode(['redirect'=>$redirect]);
+        $ans = Customer::login($data);
+        /*if(Customer::isLogged()){
+            echo json_encode(['redirect'=> self::getFirstPage()]);
         } else {
             echo json_encode($ans);
-        }
+        }*/
+        return \Redirect::back();
+    }
+
+    public static function ajaxLogout(){
+        Customer::logout();
+        return 'loggedout';
     }
 
     public static function logout(){
-        \Session::forget('spotCustomer');
-        \Session::flush();
+        Customer::logout();
         return \Redirect::to('/');
     }
 
-    public static function isLogged(){
-        $customer = \Session::get('spotCustomer');
-        if(isset($customer['isLogged']) && $customer['isLogged'] === 1){
-            return true;
-        }
-        return false;
-    }
-
-    public static function getCustomer(){
-        if(self::isLogged()){
-            return \Session::get('spotCustomer');
-        }
-        else
-            return false;
-    }
-
-    private function preapreFields(){
+    private function prepareFields(){
         $inputs = \Request::all();
         extract($inputs);
         $inputs['Phone'] = @$phone_kid.@$phone_mid.@$phone_full;
@@ -83,54 +69,16 @@ class OpenAccountController extends Controller {
         return $temp;
     }
 
-    private static function verifyLogin($data){
-        if(isset($data['email']) && isset($data['password'])) {
-            $temp['FILTER']['email'] = $data['email'];
-            $temp['FILTER']['password'] = $data['password'];
+    public static function getFirstPage(){
+        /*if(Customer::get()->financial['balance']){
+            // 19 is trade page
+            // 30 is the page id for credit page
+            $redirect = '/'.\Request::local()->code.'/'.Page::fullSlugStatic(19);
+            //$redirect = URL::route('trade', ['lang'=>$this->language['code']]);
+        }else{
+            $redirect = '/'.\Request::local()->code.'/'.Page::fullSlugStatic(30);
+            //$redirect = URL::route('deposit/credit', ['lang'=>$this->language['code']]);
         }
-        $ans = SpotApi::sendRequest('Customer', 'validate', $temp);
-        if(isset($ans) && $ans['err'] === 0){
-            return self::doLogin($ans);
-        } else {
-            echo json_encode($ans);
-        }
-        die();
-    }
-
-    private static function doLogin($data){
-        if(isset($data['status']['Customer']) && !empty($data['status']['Customer'])){
-            $customer = [];
-            $customer['isLogged'] = 1;
-            $customer['id'] = $data['status']['Customer']['data_id'];
-            $customer['firstName'] = $data['status']['Customer']['data_FirstName'];
-            $customer['lastName'] = $data['status']['Customer']['data_LastName'];
-            $customer['balance'] = $data['status']['Customer']['data_accountBalance'];
-            $customer['currency'] = $data['status']['Customer']['data_currency'];
-            $customer['currencySymbol'] = self::currency2symbol($customer['currency']);
-
-            $u['authKey'] = md5(uniqid($customer['id']));
-            $u['customerId'] = $customer['id'];
-            $data = self::clearFields($u);
-
-            $ans = SpotApi::sendRequest('Customer', 'edit', $data);
-            if($ans['status']['operation_status'] == 'successful'){
-                $customer['authKey'] = $ans['status']['Customer']['data_authKey'];
-                $customer['authKeyExpiry'] = $ans['status']['Customer']['data_authKeyExpiry'];
-            }
-
-            \Session::put('spotCustomer', $customer);
-            return true;
-        }
-        else return false;
-    }
-
-
-    public static function currency2symbol($currency){
-        switch ($currency){
-            case "USD": return "$"; break;
-            case "EUR": return "€"; break;
-            case "GBP": return "£"; break;
-            default: return "$"; break;
-        }
+        return $redirect;*/
     }
 }

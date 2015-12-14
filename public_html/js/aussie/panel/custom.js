@@ -20,14 +20,17 @@ $(document).ready(function(){
 
         if(value == "Let's Start" || value == "Next"){
             guider++;
+            $(this).closest('.guider').fadeOut();
             $('.guider#_'+guider).fadeIn();
         }
         else if(value == 'Close'){
+            $(this).closest('.guider').fadeOut();
             $('#guiders_overlay').hide();
             guider=0;
         }
         else if(value == "Previous"){
             guider--;
+            $(this).closest('.guider').fadeOut();
             $('.guider#_'+guider).fadeIn();
         }
     });

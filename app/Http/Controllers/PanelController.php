@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Customer;
 use App\Http\Requests;
 use App\mongo;
 use App\Services\SpotApi;
@@ -21,6 +22,27 @@ class PanelController extends Controller {
             $temp[$cont] = $cont;
         }
         return $temp;
+    }
+
+
+    public function refresh(){
+        //dd(\Customer::get());
+
+        // TODO: load all the stuff from spot.
+
+        // Get Customer Positions.
+        if(Customer::isLogged()){
+            $data['FILTER']['customerId']= Customer::get()->id;
+            //SpotApi::sendRequest('Positions', 'view', '[customerId]=108');
+            dd(Customer::get()->id);
+        }
+
+
+
+        // Get Customer Balance.
+
+
+        //Get Customer History Trades
     }
 
 }

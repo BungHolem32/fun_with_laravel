@@ -1,5 +1,6 @@
 <?php namespace App\Http\Middleware;
 
+use App\Customer;
 use App\Http\Controllers\OpenAccountController;
 use Closure;
 
@@ -17,18 +18,17 @@ class spotAuth {
 	 */
 	public function handle($request, Closure $next)
 	{
-        if (!OpenAccountController::isLogged()){
+        if (!Customer::isLogged()){
             \View::share( 'isLogged', false );
         }
         else {
-            $customer = OpenAccountController::getCustomer();
-            $efresh = floatval($customer['authKeyExpiry']) - floatval(date('YmdHis'));
+            $efresh = floatval(Customer::get()->auth['authKeyExpiry']) - floatval(date('YmdHis'));
             if($efresh > 0){
                 \View::share( 'isLogged', true );
-                \View::share( 'customer', $customer );
+                \View::share( 'customer', Customer::get());
             }
             else {
-                OpenAccountController::logout();
+                Customer::logout();
                 return redirect()->guest('/');
             }
 

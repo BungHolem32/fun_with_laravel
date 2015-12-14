@@ -200,6 +200,7 @@ return [
 
         'Form'      => 'Illuminate\Html\FormFacade',
         'Html'      => 'Illuminate\Html\HtmlFacade',
+		//'Customer'	=> 'App\Lib\Facades\CustomerFacade'
 
 	],
 

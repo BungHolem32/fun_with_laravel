@@ -30,6 +30,10 @@ class AppServiceProvider extends ServiceProvider {
 			'Illuminate\Contracts\Auth\Registrar',
 			'App\Services\Registrar'
 		);
+
+		/*$this->app->bind('customer', function(){
+			return \App\Customer::get();
+		});*/
 	}
 
 }

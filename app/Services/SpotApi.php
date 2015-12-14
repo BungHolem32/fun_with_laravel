@@ -6,8 +6,12 @@ use App\Languages;
 class SpotApi
 {
 
+    /*
     const ourApiUsername = 'funnels';
     const ourApiPassword = '5648ac05c4849';
+    */
+    const ourApiUsername = 'Sitev2';
+    const ourApiPassword = '559152ad63f5c';
     const API_URL = "http://api-spotplatform.rboptions.com/api";
     //const API_URL = "http://www.walla.co.il";
 
