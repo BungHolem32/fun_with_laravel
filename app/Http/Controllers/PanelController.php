@@ -28,27 +28,23 @@ class PanelController extends Controller {
     public function refresh(){
         //dd(\Customer::get());
 
-        // TODO: load all the stuff from spot.
-
-
         if(Customer::isLogged()){
 
-            // Get Customer Positions.
-            $data['FILTER']['customerId']= Customer::get()->id;
-            $ans = SpotApi::sendRequest('Positions', 'view', $data);
-            echo json_encode(['err'=>0, 'positions'=>$ans]);
-            //dd($ans);
+            // Get Customer Balance.
+            $customerData['FILTER']['id']= Customer::get()->id;
+            $customer = SpotApi::sendRequest('Customer', 'view', $customerData);
 
-            //Get Customer History Trades.
-            /*$data['FILTER']['customerId'] = Customer::get()->id;
-            $data['FILTER']['NOT']['status'][0] = 'open';
-            $ans = SpotApi::sendRequest('Positions', 'view', $data);
-            dd($ans);*/
+            // Get Customer Positions.
+            $positionsData['FILTER']['customerId']= Customer::get()->id;
+            $positions = SpotApi::sendRequest('Positions', 'view', $positionsData);
+
+            echo json_encode(['err'=>0, 'positions'=>$positions, 'customer'=>$customer]);
         }
     }
 
 
     public function deposit(){
+
         if(Customer::isLogged()){
 
             $data['method'] = 'creditCard';
@@ -71,15 +67,10 @@ class PanelController extends Controller {
             $data['amount'] = '300';
 
             $ans = SpotApi::sendRequest('CustomerDeposits', 'add', $data);
-
             dd($ans);
 
-            //Get Customer History Trades.
-            /*$data['FILTER']['customerId'] = Customer::get()->id;
-            $data['FILTER']['NOT']['status'][0] = 'open';
-            $ans = SpotApi::sendRequest('Positions', 'view', $data);
-            dd($ans);*/
         }
+        dd('not logged in');
     }
 
 }

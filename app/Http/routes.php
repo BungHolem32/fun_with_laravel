@@ -81,6 +81,7 @@ Route::get('getLocation',   ['uses' => 'FormController@location'] );
 Route::post('postForm',     ['uses' => 'FormController@postForm'] );
 Route::post('postEmailForm',['uses' => 'FormController@postEmailForm'] );
 Route::post('ajax/refresh',['uses' => 'PanelController@refresh'] );
+Route::post('ajax/deposit',['uses' => 'PanelController@deposit'] );
 
 Route::any('{slug}', ['middleware' => 'spotAuth', function(){
 

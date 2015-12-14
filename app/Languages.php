@@ -1,6 +1,7 @@
 <?php namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Languages extends Model {
 
@@ -58,7 +59,15 @@ class Languages extends Model {
 
         $lang_col = strtolower($lang_col);
 
-        $res = \DB::select("SELECT lang_key,{$lang_col} AS translation FROM translations WHERE lang_key IN ('". implode("','", $langKeys) ."')");
+
+        //$res = \DB::select("SELECT lang_key,{$lang_col} AS translation FROM translations WHERE lang_key IN ('". implode("','", $langKeys) ."')");
+
+        foreach($langKeys as $key){
+            $temp[] = '?';
+        }
+        $sql = "SELECT lang_key,{$lang_col} AS translation FROM translations WHERE lang_key IN (". implode(",", $temp) .")";
+        $res = \DB::select($sql, $langKeys);
+
         $langKeyVal = array();
         foreach($res as $keyVal){
             $langKeyVal[$keyVal->lang_key] = $keyVal->translation;

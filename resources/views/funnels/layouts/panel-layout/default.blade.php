@@ -5,6 +5,7 @@
 
 @section('bottom-scripts')
     <script src="/js/aussie/panel/custom.js"></script>
+    {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
     {!! $page->appendAsset(url('/js/panel-common/panel.js')) !!}
 @append
 

@@ -55,7 +55,11 @@ class SpotApi
                 $answer['err'] = 0;
                 return $answer;
             }
-            $errs = array_map(function($e){return Languages::getTrans($e);}, $answer['status']['errors']);
+            $errs = array_map(function($e){
+                if(is_array($e))
+                    return Languages::getTrans(array_values($e)[0]);
+                return Languages::getTrans($e);
+            }, $answer['status']['errors']);
             $answer['msg'] = 'Operation Failed!';
             $answer['errs'] = $errs;
             return $answer;
