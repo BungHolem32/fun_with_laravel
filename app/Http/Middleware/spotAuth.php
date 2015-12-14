@@ -17,7 +17,7 @@ class spotAuth {
 	 */
 	public function handle($request, Closure $next)
 	{
-        if (!OpenAccountController::isLogged()){
+        if (!\Customer::isLogged()){
             \View::share( 'isLogged', false );
         }
         else {

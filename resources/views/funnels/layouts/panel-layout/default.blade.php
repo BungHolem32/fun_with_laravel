@@ -1,6 +1,14 @@
-@section('page-layout')
+@section('head')
     <link rel="stylesheet" href="/css/aussie/panel/style.css" />
+@append
 
+
+@if(!Customer::isLogged)
+    @section('page-layout')
+        not logged
+    @endsection
+@else
+@section('page-layout')
 
     {{-- TOP BANNER --}}
     <div id="top-panel-cover">
