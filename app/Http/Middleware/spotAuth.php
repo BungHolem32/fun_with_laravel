@@ -21,14 +21,13 @@ class spotAuth {
             \View::share( 'isLogged', false );
         }
         else {
-            $customer = OpenAccountController::getCustomer();
-            $efresh = floatval($customer['authKeyExpiry']) - floatval(date('YmdHis'));
+            $efresh = floatval(\Customer::get()->auth['authKeyExpiry']) - floatval(date('YmdHis'));
             if($efresh > 0){
                 \View::share( 'isLogged', true );
-                \View::share( 'customer', $customer );
+                \View::share( 'customer', \Customer::get());
             }
             else {
-                OpenAccountController::logout();
+                \Customer::logout();
                 return redirect()->guest('/');
             }
 
