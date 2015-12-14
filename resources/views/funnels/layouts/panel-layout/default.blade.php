@@ -767,5 +767,27 @@
 			Copyright © Aussie Method.
 	</span>
     </footer>
+    <script type="template/html" id="position-row">
+        <tr id="">
+            <td class="name"></td>
+            <td class="position"></td>
+            <td class="amount"></td>
+            <td class="entryRate"></td>
+            <td class="currentRate hide-history"></td>
+            <td class="endRate hide-open"></td>
+            <td class="payout hide-open"></td>
+            <td class="profit hide-open"></td>
+            <td class="date"></td>
+            <td class="status"></td>
+        </tr>
+    </script>
+    <style type="text/css">
+        #runningPositionsTable .hide-open{
+            display:none;
+        }
+        #positionsHistoryTable .hide-history{
+            display:none;
+        }
+    </style>
 
 @endsection
