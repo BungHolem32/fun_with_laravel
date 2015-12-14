@@ -1,6 +1,6 @@
 $(document).ready(function(){
     var guider = 0, debug = 0;
-
+    //$('.getLoading').show().find('.inside').html('test');
     //showLoading:    $('.getLoading').show().find('.inside').html('');
     // ajax's to        $('.openTrades').html()  ||   $('.historyTrades').html()
     // on and off:     On click .startTrade ||    .stopTrade
