@@ -107,3 +107,6 @@ body.bggray:after{
 #formDepositModal,#welcomeModal{
     background: transparent !important;
 }
+*:focus{
+    outline: none;
+}

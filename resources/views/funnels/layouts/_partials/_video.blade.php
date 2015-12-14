@@ -6,7 +6,7 @@
     //if(!isset($poster)) $poster = '/images/LoadingAnim2.gif';
     if(!isset($poster)) $poster = '';
 
-    if(!isset($_GET['dev'])):
+if(!isset($_GET['dev_video'])):
 ?>
 
 @section('bottom-scripts')
@@ -20,7 +20,7 @@
         </iframe>
     </div>
 
-@elseif(str_contains($page->video, 'cdn.com'))
+@elseif(str_contains($page->video, 'cdn.com') || str_contains($video_url, 'cdn.com'))
     <?php
         /***
          * short video intro?
@@ -56,7 +56,6 @@
 
         $video_hash = str_replace('=', '', strtr(base64_encode(md5($video_secret .'/'.$video_file . $video_expire, true)), '+/', '-_')); // Using binary hashing.
         $videoFinaleLink = $video_url.$video_file."?st=".$video_hash."&e=".$video_expire;
-
         //$videoFinaleLink = 'http://p.media.chaki.netdna-cdn.com/vod/media.chaki/aussie/fs100.mp4';
     ?>
     <video class="video" preload="none" width="{{ $w }}" height="{{ $h }}" {{ $autoplay }}

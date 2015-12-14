@@ -8,4 +8,8 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $("video").on("contextmenu",function(){
+        return false;
+    });
+
 });

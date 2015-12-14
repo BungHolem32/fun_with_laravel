@@ -38,7 +38,6 @@ $(document).ready(function(){
 
     if(debug == 0) {
         // popups
-       // $('body').addClass('bggray');
 
         $('.close').on('click', function () {
             $('body').removeClass('bggray');
@@ -64,4 +63,5 @@ $(document).ready(function(){
             });
         }
     }
+
 });

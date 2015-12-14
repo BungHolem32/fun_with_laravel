@@ -1,9 +1,5 @@
 $(document).ready(function(){
 
-    $("video").on("contextmenu",function(){
-        return false;
-    });
-
     if(typeof loadingTimeOut == 'undefined')
         loadingTimeOut=0;
 

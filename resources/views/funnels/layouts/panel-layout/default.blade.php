@@ -4,7 +4,7 @@
 @append
 
 @section('bottom-scripts')
-    <script src="/js/panel/custom.js"></script>
+    <script src="/js/aussie/panel/custom.js"></script>
     {!! $page->appendAsset(url('/js/panel-common/panel.js')) !!}
 @append
 
@@ -156,9 +156,10 @@
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-6 col-sm-6">
-                                                                <div id="videoc"></div>
+                                                                <div id="videoc">
+                                                                    @include('funnels.layouts._partials._video', ['video_url'=>$page->welcomePopup->video,'w'=>'100%'])
+                                                                </div>
                                                             </div>
-
                                                         </div>
                                                     </div>
                                                 </div>
