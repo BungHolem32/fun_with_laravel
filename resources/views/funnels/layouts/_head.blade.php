@@ -10,3 +10,5 @@
 {!! $page->appendAsset(url('/js/vendor/jquery-1.11.2.min.js')) !!}
 
 @yield('head')
+
+<meta name="csrf-token" content="{{ csrf_token() }}" />
