@@ -36,11 +36,7 @@ class OpenAccountController extends Controller {
     public static function login(){
         $data = \Request::all();
         $ans = \Customer::login($data);
-        if(\Customer::isLogged()){
-            echo json_encode(['redirect'=>\Customer::getFirstPage()]);
-        } else {
-            echo json_encode($ans);
-        }
+        return \Redirect::back();
     }
 
     public static function ajaxLogout(){
@@ -50,7 +46,7 @@ class OpenAccountController extends Controller {
 
     public static function logout(){
         \Customer::logout();
-        return \Redirect::to('/');
+        return \Redirect::back();
     }
 
     private function prepareFields(){
