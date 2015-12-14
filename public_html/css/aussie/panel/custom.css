@@ -104,3 +104,6 @@ body.bggray:after{
     background-color: rgba(61,61,61,.6) !important;
     overflow: hidden;
 }
+#formDepositModal,#welcomeModal{
+    background: transparent !important;
+}

@@ -35,16 +35,14 @@ $(document).ready(function(){
 
     if(debug == 0) {
         // popups
-     //   $('html').addClass('noscrolly');
+       // $('body').addClass('bggray');
 
         $('.close').on('click', function () {
-            $(this).closest('.modal').removeClass('fade').removeClass('in').fadeOut('fast');
-           // $('html').removeClass('noscrolly');
             $('body').removeClass('bggray');
+            $(this).closest('.modal').removeClass('fade').removeClass('in').fadeOut('fast');
         });
 
         $('#welcomeModal .close,#welcomeModal button').on('click', function () {
-            //$('html').addClass('noscrolly');
             $('body').addClass('bggray');
             $(this).closest('.modal').fadeOut('fast');
             setTimeout(function(){
@@ -58,7 +56,6 @@ $(document).ready(function(){
                 if(!$(this).hasClass('guided-tour-start') && !$(this).parent().hasClass('guiders_buttons_container')){
                     $('#formDepositModal').fadeIn();
                     $('body').addClass('bggray');
-                  //  $('html').addClass('noscrolly');
                 }
                 return false;
             });
