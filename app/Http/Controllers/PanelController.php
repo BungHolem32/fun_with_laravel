@@ -47,27 +47,35 @@ class PanelController extends Controller {
 
         if(Customer::isLogged()){
 
+            // From server
             $data['method'] = 'creditCard';
-            $data['customerId'] = '12';
-            $data['fundId'] = '-1';
-            $data['cardType'] = '3';
-            $data['cardNum'] = '4580100010011002';
-            $data['ExpMonth'] = '06';
-            $data['ExpYear'] = '2017';
-            $data['CVV2/PIN'] = '1234';
-            $data['FirstName'] = 'lior';
-            $data['LastName'] = 'Test';
-            $data['Address'] = 'street50';
-            $data['City'] = 'Petahtiqwa';
-            $data['postCode'] = '4000';
-            $data['Country'] = '120';
-            $data['State'] = 'NY';
-            $data['Phone'] = '0333313';
-            $data['currency'] = 'USD';
-            $data['amount'] = '300';
+            $data['customerId'] = Customer::get('id');
+            $data['fundId'] = '-1';                          // new card maybe ? -> could be from session
+            $data['Country'] = \Request::get('country_id');; // Could be from IP
+            $data['currency'] = 'USD';                       // need to be from server
 
+            // from request
+            $data['cardType'] = \Request::get('card_type');
+            $data['cardNum'] = \Request::get('card_number');
+            $data['ExpMonth'] = \Request::get('expires_month');
+            $data['ExpYear'] = \Request::get('expires_year');
+            $data['CVV2/PIN'] = \Request::get('cvv');
+            $data['FirstName'] = \Request::get('first_name');
+            $data['LastName'] = \Request::get('last_name');
+            $data['Address'] = \Request::get('address');
+            $data['City'] = \Request::get('city');
+            $data['postCode'] = \Request::get('zip_code');
+            $data['amount'] = \Request::get('amount');
+            $data['Phone'] = \Request::get('phone');;
+
+            // do we need those?
+            //$data['email'] = \Request::get('email');
+            //$data['State'] = 'NY';
+
+
+            //dd(\Request::all());
             $ans = SpotApi::sendRequest('CustomerDeposits', 'add', $data);
-            dd($ans);
+            echo json_encode($ans);
 
         }
         dd('not logged in');

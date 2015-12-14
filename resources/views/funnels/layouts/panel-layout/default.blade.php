@@ -464,7 +464,7 @@
                                                                     <div class="error-message hidden-xs hidden-sm">
                                                                         <span class="error-text"></span>
                                                                     </div>
-                                                                    <form class="form-horizontal" role="form" id="registration-form" novalidate="novalidate">
+                                                                    <form class="form-horizontal" role="form" id="deposit-form" novalidate="novalidate">
                                                                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-24 jumbotron" id="left_form">
                                                                             <div class="text-left fheader">
                                                                                 <h2>Personal Information</h2>
@@ -493,7 +493,7 @@
                                                                                 <label for="phone" class="col-xs-4 control-label"><i class="fa fa-phone"></i> Phone</label>
 
                                                                                 <div class="col-xs-8">
-                                                                                    <input type="text" class="form-control input-sm" name="phone" id="phone" placeholder="Phone Number.." form="registration-form" aria-required="true" aria-invalid="false">
+                                                                                    <input type="text" class="form-control input-sm" name="phone" id="phone" placeholder="Phone Number..">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group new-card-required">

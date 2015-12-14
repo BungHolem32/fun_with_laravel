@@ -3,9 +3,10 @@ $(document).ready(function() {
 
     $('#depositBtn').on('click', function (e) {
         e.preventDefault();
-    }).validate({
-        submitHandler: function (form) {
-            var data = $(form).serialize();
+        console.log('here');
+    //}).validate({*/
+    //    submitHandler: function (form) {
+            var data = $('#deposit-form').serialize();
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -26,7 +27,7 @@ $(document).ready(function() {
                     console.log(err);
                 }
             });
-        }
+    //    }
     });
 
 });

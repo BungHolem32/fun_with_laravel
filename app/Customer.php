@@ -33,12 +33,16 @@ class Customer
         'code' => 'EN'
     ];
 
-    public static function get(){
+    public static function get($arg=null){
+
         if(!self::$instance)
             self::$instance = \Session::get('spotCustomer');
         if(!self::$instance)
             self::$instance = new self();
-        return self::$instance;
+
+        if($arg === null)
+            return self::$instance;
+        return self::$instance->$arg;
     }
 
     public function __get($key){
