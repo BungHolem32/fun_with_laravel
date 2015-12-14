@@ -26,3 +26,14 @@ html.noscrolly{
 #account-details .getLoading{
     margin-right: 5px;
 }
+
+.subsectionheader{
+    position: relative;
+}
+.subsectionheader .getLoading{
+    position: absolute;
+    top: 0;
+    right: 1%;
+    font-size: 15px;
+    line-height: 62px;
+}
