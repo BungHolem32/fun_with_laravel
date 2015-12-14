@@ -13,8 +13,9 @@ $(window).on('ajax-refresh', function() {
             //data: data,
             dataType: 'json',
             success: function( res ) {
-                if(res.redirect.length > 0 )
-                    window.location = res.redirect;
+                if(res.err === 0 ) {
+                    $('#runningPositionsTable');
+                }
             }
         });
 

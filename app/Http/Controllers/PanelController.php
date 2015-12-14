@@ -30,19 +30,24 @@ class PanelController extends Controller {
 
         // TODO: load all the stuff from spot.
 
-        // Get Customer Positions.
+
         if(Customer::isLogged()){
+
+            // Get Customer Positions.
             $data['FILTER']['customerId']= Customer::get()->id;
-            //SpotApi::sendRequest('Positions', 'view', '[customerId]=108');
-            dd(Customer::get()->id);
+            $ans = SpotApi::sendRequest('Positions', 'view', $data);
+            echo json_encode(['err'=>0, 'positions'=>$ans]);
+            //dd($ans);
+
+            //Get Customer History Trades.
+            /*$data['FILTER']['customerId'] = Customer::get()->id;
+            $data['FILTER']['NOT']['status'][0] = 'open';
+            $ans = SpotApi::sendRequest('Positions', 'view', $data);
+            dd($ans);*/
         }
 
 
 
-        // Get Customer Balance.
-
-
-        //Get Customer History Trades
     }
 
 }
