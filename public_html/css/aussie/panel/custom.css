@@ -1,0 +1,30 @@
+.form-options,.or,.signup{
+    display: table;
+    margin: 10px auto;
+}
+.form-options button,.or button,.signup a{
+    margin-left: 5px;
+}
+.loginForm{
+    margin-top: 10px;
+}
+
+html.noscrolly{
+    overflow-y: hidden;
+}
+
+#account-details{
+    position: relative;
+}
+#account-details .getLoading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 99999999;
+    display: table;
+}
+.getLoading{
+    display: block;
+}
