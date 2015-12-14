@@ -23,4 +23,9 @@ class PanelController extends Controller {
         return $temp;
     }
 
+
+    public function refresh(){
+        dd(\Request::all());
+    }
+
 }
