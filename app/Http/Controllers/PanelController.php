@@ -25,7 +25,7 @@ class PanelController extends Controller {
 
 
     public function refresh(){
-        dd(\Request::all());
+        dd(\Customer::get());
     }
 
 }
