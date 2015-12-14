@@ -1,7 +1,8 @@
 $(document).ready(function(){
     var guider = 0, debug = 0;
 
-    $('.getLoading').removeAttr('style');
+    $('.getLoading').show();
+    $('#account-details > .inside').hide();
 
     //guide popups
     $('.guided-tour-start').on('click',function(){
