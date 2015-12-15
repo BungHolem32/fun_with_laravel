@@ -1,11 +1,8 @@
 $(document).ready(function() {
     $(window).trigger('ajax-refresh');
 
-    $('#depositBtn').on('click', function (e) {
-        e.preventDefault();
-        console.log('here');
-    //}).validate({*/
-    //    submitHandler: function (form) {
+    $('#deposit-form').validate({
+        submitHandler: function (form) {
             var data = $('#deposit-form').serialize();
             $.ajax({
                 headers: {
@@ -27,7 +24,7 @@ $(document).ready(function() {
                     console.log(err);
                 }
             });
-    //    }
+        }
     });
 
 });
