@@ -1,16 +1,6 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: simchay
- * Date: 10/12/2015
- * Time: 11:03
- */
-
-namespace App;
+<?php namespace App;
 
 use App\Services\SpotApi;
-use Log;
-use URL;
 
 class Customer
 {
@@ -20,18 +10,12 @@ class Customer
     public $id;
     public $firstName;
     public $lastName;
-    public $financial = array(
-        'balance' => null,
-        'currency' => null,
-        'currencySymbol' => null
-    );
-    public $auth = [
-        'authKey'=>null,
-        'authKeyExpiry'=>null
-    ];
-    public $language = [
-        'code' => 'EN'
-    ];
+    public $balance;
+    public $currency = 'USD';
+    public $currencySymbol = '$';
+    public $authKey;
+    public $authKeyExpiry;
+    public $languageIso = 'EN';
 
     public static function get($arg=null){
 
@@ -61,11 +45,9 @@ class Customer
             $this->firstName    = $data['data_FirstName'];
             $this->lastName     = $data['data_LastName'];
             $this->language     = ['code' => \Request::local()->code];
-            $this->financial    = [
-                'balance' => $data['data_accountBalance'],
-                'currency' => $data['data_currency'],
-                'currencySymbol' => $currencySymbol[$data['data_currency']] // this should be handled externally
-            ];
+            $this->balance      = $data['data_accountBalance'];
+            $this->currency     = $data['data_currency'];
+            $this->currencySymbol = $currencySymbol[$data['data_currency']]; // this should be handled externally
             $this->setSpotAuthToken();
             $this->isLogged = true;
             return $this;

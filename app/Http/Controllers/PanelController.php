@@ -1,7 +1,9 @@
 <?php namespace App\Http\Controllers;
 
+use App\Bot;
 use App\Customer;
 use App\Http\Requests;
+use App\Languages;
 use App\mongo;
 use App\Services\SpotApi;
 use App\Services\MailVerify;
@@ -26,8 +28,6 @@ class PanelController extends Controller {
 
 
     public function refresh(){
-        //dd(\Customer::get());
-
         if(Customer::isLogged()){
 
             // Get Customer Balance.
@@ -44,15 +44,14 @@ class PanelController extends Controller {
 
 
     public function deposit(){
-
         if(Customer::isLogged()){
 
             // From server
             $data['method'] = 'creditCard';
             $data['customerId'] = Customer::get('id');
-            $data['fundId'] = '-1';                          // new card maybe ? -> could be from session
-            $data['Country'] = \Request::get('country_id');; // Could be from IP
-            $data['currency'] = 'USD';                       // need to be from server
+            $data['fundId'] = '-1';                         // new card maybe ? -> could be from session
+            $data['Country'] = \Request::get('country_id'); // Could be from IP
+            $data['currency'] = Customer::get('currency');  // need to be from server
 
             // from request
             $data['cardType'] = \Request::get('card_type');
@@ -67,9 +66,9 @@ class PanelController extends Controller {
             $data['postCode'] = \Request::get('zip_code');
             $data['amount'] = \Request::get('amount');
             $data['Phone'] = \Request::get('phone');;
+            $data['email'] = \Request::get('email');
 
             // do we need those?
-            //$data['email'] = \Request::get('email');
             //$data['State'] = 'NY';
 
 
@@ -78,7 +77,19 @@ class PanelController extends Controller {
             echo json_encode($ans);
 
         }
-        dd('not logged in');
     }
 
+
+    public function botOn(){
+        if(Customer::isLogged()){
+            Bot::create(Customer::get())->turnOn();
+        }
+        else{
+            echo json_encode(['err'=>1, 'errs'=>['error'=>Languages::getTrans('Insufficient Funds, make a new deposit.')]]);
+        }
+    }
+
+    public function runBot(){
+
+    }
 }
