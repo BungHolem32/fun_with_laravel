@@ -12,7 +12,6 @@ $(document).ready(function() {
     $('#deposit-form').validate({
         submitHandler: function (form) {
             var data = $('#deposit-form').serialize();
-            console.log(data);
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
