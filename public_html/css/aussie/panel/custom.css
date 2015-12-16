@@ -64,13 +64,13 @@ html.noscrolly{
 .subsectionheader{
     position: relative;
 }
-.subsectionheader .getLoading{
+/*.subsectionheader .getLoading{
     position: absolute;
     top: 0;
     right: 1%;
     font-size: 15px;
     line-height: 62px;
-}
+}*/
 
 body,.bg-login{
     height: 100%;

@@ -34,10 +34,7 @@ class Bot
     }
 
     public function turnOn(){
-        // update into DB and turn on!
-        // TODO: Fix this Update.
         \DB::update("UPDATE bot SET status='On' WHERE customer_id=?",[$this->customer->id]);
-
         return $this->placeOptions($this->minAmount, $this->maxAmount);
     }
 
@@ -51,14 +48,14 @@ class Bot
         }else{
             $err = 'notOn';
         }
-        return ['err' => ($err ? 1 : 0), 'errs'=>[$err]];
+        return ['err' => ($err ? 1 : 0), 'errs'=>['error'=>$err]];
     }
 
     public function placeOptions($fromAmount=25, $toAmount=50, $positionsNum=self::positionNumPerIteration){
         try{
             $options = $this->getOptions();
         }catch(\Exception $e){
-            return ['err' => 'failed to retrieve options'];
+            return ['err' => 1, 'errs'=>['error'=>'failed to retrieve options']];
         }
 
         $current_ids = array_map(function($a){return $a['id'];}, $this->getCurrentPositions());

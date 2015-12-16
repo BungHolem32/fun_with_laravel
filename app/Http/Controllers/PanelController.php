@@ -83,6 +83,7 @@ class PanelController extends Controller {
     public function botOn(){
         if(Customer::isLogged()){
             return Bot::create(Customer::get())->turnOn();
+            //return json_encode(['err'=>0]);
         }
         else{
             echo json_encode(['err'=>1, 'errs'=>['error'=>Languages::getTrans('Insufficient Funds, make a new deposit.')]]);
@@ -96,6 +97,7 @@ class PanelController extends Controller {
         }
         return ['err' => 1, 'errs' => ['notLoggedIn']];
     }
+
     public function runBot(){
 
     }
@@ -104,7 +106,7 @@ class PanelController extends Controller {
         $min = (int)\Request::input('min');
         $max = (int)\Request::input('max');
         Bot::create(Customer::get())->setRange($min, $max);
-        return ['err' => ''];
+        return json_encode(['err' => 0]);
     }
 
 }

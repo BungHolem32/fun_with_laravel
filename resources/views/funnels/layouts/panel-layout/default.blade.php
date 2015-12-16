@@ -19,7 +19,10 @@
                     <h4 style="font-size: 15px; font-weight: bold;margin-top: 4px;margin-bottom: 3px;" id="toggleProfileDetailsLink">Account Details</h4>
                     <span style="font-size:13px;">Email: rotem@test.com</span><br>
                     <span style="font-size:13px;">Broker Name: Big Option</span><br>
-                    <span id="balanceStatus" style="font-size:13px;"><i class="getLoading fa fa-refresh fa-spin"></i>Balance: $ 0.00</span><br>
+                    <span id="balanceStatus" style="font-size:13px;">
+                        Balance: <span class="balance">$ 0.00</span>
+                        <i class="getLoading fa fa-refresh fa-spin"></i>
+                    </span><br>
                     <span style="font-size:13px;">Account Id: 20832933</span>
                 </div>
             </div>
@@ -703,7 +706,7 @@
                                         <div class="row">
 
                                             <div class="text-center">
-                                                <div class="subsectionheader" id="runningPositionsHeader">Aussie Method Open Trades<div class="getLoading"><i class="fa fa-refresh fa-spin"></i><div class="inside"></div></div></div>
+                                                <div class="subsectionheader" id="runningPositionsHeader">Aussie Method Open Trades <i class="getLoading fa fa-refresh fa-spin"></i></div>
 
                                                 <table id="runningPositionsTable" maxpid="" class="table table-striped table-bordered shadowed table-hover">
                                                     <thead>
@@ -724,7 +727,7 @@
                                                 </table>{{--<p class="alert alert-warning table_warn_msg">There are no open positions</p>--}}
                                             </div>
                                             <div class="table-margin text-center">
-                                                <div class="subsectionheader">Aussie Method Trades History<div class="getLoading"><i class="fa fa-refresh fa-spin"></i><div class="inside"></div></div></div>
+                                                <div class="subsectionheader">Aussie Method Trades History <i class="getLoading fa fa-refresh fa-spin"></i></div>
                                                 <div id="positionsHistoryTable_wrapper" class="dataTables_wrapper form-inline" role="grid"><div class="dt-top-row"></div><div class="dt-wrapper"><table id="positionsHistoryTable" class="table table-striped table-bordered shadowed table-hover dataTable" aria-describedby="positionsHistoryTable_info">
                                                             <thead>
                                                             <tr class="white" role="row"><th class="sorting" role="columnheader" tabindex="0" aria-controls="positionsHistoryTable" rowspan="1" colspan="1" aria-label="Asset: activate to sort column ascending" style="width: 117px;">Asset</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="positionsHistoryTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 160px;">Position</th><th class="sorting_disabled" role="columnheader" rowspan="1" colspan="1" aria-label="Amount" style="width: 153px;">Amount</th><th class="hidden-mobile sorting_disabled" role="columnheader" rowspan="1" colspan="1" aria-label="Entry Rate" style="width: 195px;">Entry Rate</th><th class="hidden-mobile sorting_disabled" role="columnheader" rowspan="1" colspan="1" aria-label="Closing Rate" style="width: 236px;">Closing Rate</th><th class="sorting_disabled" role="columnheader" rowspan="1" colspan="1" aria-label="Payout" style="width: 139px;">Payout</th><th class="hidden-mobile sorting_disabled" role="columnheader" rowspan="1" colspan="1" aria-label="Profit" style="width: 113px;">Profit</th><th class="sorting_desc" role="columnheader" tabindex="0" aria-controls="positionsHistoryTable" rowspan="1" colspan="1" aria-sort="descending" aria-label="Date: activate to sort column ascending" style="width: 98px;">Date</th><th class="hidden-mobile sorting" role="columnheader" tabindex="0" aria-controls="positionsHistoryTable" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 131px;">Status</th></tr>

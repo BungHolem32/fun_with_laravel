@@ -55,15 +55,21 @@ $(document).ready(function() {
 });
 
     $(window).on('ajax-refresh', function () {
+
         callAjax("/ajax/refresh", null, function(res){
             if (res.err === 0) {
+                $('.getLoading').hide();
+                $('.balance').html(res.customer.status.Customer.data_0.accountBalance);
                 load_positions(res.positions.status.Positions);
             }
+        },function(){
+            // before send
+            $('.getLoading').css('display', 'inline-block');
         });
     });
 
 
-function callAjax(url, data, cb){
+function callAjax(url, data, cbSuccess, cbBefore){
     $.ajax({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -72,11 +78,9 @@ function callAjax(url, data, cb){
         url: url,
         dataType: 'json',
         data: data,
-        beforeSend: function(){
-
-        },
-        success: function (res) {
-            cb && cb(res);
+        beforeSend: cbBefore,
+        success: function(res) {
+            cbSuccess && cbSuccess(res)
         },
         error: function(err, msg){
             console.log(err, msg);
