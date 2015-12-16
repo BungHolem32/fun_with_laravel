@@ -2,14 +2,19 @@ $(document).ready(function() {
     $(window).trigger('ajax-refresh');
 
     $('.startTrade').on('click', function(){
+        $('.stopTrade').removeClass('btn-danger').addClass('btn-default');
+        var btn = this;
         callAjax("/ajax/turnOn", null, function(res){
             if (res.err === 0) {
                 $(window).trigger('ajax-refresh');
+                $(btn).addClass('btn-success').removeClass('btn-default');
             }
         });
     });
     $('.stopTrade').on('click', function(){
-        callAjax("/ajax/turnOff", null);
+        $('.startTrade').removeClass('btn-success').addClass('btn-default');
+        var btn = this;
+        callAjax("/ajax/turnOff", null, function(){$(btn).addClass('btn-danger').removeClass('btn-default');});
     });
 
     $('#deposit-form').validate({
@@ -44,7 +49,7 @@ $(document).ready(function() {
         $(this).removeClass('btn-default').addClass('btn-success');
         var tmp_range = $(this).data('amount').split('-');
         var range = {'min':tmp_range[0], 'max':tmp_range[1], '_token': $('meta[name="csrf-token"]').attr('content')};
-        $.post('/ajax/setRange', range, function(r){console.log(r)});
+        $.post('/ajax/setRange', range);
     });
 
 });
@@ -71,10 +76,10 @@ function callAjax(url, data, cb){
 
         },
         success: function (res) {
-            cb(res);
+            cb && cb(res);
         },
-        error: function(err){
-            console.log(err);
+        error: function(err, msg){
+            console.log(err, msg);
         }
     });
 }

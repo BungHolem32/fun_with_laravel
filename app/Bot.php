@@ -15,17 +15,7 @@ class Bot
     public function __construct(Customer $customer, $forceSetup=true)
     {
         $this->customer = $customer;
-        /*
-        $temp = \DB::select("SELECT * FROM bot WHERE customer_id = ?", [$this->customer->id]);
-        if(!isset($temp) || count($temp)==0){
-            $temp = [ (object) ['customer_id'=>$this->customer->id, 'minAmount'=>25, 'maxAmount'=>50, 'status'=>'Off']];
-            \DB::insert("INSERT INTO bot (customer_id, `minAmount`, `maxAmount`, `status`)
-                          VALUES (:customer_id, :minAmount, :maxAmount, :status);", (array) $temp[0]);
-        }
-        $this->minAmount = $temp[0]->minAmount;
-        $this->maxAmount = $temp[0]->maxAmount;
-        $this->status = $temp[0]->status;
-        */
+
         foreach($customer->getBotSettings() as $k=>$v){
             $this->{$k} = $v;
         }
@@ -50,9 +40,16 @@ class Bot
     }
 
     public function turnOff(){
+        $err = '';
         if($this->status == 'On'){
-            \DB::update("UPDATE bot SET status='Off' WHERE customer_id=?",[$this->customer->id]);
+            $r = \DB::update("UPDATE bot SET status='Off' WHERE customer_id=?",[$this->customer->id]);
+            if($r !== 1){
+                $err = 'update failed.';
+            }
+        }else{
+            $err = 'notOn';
         }
+        return ['err' => $err];
     }
 
     public function placeOptions($fromAmount=25, $toAmount=50, $positionsNum=self::positionNumPerIteration){
