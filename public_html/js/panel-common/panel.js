@@ -93,6 +93,9 @@ function load_positions(pos){
     var row = $('#position-row').html();
 
     for(p in pos){
+        // prepare values
+        pos[p]['amount'] = pos[p]['amount'].replace(/0+$/, '');
+
         new_row = $(row).clone().attr('id', 'position-'+p).addClass(pos[p].status);
         for(c in pos[p]){
             new_row.find('.'+c).text(pos[p][c]);
