@@ -1,6 +1,7 @@
 <?php namespace App;
 
 use App\Services\SpotApi;
+use Log;
 
 class Bot
 {
@@ -15,17 +16,7 @@ class Bot
     public function __construct(Customer $customer, $forceSetup=true)
     {
         $this->customer = $customer;
-        /*
-        $temp = \DB::select("SELECT * FROM bot WHERE customer_id = ?", [$this->customer->id]);
-        if(!isset($temp) || count($temp)==0){
-            $temp = [ (object) ['customer_id'=>$this->customer->id, 'minAmount'=>25, 'maxAmount'=>50, 'status'=>'Off']];
-            \DB::insert("INSERT INTO bot (customer_id, `minAmount`, `maxAmount`, `status`)
-                          VALUES (:customer_id, :minAmount, :maxAmount, :status);", (array) $temp[0]);
-        }
-        $this->minAmount = $temp[0]->minAmount;
-        $this->maxAmount = $temp[0]->maxAmount;
-        $this->status = $temp[0]->status;
-        */
+
         foreach($customer->getBotSettings() as $k=>$v){
             $this->{$k} = $v;
         }
@@ -47,20 +38,40 @@ class Bot
         // TODO: Fix this Update.
         \DB::update("UPDATE bot SET status='On' WHERE customer_id=?",[$this->customer->id]);
 
-        $this->placeOptions($this->minAmount, $this->maxAmount);
+        return $this->placeOptions($this->minAmount, $this->maxAmount);
     }
 
     public function turnOff(){
+        $err = '';
         if($this->status == 'On'){
-            \DB::update("UPDATE bot SET status='Off' WHERE customer_id=?",[$this->customer->id]);
+            $r = \DB::update("UPDATE bot SET status='Off' WHERE customer_id=?",[$this->customer->id]);
+            if($r !== 1){
+                $err = 'update failed.';
+            }
+        }else{
+            $err = 'notOn';
         }
+        return ['err' => ($err ? 1 : 0), 'errs'=>[$err]];
     }
 
     public function placeOptions($fromAmount=25, $toAmount=50, $positionsNum=self::positionNumPerIteration){
-        $options = $this->getOptions();
+        try{
+            $options = $this->getOptions();
+        }catch(\Exception $e){
+            return ['err' => 'failed to retrieve options'];
+        }
+
+        $current_ids = array_map(function($a){return $a['id'];}, $this->getCurrentPositions());
         $setupOptions = [];
 
         for($i = 0; $i < $positionsNum && $options !== false; $i++){
+            $check_limit = 0;
+            while(($option = $options[array_rand($options)]) && ++$check_limit < 25){
+                if(!in_array($option['id'], $current_ids))
+                    break;
+                Log::info('skipping option which customer already holds', $option);
+            }
+            Log::info('selected option', $option);
             $setupOptions[] = [
                 'MODULE'    => 'Positions',
                 'COMMAND'   => 'add',
@@ -68,10 +79,10 @@ class Bot
                 'customerId'=> $this->customer->id,
                 'amount'    => $this->getAmount($fromAmount, $toAmount),
                 'position'  => $this->putOrCall(),
-                'optionId'  => $options[array_rand($options)]['id']
+                'optionId'  => $option['id']
             ];
         }
-        echo json_encode(SpotApi::sendBatch($setupOptions));
+        return SpotApi::sendBatch($setupOptions);
     }
 
     private function getAmount($fromAmount, $toAmount){
@@ -87,6 +98,10 @@ class Bot
         return 'put';
     }
 
+    /**
+     * @return array
+     * @throws \Exception
+     */
     private function getOptions(){
         $startDate = date('Y-m-d H:i', (time() + (2*604800))); // 2 weeks.
         $endDate   = date('Y-m-d H:i', (time() + (4*604800))); // 4 weeks.
@@ -103,10 +118,23 @@ class Bot
 
         $ans = SpotApi::sendRequest('Options', 'view', $data);
         //echo json_encode($ans);
-        if($ans['err'] === 0)
-            return $ans['status']['Options'];
+        if($ans['err'] !== 0) {
+            Log::error('Error getting options list from spot', (array)$ans);
+            throw new \Exception('Failed to retrieve options');
+        }
 
-        return false;
+        return $ans['status']['Options'];
+    }
+
+    public function getCurrentPositions(){
+        // Get Customer Positions.
+        $positionsData['FILTER']['customerId']= Customer::get()->id;
+        $data['FILTER']['status'] = 'open';
+        $p = SpotApi::sendRequest('Positions', 'view', $positionsData);
+        if(array_key_exists('Positions', $p['status'])){
+            return $p['status']['Positions'];
+        }
+        return [];
     }
 
     protected function setDefaultSettings($save = true){
