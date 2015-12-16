@@ -82,7 +82,7 @@ class PanelController extends Controller {
 
     public function botOn(){
         if(Customer::isLogged()){
-            Bot::create(Customer::get())->turnOn();
+            return Bot::create(Customer::get())->turnOn();
         }
         else{
             echo json_encode(['err'=>1, 'errs'=>['error'=>Languages::getTrans('Insufficient Funds, make a new deposit.')]]);
@@ -94,7 +94,7 @@ class PanelController extends Controller {
         if (Customer::isLogged()) {
             return Bot::create(Customer::get(),false)->turnOff();
         }
-        return ['err' => 'notLoggedIn'];
+        return ['err' => 1, 'errs' => ['notLoggedIn']];
     }
     public function runBot(){
 
