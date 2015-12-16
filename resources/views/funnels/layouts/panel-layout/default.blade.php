@@ -6,7 +6,10 @@
 @section('bottom-scripts')
     <script src="/js/aussie/panel/custom.js"></script>
     {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
+
+    <script type="text/javascript" src="//sst-super-c-nl.spotoption.com/socket.io/socket.io.js"></script>
     {!! $page->appendAsset(url('/js/panel-common/panel.js')) !!}
+
 @append
 
 @section('page-layout')
@@ -767,9 +770,37 @@
 
     {{-- COPYRIGHTS --}}
     <footer id="footer">
-	<span class="text-center" style="color:black;">
-			Copyright © Aussie Method.
-	</span>
+        <div class="row assets">
+            <div class="container">
+                <div class="asset" id="asset_91">EUR/USD <span class="rate"></span>
+                    <div class="change">+0(0%)</div>
+                </div>
+                <div class="asset" id="asset_95">GBP/USD <span class="rate"></span>
+                    <div class="change">+0(0%)</div>
+                </div>
+                <div class="asset" id="asset_587">USD/JPY <span class="rate"></span>
+                    <div class="change">+0(0%)</div>
+                </div>
+                <div class="asset" id="asset_716">AUD/JPY <span class="rate"></span>
+                    <div class="change">+0(0%)</div>
+                </div>
+                <div class="asset" id="asset_39">GOLD <span class="rate"></span>
+                    <div class="change">+0(0%)</div>
+                </div>
+                <div class="asset" id="asset_116">OIL <span class="rate"></span>
+                    <div class="change">+0(0%)</div>
+                </div>
+                <div class="asset" id="asset_66">NASDAQ <span class="rate"></span>
+                    <div class="change">+0(0%)</div>
+                </div>
+                <div class="asset" id="asset_86">S&P 500 <span class="rate"></span>
+                    <div class="change">+0(0%)</div>
+                </div>
+            </div>
+        </div>
+        <span class="text-center" style="color:black;">
+                Copyright © Aussie Method.
+        </span>
     </footer>
     <script type="template/html" id="position-row">
         <tr id="">
@@ -777,7 +808,12 @@
             <td class="position"></td>
             <td class="amount"></td>
             <td class="entryRate"></td>
-            <td class="currentRate hide-history"></td>
+            <td class="currentRate hide-history">
+                <div class="asset" id="asset_">
+                    <span class="rate"></span>
+                    <div class="change">+0(0%)</div>
+                </div>
+            </td>
             <td class="endRate hide-open"></td>
             <td class="payout hide-open"></td>
             <td class="profit hide-open"></td>
