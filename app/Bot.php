@@ -44,6 +44,7 @@ class Bot
 
     public function turnOn(){
         // update into DB and turn on!
+        // TODO: Fix this Update.
         \DB::update("UPDATE bot SET status='On' WHERE customer_id=?",[$this->customer->id]);
 
         $this->placeOptions($this->minAmount, $this->maxAmount);
