@@ -59,8 +59,8 @@ $(document).ready(function() {
         callAjax("/ajax/refresh", null, function(res){
             if (res.err === 0) {
                 $('.getLoading').hide();
-                $('.balance').html(res.customer.status.Customer.data_0.accountBalance);
-                load_positions(res.positions.status.Positions);
+                $('.balance').html(res.customer.currencySign + ' ' + res.customer.accountBalance);
+                load_positions(res.positions);
             }
         },function(){
             // before send

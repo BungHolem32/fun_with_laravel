@@ -26,18 +26,25 @@ class PanelController extends Controller {
         return $temp;
     }
 
-
     public function refresh(){
         if(Customer::isLogged()){
-
             // Get Customer Balance.
-            $customerData['FILTER']['id']= Customer::get()->id;
-            $customer = SpotApi::sendRequest('Customer', 'view', $customerData);
+            $batch[] = [
+                'MODULE'    => 'Customer',
+                'COMMAND'   => 'view',
+                'FILTER'   => ['id'=>Customer::get()->id],
+            ];
 
             // Get Customer Positions.
-            $positionsData['FILTER']['customerId']= Customer::get()->id;
-            $positions = SpotApi::sendRequest('Positions', 'view', $positionsData);
+            $batch[] = [
+                'MODULE'    => 'Positions',
+                'COMMAND'   => 'view',
+                'FILTER'   => ['customerId'=>Customer::get()->id],
+            ];
 
+            $ans = SpotApi::sendBatch($batch);
+            $customer = $ans['BATCH_0']['Customer']['data_0'];
+            $positions = $ans['BATCH_1']['Positions'];
             echo json_encode(['err'=>0, 'positions'=>$positions, 'customer'=>$customer]);
         }
     }
