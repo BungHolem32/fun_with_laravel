@@ -68,6 +68,20 @@ class SpotApi
         $answer = json_decode($answer,true);
         $answer['err'] = 1;
         if(isset($answer['status']) && isset($answer['status']['connection_status']) && $answer['status']['connection_status'] == 'successful'){
+
+            // batch operation - prepare parent values from all batches
+            if(array_key_exists('BATCH_0', $answer)){
+                $answer['status']['errors'] = [];
+                $answer['status']['operation_status'] = 'successful';
+                foreach($answer as $k => $a){
+                    if(strpos( $k, 'BATCH') !== 0) continue; // only read records with 'BATCH_' keys
+                    if(array_key_exists('errors', $a))
+                        $answer['status']['errors'] += $a['errors'];
+                    if($a['operation_status'] != 'successful')
+                        $answer['status']['operation_status'] = $a['operation_status'];
+                }
+            }
+
             if($answer['status']['operation_status'] == 'successful'){
                 $answer['err'] = 0;
                 return $answer;
