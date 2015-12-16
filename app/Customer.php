@@ -10,6 +10,7 @@ class Customer
     public $id;
     public $firstName;
     public $lastName;
+    public $email;
     public $balance;
     public $currency = 'USD';
     public $currencySymbol = '$';
@@ -44,7 +45,8 @@ class Customer
             $this->id           = $data['data_id'];
             $this->firstName    = $data['data_FirstName'];
             $this->lastName     = $data['data_LastName'];
-            $this->language     = ['code' => \Request::local()->code];
+            $this->email        = $data['email'];
+            $this->languageIso  = ['code' => \Request::local()->code];
             $this->balance      = $data['data_accountBalance'];
             $this->currency     = $data['data_currency'];
             $this->currencySymbol = $currencySymbol[$data['data_currency']]; // this should be handled externally
@@ -62,6 +64,7 @@ class Customer
     public static function login($data){
         $ans = self::verifyLogin($data);
         if(isset($ans) && $ans['err'] === 0){
+            $ans['status']['Customer']['email'] = $data['email'];
             self::get()->setup($ans);
             \Session::put('spotCustomer', self::get());
             \Session::save();
