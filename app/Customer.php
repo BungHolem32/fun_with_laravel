@@ -103,6 +103,12 @@ class Customer
         }
     }
 
+    public function getBotSettings(){
+        $row = \DB::select('select * from `bot` where customer_id=?', [$this->id]);
+        if($row)
+            return $row[0];
+        return null;
+    }
 }
 
 /*

@@ -89,7 +89,20 @@ class PanelController extends Controller {
         }
     }
 
+    public function botOff()
+    {
+        if (Customer::isLogged()) {
+            Bot::create(Customer::get(),false)->turnOff();
+        }
+    }
     public function runBot(){
 
     }
+
+    public function setBotRange(){
+        $min = (int)\Request::input('min');
+        $max = (int)\Request::input('max');
+        return Bot::create(Customer::get(), false)->setRange($min, $max);
+    }
+
 }

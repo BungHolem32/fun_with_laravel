@@ -472,28 +472,28 @@
                                                                             <div class="form-group new-card-required">
                                                                                 <label for="first_name" class="col-xs-4 control-label"><i class="fa fa-user"></i> First Name</label>
                                                                                 <div class="col-xs-8">
-                                                                                    <input type="text" name="first_name" class="form-control input-sm" id="first_name" placeholder="First Name.." aria-required="true" aria-invalid="false">
+                                                                                    <input type="text" name="first_name" class="form-control input-sm" id="first_name" placeholder="First Name.." required aria-required="true">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group new-card-required">
                                                                                 <label for="last_name" class="col-xs-4 control-label"><i class="fa fa-user"></i> Last Name</label>
 
                                                                                 <div class="col-xs-8">
-                                                                                    <input type="text" class="form-control input-sm" name="last_name" id="last_name" placeholder="Last Name.." aria-required="true" aria-invalid="false">
+                                                                                    <input type="text" class="form-control input-sm" name="last_name" id="last_name" placeholder="Last Name.." required aria-required="true">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group new-card-required">
                                                                                 <label for="email" class="col-xs-4 control-label"><i class="fa fa-envelope-o"></i> Email</label>
 
                                                                                 <div class="col-xs-8">
-                                                                                    <input type="text" class="form-control input-sm" name="email" id="email" placeholder="Email Address.." aria-required="true" aria-invalid="false">
+                                                                                    <input type="text" class="form-control input-sm" name="email" id="email" placeholder="Email Address.." required email aria-required="true">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group new-card-required">
                                                                                 <label for="phone" class="col-xs-4 control-label"><i class="fa fa-phone"></i> Phone</label>
 
                                                                                 <div class="col-xs-8">
-                                                                                    <input type="text" class="form-control input-sm" name="phone" id="phone" placeholder="Phone Number..">
+                                                                                    <input type="text" class="form-control input-sm" name="phone" id="phone" required placeholder="Phone Number..">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group new-card-required">
@@ -507,21 +507,21 @@
                                                                                 <label for="city" class="col-xs-4 control-label"><i class="fa fa-road"></i> City</label>
 
                                                                                 <div class="col-xs-8">
-                                                                                    <input type="text" class="form-control input-sm" id="city" name="city" placeholder="City..">
+                                                                                    <input type="text" class="form-control input-sm" id="city" name="city" required placeholder="City..">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group new-card-required">
                                                                                 <label for="address" class="col-xs-4 control-label"><i class="fa fa-home"></i> Address</label>
 
                                                                                 <div class="col-xs-8">
-                                                                                    <input type="text" class="form-control input-sm" name="address" id="address" placeholder="Address..">
+                                                                                    <input type="text" class="form-control input-sm" name="address" id="address" required placeholder="Address..">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group new-card-required">
                                                                                 <label for="zip_code" class="col-xs-4 control-label"><i class="fa fa-location-arrow"></i> Zip Code</label>
 
                                                                                 <div class="col-xs-8">
-                                                                                    <input type="text" class="form-control input-sm" name="zip_code" id="zip_code" placeholder="Zip Code..">
+                                                                                    <input type="text" class="form-control input-sm" name="zip_code" id="zip_code" required placeholder="Zip Code..">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -542,7 +542,7 @@
                                                                             <div class="form-group new-card-required">
                                                                                 <label for="card_type" class="col-xs-4 control-label"><i class="fa fa-cc-visa"></i> Card Type</label>
                                                                                 <div class="col-xs-8">
-                                                                                    <select name="card_type" id="card_type" class="form-control input-sm" aria-required="true" aria-invalid="false">
+                                                                                    <select name="card_type" id="card_type" class="form-control input-sm" aria-required="true">
                                                                                         <option value="1">Visa</option>
                                                                                         <option value="2">Master Card</option>
                                                                                         <option value="3">CarteBleue</option>
@@ -554,14 +554,14 @@
                                                                                 <label for="card_number" class="col-xs-4 control-label"><i class="fa fa-cog fa-spin"></i> Card Number</label>
 
                                                                                 <div class="col-xs-8">
-                                                                                    <input type="text" class="form-control input-sm" name="card_number" id="card_number" placeholder="Card Number..">
+                                                                                    <input type="text" class="form-control input-sm" name="card_number" id="card_number" required placeholder="Card Number..">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label for="amount" class="col-xs-4 control-label">(<i class="fa fa-usd"></i>) Amount</label>
 
                                                                                 <div class="col-xs-8">
-                                                                                    <input type="text" class="form-control input-sm" name="amount" id="amount" placeholder="Amount..">
+                                                                                    <input type="text" class="form-control input-sm" name="amount" id="amount" required placeholder="Amount..">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group new-card-required">
@@ -578,7 +578,7 @@
                                                                                 <label for="cvv" class="col-xs-4 control-label"><i class="fa fa-shield"></i> CVV</label>
                                                                                 <div class="col-xs-8 phone-50">
                                                                                     <div class="input-group">
-                                                                                        <input type="text" class="form-control " name="cvv" id="cvv" placeholder="CVV..">
+                                                                                        <input type="text" class="form-control " name="cvv" id="cvv" required placeholder="CVV..">
                                                                                         <div id="cvv-popover" class="input-group-addon" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="" data-html="true" data-placement="top" data-content="<img src='//splitter.binarypromos.com/boaform/img/cvv.gif' class='img-responsive' >" data-original-title="CVV Example"><span class="fa fa-question-circle"></span></div>
                                                                                     </div>
                                                                                 </div>
@@ -687,9 +687,9 @@
                                                 <h5 class="subsectionheader-stat">3: Select Amount of Trade:</h5>
 
                                                 <div class="btn-group-md" style="cursor: pointer;">
-                                                    <div class="btn disabled btn-success" data-amount="25-50" style="cursor: pointer;"><span rv-text="currencySign">$</span> 25 - 50</div>
-                                                    <div class="btn disabled btn-default" data-amount="50-100" style="cursor: pointer;"><span rv-text="currencySign">$</span> 50 - 100</div>
-                                                    <div class="btn disabled btn-default" data-amount="100-150" style="cursor: pointer;"><span rv-text="currencySign">$</span> 100 - 150</div>
+                                                    <div class="btn btn-success" data-amount="25-50" style="cursor: pointer;"><span rv-text="currencySign">$</span> 25 - 50</div>
+                                                    <div class="btn btn-default" data-amount="50-100" style="cursor: pointer;"><span rv-text="currencySign">$</span> 50 - 100</div>
+                                                    <div class="btn btn-default" data-amount="100-150" style="cursor: pointer;"><span rv-text="currencySign">$</span> 100 - 150</div>
                                                 </div>
 
                                             </div>
@@ -788,6 +788,10 @@
         }
         #positionsHistoryTable .hide-history{
             display:none;
+        }
+        label.error{ /*form validation*/
+            color: #00273a;
+            background: #f7f7f7;
         }
     </style>
 

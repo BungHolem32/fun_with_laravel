@@ -8,6 +8,9 @@ $(document).ready(function() {
             }
         });
     });
+    $('.stopTrade').on('click', function(){
+        callAjax("/ajax/turnOff", null);
+    });
 
     $('#deposit-form').validate({
         submitHandler: function (form) {
@@ -34,6 +37,14 @@ $(document).ready(function() {
                 }
             });
         }
+    });
+
+    $('#amountOfTrade .btn').click(function(){
+        $('#amountOfTrade .btn').addClass('btn-default').removeClass('btn-success');
+        $(this).removeClass('btn-default').addClass('btn-success');
+        var tmp_range = $(this).data('amount').split('-');
+        var range = {'min':tmp_range[0], 'max':tmp_range[1], '_token': $('meta[name="csrf-token"]').attr('content')};
+        $.post('/ajax/setRange', range, function(r){console.log(r)});
     });
 
 });

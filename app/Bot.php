@@ -5,14 +5,17 @@ use App\Services\SpotApi;
 class Bot
 {
     const positionNumPerIteration = 2;
+    const defaultMin = 25;
+    const defaultMax = 50;
     private $customer;
     private $minAmount;
     private $maxAmount;
     private $status;
 
-    public function __construct(Customer $customer)
+    public function __construct(Customer $customer, $forceSetup=true)
     {
         $this->customer = $customer;
+        /*
         $temp = \DB::select("SELECT * FROM bot WHERE customer_id = ?", [$this->customer->id]);
         if(!isset($temp) || count($temp)==0){
             $temp = [ (object) ['customer_id'=>$this->customer->id, 'minAmount'=>25, 'maxAmount'=>50, 'status'=>'Off']];
@@ -22,30 +25,34 @@ class Bot
         $this->minAmount = $temp[0]->minAmount;
         $this->maxAmount = $temp[0]->maxAmount;
         $this->status = $temp[0]->status;
+        */
+        foreach($customer->getBotSettings() as $k=>$v){
+            $this->{$k} = $v;
+        }
+        if(!$this->status && $forceSetup){
+            $this->setDefaultSettings();
+        }
     }
 
-    public static function create(Customer $customer){
-        return new self($customer);
+    public static function create(Customer $customer, $forceSetup =true){
+        return new self($customer, $forceSetup);
+    }
+
+    public function setRange($min, $max){
+        return \DB::update("UPDATE bot SET `minAmount`=?, `maxAmount`=? where customer_id=?", [$min, $max, $this->customer->id]);
     }
 
     public function turnOn(){
-
-
-        dd(\Request::all());
-        $toAmount = 50;
-        $fromAmount = 25;
-        // TODO: send here the minAmount and maxAmount from ajax call.
-
-
         // update into DB and turn on!
-        // TODO: Fix this Update.
-        \DB::update("UPDATE bot SET status='On', minAmount=?, maxAmount=? WHERE customer_id=?",[]);
+        \DB::update("UPDATE bot SET status='On' WHERE customer_id=?",[$this->customer->id]);
 
-        $this->placeOptions($fromAmount, $toAmount);
+        $this->placeOptions($this->minAmount, $this->maxAmount);
     }
 
     public function turnOff(){
-        // TODO: write turn off update.
+        if($this->status == 'On'){
+            \DB::update("UPDATE bot SET status='Off' WHERE customer_id=?",[$this->customer->id]);
+        }
     }
 
     public function placeOptions($fromAmount=25, $toAmount=50, $positionsNum=self::positionNumPerIteration){
@@ -99,5 +106,16 @@ class Bot
             return $ans['status']['Options'];
 
         return false;
+    }
+
+    protected function setDefaultSettings($save = true){
+        $settings = ['customer_id'=>$this->customer->id, 'minAmount'=>self::defaultMin, 'maxAmount'=>self::defaultMax, 'status'=>'Off'];
+        if($save){
+            \DB::insert('insert into `bot` (`customer_id`, `minAmount`, `maxAmount`,`status`) values (:customer_id, :minAmount, :maxAmount, :status)', $settings);
+        }
+        foreach($settings as $k=>$v){
+            $this->{$k} = $v;
+        }
+        return $this;
     }
 }
