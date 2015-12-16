@@ -86,7 +86,7 @@ Route::post('ajax/deposit', ['uses' => 'PanelController@deposit'] );
 Route::post('ajax/turnOn', ['uses' => 'PanelController@botOn'] );
 Route::post('ajax/turnOff', ['uses' => 'PanelController@botOff'] );
 Route::post('ajax/setRange', ['uses' => 'PanelController@setBotRange'] );
-Route::get('ajax/runBot', ['uses' => 'PanelController@runBot'] );
+Route::get('runBot', ['uses' => 'PanelController@runBot'] );
 
 Route::any('{slug}', ['middleware' => 'spotAuth', function(){
 

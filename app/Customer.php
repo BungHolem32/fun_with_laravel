@@ -79,6 +79,19 @@ class Customer
         return SpotApi::sendRequest('Customer', 'validate', $temp);
     }
 
+    public static function load($customer_id){
+        $c = new self();
+        $data = SpotApi::sendRequest('Customer', 'view', ['FILTER'=>['id'=>$customer_id]]);
+        if($data['err'] !== 0)
+            throw new \Exception('Customer not found.');
+        //prepare data - view returns subarrays of customer, e.g. DATA_0=>[], DATA_1=>[]. we only have one record and need to rpefix each key with data_
+        foreach($data['status']['Customer']['data_0'] as $k=>$v){
+            $data['status']['Customer']['data_'.$k] = $v;
+        }
+
+        $c->setup($data);
+        return $c;
+    }
 
     public static function logout(){
         foreach ( $_COOKIE as $key => $value ) {

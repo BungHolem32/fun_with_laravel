@@ -106,7 +106,17 @@ class PanelController extends Controller {
     }
 
     public function runBot(){
-
+        $results = [];
+        $customers = \DB::select('select customer_id from `bot` where `status` = "On"');
+        foreach($customers as $customer){
+            try {
+                $customer = Customer::load($customer->customer_id);
+            }catch(\Exception $e){
+                continue;
+            }
+            $results[] = Bot::create($customer, false)->placeOptions();
+        }
+        return $results;
     }
 
     public function setBotRange(){
