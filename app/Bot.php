@@ -25,6 +25,11 @@ class Bot
         }
     }
 
+    /**
+     * @param Customer $customer
+     * @param bool|true $forceSetup
+     * @return Bot
+     */
     public static function create(Customer $customer, $forceSetup =true){
         return new self($customer, $forceSetup);
     }
@@ -35,7 +40,7 @@ class Bot
 
     public function turnOn(){
         \DB::update("UPDATE bot SET status='On' WHERE customer_id=?",[$this->customer->id]);
-        return $this->placeOptions($this->minAmount, $this->maxAmount);
+        return $this->placeOptions();
     }
 
     public function turnOff(){
@@ -51,7 +56,13 @@ class Bot
         return ['err' => ($err ? 1 : 0), 'errs'=>['error'=>$err]];
     }
 
-    public function placeOptions($fromAmount=25, $toAmount=50, $positionsNum=self::positionNumPerIteration){
+    public function placeOptions($fromAmount=null, $toAmount=null, $positionsNum=self::positionNumPerIteration){
+
+        if(!$fromAmount)
+            $fromAmount = $this->minAmount;
+        if(!$toAmount)
+            $toAmount = $this->maxAmount;
+
         try{
             $options = $this->getOptions();
         }catch(\Exception $e){
