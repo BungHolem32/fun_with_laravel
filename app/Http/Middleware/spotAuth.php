@@ -22,7 +22,7 @@ class spotAuth {
             \View::share( 'isLogged', false );
         }
         else {
-            $efresh = floatval(Customer::get()->auth['authKeyExpiry']) - floatval(date('YmdHis'));
+            $efresh = floatval(Customer::get()->authKeyExpiry) - floatval(date('YmdHis'));
             if($efresh > 0){
                 \View::share( 'isLogged', true );
                 \View::share( 'customer', Customer::get());
