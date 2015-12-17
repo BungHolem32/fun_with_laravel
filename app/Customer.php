@@ -1,6 +1,7 @@
 <?php namespace App;
 
 use App\Services\SpotApi;
+use Log;
 
 class Customer
 {
@@ -62,7 +63,9 @@ class Customer
     }
 
     public static function login($data){
+        Log::info('Loggin in '.$data['email']);
         $ans = self::verifyLogin($data);
+        Log::info('login response - ', $ans);
         if(isset($ans) && $ans['err'] === 0){
             $ans['status']['Customer']['email'] = $data['email'];
             self::get()->setup($ans);
