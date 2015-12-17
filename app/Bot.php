@@ -8,6 +8,7 @@ class Bot
     const positionNumPerIteration = 2;
     const defaultMin = 25;
     const defaultMax = 50;
+    const Max = 1000;
     private $customer;
     private $minAmount;
     private $maxAmount;
@@ -65,6 +66,10 @@ class Bot
 
     public function placeOptions($fromAmount=null, $toAmount=null, $positionsNum=self::positionNumPerIteration){
 
+        if($this->customer->balance < 5){
+            $this->turnOff();
+            return ['err'=>1, 'errs'=>['error'=>'Insufficient funds.']];
+        }
         if(!$fromAmount)
             $fromAmount = $this->minAmount;
         if(!$toAmount)
