@@ -70,14 +70,14 @@ $(document).ready(function() {
 
                 if(res.customer.accountBalance<25)
                 {
-                    if(!$('#formDepositModal').hasClass('low')){
-                        $('#formDepositModal').fadeIn().addClass('low');
+                    if(!$('#formDepositModal').hasClass('hidden') && !$('#formDepositModal').is(':visible')){
+                        $('#formDepositModal').fadeIn().addClass('hidden');
                         $('body').addClass('bggray');
                     }
                 }
                 if(res.customer.accountBalance>25)
                 {
-                    $('#formDepositModal').removeClass('low');
+                    $('#formDepositModal').removeClass('hidden');
                 }
                 if(res.customer.accountBalance<100)
                 {

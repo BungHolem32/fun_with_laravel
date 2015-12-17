@@ -52,12 +52,17 @@ $(document).ready(function(){
         });
 
         $('#welcomeModal .close,#welcomeModal button').on('click', function () {
-            $('body').addClass('bggray');
             $(this).closest('.modal').fadeOut('fast');
             $('video').attr('loop','loop').get('0').pause();
-            setTimeout(function(){
-                $('#formDepositModal').fadeIn();
-            },300);
+
+            if(!$('#formDepositModal').hasClass('hidden')){
+                $('body').addClass('bggray');
+                setTimeout(function(){
+                        $('#formDepositModal').fadeIn();
+                },300);
+            }
+            else
+                $('#formDepositModal').removeClass('hidden');
         });
 
   /*      $("*").on('click',function(){
