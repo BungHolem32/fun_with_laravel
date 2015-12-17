@@ -37,7 +37,7 @@
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div id="videoc">
-                                @include('funnels.layouts._partials._video', ['video_url'=>$page->welcomePopup->video,'w'=>'100%'])
+                                @include('funnels.layouts._partials._video', ['video_url'=>$page->welcomePopup->video,'w'=>'100%','controls'=>1])
                             </div>
                         </div>
                     </div>
@@ -86,7 +86,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#">
                                     <i class="fa fa-bullseye" style="color: black;"></i> How much does Aussie Method cost?
                                 </a>
                             </h4>
@@ -100,7 +100,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#">
                                     <i class="fa fa-bullseye" style="color: black;"></i> How much money can I make with Aussie Method?
                                 </a>
                             </h4>
@@ -114,7 +114,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#">
                                     <i class="fa fa-bullseye" style="color: black;"></i> How can I make a profit using Aussie Method?
                                 </a>
                             </h4>
@@ -132,7 +132,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#">
                                     <i class="fa fa-bullseye" style="color: black;"></i> How much does it cost to open an account with the recommended binary options broker?
                                 </a>
                             </h4>
@@ -146,7 +146,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#">
                                     <i class="fa fa-bullseye" style="color: black;"></i> Do I need to have previous experience with binary options trading in order to use Aussie Method?
                                 </a>
                             </h4>
@@ -160,7 +160,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#">
                                     <i class="fa fa-bullseye" style="color: black;"></i> Do I need to download any other software in order to trade binary options?
                                 </a>
                             </h4>
@@ -174,7 +174,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#">
                                     <i class="fa fa-bullseye" style="color: black;"></i> What is the minimum investment amount per trade?
                                 </a>
                             </h4>
@@ -188,7 +188,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseNine">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#">
                                     <i class="fa fa-bullseye" style="color: black;"></i> How do I withdraw my profits from my trading account?
                                 </a>
                             </h4>
@@ -202,7 +202,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#">
                                     <i class="fa fa-bullseye" style="color: black;"></i> What can I trade in when I trade binary options?
                                 </a>
                             </h4>
@@ -216,7 +216,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwelve">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#">
                                     <i class="fa fa-bullseye" style="color: black;"></i> My question is not answered here, what do I do?
 
                                 </a>
@@ -225,7 +225,7 @@
                         <div id="collapseTwelve" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>  Please, don’t hesitate to contact your Personal Profit Consultant and our amazing support system. Both are available 24/7 to ensure that you will make the most possible money. You can reach them here at
-                                    <a href="mailto:support@aussiemethod.com" style="color:green">support@aussiemethod.com</a></p>
+                                    <a href="mailto:" style="color:green">support@.com</a></p>
                             </div>
                         </div>
                     </div>

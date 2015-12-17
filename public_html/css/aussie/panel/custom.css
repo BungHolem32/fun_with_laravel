@@ -157,6 +157,29 @@ z-index: 10;
 .put td,.call td{
     color: #444;
 }
+.position-row.call .position{
+    position: relative;
+}
+.position-row.put .position:before,.position-row.call .position:before{
+    content: "";
+    text-transform: uppercase;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0,0);
+    margin-right: 5px;
+}
+
+.position-row.put .position:before{
+    content: "";
+}
+.position-row.call .position:before {
+    content: "";
+}
+
 
 
 .bottomDeposit span{
@@ -189,13 +212,13 @@ td{
     text-transform: uppercase;
 }
 .position-row.won{
-    background: #07B86E !important;
+    background: rgba(0, 243, 9, 0.29) !important;
 }
 #positionsHistoryTable_wrapper .position-row.lost{
-    background: #DB2929 !important;
+    background: rgba(238, 10, 10, 0.35) !important;
 }
 #positionsHistoryTable_wrapper .position-row td{
-    color: #fff;
+    color: #000;
 }
 #positionsHistoryTable_wrapper .date{
     width: 134px;

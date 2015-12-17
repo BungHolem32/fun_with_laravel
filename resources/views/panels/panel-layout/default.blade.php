@@ -239,7 +239,7 @@
         <script type="template/html" id="position-row">
             <tr class="position-row">
                 <td class="name"></td>
-                <td class="positionSection"><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i><div class="position"></div></td>
+                <td class="positionSection"><div class="position"></div></td>
                 <td class="amount"></td>
                 <td class="entryRate"></td>
                 <td class="currentRate hide-history">
