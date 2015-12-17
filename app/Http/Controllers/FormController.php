@@ -21,8 +21,8 @@ class FormController extends Controller {
     }
 
     public function location(){
-        $ip = '213.136.90.209';
-        //$ip = Request::ip();
+        //$ip = '213.136.90.209';
+        $ip = Request::ip();
         $location = file_get_contents('http://api-v2.rboptions.com/locator/'.$ip);
         echo $location;
     }
