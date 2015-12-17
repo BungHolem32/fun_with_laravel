@@ -52,6 +52,13 @@ $(document).ready(function() {
         $.post('/ajax/setRange', range);
     });
 
+    $('#logout').click(function(e){
+        e.preventDefault();
+        callAjax('/ajaxLogout', {}, function() {
+            window.location.reload(true);
+        });
+        return false;
+    });
 });
 
     $(window).on('ajax-refresh', function () {
@@ -63,8 +70,14 @@ $(document).ready(function() {
 
                 if(res.customer.accountBalance<25)
                 {
-                    $('#formDepositModal').fadeIn();
-                    $('body').addClass('bggray');
+                    if(!$('#formDepositModal').hasClass('low')){
+                        $('#formDepositModal').fadeIn().addClass('low');
+                        $('body').addClass('bggray');
+                    }
+                }
+                if(res.customer.accountBalance>25)
+                {
+                    $('#formDepositModal').removeClass('low');
                 }
                 if(res.customer.accountBalance<100)
                 {
