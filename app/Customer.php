@@ -41,21 +41,18 @@ class Customer
             'EUR' => '&#8364;',
             'GBP' => '&#163;'
         ];
-        if(isset($data['status']['Customer']) && !empty($data['status']['Customer'])){
-            $data               = $data['status']['Customer'];
-            $this->id           = $data['data_id'];
-            $this->firstName    = $data['data_FirstName'];
-            $this->lastName     = $data['data_LastName'];
-            $this->email        = $data['email'];
-            $this->languageIso  = ['code' => \Request::local()->code];
-            $this->balance      = $data['data_accountBalance'];
-            $this->currency     = $data['data_currency'];
-            $this->currencySymbol = $currencySymbol[$data['data_currency']]; // this should be handled externally
-            //$this->setSpotAuthToken();
-            $this->isLogged = true;
-            return $this;
-        }
-        else return $data;
+        $this->id           = $data['id'];
+        $this->firstName    = $data['FirstName'];
+        $this->lastName     = $data['LastName'];
+        $this->email        = $data['email'];
+        $this->languageIso  = ['code' => \Request::local()->code];
+        $this->balance      = $data['accountBalance'];
+        $this->currency     = $data['currency'];
+        $this->currencySymbol = $currencySymbol[$data['currency']]; // this should be handled externally
+        //$this->setSpotAuthToken();
+        $this->isLogged = true;
+        return $this;
+
     }
 
     public static function isLogged(){
@@ -63,12 +60,12 @@ class Customer
     }
 
     public static function login($data){
-        Log::info('Loggin in '.$data['email']);
         $ans = self::verifyLogin($data);
-        Log::info('login response - ', $ans);
         if(isset($ans) && $ans['err'] === 0){
             $ans['status']['Customer']['email'] = $data['email'];
-            self::get()->setup($ans);
+            $customer = self::get();
+            $customer->id = $ans['status']['Customer']['data_id'];
+            $customer->loadCustomerData();
             self::get()->isLogged = true; // this belongs here, not in setup, so if we load() a customer we will have the data but without being logged in
             \Session::put('spotCustomer', self::get());
             \Session::save();
@@ -89,23 +86,21 @@ class Customer
     public static function load($customer_id){
         $c = new self();
         $c->id = $customer_id;
-        $c->getCustomerData();
+        $c->loadCustomerData();
         return $c;
     }
 
-    public function getCustomerData(){
+    public function loadCustomerData(){
 
         $data = SpotApi::sendRequest('Customer', 'view', ['FILTER'=>['id'=>$this->id]]);
         if($data['err'] !== 0)
             throw new \Exception('Customer not found.');
         //prepare data - view returns subarrays of customer, e.g. DATA_0=>[], DATA_1=>[]. we only have one record and need to prefix each key with data_ to be consistent with the form that 'verify' method returns
-        $data['status']['Customer']['email'] = '';
-        foreach($data['status']['Customer']['data_0'] as $k=>$v){
-            $data['status']['Customer']['data_'.$k] = $v;
+
+        if(array_key_exists('data_0', $data['status']['Customer'])){
+            $this->setup($data['status']['Customer']['data_0']);
         }
-
-        $this->setup($data);
-
+        return $this;
     }
 
     public static function logout(){
@@ -137,7 +132,7 @@ class Customer
     }
 
     public function __wakeup(){
-        $this->getCustomerData();
+        $this->loadCustomerData();
     }
 }
 
