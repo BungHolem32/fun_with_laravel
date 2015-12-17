@@ -150,8 +150,8 @@
                                                 <h5 class="subsectionheader-stat">2: Activate Auto Trading:</h5>
                                                 <p>
                                                 </p><div class="btn-group-md">
-                                                    <div class="btn btn-default startTrade">On<span rv-show="user.Activated" style="display: none;"></span></div>
-                                                    <div class="btn btn-danger stopTrade">Off<span rv-show="user.Activated | negate"></span></div>
+                                                    <div class="btn {{ $bot_settings['status'] == 'On' ? 'btn-success' : 'btn-default' }} startTrade">On<span rv-show="user.Activated" style="display: none;"></span></div>
+                                                    <div class="btn {{ $bot_settings['status'] != 'On' ? 'btn-danger' : 'btn-default' }} stopTrade">Off<span rv-show="user.Activated | negate"></span></div>
                                                 </div>
                                                 <p></p>
                                                 <p class="alert alert-success" rv-show="user.Activated" style="display: none;">
@@ -167,9 +167,9 @@
                                                 <h5 class="subsectionheader-stat">3: Select Amount of Trade:</h5>
 
                                                 <div class="btn-group-md" style="cursor: pointer;">
-                                                    <div class="btn btn-success" data-amount="25-50" style="cursor: pointer;"><span rv-text="currencySign">$</span> 25 - 50</div>
-                                                    <div class="btn btn-default" data-amount="50-100" style="cursor: pointer;"><span rv-text="currencySign">$</span> 50 - 100</div>
-                                                    <div class="btn btn-default" data-amount="100-150" style="cursor: pointer;"><span rv-text="currencySign">$</span> 100 - 150</div>
+                                                    <div class="btn {{ ($bot_settings['minAmount'] == 25 && $bot_settings['maxAmount'] == 50) ? 'btn-success' : 'btn-default'}}" data-amount="25-50" style="cursor: pointer;"><span rv-text="currencySign">$</span> 25 - 50</div>
+                                                    <div class="btn {{ ($bot_settings['minAmount'] == 50 && $bot_settings['maxAmount'] == 100) ? 'btn-success' : 'btn-default'}}" data-amount="50-100" style="cursor: pointer;"><span rv-text="currencySign">$</span> 50 - 100</div>
+                                                    <div class="btn {{ ($bot_settings['minAmount'] == 100 && $bot_settings['maxAmount'] == 150) ? 'btn-success' : 'btn-default'}}" data-amount="100-150" style="cursor: pointer;"><span rv-text="currencySign">$</span> 100 - 150</div>
                                                 </div>
 
                                             </div>

@@ -17,6 +17,9 @@ class Bot
     {
         $this->customer = $customer;
 
+        if(!$customer->isLogged())
+            return;
+
         foreach($customer->getBotSettings() as $k=>$v){
             $this->{$k} = $v;
         }
@@ -34,13 +37,17 @@ class Bot
         return new self($customer, $forceSetup);
     }
 
+    public function getSettings(){
+        return get_object_vars($this);
+    }
+
     public function setRange($min, $max){
         return \DB::update("UPDATE bot SET `minAmount`=?, `maxAmount`=? where customer_id=?", [$min, $max, $this->customer->id]);
     }
 
     public function turnOn(){
         \DB::update("UPDATE bot SET status='On' WHERE customer_id=?",[$this->customer->id]);
-        return $this->placeOptions();
+        return $this;//->placeOptions();
     }
 
     public function turnOff(){
@@ -94,9 +101,13 @@ class Bot
     }
 
     private function getAmount($fromAmount, $toAmount){
-        $rest = rand(0, 99) / 100;               // 0.56, 0.88...
-        $amount = rand($fromAmount, $toAmount);  // 27, 43...
-        $total = $amount + $rest;                // 27.56, 43.88...
+        if($this->customer->balance < $toAmount){
+            $total = $this->customer->balance;
+        }else {
+            $rest = rand(0, 99) / 100;               // 0.56, 0.88...
+            $amount = rand($fromAmount, $toAmount);  // 27, 43...
+            $total = $amount + $rest;                // 27.56, 43.88...
+        }
         return $total;
     }
 

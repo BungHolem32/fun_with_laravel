@@ -15,6 +15,10 @@ use Request;
 
 class PanelController extends Controller {
 
+    public function index($page){
+        return parent::index($page)->with('bot_settings', Bot::create(Customer::get())->getSettings());
+    }
+
     public function getPageLayouts(){
         $temp = [];
         foreach(\File::files(base_path().'/resources/views/panels/panel-layout') as $pageLayout){
