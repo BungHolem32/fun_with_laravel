@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Customer;
 use App\Http\Requests;
 use App\mongo;
 use App\Services\SpotApi;
@@ -20,8 +21,8 @@ class FormController extends Controller {
     }
 
     public function location(){
-        //$ip = '213.136.90.209';
-        $ip = Request::ip();
+        $ip = '213.136.90.209';
+        //$ip = Request::ip();
         $location = file_get_contents('http://api-v2.rboptions.com/locator/'.$ip);
         echo $location;
     }
@@ -29,12 +30,25 @@ class FormController extends Controller {
     public function postForm(){
         $res = SpotApi::sendRequest('Customer', 'add', Request::all());
         if($res['err'] === 0){
-            $funnelPage = \App\Page::find(Request::get('parentPage'));
-            $append = 'users.php?act=check&email='.Request::get('email').'&password='.Request::get('password');
-            $res['destination'] = $funnelPage->destinationSite->get().$append;
+            Customer::login(\Request::all());
+            $res['destination'] = $this->getDestination();
         }
-
+        elseif($res['errs']['error'] == 'emailAlreadyExists'){
+            $res['err']=0;
+            Customer::login(\Request::all());
+            $res['destination'] = $this->getDestination();
+        }
         echo json_encode($res);
+    }
+
+    private function getDestination(){
+        $funnelPage = \App\Page::find(Request::get('parentPage'));
+        $destenation = $funnelPage->destinationSite->get();
+        $append = '';
+        if(strpos($destenation,'rboptions.com') !== false)
+            $append = 'users.php?act=check&email='.Request::get('email').'&password='.Request::get('password');
+
+        return $destenation.$append;
     }
 
     public function postEmailForm(){

@@ -63,8 +63,8 @@
                             <div class="content-inner">
                                 <h3 class="form-title form-title-first" align="center"><i class="icon-lock"></i> @ln(Login)</h3>
                                 {!! Form::open(['action'=>'OpenAccountController@login','class'=>'loginForm ajax-api']) !!}
-                                <input name="email" class="form-control" type="text" placeholder="Username" required/>
-                                <input name="password" class="form-control" type="password" placeholder="Password" required/>
+                                <input name="email" value="{{\Request::get('email')}}" class="form-control" type="text" placeholder="Username" required/>
+                                <input name="password" value="{{\Request::get('password')}}" class="form-control" type="password" placeholder="Password" required/>
                                 <div class="form-options">
                                     <input type="submit" class="btn btn-success btn-lg login_btns" value="@ln(Login)">
                                     <div class="btn btn-success btn-lg loading" style="display: none;"><i class="fa fa-spinner fa-spin"></i></div>
