@@ -187,10 +187,10 @@ z-index: 10;
     line-height: 20px;
 }
 
-#runningPositionsTable tr:nth-child(even), #positionsHistoryTable  tr:nth-child(even) { background: #ddd}
+#runningPositionsTable tr:nth-child(even), #positionsHistoryTable  tr:nth-child(even) { background: #F6F6F6}
 
 td{
-    border: 1px solid #9999A3 !important;
+    border: 1px solid #E4E4E6 !important;
 }
 
 .positionSection {
@@ -211,15 +211,17 @@ td{
 #positionsHistoryTable_wrapper .status{
     text-transform: uppercase;
 }
-.position-row.won{
-    background: rgba(0, 243, 9, 0.29) !important;
+.position-row.won .status{
+    background: green !important;
+    color: #fff;
 }
-#positionsHistoryTable_wrapper .position-row.lost{
-    background: rgba(238, 10, 10, 0.35) !important;
+#positionsHistoryTable_wrapper .position-row.lost .status{
+    background: red !important;
+    color: #fff;
 }
-#positionsHistoryTable_wrapper .position-row td{
+/*#positionsHistoryTable_wrapper .position-row td{
     color: #000;
-}
+}*/
 #positionsHistoryTable_wrapper .date{
     width: 134px;
 
