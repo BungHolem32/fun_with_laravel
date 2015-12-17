@@ -136,3 +136,10 @@ z-index: 10;
 #formDepositModal .col-xs-8.phone-50 label{
     right: 0px;
 }
+
+.change.up{
+    color: #00A000;
+}
+.change.down{
+    color: #f21f1f;
+}
