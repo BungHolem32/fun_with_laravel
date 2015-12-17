@@ -52,6 +52,13 @@ $(document).ready(function() {
         $.post('/ajax/setRange', range);
     });
 
+    $('#logout').click(function(e){
+        e.preventDefault();
+        callAjax('/ajaxLogout', {}, function() {
+            window.location.reload(true);
+        });
+        return false;
+    });
 });
 
     $(window).on('ajax-refresh', function () {

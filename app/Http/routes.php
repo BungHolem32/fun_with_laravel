@@ -26,6 +26,7 @@ Route::post('open-account', ['uses' => 'OpenAccountController@store'] );
 Route::post('accountLogin', ['uses' => 'OpenAccountController@login'] );
 Route::post('ajaxLogin', ['uses' => 'OpenAccountController@ajaxLogin'] );
 Route::get('logout', ['uses' => 'OpenAccountController@logout'] );
+Route::post('ajaxLogout', ['uses' => 'OpenAccountController@ajaxLogout'] );
 
 
 Route::group(['middleware' => 'auth', 'prefix'=>'admin'], function(){
