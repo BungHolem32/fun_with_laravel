@@ -61,42 +61,43 @@ $(document).ready(function() {
     });
 });
 
-    $(window).on('ajax-refresh', function () {
+$(window).on('ajax-refresh', function () {
 
-        callAjax("/ajax/refresh", null, function(res){
-            if (res.err === 0) {
-                $('.getLoading').hide();
-                $('.balance').html(res.customer.currencySign + ' ' + res.customer.accountBalance);
+    callAjax("/ajax/refresh", null, function(res){
+        if (res.err === 0) {
+            $('.getLoading').hide();
+            $('.balance').html(res.customer.currencySign + ' ' + res.customer.accountBalance);
 
-                if(res.customer.accountBalance<25)
-                {
-                    if(!$('#formDepositModal').hasClass('hidden') && !$('#formDepositModal').is(':visible')){
-                        $('#formDepositModal').fadeIn().addClass('hidden');
-                        $('body').addClass('bggray');
-                    }
+            if(res.customer.accountBalance<25)
+            {
+                if(!$('#formDepositModal').hasClass('hidden-ref') && !$('#formDepositModal').is(':visible')){
+                    $('#formDepositModal').fadeIn().addClass('hidden-ref');
+                    $('body').addClass('bggray');
                 }
-                if(res.customer.accountBalance>25)
-                {
-                    $('#formDepositModal').removeClass('hidden');
-                }
-                if(res.customer.accountBalance<100)
-                {
-                    $('.low-alert').fadeIn();
-                }
-                if(res.customer.accountBalance>100)
-                {
-                    $('.low-alert').hide();
-                }
-
-                asset_list = load_positions(res.positions);
-                socketRefresh(asset_list);
             }
-        },function(){
-            // before send
-            $('.getLoading').css('display', 'inline-block');
-        });
+            else
+            {
+                $('#formDepositModal').removeClass('hidden-ref');
+            }
+            
+            if(res.customer.accountBalance<100)
+            {
+                $('.low-alert').fadeIn();
+            }
+            else
+            {
+                $('.low-alert').hide();
+            }
 
+            asset_list = load_positions(res.positions);
+            socketRefresh(asset_list);
+        }
+    },function(){
+        // before send
+        $('.getLoading').css('display', 'inline-block');
     });
+
+});
 
 
 function callAjax(url, data, cbSuccess, cbBefore){
@@ -129,17 +130,18 @@ function load_positions(positions){
 
     $.each(positions, function(i, position){
 
+        var assetId = 'asset_' + position['assetId'];
+        asset_list.push(assetId);
+
         if($('#position-'+position.id).length){
             $('#position-'+position.id).removeClass('pending');
             return;
         }
-      /*  console.log('adding #position-'+position.id);*/
+        /*  console.log('adding #position-'+position.id);*/
 
         position['amount'] = position['amount'].replace(/(\.\d{2})0+$/, '$1');
         var new_row = $(row).clone().attr('id', 'position-'+position.id).addClass(position.status+' '+position.position);
 
-        var assetId = 'asset_' + position['assetId'];
-        asset_list.push(assetId);
         new_row.find('.currentRate .asset').addClass(assetId);
 
         $.each(position, function(j, data) {
@@ -157,24 +159,24 @@ function load_positions(positions){
 
 
 var socket;
-
 function socketRefresh(asset_ids){
 
+    asset_ids = _.uniq(asset_ids);
     if(socket !== undefined){
-        if(!_.difference(asset_ids, socket.ids))
+        if(_.difference(asset_ids, socket.ids).length == 0)
             return;
-        //socket.disconnect();
+
+        asset_ids = _.union(asset_ids,socket.ids);
+        socket.disconnect();
     }
 
+    // this must be before setting the socket.ids property
+    socket = io.connect('//sst-super-c-nl.spotoption.com/', {'force new connection': true});
 
-    var socket = io.connect('//sst-super-c-nl.spotoption.com/');
-
-    socket.ids = _.uniq(asset_ids);
-
-    var ids = socket.ids;
+    socket.ids = asset_ids;
 
     socket.on('connect', function() {
-        socket.emit('add', ids);
+        socket.emit('add', socket.ids);
     });
 
     socket.on('update', function (full_data) {
