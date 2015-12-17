@@ -34,6 +34,7 @@ $(document).ready(function() {
                     }
                     else {
                         alert(res.errs.error);
+                        //console.log(res);
                     }
                 },
                 error: function (err) {
@@ -104,6 +105,7 @@ function load_positions(positions){
             $('#position-'+position.id).removeClass('pending');
             return;
         }
+        console.log('adding #position-'+position.id);
 
         position['amount'] = position['amount'].replace(/(\.\d{2})0+$/, '$1');
         var new_row = $(row).clone().attr('id', 'position-'+position.id).addClass(position.status+' '+position.position);
@@ -119,6 +121,7 @@ function load_positions(positions){
         (position.status == 'open' ? open_table : history_table).append(new_row);
     });
     if($('tr.pending').length){
+        console.log('removing ', $('tr.pending'));
         $('tr.pending').attr('id', '').remove();
     }
     return asset_list;
@@ -150,19 +153,16 @@ function socketRefresh(asset_ids){
         $.each(full_data, function(i, data){
             data.rate = parseFloat(data.rate);
             $.each($("."+i), function(j, el){
-                var base = parseFloat($(el).parents('.position-row').find('.entryRate').html());
+                var row = $(el).parents('.position-row');
+                var base = parseFloat(row.find('.entryRate').html());
                 var change = Math.round((data.rate - base)*100); // in cents, not dollars!
                 $(".rate", el).html(data.rate);
-                $(".change", el).removeClass("up down");
+                row.removeClass("up down");
                 if(Math.abs(change))
-                    $(".change", el).addClass((change > 0) ? "up" : "down");
-                $(".absolute", el).html(change/100);
-                $(".relative", el).html(Math.round(change/base*100)/100).append('%');
+                    row.addClass((change > 0) ? "up" : "down");
+                //$(".absolute", el).html(change/100);
+                //$(".relative", el).html(Math.round(change/base*100)/100).append('%');
             });
-            /*
-            var diff = (Number(el.rate) - Number(htel.attr('rate'))).toPrecision(2);
-            var perc = ((Number(diff) / Number(el.rate)) * 100).toPrecision(2);
-            */
         });
     });
 
