@@ -130,6 +130,9 @@ function load_positions(positions){
 
     $.each(positions, function(i, position){
 
+        var assetId = 'asset_' + position['assetId'];
+        asset_list.push(assetId);
+
         if($('#position-'+position.id).length){
             $('#position-'+position.id).removeClass('pending');
             return;
@@ -139,8 +142,6 @@ function load_positions(positions){
         position['amount'] = position['amount'].replace(/(\.\d{2})0+$/, '$1');
         var new_row = $(row).clone().attr('id', 'position-'+position.id).addClass(position.status+' '+position.position);
 
-        var assetId = 'asset_' + position['assetId'];
-        asset_list.push(assetId);
         new_row.find('.currentRate .asset').addClass(assetId);
 
         $.each(position, function(j, data) {
@@ -158,24 +159,24 @@ function load_positions(positions){
 
 
 var socket;
-
 function socketRefresh(asset_ids){
 
+    asset_ids = _.uniq(asset_ids);
     if(socket !== undefined){
-        if(!_.difference(asset_ids, socket.ids))
+        if(_.difference(asset_ids, socket.ids).length == 0)
             return;
-        //socket.disconnect();
+
+        asset_ids = _.union(asset_ids,socket.ids);
+        socket.disconnect();
     }
 
+    // this must be before setting the socket.ids property
+    socket = io.connect('//sst-super-c-nl.spotoption.com/', {'force new connection': true});
 
-    var socket = io.connect('//sst-super-c-nl.spotoption.com/');
-
-    socket.ids = _.uniq(asset_ids);
-
-    var ids = socket.ids;
+    socket.ids = asset_ids;
 
     socket.on('connect', function() {
-        socket.emit('add', ids);
+        socket.emit('add', socket.ids);
     });
 
     socket.on('update', function (full_data) {

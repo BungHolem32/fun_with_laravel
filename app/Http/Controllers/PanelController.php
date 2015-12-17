@@ -48,9 +48,14 @@ class PanelController extends Controller {
                 'FILTER'   => ['customerId'=>Customer::get()->id],
             ];
 
+            /*echo '{"err":0,"customer":{"id":"315085","FirstName":"Rotem","LastName":"Grimberg","gender":"male","email":"rotemg@rboptions.com","password":"fbf8529864fabe8f7bdee93e1e800051","cellphone":"","phone":"61","fax":"","specialAccountNumber":"","personalId":"","firstDepositDate":"0000-00-00","Country":"Australia","registrationCountry":"Canada","City":"","state":"","newCustomer":"1","street":"","houseNumber":"","aptNumber":"","risk":"low","callBackTime":"00:00:00","verification":"None","referLink":"","siteLanguage":"en","customerSelectedLang":"en","timezone":"","promotionalEmails":"0","tradingEmails":"0","employeeInChargeId":"24","employeeInChargeName":"Demo  Department ","type":"customer","approvesEmailAds":"0","campaignId":"96","campaignName":"DEV TEST DO NOT TOUCH","birthday":"1974-10-10","lastLoginDate":"PM 01:29 17\/12\/15","subCampaignId":"0","subCampaignParam":"-","regTime":"2015-07-20 10:41:36","regTimeFormatted":"AM 10:41 20\/07\/15","lastTimeActive":"PM 01:29 17\/12\/15","lastTimeActiveNoFormat":"2015-12-17 13:29:08","lastUpdate":"PM 01:29 17\/12\/15","regStatus":"activated","postCode":"","accountBalance":"2.63","saleStatus":"noCall","leadStatus":"new","regulateStatus":"none","isSuspended":"0","isBlackList":"0","pnl":"-710.29998779","currencySign":"$","currency":"USD","isLead":"0","a_aid":"","a_bid":"","a_cid":"","isDemo":"1","VIPGroup":"Regular","group":"","potential":"","affiliateId":"0","regIP":"","accumulatedFtd":0}}';
+            die();*/
             $ans = SpotApi::sendBatch($batch);
             $customer = $ans['BATCH_0']['Customer']['data_0'];
-            $positions = $ans['BATCH_1']['Positions'];
+            $positions = [];
+            if(array_key_exists('Positions', $ans['BATCH_1'])){
+                $positions = $ans['BATCH_1']['Positions'];
+            }
             echo json_encode(['err'=>0, 'positions'=>$positions, 'customer'=>$customer]);
         }
     }

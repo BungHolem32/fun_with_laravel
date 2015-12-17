@@ -88,7 +88,14 @@ class Customer
 
     public static function load($customer_id){
         $c = new self();
-        $data = SpotApi::sendRequest('Customer', 'view', ['FILTER'=>['id'=>$customer_id]]);
+        $c->id = $customer_id;
+        $c->getCustomerData();
+        return $c;
+    }
+
+    public function getCustomerData(){
+
+        $data = SpotApi::sendRequest('Customer', 'view', ['FILTER'=>['id'=>$this->id]]);
         if($data['err'] !== 0)
             throw new \Exception('Customer not found.');
         //prepare data - view returns subarrays of customer, e.g. DATA_0=>[], DATA_1=>[]. we only have one record and need to prefix each key with data_ to be consistent with the form that 'verify' method returns
@@ -97,8 +104,8 @@ class Customer
             $data['status']['Customer']['data_'.$k] = $v;
         }
 
-        $c->setup($data);
-        return $c;
+        $this->setup($data);
+
     }
 
     public static function logout(){
@@ -127,6 +134,10 @@ class Customer
         if($row)
             return $row[0];
         return [];
+    }
+
+    public function __wakeup(){
+        $this->getCustomerData();
     }
 }
 
