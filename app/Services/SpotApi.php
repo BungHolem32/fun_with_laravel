@@ -17,10 +17,10 @@ class SpotApi
 
     const TIMEOUT = 60;
 
-    public static function sendRequest($module, $command, $data, $jsonResponse = 'true')
+    public static function sendRequest($module=null, $command=null, $data, $jsonResponse = 'true')
     {
-        $data['MODULE']  = $module;
-        $data['COMMAND'] = $command;
+        if($module !== null)  $data['MODULE']  = $module;
+        if($command !== null) $data['COMMAND'] = $command;
         $data['api_username'] = self::ourApiUsername;
         $data['api_password'] = self::ourApiPassword;
 
@@ -34,6 +34,22 @@ class SpotApi
         return self::processAnswer(self::initCurl($data));
     }
 
+    public static function sendBatch($data)
+    {
+        $temp=[]; $i=0;
+        if(!empty($data)){
+            foreach($data as $option){
+                foreach($option as $key => $val){
+                    $temp['BATCH['.$i.']['.$key.']'] = $val;
+                }
+                $i++;
+            }
+        }
+        //d($temp);
+        //dd(http_build_query($temp));
+        return self::sendRequest(null, null, $temp);
+    }
+
     private static function initCurl($data)
     {
         $ch = curl_init(self::API_URL);
@@ -43,6 +59,7 @@ class SpotApi
         //curl_setopt($ch, CURLOPT_INTERFACE, $_SERVER["SERVER_ADDR"]);
         curl_setopt($ch, CURLOPT_TIMEOUT, self::TIMEOUT);
         $result = curl_exec($ch);
+        //echo ($result);
         return $result;
     }
 
@@ -50,12 +67,30 @@ class SpotApi
     private static function processAnswer($answer){
         $answer = json_decode($answer,true);
         $answer['err'] = 1;
-        if($answer['status']['connection_status'] == 'successful'){
+        if(isset($answer['status']) && isset($answer['status']['connection_status']) && $answer['status']['connection_status'] == 'successful'){
+
+            // batch operation - prepare parent values from all batches
+            if(array_key_exists('BATCH_0', $answer)){
+                $answer['status']['errors'] = [];
+                $answer['status']['operation_status'] = 'successful';
+                foreach($answer as $k => $a){
+                    if(strpos( $k, 'BATCH') !== 0) continue; // only read records with 'BATCH_' keys
+                    if(array_key_exists('errors', $a))
+                        $answer['status']['errors'] += $a['errors'];
+                    if($a['operation_status'] != 'successful')
+                        $answer['status']['operation_status'] = $a['operation_status'];
+                }
+            }
+
             if($answer['status']['operation_status'] == 'successful'){
                 $answer['err'] = 0;
                 return $answer;
             }
-            $errs = array_map(function($e){return Languages::getTrans($e);}, $answer['status']['errors']);
+            $errs = array_map(function($e){
+                if(is_array($e))
+                    return Languages::getTrans(array_values($e)[0]);
+                return Languages::getTrans($e);
+            }, $answer['status']['errors']);
             $answer['msg'] = 'Operation Failed!';
             $answer['errs'] = $errs;
             return $answer;

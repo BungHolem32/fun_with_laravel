@@ -1,8 +1,8 @@
-<?php namespace App;
+<?php //namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Languages-old extends Model {
+class Languagesold extends Model {
 
     protected $table = 'languages';
     protected $langKeys = [];

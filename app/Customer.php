@@ -1,16 +1,6 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: simchay
- * Date: 10/12/2015
- * Time: 11:03
- */
-
-namespace App;
+<?php namespace App;
 
 use App\Services\SpotApi;
-use Log;
-use URL;
 
 class Customer
 {
@@ -20,25 +10,24 @@ class Customer
     public $id;
     public $firstName;
     public $lastName;
-    public $financial = array(
-        'balance' => null,
-        'currency' => null,
-        'currencySymbol' => null
-    );
-    public $auth = [
-        'authKey'=>null,
-        'authKeyExpiry'=>null
-    ];
-    public $language = [
-        'code' => 'EN'
-    ];
+    public $email;
+    public $balance;
+    public $currency = 'USD';
+    public $currencySymbol = '$';
+    public $authKey;
+    public $authKeyExpiry;
+    public $languageIso = 'EN';
 
-    public static function get(){
+    public static function get($arg=null){
+
         if(!self::$instance)
             self::$instance = \Session::get('spotCustomer');
         if(!self::$instance)
             self::$instance = new self();
-        return self::$instance;
+
+        if($arg === null)
+            return self::$instance;
+        return self::$instance->$arg;
     }
 
     public function __get($key){
@@ -56,12 +45,11 @@ class Customer
             $this->id           = $data['data_id'];
             $this->firstName    = $data['data_FirstName'];
             $this->lastName     = $data['data_LastName'];
-            $this->language     = ['code' => \Request::local()->code];
-            $this->financial    = [
-                'balance' => $data['data_accountBalance'],
-                'currency' => $data['data_currency'],
-                'currencySymbol' => $currencySymbol[$data['data_currency']] // this should be handled externally
-            ];
+            $this->email        = $data['email'];
+            $this->languageIso  = ['code' => \Request::local()->code];
+            $this->balance      = $data['data_accountBalance'];
+            $this->currency     = $data['data_currency'];
+            $this->currencySymbol = $currencySymbol[$data['data_currency']]; // this should be handled externally
             $this->setSpotAuthToken();
             $this->isLogged = true;
             return $this;
@@ -76,6 +64,7 @@ class Customer
     public static function login($data){
         $ans = self::verifyLogin($data);
         if(isset($ans) && $ans['err'] === 0){
+            $ans['status']['Customer']['email'] = $data['email'];
             self::get()->setup($ans);
             \Session::put('spotCustomer', self::get());
             \Session::save();
@@ -93,6 +82,19 @@ class Customer
         return SpotApi::sendRequest('Customer', 'validate', $temp);
     }
 
+    public static function load($customer_id){
+        $c = new self();
+        $data = SpotApi::sendRequest('Customer', 'view', ['FILTER'=>['id'=>$customer_id]]);
+        if($data['err'] !== 0)
+            throw new \Exception('Customer not found.');
+        //prepare data - view returns subarrays of customer, e.g. DATA_0=>[], DATA_1=>[]. we only have one record and need to prefix each key with data_ to be consistent with the form that 'verify' method returns
+        foreach($data['status']['Customer']['data_0'] as $k=>$v){
+            $data['status']['Customer']['data_'.$k] = $v;
+        }
+
+        $c->setup($data);
+        return $c;
+    }
 
     public static function logout(){
         foreach ( $_COOKIE as $key => $value ) {
@@ -117,6 +119,12 @@ class Customer
         }
     }
 
+    public function getBotSettings(){
+        $row = \DB::select('select * from `bot` where customer_id=?', [$this->id]);
+        if($row)
+            return $row[0];
+        return null;
+    }
 }
 
 /*

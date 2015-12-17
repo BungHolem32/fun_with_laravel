@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 {!! $page->appendAsset(url('/js/vendor/jquery-1.11.2.min.js')) !!}
+{!! $page->appendAsset(url('/js/vendor/underscore-min.js')) !!}
 
 @yield('head')
 

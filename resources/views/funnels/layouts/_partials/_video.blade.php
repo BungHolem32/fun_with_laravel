@@ -6,6 +6,10 @@
     //if(!isset($poster)) $poster = '/images/LoadingAnim2.gif';
     if(!isset($poster)) $poster = '';
 
+
+    if(!isset($page->video)) $videoUrl = $video_url;
+    else $videoUrl = $page->video;
+
 if(!isset($_GET['dev_video'])):
 ?>
 
@@ -13,20 +17,20 @@ if(!isset($_GET['dev_video'])):
     {!! $page->appendAsset(url('/js/video.js')) !!}
 @append
 
-@if(str_contains($page->video, 'youtube.com'))
+@if(str_contains($videoUrl, 'youtube.com'))
     <div class="video">
         <iframe id="ytplayer" type="text/html" width="{{ $w }}" height="{{ $h }}"
-            src="{!! $page->video !!}?autoplay=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;autohide=1" frameborder="0">
+            src="{!! $videoUrl !!}?autoplay=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;autohide=1" frameborder="0">
         </iframe>
     </div>
 
-@elseif(str_contains($page->video, 'cdn.com') || str_contains($video_url, 'cdn.com'))
+@elseif(str_contains($videoUrl, 'cdn.com') || str_contains($video_url, 'cdn.com'))
     <?php
         /***
          * short video intro?
          */
     if(!isset($video_url))
-        $video_url = (string) $page->video;
+        $video_url = (string) $videoUrl;
 
         $videoFinaleLink = '';
         $video_secret = 'bRt249Jd4z5Cmx';
@@ -66,7 +70,7 @@ if(!isset($_GET['dev_video'])):
 @else
     <video class="video" preload="none" width="{{ $w }}" height="{{ $h }}" {{ $autoplay }}>
         {{--http://cdnmediahosting.com/user29339cdn3/newproducts2014/fmsshortnewnov.mp4--}}
-        <source src="{!! $page->video !!}" type="video/mp4" >
+        <source src="{!! $videoUrl !!}" type="video/mp4" >
         <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
     </video>
 @endif
