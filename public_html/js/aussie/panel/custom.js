@@ -44,17 +44,29 @@ $(document).ready(function(){
             $(this).closest('.modal').removeClass('fade').removeClass('in').fadeOut('fast');
         });
 
+        $('#awelcomeModal').on('click',function(){
+            $('#welcomeModal').slideDown();
+            $('video source').attr('src',$('video source').attr('data-src'));
+
+            $('video').get('0').play();
+
+        });
+
         $('#welcomeModal .close,#welcomeModal button').on('click', function () {
             $('body').addClass('bggray');
             $(this).closest('.modal').fadeOut('fast');
+            $('video').get('0').pause();
+            $('video').data('src',$('video source').attr('src'));
+            $('video source').attr('src','');
             setTimeout(function(){
                 $('#formDepositModal').fadeIn();
             },300);
         });
 
+
         // need deposit=something to disable deposit popup every click
         if (typeof deposit == 'undefined') {
-            $('a#manualTrading,a#StatisticsModal').on('click', function () {
+            $('a#manualTrading, a#StatisticsModal').on('click', function () {
                 if(!$(this).hasClass('guided-tour-start') && !$(this).parent().hasClass('guiders_buttons_container')){
                     $('#formDepositModal').fadeIn();
                     $('body').addClass('bggray');
@@ -67,8 +79,7 @@ $(document).ready(function(){
             $('#faqModal').addClass('in').slideDown();
         });
         $('a[data-toggle=collapse]').on('click',function(){
-            $('.panel.panel-default').find('.panel-collapse').slideUp();
-            $(this).closest('.panel-collapse').slideDown();
+            $(this).closest('.panel.panel-default').find('.panel-collapse.collapse').toggle();
         });
     }
 

@@ -197,3 +197,7 @@ td{
 #positionsHistoryTable_wrapper .position-row td{
     color: #fff;
 }
+#positionsHistoryTable_wrapper .date{
+    width: 134px;
+
+}
