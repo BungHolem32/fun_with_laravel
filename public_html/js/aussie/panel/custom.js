@@ -54,7 +54,7 @@ $(document).ready(function(){
 
         // need deposit=something to disable deposit popup every click
         if (typeof deposit == 'undefined') {
-            $('a').on('click', function () {
+            $('a#manualTrading,a#StatisticsModal').on('click', function () {
                 if(!$(this).hasClass('guided-tour-start') && !$(this).parent().hasClass('guiders_buttons_container')){
                     $('#formDepositModal').fadeIn();
                     $('body').addClass('bggray');
@@ -62,6 +62,14 @@ $(document).ready(function(){
                 return false;
             });
         }
+
+        $('#afaqModal').on('click', function () {
+            $('#faqModal').addClass('in').slideDown();
+        });
+        $('a[data-toggle=collapse]').on('click',function(){
+            $('.panel.panel-default').find('.panel-collapse').slideUp();
+            $(this).closest('.panel-collapse').slideDown();
+        });
     }
 
 });
