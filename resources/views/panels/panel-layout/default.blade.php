@@ -81,7 +81,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="mailto: {{ $page->supportMail }}">
                             <span class="badge pull-right"></span>
                             <i class="fa fa-envelope"></i> @ln(Contact Us)
                         </a>
@@ -115,8 +115,7 @@
                                 @include('panels.partials._popups')
 
                                     <p class="alert alert-danger note">
-                                        <span>To Activate Aussie Method System, Your {{ $page->brand->name }} Broker Account Will Need Your Deposit.</span><br>
-                                        Start Earning Money In 3 Easy Steps:
+                                        {!! $page->body !!}
                                     </p>
                                     <div style="display: none;">
                                         <p class="alert alert-danger note" data-toggle="modal" data-target="#formDepositModal" data-backdrop="false" rv-on-click="deposit">

@@ -225,7 +225,7 @@
                         <div id="collapseTwelve" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>  Please, don’t hesitate to contact your Personal Profit Consultant and our amazing support system. Both are available 24/7 to ensure that you will make the most possible money. You can reach them here at
-                                    <a href="mailto:" style="color:green">support@.com</a></p>
+                                    <a href="mailto:{{ $page->supportMail }}" style="color:green">{{ $page->supportMail }}</a></p>
                             </div>
                         </div>
                     </div>
