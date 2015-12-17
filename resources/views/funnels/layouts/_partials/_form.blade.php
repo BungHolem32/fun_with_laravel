@@ -153,8 +153,15 @@ foreach($form->membersFields->getChildren() as $field){
                             }, 4000);
                         }
                         else{
-                            alert(res.errs.error);
-                            $('div.loading').remove();
+                            if(res.errs.error == 'emailAlreadyExists' && typeof registeredLink != 'undefined'){
+                                var email = $('form input[name=email]').val();
+                                var password = $('form input[name=password]').val();
+                                location.href = registeredLink+'?email='+email+'&password='+password;
+                            }
+                            else{
+                                alert(res.errs.error);
+                                $('div.loading').remove();
+                            }
                         }
                     }
                 });
