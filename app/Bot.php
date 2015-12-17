@@ -8,6 +8,7 @@ class Bot
     const positionNumPerIteration = 2;
     const defaultMin = 25;
     const defaultMax = 50;
+    const Max = 1000;
     private $customer;
     private $minAmount;
     private $maxAmount;

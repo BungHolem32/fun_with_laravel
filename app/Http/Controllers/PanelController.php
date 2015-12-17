@@ -126,6 +126,12 @@ class PanelController extends Controller {
     public function setBotRange(){
         $min = (int)\Request::input('min');
         $max = (int)\Request::input('max');
+
+        if($min < Bot::defaultMin)
+            $min = BOT::defaultMin;
+        if($max > Bot::Max)
+            $max = Bot::Max;
+
         Bot::create(Customer::get())->setRange($min, $max);
         return ['err' => 0];
     }

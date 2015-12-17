@@ -170,7 +170,7 @@
                                                     <div class="btn {{ ($bot_settings['minAmount'] == 25 && $bot_settings['maxAmount'] == 50) ? 'btn-success' : 'btn-default'}}" data-amount="25-50" style="cursor: pointer;"><span rv-text="currencySign">$</span> 25 - 50</div>
                                                     <div class="btn {{ ($bot_settings['minAmount'] == 50 && $bot_settings['maxAmount'] == 100) ? 'btn-success' : 'btn-default'}}" data-amount="50-100" style="cursor: pointer;"><span rv-text="currencySign">$</span> 50 - 100</div>
                                                     <div class="btn {{ ($bot_settings['minAmount'] == 100 && $bot_settings['maxAmount'] == 150) ? 'btn-success' : 'btn-default'}}" data-amount="100-150" style="cursor: pointer;"><span rv-text="currencySign">$</span> 100 - 150</div>
-                                                    <div class="btn {{ ($bot_settings['minAmount'] > 150) ? 'btn-success' : 'btn-default'}}" data-amount="150+" style="cursor: pointer;"><span rv-text="currencySign">$</span> 150 +</div>
+                                                    <div class="btn {{ ($bot_settings['minAmount'] == 150) ? 'btn-success' : 'btn-default'}}" data-amount="150-1000" style="cursor: pointer;"><span rv-text="currencySign">$</span> 150 +</div>
                                                 </div>
 
                                             </div>
