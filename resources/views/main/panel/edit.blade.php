@@ -21,6 +21,11 @@
         {!! Form::text('description', $page['description'], ['name'=>'mongo[description]', 'class'=>'form-control']) !!}
     </div>
 
+    <div class="form-group">
+        <h3><i class="fa fa-newspaper-o"></i> {!! Form::label('body', 'Body:') !!}</h3>
+        {!! Form::textarea('body', $page['body'], ['name'=>'mongo[body]', 'class'=>'editor form-control']) !!}
+    </div>
+
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title"><i class="fa fa-video-camera"></i> Brand:</h3>
@@ -55,6 +60,11 @@
                 {!! Form::textarea('welcomePopupContent', $page['welcomePopup']['content'], ['name'=>'mongo[welcomePopup][content]', 'class'=>'form-control']) !!}
             </div>
         </div>
+    </div>
+
+    <div class="form-group">
+        <h3><i class="fa fa-newspaper-o"></i> {!! Form::label('supportMail', 'Support E-Mail:') !!}</h3>
+        {!! Form::text('supportMail', $page['supportMail'], ['name'=>'mongo[supportMail]', 'class'=>'form-control']) !!}
     </div>
 
 

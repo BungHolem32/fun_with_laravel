@@ -46,7 +46,6 @@ $(document).ready(function(){
 
         $('#awelcomeModal').on('click',function(){
             $('#welcomeModal').slideDown();
-         //   $('video source').attr('src',$('video source').attr('data-src'));
             $('video').get('0').play();
 
         });
@@ -54,9 +53,7 @@ $(document).ready(function(){
         $('#welcomeModal .close,#welcomeModal button').on('click', function () {
             $('body').addClass('bggray');
             $(this).closest('.modal').fadeOut('fast');
-            $('video').get('0').pause();
-         //   $('video').data('src',$('video source').attr('src'));
-            $('video').attr('loop','loop');
+            $('video').attr('loop','loop').get('0').pause();
             setTimeout(function(){
                 $('#formDepositModal').fadeIn();
             },300);

@@ -157,6 +157,29 @@ z-index: 10;
 .put td,.call td{
     color: #444;
 }
+.position-row.call .position{
+    position: relative;
+}
+.position-row.put .position:before,.position-row.call .position:before{
+    content: "";
+    text-transform: uppercase;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0,0);
+    margin-right: 5px;
+}
+
+.position-row.put .position:before{
+    content: "";
+}
+.position-row.call .position:before {
+    content: "";
+}
+
 
 
 .bottomDeposit span{
@@ -164,10 +187,10 @@ z-index: 10;
     line-height: 20px;
 }
 
-#runningPositionsTable tr:nth-child(even), #positionsHistoryTable  tr:nth-child(even) { background: #ddd}
+#runningPositionsTable tr:nth-child(even), #positionsHistoryTable  tr:nth-child(even) { background: #F6F6F6}
 
 td{
-    border: 1px solid #9999A3 !important;
+    border: 1px solid #E4E4E6 !important;
 }
 
 .positionSection {
@@ -188,15 +211,17 @@ td{
 #positionsHistoryTable_wrapper .status{
     text-transform: uppercase;
 }
-.position-row.won{
-    background: #07B86E !important;
-}
-#positionsHistoryTable_wrapper .position-row.lost{
-    background: #DB2929 !important;
-}
-#positionsHistoryTable_wrapper .position-row td{
+.position-row.won .status{
+    background: green !important;
     color: #fff;
 }
+#positionsHistoryTable_wrapper .position-row.lost .status{
+    background: red !important;
+    color: #fff;
+}
+/*#positionsHistoryTable_wrapper .position-row td{
+    color: #000;
+}*/
 #positionsHistoryTable_wrapper .date{
     width: 134px;
 
