@@ -51,7 +51,7 @@ class Customer
             $this->balance      = $data['data_accountBalance'];
             $this->currency     = $data['data_currency'];
             $this->currencySymbol = $currencySymbol[$data['data_currency']]; // this should be handled externally
-            $this->setSpotAuthToken();
+            //$this->setSpotAuthToken();
             $this->isLogged = true;
             return $this;
         }
@@ -107,7 +107,7 @@ class Customer
         \Session::flush();
     }
 
-    private function setSpotAuthToken(){
+    /*private function setSpotAuthToken(){
         $authKey = md5(uniqid($this->id));
         //$u['customerId'] = $customer['id'];
         //$data = self::clearFields($u);
@@ -120,13 +120,13 @@ class Customer
         }else{
             Log::error('Failed to set Spot auth token', $ans);
         }
-    }
+    }*/
 
     public function getBotSettings(){
         $row = \DB::select('select * from `bot` where customer_id=?', [$this->id]);
         if($row)
             return $row[0];
-        return null;
+        return [];
     }
 }
 

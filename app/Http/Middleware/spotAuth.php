@@ -22,18 +22,10 @@ class spotAuth {
             \View::share( 'isLogged', false );
         }
         else {
-            $efresh = floatval(Customer::get()->auth['authKeyExpiry']) - floatval(date('YmdHis'));
-            if($efresh > 0){
+            //$efresh = floatval(Customer::get()->auth['authKeyExpiry']) - floatval(date('YmdHis'));
                 \View::share( 'isLogged', true );
                 \View::share( 'customer', Customer::get());
-            }
-            else {
-                Customer::logout();
-                return redirect()->guest('/');
-            }
-
         }
-
 		return $next($request);
 	}
 

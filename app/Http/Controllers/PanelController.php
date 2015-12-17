@@ -16,7 +16,7 @@ use Request;
 class PanelController extends Controller {
 
     public function index($page){
-        return parent::index($page)->with('bot_settings', Bot::create(Customer::get())->getSettings());
+        return parent::index($page)->with('bot_settings', Bot::create(Customer::get(), false)->getSettings());
     }
 
     public function getPageLayouts(){
