@@ -14,7 +14,6 @@
         <script language="javascript">
             var loadingMsg = '<div class="loading"><img src="/img/aussie/loadingBL2.gif" alt=""><div class="loading-text"> Registration is in progress.. </div></div>';
             var requiredMsg = '<span class="arrow_box"></span>This field is required.';
-            var registeredLink = '/aussie/panel/';
         </script>
         @com('funnel_scripts')
         <script src="/js/aussie/bootstrap.min.js"></script>
