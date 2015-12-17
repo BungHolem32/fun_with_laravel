@@ -236,15 +236,18 @@
         </footer>
 
         <script type="template/html" id="position-row">
-            <tr>
+            <tr class="position-row">
                 <td class="name"></td>
                 <td class="position"></td>
                 <td class="amount"></td>
                 <td class="entryRate"></td>
                 <td class="currentRate hide-history">
-                    <div class="asset" id="asset_">
+                    <div class="asset" id="">
                         <span class="rate"></span>
-                        <div class="change">+0(0%)</div>
+                        <div class="change">
+                            <span class="plus">+</span>
+                            <span class="absolute">0</span>
+                            (<span class="plus">+</span> <span class="relative">0%</span>)</div>
                     </div>
                 </td>
                 <td class="endRate hide-open"></td>
@@ -264,6 +267,15 @@
             label.error{ /*form validation*/
                 color: #00273a;
                 background: #f7f7f7;
+            }
+            .plus, .minus{
+                display: none;
+            }
+            .up .plus{
+                display: inline;
+            }
+            .down .minus{
+                display: inline;
             }
         </style>
 
