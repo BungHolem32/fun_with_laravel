@@ -49,6 +49,7 @@ class Bot
         if($this->customer->balance > $this->minAmount) {
             if ($res = \DB::update("UPDATE bot SET status='On' WHERE customer_id=?", [$this->customer->id])) {
                 $this->log('on', $res);
+                $this->placeOptions();
                 return ['err' => 0];
             }
             return ['err'=>1,'errs'=>['error'=>'Operation failed']];
