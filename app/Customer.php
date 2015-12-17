@@ -69,6 +69,7 @@ class Customer
         if(isset($ans) && $ans['err'] === 0){
             $ans['status']['Customer']['email'] = $data['email'];
             self::get()->setup($ans);
+            self::get()->isLogged = true; // this belongs here, not in setup, so if we load() a customer we will have the data but without being logged in
             \Session::put('spotCustomer', self::get());
             \Session::save();
             return self::get();
@@ -91,6 +92,7 @@ class Customer
         if($data['err'] !== 0)
             throw new \Exception('Customer not found.');
         //prepare data - view returns subarrays of customer, e.g. DATA_0=>[], DATA_1=>[]. we only have one record and need to prefix each key with data_ to be consistent with the form that 'verify' method returns
+        $data['status']['Customer']['email'] = '';
         foreach($data['status']['Customer']['data_0'] as $k=>$v){
             $data['status']['Customer']['data_'.$k] = $v;
         }
@@ -113,10 +115,8 @@ class Customer
         //$data = self::clearFields($u);
         $ans = SpotApi::sendRequest('Customer', 'edit', ['authKey'=>$authKey, 'customerId'=>$this->id]);
         if($ans['status']['operation_status'] == 'successful'){
-            $this->auth = [
-                'authKey' => $ans['status']['Customer']['data_authKey'],
-                'authKeyExpiry' => $ans['status']['Customer']['data_authKeyExpiry']
-            ];
+            $this->authKey = $ans['status']['Customer']['data_authKey'];
+            $this->authKeyExpiry = $ans['status']['Customer']['data_authKeyExpiry'];
         }else{
             Log::error('Failed to set Spot auth token', $ans);
         }
