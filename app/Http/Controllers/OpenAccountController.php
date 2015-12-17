@@ -44,6 +44,16 @@ class OpenAccountController extends Controller {
         return \Redirect::back();
     }
 
+    public static function ajaxLogin(){
+        $data = \Request::all();
+        $ans = Customer::login($data);
+        if(Customer::isLogged()){
+            return ['err'=>0];
+        } else {
+            return $ans;
+        }
+    }
+
     public static function ajaxLogout(){
         Customer::logout();
         return 'loggedout';

@@ -47,8 +47,11 @@ class Bot
     }
 
     public function turnOn(){
-        \DB::update("UPDATE bot SET status='On' WHERE customer_id=?",[$this->customer->id]);
-        return $this;//->placeOptions();
+        if($this->customer->balance > $this->minAmount)
+            if(\DB::update("UPDATE bot SET status='On' WHERE customer_id=?",[$this->customer->id]) > 0)
+                return ['err'=>0];
+        return ['err'=>1, 'errs'=>['error'=>Languages::getTrans('Insufficient Funds, Please deposit funds to begin trading.')]];
+        //return $this;//->placeOptions();
     }
 
     public function turnOff(){
