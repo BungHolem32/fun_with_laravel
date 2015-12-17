@@ -87,7 +87,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/logout">
+                        <a href="/logout" id="logout">
                             <span class="badge pull-right"></span>
                             <i class="fa fa-sign-out"></i> @ln(Log Out)
                         </a>

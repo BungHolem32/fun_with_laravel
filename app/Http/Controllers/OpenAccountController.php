@@ -56,7 +56,7 @@ class OpenAccountController extends Controller {
 
     public static function ajaxLogout(){
         Customer::logout();
-        return 'loggedout';
+        return ['msg' => 'loggedout'];
     }
 
     public static function logout(){
