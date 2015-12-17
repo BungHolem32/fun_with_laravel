@@ -45,6 +45,9 @@
 html.noscrolly{
     overflow-y: hidden;
 }
+html, body {
+    height: auto;
+}
 
 .getLoading{
     display: none;
@@ -96,11 +99,11 @@ body,.bg-login{
 body.bggray:after{
     content:'';
     display: block;
-    position: absolute;
+    position: fixed;
     top:0;
     left:0;
     width: 100%;
-    height: calc(100% + 233px);
+    height: 1100px;
     background-color: rgba(61,61,61,.6) !important;
     overflow: hidden;
 }
@@ -137,9 +140,64 @@ z-index: 10;
     right: 0px;
 }
 
-.change.up{
+.call.up .rate,.put.down  .rate{
     color: #00A000;
 }
-.change.down{
+.call.down .rate,.put.up .rate{
     color: #f21f1f;
+}
+.position-row .fa{
+    display: none;
+    margin-right: 5px;
+}
+.position-row.call .fa-caret-down,.position-row.put .fa-caret-up,.position{
+    text-transform: uppercase;
+    display: inline-block;
+}
+.put td,.call td{
+    color: #444;
+}
+
+
+.bottomDeposit span{
+    display: block !important;
+    line-height: 20px;
+}
+
+#runningPositionsTable tr:nth-child(even), #positionsHistoryTable  tr:nth-child(even) { background: #ddd}
+
+td{
+    border: 1px solid #9999A3 !important;
+}
+
+.positionSection {
+    width: 161px;
+    padding-left: 58px !important;
+    text-align: left;
+}
+
+#positionsHistoryTable_wrapper .positionSection {
+    width: 161px;
+    padding-left: 4.5% !important;
+    text-align: left;
+}
+.position-row .name{
+    color: #000;
+}
+
+#positionsHistoryTable_wrapper .status{
+    text-transform: uppercase;
+}
+.position-row.won{
+    background: #07B86E !important;
+}
+#positionsHistoryTable_wrapper .position-row.lost{
+    background: #DB2929 !important;
+}
+#positionsHistoryTable_wrapper .position-row td{
+    color: #fff;
+}
+#positionsHistoryTable_wrapper .date{
+    width: 134px;
+
 }
