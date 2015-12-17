@@ -52,7 +52,6 @@ class Customer
             $this->currency     = $data['data_currency'];
             $this->currencySymbol = $currencySymbol[$data['data_currency']]; // this should be handled externally
             $this->setSpotAuthToken();
-            $this->isLogged = true;
             return $this;
         }
         else return $data;
@@ -69,6 +68,7 @@ class Customer
         if(isset($ans) && $ans['err'] === 0){
             $ans['status']['Customer']['email'] = $data['email'];
             self::get()->setup($ans);
+            self::get()->isLogged = true; // this belongs here, not in setup, so if we load() a customer we will have the data but without being logged in
             \Session::put('spotCustomer', self::get());
             \Session::save();
             return self::get();
