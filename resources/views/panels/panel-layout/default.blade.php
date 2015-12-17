@@ -59,7 +59,7 @@
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="{{ $page->brand->link }}" id="manualTrading" rv-on-click="allowManualTrading">
+                        <a target="_blank" href="{{ $page->brand->link }}" id="manualTrading">
                             <i class="fa fa-wrench"></i> @ln(Broker Trading Area)
                         </a>
                     </li>
@@ -118,7 +118,7 @@
                                         {!! $page->body !!}
                                     </p>
                                     <div style="display: none;">
-                                        <p class="alert alert-danger note" data-toggle="modal" data-target="#formDepositModal" data-backdrop="false" rv-on-click="deposit">
+                                        <p class="alert alert-danger note" data-toggle="modal" data-target="#formDepositModal" data-backdrop="false">
                                             Attention: Your Aussie Method account is activated but your {{ $page->brand->logo }}
                                             balance is running low, CLICK HERE to deposit.
                                         </p>
@@ -134,30 +134,30 @@
                                         <div class="row">
                                             <div class="col-lg-4 col-md-4 col-sm-4 text-align-center">
                                                 <h5 class="subsectionheader-stat">1: Deposit Into Your Account:</h5>
-                                                <a href="javascript:;" id="depositBtn" class="center glower huge mbb deposit-btn" data-toggle="modal" data-target="#formDepositModal" data-backdrop="false" rv-on-click="deposit">
+                                                <a href="javascript:;" id="depositBtn" class="center glower huge mbb deposit-btn" data-toggle="modal" data-target="#formDepositModal" data-backdrop="false">
                                                     <!-- /.visual -->
                                                     <span class="text">Deposit Now at</span>
                                                     <span class="broker-text">{{ $page->brand->name }}</span>
                                                     <!-- /.details -->
                                                 </a> <!-- /.dashboard-stat -->
-                                                <p style="margin-top: 5px;" class="alert alert-danger" rv-show="user.WasActivated | negate">
+                                                <p style="margin-top: 5px;" class="alert alert-danger">
                                                     Your account balance is running low <br>
-                                                    <span data-toggle="modal" data-target="#formDepositModal" data-backdrop="false" rv-on-click="deposit">Click To Deposit Now. </span>
+                                                    <span>Click To Deposit Now. </span>
                                                 </p>
                                             </div>
                                             <div class="col-lg-4 col-md-4 col-sm-4 text-align-center" id="activationStatus">
                                                 <h5 class="subsectionheader-stat">2: Activate Auto Trading:</h5>
                                                 <p>
                                                 </p><div class="btn-group-md">
-                                                    <div class="btn {{ $bot_settings['status'] == 'On' ? 'btn-success' : 'btn-default' }} startTrade">On<span rv-show="user.Activated" style="display: none;"></span></div>
-                                                    <div class="btn {{ $bot_settings['status'] != 'On' ? 'btn-danger' : 'btn-default' }} stopTrade">Off<span rv-show="user.Activated | negate"></span></div>
+                                                    <div class="btn {{ $bot_settings['status'] == 'On' ? 'btn-success' : 'btn-default' }} startTrade">On<span style="display: none;"></span></div>
+                                                    <div class="btn {{ $bot_settings['status'] != 'On' ? 'btn-danger' : 'btn-default' }} stopTrade">Off<span></span></div>
                                                 </div>
                                                 <p></p>
-                                                <p class="alert alert-success" rv-show="user.Activated" style="display: none;">
+                                                <p class="alert alert-success" style="display: none;">
                                                     Aussie Method searching for new winning trades...<i class="fa fa-cog fa-spin"></i>
                                                 </p>
-                                                <div rv-show="user.WasActivated" style="display: none;">
-                                                    <p class="alert alert-warning" rv-show="user.Activated | negate">
+                                                <div style="display: none;">
+                                                    <p class="alert alert-warning">
                                                         Click "ON" to activate your Aussie Method Trading System.
                                                     </p>
                                                 </div>
@@ -166,10 +166,10 @@
                                                 <h5 class="subsectionheader-stat">3: Select Amount of Trade:</h5>
 
                                                 <div class="btn-group-md" style="cursor: pointer;">
-                                                    <div class="btn {{ ($bot_settings['minAmount'] == 25 && $bot_settings['maxAmount'] == 50) ? 'btn-success' : 'btn-default'}}" data-amount="25-50" style="cursor: pointer;"><span rv-text="currencySign">$</span> 25 - 50</div>
-                                                    <div class="btn {{ ($bot_settings['minAmount'] == 50 && $bot_settings['maxAmount'] == 100) ? 'btn-success' : 'btn-default'}}" data-amount="50-100" style="cursor: pointer;"><span rv-text="currencySign">$</span> 50 - 100</div>
-                                                    <div class="btn {{ ($bot_settings['minAmount'] == 100 && $bot_settings['maxAmount'] == 150) ? 'btn-success' : 'btn-default'}}" data-amount="100-150" style="cursor: pointer;"><span rv-text="currencySign">$</span> 100 - 150</div>
-                                                    <div class="btn {{ ($bot_settings['minAmount'] == 150) ? 'btn-success' : 'btn-default'}}" data-amount="150-1000" style="cursor: pointer;"><span rv-text="currencySign">$</span> 150 +</div>
+                                                    <div class="btn {{ ($bot_settings['minAmount'] == 25 && $bot_settings['maxAmount'] == 50) ? 'btn-success' : 'btn-default'}}" data-amount="25-50" style="cursor: pointer;"><span>$</span> 25 - 50</div>
+                                                    <div class="btn {{ ($bot_settings['minAmount'] == 50 && $bot_settings['maxAmount'] == 100) ? 'btn-success' : 'btn-default'}}" data-amount="50-100" style="cursor: pointer;"><span>$</span> 50 - 100</div>
+                                                    <div class="btn {{ ($bot_settings['minAmount'] == 100 && $bot_settings['maxAmount'] == 150) ? 'btn-success' : 'btn-default'}}" data-amount="100-150" style="cursor: pointer;"><span>$</span> 100 - 150</div>
+                                                    <div class="btn {{ ($bot_settings['minAmount'] == 150) ? 'btn-success' : 'btn-default'}}" data-amount="150-1000" style="cursor: pointer;"><span>$</span> 150 +</div>
                                                 </div>
 
                                             </div>
@@ -211,7 +211,7 @@
                                                             <tr class="white" role="row"><th class="sorting" role="columnheader" tabindex="0" aria-controls="positionsHistoryTable" rowspan="1" colspan="1" aria-label="Asset: activate to sort column ascending" style="width: 117px;">Asset</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="positionsHistoryTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 160px;">Position</th><th class="sorting_disabled" role="columnheader" rowspan="1" colspan="1" aria-label="Amount" style="width: 153px;">Amount</th><th class="hidden-mobile sorting_disabled" role="columnheader" rowspan="1" colspan="1" aria-label="Entry Rate" style="width: 195px;">Entry Rate</th><th class="hidden-mobile sorting_disabled" role="columnheader" rowspan="1" colspan="1" aria-label="Closing Rate" style="width: 236px;">Closing Rate</th><th class="sorting_disabled" role="columnheader" rowspan="1" colspan="1" aria-label="Payout" style="width: 139px;">Payout</th><th class="hidden-mobile sorting_disabled" role="columnheader" rowspan="1" colspan="1" aria-label="Profit" style="width: 113px;">Profit</th><th class="sorting_desc" role="columnheader" tabindex="0" aria-controls="positionsHistoryTable" rowspan="1" colspan="1" aria-sort="descending" aria-label="Date: activate to sort column ascending" style="width: 98px;">Date</th><th class="hidden-mobile sorting" role="columnheader" tabindex="0" aria-controls="positionsHistoryTable" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 131px;">Status</th></tr>
                                                             </thead>
 
-                                                            <tbody role="alert" aria-live="polite" aria-relevant="all"><tr class="odd historyTrades"><td valign="top" colspan="9" class="dataTables_empty">No data available in table</td></tr></tbody></table>{{--<p class="alert alert-warning table_warn_msg">There is no history of positions</p>--}}</div><div class="dt-row dt-bottom-row"><div class="row"><div class="col-sm-6"><div class="dataTables_info" id="positionsHistoryTable_info">Showing 0 to 0 of 0 entries</div></div><div class="col-sm-6 text-right"><div class="dataTables_paginate paging_bootstrap"></div></div></div></div></div><form id="trader_param" method="post" action=""></form>
+                                                            <tbody role="alert" aria-live="polite" aria-relevant="all"><tr class="odd historyTrades"><td valign="top" colspan="9" class="dataTables_empty">No data available in table</td></tr></tbody></table>{{--<p class="alert alert-warning table_warn_msg">There is no history of positions</p>--}}</div><div class="dt-row dt-bottom-row"><div class="row"><div class="col-sm-6"></div><div class="col-sm-6 text-right"><div class="dataTables_paginate paging_bootstrap"></div></div></div></div></div><form id="trader_param" method="post" action=""></form>
                                                 <input id="maxpid" type="hidden" name="maxpid" value="">
                                                 <input id="tid" type="hidden" name="tid" value="">
                                                 <input id="currency" type="hidden" name="currency">

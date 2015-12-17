@@ -2,7 +2,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header depositTitle">
-                <button onclick="" type="image" class="close" data-dismiss="modal" aria-hidden="true" data-toggle="modal" data-target="#formDepositModal" data-backdrop="false" rv-on-click="deposit">×</button>
+                <button onclick="" type="image" class="close" data-dismiss="modal" aria-hidden="true" data-toggle="modal" data-target="#formDepositModal">×</button>
                 Welcome to Aussie Method!
             </div>
             <div class="modal-body">
@@ -45,7 +45,7 @@
             </div>
             <div class="clearfix"></div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-success" data-dismiss="modal" rv-on-click="dismissWelcome">Get Started</button>
+                <button type="button" class="btn btn-success">Get Started</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -248,9 +248,9 @@
                         <div class="widget-content-blue-wrapper changed-up">
                             <div class="widget-content-blue-inner padded">
                                 <div class="pre-value-block"><i class="fa fa-signal"></i> Bot Total Trades:
-                                    <div class="value-self" style="display: inline"><span class="value" rv-text="summary.total | default 0">0</span></div>
+                                    <div class="value-self" style="display: inline"><span class="value">0</span></div>
                                 </div>
-                                <div class="value-block" rv-class-secondary="user.WasActivated">
+                                <div class="value-block">
                                     <div class="value-sub"><span class="content"></span><div class="dynamicbars">Loading..</div></div>
                                 </div>
                             </div>
@@ -260,9 +260,9 @@
                         <div class="widget-content-blue-wrapper changed-up">
                             <div class="widget-content-blue-inner padded">
                                 <div class="pre-value-block"><i class="fa fa-check"></i> Bot Won Trades:
-                                    <div class="value-self" style="display: inline;"><span class="value" rv-text="summary.won | default 0">0</span></div>
+                                    <div class="value-self" style="display: inline;"><span class="value">0</span></div>
                                 </div>
-                                <div class="value-block" rv-class-tertiary="user.WasActivated">
+                                <div class="value-block">
                                     <div class="value-sub"><span class="content"></span> <div class="dynamicsparkline">Loading..</div></div>
                                 </div>
                             </div>
@@ -272,7 +272,7 @@
                         <div class="widget-content-blue-wrapper changed-up">
                             <div class="widget-content-blue-inner padded">
                                 <div class="pre-value-block"><i class="fa fa-times"></i> Bot Lost Trades:
-                                    <div class="value-self" style="display: inline;"><span class="value" rv-text="summary.lost | default 0">0</span></div>
+                                    <div class="value-self" style="display: inline;"><span class="value">0</span></div>
                                 </div>
                                 <div class="value-block">
                                     <div class="value-sub"><span class="content"></span>  <div class="dynamicsparklinelost">Loading..</div></div>
@@ -299,11 +299,11 @@
                 </iframe>
             </div>
             <div class="modal-footer">
-                                                <span class="pull-left ajax-loader" rv-show="lastDepositDate | eq 0000-00-00">
-                                                     <span style="color: green; font-size: 15px; display: none;" rv-show="data.0.firstDepositDate | date | not_eq 0000-00-00">Deposit found, Click on Finish.</span>
+                                                <span class="pull-left ajax-loader">
+                                                     <span style="color: green; font-size: 15px; display: none;">Deposit found, Click on Finish.</span>
                                                 </span>
-                <button type="button" style="position: absolute; bottom: 2%; right: 2%;" onclick="" id="deposit-finish-btn" class="btn btn-success" data-dismiss="modal" rv-enabled="data.0.firstDepositDate | date | not_eq 0000-00-00" disabled="">Finish</button>
-                <span style="color :black; font-size: 13px; " rv-show="data.0.firstDepositDate | date | eq 0000-00-00">Deposit funds into your {{ $page->brand->name }} trading account. (Finish button will automatically be available once you've funded your account)</span>
+                <button type="button" style="position: absolute; bottom: 2%; right: 2%;" onclick="" id="deposit-finish-btn" class="btn btn-success" disabled="">Finish</button>
+                <span style="color :black; font-size: 13px; ">Deposit funds into your {{ $page->brand->name }} trading account. (Finish button will automatically be available once you've funded your account)</span>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -312,7 +312,7 @@
     <div class="modal-dialog" style="border: none;">
         <div class="modal-content">
             <div class="modal-header depositTitle">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="font-size:30px;">×</button>
+                <button type="button" class="close" aria-hidden="true" style="font-size:30px;">×</button>
                 <h4 class="modal-title " id="myModalLabel">Deposit Now Into Your {{ $page->brand->name }} Broker Account </h4>
             </div>
             <div class="modal-body" style="padding: 0 !important;">
