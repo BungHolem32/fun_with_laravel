@@ -61,8 +61,10 @@ $(document).ready(function(){
                         $('#formDepositModal').fadeIn();
                 },300);
             }
-            else
+            else{
                 $('#formDepositModal').removeClass('hidden');
+            }
+
         });
 
   /*      $("*").on('click',function(){

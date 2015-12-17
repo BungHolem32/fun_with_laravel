@@ -9,7 +9,7 @@
     if(!isset($poster)) $poster = '';
 
 
-    if(!isset($page->video)) $videoUrl = $video_url;
+    if(!isset($page->video) && isset($video_url)) $videoUrl = $video_url;
     else $videoUrl = $page->video;
 
 if(!isset($_GET['dev_video'])):
@@ -26,22 +26,22 @@ if(!isset($_GET['dev_video'])):
         </iframe>
     </div>
 
-@elseif(str_contains($videoUrl, 'cdn.com') || str_contains($video_url, 'cdn.com'))
+@elseif(str_contains($videoUrl, 'cdn.com') || str_contains($videoUrl, 'cdn.com'))
     <?php
         /***
          * short video intro?
          */
-    if(!isset($video_url))
-        $video_url = (string) $videoUrl;
+    if(!isset($videoUrl))
+        $videoUrl = (string) $videoUrl;
 
         $videoFinaleLink = '';
         $video_secret = 'bRt249Jd4z5Cmx';
         $video_expire = time() + 3600; // one hour valid
         $continue_file = null;
 
-        $temp = explode( "/", $video_url);
+        $temp = explode( "/", $videoUrl);
         $video_file = end($temp);
-        $video_url = rtrim($video_url, $video_file);
+        $videoUrl = rtrim($videoUrl, $video_file);
 
         // ONLY work for original walter video -> we have an alternate video lengths (15, 30 secs)
         if($video_file == '1_1.mp4' && array_key_exists('st', $_GET)){
@@ -61,7 +61,7 @@ if(!isset($_GET['dev_video'])):
         }
 
         $video_hash = str_replace('=', '', strtr(base64_encode(md5($video_secret .'/'.$video_file . $video_expire, true)), '+/', '-_')); // Using binary hashing.
-        $videoFinaleLink = $video_url.$video_file."?st=".$video_hash."&e=".$video_expire;
+        $videoFinaleLink = $videoUrl.$video_file."?st=".$video_hash."&e=".$video_expire;
         //$videoFinaleLink = 'http://p.media.chaki.netdna-cdn.com/vod/media.chaki/aussie/fs100.mp4';
     ?>
     <video class="video" preload="none" width="{{ $w }}" height="{{ $h }}" {{ $autoplay }}  {{ $controls }}
