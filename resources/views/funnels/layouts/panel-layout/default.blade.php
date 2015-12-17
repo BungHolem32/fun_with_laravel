@@ -1,3 +1,4 @@
+<?php //echo $page->brand->name ?>
 @section('head')
     <link rel="stylesheet" href="/css/aussie/panel/style.css" />
     <link rel="stylesheet" href="/css/aussie/panel/custom.css" />
@@ -17,7 +18,7 @@
                 <div class="inside">
                     <h4 style="font-size: 15px; font-weight: bold;margin-top: 4px;margin-bottom: 3px;" id="toggleProfileDetailsLink">Account Details</h4>
                     <span style="font-size:13px;">Email: rotem@test.com</span><br>
-                    <span style="font-size:13px;">Broker Name: Big Option</span><br>
+                    <span style="font-size:13px;">Broker Name: <?php echo $page->brand->name ?></span><br>
                     <span id="balanceStatus" style="font-size:13px;"><i class="getLoading fa fa-refresh fa-spin"></i>Balance: $ 0.00</span><br>
                     <span style="font-size:13px;">Account Id: 20832933</span>
                 </div>
@@ -109,13 +110,13 @@
                                     {{-- Guide POPUPS --}}
                                     <div id="guiders_overlay" style="display: none;"></div>
                                     <div class="guider" id="_1" style="width: 400px; position: fixed; top: 195.333px; left: 597.5px; display: none;">  <div class="guiders_content">    <h1 class="guiders_title">Welcome to the Aussie Method Trading App!</h1>    <div class="guiders_close"></div>    <p class="guiders_description">We will now guide you briefly on how to use The automatic Aussie Method Trading App that will take the trading sessions for you.</p>    <div class="guiders_buttons_container">    <a class="guiders_button" href="javascript:void(0);">Close</a><a class="guiders_button" href="javascript:void(0);">Let's Start</a></div>  </div>  <div class="guiders_arrow">  </div></div>
-                                    <div class="guider" id="_2" style="width: 400px; display: none; position: absolute; top: 398.8px; left: 96px;">  <div class="guiders_content">    <h1 class="guiders_title">Deposit &amp; Activation</h1>    <div class="guiders_close"></div>    <p class="guiders_description">First click on the deposit button and fund your trading account with Big Option.</p>    <div class="guiders_buttons_container">    <a class="guiders_button" href="javascript:void(0);">Close</a><a class="guiders_button" href="javascript:void(0);">Next</a><a class="guiders_button" href="javascript:void(0);">Previous</a></div>  </div>  <div class="guiders_arrow guiders_arrow_up" style="left: 169px;">  </div></div>
+                                    <div class="guider" id="_2" style="width: 400px; display: none; position: absolute; top: 398.8px; left: 96px;">  <div class="guiders_content">    <h1 class="guiders_title">Deposit &amp; Activation</h1>    <div class="guiders_close"></div>    <p class="guiders_description">First click on the deposit button and fund your trading account with <?php echo $page->brand->name ?>.</p>    <div class="guiders_buttons_container">    <a class="guiders_button" href="javascript:void(0);">Close</a><a class="guiders_button" href="javascript:void(0);">Next</a><a class="guiders_button" href="javascript:void(0);">Previous</a></div>  </div>  <div class="guiders_arrow guiders_arrow_up" style="left: 169px;">  </div></div>
                                     <div class="guider" id="_3" style="width: 400px; display: none; position: absolute; top: 399.8px; left: 597.156px;">  <div class="guiders_content">    <h1 class="guiders_title">Deposit &amp; Activation</h1>    <div class="guiders_close"></div>    <p class="guiders_description">Then make sure your App status is on activated.</p>    <div class="guiders_buttons_container">    <a class="guiders_button" href="javascript:void(0);">Close</a><a class="guiders_button" href="javascript:void(0);">Next</a><a class="guiders_button" href="javascript:void(0);">Previous</a></div>  </div>  <div class="guiders_arrow guiders_arrow_up" style="left: 169px;">  </div></div>
-                                    <div class="guider" id="_4" style="width: 400px; display: none; position: absolute; top: -83.5px; left: 59.8px;">  <div class="guiders_content">    <h1 class="guiders_title">Balance Info</h1>    <div class="guiders_close"></div>    <p class="guiders_description">This is your balance with Big Option, Your balance is updated automatically.</p>    <div class="guiders_buttons_container">    <a class="guiders_button" href="javascript:void(0);">Close</a><a class="guiders_button" href="javascript:void(0);">Next</a><a class="guiders_button" href="javascript:void(0);">Previous</a></div>  </div>  <div class="guiders_arrow guiders_arrow_left" style="top: 73.5px;">  </div></div>
+                                    <div class="guider" id="_4" style="width: 400px; display: none; position: absolute; top: -83.5px; left: 59.8px;">  <div class="guiders_content">    <h1 class="guiders_title">Balance Info</h1>    <div class="guiders_close"></div>    <p class="guiders_description">This is your balance with <?php echo $page->brand->name ?>, Your balance is updated automatically.</p>    <div class="guiders_buttons_container">    <a class="guiders_button" href="javascript:void(0);">Close</a><a class="guiders_button" href="javascript:void(0);">Next</a><a class="guiders_button" href="javascript:void(0);">Previous</a></div>  </div>  <div class="guiders_arrow guiders_arrow_left" style="top: 73.5px;">  </div></div>
                                     <div class="guider" id="_5" style="width: 400px; display: none; position: absolute; top: 389.8px; left: 1099.31px;">  <div class="guiders_content">    <h1 class="guiders_title">Amount</h1>    <div class="guiders_close"></div>    <p class="guiders_description">Please choose your preferred amount per each trade.</p>    <div class="guiders_buttons_container">    <a class="guiders_button" href="javascript:void(0);">Close</a><a class="guiders_button" href="javascript:void(0);">Next</a><a class="guiders_button" href="javascript:void(0);">Previous</a></div>  </div>  <div class="guiders_arrow guiders_arrow_up" style="left: 169px;">  </div></div>
                                     <div class="guider" id="_6" style="width: 400px; display: none; position: absolute; top: 188.2px; left: 596.5px;">  <div class="guiders_content">    <h1 class="guiders_title">Running Positions</h1>    <div class="guiders_close"></div>    <p class="guiders_description">Here you can see Aussie Method Trading App searching for the best opportunity to trade for you. Once our system will find a good opportunity it will automatically execute the trading for you.</p>    <div class="guiders_buttons_container">    <a class="guiders_button" href="javascript:void(0);">Close</a><a class="guiders_button" href="javascript:void(0);">Next</a><a class="guiders_button" href="javascript:void(0);">Previous</a></div>  </div>  <div class="guiders_arrow guiders_arrow_down" style="left: 169px;">  </div></div>
                                     <div class="guider" id="_7" style="width: 400px; display: none; position: absolute; top: 381.2px; left: 596.5px;">  <div class="guiders_content">    <h1 class="guiders_title">Trading History Panel</h1>    <div class="guiders_close"></div>    <p class="guiders_description">Here you can see the latest open and closed position made by the Aussie Method Trading App ONLY! Also you can see if the sessions expired in the money or not.</p>    <div class="guiders_buttons_container">    <a class="guiders_button" href="javascript:void(0);">Close</a><a class="guiders_button" href="javascript:void(0);">Next</a><a class="guiders_button" href="javascript:void(0);">Previous</a></div>  </div>  <div class="guiders_arrow guiders_arrow_down" style="left: 169px;">  </div></div>
-                                    <div class="guider" id="_8" style="width: 400px; display: none; position: absolute; top: 178.8px; left: 626.688px;">  <div class="guiders_content">    <h1 class="guiders_title">Broker Trading Area</h1>    <div class="guiders_close"></div>    <p class="guiders_description">If you wish to go to the official Big Option site, you can click on this button. On the broker's site you can find more information about the binary options industry, promotions, and more assets you can trade on by yourself without using Aussie Method Trading App recommendations.</p>    <div class="guiders_buttons_container">    <a class="guiders_button" href="javascript:void(0);">Close</a><a class="guiders_button" href="javascript:void(0);">Next</a><a class="guiders_button" href="javascript:void(0);">Previous</a></div>  </div>  <div class="guiders_arrow guiders_arrow_up" style="left: 169px;">  </div></div>
+                                    <div class="guider" id="_8" style="width: 400px; display: none; position: absolute; top: 178.8px; left: 626.688px;">  <div class="guiders_content">    <h1 class="guiders_title">Broker Trading Area</h1>    <div class="guiders_close"></div>    <p class="guiders_description">If you wish to go to the official <?php echo $page->brand->name ?> site, you can click on this button. On the broker's site you can find more information about the binary options industry, promotions, and more assets you can trade on by yourself without using Aussie Method Trading App recommendations.</p>    <div class="guiders_buttons_container">    <a class="guiders_button" href="javascript:void(0);">Close</a><a class="guiders_button" href="javascript:void(0);">Next</a><a class="guiders_button" href="javascript:void(0);">Previous</a></div>  </div>  <div class="guiders_arrow guiders_arrow_up" style="left: 169px;">  </div></div>
                                     <div class="guider" id="_9" style="width: 400px; display: none; position: absolute; top: -110.5px; left: 59.8px;">  <div class="guiders_content">    <h1 class="guiders_title">Account Details</h1>    <div class="guiders_close"></div>    <p class="guiders_description">Here you can see your profile details, if you would like to change your details, please contact Aussie Method Trading App support.</p>    <div class="guiders_buttons_container">    <a class="guiders_button" href="javascript:void(0);">Done</a><a class="guiders_button" href="javascript:void(0);">Previous</a></div>  </div>  <div class="guiders_arrow guiders_arrow_left" style="top: 100.5px;">  </div></div>
                                     {{-- Modal POPUPS --}}
                                     <div class="modal animated fadeInDown" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="depositModalLabel" aria-hidden="true" data-backdrop="static" style="display:block">
@@ -136,7 +137,7 @@
                                                             <div class="col-md-6 col-sm-6 ">
                                                                 <div class="col-md-12 col-sm-12 " style="padding: 0px !important; font-size: 20px; text-align:center; background: rgb(239, 244, 255);">
                                                                     <div style="color: #54bcc8;font-size: 18px;font-weight: 600;-moz-border-radius: 2px;padding: .5em 1em;line-height: 1;text-align: left;">
-                                                                        Step 1 - Fund Your Big Option Broker Account.
+                                                                        Step 1 - Fund Your <?php echo $page->brand->name ?> Broker Account.
                                                                     </div>
                                                                     <a href="//binarybonus.net/https_login_proxy.php?url=http://www.bigoption.com/bigoptionsignin.php&amp;extRedir=http://www.bigoption.com/my-account/deposit/&amp;token=&amp;email=te2323st1@test.com&amp;password=sdfasdas" target="_blank">
                                                                         <img src="https://binarypromos.com/regforms_iframeV2/general/media/images/brokers/dark/bigoption.png" class="brokerlogo">
@@ -410,7 +411,7 @@
                                             <div class="modal-content">
                                                 <div class="modal-header depositTitle bg-brand-title">
                                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="font-size:30px;">×</button>
-                                                    <h4 class="modal-title " id="myModalLabel">Deposit Now Into Your Big Option Broker Account </h4>
+                                                    <h4 class="modal-title " id="myModalLabel">Deposit Now Into Your <?php echo $page->brand->name ?> Broker Account </h4>
                                                     <p style="font-size: 15px; padding-top: 8px; margin-bottom: 0;">
                                                         <a class="cant-deposit" href="//binarybonus.net/https_login_proxy.php?url=http://www.bigoption.com/bigoptionsignin.php&amp;extRedir=http://www.bigoption.com/my-account/deposit/&amp;token=&amp;email=te2323st1@test.com&amp;password=sdfasdas" target="a_blank" style="font-weight: bold; color: black;">Can't See This Page Correct?  Click Here </a> </p>
                                                 </div>
@@ -423,7 +424,7 @@
                                                      <span style="color: green; font-size: 15px; display: none;" rv-show="data.0.firstDepositDate | date | not_eq 0000-00-00">Deposit found, Click on Finish.</span>
                                                 </span>
                                                     <button type="button" style="position: absolute; bottom: 2%; right: 2%;" onclick="" id="deposit-finish-btn" class="btn btn-success" data-dismiss="modal" rv-enabled="data.0.firstDepositDate | date | not_eq 0000-00-00" disabled="">Finish</button>
-                                                    <span style="color :black; font-size: 13px; " rv-show="data.0.firstDepositDate | date | eq 0000-00-00">Deposit funds into your Big Option trading account. (Finish button will automatically be available once you've funded your account)</span>
+                                                    <span style="color :black; font-size: 13px; " rv-show="data.0.firstDepositDate | date | eq 0000-00-00">Deposit funds into your <?php echo $page->brand->name ?> trading account. (Finish button will automatically be available once you've funded your account)</span>
                                                 </div>
                                             </div><!-- /.modal-content -->
                                         </div><!-- /.modal-dialog -->
@@ -433,7 +434,7 @@
                                             <div class="modal-content">
                                                 <div class="modal-header depositTitle">
                                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="font-size:30px;">×</button>
-                                                    <h4 class="modal-title " id="myModalLabel">Deposit Now Into Your Big Option Broker Account </h4>
+                                                    <h4 class="modal-title " id="myModalLabel">Deposit Now Into Your <?php echo $page->brand->name ?> Broker Account </h4>
                                                     <p id="formDepositModal_cantdep">
                                                         <a class="cant-deposit" style="color:black;" href="//binarybonus.net/https_login_proxy.php?url=http://www.bigoption.com/bigoptionsignin.php&amp;extRedir=http://www.bigoption.com/my-account/deposit/&amp;token=&amp;email=te2323st1@test.com&amp;password=sdfasdas" target="a_blank">Can't See This Page Correct?  Click Here </a> </p>
                                                 </div>
@@ -595,13 +596,13 @@
                                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-24 height">
                                                                         <i class="fa fa-wrench"></i>
             <span class="button_box">
-                In order to unlock your The Aussie Method Account, You have to fund your Big Option broker account.
+                In order to unlock your The Aussie Method Account, You have to fund your <?php echo $page->brand->name ?> broker account.
             </span>
                                                                     </div>
                                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-24 height">
                                                                         <i class="fa fa-check"></i>
             <span class="button_box">
-                Your Big Option account is fully connected to your The Aussie Method. Once you get started within 3 short minutes you will see your cash flow straight to your account!
+                Your <?php echo $page->brand->name ?> account is fully connected to your The Aussie Method. Once you get started within 3 short minutes you will see your cash flow straight to your account!
             </span>
                                                                     </div>
                                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-24 height">
@@ -609,7 +610,7 @@
             <span class="button_box deposit-link-box">
                 Deposit Form Is Currently Not Working?
                 <a href="https://binarybonus.net/https_login_proxy.php?url=http://www.bigoption.com/bigoptionsignin.php&amp;email=te2323st1@test.com&amp;password=sdfasdas&amp;token=587937&amp;extRedir=http://www.bigoption.com/my-account/deposit/" class="broker-login js-broker-login animated bounce" target="_blank">Click Here</a>
-                To Deposit In Your Big Option Broker Website.
+                To Deposit In Your <?php echo $page->brand->name ?> Broker Website.
             </span>
                                                                     </div>
                                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-24 height" style="height: 50px;">
@@ -624,7 +625,7 @@
                                                 </div>
                                                 <div class="modal-footer">
                         <span class="ajax-loader" rv-show="lastDepositDate | eq 0000-00-00">
-                             <span style="color: red;font-size: 12px;" rv-show="data.0.firstDepositDate | date | eq 0000-00-00">Deposit funds into your Big Option trading account.  <br> (Finish button will automatically be available once you've funded your account)</span>
+                             <span style="color: red;font-size: 12px;" rv-show="data.0.firstDepositDate | date | eq 0000-00-00">Deposit funds into your <?php echo $page->brand->name ?> trading account.  <br> (Finish button will automatically be available once you've funded your account)</span>
                              <span style="color: green; font-size: 13px; display: none;" rv-show="data.0.firstDepositDate | date | not_eq 0000-00-00">Deposit found, Click on Finish.</span>
                         </span>
                                                     <button id="formDepositModal_finishBTN" type="button" class=" btn btn-success" data-dismiss="modal" rv-enabled="data.0.firstDepositDate | date | not_eq 0000-00-00" disabled="">Finish</button>
@@ -633,13 +634,13 @@
                                         </div><!-- /.modal-dialog -->
                                     </div><!-- /.modal -->
                                     <p style="" rv-show="data.0.firstDepositDate | date | eq 0000-00-00" class="alert alert-danger note" data-toggle="modal" data-target="#formDepositModal" data-backdrop="false" rv-on-click="deposit">
-                                        <span>To Activate Aussie Method System, Your Big Option  Broker Account Will Need Your Deposit.</span><br>
+                                        <span>To Activate Aussie Method System, Your <?php echo $page->brand->name ?>  Broker Account Will Need Your Deposit.</span><br>
 
                                         Start Earning Money In 3 Easy Steps:
                                     </p>
                                     <div rv-show="user.Activated" style="display: none;">
                                         <p rv-show="data.0.accountBalance | number | lt 25" class="alert alert-danger note" data-toggle="modal" data-target="#formDepositModal" data-backdrop="false" rv-on-click="deposit">
-                                            Attention: Your Aussie Method account is activated but your Big Option
+                                            Attention: Your Aussie Method account is activated but your <?php echo $page->brand->name ?>
                                             balance is running low, CLICK HERE to deposit.
                                         </p>
                                     </div>
@@ -657,7 +658,7 @@
                		<span class="text">
 						Deposit Now at
 						</span>
-                                                    <span class="broker-text">Big Option</span>
+                                                    <span class="broker-text"><?php echo $page->brand->name ?></span>
                                                     <!-- /.details -->
                                                 </a> <!-- /.dashboard-stat -->
                                                 <p style="margin-top: 5px;" class="alert alert-danger" rv-show="user.WasActivated | negate">
