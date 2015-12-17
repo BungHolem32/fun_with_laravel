@@ -308,7 +308,7 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-<div class="modal {{ \App\Customer::get()->balance < 100 ? 'showen':'hidden hidden-ref' }}" id="formDepositModal" tabindex="-1" role="dialog" aria-labelledby="depositModalLabel" aria-hidden="true" style="outline: none; overflow-y: auto; top: 0px; height: 100%; width: 100%; display: none;">
+<div class="modal {{ \App\Customer::get()->balance < 100 ? 'showen hidden-ref':'hidden hidden-ref' }}" id="formDepositModal" tabindex="-1" role="dialog" aria-labelledby="depositModalLabel" aria-hidden="true" style="outline: none; overflow-y: auto; top: 0px; height: 100%; width: 100%; display: none;">
     <div class="modal-dialog" style="border: none;">
         <div class="modal-content">
             <div class="modal-header depositTitle">

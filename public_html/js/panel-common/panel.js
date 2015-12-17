@@ -70,7 +70,8 @@ $(window).on('ajax-refresh', function () {
 
             if(res.customer.accountBalance<25)
             {
-                if(!$('#formDepositModal').hasClass('hidden-ref') && !$('#formDepositModal').is(':visible')){
+                if(!$('#formDepositModal').hasClass('hidden-ref')){
+                    console.log('class',$('#formDepositModal').attr('class'));
                     $('#formDepositModal').fadeIn().addClass('hidden-ref');
                     $('body').addClass('bggray');
                 }
@@ -130,9 +131,6 @@ function load_positions(positions){
 
     $.each(positions, function(i, position){
 
-        var assetId = 'asset_' + position['assetId'];
-        asset_list.push(assetId);
-
         if($('#position-'+position.id).length){
             $('#position-'+position.id).removeClass('pending');
             return;
@@ -142,6 +140,8 @@ function load_positions(positions){
         position['amount'] = position['amount'].replace(/(\.\d{2})0+$/, '$1');
         var new_row = $(row).clone().attr('id', 'position-'+position.id).addClass(position.status+' '+position.position);
 
+        var assetId = 'asset_' + position['assetId'];
+        asset_list.push(assetId);
         new_row.find('.currentRate .asset').addClass(assetId);
 
         $.each(position, function(j, data) {
@@ -159,24 +159,24 @@ function load_positions(positions){
 
 
 var socket;
+
 function socketRefresh(asset_ids){
 
-    asset_ids = _.uniq(asset_ids);
     if(socket !== undefined){
-        if(_.difference(asset_ids, socket.ids).length == 0)
+        if(!_.difference(asset_ids, socket.ids))
             return;
-
-        asset_ids = _.union(asset_ids,socket.ids);
-        socket.disconnect();
+        //socket.disconnect();
     }
 
-    // this must be before setting the socket.ids property
-    socket = io.connect('//sst-super-c-nl.spotoption.com/', {'force new connection': true});
 
-    socket.ids = asset_ids;
+    var socket = io.connect('//sst-super-c-nl.spotoption.com/');
+
+    socket.ids = _.uniq(asset_ids);
+
+    var ids = socket.ids;
 
     socket.on('connect', function() {
-        socket.emit('add', socket.ids);
+        socket.emit('add', ids);
     });
 
     socket.on('update', function (full_data) {
