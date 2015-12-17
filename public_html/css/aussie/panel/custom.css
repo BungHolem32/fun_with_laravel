@@ -110,3 +110,36 @@ body.bggray:after{
 *:focus{
     outline: none;
 }
+
+#formDepositModal{
+    height: 1075px !important;
+}
+
+#formDepositModal .col-xs-8{
+    position: relative;
+}
+#formDepositModal .col-xs-8 label{
+position: absolute;
+padding: 0 3px;
+margin: 0;
+right: 15px;
+color: #fff;
+font-size: 11px;
+bottom: 0;
+border-radius: 0 0 1px;
+display: block;
+background-color: #a94442;
+height: auto;
+line-height: normal;
+z-index: 10;
+}
+#formDepositModal .col-xs-8.phone-50 label{
+    right: 0px;
+}
+
+.change.up{
+    color: #00A000;
+}
+.change.down{
+    color: #f21f1f;
+}

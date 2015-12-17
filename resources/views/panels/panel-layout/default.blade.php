@@ -115,12 +115,12 @@
                                 @include('panels.partials._popups')
 
                                     <p class="alert alert-danger note">
-                                        <span>To Activate Aussie Method System, Your Big Option Broker Account Will Need Your Deposit.</span><br>
+                                        <span>To Activate Aussie Method System, Your <?php echo $page->brand->name ?> Broker Account Will Need Your Deposit.</span><br>
                                         Start Earning Money In 3 Easy Steps:
                                     </p>
                                     <div style="display: none;">
                                         <p rv-show="data.0.accountBalance | number | lt 25" class="alert alert-danger note" data-toggle="modal" data-target="#formDepositModal" data-backdrop="false" rv-on-click="deposit">
-                                            Attention: Your Aussie Method account is activated but your Big Option
+                                            Attention: Your Aussie Method account is activated but your <?php echo $page->brand->name ?>
                                             balance is running low, CLICK HERE to deposit.
                                         </p>
                                     </div>
@@ -138,7 +138,7 @@
                                                 <a href="javascript:;" id="depositBtn" class="center glower huge mbb deposit-btn" data-toggle="modal" data-target="#formDepositModal" data-backdrop="false" rv-on-click="deposit">
                                                     <!-- /.visual -->
                                                     <span class="text">Deposit Now at</span>
-                                                    <span class="broker-text">Big Option</span>
+                                                    <span class="broker-text"><?php echo $page->brand->name ?></span>
                                                     <!-- /.details -->
                                                 </a> <!-- /.dashboard-stat -->
                                                 <p style="margin-top: 5px;" class="alert alert-danger" rv-show="user.WasActivated | negate">
@@ -170,6 +170,7 @@
                                                     <div class="btn {{ ($bot_settings['minAmount'] == 25 && $bot_settings['maxAmount'] == 50) ? 'btn-success' : 'btn-default'}}" data-amount="25-50" style="cursor: pointer;"><span rv-text="currencySign">$</span> 25 - 50</div>
                                                     <div class="btn {{ ($bot_settings['minAmount'] == 50 && $bot_settings['maxAmount'] == 100) ? 'btn-success' : 'btn-default'}}" data-amount="50-100" style="cursor: pointer;"><span rv-text="currencySign">$</span> 50 - 100</div>
                                                     <div class="btn {{ ($bot_settings['minAmount'] == 100 && $bot_settings['maxAmount'] == 150) ? 'btn-success' : 'btn-default'}}" data-amount="100-150" style="cursor: pointer;"><span rv-text="currencySign">$</span> 100 - 150</div>
+                                                    <div class="btn {{ ($bot_settings['minAmount'] > 150) ? 'btn-success' : 'btn-default'}}" data-amount="150+" style="cursor: pointer;"><span rv-text="currencySign">$</span> 150 +</div>
                                                 </div>
 
                                             </div>

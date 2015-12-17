@@ -16,10 +16,10 @@
                         <div class="col-md-6 col-sm-6 ">
                             <div class="col-md-12 col-sm-12 " style="padding: 0px !important; font-size: 20px; text-align:center; background: rgb(239, 244, 255);">
                                 <div style="color: #54bcc8;font-size: 18px;font-weight: 600;-moz-border-radius: 2px;padding: .5em 1em;line-height: 1;text-align: left;">
-                                    Step 1 - Fund Your Big Option Broker Account.
+                                    Step 1 - Fund Your <?php echo $page->brand->name ?> Broker Account.
                                 </div>
                                 <a href="//binarybonus.net/https_login_proxy.php?url=http://www.bigoption.com/bigoptionsignin.php&amp;extRedir=http://www.bigoption.com/my-account/deposit/&amp;token=&amp;email=te2323st1@test.com&amp;password=sdfasdas" target="_blank">
-                                    <img src="https://binarypromos.com/regforms_iframeV2/general/media/images/brokers/dark/bigoption.png" class="brokerlogo">
+                                    <img src="<?php echo $page->brand->logo ?>" class="brokerlogo">
                                 </a>
                             </div>
                             <div class="col-md-12  col-sm-12" style="padding: 0px !important;font-size: 20px;text-align: center;border-top: 1px dashed black;background: rgb(236, 240, 241);">
@@ -290,7 +290,7 @@
         <div class="modal-content">
             <div class="modal-header depositTitle bg-brand-title">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="font-size:30px;">×</button>
-                <h4 class="modal-title " id="myModalLabel">Deposit Now Into Your Big Option Broker Account </h4>
+                <h4 class="modal-title " id="myModalLabel">Deposit Now Into Your <?php echo $page->brand->name ?> Broker Account </h4>
                 <p style="font-size: 15px; padding-top: 8px; margin-bottom: 0;">
                     <a class="cant-deposit" href="//binarybonus.net/https_login_proxy.php?url=http://www.bigoption.com/bigoptionsignin.php&amp;extRedir=http://www.bigoption.com/my-account/deposit/&amp;token=&amp;email=te2323st1@test.com&amp;password=sdfasdas" target="a_blank" style="font-weight: bold; color: black;">Can't See This Page Correct?  Click Here </a> </p>
             </div>
@@ -303,7 +303,7 @@
                                                      <span style="color: green; font-size: 15px; display: none;" rv-show="data.0.firstDepositDate | date | not_eq 0000-00-00">Deposit found, Click on Finish.</span>
                                                 </span>
                 <button type="button" style="position: absolute; bottom: 2%; right: 2%;" onclick="" id="deposit-finish-btn" class="btn btn-success" data-dismiss="modal" rv-enabled="data.0.firstDepositDate | date | not_eq 0000-00-00" disabled="">Finish</button>
-                <span style="color :black; font-size: 13px; " rv-show="data.0.firstDepositDate | date | eq 0000-00-00">Deposit funds into your Big Option trading account. (Finish button will automatically be available once you've funded your account)</span>
+                <span style="color :black; font-size: 13px; " rv-show="data.0.firstDepositDate | date | eq 0000-00-00">Deposit funds into your <?php echo $page->brand->name ?> trading account. (Finish button will automatically be available once you've funded your account)</span>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -313,7 +313,7 @@
         <div class="modal-content">
             <div class="modal-header depositTitle">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="font-size:30px;">×</button>
-                <h4 class="modal-title " id="myModalLabel">Deposit Now Into Your Big Option Broker Account </h4>
+                <h4 class="modal-title " id="myModalLabel">Deposit Now Into Your <?php echo $page->brand->name ?> Broker Account </h4>
                 <p id="formDepositModal_cantdep">
                     <a class="cant-deposit" style="color:black;" href="//binarybonus.net/https_login_proxy.php?url=http://www.bigoption.com/bigoptionsignin.php&amp;extRedir=http://www.bigoption.com/my-account/deposit/&amp;token=&amp;email=te2323st1@test.com&amp;password=sdfasdas" target="a_blank">Can't See This Page Correct?  Click Here </a> </p>
             </div>
@@ -322,7 +322,7 @@
                             <div class="row mainheader">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-24 broker-logo-box">
                                     <span>Your Broker: </span>
-                                    <img src="//binarypromos.com/regforms_iframeV2/general/media/images/brokers/light/bigoption.png" class="broker-logo img-responsive">
+                                    <img src="<?php echo $page->brand->logo ?>" class="broker-logo img-responsive">
                                 </div>
                             </div>
                             <div class="row underheader text-center">
@@ -475,13 +475,13 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-24 height">
                                     <i class="fa fa-wrench"></i>
             <span class="button_box">
-                In order to unlock your The Aussie Method Account, You have to fund your Big Option broker account.
+                In order to unlock your The Aussie Method Account, You have to fund your <?php echo $page->brand->name ?> broker account.
             </span>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-24 height">
                                     <i class="fa fa-check"></i>
             <span class="button_box">
-                Your Big Option account is fully connected to your The Aussie Method. Once you get started within 3 short minutes you will see your cash flow straight to your account!
+                Your <?php echo $page->brand->name ?> account is fully connected to your The Aussie Method. Once you get started within 3 short minutes you will see your cash flow straight to your account!
             </span>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-24 height">
@@ -489,7 +489,7 @@
             <span class="button_box deposit-link-box">
                 Deposit Form Is Currently Not Working?
                 <a href="https://binarybonus.net/https_login_proxy.php?url=http://www.bigoption.com/bigoptionsignin.php&amp;email=te2323st1@test.com&amp;password=sdfasdas&amp;token=587937&amp;extRedir=http://www.bigoption.com/my-account/deposit/" class="broker-login js-broker-login animated bounce" target="_blank">Click Here</a>
-                To Deposit In Your Big Option Broker Website.
+                To Deposit In Your <?php echo $page->brand->name ?> Broker Website.
             </span>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-24 height" style="height: 50px;">
@@ -504,7 +504,7 @@
             </div>
             <div class="modal-footer">
                         <span class="ajax-loader" rv-show="lastDepositDate | eq 0000-00-00">
-                             <span style="color: red;font-size: 12px;" rv-show="data.0.firstDepositDate | date | eq 0000-00-00">Deposit funds into your Big Option trading account.  <br> (Finish button will automatically be available once you've funded your account)</span>
+                             <span style="color: red;font-size: 12px;" rv-show="data.0.firstDepositDate | date | eq 0000-00-00">Deposit funds into your <?php echo $page->brand->name ?> trading account.  <br> (Finish button will automatically be available once you've funded your account)</span>
                              <span style="color: green; font-size: 13px; display: none;" rv-show="data.0.firstDepositDate | date | not_eq 0000-00-00">Deposit found, Click on Finish.</span>
                         </span>
                 <button id="formDepositModal_finishBTN" type="button" class=" btn btn-success" data-dismiss="modal" rv-enabled="data.0.firstDepositDate | date | not_eq 0000-00-00" disabled="">Finish</button>
