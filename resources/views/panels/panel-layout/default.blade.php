@@ -44,7 +44,7 @@
                 <div id="accountdetailz" style="width: 22px; height: 22px; display: none; background: blue;"></div>
                 <ul class="side-menu">
                     <li>
-                        <a id="awelcomeModal" href="javascript:;" data-toggle="modal" data-target="#welcomeModal" data-backdrop="false">
+                        <a id="awelcomeModal" href="javascript:;">
                             <i class="fa fa-bookmark-o"></i> @ln(View Welcome Message)
                         </a>
                     </li>
@@ -64,7 +64,7 @@
                         </a>
                     </li>
                     <li class="signal-modal-link hidden">
-                        <a class="menulink" href="javascript:;" data-toggle="modal" onclick="showSignalModal();" data-backdrop="false">
+                        <a class="menulink" href="javascript:;" onclick="showSignalModal();" data-backdrop="false">
                             <i class="fa fa-cogs"></i> @ln(Trading Signals)
                         </a>
                     </li>
@@ -134,13 +134,13 @@
                                         <div class="row">
                                             <div class="col-lg-4 col-md-4 col-sm-4 text-align-center">
                                                 <h5 class="subsectionheader-stat">1: Deposit Into Your Account:</h5>
-                                                <a href="javascript:;" id="depositBtn" class="center glower huge mbb deposit-btn" data-toggle="modal" data-target="#formDepositModal" data-backdrop="false">
+                                                <a href="javascript:;" id="depositBtn" class="center glower huge mbb deposit-btn">
                                                     <!-- /.visual -->
                                                     <span class="text">Deposit Now at</span>
                                                     <span class="broker-text">{{ $page->brand->name }}</span>
                                                     <!-- /.details -->
                                                 </a> <!-- /.dashboard-stat -->
-                                                <p style="margin-top: 5px;" class="alert alert-danger">
+                                                <p style="margin-top: 5px;" class="alert alert-danger low-alert">
                                                     Your account balance is running low <br>
                                                     <span>Click To Deposit Now. </span>
                                                 </p>

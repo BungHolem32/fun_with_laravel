@@ -60,6 +60,21 @@ $(document).ready(function() {
             if (res.err === 0) {
                 $('.getLoading').hide();
                 $('.balance').html(res.customer.currencySign + ' ' + res.customer.accountBalance);
+
+                if(res.customer.accountBalance<25)
+                {
+                    $('#formDepositModal').fadeIn();
+                    $('body').addClass('bggray');
+                }
+                if(res.customer.accountBalance<100)
+                {
+                    $('.low-alert').fadeIn();
+                }
+                if(res.customer.accountBalance>100)
+                {
+                    $('.low-alert').hide();
+                }
+
                 asset_list = load_positions(res.positions);
                 socketRefresh(asset_list);
             }
@@ -105,7 +120,7 @@ function load_positions(positions){
             $('#position-'+position.id).removeClass('pending');
             return;
         }
-        console.log('adding #position-'+position.id);
+      /*  console.log('adding #position-'+position.id);*/
 
         position['amount'] = position['amount'].replace(/(\.\d{2})0+$/, '$1');
         var new_row = $(row).clone().attr('id', 'position-'+position.id).addClass(position.status+' '+position.position);

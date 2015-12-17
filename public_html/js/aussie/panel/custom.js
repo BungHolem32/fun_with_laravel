@@ -1,7 +1,8 @@
 var guider = 0, debug = 0;
 
 $(document).ready(function(){
-
+    var balance = $('.balance').text().replace('$','').replace(' ','');
+    console.log(balance);
     // showLoading:    $('.getLoading').show().find('.inside').html('');
     // ajax's to        $('.openTrades').html()  ||   $('.historyTrades').html()
     // on and off:     On click .startTrade ||    .stopTrade
@@ -59,17 +60,16 @@ $(document).ready(function(){
             },300);
         });
 
+  /*      $("*").on('click',function(){
+           console.log($(this).attr('class'))
+        });*/
 
-        // need deposit=something to disable deposit popup every click
-        if (typeof deposit == 'undefined') {
-            $('a#manualTrading, a#StatisticsModal').on('click', function () {
-                if(!$(this).hasClass('guided-tour-start') && !$(this).parent().hasClass('guiders_buttons_container')){
-                    $('#formDepositModal').fadeIn();
-                    $('body').addClass('bggray');
-                }
-                return false;
-            });
-        }
+
+        $('.deposit-btn').on('click', function () {
+            $('#formDepositModal').fadeIn();
+            $('body').addClass('bggray');
+            return false;
+        });
 
         $('#afaqModal').on('click', function () {
             $('#faqModal').addClass('in').slideDown();
