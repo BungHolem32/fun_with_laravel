@@ -144,4 +144,7 @@ class PanelController extends Controller {
         return ['err' => 0];
     }
 
+    public function debug(){
+        dd(Customer::get());
+    }
 }
