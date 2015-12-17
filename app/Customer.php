@@ -51,7 +51,7 @@ class Customer
             $this->balance      = $data['data_accountBalance'];
             $this->currency     = $data['data_currency'];
             $this->currencySymbol = $currencySymbol[$data['data_currency']]; // this should be handled externally
-            $this->setSpotAuthToken();
+            //$this->setSpotAuthToken();
             $this->isLogged = true;
             return $this;
         }
@@ -69,6 +69,7 @@ class Customer
         if(isset($ans) && $ans['err'] === 0){
             $ans['status']['Customer']['email'] = $data['email'];
             self::get()->setup($ans);
+            self::get()->isLogged = true; // this belongs here, not in setup, so if we load() a customer we will have the data but without being logged in
             \Session::put('spotCustomer', self::get());
             \Session::save();
             return self::get();
@@ -91,6 +92,7 @@ class Customer
         if($data['err'] !== 0)
             throw new \Exception('Customer not found.');
         //prepare data - view returns subarrays of customer, e.g. DATA_0=>[], DATA_1=>[]. we only have one record and need to prefix each key with data_ to be consistent with the form that 'verify' method returns
+        $data['status']['Customer']['email'] = '';
         foreach($data['status']['Customer']['data_0'] as $k=>$v){
             $data['status']['Customer']['data_'.$k] = $v;
         }
@@ -107,26 +109,24 @@ class Customer
         \Session::flush();
     }
 
-    private function setSpotAuthToken(){
+    /*private function setSpotAuthToken(){
         $authKey = md5(uniqid($this->id));
         //$u['customerId'] = $customer['id'];
         //$data = self::clearFields($u);
         $ans = SpotApi::sendRequest('Customer', 'edit', ['authKey'=>$authKey, 'customerId'=>$this->id]);
         if($ans['status']['operation_status'] == 'successful'){
-            $this->auth = [
-                'authKey' => $ans['status']['Customer']['data_authKey'],
-                'authKeyExpiry' => $ans['status']['Customer']['data_authKeyExpiry']
-            ];
+            $this->authKey = $ans['status']['Customer']['data_authKey'];
+            $this->authKeyExpiry = $ans['status']['Customer']['data_authKeyExpiry'];
         }else{
             Log::error('Failed to set Spot auth token', $ans);
         }
-    }
+    }*/
 
     public function getBotSettings(){
         $row = \DB::select('select * from `bot` where customer_id=?', [$this->id]);
         if($row)
             return $row[0];
-        return null;
+        return [];
     }
 }
 

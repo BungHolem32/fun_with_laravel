@@ -8,6 +8,7 @@ use App\mongo;
 use App\Services\SpotApi;
 use App\Services\MailVerify;
 use Request;
+use Log;
 
 
 //use App\Lib\Mixpanel\Mixpanel;
@@ -16,7 +17,7 @@ use Request;
 class PanelController extends Controller {
 
     public function index($page){
-        return parent::index($page)->with('bot_settings', Bot::create(Customer::get())->getSettings());
+        return parent::index($page)->with('bot_settings', Bot::create(Customer::get(), false)->getSettings());
     }
 
     public function getPageLayouts(){
@@ -112,10 +113,12 @@ class PanelController extends Controller {
     public function runBot(){
         $results = [];
         $customers = \DB::select('select customer_id from `bot` where `status` = "On"');
+        Log::debug('bot - found customers', $customers);
         foreach($customers as $customer){
             try {
                 $customer = Customer::load($customer->customer_id);
             }catch(\Exception $e){
+                Log::error($e);
                 continue;
             }
             $results[] = Bot::create($customer, false)->placeOptions();

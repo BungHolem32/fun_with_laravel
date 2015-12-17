@@ -18,9 +18,6 @@ class Bot
     {
         $this->customer = $customer;
 
-        if(!$customer->isLogged())
-            return;
-
         foreach($customer->getBotSettings() as $k=>$v){
             $this->{$k} = $v;
         }
@@ -43,15 +40,21 @@ class Bot
     }
 
     public function setRange($min, $max){
-        return \DB::update("UPDATE bot SET `minAmount`=?, `maxAmount`=? where customer_id=?", [$min, $max, $this->customer->id]);
+        $res = \DB::update("UPDATE bot SET `minAmount`=?, `maxAmount`=? where customer_id=?", [$min, $max, $this->customer->id]);
+        $this->log('range', $min.' - '.$max.': '.($res ? 'success' : 'fail'));
+        return $res;
     }
 
     public function turnOn(){
-        if($this->customer->balance > $this->minAmount)
-            if(\DB::update("UPDATE bot SET status='On' WHERE customer_id=?",[$this->customer->id]) > 0)
-                return ['err'=>0];
-        return ['err'=>1, 'errs'=>['error'=>Languages::getTrans('Insufficient Funds, Please deposit funds to begin trading.')]];
-        //return $this;//->placeOptions();
+        if($this->customer->balance > $this->minAmount) {
+            if ($res = \DB::update("UPDATE bot SET status='On' WHERE customer_id=?", [$this->customer->id])) {
+                $this->log('on', $res);
+                return ['err' => 0];
+            }
+            return ['err'=>1,'errs'=>['error'=>'Operation failed']];
+        }else{
+            return ['err'=>1, 'errs'=>['error'=>Languages::getTrans('Insufficient Funds, Please deposit funds to begin trading.')]];
+        }
     }
 
     public function turnOff(){
@@ -61,6 +64,7 @@ class Bot
             if($r !== 1){
                 $err = 'update failed.';
             }
+            $this->log('off', $r);
         }else{
             $err = 'notOn';
         }
@@ -94,7 +98,6 @@ class Bot
                     break;
                 Log::info('skipping option which customer already holds', $option);
             }
-            Log::info('selected option', $option);
             $setupOptions[] = [
                 'MODULE'    => 'Positions',
                 'COMMAND'   => 'add',
@@ -105,7 +108,13 @@ class Bot
                 'optionId'  => $option['id']
             ];
         }
-        return SpotApi::sendBatch($setupOptions);
+        $ans = SpotApi::sendBatch($setupOptions);
+        foreach($ans as $k=>$v){
+            if(strpos($k, 'BATCH') === 0 && $v['operation_status'] == 'successful'){
+                $this->log($v['Positions']['data_position'], $v['Positions']);
+            }
+        }
+        return $ans;
     }
 
     private function getAmount($fromAmount, $toAmount){
@@ -174,4 +183,20 @@ class Bot
         }
         return $this;
     }
+
+    private function log($action, $result, $db = true, $file = false){
+        $data = [
+            'customer_id' => $this->customer->id,
+            'action' => $action,
+            'result' => print_r($result, true),
+            'user' => ($this->customer->isLogged() ? 'user' : 'bot')
+        ];
+        if($db){
+            \DB::insert('insert into `bot_log` (`customer_id`, `action`, `result`, `user`) VALUES (?, ?, ?, ?)', array_values($data));
+        }
+        if($file){
+            Log::info('BotLog - '.$action, $data);
+        }
+    }
+
 }
