@@ -14,7 +14,7 @@ class Customer
     public $email;
     public $balance;
     public $currency = 'USD';
-    public $country;
+    public $countryId;
     public $currencySymbol = '$';
     public $authKey;
     public $authKeyExpiry;
