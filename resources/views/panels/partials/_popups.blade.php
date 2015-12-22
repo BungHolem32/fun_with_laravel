@@ -389,7 +389,7 @@
                                             <label for="country_id" class="col-xs-4 control-label"><i class="fa fa-globe"></i> Country</label>
                                             <div class="col-xs-8">
                                                 <select name="country_id" id="country_id" class="form-control input-sm">
-                                                    @include('funnels.layouts._partials._countries',['countryId'=>App\Customer::get()->countryId])
+                                                    @include('funnels.layouts._partials._countries')
                                                 </select>
                                             </div>
                                         </div>
