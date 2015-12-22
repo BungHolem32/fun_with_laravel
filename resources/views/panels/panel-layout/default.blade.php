@@ -75,7 +75,7 @@
                         </a>
                     </li>
                     <li>
-                        <a id="StatisticsModal" href="javascript:;" data-toggle="modal" data-target="#StatisticsModal" data-backdrop="false">
+                        <a id="StatisticsModal" href="javascript:;" class="hidden">
                             <span class="badge pull-right"></span>
                             <i class="fa fa-signal"></i> @ln(View Statistics)
                         </a>

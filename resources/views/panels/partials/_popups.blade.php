@@ -1,8 +1,20 @@
+<div class="modal animated fadeInDown" id="thanku" tabindex="-1" role="dialog" aria-labelledby="depositModalLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header depositTitle">
+                <button onclick="" type="image" class="close">×</button>
+            </div>
+            @ln(Thank You). <i class="fa fa-check"></i>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
 <div class="modal animated fadeInDown" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="depositModalLabel" aria-hidden="true" data-backdrop="static" style="display:block">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header depositTitle">
-                <button onclick="" type="image" class="close" data-dismiss="modal" aria-hidden="true" data-toggle="modal" data-target="#formDepositModal">×</button>
+                <button onclick="" type="image" class="close">×</button>
                 Welcome to Aussie Method!
             </div>
             <div class="modal-body">
@@ -461,8 +473,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group depositBtnSect">
                                             <button type="submit" id="depositBtn" class="btn btn-primary deposit-fund-btn">Get Me Started </button>
+                                            <div class="loadingForm"><i class="getLoading on fa fa-refresh fa-spin"></i>Proccessing...</div>
                                         </div>
                                          <div class="ajax-loader bottomDeposit">
                              <div style="color: red;font-size: 12px;font-weight: bold;"><span>Deposit funds into your {{ $page->brand->name }} trading account.</span><span> (Finish button will automatically be available once you've funded your account)</span></div>

@@ -20,7 +20,7 @@ $(document).ready(function() {
     $('#deposit-form').validate({
         submitHandler: function (form) {
             var data = $('#deposit-form').serialize();
-            $.ajax({
+             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
@@ -28,11 +28,21 @@ $(document).ready(function() {
                 url: "/ajax/deposit",
                 dataType: 'json',
                 data: data,
+                beforeSend: function() {
+                    $('.depositBtnSect').find('button').hide().find('.loadingForm').show();
+                },
                 success: function (res) {
                     if (res.err === 0) {
+                        $('#thanku').fadeIn();
+                        setTimeout(function(){
+                            $('#thanku').fadeOut();
+                        },3000);
+
                         $(window).trigger('ajax-refresh');
                     }
                     else {
+                        $('.depositBtnSect').find('button').show().find('.loadingForm').hide();
+
                         alert(res.errs.error);
                         //console.log(res);
                     }

@@ -42,6 +42,7 @@ class Customer
             'EUR' => '&#8364;',
             'GBP' => '&#163;'
         ];
+        dd($data);
         $this->id           = $data['id'];
         $this->firstName    = $data['FirstName'];
         $this->lastName     = $data['LastName'];
@@ -49,7 +50,7 @@ class Customer
         $this->languageIso  = ['code' => \Request::local()->code];
         $this->balance      = $data['accountBalance'];
         $this->currency     = $data['currency'];
-        $this->country     = $data['country'];
+        $this->country     = $data['Country'];
         $this->currencySymbol = $currencySymbol[$data['currency']]; // this should be handled externally
         //$this->setSpotAuthToken();
         $this->isLogged = true;

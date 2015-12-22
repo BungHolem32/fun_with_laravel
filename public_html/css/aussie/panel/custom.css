@@ -229,3 +229,25 @@ td{
 .low-alert{
     display: none;
 }
+
+.loadingForm{
+    display: none;
+    color: #fff;
+}
+.loadingForm .getLoading.on {
+    display: inline-block;
+    margin: 8px;
+}
+.loadingForm i{
+    margin-right: 5px;
+}
+#thanku .modal-content{
+    text-align: center;
+    height: 600px;
+    line-height: 600px;
+    font-size: 40px;
+}
+#thanku i{
+    color: green;
+    font-size: 74px;
+}
