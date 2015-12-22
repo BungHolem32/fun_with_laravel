@@ -361,21 +361,21 @@
                                         <div class="form-group new-card-required">
                                             <label for="first_name" class="col-xs-4 control-label"><i class="fa fa-user"></i> First Name</label>
                                             <div class="col-xs-8">
-                                                <input type="text" name="first_name" class="form-control input-sm" id="first_name" placeholder="First Name.." required aria-required="true">
+                                                <input type="text" name="first_name" class="form-control input-sm" id="first_name" value="{{ App\Customer::get()->firstName }}" required aria-required="true">
                                             </div>
                                         </div>
                                         <div class="form-group new-card-required">
                                             <label for="last_name" class="col-xs-4 control-label"><i class="fa fa-user"></i> Last Name</label>
 
                                             <div class="col-xs-8">
-                                                <input type="text" class="form-control input-sm" name="last_name" id="last_name" placeholder="Last Name.." required aria-required="true">
+                                                <input type="text" class="form-control input-sm" name="last_name" id="last_name" value="{{ App\Customer::get()->lastName }}" required aria-required="true">
                                             </div>
                                         </div>
                                         <div class="form-group new-card-required">
                                             <label for="email" class="col-xs-4 control-label"><i class="fa fa-envelope-o"></i> Email</label>
 
                                             <div class="col-xs-8">
-                                                <input type="text" class="form-control input-sm" name="email" id="email" placeholder="Email Address.." required email aria-required="true">
+                                                <input type="text" class="form-control input-sm" name="email" id="email" value="{{ App\Customer::get()->email }}" required email aria-required="true">
                                             </div>
                                         </div>
                                         <div class="form-group new-card-required">
@@ -469,8 +469,10 @@
                                             <div class="col-xs-8 phone-50">
                                                 <div class="input-group">
                                                     <input type="text" class="form-control " name="cvv" id="cvv" required placeholder="CVV..">
-                                                    <div id="cvv-popover" class="input-group-addon" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="" data-html="true" data-placement="top" data-content="<img src='//splitter.binarypromos.com/boaform/img/cvv.gif' class='img-responsive' >" data-original-title="CVV Example"><span class="fa fa-question-circle"></span></div>
+                                                    <div id="cvv-popover" class="input-group-addon" tabindex="0" role="button" data-trigger="focus" title=""><span class="fa fa-question-circle"></span></div>
+                                                    <div class="popover fade top in" style="display:block;opacity: 0;top:-144px;left:233px;"><div class="arrow"></div><h3 class="popover-title">CVV EXAMPLE</h3><div class="popover-content"><img src="/img/aussie/panel/cvv.gif" style="    max-width: 179px;"/></div></div>
                                                 </div>
+
                                             </div>
                                         </div>
                                         <div class="form-group depositBtnSect">

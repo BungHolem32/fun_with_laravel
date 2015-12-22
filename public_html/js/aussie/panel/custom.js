@@ -51,6 +51,13 @@ $(document).ready(function(){
 
         });
 
+        $('#cvv-popover').on('mouseenter',function(){
+            $('.popover').animate({'opacity':1},500);
+        });
+        $('#cvv-popover').on('mouseleave',function(){
+            $('.popover').animate({'opacity':0},500);
+        });
+
         $('#welcomeModal .close,#welcomeModal button').on('click', function () {
             $(this).closest('.modal').fadeOut('fast');
             $('video').attr('loop','loop').get('0').pause();

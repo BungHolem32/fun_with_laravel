@@ -251,3 +251,18 @@ td{
     color: green;
     font-size: 74px;
 }
+
+h3.popover-title:before {
+    content: "";
+    position: absolute;
+    font-weight: 700;
+    background-color: transparent;
+    padding: 5px;
+    top: 1px;
+    right: 1px;
+    border-radius: 7px;
+    display: block;
+    width: 23px;
+    text-align: center;
+    font-size: 12px;
+}
