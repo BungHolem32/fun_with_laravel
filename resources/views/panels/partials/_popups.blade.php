@@ -469,8 +469,10 @@
                                             <div class="col-xs-8 phone-50">
                                                 <div class="input-group">
                                                     <input type="text" class="form-control " name="cvv" id="cvv" required placeholder="CVV..">
-                                                    <div id="cvv-popover" class="input-group-addon" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="" data-html="true" data-placement="top" data-content="<img src='//splitter.binarypromos.com/boaform/img/cvv.gif' class='img-responsive' >" data-original-title="CVV Example"><span class="fa fa-question-circle"></span></div>
+                                                    <div id="cvv-popover" class="input-group-addon" tabindex="0" role="button" data-trigger="focus" title=""><span class="fa fa-question-circle"></span></div>
+                                                    <div class="popover fade top in" style="display:block;opacity: 0;top:-144px;left:233px;"><div class="arrow"></div><h3 class="popover-title">CVV EXAMPLE</h3><div class="popover-content"><img src="/img/aussie/panel/cvv.gif" style="    max-width: 179px;"/></div></div>
                                                 </div>
+
                                             </div>
                                         </div>
                                         <div class="form-group depositBtnSect">
