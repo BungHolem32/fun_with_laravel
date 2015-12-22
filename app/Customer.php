@@ -14,6 +14,7 @@ class Customer
     public $email;
     public $balance;
     public $currency = 'USD';
+    public $country;
     public $currencySymbol = '$';
     public $authKey;
     public $authKeyExpiry;
@@ -48,6 +49,7 @@ class Customer
         $this->languageIso  = ['code' => \Request::local()->code];
         $this->balance      = $data['accountBalance'];
         $this->currency     = $data['currency'];
+        $this->country     = $data['country'];
         $this->currencySymbol = $currencySymbol[$data['currency']]; // this should be handled externally
         //$this->setSpotAuthToken();
         $this->isLogged = true;
