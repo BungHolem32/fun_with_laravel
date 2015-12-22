@@ -64,7 +64,10 @@ class Customer
     public static function login($data){
         $c = self::get();
         try{
-            $c->loadCustomerData(['email'=>$data['email'], 'password'=>$data['password']]);
+            $c->loadCustomerData([
+                'email'=>$data['email'],
+                'password'=>$data['password']
+            ]);
             $c->isLogged = true; // this belongs here, not in setup, so if we load() a customer we will have the data but without being logged in
             \Session::put('spotCustomer', $c);
             \Session::save();
@@ -85,10 +88,10 @@ class Customer
     public function loadCustomerData($filter=[]){
 
         if(empty($filter)){
-            $filer = ['FILTER'=>['id'=>$this->id]];
+            $filter = ['id'=>$this->id];
         }
 
-        $data = SpotApi::sendRequest('Customer', 'view', $filter);
+        $data = SpotApi::sendRequest('Customer', 'view', ['FILTER'=>$filter]);
         if($data['err'] !== 0){
             throw new \Exception($data['errs']['error']);
         }
