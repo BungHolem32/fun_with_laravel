@@ -2,6 +2,7 @@
 
 use App\Customer;
 use App\Http\Requests;
+use App\Languages;
 use App\mongo;
 use App\Services\SpotApi;
 use App\Services\MailVerify;
@@ -68,8 +69,11 @@ class FormController extends Controller {
                 $this->addMailToMixpanel(Request::get('email'),Request::get('pageId'));
                 $res['err'] = 0;
             }
-            else
-                $res['errs']['error'] = $res['msg'] = $ans['error'];
+            else{
+                $errMsg = isset($ans['error']) ? $ans['error'] : 'invalid email address';
+                $res['errs']['error'] = $res['msg'] = Languages::getTrans($errMsg);
+            }
+
 
         }
 
