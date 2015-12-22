@@ -23,6 +23,8 @@ class FormController extends Controller {
     public function location(){
         //$ip = '213.136.90.209';
         $ip = Request::ip();
+        //$ip=($_SERVER["HTTP_X_FORWARDED_FOR"] ? $_SERVER["HTTP_X_FORWARDED_FOR"] :
+        //$_SERVER["REMOTE_ADDR"]);
         $location = file_get_contents('http://api-v2.rboptions.com/locator/'.$ip);
         echo $location;
     }
@@ -79,7 +81,7 @@ class FormController extends Controller {
     }
 
     private function addMailToMixpanel($email,$pageId){
-        require base_path().'/app/Lib/Mixpanel/Mixpanel.php';
+        //require base_path().'/app/Lib/Mixpanel/Mixpanel.php';
         // get the Mixpanel class instance, replace with your project token
         $ip = Request::ip();
         $pageTitle = \App\Page::find($pageId)->title->get();

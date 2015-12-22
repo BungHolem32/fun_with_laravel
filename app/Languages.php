@@ -65,8 +65,11 @@ class Languages extends Model {
         foreach($langKeys as $key){
             $temp[] = '?';
         }
-        $sql = "SELECT lang_key,{$lang_col} AS translation FROM translations WHERE lang_key IN (". implode(",", $temp) .")";
+        $sql = "SELECT lang_key,{$lang_col} AS `translation`
+                FROM `translations`
+                WHERE lang_key IN (". implode(",", $temp) .")";
         $res = \DB::select($sql, $langKeys);
+
 
         $langKeyVal = array();
         foreach($res as $keyVal){
@@ -96,12 +99,14 @@ class Languages extends Model {
 
 
     protected static function insertTranslations(array $langKeys){
+
         if(!empty($langKeys)){
             foreach($langKeys as $key){
                 $values[] = $key;
                 $ques[] = '?';
             }
-            \DB::insert("INSERT INTO translations (lang_key) VALUES (".implode('),(', $ques).");", $values);
+            $sql = 'INSERT INTO translations (lang_key) VALUES ('.implode('),(', $ques).');';
+            \DB::insert($sql, $values);
         }
     }
 }
