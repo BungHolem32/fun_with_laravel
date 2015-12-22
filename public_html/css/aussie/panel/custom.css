@@ -271,3 +271,14 @@ h3.popover-title:before {
         left: 53% !important;
     }
 }
+@media(max-width: 992px){
+    #formDepositModal {
+        height: 1707px !important;
+    }
+    .boa-deposit-form-container .boaforms-deposit .height {
+        margin: 10px 0;
+    }
+    .boa-deposit-form-container .boaforms-deposit #right_form {
+        padding-left: 15px;
+    }
+}
