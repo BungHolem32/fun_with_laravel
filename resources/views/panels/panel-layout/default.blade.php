@@ -74,8 +74,8 @@
                             <i class="fa fa-comments-o "></i> @ln(FAQ)
                         </a>
                     </li>
-                    <li>
-                        <a id="StatisticsModal" href="javascript:;" class="hidden">
+                    <li class="hidden">
+                        <a id="StatisticsModal" href="javascript:;">
                             <span class="badge pull-right"></span>
                             <i class="fa fa-signal"></i> @ln(View Statistics)
                         </a>
