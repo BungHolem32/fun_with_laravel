@@ -81,12 +81,11 @@ class FormController extends Controller {
         if($res['err'] === 0)
             $res['destination'] = $this->getDestinationByPageId(Request::get('pageId'));
 
-
         echo json_encode($res);
     }
 
     private function addMailToMixpanel($email,$pageId){
-        //require base_path().'/app/Lib/Mixpanel/Mixpanel.php';
+        require base_path().'/app/Lib/Mixpanel/Mixpanel.php';
         // get the Mixpanel class instance, replace with your project token
         $ip = Request::ip();
         $pageTitle = \App\Page::find($pageId)->title->get();
