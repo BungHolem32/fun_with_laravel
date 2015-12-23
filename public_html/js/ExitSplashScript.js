@@ -15,4 +15,7 @@ var a = document.getElementsByTagName('A'); for (var i = 0; i < a.length; i++) {
 addLoadEvent(disablelinksfunc);
 disableformsfunc = function(){ var f = document.getElementsByTagName('FORM'); for (var i=0;i<f.length;i++){ if (!f[i].onclick){ f[i].onclick=function(){ PreventExitSplash=true; } }else if (!f[i].onsubmit){ f[i].onsubmit=function(){ PreventExitSplash=true; }}}}
 addLoadEvent(disableformsfunc);
-window.onbeforeunload = DisplayExitSplash;
+$(window).on('load',function(){
+    window.onbeforeunload = DisplayExitSplash;
+});
+
