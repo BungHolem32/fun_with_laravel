@@ -71,6 +71,7 @@ $(document).ready(function() {
     });
 });
 
+
 $(window).on('ajax-refresh', function () {
 
     callAjax("/ajax/refresh", null, function(res){

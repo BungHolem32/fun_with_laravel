@@ -30,7 +30,7 @@
                                 <div style="color: #54bcc8;font-size: 18px;font-weight: 600;-moz-border-radius: 2px;padding: .5em 1em;line-height: 1;text-align: left;">
                                     Step 1 - Fund Your {{ $page->brand->name }} Broker Account.
                                 </div>
-                                <a href="//binarybonus.net/https_login_proxy.php?url=http://www.bigoption.com/bigoptionsignin.php&amp;extRedir=http://www.bigoption.com/my-account/deposit/&amp;token=&amp;email=te2323st1@test.com&amp;password=sdfasdas" target="_blank">
+                                <a href="{{ $page->brand->link }}" target="_blank">
                                     <img src="<?php echo $page->brand->logo ?>" class="brokerlogo">
                                 </a>
                             </div>
@@ -62,29 +62,7 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-<div class="modal fade" id="spotfnModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content box">
-            <div class="modal-header bg-brand-title box-head depositTitle">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h2 class="modal-title" id="myModalLabel">Spot FN account authentication</h2>
-            </div>
-            <div class="modal-body">
-                <h4>In order to complete your registration with us, please provide the following</h4>
-                <p>A clear scanned or photograph copies of:</p>
-                <p>A) Government issued ID, Driver's License or Passport: Please make sure your name is clearly visible. Military cards with photographs will also be accepted.</p>
-                <p class="note">*Feel free to cover your license or ID number.</p>
-                <p>B) Credit Card(s) you used for this transaction: Be sure to cover the first 12 digits of the card. DO NOT send your full credit card number. Name and last 4 digits must be visible</p>
-                <p class="note">*Front and back copies. Please cover your CVV number.</p>
-                <p>Please send these required document to:  <a href="mailto:verification@spotfn.com">verification@spotfn.com</a></p>
-                <p>For further information please feel free to contact us via <a href="mailto:support@spotfn.com">support@spotfn.com</a></p>
-                <div class="spotfn-logo">
-                    <img src="https://bot2test.binarybonus.net/img/logos/spotfn.png" alt="spotFN">
-                </div>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+
 <!-- FAQ MODAL -->
 <div class="modal fade" id="faqModal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
@@ -304,7 +282,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="font-size:30px;">×</button>
                 <h4 class="modal-title " id="myModalLabel">Deposit Now Into Your {{ $page->brand->name }} Broker Account </h4>
                 <p style="font-size: 15px; padding-top: 8px; margin-bottom: 0;">
-                    <a class="cant-deposit" href="//binarybonus.net/https_login_proxy.php?url=http://www.bigoption.com/bigoptionsignin.php&amp;extRedir=http://www.bigoption.com/my-account/deposit/&amp;token=&amp;email=te2323st1@test.com&amp;password=sdfasdas" target="a_blank" style="font-weight: bold; color: black;">Can't See This Page Correct?  Click Here </a> </p>
+                    <a class="cant-deposit" href="{{$page->brand->link}}" style="font-weight: bold; color: black;">Can't See This Page Correct?  Click Here </a> </p>
             </div>
             <div class="modal-body" style="padding:0;">
                 <iframe height="700" width="100%" name="depositFrame" id="depositFrame" frameborder="0">
@@ -332,7 +310,7 @@
                             <div class="row mainheader">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-24 broker-logo-box">
                                     <span>Your Broker: </span>
-                                    <img src="<?php echo $page->brand->logo ?>" class="broker-logo img-responsive">
+                                    <img src="{{$page->brand->logo}}" class="broker-logo img-responsive">
                                 </div>
                             </div>
                             <div class="row underheader text-center">
@@ -505,7 +483,7 @@
                                     <i class="fa fa-briefcase"></i>
             <span class="button_box deposit-link-box">
                 Deposit Form Is Currently Not Working?
-                <a href="https://binarybonus.net/https_login_proxy.php?url=http://www.bigoption.com/bigoptionsignin.php&amp;email=te2323st1@test.com&amp;password=sdfasdas&amp;token=587937&amp;extRedir=http://www.bigoption.com/my-account/deposit/" class="broker-login js-broker-login animated bounce" target="_blank">Click Here</a>
+                <a href="{{ $page->brand->link }}" class="broker-login js-broker-login animated bounce" target="_blank">Click Here</a>
                 To Deposit In Your {{ $page->brand->name }} Broker Website.
             </span>
                                 </div>

@@ -160,6 +160,7 @@ z-index: 10;
 .position-row.call .position{
     position: relative;
 }
+
 .position-row.put .position:before,.position-row.call .position:before{
     content: "";
     text-transform: uppercase;

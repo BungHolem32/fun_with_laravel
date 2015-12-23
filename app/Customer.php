@@ -7,6 +7,7 @@ class Customer
 {
 
     private static $instance;
+    const cipherKey = 'rotem';
     public $isLogged = false;
     public $id;
     public $firstName;
@@ -20,6 +21,7 @@ class Customer
     public $authKey;
     public $authKeyExpiry;
     public $languageIso = 'EN';
+    public $loginStr;
 
     public static function get($arg=null){
 
@@ -53,6 +55,9 @@ class Customer
         $this->country      = $data['Country'];
         $this->phone        = $data['phone'];
         $this->currencySymbol = $currencySymbol[$data['currency']]; // this should be handled externally
+        //$this->loginStr = strtr(base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_256, md5(self::cipherKey), 'email=rotemg@rboptions.com.com&password=123456', MCRYPT_MODE_CBC, md5(md5(self::cipherKey)))),'+/','-_');
+        // dd($this->loginStr);
+
         //$this->setSpotAuthToken();
         $this->isLogged = true;
         return $this;
