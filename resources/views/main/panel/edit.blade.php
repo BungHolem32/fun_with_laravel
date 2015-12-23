@@ -17,7 +17,7 @@
         {!! Form::text('title_h1', $page['title_h1'], ['name'=>'mongo[title_h1]', 'class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        <h3><i class="fa fa-newspaper-o"></i> {!! Form::label('description', 'Description:') !!}</h3>
+        <h3><i class="fa fa-bolt"></i> {!! Form::label('description', 'Description:') !!}</h3>
         {!! Form::text('description', $page['description'], ['name'=>'mongo[description]', 'class'=>'form-control']) !!}
     </div>
 
@@ -28,7 +28,7 @@
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-video-camera"></i> Brand:</h3>
+            <h3 class="panel-title"><i class="fa fa-tag"></i> Brand:</h3>
         </div>
         <div class="panel-body">
             <div class="form-group">
@@ -48,7 +48,7 @@
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-video-camera"></i> Welcome Popup:</h3>
+            <h3 class="panel-title"><i class="fa fa-comment-o"></i> Welcome Popup:</h3>
         </div>
         <div class="panel-body">
             <div class="form-group">
@@ -63,7 +63,7 @@
     </div>
 
     <div class="form-group">
-        <h3><i class="fa fa-newspaper-o"></i> {!! Form::label('supportMail', 'Support E-Mail:') !!}</h3>
+        <h3><i class="fa fa-envelope-o"></i> {!! Form::label('supportMail', 'Support E-Mail:') !!}</h3>
         {!! Form::text('supportMail', $page['supportMail'], ['name'=>'mongo[supportMail]', 'class'=>'form-control']) !!}
     </div>
 
