@@ -10,7 +10,7 @@
 
 @section('page-layout')
     {!! $page->htmlHeader !!}
-    <div class="ppl">
+    <div class="ppl second">
         @include('funnels.layouts._partials._video')
     </div>
 

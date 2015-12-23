@@ -60,7 +60,7 @@
                     </li>
                     <li>
                         <a target="_blank" href="{{ $page->brand->link }}" id="manualTrading">
-                            <i class="fa fa-wrench"></i> @ln(Broker Trading Area)
+                            <i class="fa fa-wrench"></i>@ln(Broker Trading Area)
                         </a>
                     </li>
                     <li class="signal-modal-link hidden">
