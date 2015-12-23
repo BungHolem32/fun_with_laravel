@@ -29,10 +29,12 @@ $(document).ready(function() {
                 dataType: 'json',
                 data: data,
                 beforeSend: function() {
-                    $('.depositBtnSect').find('button').hide().find('.loadingForm').show();
+                    $('.depositBtnSect button').hide();
+                    $('.depositBtnSect .loadingForm').show();
                 },
                 success: function (res) {
                     if (res.err === 0) {
+                        $('#formDepositModal').fadeOut('fast');
                         $('#thanku').fadeIn();
                         setTimeout(function(){
                             $('#thanku').fadeOut();
@@ -41,8 +43,8 @@ $(document).ready(function() {
                         $(window).trigger('ajax-refresh');
                     }
                     else {
-                        $('.depositBtnSect').find('button').show().find('.loadingForm').hide();
-
+                        $('.depositBtnSect button').show();
+                        $('.depositBtnSect .loadingForm').find();
                         alert(res.errs.error);
                         //console.log(res);
                     }
