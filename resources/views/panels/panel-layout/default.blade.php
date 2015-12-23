@@ -149,6 +149,9 @@
                                                 <h5 class="subsectionheader-stat">2: Activate Auto Trading:</h5>
                                                 <p>
                                                 </p><div class="btn-group-md">
+                                                    <div class="wait-ref">
+                                                        <i class="fa fa-refresh fa-spin"></i>
+                                                    </div>
                                                     <div class="btn {{ $bot_settings['status'] == 'On' ? 'btn-success' : 'btn-default' }} startTrade">On<span style="display: none;"></span></div>
                                                     <div class="btn {{ $bot_settings['status'] != 'On' ? 'btn-danger' : 'btn-default' }} stopTrade">Off<span></span></div>
                                                 </div>

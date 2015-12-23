@@ -307,3 +307,14 @@ h3.popover-title:before {
         padding-left: 15px;
     }
 }
+
+
+.wait-ref{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    font-size: 30px;
+    display: none;
+}

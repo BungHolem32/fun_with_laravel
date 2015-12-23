@@ -10,16 +10,25 @@ $(document).ready(function() {
         $('.stopTrade').removeClass('btn-danger').addClass('btn-default');
         var btn = this;
         callAjax("/ajax/turnOn", null, function(res){
+            $('.wait-ref').hide();
             if (res.err === 0) {
                 $(window).trigger('ajax-refresh');
                 $(btn).addClass('btn-success').removeClass('btn-default');
             }
+        },function(){
+            $('.wait-ref').show();
         });
     });
     $('.stopTrade').on('click', function(){
         $('.startTrade').removeClass('btn-success').addClass('btn-default');
         var btn = this;
-        callAjax("/ajax/turnOff", null, function(){$(btn).addClass('btn-danger').removeClass('btn-default');});
+        callAjax("/ajax/turnOff", null, function() {
+                $('.wait-ref').hide();
+                $(btn).addClass('btn-danger').removeClass('btn-default');
+            }
+            ,function(){
+                $('.wait-ref').show();
+        });
     });
 
     $('#deposit-form').validate({
