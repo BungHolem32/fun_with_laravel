@@ -41,6 +41,7 @@ class FormController extends Controller {
             Customer::login(\Request::all());
             $res['destination'] = $this->getDestination();
         }
+
         echo json_encode($res);
     }
 

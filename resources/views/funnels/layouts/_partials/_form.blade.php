@@ -70,7 +70,7 @@ foreach($form->membersFields->getChildren() as $field){
                         </div>
                     @elseif($field[0] == 'submit')
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 field">
-                            <input type="{{ $field[0] }}" id="{{ $field[1] }}" class="form-control col-md-10" name="{{ $field[1] }}" placeholder="@ln({{ $field[2] }})" data-cip-id="{{ $field[1] }}">
+                            <input type="{{ $field[0] }}" id="{{ $field[1] }}" class="form-control col-md-10" name="{{ $field[1] }}" value="@ln({{ $field[2] }})" data-cip-id="{{ $field[1] }}">
                         </div>
                     @endif
                 @endforeach
@@ -158,6 +158,7 @@ foreach($form->membersFields->getChildren() as $field){
                         else{
                             alert(res.errs.error);
                             $('div.loading').remove();
+                            $('form input').removeAttr('style');
                         }
                     }
                 });
