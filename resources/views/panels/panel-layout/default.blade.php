@@ -259,7 +259,7 @@
                 <td class="endRate hide-open"></td>
                 <td class="payout hide-open"></td>
                 <td class="profit hide-open"></td>
-                <td class="date"></td>
+                <td class="endDate"></td>
                 <td class="status"></td>
             </tr>
         </script>

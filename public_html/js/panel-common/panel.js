@@ -1,9 +1,9 @@
 $(document).ready(function() {
     $(window).trigger('ajax-refresh');
 
-    /*setInterval(function(){
+    setInterval(function(){
         $(window).trigger('ajax-refresh')
-    }, 4000);*/
+    }, 10000);
 
 
     $('.startTrade').on('click', function(){

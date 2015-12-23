@@ -59,7 +59,7 @@ class Customer
         // dd($this->loginStr);
 
         //$this->setSpotAuthToken();
-        $this->isLogged = true;
+        //$this->isLogged = true;
         return $this;
 
     }
