@@ -44,7 +44,7 @@ $(document).ready(function() {
                     }
                     else {
                         $('.depositBtnSect button').show();
-                        $('.depositBtnSect .loadingForm').find();
+                        $('.depositBtnSect .loadingForm').hide();
                         alert(res.errs.error);
                         //console.log(res);
                     }

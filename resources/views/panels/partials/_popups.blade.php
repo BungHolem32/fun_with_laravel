@@ -477,7 +477,7 @@
                                         </div>
                                         <div class="form-group depositBtnSect">
                                             <button type="submit" id="depositBtn" class="btn btn-primary deposit-fund-btn">Get Me Started </button>
-                                            <div class="loadingForm"><i class="getLoading on fa fa-refresh fa-spin"></i>Proccessing...</div>
+                                            <div class="loadingForm"><i class="fa fa-refresh fa-spin"></i>Proccessing...</div>
                                         </div>
                                          <div class="ajax-loader bottomDeposit">
                              <div style="color: red;font-size: 12px;font-weight: bold;"><span>Deposit funds into your {{ $page->brand->name }} trading account.</span><span> (Finish button will automatically be available once you've funded your account)</span></div>
