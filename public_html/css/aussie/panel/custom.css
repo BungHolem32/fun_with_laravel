@@ -229,10 +229,35 @@ td{
 .low-alert{
     display: none;
 }
-
+.depositBtnSect{
+    position: relative;
+}
 .loadingForm{
+    position: absolute;
+    top: 0px;
     display: none;
+    background-color: #88C407!important;
+    width: 100%!important;
+    max-width: 100%!important;
+    border-bottom: 3px solid #666;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    padding-top: 19px;
+    width: 100%;
+    min-height: 64px;
+    font-weight: 700;
+    font-size: 25px;
+    outline: 0;
+    text-shadow: none;
+    text-decoration: none;
+    background-color: #333;
     color: #fff;
+    margin-top: 13px;
 }
 .loadingForm .getLoading.on {
     display: inline-block;

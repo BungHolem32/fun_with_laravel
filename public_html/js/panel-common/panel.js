@@ -29,7 +29,6 @@ $(document).ready(function() {
                 dataType: 'json',
                 data: data,
                 beforeSend: function() {
-                    $('.depositBtnSect button').hide();
                     $('.depositBtnSect .loadingForm').show();
                 },
                 success: function (res) {
@@ -43,7 +42,6 @@ $(document).ready(function() {
                         $(window).trigger('ajax-refresh');
                     }
                     else {
-                        $('.depositBtnSect button').show();
                         $('.depositBtnSect .loadingForm').hide();
                         alert(res.errs.error);
                         //console.log(res);

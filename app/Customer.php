@@ -15,6 +15,7 @@ class Customer
     public $balance;
     public $currency = 'USD';
     public $country;
+    public $phone;
     public $currencySymbol = '$';
     public $authKey;
     public $authKeyExpiry;
@@ -50,6 +51,7 @@ class Customer
         $this->balance      = $data['accountBalance'];
         $this->currency     = $data['currency'];
         $this->country      = $data['Country'];
+        $this->phone        = $data['phone'];
         $this->currencySymbol = $currencySymbol[$data['currency']]; // this should be handled externally
         //$this->setSpotAuthToken();
         $this->isLogged = true;

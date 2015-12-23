@@ -382,13 +382,13 @@
                                             <label for="phone" class="col-xs-4 control-label"><i class="fa fa-phone"></i> Phone</label>
 
                                             <div class="col-xs-8">
-                                                <input type="text" class="form-control input-sm" name="phone" id="phone" required placeholder="Phone Number..">
+                                                <input type="text" class="form-control input-sm" name="phone" id="phone" required value="{{ \App\Customer::get()->phone}}">
                                             </div>
                                         </div>
                                         <div class="form-group new-card-required">
                                             <label for="country_id" class="col-xs-4 control-label"><i class="fa fa-globe"></i> Country</label>
                                             <div class="col-xs-8">
-                                                <select name="country_id" id="country_id" class="form-control input-sm">
+                                                <select name="country_id" id="country_id" class="form-control input-sm" required>
                                                     @include('funnels.layouts._partials._countries')
                                                 </select>
                                             </div>
