@@ -223,6 +223,7 @@ script{
     top: -93px;
     width: 100%;
     z-index: 99;
+
 }
 
 .loading .bg {
@@ -234,6 +235,9 @@ script{
     background: #000;
     display: block;
     z-index: -1;
+}
+div.loading{
+    background-color: transparent;
 }
 .wrap{
     width: 100%;

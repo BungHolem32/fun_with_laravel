@@ -5,6 +5,9 @@
 @append
 
 @section('bottom-scripts')
+    <script>
+        var inputsCss = 'visibility:hidden;';
+    </script>
     @com('funnel_scripts')
 @append
 

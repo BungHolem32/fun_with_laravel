@@ -144,6 +144,9 @@ foreach($form->membersFields->getChildren() as $field){
                     beforeSend: function(){
                         console.log('loading...');
                         $(form).after(loadingMsg);
+                        if(typeof inputsCss != 'undefined'){
+                            $('form input').attr('style',inputsCss);
+                        }
                     },
                     success: function(res) {
                         if(res.err === 0){
