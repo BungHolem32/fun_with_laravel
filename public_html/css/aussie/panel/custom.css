@@ -50,7 +50,7 @@ html, body {
 }
 
 .getLoading{
-    display: none;
+    visibility: hidden;
 }
 .getLoading .inside{
     display: inline-block;
@@ -58,7 +58,7 @@ html, body {
     text-align: center;
 }
 .getLoading.on{
-    display: block;
+    visibility: visible;
 }
 #account-details .getLoading{
     margin-right: 5px;

@@ -1,6 +1,11 @@
 $(document).ready(function() {
     $(window).trigger('ajax-refresh');
 
+    /*setInterval(function(){
+        $(window).trigger('ajax-refresh')
+    }, 4000);*/
+
+
     $('.startTrade').on('click', function(){
         $('.stopTrade').removeClass('btn-danger').addClass('btn-default');
         var btn = this;
@@ -76,7 +81,7 @@ $(window).on('ajax-refresh', function () {
 
     callAjax("/ajax/refresh", null, function(res){
         if (res.err === 0) {
-            $('.getLoading').hide();
+            $('.getLoading').removeClass('on');
             $('.balance').html(res.customer.currencySign + ' ' + res.customer.accountBalance);
 
             if(res.customer.accountBalance<25)
@@ -106,7 +111,7 @@ $(window).on('ajax-refresh', function () {
         }
     },function(){
         // before send
-        $('.getLoading').css('display', 'inline-block');
+        $('.getLoading').css('display', 'inline-block').addClass('on');
     });
 
 });
