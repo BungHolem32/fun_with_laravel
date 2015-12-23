@@ -2,9 +2,21 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header depositTitle">
-                <button onclick="" type="image" class="close">×</button>
+                <button onclick="" type="image" class="xclose close">×</button>
             </div>
-            @ln(Thank You). <i class="fa fa-check"></i>
+            <div class="center">
+                <br>
+                <br>
+                <i class="fa fa-check-circle fa-2x"></i>
+                <br>
+                <br>
+                @ln(Thank you for investing at) {{$page->brand->name}}.
+                <br><br>
+                <img src="{{$page->brand->logo}}" alt="{{$page->brand->name}}">
+                <br><br>
+                {{--<button  class="close">@ln(Close)</button>--}}
+            </div>
+
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
@@ -283,10 +295,6 @@
                 <h4 class="modal-title " id="myModalLabel">Deposit Now Into Your {{ $page->brand->name }} Broker Account </h4>
                 <p style="font-size: 15px; padding-top: 8px; margin-bottom: 0;">
                     <a class="cant-deposit" href="{{$page->brand->link}}" style="font-weight: bold; color: black;">Can't See This Page Correct?  Click Here </a> </p>
-            </div>
-            <div class="modal-body" style="padding:0;">
-                <iframe height="700" width="100%" name="depositFrame" id="depositFrame" frameborder="0">
-                </iframe>
             </div>
             <div class="modal-footer">
                                                 <span class="pull-left ajax-loader">

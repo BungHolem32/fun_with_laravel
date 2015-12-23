@@ -166,7 +166,13 @@
                                                 <h5 class="subsectionheader-stat">3: Select Amount of Trade:</h5>
 
                                                 <div class="btn-group-md" style="cursor: pointer;">
-                                                    <div class="btn {{ ($bot_settings['minAmount'] == 25 && $bot_settings['maxAmount'] == 50) ? 'btn-success' : 'btn-default'}}" data-amount="25-50" style="cursor: pointer;"><span>$</span> 25 - 50</div>
+                                                    <?php
+                                                        if(!isset($bot_settings['minAmount']) || $bot_settings['minAmount'] == 25 && $bot_settings['maxAmount'] == 50)
+                                                            $btnClass = 'btn-success';
+                                                        else
+                                                            $btnClass = 'btn-default';
+                                                    ?>
+                                                    <div class="btn {{$btnClass}}" data-amount="25-50" style="cursor: pointer;"><span>$</span> 25 - 50</div>
                                                     <div class="btn {{ ($bot_settings['minAmount'] == 50 && $bot_settings['maxAmount'] == 100) ? 'btn-success' : 'btn-default'}}" data-amount="50-100" style="cursor: pointer;"><span>$</span> 50 - 100</div>
                                                     <div class="btn {{ ($bot_settings['minAmount'] == 100 && $bot_settings['maxAmount'] == 150) ? 'btn-success' : 'btn-default'}}" data-amount="100-150" style="cursor: pointer;"><span>$</span> 100 - 150</div>
                                                     <div class="btn {{ ($bot_settings['minAmount'] == 150) ? 'btn-success' : 'btn-default'}}" data-amount="150-1000" style="cursor: pointer;"><span>$</span> 150 +</div>
