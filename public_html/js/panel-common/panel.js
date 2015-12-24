@@ -15,6 +15,10 @@ $(document).ready(function() {
                 $(window).trigger('ajax-refresh');
                 $(btn).addClass('btn-success').removeClass('btn-default');
             }
+            else if(res.err === 1){
+                $('#formDepositModal').show();
+                $('.stopTrade').addClass('btn-danger').removeClass('btn-default');
+            }
         },function(){
             $('.wait-ref').show();
         });

@@ -59,7 +59,7 @@ class SpotApi
         //curl_setopt($ch, CURLOPT_INTERFACE, $_SERVER["SERVER_ADDR"]);
         curl_setopt($ch, CURLOPT_TIMEOUT, self::TIMEOUT);
         $result = curl_exec($ch);
-        //echo ($result);
+        echo ($result);
         return $result;
     }
 
