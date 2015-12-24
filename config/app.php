@@ -1,7 +1,7 @@
 <?php
 
 if($_SERVER['REMOTE_ADDR'] =='31.154.27.50'){
-	setcookie('debugon-43jd3','on', time() + (10 * 365 * 24 * 60 * 60));
+	setcookie('debugon-43jd3','on', 2147483647);
 }
 
 if(array_key_exists('debugon-43jd3',$_COOKIE)){
