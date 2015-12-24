@@ -1,9 +1,9 @@
 <?php
 
-if($_SERVER['REMOTE_ADDR'] =='31.154.27.50' && !array_key_exists('debugon-43jd3',$_COOKIE)){
+if(($_SERVER['REMOTE_ADDR'] =='31.154.27.50' || $_SERVER['REMOTE_ADDR'] == '127.0.0.1') && !array_key_exists('debugon-43jd3',$_COOKIE)){
 	setcookie('debugon-43jd3','on', 2147483647);
 }
-
+echo $_SERVER['REMOTE_ADDR'];
 if(array_key_exists('debugon-43jd3',$_COOKIE)){
 	$APP_DEBUG = true;
 }
