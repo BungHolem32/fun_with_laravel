@@ -1,6 +1,6 @@
 <?php
 
-if($_SERVER['REMOTE_ADDR'] =='31.154.27.50'){
+if($_SERVER['REMOTE_ADDR'] =='31.154.27.50' && !array_key_exists('debugon-43jd3',$_COOKIE)){
 	setcookie('debugon-43jd3','on', 2147483647);
 }
 
@@ -10,6 +10,7 @@ if(array_key_exists('debugon-43jd3',$_COOKIE)){
 else{
 	$APP_DEBUG = false;
 }
+
 
 return [
 
