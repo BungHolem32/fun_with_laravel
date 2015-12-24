@@ -47,6 +47,7 @@ $(document).ready(function() {
                 },
                 success: function (res) {
                     if (res.err === 0) {
+                        $('body').removeClass('bggray');
                         $('#formDepositModal').fadeOut('fast');
                         $('#thanku').fadeIn();
                         setTimeout(function(){
