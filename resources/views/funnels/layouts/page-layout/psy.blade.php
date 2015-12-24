@@ -8,7 +8,6 @@
 @append
 
 @section('page-layout')
-
     {!! $page->htmlHeader !!}
 
     <div class="wrap">

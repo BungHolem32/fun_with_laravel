@@ -10,7 +10,9 @@
 
 
     if(!isset($page->video) && isset($video_url)) $videoUrl = $video_url;
-    else $videoUrl = $page->video;
+    else $videoUrl = $page->video->get();
+
+    //dd($videoUrl);
 
 if(!isset($_GET['dev_video'])):
 ?>
