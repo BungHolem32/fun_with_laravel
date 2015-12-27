@@ -2,6 +2,7 @@
 
 
 use App\Languages;
+use Log;
 
 class SpotApi
 {
@@ -12,8 +13,8 @@ class SpotApi
     */
     const ourApiUsername = 'Sitev2';
     const ourApiPassword = '559152ad63f5c';
-    const API_URL = "http://api-spotplatform.rboptions.com/api";
-    //const API_URL = "http://www.walla.co.il";
+    //const API_URL = "http://api-spotplatform.rboptions.com/api";
+    const API_URL = "http://api-v2.rboptions.com/api";
 
     const TIMEOUT = 60;
 
@@ -58,8 +59,10 @@ class SpotApi
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         //curl_setopt($ch, CURLOPT_INTERFACE, $_SERVER["SERVER_ADDR"]);
         curl_setopt($ch, CURLOPT_TIMEOUT, self::TIMEOUT);
+	    /*curl_setopt($ch, CURLOPT_VERBOSE, true);
+	    $v = fopen(base_path().'/logs/spot.log', 'a');
+	    curl_setopt($ch, CURLOPT_STDERR, $v);*/
         $result = curl_exec($ch);
-        //echo ($result);
         return $result;
     }
 
@@ -95,7 +98,8 @@ class SpotApi
             $answer['errs'] = $errs;
             return $answer;
         }
-        $answer['msg'] = 'Error Connection was not established.';
+	    //Log::debug('Spot Error', $answer);
+        $answer['errs']['error'] = $answer['msg'] = 'Error Connection was not established.';
         return $answer;
     }
 
