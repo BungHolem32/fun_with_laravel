@@ -12,8 +12,8 @@ class SpotApi
     */
     const ourApiUsername = 'Sitev2';
     const ourApiPassword = '559152ad63f5c';
-    //const API_URL = "http://api-spotplatform.rboptions.com/api";
-    const API_URL = "http:/api-v2.rboptions.com/api";
+    const API_URL = "http://api-spotplatform.rboptions.com/api";
+    //const API_URL = "http://www.walla.co.il";
 
     const TIMEOUT = 60;
 
@@ -59,7 +59,7 @@ class SpotApi
         //curl_setopt($ch, CURLOPT_INTERFACE, $_SERVER["SERVER_ADDR"]);
         curl_setopt($ch, CURLOPT_TIMEOUT, self::TIMEOUT);
         $result = curl_exec($ch);
-        echo ($result);
+        //echo ($result);
         return $result;
     }
 
@@ -95,7 +95,7 @@ class SpotApi
             $answer['errs'] = $errs;
             return $answer;
         }
-        $answer['errs']['error'] = $answer['msg'] = 'Error Connection was not established.';
+        $answer['msg'] = 'Error Connection was not established.';
         return $answer;
     }
 
