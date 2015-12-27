@@ -59,9 +59,9 @@ foreach($form->membersFields->getChildren() as $field){
                             <input value="{{Request::get($field[1])}}" {{!empty($_REQUEST[$field[1]]) ? 'disabled="disabled"' : ''}}  type="{{ $field[0] }}" id="{{ $field[1] }}" class="form-control" name="{{ $field[1] }}" required="required" minlength="2" placeholder="@ln({{ $field[2] }})" data-cip-id="{{ $field[1] }}">
                         </div>
                     @elseif($field[0] == 'phone')
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 field phoneFields">
-                            <input type="phone" id="prefix" class="col-md-3" name="prefix" required="required" data-cip-id="prefix" />
-                            <input type="{{ $field[0] }}" id="{{ $field[1] }}" class="col-md-9" name="{{ $field[1] }}" required="required" placeholder="@ln({{ $field[2] }})" data-cip-id="{{ $field[1] }}">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 field phoneFields">
+                            <input type="phone" id="prefix" class="col-md-3 col-sm-3 col-xs-2" name="prefix" required="required" data-cip-id="prefix" />
+                            <input type="{{ $field[0] }}" id="{{ $field[1] }}" class="col-md-9 col-sm-9 col-xs-10" name="{{ $field[1] }}" required="required" placeholder="@ln({{ $field[2] }})" data-cip-id="{{ $field[1] }}">
                         </div>
                     @elseif($field[0] == 'country')
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 field">
@@ -70,7 +70,7 @@ foreach($form->membersFields->getChildren() as $field){
                             </select>
                         </div>
                     @elseif($field[0] == 'submit')
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 field">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 field">
                             <input type="{{ $field[0] }}" id="{{ $field[1] }}" class="form-control col-md-10" name="{{ $field[1] }}" value="@ln({{ $field[2] }})" data-cip-id="{{ $field[1] }}">
                         </div>
                     @endif
