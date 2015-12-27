@@ -1,5 +1,10 @@
 var guider = 0, debug = 0;
 
+$('.close').on('click', function () {
+    $('body').removeClass('bggray');
+    $(this).closest('.modal').removeClass('fade').removeClass('in').fadeOut('fast');
+});
+
 $(document).ready(function(){
     var balance = $('.balance').text().replace('$','').replace(' ','');
     console.log(balance);
@@ -39,11 +44,6 @@ $(document).ready(function(){
 
     if(debug == 0) {
         // popups
-
-        $('.close').on('click', function () {
-            $('body').removeClass('bggray');
-            $(this).closest('.modal').removeClass('fade').removeClass('in').fadeOut('fast');
-        });
 
         $('#awelcomeModal').on('click',function(){
             $('#welcomeModal').slideDown();

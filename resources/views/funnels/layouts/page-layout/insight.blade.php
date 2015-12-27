@@ -191,10 +191,7 @@
                     @foreach($page->banners->pics->getChildren() as $banner)
                         <a target="_blank" class="ubm_banner" href="{{$banner->link}}" onclick="" style="width: 300px !important; height: 180px !important; line-height: 180px; background: transparent url(/images/uploads/{{$banner->pic}}) 0 0 no-repeat;  border: 1px solid transparent !important;" title="">&nbsp;</a><div class="relavent"><a href="{{$banner->link}}" onclick="">{{$banner->title}}</a></div>
                     @endforeach
-                    {{--<a target="_blank" class="ubm_banner" href="http://it.sharkclick.com/click_pDNWwilkEcKbCQxH?" onclick="ga('send', {'hitType': 'event','eventCategory': 'shark','eventAction': 'click','eventLabel': 'pDNWwilkEcKbCQxH'});" style="width: 300px !important; height: 180px !important; line-height: 180px; background: transparent url(/img/insight/banner_5qUt4zJ6gRkM9dhq.jpg) 0 0 no-repeat;  border: 1px solid transparent !important;" title="Rich People Don’t Want You To Find Out About This System">&nbsp;</a><div class="relavent"><a href="http://it.sharkclick.com/click_pDNWwilkEcKbCQxH?" onclick="ga('send', {'hitType': 'event','eventCategory': 'shark','eventAction': 'click','eventLabel': 'pDNWwilkEcKbCQxH'});">Rich People Don’t Want You To Find Out About This System</a></div>
-                    <a target="_blank" class="ubm_banner" href="http://it.sharkclick.com/click_MuqnUQ8HVZZfMknj?" onclick="ga('send', {'hitType': 'event','eventCategory': 'shark','eventAction': 'click','eventLabel': 'MuqnUQ8HVZZfMknj'});" style="width: 300px !important; height: 180px !important; line-height: 180px; background: transparent url(/img/insight/banner_w7U87IlbtXDf1Ldl.jpg) 0 0 no-repeat;  border: 1px solid transparent !important;" title="5 Investments Millionaires Will NEVER Share and For a Good Reason!">&nbsp;</a><div class="relavent"><a href="http://it.sharkclick.com/click_MuqnUQ8HVZZfMknj?" onclick="ga('send', {'hitType': 'event','eventCategory': 'shark','eventAction': 'click','eventLabel': 'MuqnUQ8HVZZfMknj'});">5 Investments Millionaires Will NEVER Share and For a Good Reason!</a></div>
-                    <a target="_blank" class="ubm_banner" href="http://it.sharkclick.com/click_wT3Uhxr6ZOxXXaav?" onclick="ga('send', {'hitType': 'event','eventCategory': 'shark','eventAction': 'click','eventLabel': 'wT3Uhxr6ZOxXXaav'});" style="width: 300px !important; height: 180px !important; line-height: 180px; background: transparent url(/img/insight/banner_y8BuzGr74hP91Y1y.jpg) 0 0 no-repeat;  border: 1px solid transparent !important;" title="You Will Not Believe This Wall Street Trick Bankers Are Holding Back On!">&nbsp;</a><div class="relavent"><a href="http://it.sharkclick.com/click_wT3Uhxr6ZOxXXaav?" onclick="ga('send', {'hitType': 'event','eventCategory': 'shark','eventAction': 'click','eventLabel': 'wT3Uhxr6ZOxXXaav'});">You Will Not Believe This Wall Street Trick Bankers Are Holding Back On!</a></div> </div>
-                --}}<div id="text-html-widget-5" class="text-html-box">
+                <div id="text-html-widget-5" class="text-html-box">
                     <iframe frameborder="0" scrolling="no" height="192" width="318" allowtransparency="true" marginwidth="0" marginheight="0" src="http://comrates.investing.com/index.php?force_lang=1&amp;pairs_ids=8830;8831;8836;8849;8910;8917;8988;&amp;header-text-color=%23FFFFFF&amp;curr-name-color=%230059b0&amp;inner-text-color=%23000000&amp;green-text-color=%232A8215&amp;green-background=%23B7F4C2&amp;red-text-color=%23DC0001&amp;red-background=%23FFE2E2&amp;inner-border-color=%23CBCBCB&amp;border-color=%23cbcbcb&amp;bg1=%23F6F6F6&amp;bg2=%23ffffff&amp;last=hide&amp;open=hide&amp;month=hide&amp;change=hide&amp;last_update=hide"></iframe><br><span style="font-size: 11px;color: #333333;text-decoration: none;">Commodities are powered by <a href="http://www.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com</a></span> </div>
                 <div id="text-html-widget-17" class="text-html-box">
                     <div class="asidetext" style="left:240px;"> Advertisement</div> </div>
@@ -216,26 +213,7 @@
                                     </div>
                                 </div>
                             @endforeach
-                            {{--<div class="wide-news-item">
-                                <div class="post-thumbnail">
-                                    <a target="_blank" class="ubm_banner" href="http://it.sharkclick.com/click_skDvskx1uisii6NQ?" onclick="ga('send', {'hitType': 'event','eventCategory': 'shark','eventAction': 'click','eventLabel': 'skDvskx1uisii6NQ'});" style="width: 282px !important; height: 211px !important; line-height: 211px; background: transparent url(/img/insight/banner_SGVCs1hfDF1gqSmD.jpg) 0 0 no-repeat;  border: 1px solid transparent !important;" title="The One Big Secret Millionaire Traders will NEVER Share">&nbsp;</a><div class="relavent"><a href="http://it.sharkclick.com/click_skDvskx1uisii6NQ?" onclick="ga('send', {'hitType': 'event','eventCategory': 'shark','eventAction': 'click','eventLabel': 'skDvskx1uisii6NQ'});">The One Big Secret Millionaire Traders will NEVER Share</a></div>
-                                </div>
-                            </div>
-                            <div class="wide-news-item  last-col2">
-                                <div class="post-thumbnail">
-                                    <a target="_blank" class="ubm_banner" href="http://it.sharkclick.com/click_Emfd7bJ8eVo5nYWb?" onclick="ga('send', {'hitType': 'event','eventCategory': 'shark','eventAction': 'click','eventLabel': 'Emfd7bJ8eVo5nYWb'});" style="width: 282px !important; height: 211px !important; line-height: 211px; background: transparent url(/img/insight/banner_aSMwc535ggheLhQg.png) 0 0 no-repeat;  border: 1px solid transparent !important;" title="You Will Not Believe This Wall Street Trick Bankers Are Holding Back On!">&nbsp;</a><div class="relavent"><a href="http://it.sharkclick.com/click_Emfd7bJ8eVo5nYWb?" onclick="ga('send', {'hitType': 'event','eventCategory': 'shark','eventAction': 'click','eventLabel': 'Emfd7bJ8eVo5nYWb'});">You Will Not Believe This Wall Street Trick Bankers Are Holding Back On!</a></div>
-                                </div>
-                            </div>
-                            <div class="wide-news-item  last-col3">
-                                <div class="post-thumbnail">
-                                    <a target="_blank" class="ubm_banner" href="http://it.sharkclick.com/click_Ms9QKbeiU5hVJnVL?" onclick="ga('send', {'hitType': 'event','eventCategory': 'shark','eventAction': 'click','eventLabel': 'Ms9QKbeiU5hVJnVL'});" style="width: 282px !important; height: 211px !important; line-height: 211px; background: transparent url(/img/insight/banner_D6W1Z3Te8c99CcZa.jpg) 0 0 no-repeat;  border: 1px solid transparent !important;" title="5 Investments Millionaires Will NEVER Share and For a Good Reason!">&nbsp;</a><div class="relavent"><a href="http://it.sharkclick.com/click_Ms9QKbeiU5hVJnVL?" onclick="ga('send', {'hitType': 'event','eventCategory': 'shark','eventAction': 'click','eventLabel': 'Ms9QKbeiU5hVJnVL'});">5 Investments Millionaires Will NEVER Share and For a Good Reason!</a></div>
-                                </div>
-                            </div>
-                            <div class="wide-news-item  last-col">
-                                <div class="post-thumbnail">
-                                    <a target="_blank" class="ubm_banner" href="http://it.sharkclick.com/click_ExDUA7fXRJM8kTD7?" onclick="ga('send', {'hitType': 'event','eventCategory': 'shark','eventAction': 'click','eventLabel': 'ExDUA7fXRJM8kTD7'});" style="width: 282px !important; height: 211px !important; line-height: 211px; background: transparent url(/img/insight/banner_Di4zvprVTXlF3EKi.jpg) 0 0 no-repeat;  border: 1px solid transparent !important;" title="Rich People Don’t Want You To Find Out About This System">&nbsp;</a><div class="relavent"><a href="http://it.sharkclick.com/click_ExDUA7fXRJM8kTD7?" onclick="ga('send', {'hitType': 'event','eventCategory': 'shark','eventAction': 'click','eventLabel': 'ExDUA7fXRJM8kTD7'});">Rich People Don’t Want You To Find Out About This System</a></div>
-                                </div>
-                            </div>--}}<div class="clear"></div>
+                            <div class="clear"></div>
                         </div>
                     </section> </div>
             </div>
@@ -259,6 +237,7 @@
 <div id="topcontrol" class="tieicon-up-open" title="Scroll To Top"></div>
     </div>
 @endsection
+
 
 @section('bottom-scripts')
     @com('funnel_scripts')
