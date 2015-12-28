@@ -70,7 +70,7 @@
                                     </div>
                                 @endif
 
-                                <br>
+                                <br />
                                 <input name="email" value="{{\Request::get('email')}}" class="form-control" type="text" placeholder="Username" required/>
                                 <input name="password" value="{{\Request::get('password')}}" class="form-control" type="password" placeholder="Password" required/>
                                 <div class="form-options">
