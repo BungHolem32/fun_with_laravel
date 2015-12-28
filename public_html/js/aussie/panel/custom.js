@@ -21,6 +21,34 @@ $('#welcomeModal .close,#welcomeModal button').on('click', function () {
 
 });
 
+// popups
+$('#awelcomeModal').on('click',function(){
+    $('#welcomeModal').slideDown();
+    $('video').get('0').play();
+
+});
+
+$('#cvv-popover').on('mouseenter',function(){
+    $('.popover').animate({'opacity':1},500);
+});
+$('#cvv-popover').on('mouseleave',function(){
+    $('.popover').animate({'opacity':0},500);
+});
+
+
+$('.deposit-btn').on('click', function () {
+    $('#formDepositModal').fadeIn();
+    $('body').addClass('bggray');
+    return false;
+});
+
+$('#afaqModal').on('click', function () {
+    $('#faqModal').addClass('in').slideDown();
+});
+$('a[data-toggle=collapse]').on('click',function(){
+    $(this).closest('.panel.panel-default').find('.panel-collapse.collapse').toggle();
+});
+
 /****** guide popups *******/
 var contentWrapper = $('#wrapper').offset().top;
 var top =   Math.max(0, (($(window).height() - $('.guider#_1').outerHeight()) / 2) + $(window).scrollTop() - contentWrapper);
@@ -101,33 +129,4 @@ $('.guiders_buttons_container a').on('click',function(){
 
 $(document).ready(function(){
     var balance = $('.balance').text().replace('$','').replace(' ','');
-
-        // popups
-        $('#awelcomeModal').on('click',function(){
-            $('#welcomeModal').slideDown();
-            $('video').get('0').play();
-
-        });
-
-        $('#cvv-popover').on('mouseenter',function(){
-            $('.popover').animate({'opacity':1},500);
-        });
-        $('#cvv-popover').on('mouseleave',function(){
-            $('.popover').animate({'opacity':0},500);
-        });
-
-
-        $('.deposit-btn').on('click', function () {
-            $('#formDepositModal').fadeIn();
-            $('body').addClass('bggray');
-            return false;
-        });
-
-        $('#afaqModal').on('click', function () {
-            $('#faqModal').addClass('in').slideDown();
-        });
-        $('a[data-toggle=collapse]').on('click',function(){
-            $(this).closest('.panel.panel-default').find('.panel-collapse.collapse').toggle();
-        });
-
 });
