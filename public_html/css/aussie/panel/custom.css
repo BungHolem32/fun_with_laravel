@@ -174,10 +174,10 @@ z-index: 10;
     margin-right: 5px;
 }
 
-.position-row.put .position:before{
+.position-row.call .position:before{
     content: "";
 }
-.position-row.call .position:before {
+.position-row.put .position:before {
     content: "";
 }
 

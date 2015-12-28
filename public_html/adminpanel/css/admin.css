@@ -5165,7 +5165,7 @@ a.list-group-item-danger.active:focus {
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  /*font-size: 16px;*/
+  font-size: 16px;
   color: inherit;
 }
 .panel-title > a {
@@ -9485,13 +9485,7 @@ body {
   -webkit-animation-name: wobble;
   animation-name: wobble;
 }
-
-/*# sourceMappingURL=admin.css.map */
-
-
-
-/* add to less */
-@media(max-width: 768px){
+@media (max-width: 768px) {
   .nav-circle-btns {
     height: 156px;
   }
@@ -9502,20 +9496,14 @@ body {
     padding-top: 40px;
   }
 }
-#topBar{
+#topBar {
   position: fixed;
   top: 0;
   z-index: 99;
   background: #ededed;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
   border-radius: 10px;
   padding: 4px;
   margin-left: 9px;
 }
 
-/** to change from less **/
-.panel-title {
-  /*font-size: 16px;*/
-  font-weight: 100;
-}
+/*# sourceMappingURL=admin.css.map */
