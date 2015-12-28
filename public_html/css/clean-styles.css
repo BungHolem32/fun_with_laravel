@@ -277,3 +277,13 @@ label.error:after {
     max-width: 503px;
     margin: 0 auto;
 }
+
+.g-recaptcha{
+    margin: 0 auto 9px;
+    background: #fff;
+    border: 2px solid #ccc;
+    height: 80px;
+    width: 100%;
+    max-width: 306.5px;
+    border-radius: 4px;
+}

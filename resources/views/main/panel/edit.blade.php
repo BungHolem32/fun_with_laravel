@@ -43,6 +43,14 @@
                 {!! Form::label('brandLogo', 'Brand Logo:') !!}
                 {!! Form::text('brandLogo', $page['brand']['logo'], ['name'=>'mongo[brand][logo]', 'class'=>'form-control']) !!}
             </div>
+            <div class="form-group">
+                {!! Form::label('brandContactLink', 'Brand Contact Link:') !!}
+                {!! Form::text('brandContactLink', $page['brand']['contactLink'], ['name'=>'mongo[brand][contactLink]', 'class'=>'form-control']) !!}
+            </div>
+            <div class="form-group">
+                {!! Form::label('brandLoginLink', 'Brand Login Link:') !!}
+                {!! Form::text('brandLoginLink', $page['brand']['loginLink'], ['name'=>'mongo[brand][loginLink]', 'class'=>'form-control']) !!}
+            </div>
         </div>
     </div>
 
