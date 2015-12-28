@@ -51,6 +51,10 @@
                 {!! Form::label('brandLoginLink', 'Brand Login Link:') !!}
                 {!! Form::text('brandLoginLink', $page['brand']['loginLink'], ['name'=>'mongo[brand][loginLink]', 'class'=>'form-control']) !!}
             </div>
+            <div class="form-group">
+                {!! Form::label('forgotPassLink', 'Brand Forgot password Link:') !!}
+                {!! Form::text('forgotPassLink', $page['brand']['forgotPassLink'], ['name'=>'mongo[brand][forgotPassLink]', 'class'=>'form-control']) !!}
+            </div>
         </div>
     </div>
 
