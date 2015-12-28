@@ -69,17 +69,13 @@ $('.guiders_buttons_container a').on('click',function(){
         guider++;
         $('.guider#_'+guider).fadeIn();
     }
-    else if(value == 'Close'){
+    else if(value == "Close" || value == "Done"){
         $('#guiders_overlay').hide();
         guider=0;
     }
     else if(value == "Previous"){
         guider--;
         $('.guider#_'+guider).fadeIn();
-    }
-    else if(value == "Done"){
-        guider=0;
-        $('#guiders_overlay').hide();
     }
 
     if(guider      ==   '3' || guider      ==   '4')
