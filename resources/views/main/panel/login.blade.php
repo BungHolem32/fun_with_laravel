@@ -62,7 +62,10 @@
                         <div class="content-wrapper wood-wrapper">
                             <div class="content-inner">
                                 <h3 class="form-title form-title-first" align="center"><i class="icon-lock"></i> @ln(Login)</h3>
-                                {!! Form::open(['action'=>'OpenAccountController@login','class'=>'loginForm ajax-api']) !!}
+                                {!! Form::open(['action'=>'OpenAccountController@login','class'=>'loginForm ajax-api']) !!}<div class="alert alert-danger" role="alert">
+                                    @ln(Oh snap)! {{ \Session::get('flashMsg') }}
+                                </div>
+                                <br>
                                 <input name="email" value="{{\Request::get('email')}}" class="form-control" type="text" placeholder="Username" required/>
                                 <input name="password" value="{{\Request::get('password')}}" class="form-control" type="password" placeholder="Password" required/>
                                 <div class="form-options">
