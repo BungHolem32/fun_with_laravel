@@ -318,3 +318,17 @@ h3.popover-title:before {
     font-size: 30px;
     display: none;
 }
+.guider{
+    max-width: 400px;
+}
+.guider#_1{
+    left: 0 !important;
+    top: 0px;
+    right: 0;
+    display: table;
+    margin: 0 auto;
+}
+.guider#_4 .guiders_arrow_up,.guider#_9 .guiders_arrow_up{
+    top: -42.5px !important;
+    left: -4px;
+}
