@@ -43,7 +43,7 @@
                                     Step 1 - Fund Your {{ $page->brand->name }} Broker Account.
                                 </div>
                                 <a href="{{ $page->brand->link }}" target="_blank">
-                                    <img src="<?php echo $page->brand->logo ?>" class="brokerlogo">
+                                    <img src="{{ $page->brand->logo }}" class="brokerlogo">
                                 </a>
                             </div>
                             <div class="col-md-12  col-sm-12" style="padding: 0px !important;font-size: 20px;text-align: center;border-top: 1px dashed black;background: rgb(236, 240, 241);">
@@ -227,7 +227,7 @@
                         <div id="collapseTwelve" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>  Please, don’t hesitate to contact your Personal Profit Consultant and our amazing support system. Both are available 24/7 to ensure that you will make the most possible money. You can reach them here at
-                                    <a href="mailto:{{ $page->supportMail }}" style="color:green">{{ $page->supportMail }}</a></p>
+                                    <a href="{{ $page->brand->contactLink }}" style="color:green">{{ $page->brand->name }}</a></p>
                             </div>
                         </div>
                     </div>
@@ -294,7 +294,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="font-size:30px;">×</button>
                 <h4 class="modal-title " id="myModalLabel">Deposit Now Into Your {{ $page->brand->name }} Broker Account </h4>
                 <p style="font-size: 15px; padding-top: 8px; margin-bottom: 0;">
-                    <a class="cant-deposit" href="{{$page->brand->link}}" style="font-weight: bold; color: black;">Can't See This Page Correct?  Click Here </a> </p>
+                    <a class="cant-deposit" href="{{$page->brand->loginLink}}" style="font-weight: bold; color: black;">Can't See This Page Correct?  Click Here </a> </p>
             </div>
             <div class="modal-footer">
                                                 <span class="pull-left ajax-loader">
@@ -491,7 +491,7 @@
                                     <i class="fa fa-briefcase"></i>
             <span class="button_box deposit-link-box">
                 Deposit Form Is Currently Not Working?
-                <a href="{{ $page->brand->link }}" class="broker-login js-broker-login animated bounce" target="_blank">Click Here</a>
+                <a href="{{ $page->brand->loginLink }}" class="broker-login js-broker-login animated bounce" target="_blank">Click Here</a>
                 To Deposit In Your {{ $page->brand->name }} Broker Website.
             </span>
                                 </div>

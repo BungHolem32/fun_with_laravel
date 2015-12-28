@@ -59,7 +59,7 @@
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="{{ $page->brand->link }}" id="manualTrading">
+                        <a target="_blank" href="{{ $page->brand->loginLink }}" id="manualTrading">
                             <i class="fa fa-wrench"></i>@ln(Broker Trading Area)
                         </a>
                     </li>
@@ -81,7 +81,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="mailto: {{ $page->supportMail }}">
+                        <a href="{{ $page->brand->contactLink }}">
                             <span class="badge pull-right"></span>
                             <i class="fa fa-envelope"></i> @ln(Contact Us)
                         </a>

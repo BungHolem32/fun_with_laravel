@@ -62,14 +62,15 @@ class Languages extends Model {
 
         //$res = \DB::select("SELECT lang_key,{$lang_col} AS translation FROM translations WHERE lang_key IN ('". implode("','", $langKeys) ."')");
 
-        foreach($langKeys as $key){
+        foreach($langKeys as $key => $val){
             $temp[] = '?';
+            $values[] = $val;
         }
         $sql = "SELECT lang_key,{$lang_col} AS `translation`
                 FROM `translations`
                 WHERE lang_key IN (". implode(",", $temp) .")";
-        $res = \DB::select($sql, $langKeys);
 
+        $res = \DB::select($sql, $values);
 
         $langKeyVal = array();
         foreach($res as $keyVal){
@@ -79,7 +80,6 @@ class Languages extends Model {
 
         $missing = array_diff($langKeys,$founded);
         self::insertTranslations($missing);
-
         return $langKeyVal;
     }
 

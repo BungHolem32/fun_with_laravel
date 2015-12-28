@@ -63,12 +63,20 @@
                             <div class="content-inner">
                                 <h3 class="form-title form-title-first" align="center"><i class="icon-lock"></i> @ln(Login)</h3>
                                 {!! Form::open(['action'=>'OpenAccountController@login','class'=>'loginForm ajax-api']) !!}
+
+                                @if(!empty(\Session::get('flashMsg')))
+                                    <div class="alert alert-danger" role="alert">
+                                        @ln(Oh snap)! {{ \Session::get('flashMsg') }}
+                                    </div>
+                                @endif
+
+                                <br />
                                 <input name="email" value="{{\Request::get('email')}}" class="form-control" type="text" placeholder="Username" required/>
                                 <input name="password" value="{{\Request::get('password')}}" class="form-control" type="password" placeholder="Password" required/>
                                 <div class="form-options">
                                     <input type="submit" class="btn btn-success btn-lg login_btns" value="@ln(Login)">
                                     <div class="btn btn-success btn-lg loading" style="display: none;"><i class="fa fa-spinner fa-spin"></i></div>
-                                    <a href="/sendPassForm" class=" btn-lg bfloat forgotpass">@ln(Forgot Password)</a>
+                                    <a href="{{ $page->brand->forgotPassLink }}" class=" btn-lg bfloat forgotpass">@ln(Forgot Password)</a>
                                     {{--<button class="callToAction-btn login" type="submit"><span>@ln(Login)</span><div class="btn-border"><i class="fa fa-angle-double-right"></i></div></button>--}}
                                 </div>
 
