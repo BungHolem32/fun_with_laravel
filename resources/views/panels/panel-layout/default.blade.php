@@ -41,7 +41,7 @@
     <div>
         <div id="menu_row">
             <nav class="horizontal-menu">
-                <div id="accountdetailz" style="width: 22px; height: 22px; display: none; background: blue;"></div>
+                <div id="accountdetailz" style="width: 22px; height: 22px; display: none; background: #0000ff;"></div>
                 <ul class="side-menu">
                     <li>
                         <a id="awelcomeModal" href="javascript:;">

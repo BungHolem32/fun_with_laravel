@@ -9,7 +9,7 @@ $('#welcomeModal .close,#welcomeModal button').on('click', function () {
     $(this).closest('.modal').fadeOut('fast');
     $('video').attr('loop','loop').get('0').pause();
 
-    if(!$('#formDepositModal').hasClass('hidden')){
+    if(!$('#formDepositModal').hasClass('hidden') && !$('#formDepositModal').hasClass('hidden-on')){
         $('body').addClass('bggray');
         setTimeout(function(){
             $('#formDepositModal').fadeIn();
