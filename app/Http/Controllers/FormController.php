@@ -38,8 +38,8 @@ class FormController extends Controller {
         }
         elseif($res['errs']['error'] == 'emailAlreadyExists'){
             $res['err']=0;
-            $ans = Customer::login(\Request::all());
-            if($ans['err']===1)
+            $ans = (array) Customer::login(\Request::all());
+            if(isset($ans['err']) && $ans['err']===1)
                 \Session::flash('flashMsg', $ans['errs']['error']);
             $res['destination'] = $this->getDestination();
         }
