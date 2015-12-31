@@ -63,7 +63,6 @@ class FormController extends Controller {
 
         if(Request::get('email') === null)
             $res['err'] = 0;
-
         else{
             // check email with brightverifey if mail exist
             $ans = MailVerify::verify(Request::get('email'));
@@ -76,8 +75,6 @@ class FormController extends Controller {
                 $errMsg = isset($ans['error']) ? $ans['error'] : 'invalid email address';
                 $res['errs']['error'] = $res['msg'] = Languages::getTrans($errMsg);
             }
-
-
         }
 
         if($res['err'] === 0)
@@ -114,6 +111,11 @@ class FormController extends Controller {
         unset($append['pageId']);
 
         // Get destenation from funnel children.
-        return'/'.Request::local()->code.'/'.$page->getFirstChild()->fullSlug().'?'.http_build_query($append);
+
+        // new code for lang support
+        return'/'.session('local')->code.'/'.$page->getFirstChild()->fullSlug().'?'.http_build_query($append);
+
+        // Old code
+        //return'/'.Request::local()->code.'/'.$page->getFirstChild()->fullSlug().'?'.http_build_query($append).'&'.session('local')->code;
     }
 }

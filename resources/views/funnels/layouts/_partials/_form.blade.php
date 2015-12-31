@@ -1,12 +1,11 @@
 <?php
 
-
 $form = \App\Page::find($page->formType);
 //echo $form->title;
 $hiddenFields = [];
 $fields = [];
 foreach($form->membersFields->getChildren() as $field){
-    if($field['fieldType'] == 'hidden')
+    if(isset($field['fieldType']) && $field['fieldType'] == 'hidden')
         $hiddenFields[] = [$field['name'], $field['placeholder']];
     else{
         $fields[] = [$field['fieldType'], $field['name'], $field['placeholder']];
