@@ -1,11 +1,12 @@
 <?php
 
+
 $form = \App\Page::find($page->formType);
 //echo $form->title;
 $hiddenFields = [];
 $fields = [];
 foreach($form->membersFields->getChildren() as $field){
-    if(isset($field['fieldType']) && $field['fieldType'] == 'hidden')
+    if($field['fieldType'] == 'hidden')
         $hiddenFields[] = [$field['name'], $field['placeholder']];
     else{
         $fields[] = [$field['fieldType'], $field['name'], $field['placeholder']];
@@ -70,6 +71,7 @@ foreach($form->membersFields->getChildren() as $field){
                         </div>
                     @elseif($field[0] == 'submit')
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 field">
+                            {{--<div class="g-recaptcha" data-sitekey="6Ld39RMTAAAAALVGhMswy185zq0C2bmP-gydSrSI"></div>--}}
                             <input type="{{ $field[0] }}" id="{{ $field[1] }}" class="form-control col-md-10" name="{{ $field[1] }}" value="@ln({{ $field[2] }})" data-cip-id="{{ $field[1] }}">
                         </div>
                     @endif
