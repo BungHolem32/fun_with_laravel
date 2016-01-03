@@ -1,6 +1,5 @@
 <?php
 
-
 $form = \App\Page::find($page->formType);
 //echo $form->title;
 $hiddenFields = [];
@@ -12,8 +11,6 @@ foreach($form->membersFields->getChildren() as $field){
         $fields[] = [$field['fieldType'], $field['name'], $field['placeholder']];
     }
 }
-
-
 
 ?>
 
