@@ -243,3 +243,9 @@ div.loading{
     width: 100%;
     max-width: 672px;
 }
+body.rtl{
+    direction: rtl;
+}
+body.rtl [class^="col"] {
+    float: right;
+}
