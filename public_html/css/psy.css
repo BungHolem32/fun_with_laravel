@@ -243,12 +243,3 @@ div.loading{
     width: 100%;
     max-width: 672px;
 }
-body.rtl{
-    direction: rtl;
-}
-body.rtl [class^="col"] {
-    float: right;
-}
-body.rtl .phoneFields [class^="col"] {
-    float: left;
-}
