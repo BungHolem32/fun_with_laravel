@@ -249,3 +249,6 @@ body.rtl{
 body.rtl [class^="col"] {
     float: right;
 }
+body.rtl .phoneFields [class^="col"] {
+    float: left;
+}
