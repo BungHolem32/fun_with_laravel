@@ -4,7 +4,7 @@
     @include('funnels.layouts._head')
     {{ $page->scripts->headScripts }}
 </head>
-<body>
+<body class="<?php echo (Request::local()->dir == '1') ? 'rtl' : '' ?>">
 {{ $page->scripts->afterBodyScripts }}
 
 <!--[if lt IE 8]>
