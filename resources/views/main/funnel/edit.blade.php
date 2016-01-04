@@ -53,7 +53,7 @@
         <h3><i class="fa fa-bullhorn"></i> On Exit popup:</h3><small>epass=532 Param to disable</small>
         <br/>
         {!! Form::label('onExitPopupMsg', 'Message:') !!}
-        {!! Form::textarea('onExitPopupMsg', $page['onExitPopup']['msg'], ['name'=>'mongo[onExitPopup][msg]', 'class'=>'editor form-control']) !!}
+        {!! Form::textarea('onExitPopupMsg', $page['onExitPopup']['msg'], ['name'=>'mongo[onExitPopup][msg]', 'class'=>'textarea form-control']) !!}
 
         {!! Form::label('onExitPopupLink', 'Link:') !!}
         {!! Form::text('onExitPopupLink', $page['onExitPopup']['link'], ['name'=>'mongo[onExitPopup][link]', 'class'=>'editor form-control']) !!}
