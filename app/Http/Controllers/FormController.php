@@ -70,6 +70,7 @@ class FormController extends Controller {
                 // TODO: add mixpanel event fire here.
                 $this->addMailToMixpanel(Request::get('email'),Request::get('pageId'));
                 $res['err'] = 0;
+                $res['msg'] = '';
             }
             else{
                 $errMsg = isset($ans['error']) ? $ans['error'] : 'invalid email address';
@@ -113,9 +114,9 @@ class FormController extends Controller {
         // Get destenation from funnel children.
 
         // new code for lang support
-        return'/'.session('local')->code.'/'.$page->getFirstChild()->fullSlug().'?'.http_build_query($append);
-
+        return '/'.session('local')->code.'/'.$page->getFirstChild()->fullSlug().'?'.http_build_query($append);
+        
         // Old code
-        //return'/'.Request::local()->code.'/'.$page->getFirstChild()->fullSlug().'?'.http_build_query($append).'&'.session('local')->code;
+        //return '/'.Request::local()->code.'/'.$page->getFirstChild()->fullSlug().'?'.http_build_query($append).'&'.session('local')->code;
     }
 }
