@@ -1,5 +1,9 @@
+var direction = '';
+if($('.direction').length)
+    direction += $('.direction').prop('class');
 tinymce.init({
     selector: "textarea.editor",
+    body_class: direction,
     theme: "modern",
     height: 300,
     /*plugins: [

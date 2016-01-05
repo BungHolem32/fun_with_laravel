@@ -9507,3 +9507,9 @@ body {
 }
 
 /*# sourceMappingURL=admin.css.map */
+
+/** to less if exists **/
+.direction.rtl input {
+  text-align: right;
+  direction: rtl;
+}
