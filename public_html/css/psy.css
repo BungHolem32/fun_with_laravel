@@ -93,6 +93,9 @@ button.submit{
 button.submit:hover{
     background-position: 49% 95%;
 }
+body.rtl button.submit:hover{
+    background-position: 49% 95%;
+}
 button.submit span{
     position: relative;
     display: block;
