@@ -272,7 +272,6 @@ label.error:after {
 #form #prefix{
     text-align: center !important;
 }
-
 .monitor form{
     max-width: 503px;
     margin: 0 auto;
@@ -286,4 +285,14 @@ label.error:after {
     width: 100%;
     max-width: 306.5px;
     border-radius: 4px;
+}
+
+body.rtl{
+    direction: rtl;
+}
+body.rtl [class^="col"] {
+    float: right;
+}
+body.rtl .phoneFields [class^="col"] {
+    float: left;
 }
