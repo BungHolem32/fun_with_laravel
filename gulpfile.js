@@ -16,7 +16,9 @@ var fs = require('fs');
 
 elixir(function(mix) {
 
-    mix.less(['admin.less'], 'public_html/adminpanel/css/admin.css');
+    mix.less(['admin.less'], 'public_html/adminpanel/css/admin.css')
+     .less(['base-funnel-load-ltr.less'], 'public/css/base-0.css')
+     .less(['base-funnel-load-rtl.less'], 'public/css/base-1.css');
 
     /*mix.less(['admin.less'], 'public/css/admin.css')
         .less(['load-ltr.less'], 'public/css/styles-0.css')
