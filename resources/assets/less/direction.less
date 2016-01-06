@@ -8,7 +8,7 @@
 */
 
 // Local vars
-
+@dir: ~`"@{direction}" === 'rtl' ? 'rtl' : 'ltr'`;
 @rtl: ~`"@{direction}" === 'rtl' ? 'true' : 'false'`;
 @left: ~`@{rtl} ? 'right' : 'left'`;
 @right: ~`@{rtl} ? 'left' : 'right'`;
@@ -23,6 +23,8 @@
 .border-color(@top, @right, @bottom, @left) when (@rtl) {
   border-color: @top @left @bottom @right;
 }
+
+
 
 
 // "border-left*:" rule

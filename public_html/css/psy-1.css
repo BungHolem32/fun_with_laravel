@@ -11473,10 +11473,17 @@ div.mobile-lang-bar .lang {
   float: left;
   text-align: center;
 }
+[class^="col"] {
+  float: right;
+}
+.phoneFields [class^="col"] {
+  float: left;
+}
 html,
 body {
   width: 100%;
   height: 963px;
+  direction: rtl;
 }
 @media (max-width: 560px) {
   html,
