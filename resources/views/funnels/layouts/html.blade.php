@@ -16,5 +16,6 @@
     @include('funnels.layouts._scripts-bottom')
 
 {{ $page->scripts->bodyEndScripts }}
+
 </body>
 </html>

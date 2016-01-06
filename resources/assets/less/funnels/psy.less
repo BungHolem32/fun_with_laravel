@@ -17,7 +17,7 @@ body{
   background-size: cover;
   background-position: 50%;
 }
-body *{
+body{
   font-family: Arial;
 }
 body > div, body > h1, body > h2, body > h3, body > img, body > .wrap{
@@ -130,14 +130,14 @@ img{
   width: 100%;
   margin: 0 auto;
 }
-.ppl > *{
+.ppl > video{
   position: relative;
   height: 89%;
   width: 101%;
   top: 5.5%;
   left: -0.3%;
 }
-.ppl.second > *{
+.ppl.second > video{
   position: relative;
   height: 100%;
   width: 100%;
@@ -150,13 +150,13 @@ img{
     max-width: 560px;
     max-height: 330px;
   }
-  .ppl > *{
+  .ppl > video{
     height: 90.5%;
     width: 93.4%;
     top: 5.3%;
     left: 0.3%;
   }
-  .ppl.second > * {
+  .ppl.second > video {
     position: relative;
     height: 100%;
     width: 100%;
@@ -174,12 +174,12 @@ img{
     max-width: 310px;
     max-height: 191px;
   }
-  .ppl > *{
+  .ppl > video{
     height: 87.5%;
     width: 93.4%;
     top: 4.7%;
   }
-  .ppl.second > * {
+  .ppl.second > video {
     position: relative;
     height: 100%;
     width: 100%;
@@ -201,16 +201,13 @@ img{
 script{
   display: none;
 }
-
 .loading {
   color: #fff;
   position: relative;
   top: -93px;
   width: 100%;
   z-index: 99;
-
 }
-
 .loading .bg {
   position: absolute;
   top: -29px;
@@ -228,3 +225,10 @@ div.loading{
   width: 100%;
   max-width: 672px;
 }
+
+/** form **/
+input#submit{
+  text-transform: uppercase;
+  .gradientHover(top,to bottom,#ffab00,#fff500,0%,64%);
+}
+

@@ -11500,7 +11500,7 @@ body {
   background-size: cover;
   background-position: 50%;
 }
-body * {
+body {
   font-family: Arial;
 }
 body > div,
@@ -11619,14 +11619,14 @@ img {
   width: 100%;
   margin: 0 auto;
 }
-.ppl > * {
+.ppl > video {
   position: relative;
   height: 89%;
   width: 101%;
   top: 5.5%;
   left: -0.3%;
 }
-.ppl.second > * {
+.ppl.second > video {
   position: relative;
   height: 100%;
   width: 100%;
@@ -11639,13 +11639,13 @@ img {
     max-width: 560px;
     max-height: 330px;
   }
-  .ppl > * {
+  .ppl > video {
     height: 90.5%;
     width: 93.4%;
     top: 5.3%;
     left: 0.3%;
   }
-  .ppl.second > * {
+  .ppl.second > video {
     position: relative;
     height: 100%;
     width: 100%;
@@ -11665,12 +11665,12 @@ img {
     max-width: 310px;
     max-height: 191px;
   }
-  .ppl > * {
+  .ppl > video {
     height: 87.5%;
     width: 93.4%;
     top: 4.7%;
   }
-  .ppl.second > * {
+  .ppl.second > video {
     position: relative;
     height: 100%;
     width: 100%;
@@ -11713,6 +11713,18 @@ div.loading {
 .wrap {
   width: 100%;
   max-width: 672px;
+}
+/** form **/
+input#submit {
+  text-transform: uppercase;
+  background: #ffab00;
+  background: linear-gradient(to bottom, #ffab00 0%, #fff500 64%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab00', endColorstr='#fff500', GradientType=0);
+}
+input#submit:hover {
+  background: #fff500;
+  background: linear-gradient(to bottom, #fff500 0%, #ffab00 64%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff500', endColorstr='#ffab00', GradientType=0);
 }
 
 /*# sourceMappingURL=psy-1.css.map */
