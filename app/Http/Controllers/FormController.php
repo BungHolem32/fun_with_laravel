@@ -84,6 +84,11 @@ class FormController extends Controller {
         echo json_encode($res);
     }
 
+    /**
+     * @param string $email
+     * @param int $pageId
+     * @return void
+     */
     private function addMailToMixpanel($email,$pageId){
         require base_path().'/app/Lib/Mixpanel/Mixpanel.php';
         // get the Mixpanel class instance, replace with your project token
