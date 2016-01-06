@@ -10,6 +10,14 @@
 
 // ======= Base:
 
+.af,.bf{
+  &:after, &:before{
+    content: '';
+    display: block;
+    position: absolute;
+  }
+}
+
 [class^="col"] {
   float: @left;
 }
@@ -18,4 +26,4 @@
 }
 
 // working on psy specific:   ***** delete and change name from gulp after finished -- every time
-@import "lp/88percemtprofit";
+@import "lp/demoaccounts";
