@@ -8518,12 +8518,12 @@ ol {
 }
 body {
   padding-top: 141px;
-  direction: ltr;
+  direction: rtl;
 }
 h1,
 .h1 {
   height: 31px;
-  margin-left: -0.09em;
+  margin-right: -0.09em;
 }
 h1,
 .h1,
@@ -8544,7 +8544,7 @@ h3,
           transform-origin: center center;
 }
 .vertical-text div {
-  float: left;
+  float: right;
 }
 .form-control {
   box-shadow: inset 2px 2px 6px -1px rgba(0, 0, 0, 0.15);
@@ -8619,7 +8619,7 @@ h3,
 .col-sm-12,
 .col-md-12,
 .col-lg-12 {
-  float: left;
+  float: right;
 }
 /*
 
@@ -11329,10 +11329,10 @@ body {
   animation-name: wobble;
 }
 .rt {
-  float: right;
+  float: left;
 }
 .lt {
-  float: left;
+  float: right;
 }
 .marg-t {
   margin-top: 1em;
@@ -11408,87 +11408,87 @@ body {
 }
 .w-0 {
   width: 0%;
-  float: left;
+  float: right;
 }
 .w-5 {
   width: 5%;
-  float: left;
+  float: right;
 }
 .w-10 {
   width: 10%;
-  float: left;
+  float: right;
 }
 .w-15 {
   width: 15%;
-  float: left;
+  float: right;
 }
 .w-20 {
   width: 20%;
-  float: left;
+  float: right;
 }
 .w-25 {
   width: 25%;
-  float: left;
+  float: right;
 }
 .w-30 {
   width: 30%;
-  float: left;
+  float: right;
 }
 .w-35 {
   width: 35%;
-  float: left;
+  float: right;
 }
 .w-40 {
   width: 40%;
-  float: left;
+  float: right;
 }
 .w-45 {
   width: 45%;
-  float: left;
+  float: right;
 }
 .w-50 {
   width: 50%;
-  float: left;
+  float: right;
 }
 .w-55 {
   width: 55%;
-  float: left;
+  float: right;
 }
 .w-60 {
   width: 60%;
-  float: left;
+  float: right;
 }
 .w-65 {
   width: 65%;
-  float: left;
+  float: right;
 }
 .w-70 {
   width: 70%;
-  float: left;
+  float: right;
 }
 .w-75 {
   width: 75%;
-  float: left;
+  float: right;
 }
 .w-80 {
   width: 80%;
-  float: left;
+  float: right;
 }
 .w-85 {
   width: 85%;
-  float: left;
+  float: right;
 }
 .w-90 {
   width: 90%;
-  float: left;
+  float: right;
 }
 .w-95 {
   width: 95%;
-  float: left;
+  float: right;
 }
 .w-100 {
   width: 100%;
-  float: left;
+  float: right;
 }
 div.mobile-wrap {
   box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.2);
@@ -11529,21 +11529,21 @@ div.mobile-lang-bar {
   margin-bottom: 20px;
 }
 div.mobile-lang-bar .datetime {
-  text-align: right;
-  float: left;
+  text-align: left;
+  float: right;
   padding: 13px;
   font-size: 17px;
   width: 177px;
 }
 div.mobile-lang-bar .datetime i {
   font-size: 2.7em;
-  float: left;
+  float: right;
 }
 div.mobile-lang-bar .datetime div {
-  float: right;
+  float: left;
 }
 div.mobile-lang-bar .lang {
-  float: right;
+  float: left;
   text-align: center;
 }
 .af:after,
@@ -11555,7 +11555,7 @@ div.mobile-lang-bar .lang {
   position: absolute;
 }
 [class^="col"] {
-  float: left;
+  float: right;
 }
 .phoneFields [class^="col"] {
   float: left;
@@ -11569,21 +11569,16 @@ body {
   margin: 0 auto;
 }
 form {
-  background: #191919;
   width: 260px;
   float: right;
   margin-right: 30px;
   margin-top: 178px;
 }
-form .form-control,
-form #phone,
-form #prefix {
+form .form-control {
   border-radius: 0;
-  height: 41px;
 }
 form .row > div {
   position: relative;
-  height: 41px;
 }
 label.error {
   background: #fff;
@@ -11618,28 +11613,17 @@ label.error:after {
   border-width: 6px;
   margin-left: -10px;
 }
-body {
-  overflow-x: hidden;
-}
 .bg {
-  height: 1254px;
-  width: 100%;
-  background: url('/img/lp/bg_demoaccounts.jpg');
-  background-position: 50% 50%;
-}
-.form {
-  display: table;
-  width: 100%;
-  max-width: 1034px;
-  margin: 0px auto;
-  padding-top: 10px;
+  height: 728px;
+  width: 1057px;
+  background: url('/img/lp/bg_88percentprofit.jpg');
 }
 form .row > div {
-  height: 41px;
+  height: 34px;
   margin-bottom: 18px;
 }
 input {
-  height: 41px;
+  height: 34px;
 }
 input#submit {
   color: transparent;
@@ -11647,6 +11631,7 @@ input#submit {
   background: url('/img/lp/btn_88percentprofit.png');
   width: 261px;
   height: 67px;
+  margin-top: 18px;
 }
 body {
   background: #EDEDE3;
@@ -11684,17 +11669,5 @@ body {
   height: 7px;
   background: #191917;
 }
-.bottom {
-  position: absolute;
-  bottom: 203px;
-  height: 82px;
-  width: 200px;
-  width: 100%;
-  max-width: 264px;
-  display: table;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-}
 
-/*# sourceMappingURL=demoaccounts-0.css.map */
+/*# sourceMappingURL=88percentprofit-1.css.map */
