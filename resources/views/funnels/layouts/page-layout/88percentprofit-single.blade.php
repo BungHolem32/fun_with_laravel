@@ -1,6 +1,6 @@
 @section('head')
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    {!! $page->appendAsset(url('/css/88percemtprofit-'.Request::local()->dir.'.css')) !!}
+    {!! $page->appendAsset(url('/css/88percentprofit-'.Request::local()->dir.'.css')) !!}
 @append
 
 @section('bottom-scripts')

@@ -21,42 +21,44 @@ foreach($form->membersFields->getChildren() as $field){
 
 ?>
 <ul class="errorMessages"></ul>
-{!! Form::open(['url' => url('postForm').'?'.$_SERVER["QUERY_STRING"],
-                'id'=>'form',
-                'name'=>'accountForm',
-                'target'=>'_self',
-                'method'=>'post',
-                'class'=>'form-horizontal']) !!}
+<div class="form">
+    {!! Form::open(['url' => url('postForm').'?'.$_SERVER["QUERY_STRING"],
+                    'id'=>'form',
+                    'name'=>'accountForm',
+                    'target'=>'_self',
+                    'method'=>'post',
+                    'class'=>'form-horizontal']) !!}
 
-    <input type="hidden" name="parentPage" value="{{ $funnelId }}">
-    @forelse($hiddenFields as $hiddenField)
-        <input type="hidden" id="{{ $hiddenField[0] }}" name="{{ $hiddenField[0] }}" value="">
-    @empty
-    @endforelse
+        <input type="hidden" name="parentPage" value="{{ $funnelId }}">
+        @forelse($hiddenFields as $hiddenField)
+            <input type="hidden" id="{{ $hiddenField[0] }}" name="{{ $hiddenField[0] }}" value="">
+        @empty
+        @endforelse
 
-        @foreach($fields as $field)
-            @if($field[0] == 'text' || $field[0] == 'email' || $field[0] == 'password')
-                <div class="per">
-                    <input value="{{Request::get($field[1])}}" {{!empty($_REQUEST[$field[1]]) ? 'disabled="disabled"' : ''}}  type="{{ $field[0] }}" id="{{ $field[1] }}" class="form-control" name="{{ $field[1] }}" required="required" minlength="2" placeholder="{{ \App\Languages::getTrans($field[2]) }}" data-cip-id="{{ $field[1] }}">
-                </div>
-            @elseif($field[0] == 'phone')
-                <div class="per">
-                    <input type="phone" id="prefix" class="col-md-3 col-sm-3 col-xs-2 col-xs-offset-1" name="prefix" required="required" data-cip-id="prefix" />
-                    <input type="{{ $field[0] }}" id="{{ $field[1] }}" class="col-md-8 col-sm-8 col-xs-9" name="{{ $field[1] }}" required="required" placeholder="{{ \App\Languages::getTrans($field[2]) }}" data-cip-id="{{ $field[1] }}">
-                </div>
-            @elseif($field[0] == 'country')
-                <div class="per">
-                    <select name="Country" id="country" class="form-control" required="required" data-cip-id="{{ $field[1] }}">
-                        @include('funnels.layouts._partials._countries')
-                    </select>
-                </div>
-            @elseif($field[0] == 'submit')
-                <div class="per">
-                    <input type="{{ $field[0] }}" id="{{ $field[1] }}" class="form-control col-md-10" name="{{ $field[1] }}" value="{{ \App\Languages::getTrans($field[2]) }}" data-cip-id="{{ $field[1] }}">
-                </div>
-            @endif
-        @endforeach
-</form>
+            @foreach($fields as $field)
+                @if($field[0] == 'text' || $field[0] == 'email' || $field[0] == 'password')
+                    <div class="per">
+                        <input value="{{Request::get($field[1])}}" {{!empty($_REQUEST[$field[1]]) ? 'disabled="disabled"' : ''}}  type="{{ $field[0] }}" id="{{ $field[1] }}" class="form-control" name="{{ $field[1] }}" required="required" minlength="2" placeholder="{{ \App\Languages::getTrans($field[2]) }}" data-cip-id="{{ $field[1] }}">
+                    </div>
+                @elseif($field[0] == 'phone')
+                    <div class="per">
+                        <input type="phone" id="prefix" class="col-md-3 col-sm-3 col-xs-2 col-xs-offset-1" name="prefix" required="required" data-cip-id="prefix" />
+                        <input type="{{ $field[0] }}" id="{{ $field[1] }}" class="col-md-8 col-sm-8 col-xs-9" name="{{ $field[1] }}" required="required" placeholder="{{ \App\Languages::getTrans($field[2]) }}" data-cip-id="{{ $field[1] }}">
+                    </div>
+                @elseif($field[0] == 'country')
+                    <div class="per">
+                        <select name="Country" id="country" class="form-control" required="required" data-cip-id="{{ $field[1] }}">
+                            @include('funnels.layouts._partials._countries')
+                        </select>
+                    </div>
+                @elseif($field[0] == 'submit')
+                    <div class="per">
+                        <input type="{{ $field[0] }}" id="{{ $field[1] }}" class="form-control col-md-10" name="{{ $field[1] }}" value="{{ \App\Languages::getTrans($field[2]) }}" data-cip-id="{{ $field[1] }}">
+                    </div>
+                @endif
+            @endforeach
+    </form>
+</div>
 
 @section('bottom-scripts')
     <script src="/js/vendor/phonelib/libphonenumber.js"></script>
