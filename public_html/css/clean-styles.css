@@ -286,13 +286,3 @@ label.error:after {
     max-width: 306.5px;
     border-radius: 4px;
 }
-
-body.rtl{
-    direction: rtl;
-}
-body.rtl [class^="col"] {
-    float: right;
-}
-body.rtl .phoneFields [class^="col"] {
-    float: left;
-}

@@ -5,58 +5,60 @@
 @endsection
 
 @section('edit')
-    @include('funnels.layouts._partials._page-layout-selection')
-    <div class="form-group">
-        <h3><i class="fa fa-gg"></i> {!! Form::label('title_h1', 'Title:') !!}</h3>
-        {!! Form::text('title_h1', $page['title_h1'], ['name'=>'mongo[title_h1]', 'class'=>'form-control']) !!}
-    </div>
-    <div class="form-group">
-        <h3><i class="fa fa-newspaper-o"></i> {!! Form::label('description', 'Description:') !!}</h3>
-        {!! Form::text('description', $page['description'], ['name'=>'mongo[description]', 'class'=>'form-control']) !!}
-    </div>
+    <div class="direction{{Request::local()->dir == '1' ? ' rtl' : ''}}">
+        @include('funnels.layouts._partials._page-layout-selection')
+        <div class="form-group">
+            <h3><i class="fa fa-gg"></i> {!! Form::label('title_h1', 'Title:') !!}</h3>
+            {!! Form::text('title_h1', $page['title_h1'], ['name'=>'mongo[title_h1]', 'class'=>'form-control']) !!}
+        </div>
+        <div class="form-group">
+            <h3><i class="fa fa-newspaper-o"></i> {!! Form::label('description', 'Description:') !!}</h3>
+            {!! Form::text('description', $page['description'], ['name'=>'mongo[description]', 'class'=>'form-control']) !!}
+        </div>
 
-    <div class="form-group">
-        <h3><i class="fa fa-video-camera"></i> {!! Form::label('video', 'Video link:') !!}</h3>
-        {!! Form::text('video', $page['video'], ['name'=>'mongo[video]', 'class'=>'form-control']) !!}
-    </div>
+        <div class="form-group">
+            <h3><i class="fa fa-video-camera"></i> {!! Form::label('video', 'Video link:') !!}</h3>
+            {!! Form::text('video', $page['video'], ['name'=>'mongo[video]', 'class'=>'form-control']) !!}
+        </div>
 
-    <div class="form-group">
-        <h3><i class="fa fa-link"></i> {!! Form::label('destinationSite', 'Destination Site:') !!}</h3>
-        {!! Form::text('destinationSite', $page['destinationSite'], ['name'=>'mongo[destinationSite]', 'class'=>'form-control']) !!}
-    </div>
+        <div class="form-group">
+            <h3><i class="fa fa-link"></i> {!! Form::label('destinationSite', 'Destination Site:') !!}</h3>
+            {!! Form::text('destinationSite', $page['destinationSite'], ['name'=>'mongo[destinationSite]', 'class'=>'form-control']) !!}
+        </div>
 
-    <div class="form-group">
-        <h3><i class="fa fa-code"></i> {!! Form::label('htmlHeader', 'Html Header:') !!}</h3>
-        {!! Form::textarea('htmlHeader', $page['htmlHeader'], ['name'=>'mongo[htmlHeader]', 'class'=>'editor form-control']) !!}
-    </div>
-    <div class="form-group">
-        <h3><i class="fa fa-code"></i> {!! Form::label('smallHeader', 'Below Header:') !!}</h3>
-        {!! Form::textarea('smallHeader', $page['smallHeader'], ['name'=>'mongo[smallHeader]', 'class'=>'editor form-control']) !!}
-    </div>
+        <div class="form-group">
+            <h3><i class="fa fa-code"></i> {!! Form::label('htmlHeader', 'Html Header:') !!}</h3>
+            {!! Form::textarea('htmlHeader', $page['htmlHeader'], ['name'=>'mongo[htmlHeader]', 'class'=>'editor form-control']) !!}
+        </div>
+        <div class="form-group">
+            <h3><i class="fa fa-code"></i> {!! Form::label('smallHeader', 'Below Header:') !!}</h3>
+            {!! Form::textarea('smallHeader', $page['smallHeader'], ['name'=>'mongo[smallHeader]', 'class'=>'editor form-control']) !!}
+        </div>
 
-    {{--<div class="form-group">
-        {!! Form::label('body', 'Content:') !!}
-        {!! Form::textarea('body', $page['body'], ['name'=>'mongo[body]', 'class'=>'editor form-control']) !!}
-    </div>--}}
+        {{--<div class="form-group">
+            {!! Form::label('body', 'Content:') !!}
+            {!! Form::textarea('body', $page['body'], ['name'=>'mongo[body]', 'class'=>'editor form-control']) !!}
+        </div>--}}
 
-    <div class="form-group">
-        <h3><i class="fa fa-info-circle"></i> {!! Form::label('thankyoupage', 'Thank you page:') !!}</h3><small></small>
-        {!! Form::textarea('thankyoupage', $page['thankyoupage'], ['name'=>'mongo[thankyoupage]', 'class'=>'editor form-control']) !!}
-    </div>
+        <div class="form-group">
+            <h3><i class="fa fa-info-circle"></i> {!! Form::label('thankyoupage', 'Thank you page:') !!}</h3><small></small>
+            {!! Form::textarea('thankyoupage', $page['thankyoupage'], ['name'=>'mongo[thankyoupage]', 'class'=>'editor form-control']) !!}
+        </div>
 
-    <div class="form-group">
-        <h3><i class="fa fa-info-circle"></i> {!! Form::label('riskStatment', 'Risk Statment:') !!}</h3><small>pass rs=1 Param to display</small>
-        {!! Form::textarea('riskStatment', $page['riskStatment'], ['name'=>'mongo[riskStatment]', 'class'=>'editor form-control']) !!}
-    </div>
+        <div class="form-group">
+            <h3><i class="fa fa-info-circle"></i> {!! Form::label('riskStatment', 'Risk Statment:') !!}</h3><small>pass rs=1 Param to display</small>
+            {!! Form::textarea('riskStatment', $page['riskStatment'], ['name'=>'mongo[riskStatment]', 'class'=>'editor form-control']) !!}
+        </div>
 
-    <div class="form-group">
-        <h3><i class="fa fa-bullhorn"></i> On Exit popup:</h3><small>epass=532 Param to disable</small>
-        <br/>
-        {!! Form::label('onExitPopupMsg', 'Message:') !!}
-        {!! Form::textarea('onExitPopupMsg', $page['onExitPopup']['msg'], ['name'=>'mongo[onExitPopup][msg]', 'class'=>'textarea form-control']) !!}
+        <div class="form-group">
+            <h3><i class="fa fa-bullhorn"></i> On Exit popup:</h3><small>epass=532 Param to disable</small>
+            <br/>
+            {!! Form::label('onExitPopupMsg', 'Message:') !!}
+            {!! Form::textarea('onExitPopupMsg', $page['onExitPopup']['msg'], ['name'=>'mongo[onExitPopup][msg]', 'class'=>'textarea form-control']) !!}
 
-        {!! Form::label('onExitPopupLink', 'Link:') !!}
-        {!! Form::text('onExitPopupLink', $page['onExitPopup']['link'], ['name'=>'mongo[onExitPopup][link]', 'class'=>'editor form-control']) !!}
+            {!! Form::label('onExitPopupLink', 'Link:') !!}
+            {!! Form::text('onExitPopupLink', $page['onExitPopup']['link'], ['name'=>'mongo[onExitPopup][link]', 'class'=>'editor form-control']) !!}
+        </div>
     </div>
 
 @endsection

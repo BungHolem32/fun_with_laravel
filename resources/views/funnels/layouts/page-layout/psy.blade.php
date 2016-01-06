@@ -1,5 +1,5 @@
 @section('head')
-    {!! $page->appendAsset(url('/css/psy.css')) !!}
+    {!! $page->appendAsset(url('/css/psy-'.Request::local()->dir.'.css')) !!}
 @append
 
 @section('bottom-scripts')
@@ -17,7 +17,7 @@
 
         {!! Form::open(['url' => url('postEmailForm').'?'.$_SERVER["QUERY_STRING"], 'method'=>'post']) !!}
         <input type="hidden" name="pageId" value="{{ $page->id }}">
-        <button class="submit ltr en"><span>@ln(FREE DOWNLOAD)</span></button>
+        <button class="submit en"><span>@ln(FREE DOWNLOAD)</span></button>
         {!! Form::close() !!}
     </div>
     <img class="cer" src="/img/psy/cer.png" />

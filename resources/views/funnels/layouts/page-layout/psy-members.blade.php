@@ -1,7 +1,7 @@
 @section('head')
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     {!! $page->appendAsset(url('/css/clean-styles.css')) !!}
-    {!! $page->appendAsset(url('/css/psy.css')) !!}
+    {!! $page->appendAsset(url('/css/psy-'.Request::local()->dir.'.css')) !!}
 @append
 
 @section('bottom-scripts')

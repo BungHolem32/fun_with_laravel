@@ -79,11 +79,11 @@ button.submit{
     color: transparent;
     padding: 0;
 }
-button.submit.ltr{
+body button.submit{
     background: url('/img/psy/Button.png') no-repeat;
     background-size: cover;
 }
-button.submit.rtl{
+body.rtl button.submit{
     background: url('/img/psy/Button-RTL.png') no-repeat;
     background-size: cover;
 }
@@ -91,6 +91,9 @@ button.submit{
     background-position: 50% 4%;
 }
 button.submit:hover{
+    background-position: 49% 95%;
+}
+body.rtl button.submit:hover{
     background-position: 49% 95%;
 }
 button.submit span{
@@ -110,7 +113,7 @@ button.submit span{
     text-shadow: 1px 0.6px 0 #d2d516;
 }
 /** EOS Languages **/
-button.submit.rtl span{
+body.rtl button.submit span{
     max-width: 89%;
     margin-right: 9%;
     text-align: right;
