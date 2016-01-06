@@ -11577,7 +11577,7 @@ form {
 form .form-control {
   border-radius: 0;
 }
-form .per {
+form .row > div {
   position: relative;
 }
 label.error {
@@ -11618,7 +11618,7 @@ label.error:after {
   width: 1057px;
   background: url('/img/lp/bg_88percentprofit.jpg');
 }
-.per {
+form .row > div {
   height: 34px;
   margin-bottom: 18px;
 }

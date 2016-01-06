@@ -11578,7 +11578,7 @@ form {
 form .form-control {
   border-radius: 0;
 }
-form .per {
+form .row > div {
   position: relative;
   height: 34px;
 }
@@ -11631,7 +11631,7 @@ body {
   margin: 0px auto;
   padding-top: 10px;
 }
-.per {
+form .row > div {
   height: 34px;
   margin-bottom: 18px;
 }
