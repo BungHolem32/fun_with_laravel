@@ -4,7 +4,7 @@
     @include('funnels.layouts._head')
     {{ $page->scripts->headScripts }}
 </head>
-<body class="{{ Request::local()->dir == '1' ? 'rtl' : '' }}">
+<body>
 {{ $page->scripts->afterBodyScripts }}
 
 <!--[if lt IE 8]>
@@ -16,5 +16,6 @@
     @include('funnels.layouts._scripts-bottom')
 
 {{ $page->scripts->bodyEndScripts }}
+
 </body>
 </html>

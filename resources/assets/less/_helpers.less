@@ -41,3 +41,20 @@
   .generate-widths(@n, (@i + 5));
 }
 .generate-widths(100);
+
+.gradientHover(@posweb,@pos,@colorfrom,@colorto,@colorfromper,@colortoper){
+  background: @colorfrom;
+  background: -moz-linear-gradient(@posweb, @colorfrom @colorfromper, @colorto @colortoper);
+  background: -webkit-linear-gradient(@posweb, @colorfrom @colorfromper,@colorto @colortoper);
+  background: linear-gradient(@pos, @colorfrom @colorfromper,@colorto @colortoper);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{colorfrom}', endColorstr='@{colorto}',GradientType=0 );
+
+  &:hover{
+    background: @colorto;
+    background: -moz-linear-gradient(@posweb, @colorto @colorfromper, @colorfrom @colortoper);
+    background: -webkit-linear-gradient(@posweb, @colorto @colorfromper,@colorfrom @colortoper);
+    background: linear-gradient(@pos, @colorto @colorfromper,@colorfrom @colortoper);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{colorto}', endColorstr='@{colorfrom}',GradientType=0 );
+  }
+
+}

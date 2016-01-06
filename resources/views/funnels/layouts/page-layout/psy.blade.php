@@ -1,5 +1,5 @@
 @section('head')
-    {!! $page->appendAsset(url('/css/psy.css')) !!}
+    {!! $page->appendAsset(url('/css/psy-'.Request::local()->dir.'.css')) !!}
 @append
 
 @section('bottom-scripts')
