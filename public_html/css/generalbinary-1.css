@@ -11626,6 +11626,11 @@ label.error:after {
 }
 #bs-navbar {
   width: 100%;
+  overflow-x: hidden;
+}
+#bs-navbar > ul {
+  position: relative;
+  z-index: 9999999999;
 }
 .nav > li > a:hover,
 .nav > li > a {
@@ -11634,6 +11639,9 @@ label.error:after {
 .nav > li > a:hover:focus,
 .nav > li > a:focus {
   background-color: transparent;
+}
+.navbar-toggle .icon-bar {
+  background-color: #fff;
 }
 @font-face {
   font-family: 'samsungsharpsans-regular_v2';
