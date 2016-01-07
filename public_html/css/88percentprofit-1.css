@@ -11669,6 +11669,13 @@ body {
 #phone {
   float: right;
 }
+#prefix:focus,
+#phone:focus {
+  background-color: #ffffff;
+  background-image: none;
+  border: 2px solid #cdb12f;
+  box-shadow: inset 0px 0px 1px #cdb12f, 0px 1px 7px #cdb12f;
+}
 .head:after,
 .head:before {
   content: '';

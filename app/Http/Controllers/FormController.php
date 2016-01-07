@@ -50,6 +50,8 @@ class FormController extends Controller {
     private function getDestination(){
         $funnelPage = \App\Page::find(Request::get('parentPage'));
         $destenation = $funnelPage->destinationSite->get();
+        if(empty($destenation))
+            $destenation = 'http://www.rboptions.com/';
         $append = '';
         if(strpos($destenation,'rboptions.com') !== false)
             $append = 'users.php?act=check&email='.Request::get('email').'&password='.Request::get('password');
