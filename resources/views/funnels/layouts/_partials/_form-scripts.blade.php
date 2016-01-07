@@ -62,6 +62,7 @@
                     console.log('loading...');
                     $(form).after(loadingMsg);
                     $(form).find('input').addClass('visible-hidden');
+                    $(form).find('input#submit').addClass('nofocus');
                 },
                 success: function(res) {
                     if(res.err === 0){
