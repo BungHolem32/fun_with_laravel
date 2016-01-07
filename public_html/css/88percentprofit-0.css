@@ -11579,6 +11579,9 @@ body {
   top: 177px;
   right: 28px;
 }
+input#submit.visible-hidden {
+  box-shadow: none;
+}
 .loading {
   position: absolute;
   right: -3px;
