@@ -56,5 +56,17 @@
     background: linear-gradient(@pos, @colorto @colorfromper,@colorfrom @colortoper);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{colorto}', endColorstr='@{colorfrom}',GradientType=0 );
   }
+}
 
+.newfont(@name){
+  @font-face {
+    font-family: @name;
+    // src for each browser/system
+    src: url('/fonts/@{name}.eot');
+    src: url('/fonts/@{name}.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/@{name}.woff2') format('woff2'),
+    url('/fonts/@{name}.woff') format('woff'),
+    url('/fonts/@{name}.ttf')  format('truetype'),
+    url('/fonts/@{name}.svg#svgFontName') format('svg');
+  }
 }

@@ -10,7 +10,7 @@ var fs = require('fs');
 elixir(function(mix) {
 
     /*mix.less(['admin.less'], 'public_html/adminpanel/css/admin.css')*/
-     mix.less(['base-funnel-load-ltr.less'], 'public_html/css/88percentprofit-0.css')
-     .less(['base-funnel-load-rtl.less'], 'public_html/css/88percentprofit-1.css');
+     mix.less(['base-funnel-load-ltr.less'], 'public_html/css/generalbinary-0.css')
+     .less(['base-funnel-load-rtl.less'], 'public_html/css/generalbinary-1.css');
 
 });
