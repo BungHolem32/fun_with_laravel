@@ -4,9 +4,6 @@
 @append
 
 @section('bottom-scripts')
-    <script>
-        var inputsCss = 'visibility:hidden;';
-    </script>
     @com('funnel_scripts')
 @append
 
@@ -14,7 +11,9 @@
     {!! $page->htmlHeader !!}
     <div class="head"></div>
     <div class="bg">
-        @include('funnels.layouts._partials._form_vertical', ['funnelId' => $page->id])
+        <div class="form">
+            @include('funnels.layouts._partials._form-vertical', ['funnelId' => $page->id])
+        </div>
     </div>
     <div class="bottom"></div>
 @endsection
