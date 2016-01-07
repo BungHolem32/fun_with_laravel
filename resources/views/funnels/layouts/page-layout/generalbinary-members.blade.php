@@ -18,7 +18,6 @@
                     <div class="pull-right-childs col-sm-9 col-xs-2 npads">
                         <div class="navbar-header">
                             <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
                             <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                         </div>
                         <nav id="bs-navbar" class="collapse navbar-collapse">

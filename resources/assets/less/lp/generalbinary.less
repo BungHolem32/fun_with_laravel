@@ -67,7 +67,7 @@ label.error {
   }
 }
 #bs-navbar{
-  width: 100%;
+  width: 300px;
   overflow-x: hidden;
   > ul{
     position: relative;
@@ -85,6 +85,23 @@ label.error {
 }
 
 // custom
+
+.navbar-header{
+  display: none;
+}
+#bs-navbar{
+  display: block;
+}
+@media(max-width: @screen-sm){
+  .navbar-header{
+    display: block;
+  }
+  #bs-navbar:not(.in):not(.collapsing){
+    display: none;
+  }
+}
+
+// added
 
 // new font -- samsungsharpsans
 .newfont('samsungsharpsans-regular_v2');
@@ -133,19 +150,4 @@ body{
     }
   }
 
-}
-
-.navbar-header{
-  display: none;
-}
-#bs-navbar{
-  display: block;
-}
-@media(max-width: @screen-sm){
-  .navbar-header{
-    display: block;
-  }
-  #bs-navbar:not(.in):not(.collapsing){
-    display: none;
-  }
 }
