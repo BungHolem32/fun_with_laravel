@@ -15,7 +15,14 @@ body{
     box-shadow: inset 0px 0px 0px #cdb12f, 0px 0px 1px #cdb12f;
   }
 }
-
+.npad{
+  padding: 0;
+}
+.npads{
+  > *{
+  padding: 0;
+  }
+}
 
 label.error {
   background: #fff;
@@ -47,15 +54,35 @@ label.error {
     .margin-left(-10px);
   }
 }
-
+.pull-right-childs{
+  float: @right;
+  > *{
+    float: @right;
+  }
+}
+.pull-left-childs{
+  float: @left;
+  > *{
+    float: @left;
+  }
+}
+#bs-navbar{
+  width: 100%;
+}
+.nav > li > a:hover, .nav > li > a {
+  width: 100%;
+  &:focus{
+    background-color: transparent;
+  }
+}
 // custom
 
 // new font -- samsungsharpsans
-.newfont('samsungsharpsans-regular');
-.newfont('samsungsharpsans-medium');
-.newfont('samsungsharpsans-bold');
+.newfont('samsungsharpsans-regular_v2');
+.newfont('samsungsharpsans-medium_v2');
+.newfont('samsungsharpsans-bold_v2');
 body{
-  font-family: 'samsungsharpsans-regular';
+  font-family: 'samsungsharpsans-regular_v2';
 }
 .background(@img){
   @img_f: '/img/lp/generalbinary/';
@@ -71,16 +98,45 @@ body{
 
 }
 .head{
-  .background('big-pic.jpg');
-  width: 100%;
-  height: 696px;
-  background-size: 100%;
-  background-position: 50% 0%;
+  .bg{
+    .background('big-pic.jpg');
+    width: 100%;
+    height: 621px;
+    background-size: 100%;
+    background-position: 50% 0;
+  }
 
   .logo{
     .background('logo.png');
     width: 215px;
     height: 43px;
   }
+  .texts{
+    background: #000;
+    height: 75px;
+    text-align: center;
+    font-size: 11px;
+    .email,.call{
+     // max-width: 155px;
+    }
+    .lchat{
+      //max-width: 70px;
+    }
+  }
 
+}
+
+.navbar-header{
+  display: none;
+}
+#bs-navbar{
+  display: block;
+}
+@media(max-width: @screen-sm){
+  .navbar-header{
+    display: block;
+  }
+  #bs-navbar:not(.in):not(.collapsing){
+    display: none;
+  }
 }

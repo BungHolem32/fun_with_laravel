@@ -11573,6 +11573,12 @@ body {
   border: 1px solid #cdb12f;
   box-shadow: inset 0px 0px 0px #cdb12f, 0px 0px 1px #cdb12f;
 }
+.npad {
+  padding: 0;
+}
+.npads > * {
+  padding: 0;
+}
 label.error {
   background: #fff;
   border: 1px dashed #D68E7A;
@@ -11606,23 +11612,46 @@ label.error:after {
   border-width: 6px;
   margin-right: -10px;
 }
-@font-face {
-  font-family: 'samsungsharpsans-regular';
-  src: url('/fonts/samsungsharpsans-regular.eot');
-  src: url('/fonts/samsungsharpsans-regular.eot?#iefix') format('embedded-opentype'), url('/fonts/samsungsharpsans-regular.woff2') format('woff2'), url('/fonts/samsungsharpsans-regular.woff') format('woff'), url('/fonts/samsungsharpsans-regular.ttf') format('truetype'), url('/fonts/samsungsharpsans-regular.svg#svgFontName') format('svg');
+.pull-right-childs {
+  float: left;
+}
+.pull-right-childs > * {
+  float: left;
+}
+.pull-left-childs {
+  float: right;
+}
+.pull-left-childs > * {
+  float: right;
+}
+#bs-navbar {
+  width: 100%;
+}
+.nav > li > a:hover,
+.nav > li > a {
+  width: 100%;
+}
+.nav > li > a:hover:focus,
+.nav > li > a:focus {
+  background-color: transparent;
 }
 @font-face {
-  font-family: 'samsungsharpsans-medium';
-  src: url('/fonts/samsungsharpsans-medium.eot');
-  src: url('/fonts/samsungsharpsans-medium.eot?#iefix') format('embedded-opentype'), url('/fonts/samsungsharpsans-medium.woff2') format('woff2'), url('/fonts/samsungsharpsans-medium.woff') format('woff'), url('/fonts/samsungsharpsans-medium.ttf') format('truetype'), url('/fonts/samsungsharpsans-medium.svg#svgFontName') format('svg');
+  font-family: 'samsungsharpsans-regular_v2';
+  src: url('/fonts/samsungsharpsans-regular_v2.eot');
+  src: url('/fonts/samsungsharpsans-regular_v2.eot?#iefix') format('embedded-opentype'), url('/fonts/samsungsharpsans-regular_v2.woff2') format('woff2'), url('/fonts/samsungsharpsans-regular_v2.woff') format('woff'), url('/fonts/samsungsharpsans-regular_v2.ttf') format('truetype'), url('/fonts/samsungsharpsans-regular_v2.svg#svgFontName') format('svg');
 }
 @font-face {
-  font-family: 'samsungsharpsans-bold';
-  src: url('/fonts/samsungsharpsans-bold.eot');
-  src: url('/fonts/samsungsharpsans-bold.eot?#iefix') format('embedded-opentype'), url('/fonts/samsungsharpsans-bold.woff2') format('woff2'), url('/fonts/samsungsharpsans-bold.woff') format('woff'), url('/fonts/samsungsharpsans-bold.ttf') format('truetype'), url('/fonts/samsungsharpsans-bold.svg#svgFontName') format('svg');
+  font-family: 'samsungsharpsans-medium_v2';
+  src: url('/fonts/samsungsharpsans-medium_v2.eot');
+  src: url('/fonts/samsungsharpsans-medium_v2.eot?#iefix') format('embedded-opentype'), url('/fonts/samsungsharpsans-medium_v2.woff2') format('woff2'), url('/fonts/samsungsharpsans-medium_v2.woff') format('woff'), url('/fonts/samsungsharpsans-medium_v2.ttf') format('truetype'), url('/fonts/samsungsharpsans-medium_v2.svg#svgFontName') format('svg');
+}
+@font-face {
+  font-family: 'samsungsharpsans-bold_v2';
+  src: url('/fonts/samsungsharpsans-bold_v2.eot');
+  src: url('/fonts/samsungsharpsans-bold_v2.eot?#iefix') format('embedded-opentype'), url('/fonts/samsungsharpsans-bold_v2.woff2') format('woff2'), url('/fonts/samsungsharpsans-bold_v2.woff') format('woff'), url('/fonts/samsungsharpsans-bold_v2.ttf') format('truetype'), url('/fonts/samsungsharpsans-bold_v2.svg#svgFontName') format('svg');
 }
 body {
-  font-family: 'samsungsharpsans-regular';
+  font-family: 'samsungsharpsans-regular_v2';
 }
 .container {
   max-width: 1688px;
@@ -11630,19 +11659,39 @@ body {
   height: 100%;
   margin: 0 auto;
 }
-.head {
+.head .bg {
   background: url('/img/lp/generalbinary/big-pic.jpg');
   background-repeat: no-repeat;
   width: 100%;
-  height: 696px;
+  height: 621px;
   background-size: 100%;
-  background-position: 50% 0%;
+  background-position: 50% 0;
 }
 .head .logo {
   background: url('/img/lp/generalbinary/logo.png');
   background-repeat: no-repeat;
   width: 215px;
   height: 43px;
+}
+.head .texts {
+  background: #000;
+  height: 75px;
+  text-align: center;
+  font-size: 11px;
+}
+.navbar-header {
+  display: none;
+}
+#bs-navbar {
+  display: block;
+}
+@media (max-width: 768px) {
+  .navbar-header {
+    display: block;
+  }
+  #bs-navbar:not(.in):not(.collapsing) {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=generalbinary-1.css.map */
