@@ -63,6 +63,8 @@
                     $(form).after(loadingMsg);
                     $(form).find('input').addClass('visible-hidden');
                     $(form).find('input#submit').addClass('nofocus');
+                    if($(form).find('.g-recaptcha').length)
+                        $(form).find('.g-recaptcha').hide();
                 },
                 success: function(res) {
                     if(res.err === 0){
@@ -75,6 +77,8 @@
                         alert(res.errs.error);
                         $('div.loading').remove();
                         $(form).find('input').removeClass('visible-hidden');
+                        if($(form).find('.g-recaptcha').length)
+                            $(form).find('.g-recaptcha').show();
                     }
                 }
             });

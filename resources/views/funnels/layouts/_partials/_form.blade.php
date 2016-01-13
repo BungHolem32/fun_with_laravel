@@ -62,6 +62,9 @@ foreach($form->membersFields->getChildren() as $field){
                 </div>
             @elseif($field[0] == 'submit')
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 field">
+                    @if($form->switches->recaptcha)
+                        <div class="g-recaptcha" data-sitekey="6Ld39RMTAAAAALVGhMswy185zq0C2bmP-gydSrSI"></div>
+                    @endif
                     <input type="{{ $field[0] }}" id="{{ $field[1] }}" class="form-control col-md-10" name="{{ $field[1] }}" value="{{ \App\Languages::getTrans($field[2]) }}" data-cip-id="{{ $field[1] }}">
                 </div>
             @endif
