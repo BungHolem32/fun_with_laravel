@@ -28,6 +28,7 @@ class Kernel extends HttpKernel {
         'spotAuth' => 'App\Http\Middleware\spotAuth',
 		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
 		'guest' => 'App\Http\Middleware\RedirectIfAuthenticated',
+		'Recaptcha' => 'App\Http\Middleware\Recaptcha'
 	];
 
 }

@@ -57,8 +57,8 @@
             {!! Form::textarea('bodyEndScripts', $page['scripts']['bodyEndScripts'], ['name'=>'mongo[scripts][bodyEndScripts]', 'class'=>'direction form-control']) !!}
         </div>
         <div class="form-group">
-            {!! Form::checkbox('mongo[switches][recaptcha]', $page['switches']['recaptcha']) !!}
-            {!! Form::label('recaptcha', 'Show Recaptcha') !!}
+            {!! Form::input('mongo[switches][recaptcha]', $page['switches']['recaptcha'], ['size'=>2]) !!}
+            {!! Form::label('recaptcha', 'Show Recaptcha after IP has registered this many accounts in one day. (Leave empty to never show.) ') !!}
         </div>
     </div>
 @endsection

@@ -18,7 +18,7 @@ class IpLog extends Entity
     private $date;
     private $action;
 
-    public static function count($ip, $time=24*60*60, $action=null){
+    public static function count($ip, $action=null, $time=24*60*60){
         $sql = 'SELECT count(*) `count` from `ip_logs` where `ip`=? AND `time` > ? ';
         $params = [$ip, date('Y-m-d H:i:s', time() - $time)];
         if($action){

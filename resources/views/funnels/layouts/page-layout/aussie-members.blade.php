@@ -51,7 +51,7 @@
 
                                 </div>
                                 <div class="form second">
-                                    @include('funnels.layouts._partials._form', ['funnelId' => $page->getParent()->id])
+                                    @include('funnels.layouts._partials._form', ['funnelId' => $page->getParent()->id, 'form'=>$form, 'show_recaptcha'=>$show_recaptcha])
                                 </div>
                         </center></td>
                     </tr>

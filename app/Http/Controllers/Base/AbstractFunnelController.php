@@ -9,13 +9,18 @@ use Request;
 
 class AbstractFunnelController extends Controller {
 
+    protected $show_recaptcha = false;
+    protected $form = null;
 
     public function index($page)
     {
         /*if(Request::get('rs') == 1){
             $page->
         }*/
-        return view($this->dirName().'/index')->with('page', $page);
+        return view($this->dirName().'/index')
+                    ->with('page', $page)
+                    ->with('show_recaptcha', $this->show_recaptcha)
+                    ->with('form', $this->form);
         //return view('funnels.funnelClean')->with('page', $page);
     }
 
