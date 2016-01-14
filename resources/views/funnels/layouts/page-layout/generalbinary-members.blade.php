@@ -22,7 +22,7 @@
                         </div>
                         <nav id="bs-navbar" class="collapse navbar-collapse">
                             <ul class="nav navbar-nav pull-right">
-                                <li><a class="col-md-2" href="mailto:cs@rboptions.com"><i class="fa fa-email"></i>Email: cs@rboptions.com</a></li>
+                                <li><a class="col-md-2" href="mailto:cs@rboptions.com"><i class="fa fa-envelope"></i>Email: cs@rboptions.com</a></li>
                                 <li><a class="col-md-1" href=""><i class="fa fa-circle"></i>Live chat</a></li>
                                 <li><a class="col-md-2" href="tel:1-647-846-8231"><i class="fa fa-phone"></i>Call us: 1-647-846-8231</a></li>
                             </ul>
