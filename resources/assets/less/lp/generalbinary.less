@@ -67,7 +67,9 @@ label.error {
   }
 }
 #bs-navbar{
-  width: 300px;
+  @media(max-width: @screen-sm) {
+    width: 300px;
+  }
   overflow-x: hidden;
   > ul{
     position: relative;
@@ -92,12 +94,19 @@ label.error {
 #bs-navbar{
   display: block;
 }
+.nav > li > a:hover, .nav > li > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+}
 @media(max-width: @screen-sm){
   .navbar-header{
     display: block;
   }
   #bs-navbar:not(.in):not(.collapsing){
     display: none;
+  }
+  .nav > li > a:hover, .nav > li > a:focus {
+    background-color: rgba(255,255,255,0.3);
   }
 }
 
@@ -116,13 +125,17 @@ body{
   background-repeat: no-repeat;
 }
 
+
 .container{
   max-width: 1688px;
+  float: none;
+  margin: 0 auto;
+}
+.container:not(.col){
   width: 100%;
   height: 100%;
-  margin: 0 auto;
-
 }
+
 .head{
   .bg{
     .background('big-pic.jpg');
@@ -136,17 +149,33 @@ body{
     .background('logo.png');
     width: 215px;
     height: 43px;
+    position: relative;
+    top: -17px;
+    right: 3px;
   }
   .texts{
     background: #000;
     height: 75px;
     text-align: center;
     font-size: 11px;
-    .email,.call{
-     // max-width: 155px;
+
+    .container{
+      padding: 23px 45px;
     }
-    .lchat{
-      //max-width: 70px;
+    a{
+      color: #fff;
+      i{
+        margin-right: 6px;
+        &.fa-circle{
+          color: rgba(4,143,26,1);
+        }
+        &.fa-phone{
+          font-size: 15px;
+        }
+        &.fa-email{
+          .fsize(1.4,1.2);
+        }
+      }
     }
   }
 

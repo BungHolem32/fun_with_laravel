@@ -70,3 +70,14 @@
     url('/fonts/@{name}.svg#svgFontName') format('svg');
   }
 }
+
+.fsize(@w,@h){
+  -webkit-transform:scale(@w, @h);
+  -moz-transform:scale(@w, @h);
+  -ms-transform:scale(@w, @h);
+  -o-transform:scale(@w, @h);
+  transform:scale(@w,@h);
+}
+.fa-email{
+  .fa-envelope;
+}
