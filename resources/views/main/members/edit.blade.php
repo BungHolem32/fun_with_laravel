@@ -54,5 +54,9 @@
             {!! Form::label('bodyEndScripts', 'before </body> Scripts:') !!}
             {!! Form::textarea('bodyEndScripts', $page['scripts']['bodyEndScripts'], ['name'=>'mongo[scripts][bodyEndScripts]', 'class'=>'form-control']) !!}
         </div>
+        <div class="form-group">
+            {!! Form::checkbox('mongo[switches][recaptcha]', $page['switches']['recaptcha']) !!}
+            {!! Form::label('recaptcha', 'Show Recaptcha') !!}
+        </div>
     </div>
 @endsection
