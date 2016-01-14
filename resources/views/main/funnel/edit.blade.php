@@ -19,12 +19,12 @@
 
     <div class="form-group">
         <h3><i class="fa fa-video-camera"></i> {!! Form::label('video', 'Video link:') !!}</h3>
-        {!! Form::text('video', $page['video'], ['name'=>'mongo[video]', 'class'=>'direction form-control']) !!}
+        {!! Form::text('video', $page['video'], ['name'=>'mongo[video]', 'class'=>'form-control']) !!}
     </div>
 
     <div class="form-group">
         <h3><i class="fa fa-link"></i> {!! Form::label('destinationSite', 'Destination Site:') !!}</h3>
-        {!! Form::text('destinationSite', $page['destinationSite'], ['name'=>'mongo[destinationSite]', 'class'=>'direction form-control']) !!}
+        {!! Form::text('destinationSite', $page['destinationSite'], ['name'=>'mongo[destinationSite]', 'class'=>'form-control']) !!}
     </div>
 
     <div class="form-group">
@@ -58,7 +58,7 @@
         {!! Form::textarea('onExitPopupMsg', $page['onExitPopup']['msg'], ['name'=>'mongo[onExitPopup][msg]', 'class'=>'direction form-control']) !!}
 
         {!! Form::label('onExitPopupLink', 'Link:') !!}
-        {!! Form::text('onExitPopupLink', $page['onExitPopup']['link'], ['name'=>'mongo[onExitPopup][link]', 'class'=>'direction editor form-control']) !!}
+        {!! Form::text('onExitPopupLink', $page['onExitPopup']['link'], ['name'=>'mongo[onExitPopup][link]', 'class'=>'editor form-control']) !!}
     </div>
 
 @endsection

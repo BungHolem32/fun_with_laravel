@@ -6413,6 +6413,10 @@ body {
   text-align: right;
   direction: rtl;
 }
+.ltr .direction {
+  text-align: left;
+  direction: ltr;
+}
 h1 {
   text-align: center;
 }
@@ -9506,4 +9510,7 @@ body {
   margin-left: 9px;
 }
 
+.mce-edit-area iframe html{
+  direction: rtl;
+}
 /*# sourceMappingURL=admin.css.map */

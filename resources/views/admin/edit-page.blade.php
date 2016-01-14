@@ -16,9 +16,7 @@
                 {!! Form::label('title', 'System Title:') !!}
                 {!! Form::text('title', $page['title'], ['name'=>'mongo[title]', 'class'=>'form-control']) !!}
             </div>
-            <div id="dir" class="{{Request::local()->dir == '1' ? $dir = 'rtl' : $dir = 'ltr'}}">
-                @yield('edit')
-            </div>
+            @yield('edit')
             <div class="form-group">
                 {!! Form::submit('save page', ['class'=>'btn btn-primary']) !!}
             </div>

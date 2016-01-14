@@ -3,7 +3,8 @@
 <head>
     @include('admin.layouts._head')
 </head>
-<body>
+<body class="{{Request::local()->dir == '1' ? 'rtl' : 'ltr'}}"
+      data-dir="{{Request::local()->dir == '1' ? 'rtl' : 'ltr'}}">
 <div id="wrapper">
 
     <!-- Sidebar -->
