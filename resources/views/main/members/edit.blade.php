@@ -11,8 +11,7 @@
         {!! Form::label('formType', 'Chose Form Type:') !!}
         {!! Form::select('formType', $page->controller->getForms(),
         $page['formType'],
-        ['name'=>'mongo[formType]',
-        'class'=>'form-control']) !!}
+        ['name'=>'mongo[formType]', 'class'=>'form-control']) !!}
     </div>
 
     <div class="form-group">
@@ -27,7 +26,7 @@
 
     <div class="form-group">
         <h3><i class="fa fa-video-camera"></i> {!! Form::label('video', 'Video link:') !!}</h3>
-        {!! Form::text('video', $page['video'], ['name'=>'mongo[video]', 'class'=>'direction form-control']) !!}
+        {!! Form::text('video', $page['video'], ['name'=>'mongo[video]', 'class'=>'form-control']) !!}
     </div>
 
     <div class="form-group">
@@ -46,15 +45,15 @@
         <h3><i class="fa fa-google"></i> Analytics & Scripts</h3>
         <div class="form-group">
             {!! Form::label('headScripts', 'before </head> Scripts:') !!}
-            {!! Form::textarea('headScripts', $page['scripts']['headScripts'], ['name'=>'mongo[scripts][headScripts]', 'class'=>'direction form-control']) !!}
+            {!! Form::textarea('headScripts', $page['scripts']['headScripts'], ['name'=>'mongo[scripts][headScripts]', 'class'=>'form-control']) !!}
         </div>
         <div class="form-group">
             {!! Form::label('afterBodyScripts', 'After <body> Scripts:') !!}
-            {!! Form::textarea('afterBodyScripts', $page['scripts']['afterBodyScripts'], ['name'=>'mongo[scripts][afterBodyScripts]', 'class'=>'direction form-control']) !!}
+            {!! Form::textarea('afterBodyScripts', $page['scripts']['afterBodyScripts'], ['name'=>'mongo[scripts][afterBodyScripts]', 'class'=>'form-control']) !!}
         </div>
         <div class="form-group">
             {!! Form::label('bodyEndScripts', 'before </body> Scripts:') !!}
-            {!! Form::textarea('bodyEndScripts', $page['scripts']['bodyEndScripts'], ['name'=>'mongo[scripts][bodyEndScripts]', 'class'=>'direction form-control']) !!}
+            {!! Form::textarea('bodyEndScripts', $page['scripts']['bodyEndScripts'], ['name'=>'mongo[scripts][bodyEndScripts]', 'class'=>'form-control']) !!}
         </div>
         <div class="form-group">
             {!! Form::text('recaptcha', $page['switches']['recaptcha'], ['name'=>'mongo[switches][recaptcha]', 'class'=>'direction form-control']) !!}
