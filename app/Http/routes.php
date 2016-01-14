@@ -81,7 +81,7 @@ Route::group(['middleware' => 'auth', 'prefix'=>'admin'], function(){
  **/
 
 Route::get('getLocation',   ['uses' => 'FormController@location'] );
-Route::post('postForm',     ['uses' => 'FormController@postForm'] );
+Route::post('postForm',     ['middleware'=>['Recaptcha'], 'uses' => 'FormController@postForm'] );
 Route::post('postEmailForm', ['uses' => 'FormController@postEmailForm'] );
 
 Route::post('ajax/refresh', ['uses' => 'PanelController@refresh'] );
