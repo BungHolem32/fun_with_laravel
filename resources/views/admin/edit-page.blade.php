@@ -16,7 +16,9 @@
                 {!! Form::label('title', 'System Title:') !!}
                 {!! Form::text('title', $page['title'], ['name'=>'mongo[title]', 'class'=>'form-control']) !!}
             </div>
-            @yield('edit')
+            <div class="rtl">
+                @yield('edit')
+            </div>
             <div class="form-group">
                 {!! Form::submit('save page', ['class'=>'btn btn-primary']) !!}
             </div>
