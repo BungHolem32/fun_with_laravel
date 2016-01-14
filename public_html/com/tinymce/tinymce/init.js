@@ -1,4 +1,8 @@
+var dir = '';
+if($('#dir').prop('class').length)
+    dir = $('#dir').prop('class');
 var mceParameters = {
+    body_class: dir,
     theme: "modern",
         height: 300,
         /*plugins: [
@@ -57,15 +61,13 @@ var mceParameters = {
         {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
     ]
 };
-
 tinymce.init($.extend(true, {
-    selector: "textarea.editor.rtl",
-    body_class: 'rtl'
+    selector: "textarea.editor",
 },  mceParameters
 ));
 
-tinymce.init($.extend(true, {
-    selector: "textarea.editor.ltr",
-    body_class: 'ltr',
-},  mceParameters
-));
+if($('.textarea.editor.direction').prop('class').length)
+    tinymce.init($.extend(true, {
+        selector: "textarea.editor.direction "+dir,
+    },  mceParameters
+    ));

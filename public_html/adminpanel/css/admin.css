@@ -6409,7 +6409,7 @@ label,
 body {
   background-color: #EDEDED;
 }
-.direction.rtl {
+.rtl .direction {
   text-align: right;
   direction: rtl;
 }

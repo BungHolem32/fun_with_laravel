@@ -16,7 +16,7 @@
                 {!! Form::label('title', 'System Title:') !!}
                 {!! Form::text('title', $page['title'], ['name'=>'mongo[title]', 'class'=>'form-control']) !!}
             </div>
-            <div class="rtl">
+            <div id="dir" class="{{Request::local()->dir == '1' ? $dir = 'rtl' : $dir = 'ltr'}}">
                 @yield('edit')
             </div>
             <div class="form-group">
