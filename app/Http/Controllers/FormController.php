@@ -24,8 +24,6 @@ class FormController extends Controller {
     public function location(){
         //$ip = '213.136.90.209';
         $ip = Request::ip();
-        //$ip=($_SERVER["HTTP_X_FORWARDED_FOR"] ? $_SERVER["HTTP_X_FORWARDED_FOR"] :
-        //$_SERVER["REMOTE_ADDR"]);
         $location = file_get_contents('http://api-v2.rboptions.com/locator/'.$ip);
         echo $location;
     }
@@ -43,7 +41,6 @@ class FormController extends Controller {
                 \Session::flash('flashMsg', $ans['errs']['error']);
             $res['destination'] = $this->getDestination();
         }
-
         echo json_encode($res);
     }
 
@@ -76,7 +73,6 @@ class FormController extends Controller {
                 $errMsg = isset($ans['error']) ? $ans['error'] : 'invalid email address';
                 $res['errs']['error'] = $res['msg'] = Languages::getTrans($errMsg);
             }
-
 
         }
 
