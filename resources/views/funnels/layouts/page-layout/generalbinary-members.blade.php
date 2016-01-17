@@ -13,7 +13,7 @@
     <div class="head">
         <div class="col-xs-12 npad">
             <div class="col-xs-12 texts">
-                <div class="container col col-xs-8">
+                <div class="container col col-xs-8 col-md-10">
                     <div class="pull-left col-xs-3"><div class="logo"></div></div>
                     <div class="pull-right-childs col-sm-9 col-xs-2 npads">
                         <div class="navbar-header">

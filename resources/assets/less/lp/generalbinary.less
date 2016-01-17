@@ -68,18 +68,32 @@ label.error {
     float: @left;
   }
 }
-#bs-navbar{
+.navbar-header {
   @media(max-width: @screen-sm) {
-    width: 300px;
-  }
-  overflow-x: hidden;
-  > ul{
     position: relative;
-    z-index: 9999999999;
+    top: -14px;
+  }
+}
+.navbar-toggle {
+  margin-right: -11px;
+}
+@media(max-width: @screen-sm){
+  #bs-navbar {
+    width: 300px;
+    overflow-x: hidden;
+    > ul {
+      position: relative;
+      z-index: 9999999999;
+      background: rgba(0, 0, 0, 0.8);
+      margin: 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
   }
 }
 .nav > li > a:hover, .nav > li > a {
   width: 100%;
+  border-bottom: 1px solid #ccc;
   &:focus{
     background-color: transparent;
   }
@@ -117,9 +131,9 @@ label.error {
   form{
     max-width: 1182px;
     margin: 0 auto;
-    height: 65px;
   }
   .field{
+    position: relative;
     display: inline-block;
     .margin-right(10px);
   }
@@ -136,6 +150,7 @@ label.error {
         margin: 0 !important;
         input{
           max-width: 100%;
+          margin-bottom: 8px;
         }
       }
     }
@@ -306,24 +321,59 @@ body{
 }
 
 @media(max-width: 1265px){
-  form{
-    &:after,&:before{
-      width: 20% !important;
-      background-size: contain !important;
+  .bg{
+    background: #000 url('/img/lp/generalbinary/big-pic.jpg');
+    background-position: 50% 111px;
+    height: auto !important;
+  }
+  .form{
+    position: relative !important;
+    padding-top: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid transparent;
+    .border-radius(5px);
+    width: 98%;
+    .margin-left(1%);
+    margin-bottom: 1%;
+    #prefix{
+      width: 20%;
+      max-width: 100%;
     }
-    &:before{
-      right: 5px;
+    #phone{
+      float: right;
+      width: 78%;
+      max-width: 100%;
     }
-    &:after{
-      left: 5px;
+    #submit{
+      margin: 0 auto;
+    }
+
+    form{
+      &:after,&:before{
+        width: 20% !important;
+        background-size: contain !important;
+      }
+      &:before{
+        right: 5px !important;
+      }
+      &:after{
+        left: 5px !important;
+      }
     }
   }
+
 }
 
 @media(max-width: @screen-md) {
+  .bg{
+    background: #000 !important;
+  }
   form {
     &:after, &:before {
       display: none;
+    }
+    input{
+      height: 35px;
     }
   }
 }

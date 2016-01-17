@@ -11626,21 +11626,33 @@ label.error:after {
 .pull-left-childs > * {
   float: left;
 }
-#bs-navbar {
-  overflow-x: hidden;
+@media (max-width: 768px) {
+  .navbar-header {
+    position: relative;
+    top: -14px;
+  }
+}
+.navbar-toggle {
+  margin-right: -11px;
 }
 @media (max-width: 768px) {
   #bs-navbar {
     width: 300px;
+    overflow-x: hidden;
   }
-}
-#bs-navbar > ul {
-  position: relative;
-  z-index: 9999999999;
+  #bs-navbar > ul {
+    position: relative;
+    z-index: 9999999999;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
 }
 .nav > li > a:hover,
 .nav > li > a {
   width: 100%;
+  border-bottom: 1px solid #ccc;
 }
 .nav > li > a:hover:focus,
 .nav > li > a:focus {
@@ -11678,9 +11690,9 @@ label.error:after {
 .form form {
   max-width: 1182px;
   margin: 0 auto;
-  height: 65px;
 }
 .form .field {
+  position: relative;
   display: inline-block;
   margin-right: 10px;
 }
@@ -11699,6 +11711,7 @@ label.error:after {
   }
   .form .fields .field input {
     max-width: 100%;
+    margin-bottom: 8px;
   }
 }
 .form input {
@@ -11863,22 +11876,60 @@ body {
   background-position: -9px -67px;
 }
 @media (max-width: 1265px) {
-  form:after,
-  form:before {
+  .bg {
+    background: #000 url('/img/lp/generalbinary/big-pic.jpg');
+    background-position: 50% 111px;
+    height: auto !important;
+  }
+  .form {
+    position: relative !important;
+    padding-top: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid transparent;
+    -webkit-border-radius: 5px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 5px;
+    -moz-background-clip: padding;
+    border-radius: 5px;
+    background-clip: padding-box;
+    width: 98%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+  }
+  .form #prefix {
+    width: 20%;
+    max-width: 100%;
+  }
+  .form #phone {
+    float: right;
+    width: 78%;
+    max-width: 100%;
+  }
+  .form #submit {
+    margin: 0 auto;
+  }
+  .form form:after,
+  .form form:before {
     width: 20% !important;
     background-size: contain !important;
   }
-  form:before {
-    right: 5px;
+  .form form:before {
+    right: 5px !important;
   }
-  form:after {
-    left: 5px;
+  .form form:after {
+    left: 5px !important;
   }
 }
 @media (max-width: 992px) {
+  .bg {
+    background: #000 !important;
+  }
   form:after,
   form:before {
     display: none;
+  }
+  form input {
+    height: 35px;
   }
 }
 
