@@ -11479,6 +11479,15 @@ body {
   width: 100%;
   float: right;
 }
+/*
+.fa-email{
+  .fa-envelope;
+}*/
+h1,
+h2,
+h3 {
+  height: auto;
+}
 div.mobile-wrap {
   box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.2);
 }
@@ -11553,6 +11562,9 @@ body {
   padding-top: 0px;
   background: transparent;
   position: relative;
+}
+.form-control {
+  box-shadow: none;
 }
 #prefix:focus,
 #phone:focus {
@@ -11659,6 +11671,51 @@ label.error:after {
     background-color: rgba(255, 255, 255, 0.3);
   }
 }
+.form {
+  width: 100%;
+}
+.form form {
+  max-width: 1182px;
+  margin: 0 auto;
+  height: 65px;
+}
+.form .field {
+  display: inline-block;
+  margin-left: 10px;
+}
+@media (max-width: 1265px) {
+  .form .fields {
+    max-width: 100%;
+    min-width: 300px;
+    width: 40%;
+    margin: 0 auto !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+  .form .fields .field {
+    display: block;
+    margin: 0 !important;
+  }
+  .form .fields .field input {
+    max-width: 100%;
+  }
+}
+.form input {
+  max-width: 170px;
+  border: 0;
+  border-radius: 0;
+  height: 49px;
+  padding: 6px 12px;
+}
+.form #submit {
+  max-width: 100%;
+}
+.form #prefix {
+  max-width: 43px;
+}
+.form #phone {
+  max-width: 120px;
+}
 @font-face {
   font-family: 'samsungsharpsans-regular_v2';
   src: url('/fonts/samsungsharpsans-regular_v2.eot');
@@ -11675,6 +11732,7 @@ label.error:after {
   src: url('/fonts/samsungsharpsans-bold_v2.eot?#iefix') format('embedded-opentype'), url('/fonts/samsungsharpsans-bold_v2.woff2') format('woff2'), url('/fonts/samsungsharpsans-bold_v2.woff') format('woff'), url('/fonts/samsungsharpsans-bold_v2.ttf') format('truetype'), url('/fonts/samsungsharpsans-bold_v2.svg#svgFontName') format('svg');
 }
 body {
+  color: #fff;
   font-family: 'samsungsharpsans-regular_v2';
 }
 .container {
@@ -11686,21 +11744,14 @@ body {
   width: 100%;
   height: 100%;
 }
-.head .bg {
-  background: url('/img/lp/generalbinary/big-pic.jpg');
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 621px;
-  background-size: 100%;
-  background-position: 50% 0;
-}
 .head .logo {
   background: url('/img/lp/generalbinary/logo.png');
   background-repeat: no-repeat;
   width: 215px;
   height: 43px;
   position: relative;
-  top: -13px;
+  top: -17px;
+  left: 3px;
 }
 .head .texts {
   background: #000;
@@ -11709,13 +11760,13 @@ body {
   font-size: 11px;
 }
 .head .texts .container {
-  padding: 23px 65px;
+  padding: 23px 45px;
 }
 .head .texts a {
   color: #fff;
 }
 .head .texts a i {
-  margin-right: 6px;
+  margin-left: 6px;
 }
 .head .texts a i.fa-circle {
   color: #048f1a;
@@ -11723,9 +11774,111 @@ body {
 .head .texts a i.fa-phone {
   font-size: 15px;
 }
-.head .texts a i.fa-email {
+.head .texts a i.fa-envelope {
   -webkit-transform: scale(1.4, 1.2);
   transform: scale(1.4, 1.2);
+  position: relative;
+  top: -2px;
+}
+.head .bg {
+  background: url('/img/lp/generalbinary/big-pic.jpg');
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 621px;
+  background-position: 50% 0;
+}
+@media (min-width: 1900px) {
+  .head .bg {
+    background-size: 100%;
+  }
+}
+.head .bg h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 43px;
+  margin-top: 24px;
+  font-weight: bold;
+  font-family: samsungsharpsans-bold_v2;
+}
+.head .bg h1 span {
+  color: #55b5ff;
+}
+.head .bg h2 {
+  color: #fff;
+  text-align: center;
+}
+.head .bg .form {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.head .bg .form h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 18.5px;
+  font-family: samsungsharpsans-medium_v2;
+}
+.head .bg .form form {
+  position: relative;
+}
+.head .bg .form form:before {
+  background: url('/img/lp/generalbinary/arrow-right.png');
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -36px;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  max-width: 314px;
+}
+.head .bg .form form:after {
+  background: url('/img/lp/generalbinary/arrow-left.png');
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -36px;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  max-width: 314px;
+}
+.head .bg .form form .fields {
+  position: relative;
+  right: 39px;
+  top: -15px;
+  z-index: 9;
+}
+.head .bg .form form #submit {
+  box-shadow: none;
+  background: url('/img/lp/generalbinary/icons_32.png');
+  background-repeat: no-repeat;
+  width: 199px;
+  height: 63px;
+  background-position: -9px 2px;
+}
+.head .bg .form form #submit:hover {
+  background-position: -9px -67px;
+}
+@media (max-width: 1265px) {
+  form:after,
+  form:before {
+    width: 20% !important;
+    background-size: contain !important;
+  }
+  form:before {
+    right: 5px;
+  }
+  form:after {
+    left: 5px;
+  }
+}
+@media (max-width: 992px) {
+  form:after,
+  form:before {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=generalbinary-1.css.map */
