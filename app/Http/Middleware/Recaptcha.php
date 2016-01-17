@@ -22,7 +22,6 @@ class Recaptcha
                 return \Redirect::back()->with('error', Languages::getTrans('Cookies must be enabled to use this site.'));
 
 
-            $pass = true;
             if($check_recaptcha) {
                 $secret = '6Ld39RMTAAAAAPZmYhrvY0sZ1FpwcFSC0oXf9jTn';
                 $url = "https://www.google.com/recaptcha/api/siteverify?secret=" . $secret . "&response=" . \Request::get('g-recaptcha-response') . "&remoteip=" . $_SERVER['REMOTE_ADDR'];
@@ -36,14 +35,12 @@ class Recaptcha
                 $res = $curlData;
                 $res = json_decode($res, true);
                 if(!$res['success']){
-                    $pass = false;
+                    return ['err'=>1, 'errs'=>['error'=>Languages::getTrans('Incorrect Captcha')]];
                 }
             }
 
-        if($pass)
             return $next($request);
 
-        return 'Too many accounts created.';
     }
 
 }
