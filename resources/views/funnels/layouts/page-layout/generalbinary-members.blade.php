@@ -18,7 +18,7 @@
                     <div class="pull-right-childs col-sm-9 col-xs-2 npads">
                         <div class="navbar-header">
                             <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
-                            <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                                <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                         </div>
                         <nav id="bs-navbar" class="collapse navbar-collapse">
                             <ul class="nav navbar-nav pull-right">
@@ -30,13 +30,23 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-12 bg"></div>
+            <div class="col-xs-12 bg">
+                <h1>Try a Binary Platform <span>That's Simple& Exciting!</span></h1>
+                <h2>Free education & More options Help You succeed</h2>
+                <div class="form">
+                    <h3>Complete This Form & Start Trading Binary Options Now</h3>
+                    <style>
+                        .g-recaptcha{
+                            display:none;
+                        }
+                    </style>
+                    @include('funnels.layouts._partials._form-horizontal', ['funnelId' => $page->id])
+                </div>
+            </div>
         </div>
     </div>
 
 
 
-        <div class="form">
-            {{--@include('funnels.layouts._partials._form-horizontal', ['funnelId' => $page->id])--}}
-        </div>
+
 @endsection
