@@ -15,7 +15,6 @@
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
-
 @font-face {
   font-family: 'FontAwesome';
   src: url('../fonts/fontawesome-webfont.eot?v=4.5.0');
@@ -11564,6 +11563,17 @@ body {
   background: transparent;
   position: relative;
 }
+.table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.table > div {
+  display: table-cell;
+}
+.full-w {
+  width: 100%;
+}
 .form-control {
   box-shadow: none;
 }
@@ -11580,6 +11590,12 @@ body {
 }
 .npads > * {
   padding: 0;
+}
+.g-recaptcha {
+  margin-bottom: 5px;
+  position: absolute;
+  right: 0;
+  bottom: -81px;
 }
 label.error {
   background: #fff;
@@ -11652,7 +11668,12 @@ label.error:after {
 .nav > li > a:hover,
 .nav > li > a {
   width: 100%;
-  border-bottom: 1px solid #ccc;
+}
+@media (max-width: 768px) {
+  .nav > li > a:hover,
+  .nav > li > a {
+    border-bottom: 1px solid #ccc;
+  }
 }
 .nav > li > a:hover:focus,
 .nav > li > a:focus {
@@ -11757,6 +11778,10 @@ body {
 .container:not(.col) {
   width: 100%;
   height: 100%;
+}
+.head {
+  display: table;
+  width: 100%;
 }
 .head .logo {
   background: url('/img/lp/generalbinary/logo.png');
@@ -11931,6 +11956,25 @@ body {
   form input {
     height: 35px;
   }
+}
+.main {
+  padding-top: 60px;
+}
+.main .per {
+  color: #081822;
+}
+.main .per .icon {
+  margin-right: 5px;
+}
+.main .per .title {
+  font-family: samsungsharpsans-bold_v2;
+  font-size: 18px;
+  font-weight: bold;
+}
+.main .per .text {
+  padding-left: 51px;
+  padding-top: 16px;
+  padding-bottom: 97px;
 }
 
 /*# sourceMappingURL=generalbinary-0.css.map */

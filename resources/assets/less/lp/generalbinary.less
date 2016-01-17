@@ -5,6 +5,17 @@ body{
   background: transparent;
   position: relative;
 }
+.table{
+  display: table;
+  width: 100%;
+  height: 100%;
+  > div{
+    display: table-cell;
+  }
+}
+.full-w{
+  width: 100%;
+}
 .form-control {
   box-shadow: none;
 }
@@ -24,6 +35,12 @@ body{
   > *{
   padding: 0;
   }
+}
+.g-recaptcha{
+  margin-bottom: 5px;
+  position: absolute;
+  right: 0;
+  bottom: -81px;
 }
 
 label.error {
@@ -93,7 +110,9 @@ label.error {
 }
 .nav > li > a:hover, .nav > li > a {
   width: 100%;
-  border-bottom: 1px solid #ccc;
+  @media(max-width: @screen-sm) {
+    border-bottom: 1px solid #ccc;
+  }
   &:focus{
     background-color: transparent;
   }
@@ -201,6 +220,8 @@ body{
 }
 
 .head{
+  display: table;
+  width: 100%;
   .logo{
     .background('logo.png');
     width: 215px;
@@ -374,6 +395,26 @@ body{
     }
     input{
       height: 35px;
+    }
+  }
+}
+
+.main{
+  padding-top: 60px;
+  .per{
+    color: #081822;
+    .icon{
+      .margin-right(5px);
+    }
+    .title{
+      font-family: samsungsharpsans-bold_v2;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .text{
+      .padding-left(51px);
+      padding-top: 16px;
+      padding-bottom: 97px;
     }
   }
 }

@@ -22,25 +22,72 @@
                         </div>
                         <nav id="bs-navbar" class="collapse navbar-collapse">
                             <ul class="nav navbar-nav pull-right">
-                                <li><a class="col-md-2" href="mailto:cs@rboptions.com"><i class="fa fa-envelope"></i>Email: cs@rboptions.com</a></li>
-                                <li><a class="col-md-1" href=""><i class="fa fa-circle"></i>Live chat</a></li>
-                                <li><a class="col-md-2" href="tel:1-647-846-8231"><i class="fa fa-phone"></i>Call us: 1-647-846-8231</a></li>
+                                <li><a class="col-md-2" href="mailto:cs@rboptions.com"><i class="fa fa-envelope"></i>@ln(Email): cs@rboptions.com</a></li>
+                                <li><a class="col-md-1" href=""><i class="fa fa-circle"></i>@ln(Live chat)</a></li>
+                                <li><a class="col-md-2" href="tel:1-647-846-8231"><i class="fa fa-phone"></i>@ln(Call us): 1-647-846-8231</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
             </div>
             <div class="col-xs-12 bg">
-                <h1>Try a Binary Platform <span>That's Simple& Exciting!</span></h1>
-                <h2>Free education & More options Help You succeed</h2>
+                <h1>@ln(Try a Binary Platform) <span>@ln(That's Simple& Exciting!)</span></h1>
+                <h2>@ln(Free education & More options Help You succeed)</h2>
                 <div class="form">
-                    <h3>Complete This Form & Start Trading Binary Options Now</h3>
-                    <style>
-                        .g-recaptcha{
-                            display:none;
-                        }
-                    </style>
+                    <h3>@ln(Complete This Form & Start Trading Binary Options Now)</h3>
                     @include('funnels.layouts._partials._form-horizontal', ['funnelId' => $page->id])
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container col col-xs-12 col-sm-7">
+            <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                    <div class="per">
+                        <div class="title"><img class="icon" src="/img/lp/generalbinary/icon-1.png"/>
+                          {{--  {{@ln}}  --}}
+                            text text text text text text text text </div>
+                        <div class="text">
+                            text tex ttex ttex ttext  ttex ttex ttext
+                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
+                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
+                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
+                            ttex ttex ttext ttex ttex ttext
+                        </div>
+                    </div>
+                    <div class="per">
+                        <div class="title"><img class="icon" src="/img/lp/generalbinary/icon-2.png"/> text text text text text text text text </div>
+                        <div class="text">
+                            text tex ttex ttex ttext  ttex ttex ttext
+                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
+                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
+                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
+                            ttex ttex ttext ttex ttex ttext
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <div class="per">
+                        <div class="title"><img class="icon" src="/img/lp/generalbinary/icon-3.png"/> text text text text text text text text </div>
+                        <div class="text">
+                            text tex ttex ttex ttext  ttex ttex ttext
+                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
+                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
+                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
+                            ttex ttex ttext ttex ttex ttext
+                        </div>
+                    </div>
+                    <div class="per">
+                        <div class="title"><img class="icon" src="/img/lp/generalbinary/icon-4.png"/> text text text text text text text text </div>
+                        <div class="text">
+                            text tex ttex ttex ttext  ttex ttex ttext
+                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
+                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
+                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
+                            ttex ttex ttext ttex ttex ttext
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -28,6 +28,9 @@ foreach($form->membersFields->getChildren() as $field){
                 'method'=>'post',
                 'class'=>'form-horizontal']) !!}
     <div class="fields">
+        @if(isset($show_recaptcha))
+            <div class="g-recaptcha" data-sitekey="6Ld39RMTAAAAALVGhMswy185zq0C2bmP-gydSrSI"></div>
+        @endif
         <input type="hidden" name="parentPage" value="{{ $funnelId }}">
         @forelse($hiddenFields as $hiddenField)
             <input type="hidden" id="{{ $hiddenField[0] }}" name="{{ $hiddenField[0] }}" value="">
@@ -36,9 +39,6 @@ foreach($form->membersFields->getChildren() as $field){
             @foreach($fields as $field)
                 @if($field[0] == 'text' || $field[0] == 'email' || $field[0] == 'password')
                     <div class="field">
-                        @if(isset($show_recaptcha))
-                            <div class="g-recaptcha" data-sitekey="6Ld39RMTAAAAALVGhMswy185zq0C2bmP-gydSrSI"></div>
-                        @endif
                         {{--{!! Form::$field[0]($field[1], null, ['class'=>'form-control', 'placeholder'=>@ln($field[2]) !!}--}}
                         <input value="{{Request::get($field[1])}}" {{!empty($_REQUEST[$field[1]]) ? 'disabled="disabled"' : ''}}  type="{{ $field[0] }}" id="{{ $field[1] }}" class="form-control" name="{{ $field[1] }}" required="required" minlength="2" placeholder="{{ \App\Languages::getTrans($field[2]) }}" data-cip-id="{{ $field[1] }}">
                     </div>
