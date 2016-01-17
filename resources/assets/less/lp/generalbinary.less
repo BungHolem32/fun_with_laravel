@@ -19,6 +19,18 @@ body{
 .form-control {
   box-shadow: none;
 }
+#submit{
+  &:focus{
+    outline: none !important;
+  }
+  border: 0px;
+}
+#phone {
+  float: right;
+}
+#prefix{
+  margin-right: 5px;
+}
 #prefix,#phone{
   &:focus {
     outline: none;
@@ -178,7 +190,7 @@ label.error {
     max-width: 170px;
     border: 0;
     border-radius: 0;
-    height: 49px;
+    height: 50px;
     padding: 6px 12px;
   }
   #submit{
@@ -324,8 +336,15 @@ body{
           z-index: 9;
         }
         #submit{
+          color: #010000;
+          text-shadow: 1px 2px 3px #d1fd20;
           box-shadow: none;
-          .background('icons_32.png');
+          text-shadow: 1px 1px 1px #d1fd20;
+          box-shadow: none;
+          font-weight: bold;
+          font-size: 15px;
+          font-family: 'samsungsharpsans-bold_v2';
+          .background('icons_32-@{left}.png');
           width: 199px;
           height: 63px;
           background-position: -9px 2px;
@@ -334,8 +353,6 @@ body{
           }
         }
       }
-
-
     }
   }
 
@@ -361,7 +378,6 @@ body{
       max-width: 100%;
     }
     #phone{
-      float: right;
       width: 78%;
       max-width: 100%;
     }

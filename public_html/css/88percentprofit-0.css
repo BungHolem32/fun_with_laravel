@@ -11707,3 +11707,8 @@ body {
 }
 
 /*# sourceMappingURL=88percentprofit-0.css.map */
+
+input#submit:focus {
+  border-color: transparent;
+  box-shadow: none;
+}

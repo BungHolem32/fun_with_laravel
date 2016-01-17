@@ -56,7 +56,7 @@ foreach($form->membersFields->getChildren() as $field){
                     </div>
                 @elseif($field[0] == 'submit')
                     <div class="field">
-                        <input type="{{ $field[0] }}" id="{{ $field[1] }}" class="form-control" name="{{ $field[1] }}" value="{{ \App\Languages::getTrans($field[2]) }}" data-cip-id="{{ $field[1] }}">
+                        <button id="submit">{{ \App\Languages::getTrans($field[2]) }}</button>
                     </div>
                 @endif
             @endforeach

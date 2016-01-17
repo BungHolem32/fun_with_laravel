@@ -46,7 +46,6 @@
                 <div class="col-sm-6 col-xs-12">
                     <div class="per">
                         <div class="title"><img class="icon" src="/img/lp/generalbinary/icon-1.png"/>
-                          {{--  {{@ln}}  --}}
                             text text text text text text text text </div>
                         <div class="text">
                             text tex ttex ttex ttext  ttex ttex ttext

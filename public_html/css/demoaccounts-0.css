@@ -11731,3 +11731,7 @@ body {
 }
 
 /*# sourceMappingURL=demoaccounts-0.css.map */
+input#submit:focus {
+  border-color: transparent;
+  box-shadow: none;
+}

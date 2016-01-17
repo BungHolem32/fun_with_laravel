@@ -15,6 +15,7 @@
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
+
 @font-face {
   font-family: 'FontAwesome';
   src: url('../fonts/fontawesome-webfont.eot?v=4.5.0');
@@ -11577,6 +11578,18 @@ body {
 .form-control {
   box-shadow: none;
 }
+#submit {
+  border: 0px;
+}
+#submit:focus {
+  outline: none !important;
+}
+#phone {
+  float: right;
+}
+#prefix {
+  margin-right: 5px;
+}
 #prefix:focus,
 #phone:focus {
   outline: none;
@@ -11739,7 +11752,7 @@ label.error:after {
   max-width: 170px;
   border: 0;
   border-radius: 0;
-  height: 49px;
+  height: 50px;
   padding: 6px 12px;
 }
 .form #submit {
@@ -11890,8 +11903,14 @@ body {
   z-index: 9;
 }
 .head .bg .form form #submit {
+  color: #010000;
+  text-shadow: 1px 2px 3px #d1fd20;
+  text-shadow: 1px 1px 1px #d1fd20;
   box-shadow: none;
-  background: url('/img/lp/generalbinary/icons_32.png');
+  font-weight: bold;
+  font-size: 15px;
+  font-family: 'samsungsharpsans-bold_v2';
+  background: url('/img/lp/generalbinary/icons_32-right.png');
   background-repeat: no-repeat;
   width: 199px;
   height: 63px;
@@ -11926,7 +11945,6 @@ body {
     max-width: 100%;
   }
   .form #phone {
-    float: right;
     width: 78%;
     max-width: 100%;
   }
