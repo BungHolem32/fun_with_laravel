@@ -267,6 +267,11 @@ body{
           top: -2px;
         }
       }
+      &:hover{
+        @media(min-width: @screen-sm){
+          text-shadow: -4px -6px 1px rgba(150, 150, 150, 1);
+        }
+      }
     }
   }
   .bg{
@@ -430,7 +435,28 @@ body{
     .text{
       .padding-left(51px);
       padding-top: 16px;
-      padding-bottom: 97px;
+      padding-bottom: 76px;
+      line-height: 26px;
+      font-size: 13px;
+    }
+  }
+}
+
+.footer{
+  img{
+    display: block;
+    margin: 4px auto;
+  }
+  .bg{
+    height: 70px;
+    background: #000;
+    color: #656565;
+    .text{
+      margin: 0 auto;
+      padding-top: 18px;
+      max-width: 1052px;
+      font-size: 10px;
+      font-weight: bold;
     }
   }
 }

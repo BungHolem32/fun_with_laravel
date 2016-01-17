@@ -46,48 +46,41 @@
                 <div class="col-sm-6 col-xs-12">
                     <div class="per">
                         <div class="title"><img class="icon" src="/img/lp/generalbinary/icon-1.png"/>
-                            text text text text text text text text </div>
-                        <div class="text">
-                            text tex ttex ttex ttext  ttex ttex ttext
-                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
-                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
-                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
-                            ttex ttex ttext ttex ttex ttext
+                            The perfect account type for every trader</div>
+                            <div class="text">
+        From beginners to advanced traders, we offer accounts designed with your needs in mind. Choose the services that you need from an extensive list which includes dedicated brokers, trading signals, and money management.
                         </div>
                     </div>
                     <div class="per">
-                        <div class="title"><img class="icon" src="/img/lp/generalbinary/icon-2.png"/> text text text text text text text text </div>
+                        <div class="title"><img class="icon" src="/img/lp/generalbinary/icon-2.png"/> Valuable education tools</div>
                         <div class="text">
-                            text tex ttex ttex ttext  ttex ttex ttext
-                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
-                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
-                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
-                            ttex ttex ttext ttex ttex ttext
+                            Every trader gets a huge packet of educational materials designed to enhance your trading skills. Our Binary options e-book presents a simple breakdown of trading basics, and our team of analysts sends out daily reviews covering important market events.
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-xs-12">
                     <div class="per">
-                        <div class="title"><img class="icon" src="/img/lp/generalbinary/icon-3.png"/> text text text text text text text text </div>
+                        <div class="title"><img class="icon" src="/img/lp/generalbinary/icon-3.png"/>An amazing trading platform</div>
                         <div class="text">
-                            text tex ttex ttex ttext  ttex ttex ttext
-                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
-                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
-                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
-                            ttex ttex ttext ttex ttex ttext
+                            Our Binary Options platform is easy to master. Our senior brokers walk you through trading step by step, and teach you how to pick winning trades on currencies, stocks, indices, and commodities, all while earning the highest payouts in the industry – up to 88%.
                         </div>
                     </div>
                     <div class="per">
-                        <div class="title"><img class="icon" src="/img/lp/generalbinary/icon-4.png"/> text text text text text text text text </div>
+                        <div class="title"><img class="icon" src="/img/lp/generalbinary/icon-4.png"/>Welcome Bonuses and Rewards </div>
                         <div class="text">
-                            text tex ttex ttex ttext  ttex ttex ttext
-                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
-                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
-                            ttex ttex ttext ttex ttex ttext ttex ttex ttext
-                            ttex ttex ttext ttex ttex ttext
+                            RBoptions traders always get more! You can make your deposit go farther when we match it with a 50% deposit bonus directly into your account. Our traders also qualify for high end Apple products like iPhones and iPads.
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <img src="/img/lp/generalbinary/Footer-icons.png" alt="">
+        <div class="bg">
+            <div class="text">
+            Eligibility:<br>
+            In order to claim your Iphone6 and 100% Bonus, Gold Members need to make a minimum of $10,0000 deposit. Existing traders speak to your personal broker or contact cs@rboptions.com to deposit and claim your rewards. Contract service and any accessories are the responsibility of the Trader itself. Subjected to quantities and delivery times as supported by Apple.
             </div>
         </div>
     </div>
