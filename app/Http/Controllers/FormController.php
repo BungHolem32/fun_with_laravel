@@ -33,12 +33,11 @@ class FormController extends Controller {
     }
 
     public function postForm(){
-        $page = \App\Page::find(Request::get('page'));
-
-
             $res = SpotApi::sendRequest('Customer', 'add', Request::all());
+
             if($res['err'] === 0){
                 Customer::login(\Request::all());
+                IpLog::add(\Request::ip(), 'createAccount');
                 $res['destination'] = $this->getDestination();
             }
             elseif($res['errs']['error'] == 'emailAlreadyExists'){
