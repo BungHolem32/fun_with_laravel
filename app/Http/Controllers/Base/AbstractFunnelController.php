@@ -20,6 +20,7 @@ class AbstractFunnelController extends Controller {
     public function index($page)
     {
         $this->form = \App\Page::find($page->formType);
+  //      dd(\App\Page::find($page->recaptcha));
         \Session::put('recaptcha',$this->show_recaptcha); //  make sure this is always set, so the middleware can check for it. this allows us to block user who do not have a session enabled.
         view()->share('show_recaptcha', $this->show_recaptcha);
         return view($this->dirName().'/index')
