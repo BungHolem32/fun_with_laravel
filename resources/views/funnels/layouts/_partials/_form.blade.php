@@ -7,9 +7,6 @@
 
 $hiddenFields = [];
 $fields = [];
-if(!isset($show_recaptcha))
-    $show_recaptcha = false;
-
 foreach($form->membersFields->getChildren() as $field){
     if($field['fieldType'] == 'hidden')
         $hiddenFields[] = [$field['name'], $field['placeholder']];
