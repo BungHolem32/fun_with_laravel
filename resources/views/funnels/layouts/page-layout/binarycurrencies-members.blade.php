@@ -32,10 +32,11 @@
                 </div>
             </div>
             <div class="col-xs-12 bg">
-                <h1>@ln(Try a Binary Platform) <span>@ln(That's Simple& Exciting!)</span></h1>
-                <h2>@ln(Free education & More options Help You succeed)</h2>
+                <h1>@ln(Master Binary Currency Trading In Minutes)</h1>
+                <h2>@ln(Trade Currencies The Easy Way With Binary Options!)</h2>
+                <h3>@ln(See Why Trading Currencies On Binary Beats Forex!)</h3>
                 <div class="form">
-                    <h3>@ln(Complete This Form & Start Trading Binary Options Now)</h3>
+                    <div class="title">@ln(Open Your Binary Options Account!)<br>@ln(Get Started Trading Currencies TODAY!)</div>
                     @include('funnels.layouts._partials._form-horizontal', ['funnelId' => $page->id])
                 </div>
             </div>
@@ -46,14 +47,14 @@
             <div class="row">
                 <div class="col-sm-6 col-xs-12">
                     <div class="per">
-                        <div class="title"><img class="icon" src="/img/lp/generalbinary/icon-1.png"/>
+                        <div class="title"><img class="icon" src="/img/lp/binary-currencies/ico-1.png"/>
                             The perfect account type for every trader</div>
                             <div class="text">
         From beginners to advanced traders, we offer accounts designed with your needs in mind. Choose the services that you need from an extensive list which includes dedicated brokers, trading signals, and money management.
                         </div>
                     </div>
                     <div class="per">
-                        <div class="title"><img class="icon" src="/img/lp/generalbinary/icon-2.png"/> Valuable education tools</div>
+                        <div class="title"><img class="icon" src="/img/lp/binary-currencies/ico-2.png"/> Valuable education tools</div>
                         <div class="text">
                             Every trader gets a huge packet of educational materials designed to enhance your trading skills. Our Binary options e-book presents a simple breakdown of trading basics, and our team of analysts sends out daily reviews covering important market events.
                         </div>
@@ -61,13 +62,13 @@
                 </div>
                 <div class="col-sm-6 col-xs-12">
                     <div class="per">
-                        <div class="title"><img class="icon" src="/img/lp/generalbinary/icon-3.png"/>An amazing trading platform</div>
+                        <div class="title"><img class="icon" src="/img/lp/binary-currencies/ico-3.png"/>An amazing trading platform</div>
                         <div class="text">
                             Our Binary Options platform is easy to master. Our senior brokers walk you through trading step by step, and teach you how to pick winning trades on currencies, stocks, indices, and commodities, all while earning the highest payouts in the industry – up to 88%.
                         </div>
                     </div>
                     <div class="per">
-                        <div class="title"><img class="icon" src="/img/lp/generalbinary/icon-4.png"/>Welcome Bonuses and Rewards </div>
+                        <div class="title"><img class="icon" src="/img/lp/binary-currencies/ico-4.png"/>Welcome Bonuses and Rewards </div>
                         <div class="text">
                             RBoptions traders always get more! You can make your deposit go farther when we match it with a 50% deposit bonus directly into your account. Our traders also qualify for high end Apple products like iPhones and iPads.
                         </div>
@@ -77,7 +78,7 @@
         </div>
     </div>
     <div class="footer">
-        <img src="/img/lp/generalbinary/Footer-icons.png" alt="">
+        <img src="/img/lp/Footer-icons.png" alt="">
         <div class="bg">
             <div class="text">
             Eligibility:<br>
