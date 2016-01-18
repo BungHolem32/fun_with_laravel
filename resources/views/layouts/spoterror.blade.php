@@ -9,7 +9,7 @@
             text-align: center;
             font-family: Arial;
             border: 1px solid #ccc;
-            max-width: 371px;
+            max-width: 282px;
             border-radius: 20px;
             -webkit-border-radius: 20px;
             -moz-border-radius: 20px;

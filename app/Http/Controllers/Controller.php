@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Exceptions\SpotException;
 use Illuminate\Foundation\Bus\DispatchesCommands;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -12,7 +13,7 @@ abstract class Controller extends BaseController {
 
     public function __construct(){
         \View::share ( 'user', \Auth::getUser());
-        throw new expeption('');
+        //throw new SpotException('');
     }
 
     public static function forThis($page,$method){
