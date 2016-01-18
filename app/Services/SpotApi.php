@@ -99,7 +99,7 @@ class SpotApi
             return $answer;
         }
 	    //Log::debug('Spot Error', $answer);
-        $answer['errs']['error'] = $answer['msg'] = 'Error Connection was not established.';
+        $answer['errs']['error'] = $answer['msg'] = 'Error - Connection was not established.';
         return $answer;
     }
 
@@ -138,3 +138,4 @@ class SpotApi
         return $newData;
     }
 }
+
