@@ -9,12 +9,12 @@
             text-align: center;
             font-family: Arial;
             border: 1px solid #ccc;
-            max-width: 446px;
+            max-width: 371px;
             border-radius: 20px;
             -webkit-border-radius: 20px;
             -moz-border-radius: 20px;
-            height: 100px;
-            line-height: 100px;
+            height: 99px;
+            line-height: 49px;
         }
     </style>
 </head>

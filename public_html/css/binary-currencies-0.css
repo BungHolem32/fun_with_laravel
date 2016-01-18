@@ -11781,8 +11781,7 @@ body {
   width: 100%;
 }
 .head .logo {
-  background: url('/img/lp/generalbinary/logo.png');
-  background-repeat: no-repeat;
+  background: url('/img/lp/logo.png') no-repeat;
   width: 215px;
   height: 43px;
   position: relative;
@@ -11799,6 +11798,7 @@ body {
   padding: 23px 45px;
 }
 .head .texts a {
+  font-family: Arial;
   color: #fff;
 }
 .head .texts a i {
@@ -11818,11 +11818,11 @@ body {
 }
 @media (min-width: 768px) {
   .head .texts a:hover {
-    text-shadow: -4px -6px 1px #969696;
+    border-bottom: 1px solid #ccc;
   }
 }
 .head .bg {
-  background: url('/img/lp/generalbinary/big-pic.jpg');
+  background: url('/img/lp/binary-currencies/Big-Pic.jpg');
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
@@ -11837,9 +11837,10 @@ body {
 .head .bg h1 {
   color: #fff;
   text-align: center;
-  font-size: 43px;
-  margin-top: 24px;
+  font-size: 53px;
+  margin-top: 1px;
   font-weight: bold;
+  margin-bottom: 8px;
 }
 .head .bg h1 span {
   color: #55b5ff;
@@ -11847,13 +11848,47 @@ body {
 .head .bg h2 {
   color: #fff;
   text-align: center;
+  font-size: 37px;
+  margin-bottom: 15px;
+}
+.head .bg h3 {
+  color: #fff;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 27px;
+  border: 3px solid #fff;
+  box-shadow: 4px 5px 9px 0px rgba(0, 0, 0, 0.75);
+  margin: 0 auto;
+  height: 44px;
+  line-height: 38px;
+  max-width: 625px;
+  position: relative;
+}
+.head .bg h3:after,
+.head .bg h3:before {
+  position: absolute;
+  content: '';
+  top: 11px;
+  height: 18px;
+  width: 23px;
+}
+.head .bg h3:after {
+  right: -1px;
+  background: url('/img/lp/binary-currencies/arrow-right.png');
+  background-repeat: no-repeat;
+}
+.head .bg h3:before {
+  left: -1px;
+  background: url('/img/lp/binary-currencies/arrow-left.png');
+  background-repeat: no-repeat;
 }
 .head .bg .form {
   position: absolute;
   bottom: 0;
   left: 0;
 }
-.head .bg .form h3 {
+.head .bg .form .title {
   text-align: center;
   color: #fff;
   font-size: 18.5px;
@@ -11874,7 +11909,7 @@ body {
   box-shadow: none;
   font-weight: bold;
   font-size: 15px;
-  background: url('/img/lp/generalbinary/icons_32-left.png');
+  background: url('/img/lp/binary-currencies/icons_32-left.png');
   background-repeat: no-repeat;
   width: 199px;
   height: 63px;
@@ -11882,6 +11917,12 @@ body {
 }
 .head .bg .form form #submit:hover {
   background-position: -9px -67px;
+}
+h1,
+h2,
+h3,
+.form > .title {
+  text-shadow: 2px 2px 2px #000;
 }
 @media (max-width: 1265px) {
   .bg {
@@ -11953,6 +11994,7 @@ body {
   font-weight: bold;
 }
 .main .per .text {
+  color: #565656;
   padding-left: 51px;
   padding-top: 16px;
   padding-bottom: 76px;
@@ -11975,5 +12017,16 @@ body {
   font-size: 10px;
   font-weight: bold;
 }
+/*
+@media(min-width: 1265px){
+  .logo{
+    top: -17px;
+    right: -158px;
+  }
+  .npads{
+    position: relative;
+    left: -181px;
+  }
+}*/
 
 /*# sourceMappingURL=binary-currencies-0.css.map */

@@ -42,7 +42,8 @@ class Handler extends ExceptionHandler {
                 return response()->view('layouts.spoterror', ['error', $e]);
 				break;
 			default:
-				return response()->view('layouts.error', ['error'=>$e]);
+				//return response()->view('layouts.error', ['error'=>$e]);
+				return parent::render($request, $e);
 		}
 	}
 

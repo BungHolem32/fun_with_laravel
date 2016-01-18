@@ -11814,6 +11814,7 @@ body {
   padding: 23px 45px;
 }
 .head .texts a {
+  font-family: Arial;
   color: #fff;
 }
 .head .texts a i {
@@ -11833,7 +11834,7 @@ body {
 }
 @media (min-width: 768px) {
   .head .texts a:hover {
-    text-shadow: -4px -6px 1px #969696;
+    border-bottom: 1px solid #ccc;
   }
 }
 .head .bg {
@@ -11994,6 +11995,7 @@ body {
   font-weight: bold;
 }
 .main .per .text {
+  color: #565656;
   padding-left: 51px;
   padding-top: 16px;
   padding-bottom: 76px;

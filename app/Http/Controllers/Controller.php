@@ -12,6 +12,7 @@ abstract class Controller extends BaseController {
 
     public function __construct(){
         \View::share ( 'user', \Auth::getUser());
+        throw new expeption('');
     }
 
     public static function forThis($page,$method){

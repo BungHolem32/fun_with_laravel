@@ -45,7 +45,7 @@ body{
 }
 .npads{
   > *{
-  padding: 0;
+    padding: 0;
   }
 }
 .g-recaptcha{
@@ -174,8 +174,8 @@ label.error {
       min-width: 300px;
       width: 40%;
       margin: 0 auto !important;
-     left: 0 !important;
-     right: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
       .field {
         display: block;
         margin: 0 !important;
@@ -206,16 +206,12 @@ label.error {
 
 // added
 
-// new font -- samsungsharpsans
-.newfont('samsungsharpsans-regular_v2');
-.newfont('samsungsharpsans-medium_v2');
-.newfont('samsungsharpsans-bold_v2');
 body{
   color: #fff;
-  font-family: 'samsungsharpsans-regular_v2';
+  font-family: 'Roboto Condensed';
 }
 .background(@img){
-  @img_f: '/img/lp/generalbinary/';
+  @img_f: '/img/lp/binary-currencies/';
   background: url('@{img_f}@{img}');
   background-repeat: no-repeat;
 }
@@ -235,7 +231,7 @@ body{
   display: table;
   width: 100%;
   .logo{
-    .background('logo.png');
+    background: url('/img/lp/logo.png') no-repeat;
     width: 215px;
     height: 43px;
     position: relative;
@@ -276,7 +272,7 @@ body{
     }
   }
   .bg{
-    .background('big-pic.jpg');
+    .background('Big-Pic.jpg');
     position: relative;
     width: 100%;
     height: 621px;
@@ -288,10 +284,10 @@ body{
     h1{
       color: #fff;
       text-align: center;
-      font-size: 43px;
-      margin-top: 24px;
+      font-size: 53px;
+      margin-top: 1px;
       font-weight: bold;
-      font-family: samsungsharpsans-bold_v2;
+      margin-bottom: 8px;
       span{
         color: #55b5ff;
       }
@@ -299,42 +295,56 @@ body{
     h2{
       color: #fff;
       text-align: center;
+      font-size: 37px;
+      margin-bottom: 15px;
+    }
+    h3{
+      color: #fff;
+      text-align: center;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 27px;
+      border: 3px solid #fff;
+      -webkit-box-shadow: 4px 5px 9px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: 4px 5px 9px 0px rgba(0,0,0,0.75);
+      box-shadow: 4px 5px 9px 0px rgba(0,0,0,0.75);
+      margin: 0 auto;
+      height: 44px;
+      line-height: 38px;
+      max-width: 625px;
+      position: relative;
+
+
+      position: relative;
+      &:after,&:before{
+        position: absolute;
+        content: '';
+
+        top: 11px;
+        height: 18px;
+        width: 23px;
+      }
+      &:after{
+        right: -1px;
+        .background('arrow-right.png');
+
+      }
+      &:before{
+        left: -1px;
+        .background('arrow-left.png');
+      }
     }
     .form{
       position: absolute;
       bottom: 0;
       .left(0);
-      h3{
+      .title{
         text-align: center;
         color: #fff;
         font-size: 18.5px;
-        font-family: samsungsharpsans-medium_v2;
       }
       form{
         position: relative;
-        &:before{
-          .background('arrow-right.png');
-          content: '';
-          position: absolute;
-          right: 0;
-          top: -36px;
-          background-repeat: no-repeat;
-          height: 100%;
-          width: 100%;
-          max-width: 314px;
-
-        }
-        &:after{
-          .background('arrow-left.png');
-          content: '';
-          position: absolute;
-          left: 0;
-          top: -36px;
-          background-repeat: no-repeat;
-          height: 100%;
-          width: 100%;
-          max-width: 314px;
-        }
         .fields{
           position: relative;
           .left(39px);
@@ -349,7 +359,6 @@ body{
           box-shadow: none;
           font-weight: bold;
           font-size: 15px;
-          font-family: 'samsungsharpsans-bold_v2';
           .background('icons_32-@{left}.png');
           width: 199px;
           height: 63px;
@@ -363,10 +372,13 @@ body{
   }
 
 }
+h1, h2, h3,.form > .title{
+  text-shadow: 2px 2px 2px #000;
+}
 
 @media(max-width: 1265px){
   .bg{
-    background: #000 url('/img/lp/generalbinary/big-pic.jpg');
+    background: #000 url('/img/lp/binary-currencies/big-pic.jpg');
     background-position: 50% 111px;
     height: auto !important;
   }
@@ -429,7 +441,6 @@ body{
       .margin-right(5px);
     }
     .title{
-      font-family: samsungsharpsans-bold_v2;
       font-size: 18px;
       font-weight: bold;
     }
@@ -447,7 +458,7 @@ body{
 .footer{
   img{
     display: block;
-    margin: 10px auto;
+    margin: 4px auto;
   }
   .bg{
     height: 70px;
@@ -462,3 +473,15 @@ body{
     }
   }
 }
+
+/*
+@media(min-width: 1265px){
+  .logo{
+    top: -17px;
+    right: -158px;
+  }
+  .npads{
+    position: relative;
+    left: -181px;
+  }
+}*/
