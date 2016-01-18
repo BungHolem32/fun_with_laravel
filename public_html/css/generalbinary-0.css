@@ -11836,6 +11836,9 @@ body {
   .head .texts a:hover {
     border-bottom: 1px solid #ccc;
   }
+  .head .texts a:hover .phone {
+    color: #55b5ff;
+  }
 }
 .head .bg {
   background: url('/img/lp/generalbinary/big-pic.jpg');
@@ -11855,6 +11858,7 @@ body {
   text-align: center;
   font-size: 43px;
   margin-top: 24px;
+  margin-bottom: -2px;
   font-weight: bold;
   font-family: samsungsharpsans-bold_v2;
 }
