@@ -11858,7 +11858,7 @@ body {
   text-align: center;
   font-size: 43px;
   margin-top: 24px;
-  margin-bottom: -2px;
+  margin-bottom: 0px;
   font-weight: bold;
   font-family: samsungsharpsans-bold_v2;
 }
@@ -11991,14 +11991,17 @@ body {
   color: #081822;
 }
 .main .per .icon {
-  margin-left: 5px;
+  width: 35px;
+  margin-left: 13px;
 }
 .main .per .title {
   font-family: samsungsharpsans-bold_v2;
   font-size: 18px;
   font-weight: bold;
+  height: 36px;
 }
 .main .per .text {
+  font-family: Arial;
   color: #565656;
   padding-right: 51px;
   padding-top: 16px;
