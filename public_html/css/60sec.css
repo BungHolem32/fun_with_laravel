@@ -11713,3 +11713,21 @@ input#submit:focus {
   border-color: transparent;
   box-shadow: none;
 }
+
+
+/**** changed *****/
+.form {
+  background: #191919;
+  position: relative;
+  display: table;
+  width: 100%;
+  max-width: 260px;
+  float: right;
+  height: 186px;
+  top: 192px;
+  right: 463px;
+}
+form .row > div {
+  height: 34px;
+  margin-bottom: 12px;
+}
