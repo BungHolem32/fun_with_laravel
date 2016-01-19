@@ -11718,7 +11718,7 @@ input#submit:focus {
 .bg {
   height: 100%;
   width: 100%;
-  background: url('/img/lp/bg_60sec.jpg');
+  background: url('/img/lp/bg_50giftcard.jpg');
   background-position: 50% 0;
   position: relative;
   overflow: hidden;
@@ -11733,7 +11733,7 @@ input#submit:focus {
   float: none;
   margin: 0 auto;
   position: relative;
-  left: 356px;
+  left: 398px;
   top: 200px;
 }
 form .row > div {
@@ -11742,4 +11742,16 @@ form .row > div {
 }
 body,.wrapper,.bg{
   height: 965px;
+}
+input#submit {
+  color: transparent;
+  border: 0;
+  background: url('/img/lp/submit_50giftcard.png');
+  width: 259px;
+  height: 53px;
+  margin-top: 18px;
+}
+
+.loading {
+  right: 0px;
 }
