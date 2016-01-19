@@ -11752,6 +11752,9 @@ input#submit {
   left: -4px;
   top: -16px;
 }
+input#submit:hover{
+   background-position: 0 -46px;
+ }
 
 .loading {
   position: absolute;
