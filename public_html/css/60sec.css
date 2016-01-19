@@ -11566,12 +11566,6 @@ body {
   background: transparent;
   position: relative;
 }
-.bg {
-  margin: 0 auto;
-  height: 965px;
-  width: 1915px;
-  background: url('/img/lp/bg_60sec.jpg');
-}
 .form {
   background: #191919;
   position: relative;
@@ -11656,7 +11650,7 @@ input {
 input#submit {
   color: transparent;
   border: 0;
-  background: url('/img/lp/btn_88percentprofit.png');
+  background: url('/img/lp/btn.png');
   width: 261px;
   height: 67px;
   margin-top: 18px;
@@ -11716,6 +11710,12 @@ input#submit:focus {
 
 
 /**** changed *****/
+.bg {
+  margin: 0 auto;
+  height: 965px;
+  width: 1915px;
+  background: url('/img/lp/bg_60sec.jpg');
+}
 .form {
   background: #191919;
   position: relative;
