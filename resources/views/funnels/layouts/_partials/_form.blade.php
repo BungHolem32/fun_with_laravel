@@ -15,7 +15,6 @@ foreach($form->membersFields->getChildren() as $field){
     }
 }
 
-
 ?>
 <ul class="errorMessages"></ul>
 {!! Form::open(['url' => url('postForm').'?'.$_SERVER["QUERY_STRING"],

@@ -58,7 +58,7 @@ foreach($form->membersFields->getChildren() as $field){
                     </div>
                 @elseif($field[0] == 'submit')
                     <div class="field">
-                        <button id="submit">{{ \App\Languages::getTrans($field[2]) }}</button>
+                        <button id="submit"><span>{{ \App\Languages::getTrans($field[2]) }}</span></button>
                     </div>
                 @endif
             @endforeach

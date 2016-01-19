@@ -256,8 +256,8 @@ body{
     width: 215px;
     height: 43px;
     position: relative;
-    top: -17px;
-    .right(3px);
+    top: -13px;
+    .right(-14px);
   }
   .texts{
     background: #000;
@@ -289,7 +289,7 @@ body{
         @media(min-width: @screen-sm){
           border-bottom: 1px solid #fbfbfe;
           .phone{
-            color: #048f1a;
+            color: #9EC5D5;
           }
         }
       }
@@ -300,6 +300,7 @@ body{
     position: relative;
     width: 100%;
     height: 621px;
+    overflow: hidden;
     background-position: 50% 0;
     @media(min-width: 1900px){
       background-size: 100%;
@@ -364,7 +365,9 @@ body{
       .title{
         text-align: center;
         color: #fff;
-        font-size: 18.5px;
+        font-size: 37.5px;
+        margin-bottom: 20px;
+        line-height: 36px;
       }
 
       form{
@@ -377,18 +380,35 @@ body{
         }
         #submit{
           color: #010000;
-          text-shadow: 1px 2px 3px #d1fd20;
-          box-shadow: none;
-          text-shadow: 1px 1px 1px #d1fd20;
+          text-shadow: 0.2px 0.1px 0.5px #fff;
           box-shadow: none;
           font-weight: bold;
-          font-size: 15px;
-          .background('icons_32-@{left}.png');
-          width: 199px;
-          height: 63px;
-          background-position: -9px 2px;
+          .background('button.png');
+          width: 240px;
+          height: 92px;
+          background-position: 0px 0px;
+          span{
+            display: block;
+            transform: scale(0.8, 1);
+            font-size: 25px;
+            .fsize(0.8,1);
+          }
+
+          position: relative;
+          &:after{
+            content: '';
+            position: absolute;
+            top: 34px;
+            .right(24px);
+            .background('black-bt-arrow-@{right}.png');
+            height: 25px;
+            width: 25px;
+          }
           &:hover{
-            background-position: -9px -67px;
+            background-position: 0px -94px;
+          }
+          &:focus{
+            background-position: 0px -188px;
           }
         }
       }
@@ -396,7 +416,7 @@ body{
   }
 
 }
-h1, h2, h3,.form > .title{
+h1, h2, h3, .form>.title{
   text-shadow: 2px 2px 2px #000;
 }
 
@@ -467,10 +487,12 @@ h1, h2, h3,.form > .title{
       .margin-right(13px);
     }
     .title{
+      font-family: Arial;
       font-size: 18px;
       font-weight: bold;
       height: 36px;
       color: #081822;
+      text-transform: capitalize;
     }
     .text{
       font-family: Arial;
@@ -478,8 +500,8 @@ h1, h2, h3,.form > .title{
       .padding-left(51px);
       padding-top: 16px;
       padding-bottom: 76px;
-      line-height: 26px;
-      font-size: 13px;
+      font-size: 15px;
+      line-height: 22px;
     }
   }
 }
@@ -497,8 +519,9 @@ h1, h2, h3,.form > .title{
       margin: 0 auto;
       padding-top: 18px;
       max-width: 1052px;
-      font-size: 10px;
-      font-weight: bold;
+      font-family: Arial;
+      line-height: 12px;
+      font-size: 11px;
     }
   }
 }
@@ -514,3 +537,46 @@ h1, h2, h3,.form > .title{
     left: -181px;
   }
 }*/
+@media(min-width: 1265px) {
+  .form {
+    background: rgba(0, 0, 0, 0.6);
+    padding-bottom: 20px;
+    padding-top: 9px;
+          .fadeInUp;
+     .anim(1s,1s,ease-out);
+  }
+
+  form {
+    display: table;
+  }
+
+  .head .bg .form form .fields {
+    top: 4px;
+    .left(-112px);
+    > .field {
+      float: @left;
+      &:nth-of-type(4) {
+        clear: both;
+      }
+      &:last-child {
+        position: absolute;
+      }
+      input {
+        border: 0;
+        border-radius: 0;
+        height: 35px;
+        padding: 6px 12px;
+        margin-bottom: 4px;
+        max-width: 100%;
+        width: 210px;
+        &#phone {
+          max-width: 162px;
+        }
+      }
+      #submit{
+        top: -8px;
+        .left(-13px);
+      }
+    }
+  }
+}

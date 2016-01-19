@@ -106,3 +106,22 @@
     @content();
   }
 }
+
+
+.anim(@delay, @duration, @timing){
+  .animated;
+  animation-delay: @delay;
+  animation-duration: @duration;
+  animation-timing-function: @timing; /* linear|ease|ease-in|ease-out|cubic-bezier(n,n,n,n)|initial|inherit; */
+  -webkit-animation-delay: @delay;
+  -webkit-animation-duration: @duration;
+  -webkit-animation-timing-function: @timing;
+  -moz-animation-delay: @delay;
+  -moz-animation-duration: @duration;
+  -moz-animation-timing-function: @timing;
+  -o-animation-delay: @delay;
+  -o-animation-duration: @duration;
+  -o-animation-timing-function: @timing;
+}
+//      .fadeInRight;
+// .anim(1s,1s,ease-out);

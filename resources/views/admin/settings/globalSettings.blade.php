@@ -7,8 +7,8 @@
 @append
 
 @section('content')
-    <h1>Languages Page</h1>
-    <h2>Do not Change this page without consulting with Rotem!!.</h2>
+    <h1>Global Settings Page</h1>
+    <h2></h2>
     <br/>
 
     {!! Form::open(['url' => '/admin/languages']) !!}
@@ -16,26 +16,17 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>Title</th>
-                <th>Title native</th>
-                <th>CODE __</th>
-                <th>CODE ___</th>
-                <th>Direction</th>
-                <th>Visible</th>
-                <th>Active</th>
+                <th>Setting</th>
+                <th>Value</th>
             </tr>
         </thead>
+
         <tbody class="multiple sortable">
-            @foreach(\App\Languages::all()->sortBy('position') as $i => $language)
-                <tr data-id="{{ $language->id }}">
+            @foreach(\App\globalSettings::all()->sortBy('position') as $i => $global_settings)
+                <tr data-id="{{ $global_settings->id }}">
                     <td>{{ $i+1 }}</td>
-                    <td>{!! Form::text('title', $language->title) !!}</td>
-                    <td>{!! Form::text('title_native', $language->title_native) !!}</td>
-                    <td>{!! Form::text('code', $language->code) !!}</td>
-                    <td>{!! Form::text('code03', $language->code03) !!}</td>
-                    <td>{!! Form::select('dir', ['0'=>'ltr','1'=>'rtl'], $language->dir) !!}</td>
-                    <td>{!! Form::select('visible', ['0'=>'hidden','1'=>'visible'], $language->visible) !!}</td>
-                    <td>{!! Form::select('active', ['0'=>'OFF','1'=>'ON'], $language->active) !!}</td>
+                    <td>{!! Form::text('setting', $global_settings->key) !!}</td>
+                    <td>{!! Form::text('value)', $global_settings->value) !!}</td>
                 </tr>
             @endforeach
         </tbody>

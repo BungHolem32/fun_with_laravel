@@ -11851,7 +11851,7 @@ body {
     border-bottom: 1px solid #fbfbfe;
   }
   .head .texts a:hover .phone {
-    color: #048f1a;
+    color: #9EC5D5;
   }
 }
 .head .bg {
@@ -11860,6 +11860,7 @@ body {
   position: relative;
   width: 100%;
   height: 621px;
+  overflow: hidden;
   background-position: 50% 0;
 }
 @media (min-width: 1900px) {
@@ -11924,7 +11925,9 @@ body {
 .head .bg .form .title {
   text-align: center;
   color: #fff;
-  font-size: 18.5px;
+  font-size: 37.5px;
+  margin-bottom: 20px;
+  line-height: 36px;
 }
 .head .bg .form form {
   position: relative;
@@ -11937,19 +11940,37 @@ body {
 }
 .head .bg .form form #submit {
   color: #010000;
-  text-shadow: 1px 2px 3px #d1fd20;
-  text-shadow: 1px 1px 1px #d1fd20;
+  text-shadow: 0.2px 0.1px 0.5px #fff;
   box-shadow: none;
   font-weight: bold;
-  font-size: 15px;
-  background: url('/img/lp/binary-currencies/icons_32-right.png');
+  background: url('/img/lp/binary-currencies/button.png');
   background-repeat: no-repeat;
-  width: 199px;
-  height: 63px;
-  background-position: -9px 2px;
+  width: 240px;
+  height: 92px;
+  background-position: 0px 0px;
+  position: relative;
+}
+.head .bg .form form #submit span {
+  display: block;
+  font-size: 25px;
+  -webkit-transform: scale(0.8, 1);
+  transform: scale(0.8, 1);
+}
+.head .bg .form form #submit:after {
+  content: '';
+  position: absolute;
+  top: 34px;
+  left: 24px;
+  background: url('/img/lp/binary-currencies/black-bt-arrow-left.png');
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 25px;
 }
 .head .bg .form form #submit:hover {
-  background-position: -9px -67px;
+  background-position: 0px -94px;
+}
+.head .bg .form form #submit:focus {
+  background-position: 0px -188px;
 }
 h1,
 h2,
@@ -12066,3 +12087,64 @@ h3,
     left: -181px;
   }
 }*/
+@media (min-width: 1265px) {
+  .form {
+    background: rgba(0, 0, 0, 0.6);
+    padding-bottom: 20px;
+    padding-top: 9px;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    /* linear|ease|ease-in|ease-out|cubic-bezier(n,n,n,n)|initial|inherit; */
+    -webkit-animation-delay: 1s;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-delay: 1s;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: ease-out;
+    -o-animation-delay: 1s;
+    -o-animation-duration: 1s;
+    -o-animation-timing-function: ease-out;
+  }
+  form {
+    display: table;
+  }
+  .head .bg .form form .fields {
+    top: 4px;
+    right: -112px;
+  }
+  .head .bg .form form .fields > .field {
+    float: right;
+  }
+  .head .bg .form form .fields > .field:nth-of-type(4) {
+    clear: both;
+  }
+  .head .bg .form form .fields > .field:last-child {
+    position: absolute;
+  }
+  .head .bg .form form .fields > .field input {
+    border: 0;
+    border-radius: 0;
+    height: 35px;
+    padding: 6px 12px;
+    margin-bottom: 4px;
+    max-width: 100%;
+    width: 210px;
+  }
+  .head .bg .form form .fields > .field input#phone {
+    max-width: 162px;
+  }
+  .head .bg .form form .fields > .field #submit {
+    top: -8px;
+    right: -13px;
+  }
+}
