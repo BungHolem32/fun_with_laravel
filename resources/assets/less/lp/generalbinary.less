@@ -1,9 +1,22 @@
 // global
-
+.loading{
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  top: -68px;
+  height: 0px;
+}
+.visible-hidden{
+  visibility: hidden;
+}
 body{
   padding-top: 0px;
   background: transparent;
   position: relative;
+  font-family: Arial;
+}
+h1,h2,h3{
+  height: auto;
 }
 .table{
   display: table;
@@ -19,6 +32,12 @@ body{
 .form-control {
   box-shadow: none;
 }
+input{
+  color: #565656 !important;
+  .plc({
+    color: #565656 !important;
+  });
+}
 #submit{
   &:focus{
     outline: none !important;
@@ -30,6 +49,8 @@ body{
 }
 #prefix{
   margin-right: 5px;
+  padding: 0;
+  text-align: center;
 }
 #prefix,#phone{
   &:focus {
@@ -253,7 +274,7 @@ body{
     }
     a{
       font-family: Arial;
-      color: #fff;
+      color: #fbfbfe;
       i{
         .margin-right(6px);
         &.fa-circle{
@@ -270,7 +291,7 @@ body{
       }
       &:hover{
         @media(min-width: @screen-sm){
-          border-bottom: 1px solid #ccc;
+          border-bottom: 1px solid #fbfbfe;
           .phone{
             color: #55b5ff;
           }
@@ -438,6 +459,7 @@ body{
       font-size: 18px;
       font-weight: bold;
       height: 36px;
+      color: #081822;
     }
     .text{
       font-family: Arial;

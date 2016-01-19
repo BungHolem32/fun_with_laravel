@@ -11483,11 +11483,6 @@ body {
 .fa-email{
   .fa-envelope;
 }*/
-h1,
-h2,
-h3 {
-  height: auto;
-}
 div.mobile-wrap {
   box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.2);
 }
@@ -11558,10 +11553,26 @@ div.mobile-lang-bar .lang {
 .phoneFields [class^="col"] {
   float: left;
 }*/
+.loading {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  top: -68px;
+  height: 0px;
+}
 body {
   padding-top: 0px;
   background: transparent;
   position: relative;
+  font-family: Arial;
+}
+.visible-hidden {
+  visibility: hidden;
+}
+h1,
+h2,
+h3 {
+  height: auto;
 }
 .table {
   display: table;
@@ -11577,6 +11588,23 @@ body {
 .form-control {
   box-shadow: none;
 }
+input {
+  color: #565656 !important;
+}
+input::-webkit-input-placeholder {
+  color: #565656 !important;
+}
+input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #565656 !important;
+}
+input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #565656 !important;
+}
+input:-ms-input-placeholder {
+  color: #565656 !important;
+}
 #submit {
   border: 0px;
 }
@@ -11588,6 +11616,8 @@ body {
 }
 #prefix {
   margin-right: 5px;
+  padding: 0;
+  text-align: center;
 }
 #prefix:focus,
 #phone:focus {
@@ -11815,7 +11845,7 @@ body {
 }
 .head .texts a {
   font-family: Arial;
-  color: #fff;
+  color: #fbfbfe;
 }
 .head .texts a i {
   margin-left: 6px;
@@ -11834,7 +11864,7 @@ body {
 }
 @media (min-width: 768px) {
   .head .texts a:hover {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #fbfbfe;
   }
   .head .texts a:hover .phone {
     color: #55b5ff;
@@ -11999,6 +12029,7 @@ body {
   font-size: 18px;
   font-weight: bold;
   height: 36px;
+  color: #081822;
 }
 .main .per .text {
   font-family: Arial;

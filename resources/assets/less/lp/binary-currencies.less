@@ -1,9 +1,22 @@
 // global
-
+.loading{
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  top: -68px;
+  height: 0px;
+}
+.visible-hidden{
+  visibility: hidden;
+}
 body{
   padding-top: 0px;
   background: transparent;
   position: relative;
+  font-family: Arial;
+}
+h1,h2,h3{
+  height: auto;
 }
 .table{
   display: table;
@@ -12,6 +25,12 @@ body{
   > div{
     display: table-cell;
   }
+}
+input{
+  color: #565656 !important;
+  .plc({
+    color: #565656 !important;
+  });
 }
 .full-w{
   width: 100%;
@@ -30,6 +49,8 @@ body{
 }
 #prefix{
   margin-right: 5px;
+  padding: 0;
+  text-align: center;
 }
 #prefix,#phone{
   &:focus {
@@ -249,7 +270,7 @@ body{
     }
     a{
       font-family: Arial;
-      color: #fff;
+      color: #fbfbfe;
       i{
         .margin-right(6px);
         &.fa-circle{
@@ -266,7 +287,7 @@ body{
       }
       &:hover{
         @media(min-width: @screen-sm){
-          border-bottom: 1px solid #ccc;
+          border-bottom: 1px solid #fbfbfe;
           .phone{
             color: #048f1a;
           }
@@ -345,6 +366,7 @@ body{
         color: #fff;
         font-size: 18.5px;
       }
+
       form{
         position: relative;
         .fields{
@@ -439,6 +461,7 @@ h1, h2, h3,.form > .title{
   padding-top: 60px;
   .per{
     color: #081822;
+    height: 234px;
     .icon{
       width: 35px;
       .margin-right(13px);
@@ -447,6 +470,7 @@ h1, h2, h3,.form > .title{
       font-size: 18px;
       font-weight: bold;
       height: 36px;
+      color: #081822;
     }
     .text{
       font-family: Arial;
