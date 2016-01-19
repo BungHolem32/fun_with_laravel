@@ -1,6 +1,6 @@
 @section('head')
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    {!! $page->appendAsset(url('/css/60sec.css')) !!}
+    {!! $page->appendAsset(url('/css/50giftcard.css')) !!}
 @append
 
 @section('bottom-scripts')
