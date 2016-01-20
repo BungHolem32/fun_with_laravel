@@ -1,1 +1,0 @@
-@include('funnels.layouts.page-layout.lp', ['css' => 'demoaccounts-0'])

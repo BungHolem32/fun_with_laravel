@@ -1,1 +1,0 @@
-@include('funnels.layouts.page-layout.lp', ['css' => '88percentprofit-0'])
