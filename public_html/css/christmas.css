@@ -11719,13 +11719,13 @@ input#submit:focus {
 .bg {
   height: 100%;
   width: 100%;
-  background: url('/img/lp/bg_canadian.jpg');
+  background: url('/img/lp/bg_christmas.jpg');
   background-position: 50% 0;
   position: relative;
   overflow: hidden;
 }
 .form {
-  background: #191919;
+  background: transparent;
   position: relative;
   display: table;
   width: 100%;
@@ -11735,11 +11735,11 @@ input#submit:focus {
   margin: 0 auto;
   position: relative;
   left: 356px;
-  top: 200px;
+  top: 330px;
 }
 form .row > div {
   height: 34px;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 body,.wrapper,.bg{
   height: 965px;
@@ -11748,22 +11748,31 @@ body,.wrapper,.bg{
 input#submit {
   color: transparent;
   border: 0;
-  background: url('/img/lp/btn.png') no-repeat;
-  width: 241px;
-  height: 67px;
-  margin-top: 18px;
+  background: url('/img/lp/btn_christmas.png') no-repeat;
+  width: 221px;
+  height: 54px;
+  margin-top: -10px;
   background-size: contain;
   position: relative;
-  left: 12px;
+  left: 0px;
+  top: 12px;
 }
 
 
 form {
+  background: transparent;
   margin-top: 6px;
+  width: 220px;
 }
 .loading {
   background: transparent;
+  width: 221px;
 }
 #submit.visible-hidden{
   visibility: hidden;
 }
+#prefix{
+  padding: 0;
+  text-align: center;
+}
+

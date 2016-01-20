@@ -1,0 +1,1 @@
+@include('funnels.layouts.page-layout.lp', ['css' => 'doubleup'])
