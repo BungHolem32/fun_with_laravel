@@ -157,10 +157,18 @@ input#submit:focus {
 .bg {
   height: 100%;
   width: 100%;
-  background: url('/img/lp/bg_doubleup.jpg');
-  background-position: 50% 0;
   position: relative;
   overflow: hidden;
+  background: url('/img/lp/bg_gopro.jpg');
+  background-position: 50% 0;
+}
+
+input#submit {
+  background: url('/img/lp/btn_gopro.png') no-repeat;
+  height: 39px;
+  position: relative;
+  left: -4px;
+  top: -16px;
 }
 .form {
   background: transparent;
@@ -172,9 +180,9 @@ input#submit:focus {
   float: none;
   margin: 0 auto;
   position: relative;
-  width: 438px;
-  top: 439px;
-  left: 95px;
+  width: 455px;
+  top: 466px;
+  left: -349px;
 }
 form .row > div {
   height: 34px;
@@ -182,14 +190,6 @@ form .row > div {
 }
 body,.wrapper,.bg{
   height: 965px;
-}
-
-input#submit {
-  background: url('/img/lp/btn_doubleup.png') no-repeat;
-  height: 39px;
-  position: relative;
-  left: -4px;
-  top: -16px;
 }
 
 .loading {
