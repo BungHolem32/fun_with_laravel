@@ -14,7 +14,6 @@ class AbstractFunnelController extends Controller {
 
     public function __construct(){
         parent::__construct();
-        $this->set_recaptcha = (bool)\Session::get('recaptcha');
     }
 
     public function index($page)
