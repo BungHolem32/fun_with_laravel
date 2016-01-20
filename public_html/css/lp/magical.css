@@ -159,60 +159,67 @@ input#submit:focus {
   width: 100%;
   position: relative;
   overflow: hidden;
-  background: url('/img/lp/bg_gopro.jpg');
+  background: url('/img/lp/bg_magical.jpg');
   background-position: 50% 0;
 }
 
-
 input#submit {
-  background: url('/img/lp/btn_gopro.png') no-repeat;
-  color: transparent;
-  border: 0;
-  width: 221px;
-  height: 54px;
-  margin-top: -10px;
+  background: url('/img/lp/btn_magical.png') no-repeat;
   background-size: contain;
+  height: 39px;
   position: relative;
   left: 0px;
-  top: 12px;
+  top: -18px;
+  width: 204px;
 }
 
 .form {
-  left: 374px;
-  top: 330px;
+  top: 482px;
+  left: -406px;
   background: transparent;
   position: relative;
   display: table;
   width: 100%;
-  max-width: 260px;
+  max-width: 100%;
   height: 186px;
   float: none;
   margin: 0 auto;
   position: relative;
+  width: 438px;
 }
 form .row > div {
   height: 34px;
-  margin-bottom: 6px;
+  margin-bottom: 12px;
 }
 body,.wrapper,.bg{
   height: 965px;
 }
 
-
-form {
-  background: transparent;
-  margin-top: 6px;
-  width: 220px;
-}
 .loading {
+  position: absolute;
+  right: -28px;
+  width: 268px;
+  bottom: 19px;
+  text-align: center;
   background: transparent;
-  width: 221px;
+  height: 80px;
+  padding-top: 15px;
+  color: #fff;
 }
+
 #submit.visible-hidden{
   visibility: hidden;
 }
-#prefix{
+
+
+form {
+  width: 100%;
+}
+#prefix {
   padding: 0;
   text-align: center;
 }
-
+form .row > div {
+  float: left;
+  width: 50%;
+}
