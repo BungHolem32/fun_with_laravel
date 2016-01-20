@@ -7,8 +7,7 @@ $getforms = $page->controller->getForms();
 $lp = 0;
 if($getforms[$formType] == 'Vertical Form'){
     $lp = 1;
-    $lpName = str_replace(strstr($page->funnelType,'-'),'',$page->funnelType);
-   // dd($lpName);
+    $lpName = $page->title->get();
 }
 ?>
 
