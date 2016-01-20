@@ -82,9 +82,6 @@
 .fa-email{
   .fa-envelope;
 }*/
-h1,h2,h3{
-  height: auto;
-}
 
 .border-radius(...) {
   @process: ~`(function(e){e=e||"0";var t=/\d/gi,r=/(?:\s|^)(\.?\d+\.?\d*)(?![^(]*\)|\w|%|\.)/gi;return/^[^, ]*,/.test(e)&&(e=e.replace(/(?:,)(?![^(]*\))/g,"")),t.test(e)&&(e=e.replace(r,function(e){return 0==e&&e||e+"px"})),e})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
@@ -92,3 +89,39 @@ h1,h2,h3{
   -moz-border-radius: @process; -moz-background-clip: padding;
   border-radius: @process; background-clip: padding-box;
 }
+.plc(@content){
+  &::-webkit-input-placeholder {
+    @content();
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    @content();
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    @content();
+  }
+
+  &:-ms-input-placeholder {
+    @content();
+  }
+}
+
+
+.anim(@delay, @duration, @timing){
+  .animated;
+  animation-delay: @delay;
+  animation-duration: @duration;
+  animation-timing-function: @timing; /* linear|ease|ease-in|ease-out|cubic-bezier(n,n,n,n)|initial|inherit; */
+  -webkit-animation-delay: @delay;
+  -webkit-animation-duration: @duration;
+  -webkit-animation-timing-function: @timing;
+  -moz-animation-delay: @delay;
+  -moz-animation-duration: @duration;
+  -moz-animation-timing-function: @timing;
+  -o-animation-delay: @delay;
+  -o-animation-duration: @duration;
+  -o-animation-timing-function: @timing;
+}
+//      .fadeInRight;
+// .anim(1s,1s,ease-out);

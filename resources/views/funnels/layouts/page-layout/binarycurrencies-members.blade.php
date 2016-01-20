@@ -14,7 +14,7 @@
     <div class="head">
         <div class="col-xs-12 npad">
             <div class="col-xs-12 texts">
-                <div class="container col col-xs-8 col-md-10">
+                <div class="container col col-xs-8 col-md-10 col-lg-8">
                     <div class="pull-left col-xs-3"><div class="logo"></div></div>
                     <div class="pull-right-childs col-sm-9 col-xs-2 npads">
                         <div class="navbar-header">
@@ -25,7 +25,7 @@
                             <ul class="nav navbar-nav pull-right">
                                 <li><a class="col-md-2" href="mailto:cs@rboptions.com"><i class="fa fa-envelope"></i>@ln(Email): cs@rboptions.com</a></li>
                                 <li><a class="col-md-1" href=""><i class="fa fa-circle"></i>@ln(Live chat)</a></li>
-                                <li><a class="col-md-2" href="tel:1-647-846-8231"><i class="fa fa-phone"></i>@ln(Call us): 1-647-846-8231</a></li>
+                                <li><a class="col-md-2" href="tel:1-647-846-8231"><i class="fa fa-phone"></i>@ln(Call us): <span class="phone">1-647-846-8231</span></a></li>
                             </ul>
                         </nav>
                     </div>

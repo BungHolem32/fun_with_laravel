@@ -11483,11 +11483,6 @@ body {
 .fa-email{
   .fa-envelope;
 }*/
-h1,
-h2,
-h3 {
-  height: auto;
-}
 div.mobile-wrap {
   box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.2);
 }
@@ -11558,10 +11553,26 @@ div.mobile-lang-bar .lang {
 .phoneFields [class^="col"] {
   float: left;
 }*/
+.loading {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  top: -68px;
+  height: 0px;
+}
+.visible-hidden {
+  visibility: hidden;
+}
 body {
   padding-top: 0px;
   background: transparent;
   position: relative;
+  font-family: Arial;
+}
+h1,
+h2,
+h3 {
+  height: auto;
 }
 .table {
   display: table;
@@ -11577,6 +11588,23 @@ body {
 .form-control {
   box-shadow: none;
 }
+input {
+  color: #565656 !important;
+}
+input::-webkit-input-placeholder {
+  color: #565656 !important;
+}
+input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #565656 !important;
+}
+input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #565656 !important;
+}
+input:-ms-input-placeholder {
+  color: #565656 !important;
+}
 #submit {
   border: 0px;
 }
@@ -11588,6 +11616,8 @@ body {
 }
 #prefix {
   margin-right: 5px;
+  padding: 0;
+  text-align: center;
 }
 #prefix:focus,
 #phone:focus {
@@ -11801,8 +11831,8 @@ body {
   width: 215px;
   height: 43px;
   position: relative;
-  top: -17px;
-  right: 3px;
+  top: -13px;
+  right: -14px;
 }
 .head .texts {
   background: #000;
@@ -11814,7 +11844,8 @@ body {
   padding: 23px 45px;
 }
 .head .texts a {
-  color: #fff;
+  font-family: Arial;
+  color: #fbfbfe;
 }
 .head .texts a i {
   margin-right: 6px;
@@ -11833,7 +11864,10 @@ body {
 }
 @media (min-width: 768px) {
   .head .texts a:hover {
-    text-shadow: -4px -6px 1px #969696;
+    border-bottom: 1px solid #fbfbfe;
+  }
+  .head .texts a:hover .phone {
+    color: #55b5ff;
   }
 }
 .head .bg {
@@ -11854,8 +11888,10 @@ body {
   text-align: center;
   font-size: 43px;
   margin-top: 24px;
+  margin-bottom: 0px;
   font-weight: bold;
   font-family: samsungsharpsans-bold_v2;
+  margin-bottom: 6px;
 }
 .head .bg h1 span {
   color: #55b5ff;
@@ -11919,6 +11955,13 @@ body {
   width: 199px;
   height: 63px;
   background-position: -9px 2px;
+  position: relative;
+  top: 1px;
+}
+.head .bg .form form #submit span {
+  font-size: 19px;
+  padding-left: 11px;
+  font-family: 'Roboto Condensed';
 }
 .head .bg .form form #submit:hover {
   background-position: -9px -67px;
@@ -11984,21 +12027,28 @@ body {
 }
 .main .per {
   color: #081822;
+  height: 234px;
 }
 .main .per .icon {
-  margin-right: 5px;
+  width: 35px;
+  margin-right: 13px;
 }
 .main .per .title {
-  font-family: samsungsharpsans-bold_v2;
+  font-family: Arial;
   font-size: 18px;
   font-weight: bold;
+  height: 36px;
+  color: #081822;
+  text-transform: capitalize;
 }
 .main .per .text {
+  font-family: Arial;
+  color: #565656;
   padding-left: 51px;
   padding-top: 16px;
   padding-bottom: 76px;
-  line-height: 26px;
-  font-size: 13px;
+  font-size: 15px;
+  line-height: 22px;
 }
 .footer img {
   display: block;
@@ -12013,8 +12063,7 @@ body {
   margin: 0 auto;
   padding-top: 18px;
   max-width: 1052px;
-  font-size: 10px;
-  font-weight: bold;
+  font-family: Arial;
+  line-height: 12px;
+  font-size: 11px;
 }
-
-/*# sourceMappingURL=generalbinary-0.css.map */

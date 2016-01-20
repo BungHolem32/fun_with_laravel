@@ -1,9 +1,22 @@
 // global
-
+.loading{
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  top: -68px;
+  height: 0px;
+}
+.visible-hidden{
+  visibility: hidden;
+}
 body{
   padding-top: 0px;
   background: transparent;
   position: relative;
+  font-family: Arial;
+}
+h1,h2,h3{
+  height: auto;
 }
 .table{
   display: table;
@@ -19,6 +32,12 @@ body{
 .form-control {
   box-shadow: none;
 }
+input{
+  color: #565656 !important;
+  .plc({
+    color: #565656 !important;
+  });
+}
 #submit{
   &:focus{
     outline: none !important;
@@ -30,6 +49,8 @@ body{
 }
 #prefix{
   margin-right: 5px;
+  padding: 0;
+  text-align: center;
 }
 #prefix,#phone{
   &:focus {
@@ -239,8 +260,8 @@ body{
     width: 215px;
     height: 43px;
     position: relative;
-    top: -17px;
-    .right(3px);
+    top: -13px;
+    .right(-14px);
   }
   .texts{
     background: #000;
@@ -252,7 +273,8 @@ body{
       padding: 23px 45px;
     }
     a{
-      color: #fff;
+      font-family: Arial;
+      color: #fbfbfe;
       i{
         .margin-right(6px);
         &.fa-circle{
@@ -269,7 +291,10 @@ body{
       }
       &:hover{
         @media(min-width: @screen-sm){
-          text-shadow: -4px -6px 1px rgba(150, 150, 150, 1);
+          border-bottom: 1px solid #fbfbfe;
+          .phone{
+            color: #55b5ff;
+          }
         }
       }
     }
@@ -289,8 +314,10 @@ body{
       text-align: center;
       font-size: 43px;
       margin-top: 24px;
+      margin-bottom: 0px;
       font-weight: bold;
       font-family: samsungsharpsans-bold_v2;
+      margin-bottom: 6px;
       span{
         color: #55b5ff;
       }
@@ -353,6 +380,13 @@ body{
           width: 199px;
           height: 63px;
           background-position: -9px 2px;
+          position: relative;
+          top: 1px;
+          span{
+            font-size: 19px;
+            padding-left: 11px;
+            font-family: 'Roboto Condensed';
+          }
           &:hover{
             background-position: -9px -67px;
           }
@@ -424,20 +458,27 @@ body{
   padding-top: 60px;
   .per{
     color: #081822;
+    height: 234px;
     .icon{
-      .margin-right(5px);
+      width: 35px;
+      .margin-right(13px);
     }
     .title{
-      font-family: samsungsharpsans-bold_v2;
+      font-family: Arial;
       font-size: 18px;
       font-weight: bold;
+      height: 36px;
+      color: #081822;
+      text-transform: capitalize;
     }
     .text{
+      font-family: Arial;
+      color: #565656;
       .padding-left(51px);
       padding-top: 16px;
       padding-bottom: 76px;
-      line-height: 26px;
-      font-size: 13px;
+      font-size: 15px;
+      line-height: 22px;
     }
   }
 }
@@ -455,8 +496,9 @@ body{
       margin: 0 auto;
       padding-top: 18px;
       max-width: 1052px;
-      font-size: 10px;
-      font-weight: bold;
+      font-family: Arial;
+      line-height: 12px;
+      font-size: 11px;
     }
   }
 }

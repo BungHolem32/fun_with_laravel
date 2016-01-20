@@ -5,6 +5,8 @@
 // being used with all langs without making more routes.
 \Request::local()->id = '4';
 
+if(!isset($show_recaptcha))
+    $show_recaptcha = false;
 $form = \App\Page::find($page->formType);
 //echo $form->title;
 $hiddenFields = [];
@@ -28,7 +30,7 @@ foreach($form->membersFields->getChildren() as $field){
                 'method'=>'post',
                 'class'=>'form-horizontal']) !!}
     <div class="fields">
-        @if(isset($show_recaptcha))
+        @if($show_recaptcha)
             <div class="g-recaptcha" data-sitekey="6Ld39RMTAAAAALVGhMswy185zq0C2bmP-gydSrSI"></div>
         @endif
         <input type="hidden" name="parentPage" value="{{ $funnelId }}">
@@ -56,7 +58,7 @@ foreach($form->membersFields->getChildren() as $field){
                     </div>
                 @elseif($field[0] == 'submit')
                     <div class="field">
-                        <button id="submit">{{ \App\Languages::getTrans($field[2]) }}</button>
+                        <button id="submit"><span>{{ \App\Languages::getTrans($field[2]) }}</span></button>
                     </div>
                 @endif
             @endforeach

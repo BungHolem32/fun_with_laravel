@@ -34,6 +34,9 @@ Route::group(['middleware' => 'auth', 'prefix'=>'admin'], function(){
 
     Request::localization();
 
+    Route::get('global-settings', ['as' => 'global-settings', 'uses' => 'Admin\globalSettingsController@index']);
+    Route::post('global-settings', ['as' => 'global-settings', 'uses' => 'Admin\globalSettingsController@update']);
+
     Route::get('settings', ['as' => 'settings', function() {return view('admin.settings.settings');}]);
     Route::get('languages', ['as' => 'languages', 'uses' => 'Admin\LanguagesController@index']);
     Route::post('languages', ['as' => 'languages', 'uses' => 'Admin\LanguagesController@update']);

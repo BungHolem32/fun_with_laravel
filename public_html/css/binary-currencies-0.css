@@ -11483,11 +11483,6 @@ body {
 .fa-email{
   .fa-envelope;
 }*/
-h1,
-h2,
-h3 {
-  height: auto;
-}
 div.mobile-wrap {
   box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.2);
 }
@@ -11558,10 +11553,26 @@ div.mobile-lang-bar .lang {
 .phoneFields [class^="col"] {
   float: left;
 }*/
+.loading {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  top: -68px;
+  height: 0px;
+}
+.visible-hidden {
+  visibility: hidden;
+}
 body {
   padding-top: 0px;
   background: transparent;
   position: relative;
+  font-family: Arial;
+}
+h1,
+h2,
+h3 {
+  height: auto;
 }
 .table {
   display: table;
@@ -11570,6 +11581,23 @@ body {
 }
 .table > div {
   display: table-cell;
+}
+input {
+  color: #565656 !important;
+}
+input::-webkit-input-placeholder {
+  color: #565656 !important;
+}
+input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #565656 !important;
+}
+input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #565656 !important;
+}
+input:-ms-input-placeholder {
+  color: #565656 !important;
 }
 .full-w {
   width: 100%;
@@ -11588,6 +11616,8 @@ body {
 }
 #prefix {
   margin-right: 5px;
+  padding: 0;
+  text-align: center;
 }
 #prefix:focus,
 #phone:focus {
@@ -11781,8 +11811,7 @@ body {
   width: 100%;
 }
 .head .logo {
-  background: url('/img/lp/generalbinary/logo.png');
-  background-repeat: no-repeat;
+  background: url('/img/lp/logo.png') no-repeat;
   width: 215px;
   height: 43px;
   position: relative;
@@ -11799,7 +11828,8 @@ body {
   padding: 23px 45px;
 }
 .head .texts a {
-  color: #fff;
+  font-family: Arial;
+  color: #fbfbfe;
 }
 .head .texts a i {
   margin-right: 6px;
@@ -11818,15 +11848,19 @@ body {
 }
 @media (min-width: 768px) {
   .head .texts a:hover {
-    text-shadow: -4px -6px 1px #969696;
+    border-bottom: 1px solid #fbfbfe;
+  }
+  .head .texts a:hover .phone {
+    color: #9EC5D5;
   }
 }
 .head .bg {
-  background: url('/img/lp/generalbinary/big-pic.jpg');
+  background: url('/img/lp/binary-currencies/Big-Pic.jpg');
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
   height: 621px;
+  overflow: hidden;
   background-position: 50% 0;
 }
 @media (min-width: 1900px) {
@@ -11837,9 +11871,10 @@ body {
 .head .bg h1 {
   color: #fff;
   text-align: center;
-  font-size: 43px;
-  margin-top: 24px;
+  font-size: 53px;
+  margin-top: 1px;
   font-weight: bold;
+  margin-bottom: 8px;
 }
 .head .bg h1 span {
   color: #55b5ff;
@@ -11847,16 +11882,52 @@ body {
 .head .bg h2 {
   color: #fff;
   text-align: center;
+  font-size: 37px;
+  margin-bottom: 15px;
+}
+.head .bg h3 {
+  color: #fff;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 27px;
+  border: 3px solid #fff;
+  box-shadow: 4px 5px 9px 0px rgba(0, 0, 0, 0.75);
+  margin: 0 auto;
+  height: 44px;
+  line-height: 38px;
+  max-width: 625px;
+  position: relative;
+}
+.head .bg h3:after,
+.head .bg h3:before {
+  position: absolute;
+  content: '';
+  top: 11px;
+  height: 18px;
+  width: 23px;
+}
+.head .bg h3:after {
+  right: -1px;
+  background: url('/img/lp/binary-currencies/arrow-right.png');
+  background-repeat: no-repeat;
+}
+.head .bg h3:before {
+  left: -1px;
+  background: url('/img/lp/binary-currencies/arrow-left.png');
+  background-repeat: no-repeat;
 }
 .head .bg .form {
   position: absolute;
   bottom: 0;
   left: 0;
 }
-.head .bg .form h3 {
+.head .bg .form .title {
   text-align: center;
   color: #fff;
-  font-size: 18.5px;
+  font-size: 37.5px;
+  margin-bottom: 20px;
+  line-height: 36px;
 }
 .head .bg .form form {
   position: relative;
@@ -11869,19 +11940,43 @@ body {
 }
 .head .bg .form form #submit {
   color: #010000;
-  text-shadow: 1px 2px 3px #d1fd20;
-  text-shadow: 1px 1px 1px #d1fd20;
+  text-shadow: 0.2px 0.1px 0.5px #fff;
   box-shadow: none;
   font-weight: bold;
-  font-size: 15px;
-  background: url('/img/lp/generalbinary/icons_32-left.png');
+  background: url('/img/lp/binary-currencies/button.png');
   background-repeat: no-repeat;
-  width: 199px;
-  height: 63px;
-  background-position: -9px 2px;
+  width: 240px;
+  height: 92px;
+  background-position: 0px 0px;
+  position: relative;
+}
+.head .bg .form form #submit span {
+  display: block;
+  font-size: 25px;
+  -webkit-transform: scale(0.8, 1);
+  transform: scale(0.8, 1);
+}
+.head .bg .form form #submit:after {
+  content: '';
+  position: absolute;
+  top: 34px;
+  right: 24px;
+  background: url('/img/lp/binary-currencies/black-bt-arrow-right.png');
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 25px;
 }
 .head .bg .form form #submit:hover {
-  background-position: -9px -67px;
+  background-position: 0px -94px;
+}
+.head .bg .form form #submit:focus {
+  background-position: 0px -188px;
+}
+h1,
+h2,
+h3,
+.form > .title {
+  text-shadow: 2px 2px 2px #000;
 }
 @media (max-width: 1265px) {
   .bg {
@@ -11944,15 +12039,21 @@ body {
 }
 .main .per {
   color: #081822;
+  height: 234px;
 }
 .main .per .icon {
-  margin-right: 5px;
+  width: 35px;
+  margin-right: 13px;
 }
 .main .per .title {
   font-size: 18px;
   font-weight: bold;
+  height: 36px;
+  color: #081822;
 }
 .main .per .text {
+  font-family: Arial;
+  color: #565656;
   padding-left: 51px;
   padding-top: 16px;
   padding-bottom: 76px;
@@ -11975,5 +12076,75 @@ body {
   font-size: 10px;
   font-weight: bold;
 }
-
-/*# sourceMappingURL=binary-currencies-0.css.map */
+/*
+@media(min-width: 1265px){
+  .logo{
+    top: -17px;
+    right: -158px;
+  }
+  .npads{
+    position: relative;
+    left: -181px;
+  }
+}*/
+@media (min-width: 1265px) {
+  .form {
+    background: rgba(0, 0, 0, 0.6);
+    padding-bottom: 20px;
+    padding-top: 9px;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    /* linear|ease|ease-in|ease-out|cubic-bezier(n,n,n,n)|initial|inherit; */
+    -webkit-animation-delay: 1s;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-delay: 1s;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: ease-out;
+    -o-animation-delay: 1s;
+    -o-animation-duration: 1s;
+    -o-animation-timing-function: ease-out;
+  }
+  form {
+    display: table;
+  }
+  .head .bg .form form .fields {
+    top: 4px;
+    left: -112px;
+  }
+  .head .bg .form form .fields > .field {
+    float: left;
+  }
+  .head .bg .form form .fields > .field:nth-of-type(4) {
+    clear: both;
+  }
+  .head .bg .form form .fields > .field:last-child {
+    position: absolute;
+  }
+  .head .bg .form form .fields > .field input {
+    border: 0;
+    border-radius: 0;
+    height: 35px;
+    padding: 6px 12px;
+    margin-bottom: 4px;
+    max-width: 100%;
+    width: 210px;
+  }
+  .head .bg .form form .fields > .field input#phone {
+    max-width: 162px;
+  }
+  .head .bg .form form .fields > .field #submit {
+    top: -8px;
+    left: -13px;
+  }
+}

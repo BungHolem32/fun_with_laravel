@@ -1,6 +1,7 @@
 @section('head')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300,300italic' rel='stylesheet' type='text/css'>
     {!! $page->appendAsset(url('/css/generalbinary-'.Request::local()->dir.'.css')) !!}
 @append
 
@@ -13,7 +14,7 @@
     <div class="head">
         <div class="col-xs-12 npad">
             <div class="col-xs-12 texts">
-                <div class="container col col-xs-8 col-md-10">
+                <div class="container col col-xs-8 col-md-10 col-lg-8">
                     <div class="pull-left col-xs-3"><div class="logo"></div></div>
                     <div class="pull-right-childs col-sm-9 col-xs-2 npads">
                         <div class="navbar-header">
@@ -24,7 +25,7 @@
                             <ul class="nav navbar-nav pull-right">
                                 <li><a class="col-md-2" href="mailto:cs@rboptions.com"><i class="fa fa-envelope"></i>@ln(Email): cs@rboptions.com</a></li>
                                 <li><a class="col-md-1" href=""><i class="fa fa-circle"></i>@ln(Live chat)</a></li>
-                                <li><a class="col-md-2" href="tel:1-647-846-8231"><i class="fa fa-phone"></i>@ln(Call us): 1-647-846-8231</a></li>
+                                <li><a class="col-md-2" href="tel:1-647-846-8231"><i class="fa fa-phone"></i>@ln(Call us): <span class="phone">1-647-846-8231</span></a></li>
                             </ul>
                         </nav>
                     </div>
@@ -45,14 +46,14 @@
             <div class="row">
                 <div class="col-sm-6 col-xs-12">
                     <div class="per">
-                        <div class="title"><img class="icon" src="/img/lp/generalbinary/icon-1.png"/>
+                        <div class="title"><img class="icon" src="/img/lp/generalbinary/icon-3.png"/>
                             The perfect account type for every trader</div>
                             <div class="text">
         From beginners to advanced traders, we offer accounts designed with your needs in mind. Choose the services that you need from an extensive list which includes dedicated brokers, trading signals, and money management.
                         </div>
                     </div>
                     <div class="per">
-                        <div class="title"><img class="icon" src="/img/lp/generalbinary/icon-2.png"/> Valuable education tools</div>
+                        <div class="title"><img class="icon" src="/img/lp/generalbinary/icon-1.png"/> Valuable education tools</div>
                         <div class="text">
                             Every trader gets a huge packet of educational materials designed to enhance your trading skills. Our Binary options e-book presents a simple breakdown of trading basics, and our team of analysts sends out daily reviews covering important market events.
                         </div>
@@ -60,7 +61,7 @@
                 </div>
                 <div class="col-sm-6 col-xs-12">
                     <div class="per">
-                        <div class="title"><img class="icon" src="/img/lp/generalbinary/icon-3.png"/>An amazing trading platform</div>
+                        <div class="title"><img class="icon" src="/img/lp/generalbinary/icon-2.png"/>An amazing trading platform</div>
                         <div class="text">
                             Our Binary Options platform is easy to master. Our senior brokers walk you through trading step by step, and teach you how to pick winning trades on currencies, stocks, indices, and commodities, all while earning the highest payouts in the industry – up to 88%.
                         </div>
