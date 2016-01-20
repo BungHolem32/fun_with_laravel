@@ -16,5 +16,9 @@
             @include('funnels.layouts._partials._form-vertical', ['funnelId' => $page->id])
         </div>
     </div>
-    <div class="bottom"></div>
+    @if($lpName == 'trading-signals' || $lpName == 'demoaccounts')
+        <a href="#top" class="bottom"></a>
+    @else
+        <div class="bottom"></div>
+    @endif
 @endsection
