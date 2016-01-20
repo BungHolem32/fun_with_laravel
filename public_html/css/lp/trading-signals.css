@@ -1,20 +1,25 @@
 @import "base_lp.css";
-/************************************************** added ******************************************************/
+
+[class^="col"] {
+  float: left;
+}
+.phoneFields [class^="col"] {
+  float: left;
+}
 body {
   padding-top: 0px;
   background: transparent;
   position: relative;
 }
+.bg {
+  margin: 0 auto;
+}
 .form {
-  background: #191919;
   position: relative;
   display: table;
   width: 100%;
-  max-width: 260px;
+  max-width: 316px;
   float: right;
-  height: 192px;
-  top: 177px;
-  right: 28px;
 }
 input#submit.visible-hidden {
   box-shadow: none;
@@ -22,8 +27,8 @@ input#submit.visible-hidden {
 .loading {
   position: absolute;
   right: -3px;
-  width: 268px;
-  bottom: -44px;
+  width: 263px;
+  bottom: -14px;
   text-align: center;
   background: #191919;
   height: 80px;
@@ -35,16 +40,28 @@ input#submit.visible-hidden {
   width: 100%;
 }
 form {
+  background: #191919;
   width: 260px;
   float: right;
   margin-right: 0px;
-  margin-top: 0px;
+  margin-top: 178px;
 }
-form .form-control {
+form .form-control,
+form #phone,
+form #prefix {
   border-radius: 0;
+  height: 41px;
 }
 form .row > div {
   position: relative;
+  height: 41px;
+}
+#prefix:focus,
+#phone:focus {
+  background-color: #ffffff;
+  background-image: none;
+  border: 2px solid #cdb12f;
+  box-shadow: inset 0px 0px 1px #cdb12f, 0px 1px 7px #cdb12f;
 }
 label.error {
   background: #fff;
@@ -79,24 +96,40 @@ label.error:after {
   border-width: 6px;
   margin-left: -10px;
 }
+body {
+  overflow-x: hidden;
+}
+.bg {
+  height: 1254px;
+  width: 100%;
+  background: url('/img/lp/bg_trading-signals.jpg');
+  background-position: 50% 50%;
+}
+.form {
+  float: none;
+  display: table;
+  width: 100%;
+  max-width: 986px;
+  margin: 0px auto;
+  padding-top: 10px;
+}
 form .row > div {
-  height: 34px;
+  height: 41px;
   margin-bottom: 18px;
 }
 input {
-  height: 34px;
+  height: 41px;
 }
 input#submit {
   color: transparent;
   border: 0;
-  background: url('/img/lp/btn.png');
+  background: url('/img/lp/btn_88percentprofit.png');
   width: 261px;
   height: 67px;
-  margin-top: 18px;
 }
-/*body {
+body {
   background: #EDEDE3;
-}*/
+}
 #prefix {
   float: left;
   margin: 0;
@@ -104,15 +137,6 @@ input#submit {
 #phone {
   float: right;
 }
-#prefix:focus,
-#phone:focus {
-  background-color: #ffffff;
-  background-image: none;
-  border: 2px solid #cdb12f;
-  box-shadow: inset 0px 0px 1px #cdb12f, 0px 1px 7px #cdb12f;
-}
-
-/*
 .head:after,
 .head:before {
   content: '';
@@ -138,81 +162,22 @@ input#submit {
   z-index: -1;
   height: 7px;
   background: #191917;
-}*/
+}
+.bottom {
+  position: absolute;
+  bottom: 203px;
+  height: 82px;
+  width: 200px;
+  width: 100%;
+  max-width: 264px;
+  display: table;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
 
-/*# sourceMappingURL=88percentprofit-0.css.map */
-
+/*# sourceMappingURL=demoaccounts-0.css.map */
 input#submit:focus {
   border-color: transparent;
   box-shadow: none;
 }
-
-
-/**** changed *****/
-.wrapper{
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-}
-.bg {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  background: url('/img/lp/bg_gopro.jpg');
-  background-position: 50% 0;
-}
-
-
-input#submit {
-  background: url('/img/lp/btn_gopro.png') no-repeat;
-  color: transparent;
-  border: 0;
-  width: 221px;
-  height: 54px;
-  margin-top: -10px;
-  background-size: contain;
-  position: relative;
-  left: 0px;
-  top: 12px;
-}
-
-.form {
-  left: 374px;
-  top: 330px;
-  background: transparent;
-  position: relative;
-  display: table;
-  width: 100%;
-  max-width: 260px;
-  height: 186px;
-  float: none;
-  margin: 0 auto;
-  position: relative;
-}
-form .row > div {
-  height: 34px;
-  margin-bottom: 6px;
-}
-body,.wrapper,.bg{
-  height: 965px;
-}
-
-
-form {
-  background: transparent;
-  margin-top: 6px;
-  width: 220px;
-}
-.loading {
-  background: transparent;
-  width: 221px;
-}
-#submit.visible-hidden{
-  visibility: hidden;
-}
-#prefix{
-  padding: 0;
-  text-align: center;
-}
-
