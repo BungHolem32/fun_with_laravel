@@ -1,5 +1,6 @@
 @section('head')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+    <script src="/js/lp/binary-currencies.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300,300italic' rel='stylesheet' type='text/css'>
     {!! $page->appendAsset(url('/css/binary-currencies-'.Request::local()->dir.'.css')) !!}
@@ -38,6 +39,13 @@
                 <div class="form">
                     <div class="title">@ln(Open Your Binary Options Account!)<br>@ln(Get Started Trading Currencies TODAY!)</div>
                     @include('funnels.layouts._partials._form-horizontal', ['funnelId' => $page->id])
+                    <form action="">
+                        <div class="select">
+                            <select name="" id="">
+                                <option value="">Some Option</option>
+                            </select>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -47,14 +55,16 @@
             <div class="row">
                 <div class="col-sm-6 col-xs-12">
                     <div class="per">
-                        <div class="title"><img class="icon" src="/img/lp/binary-currencies/ico-1.png"/>
+                        <img class="icon reduce1" src="/img/lp/binary-currencies/ico-1.png"/>
+                        <div class="title">
                             The perfect account type for every trader</div>
                             <div class="text">
         From beginners to advanced traders, we offer accounts designed with your needs in mind. Choose the services that you need from an extensive list which includes dedicated brokers, trading signals, and money management.
                         </div>
                     </div>
                     <div class="per">
-                        <div class="title"><img class="icon" src="/img/lp/binary-currencies/ico-2.png"/> Valuable education tools</div>
+                        <img class="icon" src="/img/lp/binary-currencies/ico-2.png"/>
+                        <div class="title"> Valuable education tools</div>
                         <div class="text">
                             Every trader gets a huge packet of educational materials designed to enhance your trading skills. Our Binary options e-book presents a simple breakdown of trading basics, and our team of analysts sends out daily reviews covering important market events.
                         </div>
@@ -62,23 +72,27 @@
                 </div>
                 <div class="col-sm-6 col-xs-12">
                     <div class="per">
-                        <div class="title"><img class="icon" src="/img/lp/binary-currencies/ico-3.png"/>An amazing trading platform</div>
+                        <img class="icon" src="/img/lp/binary-currencies/ico-3.png"/>
+                        <div class="title">An amazing trading platform</div>
                         <div class="text">
                             Our Binary Options platform is easy to master. Our senior brokers walk you through trading step by step, and teach you how to pick winning trades on currencies, stocks, indices, and commodities, all while earning the highest payouts in the industry – up to 88%.
                         </div>
                     </div>
                     <div class="per">
-                        <div class="title"><img class="icon" src="/img/lp/binary-currencies/ico-4.png"/>Welcome Bonuses and Rewards </div>
+                        <img class="icon" src="/img/lp/binary-currencies/ico-4.png"/>
+                        <div class="title">Welcome Bonuses and Rewards </div>
                         <div class="text">
                             RBoptions traders always get more! You can make your deposit go farther when we match it with a 50% deposit bonus directly into your account. Our traders also qualify for high end Apple products like iPhones and iPads.
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="row icons">
+                <img src="/img/lp/binary-currencies/payment.png" alt="">
+            </div>
         </div>
     </div>
     <div class="footer">
-        <img src="/img/lp/Footer-icons.png" alt="">
         <div class="bg">
             <div class="text">
             Eligibility:<br>

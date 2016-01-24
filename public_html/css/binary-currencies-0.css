@@ -11582,21 +11582,26 @@ h3 {
 .table > div {
   display: table-cell;
 }
-input {
+input,
+select {
   color: #565656 !important;
 }
-input::-webkit-input-placeholder {
+input::-webkit-input-placeholder,
+select::-webkit-input-placeholder {
   color: #565656 !important;
 }
-input:-moz-placeholder {
+input:-moz-placeholder,
+select:-moz-placeholder {
   /* Firefox 18- */
   color: #565656 !important;
 }
-input::-moz-placeholder {
+input::-moz-placeholder,
+select::-moz-placeholder {
   /* Firefox 19+ */
   color: #565656 !important;
 }
-input:-ms-input-placeholder {
+input:-ms-input-placeholder,
+select:-ms-input-placeholder {
   color: #565656 !important;
 }
 .full-w {
@@ -11815,8 +11820,8 @@ body {
   width: 215px;
   height: 43px;
   position: relative;
-  top: -17px;
-  right: 3px;
+  top: -13px;
+  right: -14px;
 }
 .head .texts {
   background: #000;
@@ -11897,6 +11902,7 @@ body {
   height: 44px;
   line-height: 38px;
   max-width: 625px;
+  padding: 0 33px;
   position: relative;
 }
 .head .bg h3:after,
@@ -11906,6 +11912,15 @@ body {
   top: 11px;
   height: 18px;
   width: 23px;
+}
+@media (max-width: 700px) {
+  .head .bg h3 {
+    height: auto;
+  }
+  .head .bg h3:after,
+  .head .bg h3:before {
+    top: 40%;
+  }
 }
 .head .bg h3:after {
   right: -1px;
@@ -12036,6 +12051,7 @@ h3,
 }
 .main {
   padding-top: 60px;
+  background: #081822;
 }
 .main .per {
   color: #081822;
@@ -12044,37 +12060,45 @@ h3,
 .main .per .icon {
   width: 35px;
   margin-right: 13px;
+  float: left;
+}
+.main .per .icon.reduce1 {
+  max-width: 24px;
 }
 .main .per .title {
+  font-family: Arial;
   font-size: 18px;
   font-weight: bold;
   height: 36px;
-  color: #081822;
+  color: #70b7e0;
+  text-transform: capitalize;
 }
 .main .per .text {
   font-family: Arial;
-  color: #565656;
+  color: #fff;
   padding-left: 51px;
   padding-top: 16px;
   padding-bottom: 76px;
-  line-height: 26px;
-  font-size: 13px;
-}
-.footer img {
-  display: block;
-  margin: 4px auto;
+  font-size: 15px;
+  line-height: 22px;
 }
 .footer .bg {
   height: 70px;
-  background: #000;
-  color: #656565;
+  background: #1c2f3b;
+  color: #5183a1;
 }
 .footer .bg .text {
   margin: 0 auto;
   padding-top: 18px;
   max-width: 1052px;
-  font-size: 10px;
-  font-weight: bold;
+  font-family: Arial;
+  line-height: 12px;
+  font-size: 11px;
+}
+@media (max-width: 1200px) {
+  .footer .bg .text {
+    padding: 5px 10px;
+  }
 }
 /*
 @media(min-width: 1265px){
@@ -12147,4 +12171,46 @@ h3,
     top: -8px;
     left: -13px;
   }
+}
+.select {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+.select:after {
+  background: url('/img/lp/binary-currencies/dropdown.png');
+  position: absolute;
+  display: inline-block;
+  content: "";
+  top: 4px;
+  right: 4px;
+  border-left: 1px solid #eaeaea;
+  padding-left: 10px;
+  height: 29px;
+  width: 29px;
+  padding-top: 10px;
+  pointer-events: none;
+  background-repeat: no-repeat;
+}
+.select:hover:after {
+  background-position: -28px 0px;
+}
+.select.focus:after {
+  background-position: -56px 0px;
+}
+.select select {
+  padding: 6px 0px;
+  padding-left: 12px;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  cursor: pointer;
+  height: 36px;
+  display: inline-block;
+}
+.row.icons {
+  text-align: center;
+  padding-bottom: 10px;
 }
