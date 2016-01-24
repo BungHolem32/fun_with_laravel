@@ -26,7 +26,7 @@ h1,h2,h3{
     display: table-cell;
   }
 }
-input{
+input,select{
   color: #565656 !important;
   .plc({
     color: #565656 !important;
@@ -336,6 +336,7 @@ body{
       height: 44px;
       line-height: 38px;
       max-width: 625px;
+      padding: 0 33px;
       position: relative;
 
 
@@ -347,6 +348,12 @@ body{
         top: 11px;
         height: 18px;
         width: 23px;
+      }
+      @media(max-width: 700px){
+        height: auto;
+        &:after,&:before {
+          top: 40%;
+        }
       }
       &:after{
         right: -1px;
@@ -479,24 +486,29 @@ h1, h2, h3, .form>.title{
 
 .main{
   padding-top: 60px;
+  background: #081822;
   .per{
     color: #081822;
     height: 234px;
     .icon{
       width: 35px;
       .margin-right(13px);
+      float: @left;
+      &.reduce1{
+        max-width: 24px;
+      }
     }
     .title{
       font-family: Arial;
       font-size: 18px;
       font-weight: bold;
       height: 36px;
-      color: #081822;
+      color: #70b7e0;
       text-transform: capitalize;
     }
     .text{
       font-family: Arial;
-      color: #565656;
+      color: #fff;
       .padding-left(51px);
       padding-top: 16px;
       padding-bottom: 76px;
@@ -507,14 +519,10 @@ h1, h2, h3, .form>.title{
 }
 
 .footer{
-  img{
-    display: block;
-    margin: 4px auto;
-  }
   .bg{
     height: 70px;
-    background: #000;
-    color: #656565;
+    background: #1c2f3b;
+    color: #5183a1;
     .text{
       margin: 0 auto;
       padding-top: 18px;
@@ -522,6 +530,9 @@ h1, h2, h3, .form>.title{
       font-family: Arial;
       line-height: 12px;
       font-size: 11px;
+      @media(max-width: @screen-lg){
+        padding: 5px 10px;
+      }
     }
   }
 }
@@ -579,4 +590,53 @@ h1, h2, h3, .form>.title{
       }
     }
   }
+}
+
+.select {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  &:after {
+    .background('dropdown.png');
+    position: absolute;
+    display: inline-block;
+    content: "";
+    top: 4px;
+    right: 4px;
+    border-left: 1px solid #eaeaea;
+    padding-left: 10px;
+    height: 29px;
+    width: 29px;
+    padding-top: 10px;
+    pointer-events: none;
+    background-repeat: no-repeat;
+  }
+  &:hover{
+    &:after {
+      background-position: -28px 0px;
+    }
+  }
+  &.focus{
+    &:after {
+      background-position: -56px 0px;
+    }
+  }
+
+  select {
+    padding: 6px 0px;
+    padding-left: 12px;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    cursor: pointer;
+    height: 36px;
+    display: inline-block;
+  }
+}
+
+.row.icons{
+  text-align: center;
+  padding-bottom: 10px;
 }
