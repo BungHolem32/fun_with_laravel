@@ -11944,7 +11944,7 @@ body {
 .head .bg .form .title {
   text-align: center;
   color: #fff;
-  font-size: 37.5px;
+  font-size: 34.5px;
   margin-bottom: 20px;
   line-height: 36px;
 }
@@ -11972,14 +11972,15 @@ body {
 .head .bg .form form #submit span {
   display: block;
   font-size: 25px;
-  -webkit-transform: scale(0.8, 1);
-  transform: scale(0.8, 1);
+  font-weight: 400;
+  position: relative;
+  left: -13px;
 }
 .head .bg .form form #submit:after {
   content: '';
   position: absolute;
   top: 34px;
-  right: 24px;
+  right: 30px;
   background: url('/img/lp/binary-currencies/black-bt-arrow-right.png');
   background-repeat: no-repeat;
   height: 25px;
@@ -12054,12 +12055,18 @@ h3,
   }
 }
 .main {
-  padding-top: 60px;
+  padding-top: 51px;
   background: #081822;
 }
 .main .per {
   color: #081822;
   height: 234px;
+  position: relative;
+}
+@media (min-width: 1265px) {
+  .main .per {
+    left: -27px;
+  }
 }
 .main .per .icon {
   width: 35px;
@@ -12073,7 +12080,8 @@ h3,
   font-family: Arial;
   font-size: 18px;
   font-weight: bold;
-  height: 36px;
+  height: auto;
+  min-height: 36px;
   color: #70b7e0;
   text-transform: capitalize;
 }
@@ -12118,7 +12126,7 @@ h3,
 @media (min-width: 1265px) {
   .form {
     background: rgba(0, 0, 0, 0.6);
-    padding-bottom: 20px;
+    padding-bottom: 68px;
     padding-top: 9px;
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
@@ -12172,6 +12180,13 @@ h3,
   .head .bg .form form .fields > .field input#phone {
     max-width: 162px;
   }
+  .head .bg .form form .fields > .field .select {
+    max-width: 100%;
+    width: 210px;
+  }
+  .head .bg .form form .fields > .field .select select {
+    padding-left: 7px;
+  }
   .head .bg .form form .fields > .field #submit {
     top: -8px;
     left: -13px;
@@ -12217,7 +12232,10 @@ h3,
 }
 .row.icons {
   text-align: center;
-  padding-bottom: 10px;
+  padding-bottom: 32px;
+  position: relative;
+  top: 20px;
+  left: -24px;
 }
 @media (min-width: 768px) {
   li a {
@@ -12260,7 +12278,7 @@ h3,
     font-weight: bold;
     font-size: 12px;
     position: relative;
-    top: -2px;
+    top: 0px;
   }
   .form input.error::-webkit-input-placeholder {
     color: #fe0000 !important;
@@ -12303,9 +12321,17 @@ h3,
   right: -534px;
   bottom: -83px;
 }
-@media (max-width: 1265px) {
+@media (min-width: 1265px) {
   .form {
-    padding-bottom: 20px;
+    height: 196px;
+  }
+}
+@media (max-width: 1265px) {
+  .bg {
+    background-size: cover;
+  }
+  .form {
+    padding-bottom: 71px;
   }
   .g-recaptcha {
     margin-bottom: 5px;
@@ -12313,5 +12339,14 @@ h3,
     right: -1%;
     bottom: -77px;
     z-index: 999;
+  }
+}
+form.visible-hidden {
+  height: 92px !important;
+}
+@media (min-width: 1265px) {
+  .pers {
+    padding-left: 79px;
+    padding-right: 71px;
   }
 }

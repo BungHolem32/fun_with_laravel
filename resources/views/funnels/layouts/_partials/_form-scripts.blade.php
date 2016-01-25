@@ -61,7 +61,7 @@
                 beforeSend: function(){
                     console.log('loading...');
                     $(form).after(loadingMsg);
-                    $(form).find('input').addClass('visible-hidden');
+                    $(form).addClass('visible-hidden').find('input').addClass('visible-hidden');
                     if($(form).find('button').length)
                         $(form).find('button').addClass('visible-hidden');
                     $(form).find('input#submit').addClass('nofocus');
@@ -78,7 +78,7 @@
                     else{
                         alert(res.errs.error);
                         $('div.loading').remove();
-                        $(form).find('input').removeClass('visible-hidden');
+                        $(form).removeClass('visible-hidden').find('input').removeClass('visible-hidden');
                         if($(form).find('button').length)
                             $(form).find('button').removeClass('visible-hidden');
                         if($(form).find('.g-recaptcha').length)

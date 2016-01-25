@@ -39,19 +39,12 @@
                 <div class="form">
                     <div class="title">@ln(Open Your Binary Options Account!)<br>@ln(Get Started Trading Currencies TODAY!)</div>
                     @include('funnels.layouts._partials._form-horizontal', ['funnelId' => $page->id])
-                    <form action="">
-                        <div class="select">
-                            <select name="" id="">
-                                <option value="">Some Option</option>
-                            </select>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
     </div>
     <div class="main">
-        <div class="container col col-xs-12 col-sm-7">
+        <div class="container col col-xs-12 col-sm-8 pers">
             <div class="row">
                 <div class="col-sm-6 col-xs-12">
                     <div class="per">
@@ -64,7 +57,7 @@
                     </div>
                     <div class="per">
                         <img class="icon" src="/img/lp/binary-currencies/ico-2.png"/>
-                        <div class="title"> Valuable education tools</div>
+                        <div class="title">Dedicated Account Managers and Customer Service available 24/7</div>
                         <div class="text">
                             Every trader gets a huge packet of educational materials designed to enhance your trading skills. Our Binary options e-book presents a simple breakdown of trading basics, and our team of analysts sends out daily reviews covering important market events.
                         </div>

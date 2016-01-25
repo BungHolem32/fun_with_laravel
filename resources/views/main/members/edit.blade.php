@@ -41,6 +41,10 @@
         <h3><i class="fa fa-link"></i> {!! Form::label('destinationSite', 'Destination Site:') !!}</h3>
         {!! Form::text('destinationSite', $page['destinationSite'], ['name'=>'mongo[destinationSite]', 'class'=>'form-control']) !!}
     </div>
+    <div class="form-group">
+        <h3><i class="fa fa-link"></i> {!! Form::label('submitValue', 'Submit Value:') !!}</h3>
+        {!! Form::text('submitValue', $page['submitValue'], ['name'=>'mongo[submitValue]', 'class'=>'form-control']) !!}
+    </div>
 
 @endsection
 
