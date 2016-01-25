@@ -11641,6 +11641,7 @@ input:-ms-input-placeholder {
   bottom: -81px;
 }
 label.error {
+  display: none !important;
   background: #fff;
   border: 1px dashed #D68E7A;
   border-radius: 5px;
@@ -11840,7 +11841,7 @@ body {
 }
 .head .texts {
   background: #000;
-  height: 75px;
+  height: 79px;
   text-align: center;
   font-size: 11px;
 }
@@ -11891,7 +11892,7 @@ body {
   color: #fff;
   text-align: center;
   font-size: 43px;
-  margin-top: 18px;
+  margin-top: 15px;
   margin-bottom: 0px;
   font-weight: bold;
   font-family: samsungsharpsans-bold_v2;
@@ -11961,7 +11962,6 @@ body {
   height: 63px;
   background-position: -9px 2px;
   position: relative;
-  top: 4px;
 }
 .head .bg .form form #submit span {
   font-size: 19px;
@@ -12028,15 +12028,18 @@ body {
   }
 }
 .main {
-  padding-top: 60px;
+  padding-top: 49px;
 }
 .main .per {
   color: #081822;
-  height: 234px;
+  height: 239px;
 }
 .main .per .icon {
+  float: right;
   width: 35px;
-  margin-left: 13px;
+  margin-left: 8px;
+  position: relative;
+  top: -5px;
 }
 .main .per .title {
   font-family: Arial;
@@ -12049,15 +12052,18 @@ body {
 .main .per .text {
   font-family: Arial;
   color: #565656;
-  padding-right: 51px;
+  padding-right: 43px;
   padding-top: 16px;
   padding-bottom: 76px;
   font-size: 15px;
   line-height: 22px;
+  max-width: 483px;
 }
 .footer img {
   display: block;
-  margin: 10px auto;
+  margin: 16px auto;
+  left: -28px;
+  top: 4px;
 }
 .footer .bg {
   height: 70px;
@@ -12083,17 +12089,82 @@ body {
     font-size: 11.5px;
   }
   .callcol {
-    left: -6px;
+    right: -6px;
   }
   .chatcol {
-    left: 8px;
+    right: 8px;
   }
   .emailcol {
-    left: 15px;
+    right: 15px;
     top: 1px;
   }
+  .form input {
+    font-family: Arial;
+  }
+  .form input::-webkit-input-placeholder {
+    font-family: Arial;
+  }
+  .form input:-moz-placeholder {
+    /* Firefox 18- */
+    font-family: Arial;
+  }
+  .form input::-moz-placeholder {
+    /* Firefox 19+ */
+    font-family: Arial;
+  }
+  .form input:-ms-input-placeholder {
+    font-family: Arial;
+  }
+  .form input#phone {
+    top: 0px !important;
+  }
+  .form input.error {
+    background: #fca6a7;
+    color: #fe0000 !important;
+    font-weight: bold;
+    font-size: 12px;
+    position: relative;
+    top: -2px;
+  }
+  .form input.error::-webkit-input-placeholder {
+    color: #fe0000 !important;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .form input.error:-moz-placeholder {
+    /* Firefox 18- */
+    color: #fe0000 !important;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .form input.error::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fe0000 !important;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .form input.error:-ms-input-placeholder {
+    color: #fe0000 !important;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .footer .bg .text {
+    padding-top: 13px;
+    padding-right: 7px;
+  }
+  .nav li:nth-child(2) {
+    position: relative;
+    margin-right: 9px;
+  }
+  .nav li .fa-phone {
+    position: relative;
+    right: -3px;
+  }
+  #submit {
+    top: 2px;
+  }
   .head .bg .form {
-    bottom: -8px;
+    bottom: -4px;
   }
   .head .bg .form form {
     position: relative;

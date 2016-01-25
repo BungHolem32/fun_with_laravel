@@ -11645,6 +11645,7 @@ select:-ms-input-placeholder {
   bottom: -81px;
 }
 label.error {
+  display: none !important;
   background: #fff;
   border: 1px dashed #D68E7A;
   border-radius: 5px;
@@ -12148,11 +12149,12 @@ h3,
   .head .bg .form form .fields {
     top: 4px;
     left: -112px;
+    position: relative;
   }
   .head .bg .form form .fields > .field {
     float: left;
   }
-  .head .bg .form form .fields > .field:nth-of-type(4) {
+  .head .bg .form form .fields > .field:nth-of-type(5) {
     clear: both;
   }
   .head .bg .form form .fields > .field:last-child {
@@ -12216,4 +12218,100 @@ h3,
 .row.icons {
   text-align: center;
   padding-bottom: 10px;
+}
+@media (min-width: 768px) {
+  li a {
+    position: relative;
+    font-size: 11.5px;
+  }
+  .callcol {
+    left: -6px;
+  }
+  .chatcol {
+    left: 8px;
+  }
+  .emailcol {
+    left: 15px;
+    top: 1px;
+  }
+  .form input {
+    font-family: Arial;
+  }
+  .form input::-webkit-input-placeholder {
+    font-family: Arial;
+  }
+  .form input:-moz-placeholder {
+    /* Firefox 18- */
+    font-family: Arial;
+  }
+  .form input::-moz-placeholder {
+    /* Firefox 19+ */
+    font-family: Arial;
+  }
+  .form input:-ms-input-placeholder {
+    font-family: Arial;
+  }
+  .form input#phone {
+    top: 0px !important;
+  }
+  .form input.error {
+    background: #fca6a7;
+    color: #fe0000 !important;
+    font-weight: bold;
+    font-size: 12px;
+    position: relative;
+    top: -2px;
+  }
+  .form input.error::-webkit-input-placeholder {
+    color: #fe0000 !important;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .form input.error:-moz-placeholder {
+    /* Firefox 18- */
+    color: #fe0000 !important;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .form input.error::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fe0000 !important;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .form input.error:-ms-input-placeholder {
+    color: #fe0000 !important;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .footer .bg .text {
+    padding-top: 13px;
+    padding-left: 7px;
+  }
+  .nav li:nth-child(2) {
+    position: relative;
+    margin-right: 9px;
+  }
+  .nav li .fa-phone {
+    position: relative;
+    right: -3px;
+  }
+}
+.g-recaptcha {
+  margin-bottom: 5px;
+  position: absolute;
+  right: -534px;
+  bottom: -83px;
+}
+@media (max-width: 1265px) {
+  .form {
+    padding-bottom: 20px;
+  }
+  .g-recaptcha {
+    margin-bottom: 5px;
+    position: absolute;
+    right: -1%;
+    bottom: -77px;
+    z-index: 999;
+  }
 }
