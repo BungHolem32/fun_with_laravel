@@ -11689,6 +11689,9 @@ label.error:after {
 .pull-left-childs > * {
   float: left;
 }
+.pull-left {
+  float: left !important;
+}
 @media (max-width: 768px) {
   .navbar-header {
     position: relative;

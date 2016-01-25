@@ -6352,6 +6352,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-left {
     float: left;
     float: left !important;
+    float: right !important;
   }
   .navbar-right {
     float: right;
@@ -11688,6 +11689,9 @@ label.error:after {
 }
 .pull-left-childs > * {
   float: right;
+}
+.pull-left {
+  float: right !important;
 }
 @media (max-width: 768px) {
   .navbar-header {

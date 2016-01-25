@@ -6352,6 +6352,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-left {
     float: left;
     float: left !important;
+    float: right !important;
   }
   .navbar-right {
     float: right;
@@ -11684,6 +11685,9 @@ label.error:after {
 .pull-left-childs > * {
   float: right;
 }
+.pull-left {
+  float: right !important;
+}
 @media (max-width: 768px) {
   .navbar-header {
     position: relative;
@@ -11887,7 +11891,7 @@ body {
   color: #fff;
   text-align: center;
   font-size: 43px;
-  margin-top: 24px;
+  margin-top: 18px;
   margin-bottom: 0px;
   font-weight: bold;
   font-family: samsungsharpsans-bold_v2;
@@ -11899,6 +11903,7 @@ body {
 .head .bg h2 {
   color: #fff;
   text-align: center;
+  font-size: 29px;
 }
 .head .bg .form {
   position: absolute;
@@ -11919,7 +11924,7 @@ body {
   content: '';
   position: absolute;
   right: 0;
-  top: -36px;
+  top: -31px;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
@@ -11930,7 +11935,7 @@ body {
   content: '';
   position: absolute;
   left: 0;
-  top: -36px;
+  top: -31px;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
@@ -11956,7 +11961,7 @@ body {
   height: 63px;
   background-position: -9px 2px;
   position: relative;
-  top: 1px;
+  top: 4px;
 }
 .head .bg .form form #submit span {
   font-size: 19px;
@@ -12066,4 +12071,32 @@ body {
   font-family: Arial;
   line-height: 12px;
   font-size: 11px;
+}
+@media (max-width: 1200px) {
+  .footer .bg .text {
+    padding: 5px 10px;
+  }
+}
+@media (min-width: 768px) {
+  li a {
+    position: relative;
+    font-size: 11.5px;
+  }
+  .callcol {
+    left: -6px;
+  }
+  .chatcol {
+    left: 8px;
+  }
+  .emailcol {
+    left: 15px;
+    top: 1px;
+  }
+  .head .bg .form {
+    bottom: -8px;
+  }
+  .head .bg .form form {
+    position: relative;
+    top: -4px;
+  }
 }

@@ -22,6 +22,9 @@
   font-weight: normal;
   font-style: normal;
 }
+.col-xs-offset-1 {
+  margin-left: 8.33333333%;
+}
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;

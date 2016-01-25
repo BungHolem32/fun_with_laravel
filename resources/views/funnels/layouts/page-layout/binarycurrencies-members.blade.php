@@ -24,9 +24,9 @@
                         </div>
                         <nav id="bs-navbar" class="collapse navbar-collapse">
                             <ul class="nav navbar-nav pull-right">
-                                <li><a class="col-md-2" href="mailto:cs@rboptions.com"><i class="fa fa-envelope"></i>@ln(Email): cs@rboptions.com</a></li>
-                                <li><a class="col-md-1" href=""><i class="fa fa-circle"></i>@ln(Live chat)</a></li>
-                                <li><a class="col-md-2" href="tel:1-647-846-8231"><i class="fa fa-phone"></i>@ln(Call us): <span class="phone">1-647-846-8231</span></a></li>
+                                <li><a class="col-md-2 emailcol" href="mailto:cs@rboptions.com"><i class="fa fa-envelope"></i>@ln(Email): cs@rboptions.com</a></li>
+                                <li><a class="col-md-1 chatcol" href=""><i class="fa fa-circle"></i>@ln(Live chat)</a></li>
+                                <li><a class="col-md-2 callcol" href="tel:1-647-846-8231"><i class="fa fa-phone"></i>@ln(Call us): <span class="phone">1-647-846-8231</span></a></li>
                             </ul>
                         </nav>
                     </div>
