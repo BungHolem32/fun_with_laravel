@@ -8,6 +8,7 @@
 
 namespace App\Http\Middleware;
 
+use App\IpLog;
 use App\Languages;
 use Closure;
 
@@ -16,13 +17,7 @@ class Recaptcha
 
     public function handle($request, Closure $next){
 
-            $check_recaptcha = \Session::get('recaptcha');
-
-            if(is_null($check_recaptcha))
-                return \Redirect::back()->with('error', Languages::getTrans('Cookies must be enabled to use this site.'));
-
-
-            if($check_recaptcha) {
+            if(IpLog::count(\Request::ip(), 'createAccount')) {
                 $secret = '6Ld39RMTAAAAAPZmYhrvY0sZ1FpwcFSC0oXf9jTn';
                 $url = "https://www.google.com/recaptcha/api/siteverify?secret=" . $secret . "&response=" . \Request::get('g-recaptcha-response') . "&remoteip=" . $_SERVER['REMOTE_ADDR'];
                 $curl = curl_init();
@@ -35,10 +30,11 @@ class Recaptcha
                 $res = $curlData;
                 $res = json_decode($res, true);
                 if(!$res['success']){
+                    //Response::header('HTTP/1.1 403 Incorrect Captcha');
+                    return response(['err'=>1, 'errs'=>['error'=>Languages::getTrans('Incorrect Captcha')]], 412);
                     return ['err'=>1, 'errs'=>['error'=>Languages::getTrans('Incorrect Captcha')]];
                 }
             }
-
             return $next($request);
 
     }
