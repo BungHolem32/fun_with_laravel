@@ -32,7 +32,6 @@ class Recaptcha
                 if(!$res['success']){
                     //Response::header('HTTP/1.1 403 Incorrect Captcha');
                     return response(['err'=>1, 'errs'=>['error'=>Languages::getTrans('Incorrect Captcha')]], 412);
-                    return ['err'=>1, 'errs'=>['error'=>Languages::getTrans('Incorrect Captcha')]];
                 }
             }
             return $next($request);
