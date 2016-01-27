@@ -11896,6 +11896,8 @@ body {
 .head .bg .form > img {
   position: relative;
   top: -15px;
+  max-width: 541px;
+  width: 100%;
   display: block;
   text-align: center;
   color: #fff;
@@ -12192,5 +12194,24 @@ body {
     -o-animation-delay: 1s;
     -o-animation-duration: 1s;
     -o-animation-timing-function: ease-out;
+  }
+  .g-recaptcha {
+    margin-bottom: 5px;
+    position: absolute;
+    right: 23px;
+    bottom: 77px;
+    z-index: 999999999;
+  }
+}
+@media (max-width: 1265px) {
+  .form {
+    height: auto;
+  }
+  .form form {
+    height: 492px;
+    padding: 30px 0;
+  }
+  form.visible-hidden {
+    height: 92px !important;
   }
 }
