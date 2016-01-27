@@ -1,7 +1,6 @@
 @section('head')
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    {!! $page->appendAsset(url('/css/lp/'.$lpName.'.css')) !!}
-    {!! $page->getParent()->scripts->headScripts !!}
+
 @append
 
 @section('bottom-scripts')
@@ -9,8 +8,7 @@
 @append
 
 @section('page-layout')
-    {!! $page->getParent()->scripts->afterBodyScripts !!}
-    {!! $page->htmlHeader !!}
+
     <div class="head"></div>
     <div class="bg">
         <div class="form">
@@ -22,5 +20,5 @@
     @else
         <div class="bottom"></div>
     @endif
-    {!! $page->getParent()->scripts->bodyEndScripts !!}
+
 @endsection
