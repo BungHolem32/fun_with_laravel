@@ -6,7 +6,7 @@
   top: -68px;
   height: 0px;
 }
-.visible-hidden{
+#submit.visible-hidden{
   visibility: hidden;
 }
 body{
@@ -38,7 +38,7 @@ input{
     color: #565656 !important;
   });
 }
-#submit{
+#submit,.submit{
   &:focus{
     outline: none !important;
   }
@@ -130,7 +130,7 @@ label.error {
   }
 }
 .navbar-toggle {
-  margin-right: -11px;
+  margin-right: -32px;
 }
 @media(max-width: @screen-sm){
   #bs-navbar {
@@ -145,7 +145,17 @@ label.error {
       border-radius: 5px;
     }
   }
+  .navbar-toggle{
+    margin-right: 0px;
+    margin-top: -2px;
+    margin-bottom: 8px;
+    @media(min-width: 470px){
+      margin-right: -32px;
+    }
+  }
+
 }
+
 .nav > li > a:hover, .nav > li > a {
   width: 100%;
   @media(max-width: @screen-sm) {
@@ -156,7 +166,16 @@ label.error {
   }
 }
 .navbar-toggle .icon-bar {
-  background-color: #fff;
+  position: relative;
+  margin-bottom: 11px;
+  &:after{
+    content: '';
+    position: absolute;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 9px;
+    height: 9px;
+  }
 }
 
 // custom
@@ -221,7 +240,7 @@ label.error {
     height: 50px;
     padding: 6px 12px;
   }
-  #submit{
+  #submit,.submit{
     max-width: 100%;
   }
   #prefix{
@@ -308,7 +327,7 @@ body{
     .background('big-pic.jpg');
     position: relative;
     width: 100%;
-    height: 697px;
+    height: 613px;
     overflow: hidden;
     background-position: 50% 0;
     @media(min-width: 1900px){
@@ -365,33 +384,34 @@ body{
           top: -15px;
           z-index: 9;
         }
-        #submit{
-          color: #010000;
-          text-shadow: 1px 2px 3px #d1fd20;
-          box-shadow: none;
-          text-shadow: 1px 1px 1px #d1fd20;
-          box-shadow: none;
-          font-weight: bold;
-          font-size: 15px;
-          font-family: 'samsungsharpsans-bold_v2';
-          .background('icons_32-@{left}.png');
-          width: 199px;
-          height: 63px;
-          background-position: -9px 2px;
-          position: relative;
-          span{
-            font-size: 19px;
-            padding-left: 11px;
-            font-family: 'Roboto Condensed';
-          }
-          &:hover{
-            background-position: -9px -67px;
-          }
-        }
       }
     }
   }
 
+}
+
+#submit,.submit{
+  color: #010000;
+  text-shadow: 1px 2px 3px #d1fd20;
+  box-shadow: none;
+  text-shadow: 1px 1px 1px #d1fd20;
+  box-shadow: none;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: 'samsungsharpsans-bold_v2';
+  .background('icons_32-@{left}.png');
+  width: 199px;
+  height: 63px;
+  background-position: -9px 2px;
+  position: relative;
+  span{
+    font-size: 19px;
+    padding-left: 11px;
+    font-family: 'Roboto Condensed';
+  }
+  &:hover{
+    background-position: -9px -67px;
+  }
 }
 
 @media(max-width: 1265px){
@@ -439,20 +459,6 @@ body{
 
 }
 
-@media(max-width: @screen-md) {
-  .bg{
-    background: #000 !important;
-  }
-  form {
-    &:after, &:before {
-      display: none;
-    }
-    input{
-      height: 35px;
-    }
-  }
-}
-
 .main{
   padding-top: 49px;
   .per{
@@ -494,6 +500,8 @@ body{
     margin: 16px auto;
     left: -28px;
     top: 4px;
+    max-width: 369px;
+    width: 87%;
   }
   .bg{
     height: 70px;
@@ -511,6 +519,20 @@ body{
       }
     }
   }
+}
+
+input.error{
+  background: #fca6a7;
+  color: #fe0000 !important;
+  font-weight: bold;
+  font-size: 12px;
+  position: relative;
+  top: -2px;
+  .plc({
+    color: #fe0000 !important;
+    font-weight: bold;
+    font-size: 12px;
+  });
 }
 
 @media(min-width: @screen-sm){
@@ -601,7 +623,227 @@ body{
       padding: 30px 0;
     }
   }
-  form.visible-hidden{
+/*  form.visible-hidden{
     height: 92px !important;
+  }*/
+}
+
+
+@media(max-width: @screen-xs){
+  .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
+  .head .logo {
+    width: 190px;
+    background-size: contain;
+    right: 28px;
+  }
+  .main{
+    padding: 49px 23px 0;
+  }
+}
+
+.submit{
+  display: block;
+  margin: 0 auto;
+}
+
+.per1 .icon{
+  background: url('/img/lp/horseracing/icon-2.png');
+}
+.per2 .icon{
+  background: url('/img/lp/horseracing/icon-3.png');
+}
+.per3 .icon{
+  background: url('/img/lp/horseracing/icon-1.png');
+}
+.per4 .icon{
+  background: url('/img/lp/horseracing/icon-4.png');
+}
+.per .icon{
+  height: 35px;
+  background-size: contain;
+}
+@media(max-width: @screen-sm) {
+  nav {
+    position: absolute !important;
+    z-index: 999999;
+    top: 38px;
+    right: 10px;
+    height: auto !important;
+    &:before, &:after {
+      display: none !important;
+    }
+  }
+}
+
+.submit span{
+  position: relative;
+  top: 18px;
+  left: 26px;
+}
+
+@media(max-width: 627px) {
+  .logoplace{
+    width: 100%;
+    .logo{
+      background-size: contain;
+      right: 0px;
+      left: 0;
+      text-align: center;
+      margin: 0 auto;
+      width: 181px;
+      @media(max-width: 450px){
+        width: 124px;
+      }
+    }
+  }
+  .npads{
+    position: absolute;
+    right: 0;
+  }
+  .form:not(.recaptchaon) form {
+    height: 377px;
+  }
+  .head .bg .form{
+    bottom: -17%;
+    @media(max-width: 520px){
+      bottom: -12%;
+    }
+    @media(max-width: 420px){
+      bottom: -8%;
+    }
+    border-radius: 0px;
+    width: 99.4%;
+    margin-left: 0.2%;
+    input{
+      height: 62px;
+      margin-bottom: 21px;
+      max-width: 95.5%;
+      margin-left: 2.5%;
+    }
+    #prefix {
+      margin-left: 2.5%;
+    }
+    #phone {
+      width: 69%;
+      max-width: 100%;
+      margin-right: 2%;
+    }
+    form {
+      height: 537px;
+    }
+    > img {
+      top: -9px;
+    }
+    .fields{
+      width: 97%;
+    }
+  }
+  .head .bg{
+    background: #a3cf34 url('/img/lp/horseracing/m-big-pic.jpg') no-repeat;
+    background-size: contain;
+    height: 897px !important;
+  }
+  form {
+    &:after, &:before {
+      display: none;
+    }
+    input{
+      height: 35px;
+    }
+  }
+  #submit,.submit {
+    .background('m-button-left.png');
+    max-width: 630px;
+    width: 100%;
+    height: 233px;
+    background-position: 0 0 !important;
+    background-size: contain;
+    &:hover{
+      .background('m-button-left-h.png');
+      background-size: contain;
+    }
+    span{
+      display: none;
+    }
+  }
+  .submit{
+    margin-bottom: -96px;
+  }
+
+  .per1 .icon{
+    background: url('/img/lp/horseracing/m-icon-2.png');
+  }
+  .per2 .icon{
+    background: url('/img/lp/horseracing/m-icon-3.png');
+  }
+  .per3 .icon{
+    background: url('/img/lp/horseracing/m-icon-1.png');
+  }
+  .per4 .icon{
+    background: url('/img/lp/horseracing/m-icon-4.png');
+  }
+  .per .icon{
+    height: 35px;
+    background-size: contain;
+  }
+  .main{
+    padding-top: 33px;
+    .per{
+      height: auto;
+      padding-left: 8px;
+      .title{
+        line-height: 28px;
+        font-size: 21px;
+        color: #1d5822;
+      }
+      .text{
+        padding-left: 0px;
+        color: #000;
+        font-size: 18px;
+        line-height: 27px;
+      }
+    }
+    .icon{
+      float: left;
+      width: 59px;
+      margin-right: 8px;
+      position: relative;
+      top: -23px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 43px;
+    }
+
+  }
+  .footer img{
+    max-width: 430px;
+    width: 95%;
+  }
+  .footer .bg .text {
+    text-align: justify;
+    .el{
+      font-weight: bold;
+    }
+    margin: 0 auto;
+    padding-top: 18px;
+    max-width: 1052px;
+    font-family: Arial;
+    line-height: 15px;
+    font-size: 13px;
+  }
+  .footer img {
+    margin: -18px auto;
+    position: relative;
+    left: 0;
+    top: -66px;
+  }
+  .g-recaptcha {
+    bottom: 11%;
+    bottom: 9%;
+    z-index: 99999999;
+  }
+
 }
