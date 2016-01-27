@@ -70,12 +70,14 @@
                 },
                 success: function(res) {
                     if(res.err === 0){
+                        dataLayer.push({ 'event': 'form_lead' });
                         $('div#thankyou').show();
                         setTimeout(function(){
                             window.location = res.destination;
                         }, 4000);
                     }
                     else{
+                        dataLayer.push({ 'event': 'form_error' });
                         alert(res.errs.error);
                         $('div.loading').remove();
                         $(form).removeClass('visible-hidden').find('input').removeClass('visible-hidden');
