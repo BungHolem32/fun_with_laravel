@@ -487,7 +487,9 @@ body{
       padding-bottom: 76px;
       font-size: 15px;
       line-height: 22px;
-      max-width: 483px;
+      @media(min-width: @screen-sm){
+        max-width: 483px;
+      }
     }
   }
 }
