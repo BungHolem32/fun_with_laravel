@@ -9,7 +9,7 @@
 @append
 
 @section('page-layout')
-
+    {!! $page->getParent()->scripts->afterBodyScripts !!}
     {!! $page->htmlHeader !!}
     <div class="head"></div>
     <div class="bg">
@@ -22,4 +22,5 @@
     @else
         <div class="bottom"></div>
     @endif
+    {!! $page->getParent()->scripts->bodyEndScripts !!}
 @endsection

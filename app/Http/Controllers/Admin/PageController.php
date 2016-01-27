@@ -125,7 +125,7 @@ class PageController extends Controller {
     }
 
 
-    public function moveUnder($page_id, $parent_id){
+    public function moveUnder( $parent_id, $page_id){
         echo $parent_id;
         $page = \App\Page::find($page_id);
         $page->moveTo(0, \App\Page::find($parent_id));
