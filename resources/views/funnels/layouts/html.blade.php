@@ -2,7 +2,6 @@
 <html class="no-js" lang="en">
 <head>
     @include('funnels.layouts._head')
-    {!! $page->scripts->headScripts !!}
 </head>
 <body>
 {!! $page->scripts->afterBodyScripts !!}
