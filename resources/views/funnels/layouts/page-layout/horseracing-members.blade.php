@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <div class="form">
-                    <h3>@ln(Complete This Form & Start Trading Binary Options Now)</h3>
+                    <img src="/img/lp/horseracing/text.png" alt="LET US SHOW YOU AROUND THE TRACK" />
                     @include('funnels.layouts._partials._form-horizontal', ['funnelId' => $page->id])
                 </div>
             </div>
@@ -44,7 +44,7 @@
             <div class="row">
                 <div class="col-sm-6 col-xs-12">
                     <div class="per">
-                        <img class="icon" src="/img/lp/generalbinary/icon-2.png"/>
+                        <img class="icon" src="/img/lp/horseracing/icon-2.png"/>
                         <div class="title">
                             The perfect account type for every trader</div>
                             <div class="text">
@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     <div class="per">
-                        <img class="icon" src="/img/lp/generalbinary/icon-3.png"/>
+                        <img class="icon" src="/img/lp/horseracing/icon-3.png"/>
                         <div class="title">Valuable education tools</div>
                         <div class="text">
                             Every trader gets a huge packet of educational materials designed to enhance your trading skills. Our Binary options e-book presents a simple breakdown of trading basics, and our team of analysts sends out daily reviews covering important market events.
@@ -61,14 +61,14 @@
                 </div>
                 <div class="col-sm-6 col-xs-12">
                     <div class="per">
-                        <img class="icon" src="/img/lp/generalbinary/icon-1.png"/>
+                        <img class="icon" src="/img/lp/horseracing/icon-1.png"/>
                         <div class="title">An amazing trading platform</div>
                         <div class="text">
                             Our Binary Options platform is easy to master. Our senior brokers walk you through trading step by step, and teach you how to pick winning trades on currencies, stocks, indices, and commodities, all while earning the highest payouts in the industry – up to 88%.
                         </div>
                     </div>
                     <div class="per">
-                        <img class="icon" src="/img/lp/generalbinary/icon-4.png"/>
+                        <img class="icon" src="/img/lp/horseracing/icon-4.png"/>
                         <div class="title">Welcome Bonuses and Rewards </div>
                         <div class="text">
                             RBoptions traders always get more! You can make your deposit go farther when we match it with a 50% deposit bonus directly into your account. Our traders also qualify for high end Apple products like iPhones and iPads.
@@ -79,7 +79,7 @@
         </div>
     </div>
     <div class="footer">
-        <img src="/img/lp/generalbinary/Footer-icons.png" alt="">
+        <img src="/img/lp/horseracing/Footer-icons.png" alt="">
         <div class="bg">
             <div class="text">
             Eligibility:<br>
