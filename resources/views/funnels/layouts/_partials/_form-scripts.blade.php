@@ -74,7 +74,7 @@
                         $('div#thankyou').show();
                         setTimeout(function(){
                             window.location = res.destination;
-                        }, 4000);
+                        }, 2000);
                     }
                     else{
                         dataLayer.push({ 'event': 'form_error' });
