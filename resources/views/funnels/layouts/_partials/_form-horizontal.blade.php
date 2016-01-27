@@ -30,7 +30,9 @@ foreach($form->membersFields->getChildren() as $field){
                 'method'=>'post',
                 'class'=>'form-horizontal']) !!}
     <div class="fields">
+        @if($show_recaptcha)
             <div class="g-recaptcha" data-sitekey="6Ld39RMTAAAAALVGhMswy185zq0C2bmP-gydSrSI"></div>
+        @endif
         <input type="hidden" name="parentPage" value="{{ $funnelId }}">
         @forelse($hiddenFields as $hiddenField)
             <input type="hidden" id="{{ $hiddenField[0] }}" name="{{ $hiddenField[0] }}" value="">
