@@ -49,7 +49,7 @@ foreach($form->membersFields->getChildren() as $field){
             @elseif($field[0] == 'phone')
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 field phoneFields">
                     <input type="phone" id="prefix" class="col-md-3 col-sm-3 col-xs-2" name="prefix" required="required" data-cip-id="prefix" />
-                    <input type="{{ $field[0] }}" id="{{ $field[1] }}" class="col-md-8 col-sm-8 col-xs-9 col-xs-offset-1" name="{{ $field[1] }}" required="required" placeholder="{{ \App\Languages::getTrans($field[2]) }}" data-cip-id="{{ $field[1] }}">
+                    <input type="{{ $field[0] }}" id="{{ $field[1] }}" class="col-md-8 col-sm-8 col-xs-9" name="{{ $field[1] }}" required="required" placeholder="{{ \App\Languages::getTrans($field[2]) }}" data-cip-id="{{ $field[1] }}">
                 </div>
             @elseif($field[0] == 'country')
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 field">
@@ -68,7 +68,6 @@ foreach($form->membersFields->getChildren() as $field){
         @endforeach
     </div>
 {!! Form::close() !!}
-
 
 @section('bottom-scripts')
     @include('funnels.layouts._partials._form-scripts')

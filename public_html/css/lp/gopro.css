@@ -163,60 +163,56 @@ input#submit:focus {
   background-position: 50% 0;
 }
 
+
 input#submit {
   background: url('/img/lp/btn_gopro.png') no-repeat;
-  height: 39px;
+  color: transparent;
+  border: 0;
+  width: 221px;
+  height: 54px;
+  margin-top: -10px;
+  background-size: contain;
   position: relative;
-  left: -4px;
-  top: -16px;
+  left: 0px;
+  top: 12px;
 }
+
 .form {
+  left: 374px;
+  top: 330px;
   background: transparent;
   position: relative;
   display: table;
   width: 100%;
-  max-width: 100%;
+  max-width: 260px;
   height: 186px;
   float: none;
   margin: 0 auto;
   position: relative;
-  width: 455px;
-  top: 466px;
-  left: -349px;
 }
 form .row > div {
   height: 34px;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 body,.wrapper,.bg{
   height: 965px;
 }
 
-.loading {
-  position: absolute;
-  right: -28px;
-  width: 268px;
-  bottom: 19px;
-  text-align: center;
-  background: transparent;
-  height: 80px;
-  padding-top: 15px;
-  color: #fff;
-}
 
+form {
+  background: transparent;
+  margin-top: 6px;
+  width: 220px;
+}
+.loading {
+  background: transparent;
+  width: 221px;
+}
 #submit.visible-hidden{
   visibility: hidden;
 }
-
-
-form {
-  width: 100%;
-}
-#prefix {
+#prefix{
   padding: 0;
   text-align: center;
 }
-form .row > div {
-  float: left;
-  width: 50%;
-}
+
