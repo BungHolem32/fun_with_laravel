@@ -1,0 +1,198 @@
+@import "base_lp.css";
+/************************************************** added ******************************************************/
+body {
+  padding-top: 0px;
+  background: transparent;
+  position: relative;
+}
+.form {
+  background: #191919;
+  position: relative;
+  display: table;
+  width: 100%;
+  max-width: 260px;
+  float: right;
+  height: 192px;
+  top: 177px;
+  right: 28px;
+}
+input#submit.visible-hidden {
+  box-shadow: none;
+}
+.loading {
+  position: absolute;
+  right: -3px;
+  width: 268px;
+  bottom: -44px;
+  text-align: center;
+  background: #191919;
+  height: 80px;
+  padding-top: 15px;
+  color: #fff;
+}
+.fa-refresh {
+  text-align: center;
+  width: 100%;
+}
+form {
+  width: 260px;
+  float: right;
+  margin-right: 0px;
+  margin-top: 0px;
+}
+form .form-control {
+  border-radius: 0;
+}
+form .row > div {
+  position: relative;
+}
+label.error {
+  background: #fff;
+  border: 1px dashed #D68E7A;
+  border-radius: 5px;
+  font-size: 11px !important;
+  line-height: 7px;
+  padding: 3px;
+  color: #E56D4F;
+  position: absolute !important;
+  top: -21px;
+  width: 131px;
+  right: 2px;
+  font-family: Arial;
+  text-align: center;
+}
+label.error:after,
+label.error:before {
+  content: '';
+  display: block;
+  position: absolute;
+}
+label.error:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+  border-color: rgba(130, 7, 5, 0);
+  border-top-color: #fff;
+  border-width: 6px;
+  margin-left: -10px;
+}
+form .row > div {
+  height: 34px;
+  margin-bottom: 18px;
+}
+input {
+  height: 34px;
+}
+input#submit {
+  color: transparent;
+  border: 0;
+  background: url('/img/lp/btn.png');
+  width: 261px;
+  height: 67px;
+  margin-top: 18px;
+}
+/*body {
+  background: #EDEDE3;
+}*/
+#prefix {
+  float: left;
+  margin: 0;
+}
+#phone {
+  float: right;
+}
+#prefix:focus,
+#phone:focus {
+  background-color: #ffffff;
+  background-image: none;
+  border: 2px solid #cdb12f;
+  box-shadow: inset 0px 0px 1px #cdb12f, 0px 1px 7px #cdb12f;
+}
+
+/*
+.head:after,
+.head:before {
+  content: '';
+  display: block;
+  position: absolute;
+}
+.head:after,
+.head:before {
+  content: '';
+  display: block;
+  position: absolute;
+}
+.head:after {
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  height: 77px;
+  background: #fff;
+}
+.head:before {
+  top: 77px;
+  width: 100%;
+  z-index: -1;
+  height: 7px;
+  background: #191917;
+}*/
+
+/*# sourceMappingURL=88percentprofit-0.css.map */
+
+input#submit:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+
+/**** changed *****/
+.wrapper{
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+.bg {
+  height: 100%;
+  width: 100%;
+  background: url('/img/lp/bg_bitcoin.jpg');
+  background-position: 50% 0;
+  position: relative;
+  overflow: hidden;
+}
+.form {
+  background: transparent;
+  position: relative;
+  display: table;
+  width: 100%;
+  max-width: 260px;
+  height: 186px;
+  float: none;
+  margin: 0 auto;
+  position: relative;
+  left: 346px;
+  top: 340px;
+}
+
+form .row > div {
+  height: 34px;
+  margin-bottom: 12px;
+}
+body,.wrapper,.bg{
+  height: 965px;
+}
+
+input#submit {
+  color: transparent;
+  border: 0;
+  background: url('/img/lp/btn_bitcoin.png');
+  width: 261px;
+  height: 87px;
+  margin-top: 18px;
+}
+
+.loading {
+  background: #000000;
+}
