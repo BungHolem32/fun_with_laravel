@@ -1,5 +1,6 @@
 @section('head')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+    <script src="/js/lp/horseracing.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300,300italic' rel='stylesheet' type='text/css'>
     {!! $page->appendAsset(url('/css/horseracing-'.Request::local()->dir.'.css')) !!}
@@ -33,8 +34,12 @@
                     </div>
                 </div>
                 <div class="form  @if($show_recaptcha) recaptchaon @endif">
-                    <img src="/img/lp/horseracing/text.png" alt="LET US SHOW YOU AROUND THE TRACK" />
-                    @include('funnels.layouts._partials._form-horizontal', ['funnelId' => $page->id])
+                    <img class="m-show ms1" src="/img/lp/horseracing/m-header-big.png"/>
+                    <img class="m-show ms2" src="/img/lp/horseracing/m-horse-line.png"/>
+                    <div class="form bgg">
+                        <img src="/img/lp/horseracing/text.png" alt="LET US SHOW YOU AROUND THE TRACK" />
+                        @include('funnels.layouts._partials._form-horizontal', ['funnelId' => $page->id])
+                    </div>
                 </div>
             </div>
         </div>
@@ -79,7 +84,7 @@
         </div>
     </div>
     <div class="footer">
-        <a class="submit" href="#top"><span>{{ \App\Languages::getTrans($page->submitValue) }}</span></a>
+        <a class="submit" href="#top"><span>OPEN ACCOUNT</span></a>
         <img src="/img/lp/horseracing/Footer-icons.png" alt="">
         <div class="bg">
             <div class="text">

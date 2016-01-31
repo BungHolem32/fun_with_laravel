@@ -1,7 +1,7 @@
 <?php
 
 // need to open this link(domain/?cache=0) run on some explorer, this link is secured and need to be closed when not working
-if(isset($_GET['cache']) && $_SERVER['REMOTE_ADDR'] == '31.154.27.50'){
+if(isset($_GET['cache']) && ($_SERVER['REMOTE_ADDR'] == '31.154.27.50' || $_SERVER['HTTP_X_FORWARDED_FOR'] == '31.154.27.50')){
 	mkdir("/var/www/storage/framework/views", 0777);
 	$dirname = '/var/www/storage/framework/views/';
 	if (is_dir($dirname))

@@ -141,12 +141,14 @@ label.error {
       z-index: 9999999999;
       background: rgba(0, 0, 0, 0.8);
       margin: 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      a{
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.33);
+      }
     }
   }
   .navbar-toggle{
-    margin-right: 0px;
+    margin-right: 17px;
     margin-top: -2px;
     margin-bottom: 8px;
     @media(min-width: 470px){
@@ -159,22 +161,24 @@ label.error {
 .nav > li > a:hover, .nav > li > a {
   width: 100%;
   @media(max-width: @screen-sm) {
-    border-bottom: 1px solid #ccc;
   }
   &:focus{
     background-color: transparent;
   }
 }
+
 .navbar-toggle .icon-bar {
   position: relative;
-  margin-bottom: 11px;
+  margin-bottom: 9px;
+  width: 50px;
+  right: -20px;
   &:after{
     content: '';
     position: absolute;
     border-radius: 5px;
     background-color: #fff;
-    width: 9px;
-    height: 9px;
+    width: 7px;
+    height: 7px;
   }
 }
 
@@ -313,15 +317,18 @@ body{
           top: -2px;
         }
       }
+
       &:hover{
         @media(min-width: @screen-sm){
-          border-bottom: 1px solid #fbfbfe;
+          text-decoration: underline;
+         // border-bottom: 1px solid #fbfbfe;
           .phone{
             color: lawngreen;
           }
         }
       }
     }
+
   }
   .bg{
     .background('big-pic.jpg');
@@ -340,7 +347,7 @@ body{
       .left(0);
       >img{
         position: relative;
-        top: -15px;
+        top: -19px;
         @media(max-width: 1265px){
           top: -42px;
         }
@@ -469,14 +476,14 @@ body{
       width: 35px;
       .margin-right(8px);
       position: relative;
-      top: -5px;
+      top: -15px;
     }
     .title{
       font-family: Arial;
       font-size: 18px;
       font-weight: bold;
       height: 36px;
-      color: #081822;
+      color: #1d5822;
       text-transform: capitalize;
     }
     .text{
@@ -491,6 +498,12 @@ body{
         max-width: 483px;
       }
     }
+  }
+  .per3 .icon{
+    top: -14px;
+  }
+  .per2 .icon{
+    top: -8px;
   }
 }
 
@@ -549,6 +562,9 @@ input.error{
   .emailcol{
     .left(15px);
     top: 1px;
+  }
+  .form{
+    height: 127px;
   }
   .form input{
     font-family: Arial;
@@ -664,13 +680,14 @@ input.error{
 .per .icon{
   height: 35px;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 @media(max-width: @screen-sm) {
   nav {
     position: absolute !important;
     z-index: 999999;
-    top: 38px;
-    right: 10px;
+    top: -23px;
+    right: 0;
     height: auto !important;
     &:before, &:after {
       display: none !important;
@@ -683,8 +700,23 @@ input.error{
   top: 18px;
   left: 26px;
 }
-
-@media(max-width: 627px) {
+@media(min-width: 768px) {
+  .submit {
+    position: relative;
+    top: -35px;
+  }
+}
+.m-show{
+  display: none !important;
+}
+.bgg{
+  background: transparent !important;
+}
+@media(max-width: 768px) {
+  .texts{
+    position: relative;
+    z-index: 99999;
+  }
   .logoplace{
     width: 100%;
     .logo{
@@ -693,36 +725,50 @@ input.error{
       left: 0;
       text-align: center;
       margin: 0 auto;
-      width: 181px;
-      @media(max-width: 450px){
-        width: 124px;
-      }
+      width: 164px;
     }
   }
   .npads{
     position: absolute;
     right: 0;
   }
+
   .form:not(.recaptchaon) form {
-    height: 377px;
+    margin-bottom: 0;
+    height: 503px;
+    @media(min-width: @screen-xs){
+      height: 527px;
+    }
+  }
+  .form.recaptchaon form{
+    margin-bottom: 120px !important;
   }
   .head .bg .form{
-    bottom: -17%;
-    @media(max-width: 520px){
-      bottom: -12%;
-    }
-    @media(max-width: 420px){
-      bottom: -8%;
-    }
+    bottom: 0;
     border-radius: 0px;
     width: 99.4%;
     margin-left: 0.2%;
     input{
-      height: 62px;
+      height: 56px;
       margin-bottom: 21px;
       max-width: 95.5%;
       margin-left: 2.5%;
+      font-family: Arial;
+      font-size: 21px;
+      &.error{
+        font-family: Arial;
+        font-size: 21px;
+        font-weight: 100;
+        position: relative;
+        top: 1px;
+        .plc({
+          font-weight: 100;
+          font-family: Arial;
+          font-size: 21px;
+        });
+      }
     }
+
     #prefix {
       margin-left: 2.5%;
     }
@@ -731,20 +777,87 @@ input.error{
       max-width: 100%;
       margin-right: 2%;
     }
-    form {
-      height: 537px;
-    }
     > img {
-      top: -9px;
+      top: -3px;
     }
     .fields{
       width: 97%;
     }
   }
   .head .bg{
-    background: #a3cf34 url('/img/lp/horseracing/m-big-pic.jpg') no-repeat;
+    background: #a3cf34 url('/img/lp/horseracing/m-big-pic2.png') no-repeat;
     background-size: contain;
-    height: 897px !important;
+    @media(min-width: @screen-xs){
+      background-size: cover;
+    }
+    height: auto !important;
+  }
+  .form{
+    background: transparent;
+    margin-top: 0px;
+    > img{
+      z-index: 9;
+    }
+    &.bgg{
+      margin-top: 0px;
+      //background: rgba(0, 0, 0, 0.7) !important;
+      padding-top: 0px;
+      margin-bottom: 0%;
+      &:after{
+        position: absolute;
+        content: '';
+        background: rgba(0, 0, 0, 0.7) !important;
+        width: 100%;
+        height: 70.5%;
+        top: 26%;
+        @media(max-width: 470px){
+          top: 26.5%;
+        }
+        @media(max-width: 380px){
+          top: 25%;
+        }
+        @media(max-width: 360px){
+          top: 24%;
+        }
+        left: 0;
+
+      }
+    }
+    &.recaptchaon .bgg:after{
+      height: 72.5%;
+      top: 23%;
+      @media(max-width: 470px){
+        height: 73.5%;
+        top: 23%;
+      }
+      @media(max-width: 385px){
+        height: 76.5%;
+        top: 20%;
+      }
+    }
+    .m-show{
+      display: block !important;
+      float: right;
+   //   position: absolute !important;
+    }
+    .ms1{
+      top: -23px !important;
+      background: url('/img/lp/horseracing/m-header-big.png') no-repeat !important;
+      background-size: contain !important;
+      width: 100% !important;
+      max-width: 456px !important;
+    }
+    .ms2{
+      top: -20px !important;
+      @media(max-width: 440px){
+        top: -24px !important;
+      }
+      background: url('/img/lp/horseracing/m-horse-line.png') !important;
+      background-size: contain !important;
+      width: 100% !important;
+      max-width: 632px !important;
+    }
+
   }
   form {
     &:after, &:before {
@@ -757,8 +870,9 @@ input.error{
   #submit,.submit {
     .background('m-button-left.png');
     max-width: 630px;
-    width: 100%;
-    height: 233px;
+    width: 98%;
+    margin-left: 1.5% !important;
+    height: 99px;
     background-position: 0 0 !important;
     background-size: contain;
     &:hover{
@@ -798,8 +912,10 @@ input.error{
         line-height: 28px;
         font-size: 21px;
         color: #1d5822;
+        height: auto;
       }
       .text{
+        margin-top: 8px;
         padding-left: 0px;
         color: #000;
         font-size: 18px;
@@ -811,7 +927,7 @@ input.error{
       width: 59px;
       margin-right: 8px;
       position: relative;
-      top: -23px;
+      top: -11px !important;
       background-size: contain;
       background-repeat: no-repeat;
       height: 43px;
@@ -835,15 +951,24 @@ input.error{
     font-size: 13px;
   }
   .footer img {
-    margin: -18px auto;
+    margin: 0px auto;
     position: relative;
     left: 0;
-    top: -66px;
+    top: -24px;
   }
   .g-recaptcha {
     bottom: 11%;
     bottom: 9%;
     z-index: 99999999;
   }
-
+  .footer .submit{
+    margin-bottom: 46px;
+  }
+  .loading {
+    top: -101px;
+  }
+}
+.loading{
+  color: #fff !important;
+  z-index: 9999;
 }

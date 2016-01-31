@@ -1,6 +1,7 @@
 @section('head')
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    {!! $page->appendAsset(url('/css/lp/'.$lpName.'.css')) !!}
+    {!! $page->appendAsset(url('/css/lp/'.$lpName.'.css?v='.time())) !!}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 @append
 
 @section('bottom-scripts')
