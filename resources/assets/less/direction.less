@@ -263,6 +263,14 @@
   margin-right: @left;
 }
 
+.margin-left-i(@left) when not (@rtl) {
+  margin-left: @left !important;
+}
+
+.margin-left-i(@left) when (@rtl) {
+  margin-right: @left !important;
+}
+
 .ie7-margin-left(@left) when not (@rtl) {
   *margin-left: @left;
 }

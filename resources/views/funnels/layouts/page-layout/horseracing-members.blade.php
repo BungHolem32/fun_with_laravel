@@ -33,7 +33,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="form  @if($show_recaptcha) recaptchaon @endif">
+                <div class="form  @if($show_recaptcha) recaptchaon @endif ">
                     <img class="m-show ms1" src="/img/lp/horseracing/m-header-big.png"/>
                     <img class="m-show ms2" src="/img/lp/horseracing/m-horse-line.png"/>
                     <div class="form bgg">

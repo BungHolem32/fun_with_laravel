@@ -1,6 +1,6 @@
 @section('head')
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{!!  '/css/lp/'.$lpName.'.css?v='.time() !!}">
+    {!! $page->appendAsset(url('/css/lp/88percentprofit.css')) !!}
     <meta name="viewport" content="">
 @append
 
@@ -9,17 +9,12 @@
 @append
 
 @section('page-layout')
-
+    {!! $page->htmlHeader !!}
     <div class="head"></div>
     <div class="bg">
         <div class="form">
             @include('funnels.layouts._partials._form-vertical', ['funnelId' => $page->id])
         </div>
     </div>
-    @if($lpName == 'trading-signals' || $lpName == 'demoaccounts')
-        <a href="#top" class="bottom"></a>
-    @else
-        <div class="bottom"></div>
-    @endif
-
+    <div class="bottom"></div>
 @endsection
