@@ -11691,14 +11691,39 @@ label.error:after {
 .pull-left {
   float: right !important;
 }
+.navbar-toggle {
+  margin-left: -32px;
+}
+.navbar-toggle .icon-bar {
+  position: relative;
+  margin-bottom: 9px;
+  width: 50px;
+  left: -20px;
+}
+.navbar-toggle .icon-bar:after {
+  content: '';
+  position: absolute;
+  border-radius: 5px;
+  background-color: #fff;
+  width: 7px;
+  height: 7px;
+}
+.navbar-header {
+  display: none;
+}
+#bs-navbar {
+  display: block;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+}
 @media (max-width: 768px) {
   .navbar-header {
     position: relative;
     top: -14px;
   }
-}
-.navbar-toggle {
-  margin-left: -32px;
 }
 @media (max-width: 768px) {
   #bs-navbar {
@@ -11734,31 +11759,6 @@ label.error:after {
 .nav > li > a:focus {
   background-color: transparent;
 }
-.navbar-toggle .icon-bar {
-  position: relative;
-  margin-bottom: 9px;
-  width: 50px;
-  left: -20px;
-}
-.navbar-toggle .icon-bar:after {
-  content: '';
-  position: absolute;
-  border-radius: 5px;
-  background-color: #fff;
-  width: 7px;
-  height: 7px;
-}
-.navbar-header {
-  display: none;
-}
-#bs-navbar {
-  display: block;
-}
-.nav > li > a:hover,
-.nav > li > a:focus {
-  text-decoration: none;
-  background-color: transparent;
-}
 @media (max-width: 768px) {
   .navbar-header {
     display: block;
@@ -11769,6 +11769,19 @@ label.error:after {
   .nav > li > a:hover,
   .nav > li > a:focus {
     background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    position: absolute !important;
+    z-index: 999999;
+    top: -23px;
+    left: 0;
+    height: auto !important;
+  }
+  nav:before,
+  nav:after {
+    display: none !important;
   }
 }
 .form {
@@ -12293,35 +12306,22 @@ input.error:-ms-input-placeholder {
   background-size: contain;
   background-repeat: no-repeat;
 }
-@media (max-width: 768px) {
-  nav {
-    position: absolute !important;
-    z-index: 999999;
-    top: -23px;
-    left: 0;
-    height: auto !important;
-  }
-  nav:before,
-  nav:after {
-    display: none !important;
-  }
-}
 .submit span {
   position: relative;
   top: 18px;
   right: 26px;
-}
-@media (min-width: 768px) {
-  .submit {
-    position: relative;
-    top: -35px;
-  }
 }
 .m-show {
   display: none !important;
 }
 .bgg {
   background: transparent !important;
+}
+@media (min-width: 768px) {
+  .submit {
+    position: relative;
+    top: -35px;
+  }
 }
 @media (max-width: 768px) {
   #submit,
@@ -12481,8 +12481,6 @@ input.error:-ms-input-placeholder {
     background: url('/img/lp/horseracing/m-button-left-h.png');
     background-repeat: no-repeat;
     background-size: contain;
-    max-width: 98%;
-    margin-right: 1% !important;
     margin-top: 2px;
   }
   #submit span,
