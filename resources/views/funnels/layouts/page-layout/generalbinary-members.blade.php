@@ -39,7 +39,7 @@
                     <h3 class="h3 sm-h">@ln(Complete This Form & Start Trading Binary Options Now)</h3>
                     <img class="sm-s mimg" src="/img/lp/generalbinary/trading-platform.png" />
                     <div  class="h3 sm-s">@ln(Complete This Form <span>& Start Trading Binary Options Now</span>)</div>
-                    @include('funnels.layouts._partials._form-horizontal', ['funnelId' => $page->id])
+                    @include('funnels.layouts._partials._form-horizontal', ['funnelId' => $page->id,'btn'=>'/img/lp/generalbinary/m-button-'.Request::local()->dir.'.png'])
                 </div>
             </div>
         </div>

@@ -598,6 +598,10 @@ body{
 /*****************************************************
  *******************************
  screen sm **************/
+#prefix.error:focus, #phone.error:focus {
+  background-color: #fca6a7;
+}
+
 .navbar-toggle {
   .margin-right(-32px);
 }
@@ -634,6 +638,7 @@ body{
       margin: 0;
       li{
         a{
+          border-bottom: 0;
           text-align: @left;
           .padding-right(23px);
         }
@@ -972,16 +977,21 @@ body{
         font-size: 18px;
         line-height: 27px;
       }
-    }
-    .icon{
-      float: @left;
-      width: 59px;
-      .margin-right(8px);
-      position: relative;
-      top: -11px !important;
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 43px;
+      .icon{
+        float: @left;
+        .margin-right(8px);
+        position: relative;
+        top: -16px !important;
+        background-size: contain;
+        background-repeat: no-repeat;
+        max-width: 40px;
+        max-height: 40px;
+        height: 100%;
+        width: 100%;
+        &.ico2{
+          top: -8px !important;
+        }
+      }
     }
 
   }
@@ -1011,7 +1021,7 @@ body{
     }
   }
   .g-recaptcha {
-    bottom: -10%;
+    bottom: -20%;
     z-index: 99999999;
   }
   .loading {
@@ -1026,6 +1036,42 @@ body{
   }
   .footer .bg {
     height: auto;
+  }
+
+  .head .bg .form form{
+    #submit{
+      padding: 0;
+      width: 100%;
+      height: auto;
+      background: transparent !important;
+      span{
+        display: none;
+        padding:0;
+      }
+      .img{
+        display: block !important;
+        position: relative;
+        img{
+          display: block;
+          max-width: 713px;
+          width: 99.8%;
+          .margin-left(0.2%);
+        }
+        .text{
+          position: absolute;
+          display: block;
+          width: 100%;
+          font-weight: 400;
+          font-size: 60px;
+          @media(max-width: 640px){
+            font-size: 47px;
+          }
+          @media(max-width: 470px){
+            font-size: 35px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1065,6 +1111,7 @@ body .sm-s{
 
 /******* added ********************/
 @media(max-width: @screen-sm) {
+
   .head .bg {
     padding-top: 16px;
     h1 {

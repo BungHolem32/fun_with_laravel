@@ -12187,6 +12187,10 @@ body {
 /*****************************************************
  *******************************
  screen sm **************/
+#prefix.error:focus,
+#phone.error:focus {
+  background-color: #fca6a7;
+}
 .navbar-toggle {
   margin-left: -32px;
 }
@@ -12223,6 +12227,7 @@ body {
     margin: 0;
   }
   #bs-navbar > ul li a {
+    border-bottom: 0;
     text-align: right;
     padding-left: 23px;
   }
@@ -12570,15 +12575,20 @@ body {
     font-size: 18px;
     line-height: 27px;
   }
-  .main .icon {
+  .main .per .icon {
     float: right;
-    width: 59px;
     margin-left: 8px;
     position: relative;
-    top: -11px !important;
+    top: -16px !important;
     background-size: contain;
     background-repeat: no-repeat;
-    height: 43px;
+    max-width: 40px;
+    max-height: 40px;
+    height: 100%;
+    width: 100%;
+  }
+  .main .per .icon.ico2 {
+    top: -8px !important;
   }
   .footer .submit {
     margin-bottom: 46px;
@@ -12604,7 +12614,7 @@ body {
     font-weight: bold;
   }
   .g-recaptcha {
-    bottom: -10%;
+    bottom: -20%;
     z-index: 99999999;
   }
   .loading {
@@ -12619,6 +12629,33 @@ body {
   }
   .footer .bg {
     height: auto;
+  }
+  .head .bg .form form #submit {
+    padding: 0;
+    width: 100%;
+    height: auto;
+    background: transparent !important;
+  }
+  .head .bg .form form #submit span {
+    display: none;
+    padding: 0;
+  }
+  .head .bg .form form #submit .img {
+    display: block !important;
+    position: relative;
+  }
+  .head .bg .form form #submit .img img {
+    display: block;
+    max-width: 713px;
+    width: 99.8%;
+    margin-right: 0.2%;
+  }
+  .head .bg .form form #submit .img .text {
+    position: absolute;
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    font-size: 60px;
   }
 }
 @media (max-width: 768px) and (min-width: 480px) {
@@ -12666,6 +12703,16 @@ body {
 @media (max-width: 768px) and (max-width: 440px) {
   .form .ms2 {
     top: -24px !important;
+  }
+}
+@media (max-width: 768px) and (max-width: 640px) {
+  .head .bg .form form #submit .img .text {
+    font-size: 47px;
+  }
+}
+@media (max-width: 768px) and (max-width: 470px) {
+  .head .bg .form form #submit .img .text {
+    font-size: 35px;
   }
 }
 @media (max-width: 480px) {
