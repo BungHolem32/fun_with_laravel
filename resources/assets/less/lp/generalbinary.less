@@ -38,7 +38,7 @@ input{
     color: #565656 !important;
   });
 }
-#submit{
+#submit,.submit{
   &:focus{
     outline: none !important;
   }
@@ -219,9 +219,6 @@ label.error {
     height: 50px;
     padding: 6px 12px;
   }
-  #submit{
-    max-width: 100%;
-  }
   #prefix{
     max-width: 43px;
   }
@@ -229,7 +226,9 @@ label.error {
     max-width: 120px;
   }
 }
-
+#submit,.submit{
+  max-width: 100%;
+}
 // added
 
 // new font -- samsungsharpsans
@@ -373,39 +372,41 @@ body{
           top: -15px;
           z-index: 9;
         }
-        #submit{
-          color: #010000;
-          text-shadow: 1px 2px 3px #d1fd20;
-          box-shadow: none;
-          text-shadow: 1px 1px 1px #d1fd20;
-          box-shadow: none;
-          font-weight: bold;
-          font-size: 15px;
-          font-family: 'samsungsharpsans-bold_v2';
-          .background('icons_32-@{left}.png');
-          width: 199px;
-          height: 63px;
-          background-position: -9px 2px;
-          position: relative;
-          span{
-            font-size: 19px;
-            padding-left: 11px;
-            font-family: 'Roboto Condensed';
-          }
-          &:hover{
-            background-position: -9px -67px;
-          }
-        }
       }
     }
   }
-
+}
+#submit,.submit{
+  color: #010000;
+  text-shadow: 1px 2px 3px #d1fd20;
+  box-shadow: none;
+  text-shadow: 1px 1px 1px #d1fd20;
+  box-shadow: none;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: 'samsungsharpsans-bold_v2';
+  .background('icons_32-@{left}.png');
+  width: 199px;
+  height: 63px;
+  background-position: -9px 2px;
+  position: relative;
+  span{
+    font-size: 19px;
+    padding-left: 11px;
+    font-family: 'Roboto Condensed';
+  }
+  &:hover{
+    background-position: -9px -67px;
+  }
 }
 
 @media(max-width: 1265px){
   .bg{
     background: #000 url('/img/lp/generalbinary/big-pic.jpg');
     background-position: 50% 111px;
+  }
+  #submit,.submit{
+    margin: 0 auto;
   }
   .form{
     position: relative !important;
@@ -423,9 +424,6 @@ body{
     #phone{
       width: 78%;
       max-width: 100%;
-    }
-    #submit{
-      margin: 0 auto;
     }
 
     form{
@@ -580,7 +578,7 @@ body{
       right: -3px;
     }
   }
-  #submit{
+  #submit,.submit{
     top: 2px;
   }
 
@@ -769,7 +767,7 @@ body{
       .right(-3px);
     }
   }
-  #submit{
+  #submit,.submit{
     top: 2px;
   }
 
@@ -938,14 +936,6 @@ body{
     }
 
   }
-  form {
-    &:after, &:before {
-      display: none;
-    }
-    input{
-      height: 35px;
-    }
-  }
   #submit,.submit {
     .background('m-button-left.png');
     max-width: 630px;
@@ -956,11 +946,16 @@ body{
     &:hover{
       .background('m-button-left-h.png');
       background-size: contain;
-    //  margin-top: 2px;
+      //  margin-top: 2px;
     }
   }
-  .submit{
-    margin-bottom: -96px;
+  form {
+    &:after, &:before {
+      display: none;
+    }
+    input{
+      height: 35px;
+    }
   }
 
   .ico1{
@@ -1024,9 +1019,6 @@ body{
 
   }
   .footer{
-    .submit{
-      margin-bottom: 46px;
-    }
     img {
       margin: 0px auto;
       position: relative;
@@ -1067,37 +1059,35 @@ body{
     height: auto;
   }
 
-  .head .bg .form form{
-    #submit{
-      padding: 0;
-      width: 100%;
-      height: auto;
-      background: transparent !important;
-      span{
-        display: none;
-        padding:0;
+  .head .bg .form form #submit,.submit{
+    padding: 0;
+    width: 100%;
+    height: auto;
+    background: transparent !important;
+    span{
+      display: none;
+      padding:0;
+    }
+    .img{
+      display: block !important;
+      position: relative;
+      img{
+        display: block;
+        max-width: 713px;
+        width: 99.8%;
+        .margin-left(0.2%);
       }
-      .img{
-        display: block !important;
-        position: relative;
-        img{
-          display: block;
-          max-width: 713px;
-          width: 99.8%;
-          .margin-left(0.2%);
+      .text{
+        position: absolute;
+        display: block;
+        width: 100%;
+        font-weight: 400;
+        font-size: 60px;
+        @media(max-width: 640px){
+          font-size: 47px;
         }
-        .text{
-          position: absolute;
-          display: block;
-          width: 100%;
-          font-weight: 400;
-          font-size: 60px;
-          @media(max-width: 640px){
-            font-size: 47px;
-          }
-          @media(max-width: 470px){
-            font-size: 35px;
-          }
+        @media(max-width: 470px){
+          font-size: 35px;
         }
       }
     }
@@ -1131,6 +1121,35 @@ body .sm-s{
   }
   body .sm-s{
     display: block;
+  }
+}
+a.submit{
+  display: block;
+  margin:0 auto;
+  cursor: pointer;
+  @media(min-width: @screen-sm) {
+    .h-sm{
+      display: block;
+      line-height: 62px;
+      text-align: center;
+    }
+  }
+  .text{
+    width: 100%;
+    text-align: center;
+    display: block;
+    @media(max-width: @screen-sm){
+      margin-top: -4%;
+    }
+    @media(max-width: 487px){
+      margin-top: -7%;
+    }
+    @media(max-width: 470px){
+      margin-top: -5%;
+    }
+    @media(max-width: 408px){
+      margin-top: -7%;
+    }
   }
 }
 
@@ -1201,6 +1220,7 @@ body .sm-s{
     line-height: 27px;
     position: relative;
     top: 3px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
     span {
       display: block;
     }

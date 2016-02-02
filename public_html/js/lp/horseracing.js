@@ -5,7 +5,7 @@ $(document).ready(function(){
            scrollTop: 0
        }, 600);
        return false;
-   }) ;
+   });
 });
 
 $(window).on('scroll',function(){

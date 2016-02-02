@@ -11606,10 +11606,12 @@ input::-moz-placeholder {
 input:-ms-input-placeholder {
   color: #565656 !important;
 }
-#submit {
+#submit,
+.submit {
   border: 0px;
 }
-#submit:focus {
+#submit:focus,
+.submit:focus {
   outline: none !important;
 }
 #phone {
@@ -11706,7 +11708,7 @@ label.error:after {
   #bs-navbar > ul {
     position: relative;
     z-index: 9999999999;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     margin: 0;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -11789,14 +11791,15 @@ label.error:after {
   height: 50px;
   padding: 6px 12px;
 }
-.form #submit {
-  max-width: 100%;
-}
 .form #prefix {
   max-width: 43px;
 }
 .form #phone {
   max-width: 120px;
+}
+#submit,
+.submit {
+  max-width: 100%;
 }
 @font-face {
   font-family: 'samsungsharpsans-regular_v2';
@@ -11949,7 +11952,8 @@ body {
   top: -15px;
   z-index: 9;
 }
-.head .bg .form form #submit {
+#submit,
+.submit {
   color: #010000;
   text-shadow: 1px 2px 3px #d1fd20;
   text-shadow: 1px 1px 1px #d1fd20;
@@ -11964,18 +11968,24 @@ body {
   background-position: -9px 2px;
   position: relative;
 }
-.head .bg .form form #submit span {
+#submit span,
+.submit span {
   font-size: 19px;
   padding-left: 11px;
   font-family: 'Roboto Condensed';
 }
-.head .bg .form form #submit:hover {
+#submit:hover,
+.submit:hover {
   background-position: -9px -67px;
 }
 @media (max-width: 1265px) {
   .bg {
     background: #000 url('/img/lp/generalbinary/big-pic.jpg');
     background-position: 50% 111px;
+  }
+  #submit,
+  .submit {
+    margin: 0 auto;
   }
   .form {
     position: relative !important;
@@ -11999,9 +12009,6 @@ body {
   .form #phone {
     width: 78%;
     max-width: 100%;
-  }
-  .form #submit {
-    margin: 0 auto;
   }
   .form form:after,
   .form form:before {
@@ -12172,16 +12179,36 @@ body {
     position: relative;
     right: -3px;
   }
-  #submit {
+  #submit,
+  .submit {
     top: 2px;
   }
   .head .bg .form {
-    bottom: -4px;
+    bottom: -32px;
   }
   .head .bg .form form {
     position: relative;
     top: -4px;
   }
+}
+.icon {
+  width: 37px;
+  height: 39px;
+}
+.ico1 {
+  background: url('/img/lp/generalbinary/icon-2.png') no-repeat;
+}
+.ico2 {
+  background: url('/img/lp/generalbinary/icon-3.png') no-repeat;
+}
+.ico3 {
+  background: url('/img/lp/generalbinary/icon-1.png') no-repeat;
+}
+.ico4 {
+  background: url('/img/lp/generalbinary/icon-4.png') no-repeat;
+}
+.icon {
+  background-size: contain;
 }
 /*****************************************************
  *******************************
@@ -12196,7 +12223,7 @@ body {
 .navbar-toggle .icon-bar {
   background-color: transparent;
   position: relative;
-  margin-bottom: 9px;
+  margin-bottom: 7px;
   width: 50px;
   right: -20px;
 }
@@ -12205,8 +12232,8 @@ body {
   position: absolute;
   border-radius: 5px;
   background-color: #fff;
-  width: 7px;
-  height: 7px;
+  width: 5px;
+  height: 5px;
 }
 @media (max-width: 768px) {
   .navbar-header {
@@ -12222,7 +12249,6 @@ body {
   #bs-navbar > ul {
     position: relative;
     z-index: 9999999999;
-    background: #000;
     margin: 0;
   }
   #bs-navbar > ul li a {
@@ -12357,7 +12383,8 @@ body {
     position: relative;
     right: -3px;
   }
-  #submit {
+  #submit,
+  .submit {
     top: 2px;
   }
   .head .bg .form {
@@ -12394,7 +12421,7 @@ body {
   }
   .form:not(.recaptchaon) form {
     margin-bottom: 0;
-    height: 503px;
+    height: 479px;
   }
   .form.recaptchaon form {
     margin-bottom: 120px !important;
@@ -12474,6 +12501,7 @@ body {
   .form {
     background: transparent;
     margin-top: 0px;
+    margin-bottom: 0;
   }
   .form > img {
     z-index: 9;
@@ -12513,13 +12541,6 @@ body {
     width: 100% !important;
     max-width: 632px !important;
   }
-  form:after,
-  form:before {
-    display: none;
-  }
-  form input {
-    height: 35px;
-  }
   #submit,
   .submit {
     background: url('/img/lp/generalbinary/m-button-left.png');
@@ -12536,20 +12557,24 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .submit {
-    margin-bottom: -96px;
+  form:after,
+  form:before {
+    display: none;
   }
-  .per1 .icon {
-    background: url('/img/lp/generalbinary/m-icon-2.png');
+  form input {
+    height: 35px;
   }
-  .per2 .icon {
-    background: url('/img/lp/generalbinary/m-icon-3.png');
-  }
-  .per3 .icon {
+  .ico1 {
     background: url('/img/lp/generalbinary/m-icon-1.png');
   }
-  .per4 .icon {
+  .ico2 {
     background: url('/img/lp/generalbinary/m-icon-4.png');
+  }
+  .ico3 {
+    background: url('/img/lp/generalbinary/m-icon-2.png');
+  }
+  .ico4 {
+    background: url('/img/lp/generalbinary/m-icon-3.png');
   }
   .per .icon {
     height: 35px;
@@ -12578,19 +12603,22 @@ body {
     float: left;
     margin-right: 8px;
     position: relative;
-    top: -16px !important;
     background-size: contain;
     background-repeat: no-repeat;
     max-width: 40px;
     max-height: 40px;
-    height: 100%;
-    width: 100%;
+  }
+  .main .per .icon.ico1 {
+    top: -11px !important;
   }
   .main .per .icon.ico2 {
-    top: -8px !important;
+    top: -11px !important;
   }
-  .footer .submit {
-    margin-bottom: 46px;
+  .main .per .icon.ico3 {
+    top: -12px !important;
+  }
+  .main .per .icon.ico3 {
+    top: -12px !important;
   }
   .footer img {
     margin: 0px auto;
@@ -12625,31 +12653,37 @@ body {
   }
   .texts {
     padding: 0;
+    height: 55px;
   }
   .footer .bg {
     height: auto;
   }
-  .head .bg .form form #submit {
+  .head .bg .form form #submit,
+  .submit {
     padding: 0;
     width: 100%;
     height: auto;
     background: transparent !important;
   }
-  .head .bg .form form #submit span {
+  .head .bg .form form #submit span,
+  .submit span {
     display: none;
     padding: 0;
   }
-  .head .bg .form form #submit .img {
+  .head .bg .form form #submit .img,
+  .submit .img {
     display: block !important;
     position: relative;
   }
-  .head .bg .form form #submit .img img {
+  .head .bg .form form #submit .img img,
+  .submit .img img {
     display: block;
     max-width: 713px;
     width: 99.8%;
     margin-left: 0.2%;
   }
-  .head .bg .form form #submit .img .text {
+  .head .bg .form form #submit .img .text,
+  .submit .img .text {
     position: absolute;
     display: block;
     width: 100%;
@@ -12657,9 +12691,9 @@ body {
     font-size: 60px;
   }
 }
-@media (max-width: 768px) and (min-width: 480px) {
+@media (max-width: 768px) and (min-width: 605px) {
   .form:not(.recaptchaon) form {
-    height: 527px;
+    height: 500px;
   }
 }
 @media (max-width: 768px) and (min-width: 480px) {
@@ -12704,13 +12738,20 @@ body {
     top: -24px !important;
   }
 }
+@media (max-width: 768px) and (min-width: 768px) {
+  .ico4 {
+    top: -16px;
+  }
+}
 @media (max-width: 768px) and (max-width: 640px) {
-  .head .bg .form form #submit .img .text {
+  .head .bg .form form #submit .img .text,
+  .submit .img .text {
     font-size: 47px;
   }
 }
 @media (max-width: 768px) and (max-width: 470px) {
-  .head .bg .form form #submit .img .text {
+  .head .bg .form form #submit .img .text,
+  .submit .img .text {
     font-size: 35px;
   }
 }
@@ -12789,15 +12830,68 @@ body .sm-s {
     display: block;
   }
 }
+a.submit {
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  a.submit .h-sm {
+    display: block;
+    line-height: 62px;
+    text-align: center;
+  }
+}
+a.submit .text {
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+@media (max-width: 768px) {
+  a.submit .text {
+    margin-top: -4%;
+  }
+}
+@media (max-width: 487px) {
+  a.submit .text {
+    margin-top: -7%;
+  }
+}
+@media (max-width: 470px) {
+  a.submit .text {
+    margin-top: -5%;
+  }
+}
+@media (max-width: 408px) {
+  a.submit .text {
+    margin-top: -7%;
+  }
+}
 /*************
 *************************** END ***************************/
 /******* added ********************/
 @media (max-width: 768px) {
+  h1,
+  h2,
+  h3,
+  .h3 {
+    padding: 0 10px;
+  }
+  h1 {
+    margin-bottom: 0px;
+  }
+  .head .logo {
+    background-size: contain;
+    width: 164px;
+    right: 28px;
+  }
   .head .bg {
+    background-position: 0px -48px;
     padding-top: 16px;
   }
   .head .bg h1 {
-    font-size: 57px;
+    font-size: 35px;
+    line-height: 43px;
     margin-top: -9px;
   }
   .head .bg h1 span {
@@ -12817,22 +12911,36 @@ body .sm-s {
     margin: 0 auto;
     max-width: 710px;
     width: 95.4%;
-    margin-bottom: 31px;
+    margin-bottom: 12px;
+    position: relative;
+    margin-top: -1px;
   }
   .head .bg .form .h3.sm-s {
     margin: 0 auto;
-    margin-bottom: 22px;
-    font-size: 22.5px;
+    margin-bottom: 35px;
+    line-height: 27px;
+    position: relative;
+    top: 3px;
+    text-shadow: 1px 1px 2px #000000;
   }
   .head .bg .form .h3.sm-s span {
     display: block;
   }
+  .head .texts {
+    height: 55px;
+  }
 }
 @media (max-width: 768px) and (max-width: 480px) {
   .head .bg h1 {
-    font-size: 34px;
+    font-size: 30px;
     line-height: 44px;
     margin-top: -9px;
+  }
+}
+@media (max-width: 768px) and (max-width: 390px) {
+  .head .bg h1 {
+    font-size: 27px;
+    line-height: 36px;
   }
 }
 @media (max-width: 768px) and (max-width: 480px) {
