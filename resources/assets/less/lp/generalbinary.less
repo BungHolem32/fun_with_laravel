@@ -139,7 +139,7 @@ label.error {
     > ul {
       position: relative;
       z-index: 9999999999;
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0,0,0,0.9);
       margin: 0;
       border: 1px solid #ccc;
       border-radius: 5px;
@@ -585,7 +585,7 @@ body{
   }
 
   .head .bg .form {
-    bottom: -4px;
+    bottom: -32px;
     form {
       position: relative;
       top: -4px;
@@ -593,6 +593,25 @@ body{
   }
 }
 
+.icon{
+  width: 37px;
+  height: 39px;
+}
+.ico1{
+  background: url('/img/lp/generalbinary/icon-2.png') no-repeat;
+}
+.ico2{
+  background: url('/img/lp/generalbinary/icon-3.png') no-repeat;
+}
+.ico3{
+  background: url('/img/lp/generalbinary/icon-1.png') no-repeat;
+}
+.ico4{
+  background: url('/img/lp/generalbinary/icon-4.png') no-repeat;
+}
+.icon{
+  background-size: contain;
+}
 
 
 /*****************************************************
@@ -609,7 +628,7 @@ body{
 .navbar-toggle .icon-bar {
   background-color: transparent;
   position: relative;
-  margin-bottom: 9px;
+  margin-bottom: 7px;
   width: 50px;
   .right(-20px);
   &:after{
@@ -617,8 +636,8 @@ body{
     position: absolute;
     border-radius: 5px;
     background-color: #fff;
-    width: 7px;
-    height: 7px;
+    width: 5px;
+    height: 5px;
   }
 }
 .navbar-header {
@@ -634,7 +653,6 @@ body{
     > ul {
       position: relative;
       z-index: 9999999999;
-      background: #000;
       margin: 0;
       li{
         a{
@@ -791,9 +809,9 @@ body{
 
   .form:not(.recaptchaon) form {
     margin-bottom: 0;
-    height: 503px;
-    @media(min-width: @screen-xs){
-      height: 527px;
+    height: 479px;
+    @media(min-width: 605px){
+      height: 500px;
     }
   }
   .form.recaptchaon form{
@@ -855,6 +873,7 @@ body{
   .form{
     background: transparent;
     margin-top: 0px;
+    margin-bottom: 0;
     > img{
       z-index: 9;
     }
@@ -944,17 +963,20 @@ body{
     margin-bottom: -96px;
   }
 
-  .per1 .icon{
-    background: url('/img/lp/generalbinary/m-icon-2.png');
-  }
-  .per2 .icon{
-    background: url('/img/lp/generalbinary/m-icon-3.png');
-  }
-  .per3 .icon{
+  .ico1{
     background: url('/img/lp/generalbinary/m-icon-1.png');
   }
-  .per4 .icon{
+  .ico2{
     background: url('/img/lp/generalbinary/m-icon-4.png');
+  }
+  .ico3{
+    background: url('/img/lp/generalbinary/m-icon-2.png');
+  }
+  .ico4{
+    background: url('/img/lp/generalbinary/m-icon-3.png');
+    @media(min-width: @screen-sm){
+      top: -16px;
+    }
   }
   .per .icon{
     height: 35px;
@@ -981,15 +1003,21 @@ body{
         float: @left;
         .margin-right(8px);
         position: relative;
-        top: -16px !important;
         background-size: contain;
         background-repeat: no-repeat;
         max-width: 40px;
         max-height: 40px;
-        height: 100%;
-        width: 100%;
+        &.ico1{
+          top: -11px !important;
+        }
         &.ico2{
-          top: -8px !important;
+          top: -11px !important;
+        }
+        &.ico3{
+          top: -12px !important;
+        }
+        &.ico3{
+          top: -12px !important;
         }
       }
     }
@@ -1033,6 +1061,7 @@ body{
   }
   .texts{
     padding: 0;
+    height: 55px;
   }
   .footer .bg {
     height: auto;
@@ -1111,19 +1140,35 @@ body .sm-s{
 
 /******* added ********************/
 @media(max-width: @screen-sm) {
-
+  h1,h2,h3,.h3{
+    padding: 0 10px;
+  }
+  h1{
+    margin-bottom: 0px;
+  }
+  .head .logo {
+    background-size: contain;
+    width: 164px;
+    right: 28px;
+  }
   .head .bg {
+    background-position: 0px -48px;
     padding-top: 16px;
     h1 {
-      font-size: 57px;
+      font-size: 35px;
+      line-height: 43px;
       margin-top: -9px;
       span {
         display: block;
       }
       @media(max-width: @screen-xs){
-        font-size: 34px;
+        font-size: 30px;
         line-height: 44px;
         margin-top: -9px;
+      }
+      @media(max-width: 390px){
+        font-size: 27px;
+        line-height: 36px;
       }
     }
     h2 {
@@ -1145,15 +1190,22 @@ body .sm-s{
     margin: 0 auto;
     max-width: 710px;
     width: 95.4%;
-    margin-bottom: 31px;
+    margin-bottom: 12px;
+    position: relative;
+    margin-top: -1px;
   }
 
   .head .bg .form .h3.sm-s {
     margin: 0 auto;
-    margin-bottom: 22px;
-    font-size: 22.5px;
+    margin-bottom: 35px;
+    line-height: 27px;
+    position: relative;
+    top: 3px;
     span {
       display: block;
     }
+  }
+  .head .texts{
+    height: 55px;
   }
 }

@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="/js/lp/lp.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300,300italic' rel='stylesheet' type='text/css'>
+    <meta name="theme-color" content="#c6ab2b">
     {!! $page->appendAsset(url('/css/generalbinary-'.Request::local()->dir.'.css')) !!}
 @append
 
@@ -34,11 +35,11 @@
             </div>
             <div class="col-xs-12 bg">
                 <h1>@ln(Try a Binary Platform) <span>@ln(That's Simple & Exciting!)</span></h1>
-                <h2>@ln(Free education & More options Help You succeed)</h2>
+                <h2 class="sm-h">@ln(Free education & More options Help You succeed)</h2>
                 <div class="form">
                     <h3 class="h3 sm-h">@ln(Complete This Form & Start Trading Binary Options Now)</h3>
                     <img class="sm-s mimg" src="/img/lp/generalbinary/trading-platform.png" />
-                    <div  class="h3 sm-s">@ln(Complete This Form <span>& Start Trading Binary Options Now</span>)</div>
+                    <div  class="h3 sm-s">@ln(Complete This Form & <span>Start Trading Binary Options Now</span>)</div>
                     @include('funnels.layouts._partials._form-horizontal', ['funnelId' => $page->id,'btn'=>'/img/lp/generalbinary/m-button-'.Request::local()->dir.'.png'])
                 </div>
             </div>
@@ -49,7 +50,7 @@
             <div class="row">
                 <div class="col-sm-6 col-xs-12">
                     <div class="per">
-                        <img class="icon ico1" src="/img/lp/generalbinary/icon-2.png"/>
+                        <div class="icon ico1" src="/img/lp/generalbinary/icon-2.png"></div>
                         <div class="title">
                             The perfect account type for every trader</div>
                             <div class="text">
@@ -57,7 +58,7 @@
                         </div>
                     </div>
                     <div class="per">
-                        <img class="icon ico2" src="/img/lp/generalbinary/icon-3.png"/>
+                        <div class="icon ico2" src="/img/lp/generalbinary/icon-3.png"></div>
                         <div class="title">Valuable education tools</div>
                         <div class="text">
                             Every trader gets a huge packet of educational materials designed to enhance your trading skills. Our Binary options e-book presents a simple breakdown of trading basics, and our team of analysts sends out daily reviews covering important market events.
@@ -66,14 +67,14 @@
                 </div>
                 <div class="col-sm-6 col-xs-12">
                     <div class="per">
-                        <img class="icon ico3" src="/img/lp/generalbinary/icon-1.png"/>
+                        <div class="icon ico3" src="/img/lp/generalbinary/icon-1.png"></div>
                         <div class="title">An amazing trading platform</div>
                         <div class="text">
                             Our Binary Options platform is easy to master. Our senior brokers walk you through trading step by step, and teach you how to pick winning trades on currencies, stocks, indices, and commodities, all while earning the highest payouts in the industry – up to 88%.
                         </div>
                     </div>
                     <div class="per">
-                        <img class="icon ico4" src="/img/lp/generalbinary/icon-4.png"/>
+                        <div class="icon ico4" src="/img/lp/generalbinary/icon-4.png"></div>
                         <div class="title">Welcome Bonuses and Rewards </div>
                         <div class="text">
                             RBoptions traders always get more! You can make your deposit go farther when we match it with a 50% deposit bonus directly into your account. Our traders also qualify for high end Apple products like iPhones and iPads.
