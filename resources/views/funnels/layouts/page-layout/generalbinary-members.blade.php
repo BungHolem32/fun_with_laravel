@@ -86,7 +86,7 @@
     </div>
     <div class="footer">
         {{ $btn = $page->submitValue  }}
-        <a class="submit"><span class="img" style="display:none;" data-url="{{ $btn }}" data-text="{{ \App\Languages::getTrans($btn) }}"></span> <span class="h-sm">{{ \App\Languages::getTrans($btn) }}</span></a>
+        <a class="submit onsubmit"><span class="img" style="display:none;" data-url="{{ $btn }}" data-text="{{ \App\Languages::getTrans($btn) }}"></span> <span class="h-sm">{{ \App\Languages::getTrans($btn) }}</span></a>
         <img src="/img/lp/generalbinary/Footer-icons.png" alt="">
         <div class="bg">
             <div class="text">

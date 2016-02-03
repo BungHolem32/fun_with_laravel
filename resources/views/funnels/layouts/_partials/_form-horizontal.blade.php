@@ -61,7 +61,7 @@ foreach($form->membersFields->getChildren() as $field){
                 @elseif($field[0] == 'submit')
                     <div class="field">
                         <?php if(!empty($page->submitValue->get())): $sub = $page->submitValue; else: $sub = $field[2]; endif;  ?>
-                        <button id="submit" class="submit"><span class="img" style="display:none;" data-url="{{ $btn }}" data-text="{{ \App\Languages::getTrans($sub) }}"></span> <span>{{ \App\Languages::getTrans($sub) }}</span></button>
+                        <button id="submit" class="onsubmit"><span class="img" style="display:none;" data-url="{{ $btn }}" data-text="{{ \App\Languages::getTrans($sub) }}"></span> <span>{{ \App\Languages::getTrans($sub) }}</span></button>
                     </div>
                 @endif
             @endforeach

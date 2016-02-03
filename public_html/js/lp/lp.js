@@ -9,7 +9,7 @@ $('*:not(.nav)').on('click',function(){
 });
 
 $(document).ready(function(){
-    $('a.submit').on('click',function(){
+    $('a.onsubmit').on('click',function(){
         $('input#FirstName')[0].focus();
         $("html, body").animate({
             scrollTop: 0
@@ -18,9 +18,9 @@ $(document).ready(function(){
     });
     // button with text middle by img resized width
     if($(window).width()<768){
-        if($('.submit .img').data('url').length>1){
-            $('.submit .img').append('<img src="'+$('.submit .img').data('url')+'" />');
-            $('.submit .img').append('<span class="text">'+$('.submit .img').data('text')+'</span>');
+        if($('.onsubmit .img').data('url').length>1){
+            $('.onsubmit .img').append('<img src="'+$('.onsubmit .img').data('url')+'" />');
+            $('.onsubmit .img').append('<span class="text">'+$('.onsubmit .img').data('text')+'</span>');
 
             $(window).on('load resize',function(){
                 var fixT = '44';
@@ -30,15 +30,15 @@ $(document).ready(function(){
                 if($(window).width()<470)
                     fixT = '27';
 
-                $('.submit .text').attr('style','top: calc(50% - '+fixT+'px);')
+                $('.onsubmit .text').attr('style','top: calc(50% - '+fixT+'px);')
             });
 
 
-            var osrc = $('.submit img').attr('src');
-            $('.submit').on('mouseenter',function(){
-                $('.submit img').attr('src',osrc.replace('button-','button-h-'));
+            var osrc = $('.onsubmit img').attr('src');
+            $('.onsubmit').on('mouseenter',function(){
+                $('.onsubmit img').attr('src',osrc.replace('button-','button-h-'));
             }).on('mouseleave',function(){
-                $('.submit img').attr('src',osrc.replace('h-',''));
+                $('.onsubmit img').attr('src',osrc.replace('h-',''));
             });
         }
     }
