@@ -12868,6 +12868,20 @@ a.submit .text {
     margin-top: -7%;
   }
 }
+@media (max-width: 768px) {
+  a.submit {
+    margin: -7px auto !important;
+    margin-top: 35px !important;
+    position: relative;
+    top: -43px;
+  }
+}
+@media (max-width: 768px) and (max-width: 480px) {
+  a.submit {
+    margin: 31px auto !important;
+    margin-top: 35px !important;
+  }
+}
 /*************
 *************************** END ***************************/
 /******* added ********************/

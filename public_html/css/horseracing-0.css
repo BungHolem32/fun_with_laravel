@@ -12536,7 +12536,7 @@ input.error:-ms-input-placeholder {
     height: 43px;
   }
   .footer .submit {
-    margin-bottom: 46px;
+    margin: 0 auto 46px !important;
   }
   .footer img {
     margin: 0px auto;
