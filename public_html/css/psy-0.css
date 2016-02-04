@@ -11812,3 +11812,7 @@ input#submit:hover {
 .visible-hidden {
   visibility: hidden;
 }
+
+body > div, body > h1, body > h2, body > h3, body > img, body > .wrap {
+  height: auto;
+}
