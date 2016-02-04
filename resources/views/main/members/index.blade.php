@@ -9,6 +9,8 @@ if($getforms[$formType] == 'Vertical Form'){
     $lp = 1;
     $lpName = $page->title->get();
 }
+
+
 ?>
 
 @if($lp == 1)

@@ -1,4 +1,5 @@
 @section('head')
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Startup CSS -->
     {!! $page->appendAsset(url('/css/aussie/style.css')) !!}
     <!--[if lt IE 9]>

@@ -1,6 +1,7 @@
 @section('head')
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    {!! $page->appendAsset(url('/css/lp/'.$lpName.'.css')) !!}
+    <link rel="stylesheet" href="{!!  '/css/lp/'.$lpName.'.css?v='.time() !!}">
+    <meta name="viewport" content="">
 @append
 
 @section('bottom-scripts')
@@ -9,7 +10,6 @@
 
 @section('page-layout')
 
-    {!! $page->htmlHeader !!}
     <div class="head"></div>
     <div class="bg">
         <div class="form">
@@ -21,4 +21,5 @@
     @else
         <div class="bottom"></div>
     @endif
+
 @endsection

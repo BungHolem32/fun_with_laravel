@@ -11857,7 +11857,7 @@ body {
 }
 @media (min-width: 768px) {
   .head .texts a:hover {
-    border-bottom: 1px solid #fbfbfe;
+    text-decoration: underline;
   }
   .head .texts a:hover .phone {
     color: #9EC5D5;
@@ -11868,7 +11868,7 @@ body {
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
-  height: 621px;
+  height: 619px;
   overflow: hidden;
   background-position: 50% 0;
 }
@@ -11938,7 +11938,7 @@ body {
 }
 .head .bg .form {
   position: absolute;
-  bottom: 0;
+  bottom: 4px;
   left: 0;
 }
 .head .bg .form .title {
@@ -11966,15 +11966,16 @@ body {
   background-repeat: no-repeat;
   width: 240px;
   height: 92px;
-  background-position: 0px 0px;
+  background-position: -2px 0px;
   position: relative;
 }
 .head .bg .form form #submit span {
   display: block;
-  font-size: 25px;
   font-weight: 400;
   position: relative;
   left: -13px;
+  font-weight: bold;
+  font-size: 28px;
 }
 .head .bg .form form #submit:after {
   content: '';
@@ -11987,10 +11988,10 @@ body {
   width: 25px;
 }
 .head .bg .form form #submit:hover {
-  background-position: 0px -94px;
+  background-position: -2px -94px;
 }
 .head .bg .form form #submit:focus {
-  background-position: 0px -188px;
+  background-position: -2px -188px;
 }
 h1,
 h2,
@@ -12042,6 +12043,11 @@ h3,
     left: 5px !important;
   }
 }
+@media (max-width: 1265px) and (max-width: 1265px) {
+  .form #submit {
+    left: -7.4px;
+  }
+}
 @media (max-width: 992px) {
   .bg {
     background: #000 !important;
@@ -12072,16 +12078,17 @@ h3,
   width: 35px;
   margin-right: 13px;
   float: left;
+  position: relative;
+  top: -15px;
 }
 .main .per .icon.reduce1 {
-  max-width: 24px;
+  max-width: 26px;
 }
 .main .per .title {
   font-family: Arial;
   font-size: 18px;
   font-weight: bold;
-  height: auto;
-  min-height: 36px;
+  height: 36px;
   color: #70b7e0;
   text-transform: capitalize;
 }
@@ -12162,7 +12169,7 @@ h3,
   .head .bg .form form .fields > .field {
     float: left;
   }
-  .head .bg .form form .fields > .field:nth-of-type(5) {
+  .head .bg .form form .fields > .field:nth-of-type(4) {
     clear: both;
   }
   .head .bg .form form .fields > .field:last-child {
@@ -12171,9 +12178,9 @@ h3,
   .head .bg .form form .fields > .field input {
     border: 0;
     border-radius: 0;
-    height: 35px;
     padding: 6px 12px;
-    margin-bottom: 4px;
+    margin-bottom: 12px;
+    height: 32px;
     max-width: 100%;
     width: 210px;
   }
@@ -12189,7 +12196,7 @@ h3,
   }
   .head .bg .form form .fields > .field #submit {
     top: -8px;
-    left: -13px;
+    left: -6px;
   }
 }
 .select {
@@ -12202,8 +12209,8 @@ h3,
   position: absolute;
   display: inline-block;
   content: "";
-  top: 4px;
-  right: 4px;
+  top: 2px;
+  right: 2px;
   border-left: 1px solid #eaeaea;
   padding-left: 10px;
   height: 29px;
@@ -12212,11 +12219,22 @@ h3,
   pointer-events: none;
   background-repeat: no-repeat;
 }
+@media (max-width: 1265px) {
+  .select:after {
+    top: 7px;
+    right: 7px;
+    height: 38px;
+    width: 39px;
+    background-size: cover;
+  }
+}
 .select:hover:after {
   background-position: -28px 0px;
 }
-.select.focus:after {
-  background-position: -56px 0px;
+@media (max-width: 1265px) {
+  .select:hover:after {
+    background-position: -38px 0px;
+  }
 }
 .select select {
   padding: 6px 0px;
@@ -12227,8 +12245,13 @@ h3,
   text-indent: 1px;
   text-overflow: '';
   cursor: pointer;
-  height: 36px;
+  height: 32px;
   display: inline-block;
+}
+@media (max-width: 1265px) {
+  .select select {
+    height: 50px;
+  }
 }
 .row.icons {
   text-align: center;
