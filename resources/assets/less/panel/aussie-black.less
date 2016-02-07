@@ -1,0 +1,365 @@
+@img: '/img/aussie/panel/black/';
+
+body{
+  padding-top: 0;
+  font-family: 'Roboto Condensed';
+  background: #000 url('@{img}bg.jpg') no-repeat;
+  background-size: cover;
+}
+.container{
+  max-width: 1186px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1,h2,h3{
+  height: auto;
+}
+.nopad{
+  padding-left: 0;
+  padding-right: 0;
+}
+.float{
+  position: relative;
+  z-index: 999;
+  max-width: 235px;
+  @media(min-width: @screen-lg){
+    float: @right;
+    right: 15%;
+    @media(max-width: 1570px){
+      right: 4%;
+    }
+  }
+}
+#bs-navbar{
+  clear: both;
+}
+.ac-details{
+    height: 140px;
+    width: 204px;
+  >.title{
+    padding: 0 10px;
+    color: #ffffff;
+    height: 33px;
+    line-height: 33px;
+    background: #00395e;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    img{
+      position: relative;
+      top: -3px;
+    }
+  }
+  .inside{
+    padding: 13px;
+    background: #f4f4f4;
+    .border-radiuses(0px,10px,10px,0px);
+    font-size: 13px;
+    label,span{
+      height: 13px;
+      line-height: 13px;
+      margin-bottom: 5px;
+    }
+    label{
+      float: @left;
+      color: #878787;
+      .margin-right(5px);
+      font-weight: 100;
+      &:after{
+        content:':';
+      }
+    }
+    span{
+      display: block;
+      color: #0b0b0b;
+      img{
+        position: relative;
+        top: -2px;
+        .left(-2px);
+      }
+    }
+    -webkit-box-shadow: -1px 4px 11px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 4px 11px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 4px 11px -2px rgba(0, 0, 0, 0.75);
+  }
+
+  overflow-y: hidden;
+}
+
+.cont{
+  padding: 10px;
+  background: #00395e;
+  text-align: center;
+  margin: 0 -10px;
+  position: relative;
+  h1{
+    color: #fff;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 36px;
+  }
+  h2{
+    color: #ffde00;
+    font-size: 21px;
+    font-style: italic;
+    line-height: 21px;
+    padding:0 36px;
+    display: initial;
+
+    position: relative;
+    &:before,&:after{
+      position: absolute;
+      top: 4px;
+      content:'';
+      background: url('@{img}icon-down-y.png') no-repeat;
+      height: 18px;
+      width: 18px;
+    }
+    &:before{
+      left:0;
+    }
+    &:after{
+      right:0;
+    }
+  }
+  img{
+    position: absolute;
+    left: 11%;
+    bottom: -39px;
+  }
+}
+
+
+
+
+
+
+
+
+.navbar-toggle {
+  .margin-right(-32px);
+}
+
+.navbar-toggle .icon-bar {
+  position: relative;
+  margin-bottom: 9px;
+  width: 50px;
+  .right(-20px);
+  &:after{
+    content: '';
+    position: absolute;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 7px;
+    height: 7px;
+  }
+}
+
+// custom
+
+.navbar-header{
+  display: none;
+}
+#bs-navbar{
+  display: block;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.navbar-header {
+  @media(max-width: @screen-lg) {
+    position: relative;
+    top: -14px;
+  }
+}
+@media(max-width: @screen-lg){
+  #bs-navbar {
+    width: 300px;
+    overflow-x: hidden;
+    > ul {
+      position: relative;
+      z-index: 9999999999;
+      background: rgba(0, 0, 0, 0.8);
+      margin: 0;
+      a{
+        text-align: @left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.33);
+      }
+    }
+  }
+  .navbar-toggle{
+    .margin-right(17px);
+    margin-top: -2px;
+    margin-bottom: 8px;
+    @media(min-width: 470px){
+      .margin-right(-32px);
+    }
+  }
+}
+
+.nav > li > a:hover, .nav > li > a {
+  width: 100%;
+  @media(max-width: @screen-lg) {
+  }
+  &:focus{
+    background-color: transparent;
+  }
+}
+@media (min-width: @screen-lg){
+  .navbar-collapse {
+    position: relative;
+    top: -45px;
+  }
+}
+@media(max-width: @screen-lg){
+  .navbar-header{
+    display: block;
+  }
+  #bs-navbar:not(.in):not(.collapsing){
+    display: none;
+  }
+  .nav > li > a:hover, .nav > li > a:focus {
+    background-color: rgba(255,255,255,0.3);
+  }
+}
+@media(max-width: @screen-lg) {
+  nav {
+    position: absolute !important;
+    z-index: 999999;
+    top: -23px;
+    .right(0);
+    height: auto !important;
+    &:before, &:after {
+      display: none !important;
+    }
+  }
+}
+
+
+// added
+
+.navbar-nav{
+  float:none;
+  display: table;
+  margin: 0 auto;
+}
+nav{
+  background: #2c98df;
+  border-top: #79c7fb;
+  li{
+    &:hover{
+      background: #0082d8;
+    }
+  }
+  a{
+    color: #fff;
+    &:hover{
+      color: #fff;
+    }
+    text-shadow: 0px -1px 2px rgba(142, 142, 142, 1);
+    .border-left(1px solid #1c6da1);
+
+    position: relative;
+    &:after{
+      position: absolute;
+      content:'';
+      top:0;
+      .left(0px);
+      width: 1px;
+      height: 100%;
+      background: #56b1ee;
+
+    }
+  }
+}
+
+
+
+
+
+
+
+.tabs{
+  margin-top: 54px;
+  text-align: center;
+  width: 100%;
+  .tab{
+    position: relative;
+    display: inline-block;
+    background: #282828;
+    height: 184px;
+    width: 100%;
+    max-width: 356px;
+    margin-bottom: 52px;
+    .margin-left(1%);
+    @media(max-width: @screen-xs){
+      max-width: 273px !important;
+    }
+
+    &:first-child{
+      .margin-left(0px);
+      max-width: 413px;
+    }
+
+    &.active{
+      &:after{
+        position: absolute;
+        content: '';
+        bottom: -36px;
+        left: -7px;
+        background: url('/img/aussie/panel/black/tab-h.png') no-repeat;
+        background-size: contain;
+        height: 59px;
+        width: 372px;
+        @media(max-width: @screen-xs){
+          left: -5px;
+          width: 286px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+// media queries
+
+
+@media(max-width: @screen-lg){
+  ul.nav{
+    display: none;
+  }
+  nav.in ul.nav, nav.collapsing ul.nav{
+    display: table-cell;
+  }
+  .navbar-nav > li {
+    float: none;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-toggle {
+    margin: 0;
+    top: 12px;
+  }
+  .navbar-header {
+    position: absolute;
+    right: 20px;
+  }
+  #bs-navbar {
+    top: 0;
+    width: auto;
+  }
+  nav {
+    background: transparent;
+  }
+  body{
+    background: #000;
+  }
+}
