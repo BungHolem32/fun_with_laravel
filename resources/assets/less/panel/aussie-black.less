@@ -117,6 +117,9 @@ h1,h2,h3{
     top: -29px;
     margin: 51px -10px;
   }
+  @media(max-width: 775px){
+    margin: 51px 0px;
+  }
   h1{
     color: #fff;
     font-size: 29px;
@@ -333,8 +336,9 @@ nav{
     max-width: 356px;
     margin-bottom: 52px;
     .margin-left(1%);
-    @media(max-width: @screen-xs){
-      max-width: 273px !important;
+    @media(max-width: 775px){
+      .margin-left(0%);
+      max-width: 100% !important;
     }
 
     &:first-child{
@@ -351,33 +355,35 @@ nav{
         @media(max-width: 967px) and (min-width: 810px){
           display: none;
         }
-        @media(max-width: 610px){
+        @media(max-width: 775px){
           display: none;
         }
       }
     }
-
-    &:hover{
-      &:after{
-        position: absolute;
-        content: '';
-        bottom: -36px;
-        left: -7px;
-        background: url('/img/aussie/panel/black/tab-h.png') no-repeat;
-        background-size: contain;
-        height: 53px;
-        width: 372px;
-        @media(max-width: @screen-xs){
-          left: -5px;
-          width: 286px;
+    @media(min-width: 775px) {
+      &:hover {
+        &:after {
+          position: absolute;
+          content: '';
+          bottom: -36px;
+          left: -7px;
+          background: url('/img/aussie/panel/black/tab-h.png') no-repeat;
+          background-size: contain;
+          height: 53px;
+          width: 372px;
+          @media (max-width: @screen-xs) {
+            left: -5px;
+            width: 286px;
+          }
         }
       }
-    }
-    &:first-child{
-      &:hover:after{
-        @media(min-width: @screen-xs) {
-          width: 430px;
-          background-size: cover;
+
+      &:first-child {
+        &:hover:after {
+          @media (min-width: @screen-xs) {
+            width: 430px;
+            background-size: cover;
+          }
         }
       }
     }
