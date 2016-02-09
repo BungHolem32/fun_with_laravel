@@ -11692,7 +11692,7 @@ h3 {
     margin: 51px -10px;
   }
 }
-@media (max-width: 775px) {
+@media (max-width: 992px) {
   .cont {
     margin: 51px 0px;
   }
@@ -11899,7 +11899,7 @@ nav a:after {
   margin-bottom: 52px;
   margin-left: 1%;
 }
-@media (max-width: 775px) {
+@media (max-width: 992px) {
   .tabs .tab {
     margin-left: 0%;
     max-width: 100% !important;
@@ -11915,22 +11915,17 @@ nav a:after {
   left: -89px;
   max-width: 100%;
 }
-@media (max-width: 1340px) and (min-width: 1185px) {
+@media (max-width: 1340px) and (min-width: 1200px) {
   .tabs .tab:first-child > img {
     display: none;
   }
 }
-@media (max-width: 967px) and (min-width: 810px) {
+@media (max-width: 992px) {
   .tabs .tab:first-child > img {
     display: none;
   }
 }
-@media (max-width: 775px) {
-  .tabs .tab:first-child > img {
-    display: none;
-  }
-}
-@media (min-width: 775px) {
+@media (min-width: 992px) {
   .tabs .tab:hover:after {
     position: absolute;
     content: '';
@@ -11942,13 +11937,13 @@ nav a:after {
     width: 372px;
   }
 }
-@media (min-width: 775px) and (max-width: 480px) {
+@media (min-width: 992px) and (max-width: 480px) {
   .tabs .tab:hover:after {
     left: -5px;
     width: 286px;
   }
 }
-@media (min-width: 775px) and (min-width: 480px) {
+@media (min-width: 992px) and (min-width: 480px) {
   .tabs .tab:first-child:hover:after {
     width: 430px;
     background-size: cover;
