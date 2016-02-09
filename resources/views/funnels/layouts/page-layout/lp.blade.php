@@ -1,6 +1,7 @@
 @section('head')
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{!!  '/css/lp/'.$lpName.'.css?v='.time() !!}">
+    <link rel="stylesheet" href="{!!  '/css/lp/'.$lpName.'.css' !!}">
+    {{-- override the view from upper levels in view (hagai) --}}
     <meta name="viewport" content="">
 @append
 

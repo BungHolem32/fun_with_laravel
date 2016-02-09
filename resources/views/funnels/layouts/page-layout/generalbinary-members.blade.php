@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="/js/lp/lp.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300,300italic' rel='stylesheet' type='text/css'>
+    {{--Cool color change for mobile address bar from hagai!--}}
     <meta name="theme-color" content="#c6ab2b">
     {!! $page->appendAsset(url('/css/generalbinary-'.Request::local()->dir.'.css')) !!}
 @append

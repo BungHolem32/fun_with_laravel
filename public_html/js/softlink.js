@@ -1,5 +1,5 @@
 $(document).ready(function(){
     $('.softlink').mousedown(function(){
-        $(this).attr("href", "http://www.google.com/");
+        $(this).attr("href", "http://aussieroadtosuccess.com/insight/members");
     });
 });

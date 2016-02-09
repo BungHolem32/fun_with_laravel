@@ -59,9 +59,11 @@ class SpotApi
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         //curl_setopt($ch, CURLOPT_INTERFACE, $_SERVER["SERVER_ADDR"]);
         curl_setopt($ch, CURLOPT_TIMEOUT, self::TIMEOUT);
-	    /*curl_setopt($ch, CURLOPT_VERBOSE, true);
+
+	    curl_setopt($ch, CURLOPT_VERBOSE, true);
 	    $v = fopen(base_path().'/logs/spot.log', 'a');
-	    curl_setopt($ch, CURLOPT_STDERR, $v);*/
+	    curl_setopt($ch, CURLOPT_STDERR, $v);
+
         $result = curl_exec($ch);
         return $result;
     }
@@ -98,7 +100,7 @@ class SpotApi
             $answer['errs'] = $errs;
             return $answer;
         }
-	    //Log::debug('Spot Error', $answer);
+	    Log::debug('Spot Error', $answer);
         $answer['errs']['error'] = $answer['msg'] = 'Error - Connection was not established.';
         return $answer;
     }
@@ -132,7 +134,8 @@ class SpotApi
         }
 
         //dd($newData);
-        $location = json_decode(file_get_contents('http://api-v2.rboptions.com/locator/'.\Request::ip()));
+        //$location = json_decode(file_get_contents('http://api-v2.rboptions.com/locator/'.\Request::ip()));
+        $location = json_decode(file_get_contents('http://locator.rboptions.com/locator/'.\Request::ip()));
         $newData['registrationCountry']=$location->countryId;
 
         return $newData;

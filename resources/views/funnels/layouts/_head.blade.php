@@ -9,6 +9,8 @@
 
 {!! $page->appendAsset(url('/js/vendor/jquery-1.11.2.min.js')) !!}
 {!! $page->appendAsset(url('/js/vendor/underscore-min.js')) !!}
+
+{{-- THIS IS FOR THE TAG MANAGER TRIGGERS (ASK RONEN or ROTEM) --}}
 <script>var dataLayer=[];</script>
 @yield('head')
 

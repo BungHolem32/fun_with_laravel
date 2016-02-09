@@ -1,7 +1,6 @@
 @extends('funnels.layouts.html')
 {{--{{dd($page->controller->getForms())}}--}}
 <?php
-
 $formType = $page->formType;
 $getforms = $page->controller->getForms();
 $lp = 0;
@@ -20,3 +19,4 @@ if($getforms[$formType] == 'Vertical Form'){
 @else
     No Template selected
 @endif
+

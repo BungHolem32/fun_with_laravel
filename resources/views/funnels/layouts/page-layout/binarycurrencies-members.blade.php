@@ -7,6 +7,7 @@
 
 @section('bottom-scripts')
     @com('funnel_scripts')
+    <script src="/js/lp/binary-currencies.js"></script>
 @append
 
 @section('page-layout')
@@ -92,8 +93,4 @@
             </div>
         </div>
     </div>
-
-
-
-    <script src="/js/lp/binary-currencies.js"></script>
 @endsection
