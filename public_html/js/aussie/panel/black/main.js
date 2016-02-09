@@ -44,4 +44,11 @@ $(document).ready(function(){
         },100);
 
     });
+
+// detect amount
+    $('.amount').on('click',function(){
+       $('.amount.active').removeClass('active');
+        $(this).addClass('active');
+        $('input[name=amount]').val($(this).data('start'));
+    });
 });
