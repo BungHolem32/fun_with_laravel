@@ -11768,7 +11768,7 @@ label.error:after {
   display: inline-block;
   margin-right: 10px;
 }
-@media (max-width: 1265px) {
+@media (max-width: 768px) {
   .form .fields {
     max-width: 100%;
     min-width: 300px;
@@ -11999,7 +11999,7 @@ h3,
 .form > .title {
   text-shadow: 2px 2px 2px #000;
 }
-@media (max-width: 1265px) {
+@media (max-width: 768px) {
   .bg {
     background: #000 url('/img/lp/binary-currencies/big-pic.jpg');
     background-position: 50% 111px;
@@ -12043,12 +12043,12 @@ h3,
     left: 5px !important;
   }
 }
-@media (max-width: 1265px) and (max-width: 1265px) {
+@media (max-width: 768px) and (max-width: 768px) {
   .form #submit {
     left: -7.4px;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .bg {
     background: #000 !important;
   }
@@ -12069,7 +12069,7 @@ h3,
   height: 234px;
   position: relative;
 }
-@media (min-width: 1265px) {
+@media (min-width: 768px) {
   .main .per {
     left: -27px;
   }
@@ -12130,7 +12130,7 @@ h3,
     left: -181px;
   }
 }*/
-@media (min-width: 1265px) {
+@media (min-width: 768px) {
   .form {
     background: rgba(0, 0, 0, 0.6);
     padding-bottom: 68px;
@@ -12219,7 +12219,7 @@ h3,
   pointer-events: none;
   background-repeat: no-repeat;
 }
-@media (max-width: 1265px) {
+@media (max-width: 768px) {
   .select:after {
     top: 7px;
     right: 7px;
@@ -12231,7 +12231,7 @@ h3,
 .select:hover:after {
   background-position: -28px 0px;
 }
-@media (max-width: 1265px) {
+@media (max-width: 768px) {
   .select:hover:after {
     background-position: -38px 0px;
   }
@@ -12248,7 +12248,7 @@ h3,
   height: 32px;
   display: inline-block;
 }
-@media (max-width: 1265px) {
+@media (max-width: 768px) {
   .select select {
     height: 50px;
   }
@@ -12344,12 +12344,12 @@ h3,
   right: -534px;
   bottom: -83px;
 }
-@media (min-width: 1265px) {
+@media (min-width: 768px) {
   .form {
     height: 196px;
   }
 }
-@media (max-width: 1265px) {
+@media (max-width: 768px) {
   .bg {
     background-size: cover;
   }
@@ -12367,9 +12367,14 @@ h3,
 form.visible-hidden {
   height: 92px !important;
 }
-@media (min-width: 1265px) {
+@media (min-width: 768px) {
   .pers {
     padding-left: 79px;
     padding-right: 71px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1265px) {
+  body {
+    width: 1265px;
   }
 }
