@@ -2,7 +2,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300,300italic' rel='stylesheet' type='text/css'>
-    {!! $page->appendAsset(url('/css/binary-currencies-'.Request::local()->dir.'.css')) !!}
+    {!! $page->appendAsset(url('/css/lp/binary-currencies-'.Request::local()->dir.'.css')) !!}
 @append
 
 @section('bottom-scripts')

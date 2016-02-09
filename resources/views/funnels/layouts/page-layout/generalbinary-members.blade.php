@@ -4,7 +4,7 @@
     <script src="/js/lp/lp.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300,300italic' rel='stylesheet' type='text/css'>
     <meta name="theme-color" content="#c6ab2b">
-    {!! $page->appendAsset(url('/css/generalbinary-'.Request::local()->dir.'.css')) !!}
+    {!! $page->appendAsset(url('/css/lp/generalbinary-'.Request::local()->dir.'.css')) !!}
 @append
 
 @section('bottom-scripts')
