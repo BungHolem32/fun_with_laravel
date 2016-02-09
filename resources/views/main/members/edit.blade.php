@@ -38,6 +38,15 @@
         {!! Form::textarea('smallHeader', $page['smallHeader'], ['name'=>'mongo[smallHeader]', 'class'=>'direction editor form-control']) !!}
     </div>
     <div class="form-group">
+        <h3><i class="fa fa-bullhorn"></i> On Exit popup:</h3><small>epass=532 Param to disable</small>
+        <br/>
+        {!! Form::label('onExitPopupMsg', 'Message:') !!}
+        {!! Form::textarea('onExitPopupMsg', $page['onExitPopup']['msg'], ['name'=>'mongo[onExitPopup][msg]', 'class'=>'direction form-control']) !!}
+
+        {!! Form::label('onExitPopupLink', 'Link:') !!}
+        {!! Form::text('onExitPopupLink', $page['onExitPopup']['link'], ['name'=>'mongo[onExitPopup][link]', 'class'=>'editor form-control']) !!}
+    </div>
+    <div class="form-group">
         <h3><i class="fa fa-link"></i> {!! Form::label('destinationSite', 'Destination Site:') !!}</h3>
         {!! Form::text('destinationSite', $page['destinationSite'], ['name'=>'mongo[destinationSite]', 'class'=>'form-control']) !!}
     </div>

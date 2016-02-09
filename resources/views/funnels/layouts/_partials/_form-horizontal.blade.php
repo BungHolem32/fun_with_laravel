@@ -5,6 +5,8 @@
 // being used with all langs without making more routes.
 \Request::local()->id = '4';
 
+if(!isset($btn))
+    $btn = '';
 if(!isset($show_recaptcha))
     $show_recaptcha = false;
 $form = \App\Page::find($page->formType);
@@ -30,7 +32,9 @@ foreach($form->membersFields->getChildren() as $field){
                 'method'=>'post',
                 'class'=>'form-horizontal']) !!}
     <div class="fields">
+        @if($show_recaptcha)
             <div class="g-recaptcha" data-sitekey="6Ld39RMTAAAAALVGhMswy185zq0C2bmP-gydSrSI"></div>
+        @endif
         <input type="hidden" name="parentPage" value="{{ $funnelId }}">
         @forelse($hiddenFields as $hiddenField)
             <input type="hidden" id="{{ $hiddenField[0] }}" name="{{ $hiddenField[0] }}" value="">
@@ -57,7 +61,7 @@ foreach($form->membersFields->getChildren() as $field){
                 @elseif($field[0] == 'submit')
                     <div class="field">
                         <?php if(!empty($page->submitValue->get())): $sub = $page->submitValue; else: $sub = $field[2]; endif;  ?>
-                        <button id="submit"><span>{{ \App\Languages::getTrans($sub) }}</span></button>
+                        <button id="submit" class="onsubmit"><span class="img" style="display:none;" data-url="{{ $btn }}" data-text="{{ \App\Languages::getTrans($sub) }}"></span> <span>{{ \App\Languages::getTrans($sub) }}</span></button>
                     </div>
                 @endif
             @endforeach

@@ -5,11 +5,15 @@
 </script>
 @if(Request::get('epass')!=532)
     <?php // THIS takes the link and msg from the parent if not exist.
-        if(isset($page->onExitPopup->link)){
+        if(strlen($page->onExitPopup->link) != 0){
             $tempLink = $page->onExitPopup->link;
             $tempMsg = $page->onExitPopup->msg;
         }
-        else{
+        else if(strlen($page->onExitPopup->msg) != 0){
+            $tempLink = '/'.$page->fullSlug();
+            $tempMsg = $page->onExitPopup->msg;
+        }
+        else {
             $tempLink = $page->getParent()->onExitPopup->link;
             $tempMsg = $page->getParent()->onExitPopup->msg;
         }

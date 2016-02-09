@@ -11560,3 +11560,7 @@ div.mobile-lang-bar .lang {
 .phoneFields [class^="col"] {
     float: left;
 }
+
+html,body{
+    overflow: auto;
+}

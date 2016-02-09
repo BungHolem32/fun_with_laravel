@@ -1,9 +1,6 @@
 $(document).ready(function(){
-   $('.select').on('mousedown',function(){
-      $(this).addClass('focus');
-   }).on('mouseup',function(){
-       $(this).removeClass('focus');
-   });
+    console.log('1');
+
 // select for hidden currency
     $('<div class="field"><div class="select"><select id="currency"><option value="USD">USD</option><option value="EUR">EUR</option><option value="GBP">GBP</option></select></div></div>').insertBefore('.fields .field:last-child');
 
