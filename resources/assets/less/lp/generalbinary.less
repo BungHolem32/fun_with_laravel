@@ -1241,3 +1241,14 @@ a.submit{
     width: 1265px;
   }
 }
+
+@media(min-width: @screen-sm){
+  @-moz-document url-prefix() {
+    .phoneFields{
+      top: -20px;
+    }
+    #submit, .submit {
+      top: -18px;
+    }
+  }
+}

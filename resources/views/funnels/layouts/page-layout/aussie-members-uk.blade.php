@@ -559,10 +559,10 @@
                                         Copyright 2015 Aussie Method. All Right Reserved.
                                     </center></td>
                                     <td><center>
-                                            @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Privacy', 'target'=>'_blank'])
-                                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'target'=>'_blank'])
-                                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Disclaimer', 'target'=>'_blank'])
-                                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Support', 'target'=>'_blank'])
+                                            @include('funnels.layouts._partials._link', ['page' => \App\Page::find(78), 'text'=>'Privacy', 'target'=>'_blank'])
+                                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(78), 'target'=>'_blank'])
+                                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(78), 'text'=>'Disclaimer', 'target'=>'_blank'])
+                                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(78), 'text'=>'Support', 'target'=>'_blank'])
                                     </center></td>
                                 </tr>
                                 </tbody></table>
