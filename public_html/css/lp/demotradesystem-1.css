@@ -12384,7 +12384,7 @@ body {
     top: 2px;
   }
   .head .bg .form {
-    bottom: -4px;
+    bottom: -29px;
   }
   .head .bg .form form {
     position: relative;
@@ -13002,6 +13002,15 @@ h1.sm-h > span .color {
   }
   .form {
     bottom: -29px;
+  }
+  @-moz-document url-prefix() {
+    .phoneFields {
+      top: -20px;
+    }
+    #submit,
+    .submit {
+      top: -18px;
+    }
   }
 }
 h1.sm-s > span {
