@@ -12962,4 +12962,14 @@ a.submit .text {
     width: 1265px;
   }
 }
-
+@media (min-width: 768px) {
+  @-moz-document url-prefix() {
+    .phoneFields {
+      top: -20px;
+    }
+    #submit,
+    .submit {
+      top: -18px;
+    }
+  }
+}
