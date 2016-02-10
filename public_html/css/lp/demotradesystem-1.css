@@ -11934,7 +11934,8 @@ body {
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
-  max-width: 314px;
+  max-width: 296px;
+  background-size: contain;
 }
 .head .bg .form form:after {
   background: url('/img/lp/demotradesystem/arrow-left.png');
@@ -11945,7 +11946,8 @@ body {
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
-  max-width: 314px;
+  max-width: 296px;
+  background-size: contain;
 }
 .head .bg .form form .fields {
   position: relative;
@@ -12988,17 +12990,21 @@ a.submit .text {
     width: 1265px;
   }
 }
+h1.sm-h {
+  font-size: 39px;
+}
 h1.sm-h > span {
   letter-spacing: 1.3px;
   display: block;
-  font-size: 20px;
+  font-size: 24px;
+  margin-top: 5px;
 }
 h1.sm-h > span .color {
   font-size: 34px;
 }
 @media (min-width: 768px) {
   h2 {
-    font-size: 22px;
+    font-size: 25px;
   }
   .form {
     bottom: -29px;
