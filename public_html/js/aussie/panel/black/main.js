@@ -24,17 +24,17 @@ $(document).ready(function(){
     function loading(){
         $('.loading').show();
         setInterval(function(){
-            if(!$('.loading span').hasClass('d1'))
-                $('.loading span').removeClass('d4').addClass('d1').html('.');
-            else if(!$('.loading span').hasClass('d2'))
-                $('.loading span').addClass('d2').html('..');
-            else if(!$('.loading span').hasClass('d3'))
-                $('.loading span').addClass('d3').html('...');
-            else if(!$('.loading span').hasClass('d4'))
-                $('.loading span').removeClass('d1').removeClass('d2').removeClass('d3').addClass('d4').html('');
+            if(!$('.loading .dots').hasClass('d1'))
+                $('.loading .dots').removeClass('d4').addClass('d1').html('.');
+            else if(!$('.loading .dots').hasClass('d2'))
+                $('.loading .dots').addClass('d2').html('..');
+            else if(!$('.loading .dots').hasClass('d3'))
+                $('.loading .dots').addClass('d3').html('...');
+            else if(!$('.loading .dots').hasClass('d4'))
+                $('.loading .dots').removeClass('d1').removeClass('d2').removeClass('d3').addClass('d4').html('');
         },1300);
     }
-    loading();
+   // loading();
     // hide loading:          $('.loading').hide();
 
 

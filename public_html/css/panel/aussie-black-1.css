@@ -12380,6 +12380,14 @@ div.disabled > .toggle-slide {
   display: table-cell;
   vertical-align: middle;
 }
+.loading .inside .text {
+  width: 190px;
+  display: block;
+  margin: 0 auto;
+  text-align: left;
+  position: relative;
+  left: 12px;
+}
 .loading .ball {
   background-color: rgba(0, 0, 0, 0);
   border: 5px solid rgba(63, 211, 7, 0.9);

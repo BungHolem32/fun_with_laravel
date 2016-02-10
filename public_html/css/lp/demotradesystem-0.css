@@ -12903,14 +12903,12 @@ a.submit .text {
     line-height: 43px;
     margin-top: -9px;
   }
-  .head .bg h1 span {
-    display: block;
-  }
   .head .bg h2 {
-    margin: 28px auto;
-    font-size: 33px;
+    margin: 0px auto;
+    font-size: 20px;
     max-width: 512px;
     line-height: 29px;
+    text-shadow: 2px 2px 1px #000;
   }
   .head .bg h2 span {
     display: block;
@@ -12942,6 +12940,11 @@ a.submit .text {
   .head .bg .form .h3.sm-s {
     line-height: 35px;
     font-size: 29.5px;
+  }
+}
+@media (max-width: 768px) and (min-width: 768px) {
+  .head .bg h1 span {
+    display: block;
   }
 }
 @media (max-width: 768px) and (max-width: 480px) {
@@ -12983,4 +12986,24 @@ a.submit .text {
   body {
     width: 1265px;
   }
+}
+h1.sm-h > span {
+  letter-spacing: 1.3px;
+  display: block;
+  font-size: 20px;
+}
+h1.sm-h > span .color {
+  font-size: 34px;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 22px;
+  }
+  .form {
+    bottom: -29px;
+  }
+}
+h1.sm-s > span {
+  font-size: 27px;
+  letter-spacing: -1.5px;
 }
