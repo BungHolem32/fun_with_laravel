@@ -7,6 +7,7 @@
     {!! $page->appendAsset(url('/css/lp/demotradesystem-'.Request::local()->dir.'.css')) !!}
 @append
 
+
 @section('bottom-scripts')
     @com('funnel_scripts')
 @append
