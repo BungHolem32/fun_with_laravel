@@ -15,7 +15,7 @@ body{
   position: relative;
   font-family: Arial;
 }
-h1,h2,h3{
+h1,h2,h3,.h3{
   height: auto;
 }
 .table{
@@ -26,19 +26,19 @@ h1,h2,h3{
     display: table-cell;
   }
 }
-input,select{
-  color: #565656 !important;
-  .plc({
-    color: #565656 !important;
-  });
-}
 .full-w{
   width: 100%;
 }
 .form-control {
   box-shadow: none;
 }
-#submit, .submit{
+input{
+  color: #565656 !important;
+  .plc({
+    color: #565656 !important;
+  });
+}
+#submit,.submit{
   &:focus{
     outline: none !important;
   }
@@ -122,6 +122,7 @@ label.error {
 .pull-left {
   float: @left !important;
 }
+
 .navbar-header {
   @media(max-width: @screen-sm) {
     position: relative;
@@ -138,7 +139,7 @@ label.error {
     > ul {
       position: relative;
       z-index: 9999999999;
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0,0,0,0.9);
       margin: 0;
       border: 1px solid #ccc;
       border-radius: 5px;
@@ -225,18 +226,21 @@ label.error {
     max-width: 120px;
   }
 }
-#submit, .submit{
+#submit,.submit{
   max-width: 100%;
 }
-
 // added
 
+// new font -- samsungsharpsans
+.newfont('samsungsharpsans-regular_v2');
+.newfont('samsungsharpsans-medium_v2');
+.newfont('samsungsharpsans-bold_v2');
 body{
   color: #fff;
-  font-family: 'Roboto Condensed';
+  font-family: 'samsungsharpsans-regular_v2';
 }
 .background(@img){
-  @img_f: '/img/lp/binary-currencies/';
+  @img_f: '/img/lp/demotradesystem/';
   background: url('@{img_f}@{img}');
   background-repeat: no-repeat;
 }
@@ -251,47 +255,12 @@ body{
   width: 100%;
   height: 100%;
 }
-#submit, .submit{
-  color: #010000;
-  text-shadow: 0.2px 0.1px 0.5px #fff;
-  box-shadow: none;
-  font-weight: bold;
-  .background('button.png');
-  width: 240px;
-  height: 92px;
-  background-position: -2px 0px;
-  span{
-    display: block;
 
-    font-weight: 400;
-    position: relative;
-    .left(-13px);
-    font-weight: bold;
-    font-size: 28px;
-  }
-
-  position: relative;
-  &:after{
-    content: '';
-    position: absolute;
-    top: 34px;
-    .right(30px);
-    .background('black-bt-arrow-@{right}.png');
-    height: 25px;
-    width: 25px;
-  }
-  &:hover{
-    background-position: -2px -94px;
-  }
-  &:focus{
-    background-position: -2px -188px;
-  }
-}
 .head{
   display: table;
   width: 100%;
   .logo{
-    background: url('/img/lp/logo.png') no-repeat;
+    .background('logo.png');
     width: 215px;
     height: 43px;
     position: relative;
@@ -300,7 +269,7 @@ body{
   }
   .texts{
     background: #000;
-    height: 75px;
+    height: 79px;
     text-align: center;
     font-size: 11px;
 
@@ -328,96 +297,75 @@ body{
         @media(min-width: @screen-sm){
           text-decoration: underline;
           .phone{
-            color: #9EC5D5;
+            color: #55b5ff;
           }
         }
       }
     }
   }
   .bg{
-    .background('Big-Pic.jpg');
+    .background('big-pic.jpg');
     position: relative;
     width: 100%;
-    height: 619px;
-    overflow: hidden;
+    height: 621px;
     background-position: 50% 0;
     @media(min-width: 1900px){
       background-size: 100%;
     }
+
     h1{
       color: #fff;
       text-align: center;
-      font-size: 53px;
-      margin-top: 1px;
+      font-size: 43px;
+      margin-top: 15px;
+      margin-bottom: 0px;
       font-weight: bold;
-      margin-bottom: 8px;
-      span{
-        color: #55b5ff;
+      font-family: samsungsharpsans-bold_v2;
+      margin-bottom: 6px;
+      span.color{
+        color: #a8d924;
       }
     }
     h2{
       color: #fff;
       text-align: center;
-      font-size: 37px;
-      margin-bottom: 15px;
-    }
-    h3{
-      color: #fff;
-      text-align: center;
-      font-style: italic;
-      font-weight: bold;
-      font-size: 27px;
-      border: 3px solid #fff;
-      -webkit-box-shadow: 4px 5px 9px 0px rgba(0,0,0,0.75);
-      -moz-box-shadow: 4px 5px 9px 0px rgba(0,0,0,0.75);
-      box-shadow: 4px 5px 9px 0px rgba(0,0,0,0.75);
-      margin: 0 auto;
-      height: 44px;
-      line-height: 38px;
-      max-width: 625px;
-      padding: 0 33px;
-      position: relative;
-
-
-      position: relative;
-      &:after,&:before{
-        position: absolute;
-        content: '';
-
-        top: 11px;
-        height: 25px;
-        width: 23px;
-      }
-      @media(max-width: 700px){
-        height: auto;
-        &:after,&:before {
-          top: 40%;
-        }
-      }
-      &:after{
-        right: -1px;
-        .background('arrow-right.png');
-
-      }
-      &:before{
-        left: -1px;
-        .background('arrow-left.png');
-      }
+      font-size: 29px;
     }
     .form{
       position: absolute;
-      bottom: 4px;
+      bottom: 0;
       .left(0);
-      .title{
+      h3,.h3{
         text-align: center;
         color: #fff;
-        font-size: 34.5px;
-        margin-bottom: 20px;
-        line-height: 36px;
+        font-size: 18.5px;
+        font-family: samsungsharpsans-medium_v2;
       }
-
       form{
         position: relative;
+        &:before{
+          .background('arrow-right.png');
+          content: '';
+          position: absolute;
+          right: 0;
+          top: -31px;
+          background-repeat: no-repeat;
+          height: 100%;
+          width: 100%;
+          max-width: 314px;
+
+        }
+        &:after{
+          .background('arrow-left.png');
+          content: '';
+          position: absolute;
+          left: 0;
+          top: -31px;
+          background-repeat: no-repeat;
+          height: 100%;
+          width: 100%;
+          max-width: 314px;
+        }
         .fields{
           position: relative;
           .left(39px);
@@ -427,23 +375,38 @@ body{
       }
     }
   }
-
 }
-h1, h2, h3, .form>.title{
-  text-shadow: 2px 2px 2px #000;
+#submit,.submit{
+  color: #010000;
+  text-shadow: 1px 2px 3px #d1fd20;
+  box-shadow: none;
+  text-shadow: 1px 1px 1px #d1fd20;
+  box-shadow: none;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: 'samsungsharpsans-bold_v2';
+  .background('icons_32-@{left}.png');
+  width: 199px;
+  height: 63px;
+  background-position: -9px 2px;
+  position: relative;
+  span{
+    font-size: 19px;
+    padding-left: 11px;
+    font-family: 'Roboto Condensed';
+  }
+  &:hover{
+    background-position: -9px -67px;
+  }
 }
 
 @media(max-width: 768px){
   .bg{
-    background: #000 url('/img/lp/binary-currencies/big-pic.jpg');
+    background: #000 url('/img/lp/demotradesystem/big-pic.jpg');
     background-position: 50% 111px;
-    height: auto !important;
   }
-  #submit, .submit{
+  #submit,.submit{
     margin: 0 auto;
-    @media(max-width: 768px){
-      .left(-7.4px);
-    }
   }
   .form{
     position: relative !important;
@@ -479,10 +442,7 @@ h1, h2, h3, .form>.title{
 
 }
 
-@media(max-width: @screen-sm) {
-  .bg{
-    background: #000 !important;
-  }
+@media(max-width: @screen-md) {
   form {
     &:after, &:before {
       display: none;
@@ -494,23 +454,21 @@ h1, h2, h3, .form>.title{
 }
 
 .main{
-  padding-top: 51px;
-  background: #081822;
+  padding-top: 49px;
   .per{
     color: #081822;
-    height: 234px;
-    position: relative;
-    @media(min-width: 768px){
-      left: -27px;
-    }
+    height: 239px;
     .icon{
-      width: 35px;
-      .margin-right(13px);
       float: @left;
+      width: 35px;
+      .margin-right(8px);
       position: relative;
-      top: -15px;
-      &.reduce1{
-        max-width: 26px;
+      top: -13px;
+      &.ico1{
+        top: -16px;
+      }
+      &.ico2{
+        top: -15px;
       }
     }
     .title{
@@ -518,26 +476,35 @@ h1, h2, h3, .form>.title{
       font-size: 18px;
       font-weight: bold;
       height: 36px;
-      color: #70b7e0;
+      color: #081822;
       text-transform: capitalize;
     }
     .text{
       font-family: Arial;
-      color: #fff;
-      .padding-left(51px);
+      color: #565656;
+      .padding-left(43px);
       padding-top: 16px;
       padding-bottom: 76px;
       font-size: 15px;
       line-height: 22px;
+      @media(min-width: @screen-sm){
+        max-width: 483px;
+      }
     }
   }
 }
 
 .footer{
+  img{
+    display: block;
+    margin: 16px auto;
+    left: -28px;
+    top: 4px;
+  }
   .bg{
     height: 70px;
-    background: #1c2f3b;
-    color: #5183a1;
+    background: #000;
+    color: #656565;
     .text{
       margin: 0 auto;
       padding-top: 18px;
@@ -550,128 +517,6 @@ h1, h2, h3, .form>.title{
       }
     }
   }
-}
-
-/*
-@media(min-width: 1265px){
-  .logo{
-    top: -17px;
-    right: -158px;
-  }
-  .npads{
-    position: relative;
-    left: -181px;
-  }
-}*/
-@media(min-width: 768px) {
-  .form {
-    background: rgba(0, 0, 0, 0.6);
-    padding-bottom: 68px;
-    padding-top: 9px;
-          .fadeInUp;
-     .anim(1s,1s,ease-out);
-  }
-
-  form {
-    display: table;
-  }
-  #submit, .submit{
-    top: -8px;
-    .left(-6px);
-  }
-  .head .bg .form form .fields {
-    top: 4px;
-    .left(-112px);
-    position: relative;
-    > .field {
-      float: @left;
-      &:nth-of-type(4) {
-        clear: both;
-      }
-      &:last-child{
-        position: absolute;
-      }
-      input {
-        border: 0;
-        border-radius: 0;
-        padding: 6px 12px;
-        margin-bottom: 12px;
-        height: 32px;
-        max-width: 100%;
-        width: 210px;
-        &#phone {
-          max-width: 162px;
-        }
-      }
-      .select{
-        max-width: 100%;
-        width: 210px;
-        select{
-          .padding-left(7px);
-        }
-      }
-    }
-  }
-}
-
-.select {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  &:after {
-    .background('dropdown.png');
-    position: absolute;
-    display: inline-block;
-    content: "";
-    top: 2px;
-    .right(2px);
-    .border-left(1px solid #eaeaea);
-    .padding-left(10px);
-    height: 29px;
-    width: 29px;
-    padding-top: 10px;
-    pointer-events: none;
-    background-repeat: no-repeat;
-    @media(max-width: 768px){
-      top: 7px;
-      .right(7px);
-      height: 38px;
-      width: 39px;
-      background-size: cover;
-    }
-  }
-  &:hover{
-    &:after {
-      background-position: -28px 0px;
-      @media(max-width: 768px){
-        background-position: -38px 0px;
-      }
-    }
-  }
-
-  select {
-    padding: 6px 0px;
-    .padding-left(12px);
-    width: 100%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    text-indent: 1px;
-    text-overflow: '';
-    cursor: pointer;
-    height: 32px;
-    @media(max-width: 768px){
-      height: 50px;
-    }
-    display: inline-block;
-  }
-}
-
-.row.icons{
-  text-align: center;
-  padding-bottom: 32px;
-  position: relative;
-  top: 20px;
-  .left(-24px);
 }
 
 @media(min-width: @screen-sm){
@@ -703,7 +548,7 @@ h1, h2, h3, .form>.title{
       font-weight: bold;
       font-size: 12px;
       position: relative;
-      top: 0px;
+      top: -2px;
       .plc({
         color: #fe0000 !important;
         font-weight: bold;
@@ -715,6 +560,8 @@ h1, h2, h3, .form>.title{
     padding-top: 13px;
     .padding-left(7px);
   }
+
+
   .nav li{
     &:nth-child(2){
       position: relative;
@@ -725,58 +572,38 @@ h1, h2, h3, .form>.title{
       right: -3px;
     }
   }
-
-}
-
-
-.g-recaptcha {
-  margin-bottom: 5px;
-  position: absolute;
-  right: -534px;
-  bottom: -83px;
-}
-
-@media(min-width: 768px){
-  .form{
-    height: 196px;
+  #submit,.submit{
+    top: 2px;
   }
-}
-@media(max-width: 768px) {
-  .bg{
-    background-size: cover;
-  }
-  .form {
-    padding-bottom: 71px;
-  }
-  .g-recaptcha {
-    margin-bottom: 5px;
-    position: absolute;
-    right: -1%;
-    bottom: -77px;
-    z-index: 999;
-  }
-}
-form.visible-hidden{
-  height: 92px !important;
-}
 
-@media(min-width: 768px){
-  @media(max-width: 1265px){
-    body{
-      width: 1265px;
+  .head .bg .form {
+    bottom: -32px;
+    form {
+      position: relative;
+      top: -4px;
     }
   }
-  .pers{
-    .padding-left(79px);
-    .padding-right(71px);
-  }
 }
 
-
-
-
-
-
+.icon{
+  width: 37px;
+  height: 39px;
+}
+.ico1{
+  background: url('/img/lp/demotradesystem/icon-2.png') no-repeat;
+}
+.ico2{
+  background: url('/img/lp/demotradesystem/icon-3.png') no-repeat;
+}
+.ico3{
+  background: url('/img/lp/demotradesystem/icon-1.png') no-repeat;
+}
+.ico4{
+  background: url('/img/lp/demotradesystem/icon-4.png') no-repeat;
+}
+.icon{
+  background-size: contain;
+}
 
 
 /*****************************************************
@@ -893,9 +720,9 @@ form.visible-hidden{
     .left(15px);
     top: 1px;
   }
-/*  .form{
+  .form{
     height: 127px;
-  }*/
+  }
   .form input{
     font-family: Arial;
     .plc({
@@ -934,8 +761,8 @@ form.visible-hidden{
       .right(-3px);
     }
   }
-  #submit, .submit{
-    top: -7px;
+  #submit,.submit{
+    top: 2px;
   }
 
   .head .bg .form {
@@ -949,7 +776,7 @@ form.visible-hidden{
 
 
 @media(max-width: @screen-sm) {
-  #submit, .submit{
+  #submit,.submit{
     height: 130px;
   }
   .texts{
@@ -1027,21 +854,8 @@ form.visible-hidden{
       width: 97%;
     }
   }
-  #submit, .submit {
-    .background('m-button-left.png');
-    max-width: 630px;
-    width: 100%;
-    .margin-left-i(0%);
-    background-position: 0 0 !important;
-    background-size: contain;
-    &:hover{
-      .background('m-button-left-h.png');
-      background-size: contain;
-      //  margin-top: 2px;
-    }
-  }
   .head .bg{
-    background: #000 url('/img/lp/generalbinary/m-big-clean-noTrade.png') no-repeat;
+    background: #000 url('/img/lp/demotradesystem/m-big-clean-noTrade.png') no-repeat;
     background-size: contain;
     @media(min-width: @screen-xs){
       background-size: cover;
@@ -1116,6 +930,19 @@ form.visible-hidden{
     }
 
   }
+  #submit,.submit {
+    .background('m-button-left.png');
+    max-width: 630px;
+    width: 100%;
+    .margin-left-i(0%);
+    background-position: 0 0 !important;
+    background-size: contain;
+    &:hover{
+      .background('m-button-left-h.png');
+      background-size: contain;
+      //  margin-top: 2px;
+    }
+  }
   form {
     &:after, &:before {
       display: none;
@@ -1126,16 +953,16 @@ form.visible-hidden{
   }
 
   .ico1{
-    background: url('/img/lp/generalbinary/m-icon-1.png');
+    background: url('/img/lp/demotradesystem/m-icon-1.png');
   }
   .ico2{
-    background: url('/img/lp/generalbinary/m-icon-4.png');
+    background: url('/img/lp/demotradesystem/m-icon-4.png');
   }
   .ico3{
-    background: url('/img/lp/generalbinary/m-icon-2.png');
+    background: url('/img/lp/demotradesystem/m-icon-2.png');
   }
   .ico4{
-    background: url('/img/lp/generalbinary/m-icon-3.png');
+    background: url('/img/lp/demotradesystem/m-icon-3.png');
     @media(min-width: @screen-sm){
       top: -16px;
     }
@@ -1157,6 +984,7 @@ form.visible-hidden{
       .text{
         margin-top: 8px;
         .padding-left(0px);
+        color: #000;
         font-size: 18px;
         line-height: 27px;
       }
@@ -1225,7 +1053,7 @@ form.visible-hidden{
     height: auto;
   }
 
-/*  .head .bg .form form #submit, .submit{
+  .head .bg .form form #submit,.submit{
     padding: 0;
     width: 100%;
     height: auto;
@@ -1257,7 +1085,7 @@ form.visible-hidden{
         }
       }
     }
-  }*/
+  }
 }
 
 @media(max-width: @screen-xs){
@@ -1399,28 +1227,29 @@ a.submit{
     position: relative;
     top: 3px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
-    span {
-      display: block;
-    }
   }
   .head .texts{
     height: 55px;
   }
-  .select{
-    padding: 0 10px;
-    select{
-      height: 58px;
+  span.sm-br,.h3 span{
+    display: block;
+  }
+  .head .bg .form .h3.sm-s {
+    line-height: 35px;
+    font-size: 29.5px;
+    @media(max-width: 567px){
+      font-size: 25.5px;
     }
-    &:after{
-      top: 7px;
-      .right(15px);
-      height: 45px;
-      width: 44px;
-      background-size: cover;
+    @media(max-width: 470px){
+      line-height: 29px;
+      font-size: 19.5px;
     }
-    &:hover:after{
-      background-position: -46px 0px;
+    @media(max-width: 360px){
+      line-height: 28px;
+      font-size: 17.5px;
     }
+
+
   }
 }
 
@@ -1428,14 +1257,4 @@ a.submit{
   body{
     width: 1265px;
   }
-}
-
-.submit{
-  display: block;
-  margin: 0 auto 44px;
-}
-
-input.error{
-  position: relative;
-  top: 0px;
 }
