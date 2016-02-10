@@ -11895,7 +11895,7 @@ body {
 .head .bg h1 {
   color: #fff;
   text-align: center;
-  font-size: 43px;
+  font-size: 41px;
   margin-top: 15px;
   margin-bottom: 0px;
   font-weight: bold;
@@ -11908,7 +11908,7 @@ body {
 .head .bg h2 {
   color: #fff;
   text-align: center;
-  font-size: 29px;
+  font-size: 24px;
 }
 .head .bg .form {
   position: absolute;
@@ -11921,6 +11921,8 @@ body {
   color: #fff;
   font-size: 18.5px;
   font-family: samsungsharpsans-medium_v2;
+  position: relative;
+  top: -2px;
 }
 .head .bg .form form {
   position: relative;
