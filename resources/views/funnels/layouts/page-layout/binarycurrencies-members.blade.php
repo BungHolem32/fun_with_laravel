@@ -2,7 +2,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300,300italic' rel='stylesheet' type='text/css'>
-    {!! $page->appendAsset(url('/css/binary-currencies-'.Request::local()->dir.'.css')) !!}
+    {!! $page->appendAsset(url('/css/lp/binary-currencies-'.Request::local()->dir.'.css')) !!}
 @append
 
 @section('bottom-scripts')
@@ -11,7 +11,6 @@
 @append
 
 @section('page-layout')
-    {!! $page->htmlHeader !!}
     <div class="head">
         <div class="col-xs-12 npad">
             <div class="col-xs-12 texts">
@@ -33,11 +32,9 @@
                 </div>
             </div>
             <div class="col-xs-12 bg">
-                <h1>@ln(Master Binary Currency Trading In Minutes)</h1>
-                <h2>@ln(Trade Currencies The Easy Way With Binary Options!)</h2>
-                <h3>@ln(See Why Trading Currencies On Binary Beats Forex!)</h3>
+                {!! $page->htmlHeader !!}
                 <div class="form">
-                    <div class="title">@ln(Open Your Binary Options Account!)<br>@ln(Get Started Trading Currencies TODAY!)</div>
+                    {!! $page->smallHeader !!}
                     @include('funnels.layouts._partials._form-horizontal', ['funnelId' => $page->id])
                 </div>
             </div>

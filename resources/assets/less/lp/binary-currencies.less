@@ -193,7 +193,7 @@ label.error {
     display: inline-block;
     .margin-right(10px);
   }
-  @media(max-width: 1265px) {
+  @media(max-width: 768px) {
     .fields {
       max-width: 100%;
       min-width: 300px;
@@ -434,7 +434,7 @@ h1, h2, h3, .form>.title{
   text-shadow: 2px 2px 2px #000;
 }
 
-@media(max-width: 1265px){
+@media(max-width: 768px){
   .bg{
     background: #000 url('/img/lp/binary-currencies/big-pic.jpg');
     background-position: 50% 111px;
@@ -459,7 +459,7 @@ h1, h2, h3, .form>.title{
     }
     #submit{
       margin: 0 auto;
-      @media(max-width: 1265px){
+      @media(max-width: 768px){
         .left(-7.4px);
       }
     }
@@ -480,7 +480,7 @@ h1, h2, h3, .form>.title{
 
 }
 
-@media(max-width: @screen-md) {
+@media(max-width: @screen-sm) {
   .bg{
     background: #000 !important;
   }
@@ -501,7 +501,7 @@ h1, h2, h3, .form>.title{
     color: #081822;
     height: 234px;
     position: relative;
-    @media(min-width: 1265px){
+    @media(min-width: 768px){
       left: -27px;
     }
     .icon{
@@ -564,7 +564,7 @@ h1, h2, h3, .form>.title{
     left: -181px;
   }
 }*/
-@media(min-width: 1265px) {
+@media(min-width: 768px) {
   .form {
     background: rgba(0, 0, 0, 0.6);
     padding-bottom: 68px;
@@ -634,7 +634,7 @@ h1, h2, h3, .form>.title{
     padding-top: 10px;
     pointer-events: none;
     background-repeat: no-repeat;
-    @media(max-width: 1265px){
+    @media(max-width: 768px){
       top: 7px;
       .right(7px);
       height: 38px;
@@ -645,7 +645,7 @@ h1, h2, h3, .form>.title{
   &:hover{
     &:after {
       background-position: -28px 0px;
-      @media(max-width: 1265px){
+      @media(max-width: 768px){
         background-position: -38px 0px;
       }
     }
@@ -661,7 +661,7 @@ h1, h2, h3, .form>.title{
     text-overflow: '';
     cursor: pointer;
     height: 32px;
-    @media(max-width: 1265px){
+    @media(max-width: 768px){
       height: 50px;
     }
     display: inline-block;
@@ -738,12 +738,12 @@ h1, h2, h3, .form>.title{
   bottom: -83px;
 }
 
-@media(min-width: 1265px){
+@media(min-width: 768px){
   .form{
     height: 196px;
   }
 }
-@media(max-width: 1265px) {
+@media(max-width: 768px) {
   .bg{
     background-size: cover;
   }
@@ -762,9 +762,15 @@ form.visible-hidden{
   height: 92px !important;
 }
 
-@media(min-width: 1265px){
+@media(min-width: 768px){
+  @media(max-width: 1265px){
+    body{
+      width: 1265px;
+    }
+  }
   .pers{
     .padding-left(79px);
     .padding-right(71px);
   }
 }
+
