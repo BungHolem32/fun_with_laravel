@@ -1,5 +1,11 @@
 $(document).ready(function(){
-    console.log('1');
+    $('.submit').on('click',function(){
+        $('input#FirstName')[0].focus();
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
 
 // select for hidden currency
     $('<div class="field"><div class="select"><select id="currency"><option value="USD">USD</option><option value="EUR">EUR</option><option value="GBP">GBP</option></select></div></div>').insertBefore('.fields .field:last-child');

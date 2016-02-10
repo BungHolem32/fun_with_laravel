@@ -20,11 +20,32 @@ $(document).ready(function(){
         height: 50 // height if not set in css
     });
 
+    // cool loading jquery
+    function loading(){
+        $('.loading').show();
+        setInterval(function(){
+            if(!$('.loading .dots').hasClass('d1'))
+                $('.loading .dots').removeClass('d4').addClass('d1').html('.');
+            else if(!$('.loading .dots').hasClass('d2'))
+                $('.loading .dots').addClass('d2').html('..');
+            else if(!$('.loading .dots').hasClass('d3'))
+                $('.loading .dots').addClass('d3').html('...');
+            else if(!$('.loading .dots').hasClass('d4'))
+                $('.loading .dots').removeClass('d1').removeClass('d2').removeClass('d3').addClass('d4').html('');
+        },1300);
+    }
+   // loading();
+    // hide loading:          $('.loading').hide();
+
+
+
+    /******* Actions *******/
+
     $('.toggle').on('toggle', function(e, active) {
         if (active) {
-            console.log('Toggle ON!');
+            console.log('Toggle ON');
         } else {
-            console.log('Toggle OFF!');
+            console.log('Toggle OFF');
         }
     });
 
@@ -33,5 +54,11 @@ $(document).ready(function(){
         tthis.parent().parent().find('.active').removeClass('active');
         tthis.addClass('active');
         $('input[name=amount]').val($(this).data('start'));
+
+        console.log('amount clicked');
+    });
+
+    $('.dep_btn').on('click',function(){
+        console.log('deposit clicked');
     });
 });
