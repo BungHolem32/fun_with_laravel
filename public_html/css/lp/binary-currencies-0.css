@@ -12549,6 +12549,9 @@ form.visible-hidden {
   }
 }
 @media (min-width: 768px) {
+  .form input#phone.error {
+    top: -2px !important;
+  }
   li a {
     position: relative;
     font-size: 11.5px;
