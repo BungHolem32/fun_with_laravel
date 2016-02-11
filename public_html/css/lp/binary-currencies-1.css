@@ -11825,21 +11825,31 @@ body {
   text-shadow: 0.2px 0.1px 0.5px #fff;
   box-shadow: none;
   font-weight: bold;
-  background: url('/img/lp/binary-currencies/button.png');
-  background-repeat: no-repeat;
   width: 240px;
   height: 92px;
   background-position: -2px 0px;
   position: relative;
+}
+@media (min-width: 768px) {
+  #submit,
+  .submit {
+    background: url('/img/lp/binary-currencies/button.png');
+    background-repeat: no-repeat;
+  }
 }
 #submit span,
 .submit span {
   display: block;
   font-weight: 400;
   position: relative;
-  right: -13px;
   font-weight: bold;
   font-size: 28px;
+}
+@media (min-width: 768px) {
+  #submit span,
+  .submit span {
+    right: -13px;
+  }
 }
 #submit:after,
 .submit:after {
@@ -11847,18 +11857,23 @@ body {
   position: absolute;
   top: 34px;
   left: 30px;
-  background: url('/img/lp/binary-currencies/black-bt-arrow-left.png');
-  background-repeat: no-repeat;
   height: 25px;
   width: 25px;
 }
+@media (min-width: 768px) {
+  #submit:after,
+  .submit:after {
+    background: url('/img/lp/binary-currencies/black-bt-arrow-left.png');
+    background-repeat: no-repeat;
+  }
+}
 #submit:hover,
 .submit:hover {
-  background-position: -2px -94px;
+  background-position: 0px -94px;
 }
 #submit:focus,
 .submit:focus {
-  background-position: -2px -188px;
+  background-position: 0px -188px;
 }
 .head {
   display: table;
@@ -12061,7 +12076,8 @@ h3,
 }
 @media (max-width: 768px) {
   .bg {
-    background: #000 !important;
+    background: url('/img/lp/binary-currencies/m-big-clean-noTrade.png') no-repeat !important;
+    background-size: cover !important;
   }
   form:after,
   form:before {
@@ -12072,7 +12088,7 @@ h3,
   }
 }
 .main {
-  padding-top: 51px;
+  padding-top: 46px;
   background: #081822;
 }
 .main .per {
@@ -12086,14 +12102,60 @@ h3,
   }
 }
 .main .per .icon {
-  width: 35px;
-  margin-left: 13px;
   float: right;
+  width: 35px;
+  margin-left: 8px;
   position: relative;
-  top: -15px;
+  top: -17px;
 }
-.main .per .icon.reduce1 {
-  max-width: 26px;
+.main .per .icon.ico1 {
+  top: -20px;
+}
+.main .per .icon.ico2 {
+  top: -19px;
+}
+.main .per .icon {
+  width: 37px;
+  height: 39px;
+}
+.main .per .ico1 {
+  background: url('/img/lp/binary-currencies/ico-1.png') no-repeat;
+}
+@media (max-width: 768px) {
+  .main .per .ico1 {
+    background: url('/img/lp/binary-currencies/m-icon-1.png') no-repeat;
+    top: -13px !important;
+  }
+}
+.main .per .ico2 {
+  background: url('/img/lp/binary-currencies/ico-2.png') no-repeat;
+}
+@media (max-width: 768px) {
+  .main .per .ico2 {
+    background: url('/img/lp/binary-currencies/m-icon-2.png') no-repeat;
+    top: -15px !important;
+  }
+}
+.main .per .ico3 {
+  background: url('/img/lp/binary-currencies/ico-3.png') no-repeat;
+}
+@media (max-width: 768px) {
+  .main .per .ico3 {
+    background: url('/img/lp/binary-currencies/m-icon-3.png') no-repeat;
+    top: -14px !important;
+  }
+}
+.main .per .ico4 {
+  background: url('/img/lp/binary-currencies/ico-4.png') no-repeat;
+}
+@media (max-width: 768px) {
+  .main .per .ico4 {
+    background: url('/img/lp/binary-currencies/m-icon-4.png') no-repeat;
+    top: -14px !important;
+  }
+}
+.main .per .icon {
+  background-size: contain;
 }
 .main .per .title {
   font-family: Arial;
@@ -12270,7 +12332,11 @@ h3,
   padding-bottom: 32px;
   position: relative;
   top: 20px;
-  right: -24px;
+}
+@media (min-width: 768px) {
+  .row.icons {
+    right: -24px;
+  }
 }
 @media (min-width: 768px) {
   li a {
@@ -12673,22 +12739,19 @@ form.visible-hidden {
   .head .bg .form .fields {
     width: 97%;
   }
-  #submit,
-  .submit {
-    background: url('/img/lp/binary-currencies/m-button-left.png');
-    background-repeat: no-repeat;
+  /*  #submit, .submit {
+    .background('m-button-@{left}.png');
     max-width: 630px;
     width: 100%;
-    margin-right: 0% !important;
+    .margin-left-i(0%);
     background-position: 0 0 !important;
     background-size: contain;
-  }
-  #submit:hover,
-  .submit:hover {
-    background: url('/img/lp/binary-currencies/m-button-left-h.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+    &:hover{
+      .background('m-button-@{left}-h.png');
+      background-size: contain;
+      //  margin-top: 2px;
+    }
+  }*/
   .head .bg {
     background: #000 url('/img/lp/generalbinary/m-big-clean-noTrade.png') no-repeat;
     background-size: contain;
@@ -13053,6 +13116,57 @@ a.submit .text {
 *************************** END ***************************/
 /******* added ********************/
 @media (max-width: 768px) {
+  .main {
+    position: relative;
+  }
+  .main:before {
+    content: '';
+    background: #67a8ce;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 3px;
+    width: 100%;
+  }
+  .main .per .text {
+    padding-right: 46px;
+    font-size: 16px;
+  }
+  .head .bg .form form #submit,
+  .submit {
+    margin-top: 7px;
+    position: relative;
+    right: 0%;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    background: transparent !important;
+  }
+  .head .bg .form form #submit span,
+  .submit span {
+    display: none;
+    padding: 0;
+  }
+  .head .bg .form form #submit .img,
+  .submit .img {
+    display: block !important;
+    position: relative;
+  }
+  .head .bg .form form #submit .img img,
+  .submit .img img {
+    display: block;
+    max-width: 713px;
+    width: 99.8%;
+    margin-right: 0.2%;
+  }
+  .head .bg .form form #submit .img .text,
+  .submit .img .text {
+    position: absolute;
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    font-size: 60px;
+  }
   h1,
   h2,
   h3,
@@ -13112,20 +13226,53 @@ a.submit .text {
     height: 55px;
   }
   .select {
-    padding: 0 10px;
+    margin-left: 2.5%;
+    width: 95.5%;
   }
   .select select {
     height: 58px;
   }
   .select:after {
     top: 7px;
-    left: 15px;
+    left: 6px;
     height: 45px;
     width: 44px;
     background-size: cover;
   }
   .select:hover:after {
     background-position: -46px 0px;
+  }
+  h1 {
+    font-size: 65px !important;
+  }
+  h1 > span {
+    font-size: 32px !important;
+    color: #fff !important;
+    margin-top: 8px !important;
+  }
+  .form {
+    margin-top: 156px;
+  }
+  .form .fields {
+    background: rgba(23, 39, 48, 0.7);
+    padding-top: 18px;
+  }
+  .form .title {
+    text-align: center;
+    color: #fff;
+    font-size: 26.5px;
+  }
+}
+@media (max-width: 768px) and (max-width: 640px) {
+  .head .bg .form form #submit .img .text,
+  .submit .img .text {
+    font-size: 47px;
+  }
+}
+@media (max-width: 768px) and (max-width: 470px) {
+  .head .bg .form form #submit .img .text,
+  .submit .img .text {
+    font-size: 35px;
   }
 }
 @media (max-width: 768px) and (max-width: 480px) {

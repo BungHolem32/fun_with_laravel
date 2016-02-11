@@ -256,7 +256,9 @@ body{
   text-shadow: 0.2px 0.1px 0.5px #fff;
   box-shadow: none;
   font-weight: bold;
-  .background('button.png');
+  @media(min-width: @screen-sm){
+    .background('button.png');
+  }
   width: 240px;
   height: 92px;
   background-position: -2px 0px;
@@ -265,7 +267,9 @@ body{
 
     font-weight: 400;
     position: relative;
-    .left(-13px);
+    @media(min-width: @screen-sm){
+      .left(-13px);
+    }
     font-weight: bold;
     font-size: 28px;
   }
@@ -276,15 +280,17 @@ body{
     position: absolute;
     top: 34px;
     .right(30px);
-    .background('black-bt-arrow-@{right}.png');
+    @media(min-width: @screen-sm){
+      .background('black-bt-arrow-@{right}.png');
+    }
     height: 25px;
     width: 25px;
   }
   &:hover{
-    background-position: -2px -94px;
+    background-position: 0px -94px;
   }
   &:focus{
-    background-position: -2px -188px;
+    background-position: 0px -188px;
   }
 }
 .head{
@@ -481,7 +487,8 @@ h1, h2, h3, .form>.title{
 
 @media(max-width: @screen-sm) {
   .bg{
-    background: #000 !important;
+    background: url('/img/lp/binary-currencies/m-big-clean-noTrade.png') no-repeat !important;
+    background-size: cover !important;
   }
   form {
     &:after, &:before {
@@ -494,7 +501,7 @@ h1, h2, h3, .form>.title{
 }
 
 .main{
-  padding-top: 51px;
+  padding-top: 46px;
   background: #081822;
   .per{
     color: #081822;
@@ -504,14 +511,52 @@ h1, h2, h3, .form>.title{
       left: -27px;
     }
     .icon{
-      width: 35px;
-      .margin-right(13px);
       float: @left;
+      width: 35px;
+      .margin-right(8px);
       position: relative;
-      top: -15px;
-      &.reduce1{
-        max-width: 26px;
+      top: -17px;
+      &.ico1{
+        top: -20px;
       }
+      &.ico2{
+        top: -19px;
+      }
+    }
+    .icon{
+      width: 37px;
+      height: 39px;
+    }
+    .ico1{
+      background: url('/img/lp/binary-currencies/ico-1.png') no-repeat;
+      @media(max-width: @screen-sm){
+        background: url('/img/lp/binary-currencies/m-icon-1.png') no-repeat;
+        top: -13px !important;
+      }
+    }
+    .ico2{
+      background: url('/img/lp/binary-currencies/ico-2.png') no-repeat;
+      @media(max-width: @screen-sm){
+        background: url('/img/lp/binary-currencies/m-icon-2.png') no-repeat;
+        top: -15px !important;
+      }
+    }
+    .ico3{
+      background: url('/img/lp/binary-currencies/ico-3.png') no-repeat;
+      @media(max-width: @screen-sm){
+        background: url('/img/lp/binary-currencies/m-icon-3.png') no-repeat;
+        top: -14px !important;
+      }
+    }
+    .ico4{
+      background: url('/img/lp/binary-currencies/ico-4.png') no-repeat;
+      @media(max-width: @screen-sm){
+        background: url('/img/lp/binary-currencies/m-icon-4.png') no-repeat;
+        top: -14px !important;
+      }
+    }
+    .icon{
+      background-size: contain;
     }
     .title{
       font-family: Arial;
@@ -671,7 +716,9 @@ h1, h2, h3, .form>.title{
   padding-bottom: 32px;
   position: relative;
   top: 20px;
-  .left(-24px);
+  @media(min-width: @screen-sm){
+    .left(-24px);
+  }
 }
 
 @media(min-width: @screen-sm){
@@ -1027,19 +1074,19 @@ form.visible-hidden{
       width: 97%;
     }
   }
-  #submit, .submit {
-    .background('m-button-left.png');
+/*  #submit, .submit {
+    .background('m-button-@{left}.png');
     max-width: 630px;
     width: 100%;
     .margin-left-i(0%);
     background-position: 0 0 !important;
     background-size: contain;
     &:hover{
-      .background('m-button-left-h.png');
+      .background('m-button-@{left}-h.png');
       background-size: contain;
       //  margin-top: 2px;
     }
-  }
+  }*/
   .head .bg{
     background: #000 url('/img/lp/generalbinary/m-big-clean-noTrade.png') no-repeat;
     background-size: contain;
@@ -1337,6 +1384,58 @@ a.submit{
 
 /******* added ********************/
 @media(max-width: @screen-sm) {
+  .main{
+    position: relative;
+    &:before{
+      content: '';
+      background: #67a8ce;
+      position: absolute;
+      left:0;
+      top:0;
+      height: 3px;
+      width: 100%;
+    }
+  }
+  .main .per .text {
+    .padding-left(46px);
+    font-size: 16px;
+  }
+  .head .bg .form form #submit,.submit{
+    margin-top: 7px;
+    position: relative;
+    .left(0%);
+    padding: 0;
+    width: 100%;
+    height: auto;
+    background: transparent !important;
+    span{
+      display: none;
+      padding:0;
+    }
+    .img{
+      display: block !important;
+      position: relative;
+      img{
+        display: block;
+        max-width: 713px;
+        width: 99.8%;
+        .margin-left(0.2%);
+      }
+      .text{
+        position: absolute;
+        display: block;
+        width: 100%;
+        font-weight: 400;
+        font-size: 60px;
+        @media(max-width: 640px){
+          font-size: 47px;
+        }
+        @media(max-width: 470px){
+          font-size: 35px;
+        }
+      }
+    }
+  }
   h1,h2,h3,.h3{
     padding: 0 10px;
   }
@@ -1407,13 +1506,15 @@ a.submit{
     height: 55px;
   }
   .select{
-    padding: 0 10px;
+    margin-left: 2.5%;
+    width: 95.5%;
+    //left: 0.3%;
     select{
       height: 58px;
     }
     &:after{
       top: 7px;
-      .right(15px);
+      .right(6px);
       height: 45px;
       width: 44px;
       background-size: cover;
@@ -1421,6 +1522,26 @@ a.submit{
     &:hover:after{
       background-position: -46px 0px;
     }
+  }
+  h1{
+    font-size: 65px !important;
+    > span{
+      font-size: 32px !important;
+      color: #fff !important;
+      margin-top: 8px !important;
+    }
+  }
+  .form{
+    margin-top: 156px;
+    .fields {
+      background: rgba(23, 39, 48, 0.7);
+      padding-top: 18px;
+    }
+  }
+  .form .title{
+    text-align: center;
+    color: #fff;
+    font-size: 26.5px;
   }
 }
 
@@ -1439,3 +1560,4 @@ input.error{
   position: relative;
   top: 0px;
 }
+
