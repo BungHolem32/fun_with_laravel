@@ -1525,10 +1525,16 @@ a.submit{
   }
   h1{
     font-size: 65px !important;
+    @media(max-width: 400px){
+      font-size: 53px !important;
+    }
     > span{
       font-size: 32px !important;
       color: #fff !important;
       margin-top: 8px !important;
+      @media(max-width: 400px){
+        font-size: 25px !important;
+      }
     }
   }
   .form{
@@ -1542,6 +1548,12 @@ a.submit{
     text-align: center;
     color: #fff;
     font-size: 26.5px;
+    @media(max-width: 600px){
+      font-size: 26.5px;
+    }
+    @media(max-width: @screen-xs){
+    margin-bottom: 20px;
+    }
   }
 }
 
