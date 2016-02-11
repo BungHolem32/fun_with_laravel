@@ -927,7 +927,7 @@ form.visible-hidden{
 
 @media(min-width: @screen-sm){
   .form input#phone.error {
-    top: -2px !important;
+    top: 0px !important;
   }
   li a{
     position: relative;
@@ -1541,7 +1541,7 @@ a.submit{
     }
   }
   .form{
-    margin-top: 156px;
+    margin-top: 497px;
     .fields {
       background: rgba(23, 39, 48, 0.7);
       padding-top: 18px;
@@ -1550,12 +1550,37 @@ a.submit{
   .form .title{
     text-align: center;
     color: #fff;
-    font-size: 26.5px;
+    font-size: 26.5px !important;
     @media(max-width: 600px){
-      font-size: 26.5px;
+      font-size: 26.5px !important;
     }
     @media(max-width: @screen-xs){
     margin-bottom: 20px;
+    }
+  }
+  .head .bg{
+    position: relative;
+    &:after{
+      position: absolute;
+      content:'';
+      height: 330px;
+      width: 100%;
+      bottom: 0;
+      .left(0);
+
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#62a6b9+25,62a6b9+25,091a24+100 */
+      background: #62a6b9; /* Old browsers */
+      background: -moz-linear-gradient(top,  #62a6b9 25%, #62a6b9 25%, #091a24 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top,  #62a6b9 25%,#62a6b9 25%,#091a24 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom,  #62a6b9 25%,#62a6b9 25%,#091a24 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62a6b9', endColorstr='#091a24',GradientType=0 ); /* IE6-9 */
+    }
+  }
+  .main .per .title {
+    float: left;
+    width: 87%;
+    @media(max-width: 380px){
+      width: 83%;
     }
   }
 }
@@ -1571,7 +1596,7 @@ a.submit{
   margin: 0 auto 44px;
 }
 
-input.error{
+.form input.error{
   position: relative;
   top: 0px;
 }
