@@ -12,7 +12,7 @@ class SpotApi
     const ourApiPassword = '5648ac05c4849';
     */
     const ourApiUsername = 'Sitev2';
-    const ourApiPassword = '559152ad63f5c';
+    const ourApiPassword = '56c09fc848049';
     //const API_URL = "http://api-spotplatform.rboptions.com/api";
     const API_URL = "http://api-v2.rboptions.com/api";
 
