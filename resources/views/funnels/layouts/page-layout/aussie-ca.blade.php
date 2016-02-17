@@ -7,6 +7,7 @@
     <script src="/js/aussie/respond.min.js"></script>
     <![endif]-->
     <script type="text/javascript" src="/js/aussie/first.js"></script>
+    <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
 @append
 
 @section('bottom-scripts')
@@ -17,6 +18,72 @@
     </script>
     @com('funnel_scripts')
     <script src="/js/aussie/bootstrap.min.js"></script>
+
+    <script src="/js/fancybox/jquery.fancybox.js"></script>
+
+
+    <!-- need to move all this to appropriate .css .js files -->
+
+    <style>
+        #back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 9999;
+            width: 32px;
+            height: 32px;
+            text-align: center;
+            line-height: 30px;
+            background: #f5f5f5;
+            color: #444;
+            cursor: pointer;
+            border: 0;
+            border-radius: 2px;
+            text-decoration: none;
+            transition: opacity 0.2s ease-out;
+            opacity: 0;
+        }
+        #back-to-top:hover {
+            background: #e9ebec;
+        }
+        #back-to-top.show {
+            opacity: 1;
+        }
+        #content {
+            height: 2000px;
+        }
+
+    </style>
+
+    <script>
+        // need to put in js file all of this
+        $("a.fancybox").fancybox();
+
+        if ($('#back-to-top').length) {
+            var scrollTrigger = 100, // px
+                    backToTop = function () {
+                        var scrollTop = $(window).scrollTop();
+                        if (scrollTop > scrollTrigger) {
+                            $('#back-to-top').addClass('show');
+                        } else {
+                            $('#back-to-top').removeClass('show');
+                        }
+                    };
+            backToTop();
+            $(window).on('scroll', function () {
+                backToTop();
+            });
+            $('#back-to-top').on('click', function (e) {
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 700);
+            });
+        }
+    </script>
+
+    <!-- until here -->
+
     {!! $page->appendAsset(url('/js/firstPage.js')) !!}
 @append
 
@@ -60,7 +127,7 @@
                     <p style="font-family: 'Cabin', sans-serif; font-size:46px; color:#1e387b">START <strong>NOW</strong></p>
                     <br>
                     <p style="font-family: 'Cabin', sans-serif;">Enter your email below to gain instant <br>
-                        free access to the Aussie Method system</p>
+                        free access to the Maple Method system</p>
                     <br>
                     {!! Form::open(['url' => url('postEmailForm').'?'.$_SERVER["QUERY_STRING"], 'method'=>'post','align'=>'center']) !!}
                     <input type="hidden" name="pageId" value="{{ $page->id }}">
@@ -93,7 +160,7 @@
                                     <a href="#success" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Success Stories</a>
                                 </Center></td>
                             <td><Center>
-                                    <a href="#howitworks" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">How It Works</a>
+                                    <a href="#howitworks" style="color:#cedbff; font-family: 'Montserrat', sans-serif; display: none;">How It Works</a>
                                 </Center></td>
                             <td><Center>
                                     <a href="#results" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Live Results</a>
@@ -102,7 +169,7 @@
                                     <a href="#faq" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">FAQs</a>
                                 </Center></td>
                             <td><Center>
-                                    <a href="#startnow" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Get Started</a>
+                                    <a href="#startnow" style="color:#cedbff; font-family: 'Montserrat', sans-serif;  display: none;">Get Started</a>
                                 </Center></td>
                         </tr>
                     </table>
@@ -140,25 +207,25 @@
                                         <script>
                                             var nm = ["Harvey","Christopher","David","Morgan","Jason","Travis","Charlie","Robert","Henry","Kieran","Charles","Joseph","Ellis","Billy","Andrew","Johnny","George","Sebastian","Cameron","Tory","Joel","Adam","Bryce","Dwayne","Vincent","Leon","Aidan","Aidan","David","Jacob","Ben","Alex","Enrique","Dennis","Nathan","Charles","Robert","Alfie","Dominic","Leon","John","Daniel","Charles","Romeo","Noah","Anthony","James","Mohammed","Louis","Joseph","Ellis","Kai","Jay","Noah","Lewis","Anthony","Jamie","Elliot","Ronald","Troy","Reece","Richard","Joel","Callum","Jack","Richard","Nicholas","Cameron","Harry","William","Lyle","Frank","Norman","Anthony","Morgan","Geoffrey","Alejandro","Zak","Anthony","Kieran","Ross","Paul","Sam","Richard","Michael","Roger","Charles","Reece","Brandon","Robert","Luca","Harrison","Ryan","Taylor","Frank","Larry","Billy","Sam","Finlay","Zara","Georgia","Sylvie","Kiera","Margaret","Patria","Ava","Diane","Skye","Helen","Jennifer","Isabella","Faith","Jessica","Penny","Rebecca","Summer","Tamara","Tamika","Magdalene","Wendy","Genevieve","Stephanie","Erin","Abby","Ann","Abbie","Leigh","Shanna","Tilly","Laura","Mary","Paula","Isabel","Ella","Tatiana","Mary","Tegan","Cynthia","Abigail","Lauren","Laura","Katherine","Naomi","Barbara","Melisa","Pamela","Leeann","Jodie","Terri","Caitlin","Roberta","Daisy","Molly","Frieda","Louise","Elizabeth","Stella","Billie","Gracie","Sienna","Katie","Mildred","Kayleigh","Christy","Kiera","Yun","Courtney","Tegan","Sheila","Ray","Lydia","Mamie","Keira","Matilda","Sonya","Ava","Cerys","Eleanor","Grace","Jodie","Sharon","Elva","Eleanor","Freya","Bessie","Sofia","Amelie","Brenda","Poppy","Tegan","Sienna","Leah","Antoinette","Zoe"];
                                             var data = [
-                                                "Wow this might sound cheesy but I LOVE you guys <b class='p-nickname'>Aussie Method</b> the ONLY system u need for making money online makemoney Aussie Method awesome",
-                                                "How long until the money hits my account from my broker account? <b class='p-nickname'>Aussie Method</b> Just withdrawn 5 figures 5figureprofits profits awesome",
-                                                "This is like printing money...For Real Take it off the market <b class='p-nickname'>Aussie Method</b> dont want others getting their hands on this selfish",
-                                                "Celebrating another profitable day using the <b class='p-nickname'>Aussie Method</b> not had a losing day yet",
-                                                "Brilliant stuff, u guys are the bomb <b class='p-nickname'>Aussie Method</b> First trade today and just made $389.11 profit moreprofits Aussie Method",
-                                                "Awesome system, made over $2000 in my first 2 hours using the <b class='p-nickname'>Aussie Method</b> system",
-                                                "Thank You Thank You Thank You <b class='p-nickname'>Aussie Method</b>",
-                                                "Holy crap, this is amazing, I've made $7,891.32 on my very first day using the verified trader system <b class='p-nickname'>Aussie Method</b> system binary amazing",
-                                                "<b class='p-nickname'>Aussie Method</b> Sup guys, super sick system u got here",
-                                                "Deposited $250 <b class='p-nickname'>Aussie Method</b> with the verified trader system now my account sits at over $30k in just a week Lovethis millionairestatus",
-                                                "At last a legit binary system <b class='p-nickname'>Aussie Method</b>",
-                                                "Can't thank you guys enough <b class='p-nickname'>Aussie Method</b> been scammed so many times before but this really is the real deal",
-                                                "Thanks to <b class='p-nickname'>Aussie Method</b> for finally making a binary system that really works amazing makemoney",
-                                                "<b class='p-nickname'>Aussie Method</b> Already up over $3800 and the day is still young",
-                                                "Just made $868.44 in a single trade <b class='p-nickname'>Aussie Method</b>",
-                                                "<b class='p-nickname'>Aussie Method</b> Just made $918.88 in 34 minutes",
-                                                "what is happening?? My account now sits at $23,891.44 I only deposited $300 4 days ago, this is insane <b class='p-nickname'>Aussie Method</b>",
-                                                "Thanks support for solving my small problem, looking forward to making lots of cash with this cash thanks Aussie Method support <b class='p-nickname'>Aussie Method</b>",
-                                                "WTF.... Thank You This thing is awesome <b class='p-nickname'>Aussie Method</b>"];
+                                                "Wow this might sound cheesy but I LOVE you guys <b class='p-nickname'>Maple Method</b> the ONLY system u need for making money online makemoney Maple Method awesome",
+                                                "How long until the money hits my account from my broker account? <b class='p-nickname'>Maple Method</b> Just withdrawn 5 figures 5figureprofits profits awesome",
+                                                "This is like printing money...For Real Take it off the market <b class='p-nickname'>Maple Method</b> dont want others getting their hands on this selfish",
+                                                "Celebrating another profitable day using the <b class='p-nickname'>Maple Method</b> not had a losing day yet",
+                                                "Brilliant stuff, u guys are the bomb <b class='p-nickname'>Maple Method</b> First trade today and just made $389.11 profit moreprofits Maple Method",
+                                                "Awesome system, made over $2000 in my first 2 hours using the <b class='p-nickname'>Maple Method</b> system",
+                                                "Thank You Thank You Thank You <b class='p-nickname'>Maple Method</b>",
+                                                "Holy crap, this is amazing, I've made $7,891.32 on my very first day using the verified trader system <b class='p-nickname'>Maple Method</b> system binary amazing",
+                                                "<b class='p-nickname'>Maple Method</b> Sup guys, super sick system u got here",
+                                                "Deposited $250 <b class='p-nickname'>Maple Method</b> with the verified trader system now my account sits at over $30k in just a week Lovethis millionairestatus",
+                                                "At last a legit binary system <b class='p-nickname'>Maple Method</b>",
+                                                "Can't thank you guys enough <b class='p-nickname'>Maple Method</b> been scammed so many times before but this really is the real deal",
+                                                "Thanks to <b class='p-nickname'>Maple Method</b> for finally making a binary system that really works amazing makemoney",
+                                                "<b class='p-nickname'>Maple Method</b> Already up over $3800 and the day is still young",
+                                                "Just made $868.44 in a single trade <b class='p-nickname'>Maple Method</b>",
+                                                "<b class='p-nickname'>Maple Method</b> Just made $918.88 in 34 minutes",
+                                                "what is happening?? My account now sits at $23,891.44 I only deposited $300 4 days ago, this is insane <b class='p-nickname'>Maple Method</b>",
+                                                "Thanks support for solving my small problem, looking forward to making lots of cash with this cash thanks Maple Method support <b class='p-nickname'>Maple Method</b>",
+                                                "WTF.... Thank You This thing is awesome <b class='p-nickname'>Maple Method</b>"];
 
                                             var images = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg","12.jpg","13.jpg","14.jpg","15.jpg","16.jpg","17.jpg","18.jpg","19.jpg","20.jpg","21.jpg","22.jpg","23.jpg","24.jpg","25.jpg","26.jpg","27.jpg","28.jpg","29.jpg","30.jpg","31.jpg","32.jpg","33.jpg","34.jpg","35.jpg","36.jpg","37.jpg","38.jpg","39.jpg","40.jpg","41.jpg","42.jpg","43.jpg","44.jpg","45.jpg","46.jpg","47.jpg","48.jpg","49.jpg","50.jpg","51.jpg","52.jpg","53.jpg","54.jpg","55.jpg","56.jpg","57.jpg","58.jpg","59.jpg","60.jpg","61.jpg","62.jpg","63.jpg","64.jpg","65.jpg","66.jpg","67.jpg","68.jpg","69.jpg","70.jpg","71.jpg","72.jpg","73.jpg","74.jpg","75.jpg","76.jpg","77.jpg","78.jpg","79.jpg","80.jpg","81.jpg","82.jpg","83.jpg","84.jpg","85.jpg","86.jpg","87.jpg","88.jpg","89.jpg","90.jpg","91.jpg","92.jpg","93.jpg","94.jpg","95.jpg","96.jpg","97.jpg","98.jpg","99.jpg","1(1).jpg","2(1).jpg","3(1).jpg","4(1).jpg","5(1).jpg","6(1).jpg","7(1).jpg","8(1).jpg","9(1).jpg","10(1).jpg","11(1).jpg","12(1).jpg","13(1).jpg","14(1).jpg","15(1).jpg","16(1).jpg","17(1).jpg","18(1).jpg","19(1).jpg","20(1).jpg","21(1).jpg","22(1).jpg","23(1).jpg","24(1).jpg","25(1).jpg","26(1).jpg","27(1).jpg","28(1).jpg","29(1).jpg","30(1).jpg","31(1).jpg","32(1).jpg","33(1).jpg","34(1).jpg","35(1).jpg","36(1).jpg","37(1).jpg","38(1).jpg","39(1).jpg","40(1).jpg","41(1).jpg","42(1).jpg","43(1).jpg","44(1).jpg","45(1).jpg","46(1).jpg","47(1).jpg","48(1).jpg","49(1).jpg","50(1).jpg","51(1).jpg","52(1).jpg","53(1).jpg","54(1).jpg","55(1).jpg","56(1).jpg","57(1).jpg","58(1).jpg","59(1).jpg","60(1).jpg","61(1).jpg","62(1).jpg","63(1).jpg","64(1).jpg","65(1).jpg","66(1).jpg","67(1).jpg","68(1).jpg","69(1).jpg","70(1).jpg","71(1).jpg","72(1).jpg","73(1).jpg","74(1).jpg","75(1).jpg","76(1).jpg","77(1).jpg","78(1).jpg","79(1).jpg","80(1).jpg","81(1).jpg","82(1).jpg","83(1).jpg","84(1).jpg","85(1).jpg","86(1).jpg","87(1).jpg","88(1).jpg","89(1).jpg","90(1).jpg","91(1).jpg","92(1).jpg","93(1).jpg","94(1).jpg","95(1).jpg"];
 
@@ -217,24 +284,24 @@
                                         <script>
                                             var nm = ["Harvey","Christopher","David","Morgan","Jason","Travis","Charlie","Robert","Henry","Kieran","Charles","Joseph","Ellis","Billy","Andrew","Johnny","George","Sebastian","Cameron","Tory","Joel","Adam","Bryce","Dwayne","Vincent","Leon","Aidan","Aidan","David","Jacob","Ben","Alex","Enrique","Dennis","Nathan","Charles","Robert","Alfie","Dominic","Leon","John","Daniel","Charles","Romeo","Noah","Anthony","James","Mohammed","Louis","Joseph","Ellis","Kai","Jay","Noah","Lewis","Anthony","Jamie","Elliot","Ronald","Troy","Reece","Richard","Joel","Callum","Jack","Richard","Nicholas","Cameron","Harry","William","Lyle","Frank","Norman","Anthony","Morgan","Geoffrey","Alejandro","Zak","Anthony","Kieran","Ross","Paul","Sam","Richard","Michael","Roger","Charles","Reece","Brandon","Robert","Luca","Harrison","Ryan","Taylor","Frank","Larry","Billy","Sam","Finlay","Zara","Georgia","Sylvie","Kiera","Margaret","Patria","Ava","Diane","Skye","Helen","Jennifer","Isabella","Faith","Jessica","Penny","Rebecca","Summer","Tamara","Tamika","Magdalene","Wendy","Genevieve","Stephanie","Erin","Abby","Ann","Abbie","Leigh","Shanna","Tilly","Laura","Mary","Paula","Isabel","Ella","Tatiana","Mary","Tegan","Cynthia","Abigail","Lauren","Laura","Katherine","Naomi","Barbara","Melisa","Pamela","Leeann","Jodie","Terri","Caitlin","Roberta","Daisy","Molly","Frieda","Louise","Elizabeth","Stella","Billie","Gracie","Sienna","Katie","Mildred","Kayleigh","Christy","Kiera","Yun","Courtney","Tegan","Sheila","Ray","Lydia","Mamie","Keira","Matilda","Sonya","Ava","Cerys","Eleanor","Grace","Jodie","Sharon","Elva","Eleanor","Freya","Bessie","Sofia","Amelie","Brenda","Poppy","Tegan","Sienna","Leah","Antoinette","Zoe"];
                                             var data = [
-                                                "Wow this might sound cheesy but I LOVE you guys @<b class='p-nickname'>aussiemethod</b> the ONLY system u need for making money online #makemoney #aussiemethod #awesome",
-                                                "How long until the money hits my account from my broker account? @<b class='p-nickname'>aussiemethod</b> Just withdrawn 5 figures #5figureprofits #profits #awesome",
-                                                "This is like printing money...For Real Take it off the market @<b class='p-nickname'>aussiemethod</b> dont want others getting their hands on this #selfish",
-                                                "Celebrating another profitable day using the @<b class='p-nickname'>aussiemethod</b> not had a losing day yet",
-                                                "Brilliant stuff, u guys are the bomb @<b class='p-nickname'>aussiemethod</b> First trade today and just made $389.11 profit #moreprofits #aussiemethod",
-                                                "Awesome system, made over $2000 in my first 2 hours using the @<b class='p-nickname'>aussiemethod</b> system",
-                                                "Thank You Thank You Thank You @<b class='p-nickname'>aussiemethod</b>",
-                                                "Holy crap, this is amazing, I've made $7,891.32 on my very first day using the verified trader system @<b class='p-nickname'>aussiemethod</b> #system #binary #amazing",
-                                                "@<b class='p-nickname'>aussiemethod</b> Sup guys, super sick system u got here",
-                                                "Deposited $250 @<b class='p-nickname'>aussiemethod</b> with the verified trader system now my account sits at over $30k in just a week #Lovethis #millionairestatus",
-                                                "At last a legit binary system @<b class='p-nickname'>aussiemethod</b>",
-                                                "Can't thank you guys enough @<b class='p-nickname'>aussiemethod</b> been scammed so many times before but this really is the real deal",
-                                                "Thanks to @<b class='p-nickname'>aussiemethod</b> for finally making a binary system that really works #amazing #makemoney",
-                                                "@<b class='p-nickname'>aussiemethod</b> Already up over $3800 and the day is still young",
-                                                "Just made $868.44 in a single trade @<b class='p-nickname'>aussiemethod</b>",
-                                                "@<b class='p-nickname'>aussiemethod</b> Just made $918.88 in 34 minutes",
-                                                "what is happening?? My account now sits at $23,891.44 I only deposited $300 4 days ago, this is insane @<b class='p-nickname'>aussiemethod</b>",
-                                                "Thanks support for solving my small problem, looking forward to making lots of cash with this #cash #thanks #aussiemethod support @<b class='p-nickname'>aussiemethod</b>",
+                                                "Wow this might sound cheesy but I LOVE you guys @<b class='p-nickname'>Maplemethod</b> the ONLY system u need for making money online #makemoney #Maplemethod #awesome",
+                                                "How long until the money hits my account from my broker account? @<b class='p-nickname'>Maplemethod</b> Just withdrawn 5 figures #5figureprofits #profits #awesome",
+                                                "This is like printing money...For Real Take it off the market @<b class='p-nickname'>Maplemethod</b> dont want others getting their hands on this #selfish",
+                                                "Celebrating another profitable day using the @<b class='p-nickname'>Maplemethod</b> not had a losing day yet",
+                                                "Brilliant stuff, u guys are the bomb @<b class='p-nickname'>Maplemethod</b> First trade today and just made $389.11 profit #moreprofits #Maplemethod",
+                                                "Awesome system, made over $2000 in my first 2 hours using the @<b class='p-nickname'>Maplemethod</b> system",
+                                                "Thank You Thank You Thank You @<b class='p-nickname'>Maplemethod</b>",
+                                                "Holy crap, this is amazing, I've made $7,891.32 on my very first day using the verified trader system @<b class='p-nickname'>Maplemethod</b> #system #binary #amazing",
+                                                "@<b class='p-nickname'>Maplemethod</b> Sup guys, super sick system u got here",
+                                                "Deposited $250 @<b class='p-nickname'>Maplemethod</b> with the verified trader system now my account sits at over $30k in just a week #Lovethis #millionairestatus",
+                                                "At last a legit binary system @<b class='p-nickname'>Maplemethod</b>",
+                                                "Can't thank you guys enough @<b class='p-nickname'>Maplemethod</b> been scammed so many times before but this really is the real deal",
+                                                "Thanks to @<b class='p-nickname'>Maplemethod</b> for finally making a binary system that really works #amazing #makemoney",
+                                                "@<b class='p-nickname'>Maplemethod</b> Already up over $3800 and the day is still young",
+                                                "Just made $868.44 in a single trade @<b class='p-nickname'>Maplemethod</b>",
+                                                "@<b class='p-nickname'>Maplemethod</b> Just made $918.88 in 34 minutes",
+                                                "what is happening?? My account now sits at $23,891.44 I only deposited $300 4 days ago, this is insane @<b class='p-nickname'>Maplemethod</b>",
+                                                "Thanks support for solving my small problem, looking forward to making lots of cash with this #cash #thanks #Maplemethod support @<b class='p-nickname'>Maplemethod</b>",
                                                 "WTF.... Thank You This thing is awesome @<b class='p-nickname'>aussiemethod</b>"];
 
                                             var images = ["27(1).jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg","12.jpg","13.jpg","14.jpg","15.jpg","16.jpg","17.jpg","18.jpg","19.jpg","20.jpg","21.jpg","22.jpg","23.jpg","24.jpg","25.jpg","26.jpg","27.jpg","28.jpg","29.jpg","30.jpg","31.jpg","32.jpg","33.jpg","34.jpg","35.jpg","36.jpg","37.jpg","38.jpg","39.jpg","40.jpg","41.jpg","42.jpg","43.jpg","44.jpg","45.jpg","46.jpg","47.jpg","48.jpg","49.jpg","50.jpg","51.jpg","52.jpg","53.jpg","54.jpg","55.jpg","56.jpg","57.jpg","58.jpg","59.jpg","60.jpg","61.jpg","62.jpg","63.jpg","64.jpg","65.jpg","66.jpg","67.jpg","68.jpg","69.jpg","70.jpg","71.jpg","72.jpg","73.jpg","74.jpg","75.jpg","76.jpg","77.jpg","78.jpg","79.jpg","80.jpg","81.jpg","82.jpg","83.jpg","84.jpg","85.jpg","86.jpg","87.jpg","88.jpg","89.jpg","90.jpg","91.jpg","92.jpg","93.jpg","94.jpg","95.jpg","96.jpg","97.jpg","98.jpg","99.jpg","1(1).jpg","2(1).jpg","3(1).jpg","4(1).jpg","5(1).jpg","6(1).jpg","7(1).jpg","8(1).jpg","9(1).jpg","10(1).jpg","11(1).jpg","12(1).jpg","13(1).jpg","14(1).jpg","15(1).jpg","16(1).jpg","17(1).jpg","18(1).jpg","19(1).jpg","20(1).jpg","21(1).jpg","22(1).jpg","23(1).jpg","24(1).jpg","25(1).jpg","26(1).jpg","27(1).jpg","28(1).jpg","29(1).jpg","30(1).jpg","31(1).jpg","32(1).jpg","33(1).jpg","34(1).jpg","35(1).jpg","36(1).jpg","37(1).jpg","38(1).jpg","39(1).jpg","40(1).jpg","41(1).jpg","42(1).jpg","43(1).jpg","44(1).jpg","45(1).jpg","46(1).jpg","47(1).jpg","48(1).jpg","49(1).jpg","50(1).jpg","51(1).jpg","52(1).jpg","53(1).jpg","54(1).jpg","55(1).jpg","56(1).jpg","57(1).jpg","58(1).jpg","59(1).jpg","60(1).jpg","61(1).jpg","62(1).jpg","63(1).jpg","64(1).jpg","65(1).jpg","66(1).jpg","67(1).jpg","68(1).jpg","69(1).jpg","70(1).jpg","71(1).jpg","72(1).jpg","73(1).jpg","74(1).jpg","75(1).jpg","76(1).jpg","77(1).jpg","78(1).jpg","79(1).jpg","80(1).jpg","81(1).jpg","82(1).jpg","83(1).jpg","84(1).jpg","85(1).jpg","86(1).jpg","87(1).jpg","88(1).jpg","89(1).jpg","90(1).jpg","91(1).jpg","92(1).jpg","93(1).jpg","94(1).jpg","95(1).jpg"];
@@ -300,7 +367,7 @@
                             <table class="table table-striped table-bordered shadowed table-hover" id="positionsHistoryTable" style="background-color:#FFF;" bgcolor="#FFFFFF" width="820px">
                                 <thead>
                                 <tr>
-                                    <th background="/img/aussie-ca/topb.png"><font style="font-family: 'Cabin', sans-serif;; color:#000 !important;"><center>Aussie Method Member</center></font></th>
+                                    <th background="/img/aussie-ca/topb.png"><font style="font-family: 'Cabin', sans-serif;; color:#000 !important;"><center>Maple Method Member</center></font></th>
                                     <th background="/img/aussie-ca/topb.png"><font style="font-family: 'Cabin', sans-serif;; color:#000 !important;"><center>Profit</center></font></th>
                                     <th background="/img/aussie-ca/topb.png"><font style="font-family: 'Cabin', sans-serif;; color:#000 !important;"><center>Trade Time</center></font></th>
                                     <th background="/img/aussie-ca/topb.png"><font style="font-family: 'Cabin', sans-serif;; color:#000 !important;"><center>
@@ -327,10 +394,10 @@
         </center>
         <div class="FAQ-pan">
             <div class="q-section"> <img alt="" src="/img/aussie-ca/plus-icon.png">
-                <p>What is the Aussie Method?</p>
+                <p>What is the Maple Method?</p>
             </div>
             <div class="a-section" style="">
-                <p>The Aussie Method is a 100% FREE software that will trade on the binary options markets with just 1 click! It's fully automated and places the winning trades for you!</p>
+                <p>The Maple Method is a 100% FREE software that will trade on the binary options markets with just 1 click! It's fully automated and places the winning trades for you!</p>
             </div>
             <div class="q-section"> <img alt="" src="/img/aussie-ca/plus-icon.png">
                 <p>How much money can I make  with this software?</p>
@@ -348,7 +415,7 @@
                 <p>Do I need to use my credit card when I signup?</p>
             </div>
             <div class="a-section" style="">
-                <p><u><strong>NO WAY</strong></u>. The Aussie Method App is 100% FREE. You will NOT be asked for your credit card or paypal or bank information when you download the Aussie Method System!</p>
+                <p><u><strong>NO WAY</strong></u>. The Maple Method App is 100% FREE. You will NOT be asked for your credit card or paypal or bank information when you download the Maple Method System!</p>
                 <p>&nbsp;</p>
                 <p>Once you are in the members area, we will recommend a binary options broker that you can exploit. For this, you'll need funds to deposit in order to start making profits. This is YOUR money that you are just depositing to trade with, and you can withdraw it at any time!</p>
             </div>
@@ -359,7 +426,7 @@
                 <p>Yes! It is a web based application which means it can be used on Windows, Mac or Linux based systems! You just need a web browser.</p>
             </div>
             <div class="q-section"> <img alt="" src="/img/aussie-ca/plus-icon.png">
-                <p>I don't have much free time - Is the Aussie Method really automated?</p>
+                <p>I don't have much free time - Is the Maple Method really automated?</p>
             </div>
             <div class="a-section" style="">
                 <p><strong>YES!</strong> You simply click play in the software and it will trade for you! You can walk away from your computer, and enjoy your profits! You don't have to be anywhere near the software for it to work for you and make you thousands per day! </p>
@@ -387,14 +454,21 @@
                         <tr>
                             <!-- <td><Center>What is the Aussie Method?</Center></td>-->
                             <td><Center>
-                                    Copyright 2015 Aussie Method. All Right Reserved.
+                                    Copyright 2015 Maple Method. All Right Reserved.
                                 </Center></td>
-                            <td><Center>
-                                    @include('funnels.layouts._partials._link', ['page' => \App\Page::find(73), 'text'=>'Privacy', 'target'=>'_blank'])
-                                    | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(73), 'target'=>'_blank'])
-                                    | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(73), 'text'=>'Disclaimer', 'target'=>'_blank'])
-                                    | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(73), 'text'=>'Support', 'target'=>'_blank'])
-                                </Center></td>
+                            <td>
+                                <Center>
+                                    <?php
+                                    /*
+                                  @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Privacy', 'target'=>'_blank'])
+                                | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'target'=>'_blank'])
+                                | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Disclaimer', 'target'=>'_blank'])
+                                | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Support', 'target'=>'_blank'])
+                                     */
+                                    ?>
+                                    @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Terms', 'target'=>'_blank'])
+                                </Center>
+                            </td>
                         </tr>
                     </table>
                 </center></td>
@@ -402,5 +476,7 @@
     </table></td>
     </tr>
     </table>
+
+    <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
 
 @endsection

@@ -61,7 +61,7 @@
                 beforeSend: function(){
                     console.log('loading...');
                     $(form).after(loadingMsg);
-                    $(form).addClass('visible-hidden').find('input').addClass('visible-hidden');
+                    $(form).find('input').addClass('visible-hidden');
                     if($(form).find('button').length)
                         $(form).find('button').addClass('visible-hidden');
                     $(form).find('input#submit').addClass('nofocus');
@@ -70,17 +70,15 @@
                 },
                 success: function(res) {
                     if(res.err === 0){
-                        dataLayer.push({ 'event': 'form_lead' });
                         $('div#thankyou').show();
                         setTimeout(function(){
                             window.location = res.destination;
-                        }, 2000);
+                        }, 4000);
                     }
                     else{
-                        dataLayer.push({ 'event': 'form_error' });
                         alert(res.errs.error);
                         $('div.loading').remove();
-                        $(form).removeClass('visible-hidden').find('input').removeClass('visible-hidden');
+                        $(form).find('input').removeClass('visible-hidden');
                         if($(form).find('button').length)
                             $(form).find('button').removeClass('visible-hidden');
                         if($(form).find('.g-recaptcha').length)
