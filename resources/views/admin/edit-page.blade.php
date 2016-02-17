@@ -16,6 +16,10 @@
                 {!! Form::label('title', 'System Title:') !!}
                 {!! Form::text('title', $page['title'], ['name'=>'mongo[title]', 'class'=>'form-control']) !!}
             </div>
+            <div class="form-group">
+                {!! Form::label('domain', 'Accessible from domain:') !!}
+                {!! Form::text('domain', $page->domain, ['name'=>'mongo[domain]', 'class'=>'form-control']) !!}
+            </div>
             @yield('edit')
             <div class="form-group">
                 {!! Form::submit('save page', ['class'=>'btn btn-primary']) !!}
