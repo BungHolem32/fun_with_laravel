@@ -5,6 +5,9 @@
 // being used with all langs without making more routes.
 \Request::local()->id = '4';
 
+
+// $btn is suppose to be btn image -> hagai did somthing with JS to load the image ?
+// something with languages support flips between images  not sure about this $btn.
 if(!isset($btn))
     $btn = '';
 if(!isset($show_recaptcha))

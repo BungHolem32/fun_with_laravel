@@ -194,7 +194,7 @@ label.error {
     display: inline-block;
     .margin-right(10px);
   }
-  @media(max-width: 1265px) {
+  @media(max-width: 768px) {
     .fields {
       max-width: 100%;
       min-width: 300px;
@@ -400,7 +400,7 @@ body{
   }
 }
 
-@media(max-width: 1265px){
+@media(max-width: 768px){
   .bg{
     background: #000 url('/img/lp/generalbinary/big-pic.jpg');
     background-position: 50% 111px;
@@ -443,12 +443,6 @@ body{
 }
 
 @media(max-width: @screen-md) {
-  .bg{
-    @media(min-width: @screen-sm){
-      background: #000 !important;
-    }
-
-  }
   form {
     &:after, &:before {
       display: none;
@@ -1239,5 +1233,22 @@ a.submit{
   }
   .head .texts{
     height: 55px;
+  }
+}
+
+@media(max-width: 1265px) and (min-width: @screen-sm){
+  body{
+    width: 1265px;
+  }
+}
+
+@media(min-width: @screen-sm){
+  @-moz-document url-prefix() {
+    .phoneFields{
+      top: -20px;
+    }
+    #submit, .submit {
+      top: -18px;
+    }
   }
 }

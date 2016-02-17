@@ -9,6 +9,9 @@
             $tempLink = $page->onExitPopup->link;
             $tempMsg = $page->onExitPopup->msg;
         }
+
+        // if there is msg but there is no link then make
+        // the link in the same page.
         else if(strlen($page->onExitPopup->msg) != 0){
             $tempLink = '/'.$page->fullSlug();
             $tempMsg = $page->onExitPopup->msg;

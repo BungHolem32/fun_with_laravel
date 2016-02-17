@@ -28,7 +28,8 @@ class FormController extends Controller {
         $ip = Request::ip();
         //$ip=($_SERVER["HTTP_X_FORWARDED_FOR"] ? $_SERVER["HTTP_X_FORWARDED_FOR"] :
         //$_SERVER["REMOTE_ADDR"]);
-        $location = file_get_contents('http://api-v2.rboptions.com/locator/'.$ip);
+        //$location = file_get_contents('http://api-v2.rboptions.com/locator/'.$ip);
+        $location = file_get_contents('http://locator.rboptions.com/locator/'.$ip);
         echo $location;
     }
 
@@ -98,7 +99,8 @@ class FormController extends Controller {
         // get the Mixpanel class instance, replace with your project token
         $ip = Request::ip();
         $pageTitle = \App\Page::find($pageId)->title->get();
-        $countryISO = json_decode(file_get_contents('http://api-v2.rboptions.com/locator/'.$ip),true)['iso'];
+        //$countryISO = json_decode(file_get_contents('http://api-v2.rboptions.com/locator/'.$ip),true)['iso'];
+        $countryISO = json_decode(file_get_contents('http://locator.rboptions.com/locator/'.$ip),true)['iso'];
 
         $mp = \Mixpanel::getInstance(self::mixPanelProjectToken);
         $mp->people->set(crc32($email), array(
