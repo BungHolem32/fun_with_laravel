@@ -3,10 +3,12 @@
     <!-- Startup CSS -->
     {!! $page->appendAsset(url('/css/aussie/style.css')) !!}
     <!--[if lt IE 9]>
+    <!--[if lt IE 9]>
     <script src="/js/aussie/html5shiv.js"></script>
     <script src="/js/aussie/respond.min.js"></script>
     <![endif]-->
     <script type="text/javascript" src="/js/aussie/first.js"></script>
+    <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
 @append
 
 @section('bottom-scripts')
@@ -17,7 +19,74 @@
     </script>
     @com('funnel_scripts')
     <script src="/js/aussie/bootstrap.min.js"></script>
+    <script src="/js/fancybox/jquery.fancybox.js"></script>
+
+
+    <!-- need to move all this to appropriate .css .js files -->
+
+    <style>
+        #back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 9999;
+            width: 32px;
+            height: 32px;
+            text-align: center;
+            line-height: 30px;
+            background: #f5f5f5;
+            color: #444;
+            cursor: pointer;
+            border: 0;
+            border-radius: 2px;
+            text-decoration: none;
+            transition: opacity 0.2s ease-out;
+            opacity: 0;
+        }
+        #back-to-top:hover {
+            background: #e9ebec;
+        }
+        #back-to-top.show {
+            opacity: 1;
+        }
+        #content {
+            height: 2000px;
+        }
+
+    </style>
+
+    <script>
+        // need to put in js file all of this
+        $("a.fancybox").fancybox();
+
+        if ($('#back-to-top').length) {
+            var scrollTrigger = 100, // px
+                    backToTop = function () {
+                        var scrollTop = $(window).scrollTop();
+                        if (scrollTop > scrollTrigger) {
+                            $('#back-to-top').addClass('show');
+                        } else {
+                            $('#back-to-top').removeClass('show');
+                        }
+                    };
+            backToTop();
+            $(window).on('scroll', function () {
+                backToTop();
+            });
+            $('#back-to-top').on('click', function (e) {
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 700);
+            });
+        }
+    </script>
+
+    <!-- until here -->
+
     {!! $page->appendAsset(url('/js/firstPage.js')) !!}
+
+
 @append
 
 
@@ -93,7 +162,7 @@
                         <a href="#success" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Success Stories</a>
                     </Center></td>
                     <td><Center>
-                        <a href="#howitworks" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">How It Works</a>
+                        <a href="#howitworks" style="color:#cedbff; font-family: 'Montserrat', sans-serif; display: none;">How It Works</a>
                     </Center></td>
                     <td><Center>
                         <a href="#results" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Live Results</a>
@@ -102,7 +171,7 @@
                         <a href="#faq" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">FAQs</a>
                     </Center></td>
                     <td><Center>
-                        <a href="#startnow" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Get Started</a>
+                        <a href="#startnow" style="color:#cedbff; font-family: 'Montserrat', sans-serif; display: none;">Get Started</a>
                     </Center></td>
                 </tr>
             </table>
@@ -404,12 +473,19 @@
                     <td><Center>
                         Copyright 2015 Aussie Method. All Right Reserved.
                     </Center></td>
-                    <td><Center>
-                            @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Privacy', 'target'=>'_blank'])
+                    <td>
+                        <Center>
+                            <?php
+                                /*
+                              @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Privacy', 'target'=>'_blank'])
                             | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'target'=>'_blank'])
                             | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Disclaimer', 'target'=>'_blank'])
                             | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Support', 'target'=>'_blank'])
-                    </Center></td>
+                                 */
+                            ?>
+                                @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Terms', 'target'=>'_blank'])
+                        </Center>
+                    </td>
                 </tr>
             </table>
         </center></td>
@@ -417,5 +493,7 @@
 </table></td>
 </tr>
 </table>
+
+<a href="#" id="back-to-top" title="Back to top">&uarr;</a>
 
 @endsection
