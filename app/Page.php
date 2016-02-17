@@ -101,13 +101,15 @@ class Page extends Entity implements PageInterface
 
 
         $page_id = $res[0]->page_id;
-        $route_id = $res[0]->route_id;
-
         $page = self::find($page_id);
-        $page->controller = $res[0]->controller;
-        $page->route_id = $route_id;
+        $page->setRoute($res[0]);
 
         return $page;
+    }
+
+    public function setRoute($route){
+        $this->route_id = $route->route_id;
+        $this->controller = $route->controller;
     }
 
     public static function getPages($lang_id, $slug){
@@ -251,6 +253,9 @@ class Page extends Entity implements PageInterface
         return implode('/', array_reverse($u));
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function routes()
     {
         return $this->hasMany('App\route');
