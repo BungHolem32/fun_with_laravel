@@ -10,6 +10,7 @@ $uri = explode("?", $_SERVER['REQUEST_URI']);
 $url = $_SERVER['HTTP_HOST'].$uri[0];
 $cacheable = ($_SERVER['REQUEST_METHOD'] == 'GET'
 				&& strpos($url, $_SERVER['HTTP_HOST'].'/admin') !== 0
+				&& strpos($url, $_SERVER['HTTP_HOST'].'/getLocation') !== 0
 				&& preg_match('/^\/((\w{2}\/)?\w+\/?)?$/', $uri[0]));
 if($cacheable){
 	// its not admin: do cache
@@ -89,7 +90,6 @@ $response = $kernel->handle(
 if($cacheable){
 	file_put_contents($filename,$response->getContent());
 }
-
 
 
 $response->send();

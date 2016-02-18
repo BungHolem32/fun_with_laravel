@@ -20,7 +20,7 @@ ul,ol{
 }
 
 // ======= Vars for Rboptions.org:
-@top-bar: #000;
+@top-bar-bg: #000;
 @top-bg-color: #fff;
 @bg-color: #EEEDE4;
 @border-color: #D3BB49;
@@ -45,13 +45,20 @@ body{
     background-color: transparent;
     padding: 34px;
     h1{
-      color: @top-bar;
+      color: @top-bar-bg;
       font-size: 47px;
       text-align: @left;
     }
     .big{
       font-size: 65px;
     }
+  }
+
+  .below-header{
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: @top-bar-bg;
+    padding: 15px;
   }
 
   .bg-white{

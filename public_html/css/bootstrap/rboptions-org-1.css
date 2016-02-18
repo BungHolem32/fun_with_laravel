@@ -11399,6 +11399,12 @@ body .jumbotron h1 {
 body .jumbotron .big {
   font-size: 65px;
 }
+body .below-header {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: #000;
+  padding: 15px;
+}
 body .bg-white {
   border-top: 3px solid;
   border-color: #D3BB49;

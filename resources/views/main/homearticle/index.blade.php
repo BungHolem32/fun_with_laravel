@@ -10,12 +10,12 @@
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">@ln(Toggle navigation)</span>
+                        <span class="sr-only capitalize">@ln(Toggle navigation)</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">@ln(Open Account)</a>
+                    <a class="navbar-brand capitalize" href="#">@ln(open account)</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -34,7 +34,7 @@
     <div class="wrapper bg">
         <div class="container marketing center">
             <div class="jumbotron">
-                <h1>In <span class="big">Binary Options</span>,<br>&nbsp;&nbsp; &nbsp;There's Only <span class="big">One Perfect Choice</span></h1>
+                <h1 class="capitalize">In <span class="big">Binary Options</span>,<br>&nbsp;&nbsp; &nbsp;There's Only <span class="big">One Perfect Choice</span></h1>
             </div>
         </div>
     </div>
@@ -43,9 +43,10 @@
         <div class="container marketing center">
             <!-- Three columns of text below the carousel -->
             <div class="row center">
-                <div class="col-xs-12">
+                <div class="col-xs-12 below-header">
                     <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
                 </div>
+
                 <div class="col-xs-4">
                     <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
                     <h2>Heading</h2>
