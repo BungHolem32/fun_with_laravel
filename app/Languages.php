@@ -78,7 +78,8 @@ class Languages extends Model {
             $founded[] = $keyVal->lang_key;
         }
 
-        $missing = array_diff($langKeys,$founded);
+        //$missing = array_diff($langKeys,$founded);
+        $missing = array_udiff($langKeys, $founded, 'strcasecmp');
         self::insertTranslations($missing);
         return $langKeyVal;
     }
