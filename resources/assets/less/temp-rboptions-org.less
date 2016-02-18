@@ -1,0 +1,62 @@
+@import "direction.less";
+@import "font-awesome/font-awesome";
+@import "bootstrap/variables";
+@import "brand/vars";
+@import "bootstrap/bootstrap";
+@import "brand/buttons";
+@import "_helpers";
+
+// ===== Reset:
+ul,ol{
+  margin:0;
+  list-style: none;
+  padding:0;
+}
+
+
+
+.navbar-header,.navbar-nav, .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{
+  float: @left;
+}
+
+// ======= Vars for Rboptions.org:
+@top-bar: #000;
+@top-bg-color: #fff;
+@bg-color: #EEEDE4;
+@border-color: #D3BB49;
+
+// ==== HomePage Rboptions.org
+body{
+  background-color: @bg-color;
+  .navbar{
+    margin-bottom: 0;
+  }
+  .logo{
+    padding-top:22px;
+    height: 100px;
+  }
+  .wrapper.bg{
+    background-image: url('/img/rboptions-org/BigImage.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+  .jumbotron{
+    font-family: "Trebuchet MS", "Courier New", Courier, monospace;
+    background-color: transparent;
+    padding: 34px;
+    h1{
+      color: @top-bar;
+      font-size: 47px;
+      text-align: @left;
+    }
+    .big{
+      font-size: 65px;
+    }
+  }
+
+  .bg-white{
+    border-top: 3px solid;
+    border-color: @border-color;
+    background-color: @top-bg-color;
+  }
+}
