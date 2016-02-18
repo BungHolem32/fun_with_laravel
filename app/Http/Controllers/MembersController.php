@@ -12,10 +12,8 @@ class MembersController extends Base\AbstractFunnelController {
 
     public function index($page)
     {
-        $recaptcha = $page->switches->recaptcha;
-        if($recaptcha instanceof mongo) $recaptcha = null;
-        if($recaptcha != null && intval($page->switches->recaptcha) <= IpLog::count(\Request::ip(), 'createAccount')){
-            $this->show_recaptcha = true;
+        if(IpLog::count(\Request::ip(), 'createAccount')){
+            $this->show_recaptcha = 1;
         }
         return parent::index($page);
     }

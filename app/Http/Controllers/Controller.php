@@ -1,6 +1,5 @@
 <?php namespace App\Http\Controllers;
 
-use App\Exceptions\SpotException;
 use Illuminate\Foundation\Bus\DispatchesCommands;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -17,10 +16,24 @@ abstract class Controller extends BaseController {
     }
 
     public static function forThis($page,$method){
-        $controllerStr = 'App\Http\Controllers\\' . $page->controller;
-        $controller = new $controllerStr();
-        $page->controller = $controller;
-        return $controller->$method($page);
+        if($method == 'index') { // check if user may access page, but allows admin to edit
+            $domains = strval($page->domain);
+            if ($domains) {
+                $domains = explode(',', $domains);
+                $domain = $_SERVER['HTTP_HOST'];
+                if (!in_array($domain, $domains)) {
+                    abort(404);
+                }
+            }
+        }
+        try {
+            $controllerStr = 'App\Http\Controllers\\' . $page->controller;
+            $controller = new $controllerStr();
+            $page->controller = $controller;
+            return $controller->$method($page);
+        }catch(\Exception $e){
+            return view('layouts.spoterror')->with('error', $e);
+        }
     }
 
     protected function dirName(){

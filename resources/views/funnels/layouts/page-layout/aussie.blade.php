@@ -4,8 +4,8 @@
     {!! $page->appendAsset(url('/css/aussie/style.css')) !!}
     <!--[if lt IE 9]>
     <!--[if lt IE 9]>
-    <script src="/js/aussie/html5shiv.js"></script>
-    <script src="/js/aussie/respond.min.js"></script>
+    <script src="/js/vendor/html5shiv.min.js"></script>
+    <script src="/js/vendor/respond.min.js"></script>
     <![endif]-->
     <script type="text/javascript" src="/js/aussie/first.js"></script>
     <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />

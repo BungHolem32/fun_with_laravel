@@ -9,24 +9,20 @@ use Request;
 
 class AbstractFunnelController extends Controller {
 
-    protected $show_recaptcha = false;
+    protected $show_recaptcha = 0;
     protected $form = null;
 
     public function __construct(){
         parent::__construct();
-        $this->set_recaptcha = (bool)\Session::get('recaptcha');
     }
 
     public function index($page)
     {
         $this->form = \App\Page::find($page->formType);
-  //      dd(\App\Page::find($page->recaptcha));
-        \Session::put('recaptcha',$this->show_recaptcha); //  make sure this is always set, so the middleware can check for it. this allows us to block user who do not have a session enabled.
         view()->share('show_recaptcha', $this->show_recaptcha);
         return view($this->dirName().'/index')
-                    ->with('page', $page)
-                    //->with('show_recaptcha', $this->show_recaptcha)
-                    ->with('form', $this->form);
+                ->with('page', $page)
+                ->with('form', $this->form);
     }
 
     public function getPageLayouts(){
