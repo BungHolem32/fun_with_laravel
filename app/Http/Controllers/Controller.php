@@ -15,16 +15,9 @@ abstract class Controller extends BaseController {
         //throw new SpotException('');
     }
 
-    public static function forThis($page,$method){
-        if($method == 'index') { // check if user may access page, but allows admin to edit
-            $domains = strval($page->domain);
-            if ($domains) {
-                $domains = explode(',', $domains);
-                $domain = $_SERVER['HTTP_HOST'];
-                if (!in_array($domain, $domains)) {
-                    abort(404);
-                }
-            }
+    public static function forThis($page,$method, $nocheck=false){
+        if(!$nocheck && $method == 'index' && !$page->inDomain()) { // check if user may access page, but allows admin to edit
+            abort(404);
         }
         try {
             $controllerStr = 'App\Http\Controllers\\' . $page->controller;
