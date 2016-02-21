@@ -2,6 +2,16 @@
 {!! $page->appendAsset(url('/js/jquery.placeholder.min.js')) !!}
 <script language="javascript">
     $('input, textarea').placeholder();
+    $(function(){ // add query string to form action
+        $('form').each(function(){
+            var action = $(this).attr('action').split('?');
+            if(action[0].indexOf('postEmailForm')>-1){
+                if(action.length == 1) { // only add params if none are set
+                    $(this).attr('action', action[0] + window.location.search);
+                }
+            }
+        });
+    });
 </script>
 @if(Request::get('epass')!=532)
     <?php // THIS takes the link and msg from the parent if not exist.
