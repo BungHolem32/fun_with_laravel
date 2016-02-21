@@ -13,6 +13,7 @@ $cacheable = ($_SERVER['REQUEST_METHOD'] == 'GET'
 				&& strpos($url, $_SERVER['HTTP_HOST'].'/getLocation') !== 0
 				&& strpos($url, $_SERVER['HTTP_HOST'].'/runBot') !== 0
 				&& strpos($url, $_SERVER['HTTP_HOST'].'/logout') !== 0
+				&& strpos($url, $_SERVER['HTTP_HOST'].'/lp/') !== 0
 				&& preg_match('/^\/((\w{2}\/)?\w+\/?)?$/', $uri[0]));
 if($cacheable){
 	// its not admin: do cache
