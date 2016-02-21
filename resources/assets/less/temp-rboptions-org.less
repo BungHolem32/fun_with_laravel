@@ -6,6 +6,8 @@
 @import "brand/buttons";
 @import "_helpers";
 
+@import "animateHat/animate-lesshat";
+
 // ===== Reset:
 ul,ol{
   margin:0;
@@ -15,7 +17,7 @@ ul,ol{
 
 
 
-.navbar-header,.navbar-nav, .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{
   float: @left;
 }
 
@@ -36,10 +38,12 @@ body{
     height: 100px;
   }
   .wrapper.bg{
+    overflow: hidden;
     background-image: url('/img/rboptions-org/BigImage.jpg');
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-position: top center;
   }
+
   .jumbotron{
     font-family: "Trebuchet MS", "Courier New", Courier, monospace;
     background-color: transparent;
@@ -63,7 +67,90 @@ body{
 
   .bg-white{
     border-top: 3px solid;
+    border-bottom: 3px solid;
     border-color: @border-color;
-    background-color: @top-bg-color;
+    background-color: rgba(255,255,255,0.75); //@top-bg-color;
   }
+  .img-responsive{
+    display: inline-block;
+  }
+  .rubricks{
+    h2 {
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 31px;
+      color: @top-bar-bg;
+      margin-top: 5px;
+      margin-bottom: 5px;
+
+      & + p{
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: #4f4f4f;
+      }
+    }
+  }
+  .wrapper.body{
+    background-color: @bg-color;
+    position: relative;
+    .marketing.body {
+      background-color: @top-bg-color;
+      position: relative;
+      min-height: 947px;
+      &:before{
+        content: "";
+        width: 70px;
+        height: 800px;
+        background-image: url('/img/rboptions-org/left-side-shadow.png');
+        position: absolute;
+        top: 0;
+        left: -70px;
+      }
+      &:after{
+        content: "";
+        width: 70px;
+        height: 947px;
+        background-image: url('/img/rboptions-org/right-side-shadow.png');
+        position: absolute;
+        top: 0;
+        right: -70px;
+      }
+    }
+  }
+
+
+  * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+
+
+
+
+
+
+
+  .gallery {
+    background: #EEE;
+  }
+
+  .gallery-cell {
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    counter-increment: gallery-cell;
+  }
+
+  /* cell number */
+  .gallery-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+
 }
