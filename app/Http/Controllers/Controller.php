@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Bus\DispatchesCommands;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use PhpSpec\Exception\Exception;
 use Request;
 
 abstract class Controller extends BaseController {
@@ -25,6 +26,11 @@ abstract class Controller extends BaseController {
             $page->controller = $controller;
             return $controller->$method($page);
         }catch(\Exception $e){
+            switch(get_class($e)){
+                case 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException':
+                    throw $e;
+            }
+            \Log::error($e);
             return view('layouts.spoterror')->with('error', $e);
         }
     }
