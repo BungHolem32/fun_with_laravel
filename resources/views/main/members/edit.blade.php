@@ -1,3 +1,5 @@
+{{-- clear   --   storage/framework/views --}}
+
 @extends('admin.edit-page')
 
 @section('options')
@@ -18,6 +20,21 @@
         <h3><i class="fa fa-gg"></i> {!! Form::label('title_h1', 'Title:') !!}</h3>
         {!! Form::text('title_h1', $page['title_h1'], ['name'=>'mongo[title_h1]', 'class'=>'direction form-control']) !!}
     </div>
+
+{{--
+    <div class="form-group">
+        {!! Form::label('picture', 'picture:') !!}
+        {!! Form::file('picture', ['name'=>'files[logo_upload]', 'class'=>'form-control']) !!}
+        @if($page->logo_upload) <img src="{{$page->logo_upload}}" width='100' alt=""> @endif
+    </div>
+
+    <div class="form-group">
+        {!! Form::label('picture', 'picture:') !!}
+        {!! Form::file('picture', ['name'=>'files[logo_upload1]', 'class'=>'form-control']) !!}
+        @if($page->logo_upload1) <img src="{{$page->logo_upload1}}" width='100' alt=""> @endif
+    </div>
+--}}
+
     <div class="form-group">
         <h3><i class="fa fa-newspaper-o"></i> {!! Form::label('description', 'Description:') !!}</h3>
         {!! Form::text('description', $page['description'], ['name'=>'mongo[description]', 'class'=>'direction form-control']) !!}
