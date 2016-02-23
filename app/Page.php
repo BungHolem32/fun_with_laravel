@@ -412,6 +412,18 @@ class Page extends Entity implements PageInterface
         return '';
     }
 
+    public function inDomain($domain=''){
+        if(!$domain) $domain = $_SERVER['HTTP_HOST'];
+        preg_match('/[^.]+\.[^.]+$/', $domain, $domain);
+        if(strval($this->domain)){
+            $domains = explode(',', $this->domain);
+            if(!in_array($domain[0], $domains)){
+                return false;
+            }
+        }
+        return true; // if no domain is set, or if domain matches
+    }
+
 
     private static function sqlParent($slugArrayTimes){
         $inner = '';

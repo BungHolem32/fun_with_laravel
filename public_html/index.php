@@ -1,30 +1,35 @@
 <?php
 
-// need to open this link(domain/?cache=0) run on some explorer, this link is secured and need to be closed when not working
-// FOR CACHE - only for stage.
-if(($_SERVER['REMOTE_ADDR'] == '31.154.27.50' || (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) && $_SERVER['HTTP_X_FORWARDED_FOR'] == '31.154.27.50')) {
-	//$_GET['epass'] = 532;
-	if (isset($_GET['cache'])) {
-		mkdir("/var/www/storage/framework/views", 0777);
-		$dirname = '/var/www/storage/framework/views/';
-		if (is_dir($dirname))
-			$dir_handle = opendir($dirname);
-		if (!$dir_handle)
-			return false;
-		while ($file = readdir($dir_handle)) {
-			if ($file != "." && $file != "..") {
-				if (!is_dir($dirname . "/" . $file))
-					unlink($dirname . "/" . $file);
-				else {
-					delete_directory($dirname . '/' . $file);
-				}
-			}
-		}
-		closedir($dir_handle);
-		header('Refresh: 5');
-		die();
+/**
+ * Checking if the url is cache able - meaning the page should be cached
+ * if request is GET
+ * AND if not an admin page
+ * AND if url is assumed to be a home page - only '/', or one slug, possibly with two-digit language code.
+ */
+$uri = explode("?", $_SERVER['REQUEST_URI']);
+$url = $_SERVER['HTTP_HOST'].$uri[0];
+$cacheable = ($_SERVER['REQUEST_METHOD'] == 'GET'
+				&& strpos($url, $_SERVER['HTTP_HOST'].'/admin') !== 0
+				&& strpos($url, $_SERVER['HTTP_HOST'].'/getLocation') !== 0
+				&& strpos($url, $_SERVER['HTTP_HOST'].'/runBot') !== 0
+				&& strpos($url, $_SERVER['HTTP_HOST'].'/logout') !== 0
+				&& strpos($url, $_SERVER['HTTP_HOST'].'/lp/') !== 0
+				&& preg_match('/^\/((\w{2}\/)?\w+\/?)?$/', $uri[0]));
+if($cacheable){
+	// its not admin: do cache
+	$filename = '../storage/html/'.md5($url).'.html';
+	/*echo time();
+	echo '<br>'.filemtime($filename);
+	echo '<br>'.(time() - filemtime($filename)).'<br>';*/
+	if (file_exists($filename) && time() - filemtime($filename) < (5 * 60)) {
+		// load from html file
+		header('X-brute-cache: true');
+		ob_end_clean();
+		readfile($filename);
+		die;
 	}
 }
+
 
 
 /**
@@ -83,6 +88,13 @@ $kernel = $app->make('Illuminate\Contracts\Http\Kernel');
 $response = $kernel->handle(
 	$request = Illuminate\Http\Request::capture()
 );
+
+// Save cache in html file
+if($cacheable){
+	file_put_contents($filename,$response->getContent().'<!-- Url: '.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'-->');
+}
+
+
 
 $response->send();
 

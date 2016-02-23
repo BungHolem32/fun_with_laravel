@@ -5,8 +5,8 @@
     {!! $page->appendAsset(url('/css/aussie/style.css')) !!}
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="/js/aussie/html5shiv.js"></script>
-    <script src="/js/aussie/respond.min.js"></script>
+    <script src="/js/vendor/html5shiv.min.js"></script>
+    <script src="/js/vendor/respond.min.js"></script>
     <![endif]-->
     {!! $page->appendAsset(url('/js/vendor/jquery-1.11.2.min.js')) !!}
     <script type="text/javascript" src="/js/aussie/first.js?v=1"></script>

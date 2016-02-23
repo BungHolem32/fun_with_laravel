@@ -20,21 +20,19 @@ class DomainVariantsController extends Controller
      */
     public function index($page){
         $children = $page->getChildren();
-        $domain = $_SERVER['HTTP_HOST'];
 
         /**
          * @var $child Page
          */
         foreach($children as $child){
-            $domains = explode(',', $child->domain);
-            if(in_array($domain, $domains)){
+            if($child->inDomain()){
                 $routes = $child->routes()->get();
                 foreach($routes as $route){
                     if($route->lang_id == \Request::local()->id)
                         break;
                 } //NOTE: uses last route as default
                 $child->setRoute($route);
-                return parent::forThis($child, 'index');
+                return parent::forThis($child, 'index', true);
             }
         }
         abort(404);

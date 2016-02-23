@@ -4,6 +4,7 @@ use App\Lib\Helpers\Generate;
 use Illuminate\Foundation\Bus\DispatchesCommands;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use PhpSpec\Exception\Exception;
 use Request;
 
 abstract class Controller extends BaseController {
@@ -16,16 +17,9 @@ abstract class Controller extends BaseController {
         //throw new SpotException('');
     }
 
-    public static function forThis($page,$method){
-        if($method == 'index') { // check if user may access page, but allows admin to edit
-            $domains = strval($page->domain);
-            if ($domains) {
-                $domains = explode(',', $domains);
-                $domain = $_SERVER['HTTP_HOST'];
-                if (!in_array($domain, $domains)) {
-                    abort(404);
-                }
-            }
+    public static function forThis($page,$method, $nocheck=false){
+        if(!$nocheck && $method == 'index' && !$page->inDomain()) { // check if user may access page, but allows admin to edit
+            abort(404);
         }
         try {
             $controllerStr = 'App\Http\Controllers\\' . $page->controller;
@@ -33,6 +27,11 @@ abstract class Controller extends BaseController {
             $page->controller = $controller;
             return $controller->$method($page);
         }catch(\Exception $e){
+            switch(get_class($e)){
+                case 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException':
+                    throw $e;
+            }
+            \Log::error($e);
             return view('layouts.spoterror')->with('error', $e);
         }
     }
