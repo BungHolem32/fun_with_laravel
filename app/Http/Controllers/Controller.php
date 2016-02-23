@@ -1,8 +1,10 @@
 <?php namespace App\Http\Controllers;
 
+use App\Lib\Helpers\Generate;
 use Illuminate\Foundation\Bus\DispatchesCommands;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use PhpSpec\Exception\Exception;
 use Request;
 
 abstract class Controller extends BaseController {
@@ -25,6 +27,11 @@ abstract class Controller extends BaseController {
             $page->controller = $controller;
             return $controller->$method($page);
         }catch(\Exception $e){
+            switch(get_class($e)){
+                case 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException':
+                    throw $e;
+            }
+            \Log::error($e);
             return view('layouts.spoterror')->with('error', $e);
         }
     }
@@ -55,10 +62,20 @@ abstract class Controller extends BaseController {
     }
 
 
+
     public function update($page)
     {
         $status = 1;
         $input = Request::all();
+
+
+        foreach($_FILES['files']['name'] as $key=>$filename) {
+            $saved_file = Generate::savePicFile($filename, $_FILES['files']['tmp_name'][$key]);
+            if (!empty($saved_file)) {
+                $input['mongo'][$key] = $saved_file;
+            }
+        }
+
         foreach($input['mongo'] as $key => $fieldValue) {
             //d($page->$key);
             if($page->$key = $fieldValue)
