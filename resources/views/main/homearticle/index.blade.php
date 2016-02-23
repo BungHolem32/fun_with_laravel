@@ -27,10 +27,10 @@
                     <a class="navbar-brand capitalize" href="#">@ln(open account)</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Trade</a></li>
-                        <li><a href="#about">Contact us</a></li>
-                        <li><a href="#contact">Privacy Policy</a></li>
+                    <ul class="nav navbar-nav capitalize">
+                        <li class="active"><a href="#">@ln(trade)</a></li>
+                        <li><a href="#">@ln(contact us)</a></li>
+                        <li><a href="#">@ln(privacy policy)</a></li>
                     </ul>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                 </div>
 
                 <div class="row center">
-                    <div class="gallery js-flickity"
+                    <div class="rubricks gallery js-flickity hidden-lg hidden-md hidden-sm"
                          data-flickity-options='{ "freeScroll": false, "wrapAround": true }'>
                         <div class="col-xs-12">
                             <img class="img-responsive" src="/img/rboptions-org/ico-1.png" alt="">
@@ -90,7 +90,7 @@
 
 
 
-                    <div class="rubricks hidden-xs">
+                    <div class="rubricks hidden-xs padd-t padd-b">
                         <div class="col-xs-12 col-sm-4">
                             <img class="img-responsive" src="/img/rboptions-org/ico-1.png" alt="">
                             <h2 class="capitalize">@ln(experience)</h2>
@@ -122,54 +122,44 @@
         </div>
     </div>
     <div class="wrapper body">
-        <div class="container marketing body center">
+        <div class="container marketing body center padd-b">
             <!-- START THE FEATURETTES -->
-            <div class="row featurette">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                </div>
-                <div class="col-md-5">
-                    <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="">
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette">
-                <div class="col-md-7 col-md-push-5">
-                    <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                </div>
-                <div class="col-md-5 col-md-pull-7">
-                    <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                </div>
-                <div class="col-md-5">
-                    <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-                </div>
-            </div>
+            <br>{!! $page->body !!}
             <!-- /END THE FEATURETTES -->
         </div>
     </div>
 
-    <div class="container">
-        <!-- FOOTER -->
-        <footer>
-            <p class="pull-right"><a href="#">Back to top</a></p>
-            <p>&copy; 2015 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-        </footer>
+    <div class="container payments">
+        <div class="row">
+            <div class="pull-left">
+                <img src="/img/rboptions-org/payments.png" alt="">
+            </div>
+            <div class="pull-right">
+                <img src="/img/rboptions-org/ssl.png" alt="" class="marg-r">
+                <img src="/img/rboptions-org/18.png" alt="">
+            </div>
+        </div>
     </div>
 
-
+    <div class="wrapper footer">
+        <div class="container">
+            <div class="row center padd-t">
+                <!-- FOOTER -->
+                <footer>
+                    <p class="pull-right"><a href="#"><i class="fa fa-arrow-up"></i> Back to top</a></p>
+                    <nav class="uppercase">
+                        <a href="#">@ln(open account)</a> &middot;
+                        <a href="#">@ln(trade)</a> &middot;
+                        <a href="#">@ln(contect us)</a> &middot;
+                        <a href="#">@ln(privacy policy)</a>
+                    </nav>
+                </footer>
+                <div class="risk padd-t padd-b">
+                    <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo. Donec ullamcorper nulla non metus auctor fringilla. <strong>Vestibulum id ligula</strong> porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 @section('bottom-scripts')

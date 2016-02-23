@@ -1,5 +1,5 @@
 @import "direction.less";
-@import "font-awesome/font-awesome";
+@import "font-awesome/font-awesome.less";
 @import "bootstrap/variables";
 @import "brand/vars";
 @import "bootstrap/bootstrap";
@@ -22,10 +22,12 @@ ul,ol{
 }
 
 // ======= Vars for Rboptions.org:
-@top-bar-bg: #000;
+@top-bar-bg: #191919;
 @top-bg-color: #fff;
 @bg-color: #EEEDE4;
 @border-color: #D3BB49;
+@footer-border: #757253;
+
 
 // ==== HomePage Rboptions.org
 body{
@@ -69,7 +71,7 @@ body{
     border-top: 3px solid;
     border-bottom: 3px solid;
     border-color: @border-color;
-    background-color: rgba(255,255,255,0.75); //@top-bg-color;
+    background-color: rgba(255,255,255,0.85); //@top-bg-color;
   }
   .img-responsive{
     display: inline-block;
@@ -97,6 +99,17 @@ body{
       background-color: @top-bg-color;
       position: relative;
       min-height: 947px;
+      text-align: @left;
+      h2{
+        color: @top-bar-bg;
+        &:after{
+          content: " ";
+          width: 100%;
+          height: 1px;
+          background-color: #000;
+        }
+      }
+
       &:before{
         content: "";
         width: 70px;
@@ -119,9 +132,22 @@ body{
   }
 
 
-  * {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  .container.payments{
+    height: 5em;
+    padding-top: 1.20em;
+  }
+  .wrapper.footer{
+    background-color: @top-bar-bg;
+    color: @top-bg-color;
+    border-top: 3px solid @footer-border;
+    footer{
+
+      height: 5em;
+      a {
+        color: @top-bg-color;
+      }
+    }
+
   }
 
 
