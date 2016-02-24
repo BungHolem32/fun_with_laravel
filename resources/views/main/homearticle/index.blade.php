@@ -24,7 +24,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand capitalize" href="#">@ln(open account)</a>
+                    <a class="capitalize btn btn-brand" href="#">@ln(open account) &nbsp; <i class="fa fa-angle-double-right"></i></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav capitalize">
@@ -40,7 +40,7 @@
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
-    <div class="wrapper bg">
+    <div class="wrapper bg" style="background-image: url('{{$page->background}}')">
         <div class="container marketing center">
             <div class="jumbotron">
                 <h1 class="capitalize">In <span class="big">Binary Options</span>,<br>&nbsp;&nbsp; &nbsp;There's Only <span class="big">One Perfect Choice</span></h1>
@@ -58,64 +58,42 @@
                 </div>
 
                 <div class="row center">
+                    <?php
+                        // todo: fix the image upload to support multi-dimensions array then use this for each properly.
+                        $rubricksArray = [];
+                        for($i=1; $i<=5; $i++){
+                            $rub = 'rub'.$i;
+                            $tempArr['pic'] = $page->{$rub.'_pic'}->get();
+                            $tempArr['title'] = $page->{$rub.'_title'}->get();
+                            $tempArr['text'] = $page->{$rub.'_text'}->get();
+                            if(!empty($tempArr['title']))
+                                $rubricksArray[] = $tempArr;
+                        }
+                    ?>
                     <div class="rubricks gallery js-flickity hidden-lg hidden-md hidden-sm"
                          data-flickity-options='{ "freeScroll": false, "wrapAround": true }'>
-                        <div class="col-xs-12">
-                            <img class="img-responsive" src="/img/rboptions-org/ico-1.png" alt="">
-                            <h2 class="capitalize">@ln(experience)</h2>
-                            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        </div><!-- /.col-lg-4 -->
-                        <div class="col-xs-12">
-                            <img class="img-responsive" src="/img/rboptions-org/ico-2.png" alt="">
-                            <h2 class="capitalize">@ln(investment)</h2>
-                            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
-                        </div><!-- /.col-lg-4 -->
-                        <div class="col-xs-12">
-                            <img class="img-responsive" src="/img/rboptions-org/ico-3.png" alt="">
-                            <h2 class="capitalize">@ln(education)</h2>
-                            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.</p>
-                        </div><!-- /.col-lg-4 -->
-                        <div class="col-xs-12">
-                            <img class="img-responsive" src="/img/rboptions-org/ico-4.png" alt="">
-                            <h2 class="capitalize">@ln(customer service)</h2>
-                            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
-                        </div>
-                        <div class="col-xs-12">
-                            <img class="img-responsive" src="/img/rboptions-org/ico-5.png" alt="">
-                            <h2 class="capitalize">@ln(security)</h2>
-                            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.</p>
-                        </div><!-- /.col-lg-4 -->
+                        @forelse($rubricksArray as $rubrick)
+                            <div class="col-xs-12">
+                                <img class="img-responsive" src="{{ $rubrick['pic'] }}" alt="">
+                                <h2 class="capitalize">{{ $rubrick['title'] }}</h2>
+                                <p>{{ $rubrick['text'] }}</p>
+                            </div>
+                        @empty
+
+                        @endforelse
                     </div>
 
 
-
-
                     <div class="rubricks hidden-xs padd-t padd-b">
-                        <div class="col-xs-12 col-sm-4">
-                            <img class="img-responsive" src="/img/rboptions-org/ico-1.png" alt="">
-                            <h2 class="capitalize">@ln(experience)</h2>
-                            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        </div><!-- /.col-lg-4 -->
-                        <div class="col-xs-12 col-sm-4">
-                            <img class="img-responsive" src="/img/rboptions-org/ico-2.png" alt="">
-                            <h2 class="capitalize">@ln(investment)</h2>
-                            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
-                        </div><!-- /.col-lg-4 -->
-                        <div class="col-xs-12 col-sm-4">
-                            <img class="img-responsive" src="/img/rboptions-org/ico-3.png" alt="">
-                            <h2 class="capitalize">@ln(education)</h2>
-                            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.</p>
-                        </div><!-- /.col-lg-4 -->
-                        <div class="col-sm-4 col-sm-offset-2">
-                            <img class="img-responsive" src="/img/rboptions-org/ico-4.png" alt="">
-                            <h2 class="capitalize">@ln(customer service)</h2>
-                            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
-                        </div>
-                        <div class="col-sm-4">
-                            <img class="img-responsive" src="/img/rboptions-org/ico-5.png" alt="">
-                            <h2 class="capitalize">@ln(security)</h2>
-                            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.</p>
-                        </div><!-- /.col-lg-4 -->
+                        @forelse($rubricksArray as $i => $rubrick)
+                            <div class="col-sm-4 @if($i==3) col-sm-offset-2 @endif">
+                                <img class="img-responsive" src="{{ $rubrick['pic'] }}" alt="">
+                                <h2 class="capitalize">{{ $rubrick['title'] }}</h2>
+                                <p>{{ $rubrick['text'] }}</p>
+                            </div>
+                        @empty
+
+                        @endforelse
                     </div>
                 </div><!-- /.row -->
             </div>
@@ -124,6 +102,7 @@
     <div class="wrapper body">
         <div class="container marketing body center padd-b">
             <!-- START THE FEATURETTES -->
+            <a class="capitalize btn btn-brand pull-right" style="margin-top: 2em;" href="#">@ln(open account) &nbsp; <i class="fa fa-angle-double-right"></i></a>
             <br>{!! $page->body !!}
             <!-- /END THE FEATURETTES -->
         </div>
@@ -131,10 +110,17 @@
 
     <div class="container payments">
         <div class="row">
-            <div class="pull-left">
+            <div class="pull-left hidden-xs">
                 <img src="/img/rboptions-org/payments.png" alt="">
             </div>
-            <div class="pull-right">
+            <div class="pull-right hidden-xs">
+                <img src="/img/rboptions-org/ssl.png" alt="" class="marg-r">
+                <img src="/img/rboptions-org/18.png" alt="">
+            </div>
+            <div class="hidden-sm hidden-md hidden-lg center">
+                <img src="/img/rboptions-org/payments.png" alt="">
+            </div>
+            <div class="hidden-sm hidden-md hidden-lg center">
                 <img src="/img/rboptions-org/ssl.png" alt="" class="marg-r">
                 <img src="/img/rboptions-org/18.png" alt="">
             </div>
@@ -155,7 +141,7 @@
                     </nav>
                 </footer>
                 <div class="risk padd-t padd-b">
-                    <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo. Donec ullamcorper nulla non metus auctor fringilla. <strong>Vestibulum id ligula</strong> porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    <p>{!! $page->risk !!}</p>
                 </div>
             </div>
         </div>

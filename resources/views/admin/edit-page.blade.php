@@ -7,7 +7,7 @@
 
 @section('content')
 <div class="row">
-    {!! Form::open() !!}
+    {!! Form::open(['files'=>true]) !!}
     <div class="col-lg-8 bg-{{ strtolower(Request::local()->code) }} main-edit">
         <h1 class="animated rubberBand"><small>EDIT: </small>{{ $page->title }}</h1>
         <small>@include('admin.partials._breadcrumbs')</small>

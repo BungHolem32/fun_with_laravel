@@ -41,9 +41,28 @@ body{
   }
   .wrapper.bg{
     overflow: hidden;
-    background-image: url('/img/rboptions-org/BigImage.jpg');
     background-repeat: repeat-y;
     background-position: top center;
+  }
+
+  .btn-brand{
+    .btn-brand-background();
+    margin-top: 0.5em;
+    .margin-right(0.35em);
+    border-radius: 0;
+    border:1px solid @border-color;
+    color: #000;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    text-shadow: #eaeaea 0 1px 0;
+    font-weight: bold;
+    &:hover{
+      opacity: 0.75;
+    }
+    i{
+      font-size: 1.2em;
+    }
+
   }
 
   .jumbotron{
@@ -64,7 +83,8 @@ body{
     font-family: Arial, sans-serif;
     font-size: 18px;
     color: @top-bar-bg;
-    padding: 15px;
+    padding-top: 0;
+    padding-bottom: 15px;
   }
 
   .bg-white{
@@ -72,6 +92,7 @@ body{
     border-bottom: 3px solid;
     border-color: @border-color;
     background-color: rgba(255,255,255,0.85); //@top-bg-color;
+    padding: 1.5em;
   }
   .img-responsive{
     display: inline-block;
@@ -133,8 +154,11 @@ body{
 
 
   .container.payments{
-    height: 5em;
-    padding-top: 1.20em;
+    //padding-top: 1.20em;
+    img{
+      padding-top: 1.20em;
+      padding-bottom: 1.20em;
+    }
   }
   .wrapper.footer{
     background-color: @top-bar-bg;

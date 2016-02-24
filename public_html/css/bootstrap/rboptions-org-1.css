@@ -12143,9 +12143,39 @@ body .logo {
 }
 body .wrapper.bg {
   overflow: hidden;
-  background-image: url('/img/rboptions-org/BigImage.jpg');
   background-repeat: repeat-y;
   background-position: top center;
+}
+body .btn-brand {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0d255+0,debe2e+100 */
+  background: #f0d255;
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YwZDI1NSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZWJlMmUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f0d255 0%, #debe2e 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0d255', endColorstr='#debe2e', GradientType=0);
+  /* IE6-8 */
+  margin-top: 0.5em;
+  margin-left: 0.35em;
+  border-radius: 0;
+  border: 1px solid #D3BB49;
+  color: #000;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  text-shadow: #eaeaea 0 1px 0;
+  font-weight: bold;
+}
+body .btn-brand:hover {
+  opacity: 0.75;
+}
+body .btn-brand i {
+  font-size: 1.2em;
 }
 body .jumbotron {
   font-family: "Trebuchet MS", "Courier New", Courier, monospace;
@@ -12164,13 +12194,15 @@ body .below-header {
   font-family: Arial, sans-serif;
   font-size: 18px;
   color: #191919;
-  padding: 15px;
+  padding-top: 0;
+  padding-bottom: 15px;
 }
 body .bg-white {
   border-top: 3px solid;
   border-bottom: 3px solid;
   border-color: #D3BB49;
   background-color: rgba(255, 255, 255, 0.85);
+  padding: 1.5em;
 }
 body .img-responsive {
   display: inline-block;
@@ -12225,9 +12257,9 @@ body .wrapper.body .marketing.body:after {
   top: 0;
   right: -70px;
 }
-body .container.payments {
-  height: 5em;
+body .container.payments img {
   padding-top: 1.20em;
+  padding-bottom: 1.20em;
 }
 body .wrapper.footer {
   background-color: #191919;
