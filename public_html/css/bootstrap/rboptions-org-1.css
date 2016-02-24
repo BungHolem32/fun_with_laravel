@@ -12077,8 +12077,7 @@ lesshat-selector {
 ul,
 ol {
   margin: 0;
-  list-style: none;
-  padding: 0;
+  padding-right: 2em;
 }
 .col-xs-1,
 .col-sm-1,

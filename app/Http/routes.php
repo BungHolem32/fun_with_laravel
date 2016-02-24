@@ -52,7 +52,7 @@ Route::group(['middleware' => 'auth', 'prefix'=>'admin'], function(){
     Route::post('add-route/{id}', ['uses' => 'Admin\PageController@addRoute', 'as' => 'addRoute'] );
     Route::delete('delete-page/{id}', ['uses' => 'Admin\PageController@destroy', 'as' => 'deletePage'] );
     Route::post('search-pages/{q}', ['uses' => 'Admin\PageController@search', 'as' => 'searchPages'] );
-    Route::get('move-under/{parent_id}/{page_id}', ['uses' => 'Admin\PageController@moveUnder', 'as' => 'moveUnder'] );
+    Route::get('move-under/{page_id}/{parent_id}', ['uses' => 'Admin\PageController@moveUnder', 'as' => 'moveUnder'] );
 
     Route::post('dropzone', ['uses' => 'Admin\DropzoneController@upload'] );
     Route::get('dropzone/{id}', ['uses' => 'Admin\DropzoneController@load'] );

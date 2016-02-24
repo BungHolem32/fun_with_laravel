@@ -12,27 +12,12 @@
 
 @section('content')
     <div class="container">
-        <div class="logo"><img src="/img/rb-1420458628b28KP.png" alt="logo" /></div>
+        <div class="logo"><img src="{{ $page->pic_logo }}" alt="logo" /></div>
     </div>
     <div class="navbar-wrapper">
         <nav class="navbar navbar-inverse navbar-static-top">
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only capitalize">@ln(Toggle navigation)</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="capitalize btn btn-brand" href="#">@ln(open account) &nbsp; <i class="fa fa-angle-double-right"></i></a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav capitalize">
-                        <li class="active"><a href="#">@ln(trade)</a></li>
-                        <li><a href="#">@ln(contact us)</a></li>
-                        <li><a href="#">@ln(privacy policy)</a></li>
-                    </ul>
-                </div>
+                @include('layouts._bootstrap.navBar')
             </div>
         </nav>
     </div>
@@ -43,7 +28,7 @@
     <div class="wrapper bg" style="background-image: url('{{$page->background}}')">
         <div class="container marketing center">
             <div class="jumbotron">
-                <h1 class="capitalize">In <span class="big">Binary Options</span>,<br>&nbsp;&nbsp; &nbsp;There's Only <span class="big">One Perfect Choice</span></h1>
+                <h1 class="capitalize">{!! $page->slogen !!}</h1>
             </div>
         </div>
 
@@ -53,7 +38,7 @@
                 <!-- Three columns of text below the carousel -->
                 <div class="row center">
                     <div class="col-xs-12 below-header">
-                        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                        <p>{!! $page->description !!}</p>
                     </div>
                 </div>
 
@@ -69,6 +54,7 @@
                             if(!empty($tempArr['title']))
                                 $rubricksArray[] = $tempArr;
                         }
+
                     ?>
                     <div class="rubricks gallery js-flickity hidden-lg hidden-md hidden-sm"
                          data-flickity-options='{ "freeScroll": false, "wrapAround": true }'>
@@ -110,20 +96,7 @@
 
     <div class="container payments">
         <div class="row">
-            <div class="pull-left hidden-xs">
-                <img src="/img/rboptions-org/payments.png" alt="">
-            </div>
-            <div class="pull-right hidden-xs">
-                <img src="/img/rboptions-org/ssl.png" alt="" class="marg-r">
-                <img src="/img/rboptions-org/18.png" alt="">
-            </div>
-            <div class="hidden-sm hidden-md hidden-lg center">
-                <img src="/img/rboptions-org/payments.png" alt="">
-            </div>
-            <div class="hidden-sm hidden-md hidden-lg center">
-                <img src="/img/rboptions-org/ssl.png" alt="" class="marg-r">
-                <img src="/img/rboptions-org/18.png" alt="">
-            </div>
+            @include('layouts._bootstrap.payments')
         </div>
     </div>
 
@@ -131,18 +104,7 @@
         <div class="container">
             <div class="row center padd-t">
                 <!-- FOOTER -->
-                <footer>
-                    <p class="pull-right"><a href="#"><i class="fa fa-arrow-up"></i> Back to top</a></p>
-                    <nav class="uppercase">
-                        <a href="#">@ln(open account)</a> &middot;
-                        <a href="#">@ln(trade)</a> &middot;
-                        <a href="#">@ln(contect us)</a> &middot;
-                        <a href="#">@ln(privacy policy)</a>
-                    </nav>
-                </footer>
-                <div class="risk padd-t padd-b">
-                    <p>{!! $page->risk !!}</p>
-                </div>
+                @include('layouts._bootstrap.footer')
             </div>
         </div>
     </div>

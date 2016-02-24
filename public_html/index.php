@@ -14,7 +14,8 @@ $cacheable = ($_SERVER['REQUEST_METHOD'] == 'GET'
 				&& strpos($url, $_SERVER['HTTP_HOST'].'/runBot') !== 0
 				&& strpos($url, $_SERVER['HTTP_HOST'].'/logout') !== 0
 				&& strpos($url, $_SERVER['HTTP_HOST'].'/lp/') !== 0
-				&& preg_match('/^\/((\w{2}\/)?\w+\/?)?$/', $uri[0]));
+				&& preg_match('/^\/((\w{2}\/)?\w+\/?)?$/', $uri[0])
+				&& $_SERVER['REMOTE_ADDR'] != '31.154.27.50');
 if($cacheable){
 	// its not admin: do cache
 	$filename = '../storage/html/'.md5($url).'.html';

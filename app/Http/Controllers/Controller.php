@@ -68,16 +68,17 @@ abstract class Controller extends BaseController {
         $status = 1;
         $input = Request::all();
 
-
-        foreach($_FILES['files']['name'] as $key=>$filename) {
-            $saved_file = Generate::savePicFile($filename, $_FILES['files']['tmp_name'][$key]);
-            if (!empty($saved_file)) {
-                $input['mongo'][$key] = $saved_file;
+        if(!empty($_FILES)){
+            foreach($_FILES['files']['name'] as $key=>$filename) {
+                $saved_file = Generate::savePicFile($filename, $_FILES['files']['tmp_name'][$key]);
+                if (!empty($saved_file)) {
+                    $input['mongo'][$key] = $saved_file;
+                }
             }
         }
 
+
         foreach($input['mongo'] as $key => $fieldValue) {
-            //d($page->$key);
             if($page->$key = $fieldValue)
                 $fields[$key] = 1;
             else{
@@ -85,6 +86,9 @@ abstract class Controller extends BaseController {
                 $status = 0;
             }
         }
+
+        // deletes all files in html cache folder
+        array_map('unlink', glob(base_path()."/storage/html/*"));
 
         if (Request::ajax())
         {
