@@ -12271,6 +12271,9 @@ body .wrapper.footer footer {
 body .wrapper.footer footer a {
   color: #fff;
 }
+body .wrapper.footer .risk {
+  font-size: 12px;
+}
 body .gallery {
   background: #EEE;
 }

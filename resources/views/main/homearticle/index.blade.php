@@ -12,7 +12,7 @@
 
 @section('content')
     <div class="container">
-        <div class="logo"><img src="{{ $page->pic_logo }}" alt="logo" /></div>
+        @include('layouts._bootstrap.logo')
     </div>
     <div class="navbar-wrapper">
         <nav class="navbar navbar-inverse navbar-static-top">
@@ -88,7 +88,8 @@
     <div class="wrapper body">
         <div class="container marketing body center padd-b">
             <!-- START THE FEATURETTES -->
-            <a class="capitalize btn btn-brand pull-right" style="margin-top: 2em;" href="#">@ln(open account) &nbsp; <i class="fa fa-angle-double-right"></i></a>
+            <a class="capitalize btn btn-brand pull-right" style="margin-top: 2em;"
+               href="{{ $page->openAccountLink }}">@ln(open account) &nbsp; <i class="fa fa-angle-double-right"></i></a>
             <br>{!! $page->body !!}
             <!-- /END THE FEATURETTES -->
         </div>

@@ -12,7 +12,7 @@
 
 @section('content')
     <div class="container">
-        <div class="logo"><img src="{{ $page->pic_logo }}" alt="logo" /></div>
+        @include('layouts._bootstrap.logo')
     </div>
     <div class="navbar-wrapper">
         <nav class="navbar navbar-inverse navbar-static-top">
@@ -40,7 +40,7 @@
             {!! $page->body !!}
             <br>
             <div class="row center">
-                <a class="capitalize btn btn-brand center" style="margin-top: 2em;" href="#">@ln(open account) &nbsp; <i class="fa fa-angle-double-right"></i></a>
+                <a class="capitalize btn btn-brand center" style="margin-top: 2em;" href="{{ $page->openAccountLink }}">@ln(open account) &nbsp; <i class="fa fa-angle-double-right"></i></a>
             </div>
             <!-- /END THE FEATURETTES -->
         </div>

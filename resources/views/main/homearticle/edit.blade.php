@@ -79,6 +79,15 @@
     </div>
 
     <div class="form-group">
+        {!! Form::label('openAccountLink', 'Open Account Link:') !!}
+        {!! Form::text('openAccountLink', $page['openAccountLink'], ['name'=>'mongo[openAccountLink]', 'class'=>'form-control']) !!}
+    </div>
+    <div class="form-group">
+        {!! Form::label('brandTradeLink', 'Brand Trade Link:') !!}
+        {!! Form::text('brandTradeLink', $page['brandTradeLink'], ['name'=>'mongo[brandTradeLink]', 'class'=>'form-control']) !!}
+    </div>
+
+    <div class="form-group">
         {!! Form::label('risk', 'Risk Statement:') !!}
         {!! Form::textarea('risk', $page['risk'], ['name'=>'mongo[risk]', 'class'=>'editor form-control']) !!}
     </div>
