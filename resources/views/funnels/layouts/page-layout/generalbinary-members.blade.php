@@ -17,7 +17,7 @@
         <div class="col-xs-12 npad">
             <div class="col-xs-12 texts">
                 <div class="container col col-xs-8 col-md-10 col-lg-8">
-                    <div class="pull-left col-xs-3"><div class="logo"></div></div>
+                    <div class=""><div class="logo"></div></div>
                 </div>
             </div>
             <div class="col-xs-12 bg">

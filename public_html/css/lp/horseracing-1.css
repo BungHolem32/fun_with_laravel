@@ -11870,13 +11870,8 @@ body {
   width: 100%;
 }
 .head .logo {
-  background: url('/img/lp/horseracing/logo.png');
-  background-repeat: no-repeat;
-  width: 215px;
+  background: url('/img/lp/horseracing/logo.png') no-repeat scroll center;
   height: 43px;
-  position: relative;
-  top: -13px;
-  left: -14px;
 }
 .head .texts {
   text-align: center;
