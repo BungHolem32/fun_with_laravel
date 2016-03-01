@@ -39,7 +39,11 @@
         <h3><i class="fa fa-newspaper-o"></i> {!! Form::label('description', 'Description:') !!}</h3>
         {!! Form::text('description', $page['description'], ['name'=>'mongo[description]', 'class'=>'direction form-control']) !!}
     </div>
-
+    <div class="form-group">
+        {!! Form::label('logo_pic', 'Logo Picture:') !!}
+        {!! Form::file('logo_pic', ['name'=>'files[logo_pic]', 'class'=>'form-control']) !!}
+        @if($page->logo_pic) <img src="{{ $page->logo_pic }}" width='100%'> @endif
+    </div>
 
     <div class="form-group">
         <h3><i class="fa fa-video-camera"></i> {!! Form::label('video', 'Video link:') !!}</h3>
