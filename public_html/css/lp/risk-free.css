@@ -944,3 +944,8 @@ label.error{
 .sslIcons {
     margin-top: 24px;
 }
+
+body #wrap{
+    max-width: 1920px;
+    margin: 0 auto;
+}
