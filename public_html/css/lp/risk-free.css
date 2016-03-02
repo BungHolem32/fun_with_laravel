@@ -949,3 +949,14 @@ body #wrap{
     max-width: 1920px;
     margin: 0 auto;
 }
+
+.loading {
+    color: #fff;
+    font-size: 17px;
+    font-family: monospace;
+    position: relative;
+    top: -95px;
+    background-color: #16191E;
+    height: 80px;
+    padding-top: 16px;
+}
