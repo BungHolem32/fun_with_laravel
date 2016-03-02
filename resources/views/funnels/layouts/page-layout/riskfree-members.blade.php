@@ -55,5 +55,4 @@
             </div>
         </div>
     </div>
-    <iframe src="http://www.cloudzonetrk.com/evpi?event=Pixel%20Registration" style="visibility:hidden"></iframe>
 @endsection
