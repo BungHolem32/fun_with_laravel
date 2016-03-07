@@ -11816,3 +11816,8 @@ input#submit:hover {
 body > div, body > h1, body > h2, body > h3, body > img, body > .wrap {
   height: auto;
 }
+
+#other-error {
+  top: 85px;
+  left: 340px;
+}

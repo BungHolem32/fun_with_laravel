@@ -8,7 +8,10 @@
     <script src="/js/vendor/respond.min.js"></script>
     <![endif]-->
     {!! $page->appendAsset(url('/js/vendor/jquery-1.11.2.min.js')) !!}
+    <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
     <script type="text/javascript" src="/js/aussie/first.js?v=1"></script>
+    <script src="/js/fancybox/jquery.fancybox.js"></script>
+
 @append
 
 @section('bottom-scripts')
@@ -26,7 +29,7 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="0" background="/img/aussie-uk/bg.png">
         <tbody><tr>
             <td height="134" valign="top"><center>
-                <img src="/img/aussie-uk/tit.png" width="790" height="103" style="padding-bottom:-10px;">
+                <img src="/img/aussie-uk/tit.png" width="970" height="108" style="padding-bottom:-10px;">
             </center></td>
         </tr>
         </tbody></table>
@@ -67,7 +70,7 @@
                         <td height="50" bgcolor="#1e387b"><center>
                             <table width="900" border="0" cellspacing="0" cellpadding="0" style="color:#cedbff;">
                                 <tbody><tr>
-                                    <!-- <td><Center>What is the Aussie Method?</Center></td>-->
+                                    <!-- <td><Center>What is the Oxford Method?</Center></td>-->
                                     <td><center>
                                         <a href="#start" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Getting Started</a>
                                     </center></td>
@@ -96,7 +99,7 @@
                             <div style="float:left; width:33%; text-align: center;vertical-align:middle;padding-top: 20px;">
                                 <div class="plan-features">
                                     <p>&nbsp;</p>
-                                    <p><span style="font-size:19px; font-family: 'Cabin', sans-serif;">Jake Pertu - Aussie Method Founder<br>
+                                    <p><span style="font-size:19px; font-family: 'Cabin', sans-serif;">Evan Wright - Oxford Method Founder<br>
                   <strong>Profit To Date: <u>$2,187,612.00</u> </strong></span><br>
                                         <br>
                                         <strong><a href="#customers" onclick="tbox0();" style="font-family: 'Cabin', sans-serif; font-size:40px; line-height:1; color:#1e387b;">Click Here To View <br>
@@ -124,8 +127,8 @@
                             <div style="float:left; width:33%; text-align: center;vertical-align:middle;padding-top: 20px;">
                                 <div class="plan-features">
                                     <p>&nbsp;</p>
-                                    <p><span style="font-size:19px; font-family: 'Cabin', sans-serif;">NUALA GATHERCOLE  <br>
-                  Start Date: 19th May 2015<br>
+                                    <p><span style="font-size:19px; font-family: 'Cabin', sans-serif;">EMILY MICHAELS <br>
+                  Start Date: 19th January 2016<br>
                   <strong>Profit To Date: <u>$212,450.00</u> </strong></span><br>
                                         <br>
                                         <strong><a href="#customers" onclick="tbox1();" style="font-family: 'Cabin', sans-serif; font-size:40px; line-height:1; color:#1e387b;">Click Here To View <br>
@@ -149,8 +152,8 @@
                             <div style="float:left; width:33%; text-align: center;vertical-align:middle;padding-top: 20px;">
                                 <div class="plan-features">
                                     <p>&nbsp;</p>
-                                    <p><span style="font-size:19px; font-family: 'Cabin', sans-serif;">JAMES TAYLOR <br>
-                  Start Date: 28th May 2015<br>
+                                    <p><span style="font-size:19px; font-family: 'Cabin', sans-serif;">ROSS ROBERTSON <br>
+                  Start Date: 28th December 2015<br>
                   <strong>Profit To Date: <u>$196,201.00</u> </strong></span><br>
                                         <br>
                                         <strong><a href="#customers" onclick="tbox2();" style="font-family: 'Cabin', sans-serif; font-size:40px; line-height:1; color:#1e387b;">Click Here To View <br>
@@ -174,7 +177,7 @@
                             <div style="float:left; width:33%; text-align: center;vertical-align:middle;padding-top: 20px;">
                                 <div class="plan-features">
                                     <p>&nbsp;</p>
-                                    <p><span style="font-size:19px; font-family: 'Cabin', sans-serif;">DEMETRIS BELL <br>
+                                    <p><span style="font-size:19px; font-family: 'Cabin', sans-serif;">MARCUS ANDREWS <br>
                   Start Date: 2nd June 2015<br>
                   <strong>Profit To Date: <u>$103,870.00</u> </strong></span><br>
                                         <br>
@@ -212,29 +215,54 @@
                                         </div>
                                     </div>
                                     <script>
+                                        /*
                                         var nm = ["Harvey","Christopher","David","Morgan","Jason","Travis","Charlie","Robert","Henry","Kieran","Charles","Joseph","Ellis","Billy","Andrew","Johnny","George","Sebastian","Cameron","Tory","Joel","Adam","Bryce","Dwayne","Vincent","Leon","Aidan","Aidan","David","Jacob","Ben","Alex","Enrique","Dennis","Nathan","Charles","Robert","Alfie","Dominic","Leon","John","Daniel","Charles","Romeo","Noah","Anthony","James","Mohammed","Louis","Joseph","Ellis","Kai","Jay","Noah","Lewis","Anthony","Jamie","Elliot","Ronald","Troy","Reece","Richard","Joel","Callum","Jack","Richard","Nicholas","Cameron","Harry","William","Lyle","Frank","Norman","Anthony","Morgan","Geoffrey","Alejandro","Zak","Anthony","Kieran","Ross","Paul","Sam","Richard","Michael","Roger","Charles","Reece","Brandon","Robert","Luca","Harrison","Ryan","Taylor","Frank","Larry","Billy","Sam","Finlay","Zara","Georgia","Sylvie","Kiera","Margaret","Patria","Ava","Diane","Skye","Helen","Jennifer","Isabella","Faith","Jessica","Penny","Rebecca","Summer","Tamara","Tamika","Magdalene","Wendy","Genevieve","Stephanie","Erin","Abby","Ann","Abbie","Leigh","Shanna","Tilly","Laura","Mary","Paula","Isabel","Ella","Tatiana","Mary","Tegan","Cynthia","Abigail","Lauren","Laura","Katherine","Naomi","Barbara","Melisa","Pamela","Leeann","Jodie","Terri","Caitlin","Roberta","Daisy","Molly","Frieda","Louise","Elizabeth","Stella","Billie","Gracie","Sienna","Katie","Mildred","Kayleigh","Christy","Kiera","Yun","Courtney","Tegan","Sheila","Ray","Lydia","Mamie","Keira","Matilda","Sonya","Ava","Cerys","Eleanor","Grace","Jodie","Sharon","Elva","Eleanor","Freya","Bessie","Sofia","Amelie","Brenda","Poppy","Tegan","Sienna","Leah","Antoinette","Zoe"];
                                         var data = [
-                                            "Wow this might sound cheesy but I LOVE you guys <b class='p-nickname'>Aussie Method</b> the ONLY system u need for making money online makemoney Aussie Method awesome",
-                                            "How long until the money hits my account from my broker account? <b class='p-nickname'>Aussie Method</b> Just withdrawn 5 figures 5figureprofits profits awesome",
-                                            "This is like printing money...For Real Take it off the market <b class='p-nickname'>Aussie Method</b> dont want others getting their hands on this selfish",
-                                            "Celebrating another profitable day using the <b class='p-nickname'>Aussie Method</b> not had a losing day yet",
-                                            "Brilliant stuff, u guys are the bomb <b class='p-nickname'>Aussie Method</b> First trade today and just made $389.11 profit moreprofits Aussie Method",
-                                            "Awesome system, made over $2000 in my first 2 hours using the <b class='p-nickname'>Aussie Method</b> system",
-                                            "Thank You Thank You Thank You <b class='p-nickname'>Aussie Method</b>",
-                                            "Holy crap, this is amazing, I've made $7,891.32 on my very first day using the verified trader system <b class='p-nickname'>Aussie Method</b> system binary amazing",
-                                            "<b class='p-nickname'>Aussie Method</b> Sup guys, super sick system u got here",
-                                            "Deposited $250 <b class='p-nickname'>Aussie Method</b> with the verified trader system now my account sits at over $30k in just a week Lovethis millionairestatus",
-                                            "At last a legit binary system <b class='p-nickname'>Aussie Method</b>",
-                                            "Can't thank you guys enough <b class='p-nickname'>Aussie Method</b> been scammed so many times before but this really is the real deal",
-                                            "Thanks to <b class='p-nickname'>Aussie Method</b> for finally making a binary system that really works amazing makemoney",
-                                            "<b class='p-nickname'>Aussie Method</b> Already up over $3800 and the day is still young",
-                                            "Just made $868.44 in a single trade <b class='p-nickname'>Aussie Method</b>",
-                                            "<b class='p-nickname'>Aussie Method</b> Just made $918.88 in 34 minutes",
-                                            "what is happening?? My account now sits at $23,891.44 I only deposited $300 4 days ago, this is insane <b class='p-nickname'>Aussie Method</b>",
-                                            "Thanks support for solving my small problem, looking forward to making lots of cash with this cash thanks Aussie Method support <b class='p-nickname'>Aussie Method</b>",
-                                            "WTF.... Thank You This thing is awesome <b class='p-nickname'>Aussie Method</b>"];
+                                            "Wow this might sound cheesy but I LOVE you guys <b class='p-nickname'>Oxford Method</b> the ONLY system u need for making money online makemoney Oxford Method awesome",
+                                            "How long until the money hits my account from my broker account? <b class='p-nickname'>Oxford Method</b> Just withdrawn 5 figures 5figureprofits profits awesome",
+                                            "This is like printing money...For Real Take it off the market <b class='p-nickname'>Oxford Method</b> dont want others getting their hands on this selfish",
+                                            "Celebrating another profitable day using the <b class='p-nickname'>Oxford Method</b> not had a losing day yet",
+                                            "Brilliant stuff, u guys are the bomb <b class='p-nickname'>Oxford Method</b> First trade today and just made $389.11 profit moreprofits Oxford Method",
+                                            "Awesome system, made over $2000 in my first 2 hours using the <b class='p-nickname'>Oxford Method</b> system",
+                                            "Thank You Thank You Thank You <b class='p-nickname'>Oxford Method</b>",
+                                            "Holy crap, this is amazing, I've made $7,891.32 on my very first day using the verified trader system <b class='p-nickname'>Oxford Method</b> system binary amazing",
+                                            "<b class='p-nickname'>Oxford Method</b> Sup guys, super sick system u got here",
+                                            "Deposited $250 <b class='p-nickname'>Oxford Method</b> with the verified trader system now my account sits at over $30k in just a week Lovethis millionairestatus",
+                                            "At last a legit binary system <b class='p-nickname'>Oxford Method</b>",
+                                            "Can't thank you guys enough <b class='p-nickname'>Oxford Method</b> been scammed so many times before but this really is the real deal",
+                                            "Thanks to <b class='p-nickname'>Oxford Method</b> for finally making a binary system that really works amazing makemoney",
+                                            "<b class='p-nickname'>Oxford Method</b> Already up over $3800 and the day is still young",
+                                            "Just made $868.44 in a single trade <b class='p-nickname'>Oxford Method</b>",
+                                            "<b class='p-nickname'>Oxford Method</b> Just made $918.88 in 34 minutes",
+                                            "what is happening?? My account now sits at $23,891.44 I only deposited $300 4 days ago, this is insane <b class='p-nickname'>Oxford Method</b>",
+                                            "Thanks support for solving my small problem, looking forward to making lots of cash with this cash thanks Oxford Method support <b class='p-nickname'>Oxford Method</b>",
+                                            "WTF.... Thank You This thing is awesome <b class='p-nickname'>Oxford Method</b>"];
 
                                         var images = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg","12.jpg","13.jpg","14.jpg","15.jpg","16.jpg","17.jpg","18.jpg","19.jpg","20.jpg","21.jpg","22.jpg","23.jpg","24.jpg","25.jpg","26.jpg","27.jpg","28.jpg","29.jpg","30.jpg","31.jpg","32.jpg","33.jpg","34.jpg","35.jpg","36.jpg","37.jpg","38.jpg","39.jpg","40.jpg","41.jpg","42.jpg","43.jpg","44.jpg","45.jpg","46.jpg","47.jpg","48.jpg","49.jpg","50.jpg","51.jpg","52.jpg","53.jpg","54.jpg","55.jpg","56.jpg","57.jpg","58.jpg","59.jpg","60.jpg","61.jpg","62.jpg","63.jpg","64.jpg","65.jpg","66.jpg","67.jpg","68.jpg","69.jpg","70.jpg","71.jpg","72.jpg","73.jpg","74.jpg","75.jpg","76.jpg","77.jpg","78.jpg","79.jpg","80.jpg","81.jpg","82.jpg","83.jpg","84.jpg","85.jpg","86.jpg","87.jpg","88.jpg","89.jpg","90.jpg","91.jpg","92.jpg","93.jpg","94.jpg","95.jpg","96.jpg","97.jpg","98.jpg","99.jpg","1(1).jpg","2(1).jpg","3(1).jpg","4(1).jpg","5(1).jpg","6(1).jpg","7(1).jpg","8(1).jpg","9(1).jpg","10(1).jpg","11(1).jpg","12(1).jpg","13(1).jpg","14(1).jpg","15(1).jpg","16(1).jpg","17(1).jpg","18(1).jpg","19(1).jpg","20(1).jpg","21(1).jpg","22(1).jpg","23(1).jpg","24(1).jpg","25(1).jpg","26(1).jpg","27(1).jpg","28(1).jpg","29(1).jpg","30(1).jpg","31(1).jpg","32(1).jpg","33(1).jpg","34(1).jpg","35(1).jpg","36(1).jpg","37(1).jpg","38(1).jpg","39(1).jpg","40(1).jpg","41(1).jpg","42(1).jpg","43(1).jpg","44(1).jpg","45(1).jpg","46(1).jpg","47(1).jpg","48(1).jpg","49(1).jpg","50(1).jpg","51(1).jpg","52(1).jpg","53(1).jpg","54(1).jpg","55(1).jpg","56(1).jpg","57(1).jpg","58(1).jpg","59(1).jpg","60(1).jpg","61(1).jpg","62(1).jpg","63(1).jpg","64(1).jpg","65(1).jpg","66(1).jpg","67(1).jpg","68(1).jpg","69(1).jpg","70(1).jpg","71(1).jpg","72(1).jpg","73(1).jpg","74(1).jpg","75(1).jpg","76(1).jpg","77(1).jpg","78(1).jpg","79(1).jpg","80(1).jpg","81(1).jpg","82(1).jpg","83(1).jpg","84(1).jpg","85(1).jpg","86(1).jpg","87(1).jpg","88(1).jpg","89(1).jpg","90(1).jpg","91(1).jpg","92(1).jpg","93(1).jpg","94(1).jpg","95(1).jpg"];
+                                        */
+
+
+                                        var nm = ["Tad","Jordan","Emily","Jeremy","Natalie","Bailey","Darryl","Bryce","Steven","Arthur","David","Devon","Ian","Lauren","Paige","","","","",];
+                                        var data = [
+                                            "I love how simple it was to make $800 in 45 minutes!",
+                                            "I LOVE the Oxford Method the ONLY system! I just wish you’d tell fewer people, so I could keep the secret all to myself.",
+                                            "I can’t wait until my withdrawal hit my bank account. 10 figure profits within one week!",
+                                            "I’ve made $3500 today, and it’s hours before quitting time. Oxford Method is the best!",
+                                            "This system is crazy! Every day I keep raking in more money with the Oxford Method.",
+                                            "I just started, and I’m already hooked. I made $$5500 my first day!",
+                                            "I can’t say thank you enough for everything the Oxford Method support team has done for me ! You’ve really helped me out, guys.",
+                                            "I’m glad I finally found a system that works. No more scams for me! I made over $500 on my first trade.",
+                                            "@Oxfordmethod Already up over $3800 and the day is still young",
+                                            "Just made $868.44 in a single trade @Oxfordmethod",
+                                            "At last a legit binary system @Oxfordmethod",
+                                            "Holy crap, this is amazing, I've made $7,891.32 on my very first day using the verified trader system @Oxfordmethod #system #binary #amazing",
+                                            "At last a legit binary system @Oxfordmethod",
+                                            "@Oxfordmethod Already up over $3800 and the day is still young",
+                                            "Holy crap, this is amazing, I've made $7,891.32 on my very first day using the verified trader system @Oxfordmethod #system #binary #amazing",
+                                            "Wow this might sound cheesy but I LOVE you guys @Oxfordmethod the ONLY system u need for making money online #makemoney #Oxfordmethod #awesome",
+                                        ];
+
+                                        var images = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg","12.jpg","13.jpg","14.jpg","15.jpg","16.jpg"];
 
 
                                         setInterval('autoRefresh()',60000);
@@ -290,25 +318,25 @@
                                     <script>
                                         var nm = ["Harvey","Christopher","David","Morgan","Jason","Travis","Charlie","Robert","Henry","Kieran","Charles","Joseph","Ellis","Billy","Andrew","Johnny","George","Sebastian","Cameron","Tory","Joel","Adam","Bryce","Dwayne","Vincent","Leon","Aidan","Aidan","David","Jacob","Ben","Alex","Enrique","Dennis","Nathan","Charles","Robert","Alfie","Dominic","Leon","John","Daniel","Charles","Romeo","Noah","Anthony","James","Mohammed","Louis","Joseph","Ellis","Kai","Jay","Noah","Lewis","Anthony","Jamie","Elliot","Ronald","Troy","Reece","Richard","Joel","Callum","Jack","Richard","Nicholas","Cameron","Harry","William","Lyle","Frank","Norman","Anthony","Morgan","Geoffrey","Alejandro","Zak","Anthony","Kieran","Ross","Paul","Sam","Richard","Michael","Roger","Charles","Reece","Brandon","Robert","Luca","Harrison","Ryan","Taylor","Frank","Larry","Billy","Sam","Finlay","Zara","Georgia","Sylvie","Kiera","Margaret","Patria","Ava","Diane","Skye","Helen","Jennifer","Isabella","Faith","Jessica","Penny","Rebecca","Summer","Tamara","Tamika","Magdalene","Wendy","Genevieve","Stephanie","Erin","Abby","Ann","Abbie","Leigh","Shanna","Tilly","Laura","Mary","Paula","Isabel","Ella","Tatiana","Mary","Tegan","Cynthia","Abigail","Lauren","Laura","Katherine","Naomi","Barbara","Melisa","Pamela","Leeann","Jodie","Terri","Caitlin","Roberta","Daisy","Molly","Frieda","Louise","Elizabeth","Stella","Billie","Gracie","Sienna","Katie","Mildred","Kayleigh","Christy","Kiera","Yun","Courtney","Tegan","Sheila","Ray","Lydia","Mamie","Keira","Matilda","Sonya","Ava","Cerys","Eleanor","Grace","Jodie","Sharon","Elva","Eleanor","Freya","Bessie","Sofia","Amelie","Brenda","Poppy","Tegan","Sienna","Leah","Antoinette","Zoe"];
                                         var data = [
-                                            "Wow this might sound cheesy but I LOVE you guys @<b class='p-nickname'>aussiemethod</b> the ONLY system u need for making money online #makemoney #aussiemethod #awesome",
-                                            "How long until the money hits my account from my broker account? @<b class='p-nickname'>aussiemethod</b> Just withdrawn 5 figures #5figureprofits #profits #awesome",
-                                            "This is like printing money...For Real Take it off the market @<b class='p-nickname'>aussiemethod</b> dont want others getting their hands on this #selfish",
-                                            "Celebrating another profitable day using the @<b class='p-nickname'>aussiemethod</b> not had a losing day yet",
-                                            "Brilliant stuff, u guys are the bomb @<b class='p-nickname'>aussiemethod</b> First trade today and just made $389.11 profit #moreprofits #aussiemethod",
-                                            "Awesome system, made over $2000 in my first 2 hours using the @<b class='p-nickname'>aussiemethod</b> system",
-                                            "Thank You Thank You Thank You @<b class='p-nickname'>aussiemethod</b>",
-                                            "Holy crap, this is amazing, I've made $7,891.32 on my very first day using the verified trader system @<b class='p-nickname'>aussiemethod</b> #system #binary #amazing",
-                                            "@<b class='p-nickname'>aussiemethod</b> Sup guys, super sick system u got here",
-                                            "Deposited $250 @<b class='p-nickname'>aussiemethod</b> with the verified trader system now my account sits at over $30k in just a week #Lovethis #millionairestatus",
-                                            "At last a legit binary system @<b class='p-nickname'>aussiemethod</b>",
-                                            "Can't thank you guys enough @<b class='p-nickname'>aussiemethod</b> been scammed so many times before but this really is the real deal",
-                                            "Thanks to @<b class='p-nickname'>aussiemethod</b> for finally making a binary system that really works #amazing #makemoney",
-                                            "@<b class='p-nickname'>aussiemethod</b> Already up over $3800 and the day is still young",
-                                            "Just made $868.44 in a single trade @<b class='p-nickname'>aussiemethod</b>",
-                                            "@<b class='p-nickname'>aussiemethod</b> Just made $918.88 in 34 minutes",
-                                            "what is happening?? My account now sits at $23,891.44 I only deposited $300 4 days ago, this is insane @<b class='p-nickname'>aussiemethod</b>",
-                                            "Thanks support for solving my small problem, looking forward to making lots of cash with this #cash #thanks #aussiemethod support @<b class='p-nickname'>aussiemethod</b>",
-                                            "WTF.... Thank You This thing is awesome @<b class='p-nickname'>aussiemethod</b>"];
+                                            "Wow this might sound cheesy but I LOVE you guys @<b class='p-nickname'>oxfordmethod</b> the ONLY system u need for making money online #makemoney #oxfordmethod #awesome",
+                                            "How long until the money hits my account from my broker account? @<b class='p-nickname'>oxfordmethod</b> Just withdrawn 5 figures #5figureprofits #profits #awesome",
+                                            "This is like printing money...For Real Take it off the market @<b class='p-nickname'>oxfordmethod</b> dont want others getting their hands on this #selfish",
+                                            "Celebrating another profitable day using the @<b class='p-nickname'>oxfordmethod</b> not had a losing day yet",
+                                            "Brilliant stuff, u guys are the bomb @<b class='p-nickname'>oxfordmethod</b> First trade today and just made $389.11 profit #moreprofits #oxfordmethod",
+                                            "Awesome system, made over $2000 in my first 2 hours using the @<b class='p-nickname'>oxfordmethod</b> system",
+                                            "Thank You Thank You Thank You @<b class='p-nickname'>oxfordmethod</b>",
+                                            "Holy crap, this is amazing, I've made $7,891.32 on my very first day using the verified trader system @<b class='p-nickname'>oxfordmethod</b> #system #binary #amazing",
+                                            "@<b class='p-nickname'>oxfordmethod</b> Sup guys, super sick system u got here",
+                                            "Deposited $250 @<b class='p-nickname'>oxfordmethod</b> with the verified trader system now my account sits at over $30k in just a week #Lovethis #millionairestatus",
+                                            "At last a legit binary system @<b class='p-nickname'>oxfordmethod</b>",
+                                            "Can't thank you guys enough @<b class='p-nickname'>oxfordmethod</b> been scammed so many times before but this really is the real deal",
+                                            "Thanks to @<b class='p-nickname'>oxfordmethod</b> for finally making a binary system that really works #amazing #makemoney",
+                                            "@<b class='p-nickname'>oxfordmethod</b> Already up over $3800 and the day is still young",
+                                            "Just made $868.44 in a single trade @<b class='p-nickname'>oxfordmethod</b>",
+                                            "@<b class='p-nickname'>oxfordmethod</b> Just made $918.88 in 34 minutes",
+                                            "what is happening?? My account now sits at $23,891.44 I only deposited $300 4 days ago, this is insane @<b class='p-nickname'>oxfordmethod</b>",
+                                            "Thanks support for solving my small problem, looking forward to making lots of cash with this #cash #thanks #oxfordmethod support @<b class='p-nickname'>oxfordmethod</b>",
+                                            "WTF.... Thank You This thing is awesome @<b class='p-nickname'>oxfordmethod</b>"];
 
                                         var images = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg","12.jpg","13.jpg","14.jpg","15.jpg","16.jpg","17.jpg","18.jpg","19.jpg","20.jpg","21.jpg","22.jpg","23.jpg","24.jpg","25.jpg","26.jpg","27.jpg","28.jpg","29.jpg","30.jpg","31.jpg","32.jpg","33.jpg","34.jpg","35.jpg","36.jpg","37.jpg","38.jpg","39.jpg","40.jpg","41.jpg","42.jpg","43.jpg","44.jpg","45.jpg","46.jpg","47.jpg","48.jpg","49.jpg","50.jpg","51.jpg","52.jpg","53.jpg","54.jpg","55.jpg","56.jpg","57.jpg","58.jpg","59.jpg","60.jpg","61.jpg","62.jpg","63.jpg","64.jpg","65.jpg","66.jpg","67.jpg","68.jpg","69.jpg","70.jpg","71.jpg","72.jpg","73.jpg","74.jpg","75.jpg","76.jpg","77.jpg","78.jpg","79.jpg","80.jpg","81.jpg","82.jpg","83.jpg","84.jpg","85.jpg","86.jpg","87.jpg","88.jpg","89.jpg","90.jpg","91.jpg","92.jpg","93.jpg","94.jpg","95.jpg","96.jpg","97.jpg","98.jpg","99.jpg","1(1).jpg","2(1).jpg","3(1).jpg","4(1).jpg","5(1).jpg","6(1).jpg","7(1).jpg","8(1).jpg","9(1).jpg","10(1).jpg","11(1).jpg","12(1).jpg","13(1).jpg","14(1).jpg","15(1).jpg","16(1).jpg","17(1).jpg","18(1).jpg","19(1).jpg","20(1).jpg","21(1).jpg","22(1).jpg","23(1).jpg","24(1).jpg","25(1).jpg","26(1).jpg","27(1).jpg","28(1).jpg","29(1).jpg","30(1).jpg","31(1).jpg","32(1).jpg","33(1).jpg","34(1).jpg","35(1).jpg","36(1).jpg","37(1).jpg","38(1).jpg","39(1).jpg","40(1).jpg","41(1).jpg","42(1).jpg","43(1).jpg","44(1).jpg","45(1).jpg","46(1).jpg","47(1).jpg","48(1).jpg","49(1).jpg","50(1).jpg","51(1).jpg","52(1).jpg","53(1).jpg","54(1).jpg","55(1).jpg","56(1).jpg","57(1).jpg","58(1).jpg","59(1).jpg","60(1).jpg","61(1).jpg","62(1).jpg","63(1).jpg","64(1).jpg","65(1).jpg","66(1).jpg","67(1).jpg","68(1).jpg","69(1).jpg","70(1).jpg","71(1).jpg","72(1).jpg","73(1).jpg","74(1).jpg","75(1).jpg","76(1).jpg","77(1).jpg","78(1).jpg","79(1).jpg","80(1).jpg","81(1).jpg","82(1).jpg","83(1).jpg","84(1).jpg","85(1).jpg","86(1).jpg","87(1).jpg","88(1).jpg","89(1).jpg","90(1).jpg","91(1).jpg","92(1).jpg","93(1).jpg","94(1).jpg","95(1).jpg"];
 
@@ -374,7 +402,7 @@
                                     <table class="table table-striped table-bordered shadowed table-hover" id="positionsHistoryTable" style="background-color:#FFF;" bgcolor="#FFFFFF" width="820px">
                                         <thead>
                                         <tr>
-                                            <th background="/img/aussie-uk/topb.png"><font style="font-family: 'Cabin', sans-serif;; color:#000 !important;"><center>Aussie Method Member</center></font></th>
+                                            <th background="/img/aussie-uk/topb.png"><font style="font-family: 'Cabin', sans-serif;; color:#000 !important;"><center>Oxford Method Member</center></font></th>
                                             <th background="/img/aussie-uk/topb.png"><font style="font-family: 'Cabin', sans-serif;; color:#000 !important;"><center>Profit</center></font></th>
                                             <th background="/img/aussie-uk/topb.png"><font style="font-family: 'Cabin', sans-serif;; color:#000 !important;"><center>Trade Time</center></font></th>
                                             <th background="/img/aussie-uk/topb.png"><font style="font-family: 'Cabin', sans-serif;; color:#000 !important;"><center>
@@ -496,10 +524,10 @@
                     </center>
                     <div class="FAQ-pan">
                         <div class="q-section"> <img alt="" src="/img/aussie-uk/plus-icon.png">
-                            <p>What is the Aussie Method?</p>
+                            <p>What is the Oxford Method?</p>
                         </div>
                         <div class="a-section" style="display: block;">
-                            <p>The Aussie Method is a 100% FREE software that will trade on the binary options markets with just 1 click! It's fully automated and places the winning trades for you!</p>
+                            <p>The Oxford Method is a 100% FREE software that will trade on the binary options markets with just 1 click! It's fully automated and places the winning trades for you!</p>
                         </div>
                         <div class="q-section"> <img alt="" src="/img/aussie-uk/plus-icon.png">
                             <p>How much money can I make  with this software?</p>
@@ -517,7 +545,7 @@
                             <p>Do I need to use my credit card when I signup?</p>
                         </div>
                         <div class="a-section" style="display: block;">
-                            <p><u><strong>NO WAY</strong></u>. The Aussie Method App is 100% FREE. You will NOT be asked for your credit card or paypal or bank information when you download the Aussie Method System!</p>
+                            <p><u><strong>NO WAY</strong></u>. The Oxford Method App is 100% FREE. You will NOT be asked for your credit card or paypal or bank information when you download the Oxford Method System!</p>
                             <p>&nbsp;</p>
                             <p>Once you are in the members area, we will recommend a binary options broker that you can exploit. For this, you'll need funds to deposit in order to start making profits. This is YOUR money that you are just depositing to trade with, and you can withdraw it at any time!</p>
                         </div>
@@ -528,7 +556,7 @@
                             <p>Yes! It is a web based application which means it can be used on Windows, Mac or Linux based systems! You just need a web browser.</p>
                         </div>
                         <div class="q-section"> <img alt="" src="/img/aussie-uk/plus-icon.png">
-                            <p>I don't have much free time - Is the Aussie Method really automated?</p>
+                            <p>I don't have much free time - Is the Oxford Method really automated?</p>
                         </div>
                         <div class="a-section" style="display: block;">
                             <p><strong>YES!</strong> You simply click play in the software and it will trade for you! You can walk away from your computer, and enjoy your profits! You don't have to be anywhere near the software for it to work for you and make you thousands per day! </p>
@@ -549,26 +577,35 @@
                 </center>
                 <p style="font-family: 'Cabin', sans-serif; font-size:46px; color:#1e387b">&nbsp;</p>
                 <p style="font-family: 'Cabin', sans-serif; font-size:46px; color:#1e387b">&nbsp;</p>
-                <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#1e387b" style="color:#090;">
-                    <tbody><tr>
-                        <td height="50" bgcolor="#1e387b"><center>
-                            <table class="footer" width="880" border="0" cellspacing="0" cellpadding="0" style="color:#cedbff;">
-                                <tbody><tr>
-                                    <!-- <td><Center>What is the Aussie Method?</Center></td>-->
-                                    <td><center>
-                                        Copyright 2015 Aussie Method. All Right Reserved.
-                                    </center></td>
-                                    <td><center>
-                                            @include('funnels.layouts._partials._link', ['page' => \App\Page::find(78), 'text'=>'Privacy', 'target'=>'_blank'])
-                                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(78), 'target'=>'_blank'])
-                                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(78), 'text'=>'Disclaimer', 'target'=>'_blank'])
-                                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(78), 'text'=>'Support', 'target'=>'_blank'])
-                                    </center></td>
-                                </tr>
-                                </tbody></table>
-                        </center></td>
-                    </tr>
-                    </tbody></table></strong></center></td>
+
+
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#1e387b" style="color:#090;">
+                            <tbody><tr>
+                                <td height="50" bgcolor="#1e387b" align="center">
+                                    <table class="footer" width="880" border="0" cellspacing="0" cellpadding="0" style="color:#cedbff;">
+                                        <tbody>
+                                        <tr>
+                                            <td align="left">
+                                                Copyright 2016 Oxford Method. All Right Reserved.
+                                            </td>
+                                            <td align="right">
+                                                @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/../policy", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Privacy'])
+                                                 |
+                                                @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/../terms", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Terms'])
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+
+
+
+
+                    </strong></center></td>
         </tr>
         </tbody></table>
 
@@ -593,15 +630,19 @@
 
         <h4 align="center"><strong class="grey">Average Profit Per Hour: $1,700</strong></h4>
 
-        <iframe src="/aussie/results" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+        <iframe src="/Oxford/results" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
     </div>
     <div id="tb0" class="popup" style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
         <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;" onClick="closex()">X</div>
 
         <h4 align="center"><strong class="grey">Average Profit Per Hour: $3,760</strong></h4>
 
-        <iframe src="/aussie/results" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+        <iframe src="/Oxford/results" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
     </div>
     <div id="hoverbox" style="display: none; filter: alpha(opacity=60); KHTMLOpacity: 0.60; MozOpacity: 0.60; opacity: 0.60; position: fixed;background-color: #000000; z-index:0; width: 100%; height: 100%; left: 0px; top:0px;" onClick="closex()"></div>
+
+
+
+
 
 @endsection

@@ -45,7 +45,9 @@
     if(typeof loadingMsg == 'undefined')
         loadingMsg = '<div class="loading">Processing, please wait...<br/><i class="fa fa-refresh fa-spin"></i></div>';
 
-    $('#form').on('submit', function(e){ console.log('clicked'); PreventExitSplash = true; e.preventDefault();}).validate({
+
+    var sms_validated = false;
+    $('#form').on('submit', function(e){ return false; console.log('clicked'); PreventExitSplash = true; e.preventDefault();}).validate({
         @if($form->switches->phoneLibCheck)
         rules : {
             phone : { phoneLibCheck : true }
@@ -59,7 +61,13 @@
                 data: $(form).serialize(),
 
                 beforeSend: function(){
-                    console.log('loading...');
+                    @if($page->getParent()->switches->showSmsField)
+                        if (!sms_validated) {
+                            sendSMS();
+                            return false;
+                        }
+                    @endif
+
                     $(form).after(loadingMsg);
                     $(form).find('input').addClass('visible-hidden');
                     if($(form).find('button').length)

@@ -15,7 +15,7 @@
             @include('funnels.layouts._partials._video')
         </div>
 
-        {!! Form::open(['url' => url('postEmailForm'), 'method'=>'post']) !!}
+        {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post']) !!}
         <input type="hidden" name="pageId" value="{{ $page->id }}">
         <button class="submit en"><span>@ln(FREE DOWNLOAD)</span></button>
         {!! Form::close() !!}

@@ -34,6 +34,16 @@ class FormController extends Controller {
     }
 
     public function postForm(){
+            $funnelPage = \App\Page::find(Request::get('parentPage'));
+
+            if($funnelPage->getParent()->switches->showSmsField) {
+                if (!SmsController::isSmsVerified()) {
+                    $res = ['err'=>1, 'errs' =>['error'=>'wrongSmsCode']];
+                    die(json_encode($res));
+                }
+                \Session::forget('SMS_CODE');
+            }
+
             $res = SpotApi::sendRequest('Customer', 'add', Request::all());
 
             if($res['err'] === 0){
@@ -62,7 +72,7 @@ class FormController extends Controller {
         return $destenation.$append;
     }
 
-    public function postEmailForm(){
+    public function postEmailForm($lang = 'en'){
         $res['err'] = 1;
         $res['msg'] = 'Please try again later.';
 
@@ -82,6 +92,8 @@ class FormController extends Controller {
                 $res['errs']['error'] = $res['msg'] = Languages::getTrans($errMsg);
             }
         }
+
+        session('local')->code = $lang;
 
         if($res['err'] === 0)
             $res['destination'] = $this->getDestinationByPageId(Request::get('pageId'));
@@ -121,8 +133,6 @@ class FormController extends Controller {
         $append = Request::all();
         unset($append['_token']);
         unset($append['pageId']);
-
-        // Get destenation from funnel children.
 
         // new code for lang support
         return '/'.session('local')->code.'/'.$page->getFirstChild()->fullSlug().'?'.http_build_query($append);

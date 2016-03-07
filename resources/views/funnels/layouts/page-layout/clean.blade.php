@@ -19,7 +19,7 @@
             </video>--}}
             @include('funnels.layouts._partials._video',  ['w'=>640, 'h'=>360])
 
-            {!! Form::open(['url' => url('postEmailForm').'?'.$_SERVER["QUERY_STRING"], 'method'=>'post']) !!}
+            {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post']) !!}
             {{--<form method="post" action="{{url('postEmailForm').'?'.$_SERVER["QUERY_STRING"]}}" align="center">--}}
             {{--<form id="firstPage" action="@include('funnels.layouts._partials._url',['url'=>$page->getFirstChild()->fullSlug().'?'.$_SERVER["QUERY_STRING"]])" align="center">--}}
                 <input type="hidden" name="pageId" value="{{ $page->id }}">

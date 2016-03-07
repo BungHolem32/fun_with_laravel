@@ -25,13 +25,17 @@
     <!-- need to move all this to appropriate .css .js files -->
 
     <style>
+
+        .error {
+            color: red;
+        }
         #back-to-top {
             position: fixed;
             bottom: 40px;
             right: 40px;
             z-index: 9999;
-            width: 32px;
-            height: 32px;
+            width: 60px;
+            height: 60px;
             text-align: center;
             line-height: 30px;
             background: #f5f5f5;
@@ -42,6 +46,9 @@
             text-decoration: none;
             transition: opacity 0.2s ease-out;
             opacity: 0;
+            font-size: 50px;
+            padding-top: 10px;
+            font-weight: bolder;
         }
         #back-to-top:hover {
             background: #e9ebec;
@@ -52,12 +59,23 @@
         #content {
             height: 2000px;
         }
+        .fancybox_iframe {
+            font-size: 11px;;
+        }
 
     </style>
 
     <script>
         // need to put in js file all of this
         $("a.fancybox").fancybox();
+
+        $(document).on('click', '.fancybox_iframe', function(e) {
+            e.preventDefault();
+            $.fancybox({
+                href : $(this).attr('href'),
+                type : 'iframe'
+            });
+        });
 
         if ($('#back-to-top').length) {
             var scrollTrigger = 100, // px
@@ -102,7 +120,7 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="0" background="/img/aussie-uk/bg.png">
         <tr>
             <td height="134" valign="top"><center>
-                    <a name="startnow"></a><img src="/img/aussie-uk/tit.png" width="790" height="103" style="padding-bottom:-10px;">
+                    <a name="startnow"></a><img src="/img/aussie-uk/tit.png" width="970" height="108" style="padding-bottom:-10px;">
                 </center></td>
         </tr>
     </table>
@@ -129,7 +147,7 @@
                     <p style="font-family: 'Cabin', sans-serif;">Enter your email below to gain instant <br>
                         free access to the Oxford Method system</p>
                     <br>
-                    {!! Form::open(['url' => url('postEmailForm').'?'.$_SERVER["QUERY_STRING"], 'method'=>'post','align'=>'center']) !!}
+                    {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post','align'=>'center']) !!}
                     <input type="hidden" name="pageId" value="{{ $page->id }}">
                     @if($page->switches->showEmailField)
                         <input id="firstPageSignUpMail" type="email" name="email" placeholder="YOUR EMAIL ADDRESS.." required="required" style="width:300px; text-align:center;" />
@@ -447,31 +465,21 @@
     </Center>
     <p style="font-family: 'Cabin', sans-serif; font-size:46px; color:#1e387b">&nbsp;</p>
     <p style="font-family: 'Cabin', sans-serif; font-size:46px; color:#1e387b">&nbsp;</p>
+
     <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#1e387b" style="color:#090;">
         <tr>
-            <td height="50" bgcolor="#1e387b"><center>
-                    <table class="footer" width="880" border="0" cellspacing="0" cellpadding="0" style="color:#cedbff;">
-                        <tr>
-                            <!-- <td><Center>What is the Oxford Method?</Center></td>-->
-                            <td><Center>
-                                    Copyright 2015 Oxford Method. All Right Reserved.
-                                </Center></td>
-                            <td>
-                                <Center>
-                                    <?php
-                                    /*
-                                  @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Privacy', 'target'=>'_blank'])
-                                | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'target'=>'_blank'])
-                                | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Disclaimer', 'target'=>'_blank'])
-                                | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Support', 'target'=>'_blank'])
-                                     */
-                                    ?>
-                                    @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Terms', 'target'=>'_blank'])
-                                </Center>
-                            </td>
-                        </tr>
-                    </table>
-                </center></td>
+            <td height="50" bgcolor="#1e387b" align="center">
+                <table class="footer" width="880" border="0" cellspacing="0" cellpadding="0" style="color:#cedbff;">
+                    <tr>
+                        <td align="left"> Copyright 2016 Oxford Method. All Right Reserved. </td>
+                        <td align="right">
+                                @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/policy", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Privacy'])
+                            |
+                                @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/terms", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Terms'])
+                        </td>
+                    </tr>
+                </table>
+            </td>
         </tr>
     </table></td>
     </tr>

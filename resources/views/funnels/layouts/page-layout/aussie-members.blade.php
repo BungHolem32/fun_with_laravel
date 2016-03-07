@@ -9,7 +9,13 @@
     <script src="/js/vendor/respond.min.js"></script>
     <![endif]-->
     {!! $page->appendAsset(url('/js/vendor/jquery-1.11.2.min.js')) !!}
-    <script type="text/javascript" src="/js/aussie/first.js?v=1"></script>
+    <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href='/css/aussie/sms_form_style.css'>
+    <script src="/js/fancybox/jquery.fancybox.js"></script>
+
+
+
+
 @append
 
 @section('bottom-scripts')
@@ -23,11 +29,10 @@
 
 
 @section('page-layout')
-
     <table width="100%" border="0" cellspacing="0" cellpadding="0" background="/img/aussie/bg.png">
         <tbody><tr>
             <td height="134" valign="top"><center>
-                <img src="/img/aussie/tit.png" width="790" height="103" style="padding-bottom:-10px;">
+                <img src="/img/aussie/tit.png" width="970" height="108" style="padding-bottom:-10px;">
             </center></td>
         </tr>
         </tbody></table>
@@ -548,30 +553,44 @@
                         </div>
                     </div>
                 </center>
+
+
                 <p style="font-family: 'Cabin', sans-serif; font-size:46px; color:#1e387b">&nbsp;</p>
                 <p style="font-family: 'Cabin', sans-serif; font-size:46px; color:#1e387b">&nbsp;</p>
+
+
+
                 <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#1e387b" style="color:#090;">
                     <tbody><tr>
-                        <td height="50" bgcolor="#1e387b"><center>
+                        <td height="50" bgcolor="#1e387b" align="center">
                             <table class="footer" width="880" border="0" cellspacing="0" cellpadding="0" style="color:#cedbff;">
-                                <tbody><tr>
-                                    <!-- <td><Center>What is the Aussie Method?</Center></td>-->
-                                    <td><center>
-                                        Copyright 2015 Aussie Method. All Right Reserved.
-                                    </center></td>
-                                    <td><center>
-                                            @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Privacy', 'target'=>'_blank'])
-                                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'target'=>'_blank'])
-                                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Disclaimer', 'target'=>'_blank'])
-                                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Support', 'target'=>'_blank'])
-                                    </center></td>
+                                <tbody>
+                                <tr>
+                                    <td align="left">
+                                        Copyright 2016 Aussie Method. All Right Reserved.
+                                    </td>
+                                    <td align="right">
+                                            @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/../policy", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Privacy'])
+                                        |
+                                            @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/../terms", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Terms'])
+                                    </td>
                                 </tr>
-                                </tbody></table>
-                        </center></td>
+                                </tbody>
+                            </table>
+                        </td>
                     </tr>
-                    </tbody></table></strong></center></td>
+                    </tbody>
+                </table>
+
+
+                    </strong>
+                </center>
+            </td>
         </tr>
-        </tbody></table>
+        </tbody>
+    </table>
+
+
 
     <!-- Placed at the end of the document so the pages load faster -->
     <div id="expop_dim"></div>
@@ -604,5 +623,9 @@
         <iframe src="/aussie/results" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
     </div>
     <div id="hoverbox" style="display: none; filter: alpha(opacity=60); KHTMLOpacity: 0.60; MozOpacity: 0.60; opacity: 0.60; position: fixed;background-color: #000000; z-index:0; width: 100%; height: 100%; left: 0px; top:0px;" onClick="closex()"></div>
+
+
+
+
 
 @endsection
