@@ -94,6 +94,10 @@
             {!! Form::textarea('bodyEndScripts', $page['scripts']['bodyEndScripts'], ['name'=>'mongo[scripts][bodyEndScripts]', 'class'=>'form-control']) !!}
         </div>
         <div class="form-group">
+            {!! Form::label('pixel', 'Pixel on success:') !!}
+            {!! Form::textarea('pixel', $page['scripts']['pixel'], ['name'=>'mongo[scripts][pixel]', 'class'=>'form-control']) !!}
+        </div>
+        <div class="form-group">
             {!! Form::text('recaptcha', $page['switches']['recaptcha'], ['name'=>'mongo[switches][recaptcha]', 'class'=>'direction form-control']) !!}
 {{--            {!! Form::input('mongo[switches][recaptcha]', $page['switches']['recaptcha']) !!}--}}
             {!! Form::label('recaptcha', 'Show Recaptcha after IP has registered this many accounts in one day. (Leave empty to never show.) ') !!}

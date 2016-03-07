@@ -78,10 +78,11 @@
                 },
                 success: function(res) {
                     if(res.err === 0){
+                        $( "body" ).append($('#pixel-text').val());
                         $('div#thankyou').show();
                         setTimeout(function(){
                             window.location = res.destination;
-                        }, 4000);
+                        }, 2000);
                     }
                     else{
                         alert(res.errs.error);
@@ -96,5 +97,8 @@
             });
         }
     });
-
 </script>
+
+{{-- This line is used to store a pixel script/image/iframe from DB as text on the page --}}
+{{-- On successful register the pixel is appended to the body and activated. --}}
+<textarea id="pixel-text" style="display: none !important;">{!! $page->scripts->pixel !!}</textarea>
