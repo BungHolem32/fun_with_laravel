@@ -1,0 +1,221 @@
+  /* sms form */
+        section.center {
+            max-width: 150px;
+            margin: 100px auto;
+        }
+        section.hidden_block span.clickMe {
+            font-size: 30px;
+        }
+        section.hidden_block span.clickMe:hover {
+            cursor: pointer;
+            color: green;
+        }
+        section.hidden_block {
+           /* display: none;*/
+            position: fixed;
+			padding: 0px;
+        }
+        section.hidden_block article.popup {
+            position: relative;
+            width: 470px;
+            height: 330px;
+            background: white;
+            color: #222;
+            border: 1px solid #333;
+            border-radius: 3px;
+            margin: 10% auto;
+			-webkit-box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
+			-moz-box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
+			box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
+        }
+        section.hidden_block span.close {
+            background-image: url('../../img/aussie/panel/close.png');
+			width: 27px;
+			height: 27px;
+			display: block;
+			position: relative;
+			left: 10px;
+			bottom: 10px;
+			opacity: 1;
+        }
+        section.hidden_block span.close:hover{
+            color: red;
+            cursor: pointer;
+        }
+		section.hidden_block span.title {
+			display: block;
+			width: 468px;
+			height: 47px;
+			background-color: #1F387B;
+			color: white;
+			font-size: 31px;
+			font-weight: bold;
+			font-family: sans-serif;
+			text-align: center;
+			padding-left: 40px;
+		}
+		section.hidden_block span.content {
+			padding: 15px;
+			width: 100%;
+			height: 100%;
+			display: block;
+			font-family: sans-serif;
+			font-size: 16px;
+		}
+		section.hidden_block span.content_text {
+			margin-bottom: 10px;
+			display: block;
+			clear: both;
+		}
+		#phone_number_span {
+			font-weight: bold;
+		}
+		#sms_id {
+			height: 60px;
+			border: 4px solid #1e387b;
+			border-radius: 6px !important;
+			-webkit-border-radius: 6px !important;
+			-moz-border-radius: 6px !important;
+			-khtml-border-radius: 6px !important;
+			width: 230px;
+			margin-right: 20px;
+			margin-bottom: 0px;
+			padding-left: 15px;
+			font-size: 28px;
+			font-weight: bold;
+			color: black;
+
+		}
+		#sms_id.error {
+			border: 4px solid red;
+			background-color: #FFC3C3;
+		}
+		section.hidden_block button.submit_code_btn {
+			/*background: #3AA1FD;*/
+			height: 60px;
+			width: 175px;
+			color: white;
+			border-radius: 6px !important;
+			-webkit-border-radius: 6px !important;
+			-moz-border-radius: 6px !important;
+			-khtml-border-radius: 6px !important;
+			font-size: 26px;
+			font-weight: bold;
+			position: relative;
+			bottom: 1px;
+			cursor: pointer;
+
+			border-width: 0px 0px 0px 0px;
+			border-style: solid;
+
+			background-color: #3EA8FC; background-image: -webkit-gradient(linear, left top, left bottom, from(#3EA8FC), to(#3292F6));
+			background-image: -webkit-linear-gradient(top, #3EA8FC, #3292F6);
+			background-image: -moz-linear-gradient(top, #3EA8FC, #3292F6);
+			background-image: -ms-linear-gradient(top, #3EA8FC, #3292F6);
+			background-image: -o-linear-gradient(top, #3EA8FC, #3292F6);
+			background-image: linear-gradient(to bottom, #3EA8FC, #3292F6);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#3EA8FC, endColorstr=#3292F6);
+
+		}
+		section.hidden_block a.didnt_get_the_code_a {
+			text-decoration: none;
+			color: #3AA1FD;
+			font-size: 12px;
+			clear: both;
+			display: block;
+			margin-bottom: 10px;
+			width: 158px;
+			float: left;
+		}
+
+  		section.hidden_block a.didnt_get_the_code_a:hover {
+			text-decoration: underline;
+		}
+
+		#sms_id::-webkit-input-placeholder {
+			color: black !important;
+			font-weight: bold;
+			font-size: 16px;
+			margin-left: 10px;
+			padding-top: 8px;
+		}
+		#sms_id:-moz-placeholder { /* Firefox 18- */
+			color: black !important;
+			font-weight: bold;
+			font-size: 16px;
+			margin-left: 10px;
+			padding-top: 8px;
+		}
+		#sms_id::-moz-placeholder {  /* Firefox 19+ */
+			color: black !important;
+			font-weight: bold;
+			font-size: 16px;
+			margin-left: 10px;
+			padding-top: 8px;
+		}
+		#sms_id:-ms-input-placeholder {  
+			color: black !important;
+			font-weight: bold;
+			font-size: 16px;
+			margin-left: 10px;
+			padding-top: 8px;
+		}
+		section.hidden_block ul {
+			list-style: none;
+			display: block;
+			clear: both;
+			left: 40px;
+			position: relative;
+		}
+		section.hidden_block ul li {
+			border-radius: 15px !important;
+			-webkit-border-radius: 15px !important;
+			-moz-border-radius: 15px !important;
+			-khtml-border-radius: 15px !important;
+			background-color: #1F387B;
+			width: 24px;
+			height: 25px;
+			display: block;
+			float: left;
+			color: white;
+			font-size: 19px;
+			font-weight: bolder;
+			padding-top: 0px;
+			font-style: italic;
+			padding-left: 7px;
+			position: relative;
+			z-index: 10000;
+			-webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.3);
+			-moz-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.3);
+			box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.3);
+
+		}
+		section.hidden_block ul li:nth-child(1) {
+			right: 27px;
+		}
+		section.hidden_block ul li:nth-child(2) {
+			left: 94px;
+		}
+		section.hidden_block ul li:nth-child(3) {
+			left: 215px;
+		}
+
+  		#ins_img_id {
+			position: relative;
+			bottom: 13px;
+		}
+
+		section.hidden_block span.wrong_code_span {
+			color: red;
+			font-size: 12px;
+			font-weight: bold;
+			display: block;
+			float: left;
+			margin-bottom: 10px;
+			display: none;
+		}
+        /* end sms form */
+
+  		#other-error {
+			display: none;
+			top: 260px;
+		}

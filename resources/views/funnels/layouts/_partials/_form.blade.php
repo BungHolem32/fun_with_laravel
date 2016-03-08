@@ -58,6 +58,7 @@ foreach($form->membersFields->getChildren() as $field){
                     </select>
                 </div>
             @elseif($field[0] == 'submit')
+                <label id="other-error" class="error" style="display: block; top: 260px;">This field is required.</label>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 field">
                     @if($show_recaptcha)
                         <div class="g-recaptcha" data-sitekey="6Ld39RMTAAAAALVGhMswy185zq0C2bmP-gydSrSI"></div>

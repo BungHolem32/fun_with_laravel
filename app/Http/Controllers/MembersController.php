@@ -12,7 +12,11 @@ class MembersController extends Base\AbstractFunnelController {
 
     public function index($page)
     {
-        if(IpLog::count(\Request::ip(), 'createAccount')){
+
+        \Session::forget('SMS_CODE');
+        \Session::forget('smsLog');
+
+        if(IpLog::count(\Request::ip(), 'createAccount') || $page->getParent()->switches->showCaptcha){
             $this->show_recaptcha = 1;
         }
         return parent::index($page);

@@ -16,6 +16,18 @@
         <h3><i class="fa fa-gg"></i> {!! Form::label('title_h1', 'Title:') !!}</h3>
         {!! Form::text('title_h1', $page['title_h1'], ['name'=>'mongo[title_h1]', 'class'=>'form-control']) !!}
     </div>
+
+    <div class="form-group">
+        <h3><i class="fa fa-gg"></i> {!! Form::label('panel_logo', 'Panel Logo:') !!}</h3>
+        {!! Form::text('panel_logo', $page['panel_logo'], ['name'=>'mongo[panel_logo]', 'class'=>'form-control']) !!}
+    </div>
+
+
+    <div class="form-group">
+        <h3><i class="fa fa-gg"></i> {!! Form::label('panel_logo', 'Panel Logo:') !!}</h3>
+        {!! Form::text('panel_logo', $page['panel_logo'], ['name'=>'mongo[panel_logo]', 'class'=>'form-control']) !!}
+    </div>
+
     <div class="form-group">
         <h3><i class="fa fa-bolt"></i> {!! Form::label('description', 'Description:') !!}</h3>
         {!! Form::text('description', $page['description'], ['name'=>'mongo[description]', 'class'=>'form-control']) !!}
