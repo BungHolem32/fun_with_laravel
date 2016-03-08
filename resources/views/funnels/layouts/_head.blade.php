@@ -6,12 +6,10 @@
 {{--<link rel="stylesheet" href="/css/styles-{{ Request::local()->dir }}.css">--}}
 <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<link rel="stylesheet" href='/css/aussie/sms_form_style.css'>
 <link rel="stylesheet" href='/css/common.css'>
 
 {!! $page->appendAsset(url('/js/vendor/jquery-1.11.2.min.js')) !!}
 {!! $page->appendAsset(url('/js/vendor/underscore-min.js')) !!}
-{!! $page->appendAsset(url('/js/sms.js')) !!}
 
 
 

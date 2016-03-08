@@ -14,7 +14,7 @@
 <![endif]-->
 
     @yield('page-layout')
-    @include('funnels.layouts._partials._sms-popup')
+
     @include('funnels.layouts._scripts-bottom')
 {!! $page->getParent()->scripts->bodyEndScripts !!}
 {!! $page->scripts->bodyEndScripts !!}
