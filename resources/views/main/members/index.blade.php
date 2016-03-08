@@ -11,7 +11,6 @@ if($getforms[$formType] == 'Vertical Form'){
 
 
 ?>
-
 @if($lp == 1)
     @include('funnels.layouts.page-layout.lp')
 @elseif(!empty($page->funnelType->get()))
@@ -20,3 +19,7 @@ if($getforms[$formType] == 'Vertical Form'){
     No Template selected
 @endif
 
+
+@if($page->getParent()->switches->showSmsField === "1")
+    @com('sms_verification')
+@endif

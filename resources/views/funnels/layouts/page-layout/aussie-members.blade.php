@@ -10,21 +10,18 @@
     <![endif]-->
     {!! $page->appendAsset(url('/js/vendor/jquery-1.11.2.min.js')) !!}
     <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href='/css/aussie/sms_form_style.css'>
     <script src="/js/fancybox/jquery.fancybox.js"></script>
-
-
-
-
 @append
 
 @section('bottom-scripts')
-        <script language="javascript">
-            var loadingMsg = '<div class="loading"><img src="/img/aussie/loadingBL2.gif" alt=""><div class="loading-text"> Registration is in progress.. </div></div>';
-            var requiredMsg = '<span class="arrow_box"></span>This field is required.';
-        </script>
-        @com('funnel_scripts')
-        <script src="/js/aussie/bootstrap.min.js"></script>
+
+    <script language="javascript">
+        var loadingMsg = '<div class="loading"><img src="/img/aussie/loadingBL2.gif" alt=""><div class="loading-text"> Registration is in progress.. </div></div>';
+        var requiredMsg = '<span class="arrow_box"></span>This field is required.';
+    </script>
+    @com('funnel_scripts')
+    <script src="/js/aussie/bootstrap.min.js"></script>
+
 @append
 
 
