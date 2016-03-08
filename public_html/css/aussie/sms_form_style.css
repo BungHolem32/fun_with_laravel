@@ -216,6 +216,7 @@
         /* end sms form */
 
   		#other-error {
+			visibility: hidden;
 			display: none;
 			top: 260px;
 		}
