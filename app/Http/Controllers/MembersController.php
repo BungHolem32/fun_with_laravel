@@ -21,6 +21,7 @@ class MembersController extends Base\AbstractFunnelController {
         else
             $this->show_recaptcha = false;
 
+        \Session::set('showRecaptcha', $this->show_recaptcha);
         return parent::index($page);
     }
 

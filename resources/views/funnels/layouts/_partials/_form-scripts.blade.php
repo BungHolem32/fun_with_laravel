@@ -61,7 +61,7 @@
                 data: $(form).serialize(),
 
                 beforeSend: function(){
-                    @if($page->getParent()->switches->showSmsField)
+                    @if($page->getParent()->switches->showSmsField === "1")
                         if (!sms_validated) {
                             sendSMS();
                             return false;

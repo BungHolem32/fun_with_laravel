@@ -9,7 +9,7 @@ use Request;
 
 class AbstractFunnelController extends Controller {
 
-    protected $show_recaptcha = 0;
+    protected $show_recaptcha = false;
     protected $form = null;
 
     public function __construct(){

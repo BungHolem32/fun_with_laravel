@@ -32,10 +32,11 @@ class SmsController extends Controller {
                 return;
         } else {
             if ($smsLog['phone'] == '') {
-                if (!Recaptcha::validateCaptcha()) {
+                if (\Session::get('showRecaptcha') && !Recaptcha::validateCaptcha()) {
                     echo(json_encode(['err' => 1, 'errs' => ['error' => 'Please fill captcha!', 'action'=>'stay']])); // error during SMS sending
                     return;
                 }
+
                 $smsLog['phone'] = $phone;
                 \Session::set('smsLog', $smsLog);
             }

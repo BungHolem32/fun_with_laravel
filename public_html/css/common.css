@@ -1,3 +1,7 @@
+#other-error {
+    visibility: hidden;
+}
+
 .error {
     color: red;
 }
