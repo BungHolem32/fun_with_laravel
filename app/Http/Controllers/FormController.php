@@ -35,8 +35,7 @@ class FormController extends Controller {
 
     public function postForm(){
             $funnelPage = \App\Page::find(Request::get('parentPage'));
-
-            if($funnelPage->getParent()->switches->showSmsField) {
+            if($funnelPage->switches->showSmsField === "1") {
                 if (!SmsController::isSmsVerified()) {
                     $res = ['err'=>1, 'errs' =>['error'=>'wrongSmsCode']];
                     die(json_encode($res));
@@ -83,7 +82,8 @@ class FormController extends Controller {
             $ans = MailVerify::verify(Request::get('email'));
             if($ans === true){
                 // TODO: add mixpanel event fire here.
-                $this->addMailToMixpanel(Request::get('email'),Request::get('pageId'));
+                // This send the mail to mixpanel an comment to activate.
+                //$this->addMailToMixpanel(Request::get('email'),Request::get('pageId'));
                 $res['err'] = 0;
                 $res['msg'] = '';
             }
