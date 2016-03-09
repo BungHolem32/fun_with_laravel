@@ -6,7 +6,18 @@
 .lt{
   float: @left;
 }
-
+.center{
+  text-align: center;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+.lowercase{
+  text-transform: lowercase;
+}
+.capitalize{
+  text-transform: capitalize;
+}
 .marg-t{margin-top: 1em;}
 .marg-b{margin-bottom: 1em;}
 .marg-l{margin-left: 1em;}
@@ -41,3 +52,107 @@
   .generate-widths(@n, (@i + 5));
 }
 .generate-widths(100);
+
+.gradientHover(@posweb,@pos,@colorfrom,@colorto,@colorfromper,@colortoper){
+  background: @colorfrom;
+  background: -moz-linear-gradient(@posweb, @colorfrom @colorfromper, @colorto @colortoper);
+  background: -webkit-linear-gradient(@posweb, @colorfrom @colorfromper,@colorto @colortoper);
+  background: linear-gradient(@pos, @colorfrom @colorfromper,@colorto @colortoper);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{colorfrom}', endColorstr='@{colorto}',GradientType=0 );
+
+  &:hover{
+    background: @colorto;
+    background: -moz-linear-gradient(@posweb, @colorto @colorfromper, @colorfrom @colortoper);
+    background: -webkit-linear-gradient(@posweb, @colorto @colorfromper,@colorfrom @colortoper);
+    background: linear-gradient(@pos, @colorto @colorfromper,@colorfrom @colortoper);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{colorto}', endColorstr='@{colorfrom}',GradientType=0 );
+  }
+}
+
+.newfont(@name){
+  @font-face {
+    font-family: @name;
+    // src for each browser/system
+    src: url('/fonts/@{name}.eot');
+    src: url('/fonts/@{name}.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/@{name}.woff2') format('woff2'),
+    url('/fonts/@{name}.woff') format('woff'),
+    url('/fonts/@{name}.ttf')  format('truetype'),
+    url('/fonts/@{name}.svg#svgFontName') format('svg');
+  }
+}
+
+.fsize(@w,@h){
+  -webkit-transform:scale(@w, @h);
+  -moz-transform:scale(@w, @h);
+  -ms-transform:scale(@w, @h);
+  -o-transform:scale(@w, @h);
+  transform:scale(@w,@h);
+}
+/*
+.fa-email{
+  .fa-envelope;
+}*/
+
+.border-radius(...) {
+  @process: ~`(function(e){e=e||"0";var t=/\d/gi,r=/(?:\s|^)(\.?\d+\.?\d*)(?![^(]*\)|\w|%|\.)/gi;return/^[^, ]*,/.test(e)&&(e=e.replace(/(?:,)(?![^(]*\))/g,"")),t.test(e)&&(e=e.replace(r,function(e){return 0==e&&e||e+"px"})),e})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
+  -webkit-border-radius: @process; -webkit-background-clip: padding-box;
+  -moz-border-radius: @process; -moz-background-clip: padding;
+  border-radius: @process; background-clip: padding-box;
+}
+.border-radiuses (@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+  -webkit-border-top-right-radius:    @topright;
+  -webkit-border-bottom-right-radius: @bottomright;
+  -webkit-border-bottom-left-radius:  @bottomleft;
+  -webkit-border-top-left-radius:     @topleft;
+
+  -moz-border-radius-topright:        @topright;
+  -moz-border-radius-bottomright:     @bottomright;
+  -moz-border-radius-bottomleft:      @bottomleft;
+  -moz-border-radius-topleft:         @topleft;
+
+  border-top-right-radius:            @topright;
+  border-bottom-right-radius:         @bottomright;
+  border-bottom-left-radius:          @bottomleft;
+  border-top-left-radius:             @topleft;
+
+  -moz-background-clip:    padding;
+  -webkit-background-clip: padding-box;
+  background-clip:         padding-box;
+}
+.plc(@content){
+  &::-webkit-input-placeholder {
+    @content();
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    @content();
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    @content();
+  }
+
+  &:-ms-input-placeholder {
+    @content();
+  }
+}
+
+
+.anim(@delay, @duration, @timing){
+  .animated;
+  animation-delay: @delay;
+  animation-duration: @duration;
+  animation-timing-function: @timing; /* linear|ease|ease-in|ease-out|cubic-bezier(n,n,n,n)|initial|inherit; */
+  -webkit-animation-delay: @delay;
+  -webkit-animation-duration: @duration;
+  -webkit-animation-timing-function: @timing;
+  -moz-animation-delay: @delay;
+  -moz-animation-duration: @duration;
+  -moz-animation-timing-function: @timing;
+  -o-animation-delay: @delay;
+  -o-animation-duration: @duration;
+  -o-animation-timing-function: @timing;
+}
+//      .fadeInRight;
+// .anim(1s,1s,ease-out);

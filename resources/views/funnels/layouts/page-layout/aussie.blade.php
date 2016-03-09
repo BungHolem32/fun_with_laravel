@@ -1,11 +1,14 @@
 @section('head')
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Startup CSS -->
     {!! $page->appendAsset(url('/css/aussie/style.css')) !!}
     <!--[if lt IE 9]>
-    <script src="/js/aussie/html5shiv.js"></script>
-    <script src="/js/aussie/respond.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="/js/vendor/html5shiv.min.js"></script>
+    <script src="/js/vendor/respond.min.js"></script>
     <![endif]-->
     <script type="text/javascript" src="/js/aussie/first.js"></script>
+    <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
 @append
 
 @section('bottom-scripts')
@@ -16,7 +19,94 @@
     </script>
     @com('funnel_scripts')
     <script src="/js/aussie/bootstrap.min.js"></script>
+
+    <script src="/js/fancybox/jquery.fancybox.js"></script>
+
+
+    <!-- need to move all this to appropriate .css .js files -->
+
+    <style>
+        .error {
+            color: red;
+        }
+        #back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 9999;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 30px;
+            background: #f5f5f5;
+            color: #444;
+            cursor: pointer;
+            border: 0;
+            border-radius: 2px;
+            text-decoration: none;
+            transition: opacity 0.2s ease-out;
+            opacity: 0;
+            font-size: 50px;
+            padding-top: 10px;
+            font-weight: bolder;
+        }
+        #back-to-top:hover {
+            background: #e9ebec;
+        }
+        #back-to-top.show {
+            opacity: 1;
+        }
+        #content {
+            height: 2000px;
+        }
+        .fancybox_iframe {
+            font-size: 11px;;
+        }
+
+    </style>
+
+    <script>
+        // need to put in js file all of this
+        $("a.fancybox").fancybox();
+
+
+        $(document).on('click', '.fancybox_iframe', function(e) {
+            e.preventDefault();
+            $.fancybox({
+                href : $(this).attr('href'),
+                type : 'iframe'
+            });
+        });
+
+
+        if ($('#back-to-top').length) {
+            var scrollTrigger = 100, // px
+                    backToTop = function () {
+                        var scrollTop = $(window).scrollTop();
+                        if (scrollTop > scrollTrigger) {
+                            $('#back-to-top').addClass('show');
+                        } else {
+                            $('#back-to-top').removeClass('show');
+                        }
+                    };
+            backToTop();
+            $(window).on('scroll', function () {
+                backToTop();
+            });
+            $('#back-to-top').on('click', function (e) {
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 700);
+            });
+        }
+    </script>
+
+    <!-- until here -->
+
     {!! $page->appendAsset(url('/js/firstPage.js')) !!}
+
+
 @append
 
 
@@ -34,7 +124,7 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="0" background="/img/aussie/bg.png">
     <tr>
         <td height="134" valign="top"><center>
-            <a name="startnow"></a><img src="/img/aussie/tit.png" width="790" height="103" style="padding-bottom:-10px;">
+            <a name="startnow"></a><img src="/img/aussie/tit.png" width="970" height="108" style="padding-bottom:-10px;">
         </center></td>
     </tr>
 </table>
@@ -61,7 +151,7 @@
             <p style="font-family: 'Cabin', sans-serif;">Enter your email below to gain instant <br>
                 free access to the Aussie Method system</p>
             <br>
-            {!! Form::open(['url' => url('postEmailForm').'?'.$_SERVER["QUERY_STRING"], 'method'=>'post','align'=>'center']) !!}
+            {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post','align'=>'center']) !!}
                 <input type="hidden" name="pageId" value="{{ $page->id }}">
                 @if($page->switches->showEmailField)
                     <input id="firstPageSignUpMail" type="email" name="email" placeholder="YOUR EMAIL ADDRESS.." required="required" style="width:300px; text-align:center;" />
@@ -101,7 +191,7 @@
                         <a href="#faq" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">FAQs</a>
                     </Center></td>
                     <td><Center>
-                        <a href="#startnow" style="color:#cedbff; font-family: 'Montserrat', sans-serif;">Get Started</a>
+                        <a href="#startnow" style="color:#cedbff; font-family: 'Montserrat', sans-serif; display: none;">Get Started</a>
                     </Center></td>
                 </tr>
             </table>
@@ -236,7 +326,7 @@
                                     "Thanks support for solving my small problem, looking forward to making lots of cash with this #cash #thanks #aussiemethod support @<b class='p-nickname'>aussiemethod</b>",
                                     "WTF.... Thank You This thing is awesome @<b class='p-nickname'>aussiemethod</b>"];
 
-                                var images = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg","12.jpg","13.jpg","14.jpg","15.jpg","16.jpg","17.jpg","18.jpg","19.jpg","20.jpg","21.jpg","22.jpg","23.jpg","24.jpg","25.jpg","26.jpg","27.jpg","28.jpg","29.jpg","30.jpg","31.jpg","32.jpg","33.jpg","34.jpg","35.jpg","36.jpg","37.jpg","38.jpg","39.jpg","40.jpg","41.jpg","42.jpg","43.jpg","44.jpg","45.jpg","46.jpg","47.jpg","48.jpg","49.jpg","50.jpg","51.jpg","52.jpg","53.jpg","54.jpg","55.jpg","56.jpg","57.jpg","58.jpg","59.jpg","60.jpg","61.jpg","62.jpg","63.jpg","64.jpg","65.jpg","66.jpg","67.jpg","68.jpg","69.jpg","70.jpg","71.jpg","72.jpg","73.jpg","74.jpg","75.jpg","76.jpg","77.jpg","78.jpg","79.jpg","80.jpg","81.jpg","82.jpg","83.jpg","84.jpg","85.jpg","86.jpg","87.jpg","88.jpg","89.jpg","90.jpg","91.jpg","92.jpg","93.jpg","94.jpg","95.jpg","96.jpg","97.jpg","98.jpg","99.jpg","1(1).jpg","2(1).jpg","3(1).jpg","4(1).jpg","5(1).jpg","6(1).jpg","7(1).jpg","8(1).jpg","9(1).jpg","10(1).jpg","11(1).jpg","12(1).jpg","13(1).jpg","14(1).jpg","15(1).jpg","16(1).jpg","17(1).jpg","18(1).jpg","19(1).jpg","20(1).jpg","21(1).jpg","22(1).jpg","23(1).jpg","24(1).jpg","25(1).jpg","26(1).jpg","27(1).jpg","28(1).jpg","29(1).jpg","30(1).jpg","31(1).jpg","32(1).jpg","33(1).jpg","34(1).jpg","35(1).jpg","36(1).jpg","37(1).jpg","38(1).jpg","39(1).jpg","40(1).jpg","41(1).jpg","42(1).jpg","43(1).jpg","44(1).jpg","45(1).jpg","46(1).jpg","47(1).jpg","48(1).jpg","49(1).jpg","50(1).jpg","51(1).jpg","52(1).jpg","53(1).jpg","54(1).jpg","55(1).jpg","56(1).jpg","57(1).jpg","58(1).jpg","59(1).jpg","60(1).jpg","61(1).jpg","62(1).jpg","63(1).jpg","64(1).jpg","65(1).jpg","66(1).jpg","67(1).jpg","68(1).jpg","69(1).jpg","70(1).jpg","71(1).jpg","72(1).jpg","73(1).jpg","74(1).jpg","75(1).jpg","76(1).jpg","77(1).jpg","78(1).jpg","79(1).jpg","80(1).jpg","81(1).jpg","82(1).jpg","83(1).jpg","84(1).jpg","85(1).jpg","86(1).jpg","87(1).jpg","88(1).jpg","89(1).jpg","90(1).jpg","91(1).jpg","92(1).jpg","93(1).jpg","94(1).jpg","95(1).jpg"];
+                                var images = ["27(1).jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg","12.jpg","13.jpg","14.jpg","15.jpg","16.jpg","17.jpg","18.jpg","19.jpg","20.jpg","21.jpg","22.jpg","23.jpg","24.jpg","25.jpg","26.jpg","27.jpg","28.jpg","29.jpg","30.jpg","31.jpg","32.jpg","33.jpg","34.jpg","35.jpg","36.jpg","37.jpg","38.jpg","39.jpg","40.jpg","41.jpg","42.jpg","43.jpg","44.jpg","45.jpg","46.jpg","47.jpg","48.jpg","49.jpg","50.jpg","51.jpg","52.jpg","53.jpg","54.jpg","55.jpg","56.jpg","57.jpg","58.jpg","59.jpg","60.jpg","61.jpg","62.jpg","63.jpg","64.jpg","65.jpg","66.jpg","67.jpg","68.jpg","69.jpg","70.jpg","71.jpg","72.jpg","73.jpg","74.jpg","75.jpg","76.jpg","77.jpg","78.jpg","79.jpg","80.jpg","81.jpg","82.jpg","83.jpg","84.jpg","85.jpg","86.jpg","87.jpg","88.jpg","89.jpg","90.jpg","91.jpg","92.jpg","93.jpg","94.jpg","95.jpg","96.jpg","97.jpg","98.jpg","99.jpg","1(1).jpg","2(1).jpg","3(1).jpg","4(1).jpg","5(1).jpg","6(1).jpg","7(1).jpg","8(1).jpg","9(1).jpg","10(1).jpg","11(1).jpg","12(1).jpg","13(1).jpg","14(1).jpg","15(1).jpg","16(1).jpg","17(1).jpg","18(1).jpg","19(1).jpg","20(1).jpg","21(1).jpg","22(1).jpg","23(1).jpg","24(1).jpg","25(1).jpg","26(1).jpg","27(1).jpg","28(1).jpg","29(1).jpg","30(1).jpg","31(1).jpg","32(1).jpg","33(1).jpg","34(1).jpg","35(1).jpg","36(1).jpg","37(1).jpg","38(1).jpg","39(1).jpg","40(1).jpg","41(1).jpg","42(1).jpg","43(1).jpg","44(1).jpg","45(1).jpg","46(1).jpg","47(1).jpg","48(1).jpg","49(1).jpg","50(1).jpg","51(1).jpg","52(1).jpg","53(1).jpg","54(1).jpg","55(1).jpg","56(1).jpg","57(1).jpg","58(1).jpg","59(1).jpg","60(1).jpg","61(1).jpg","62(1).jpg","63(1).jpg","64(1).jpg","65(1).jpg","66(1).jpg","67(1).jpg","68(1).jpg","69(1).jpg","70(1).jpg","71(1).jpg","72(1).jpg","73(1).jpg","74(1).jpg","75(1).jpg","76(1).jpg","77(1).jpg","78(1).jpg","79(1).jpg","80(1).jpg","81(1).jpg","82(1).jpg","83(1).jpg","84(1).jpg","85(1).jpg","86(1).jpg","87(1).jpg","88(1).jpg","89(1).jpg","90(1).jpg","91(1).jpg","92(1).jpg","93(1).jpg","94(1).jpg","95(1).jpg"];
 
 
                                 setInterval('autoRefresh()',60000);
@@ -394,27 +484,31 @@
 </Center>
 <p style="font-family: 'Cabin', sans-serif; font-size:46px; color:#1e387b">&nbsp;</p>
 <p style="font-family: 'Cabin', sans-serif; font-size:46px; color:#1e387b">&nbsp;</p>
+
 <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#1e387b" style="color:#090;">
     <tr>
-        <td height="50" bgcolor="#1e387b"><center>
+        <td height="50" bgcolor="#1e387b" align="center">
             <table class="footer" width="880" border="0" cellspacing="0" cellpadding="0" style="color:#cedbff;">
                 <tr>
-                    <!-- <td><Center>What is the Aussie Method?</Center></td>-->
-                    <td><Center>
-                        Copyright 2015 Aussie Method. All Right Reserved.
-                    </Center></td>
-                    <td><Center>
-                            @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Privacy', 'target'=>'_blank'])
-                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'target'=>'_blank'])
-                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Disclaimer', 'target'=>'_blank'])
-                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Support', 'target'=>'_blank'])
-                    </Center></td>
+                    <td align="left"> Copyright 2016 Aussie Method. All Right Reserved. </td>
+                    <td align="right">
+                        @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'class'=>'fancybox_iframe', 'text'=>'Privacy', 'target'=>'_blank'])
+                        |
+                        @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'class'=>'fancybox_iframe', 'text'=>'Terms', 'target'=>'_blank'])
+                    </td>
                 </tr>
             </table>
-        </center></td>
+        </td>
     </tr>
-</table></td>
+</table>
+
+
+</td>
 </tr>
 </table>
+
+
+
+<a href="#" id="back-to-top" title="Back to top">&uarr;</a>
 
 @endsection

@@ -6,14 +6,23 @@ use Request;
 use Illuminate\Support\Facades\Auth;
 
 use App\Http\Controllers\Base;
+use App\IpLog;
 
 class MembersController extends Base\AbstractFunnelController {
 
-    public function __construct()
+    public function index($page)
     {
-        //dd(Request::all());
 
-        // GET
+        \Session::forget('SMS_CODE');
+        \Session::forget('smsLog');
+
+        if(IpLog::count(\Request::ip(), 'createAccount') || $page->getParent()->switches->showCaptcha === "1")
+            $this->show_recaptcha = true;
+        else
+            $this->show_recaptcha = false;
+
+        \Session::set('showRecaptcha', $this->show_recaptcha);
+        return parent::index($page);
     }
 
 }

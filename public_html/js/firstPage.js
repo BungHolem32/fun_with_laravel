@@ -22,6 +22,7 @@ $(document).ready(function(){
                 },
                 success: function(res) {
                     if(res.err === 0){
+                        dataLayer.push({ 'event': 'first_p_button' });
                         //$('div#thankyou').show();
                         setTimeout(function(){
                             window.location = res.destination;
@@ -36,3 +37,4 @@ $(document).ready(function(){
         }
     });
 });
+

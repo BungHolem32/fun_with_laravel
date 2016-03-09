@@ -1,5 +1,6 @@
 tinymce.init({
     selector: "textarea.editor",
+    //body_class: dir,
     theme: "modern",
     height: 300,
     /*plugins: [
@@ -14,18 +15,17 @@ tinymce.init({
 
     forced_root_block : "",
     /*forced_root_block : false,
-    force_p_newlines : false,
-    remove_linebreaks : false,
-    force_br_newlines : true,
-    remove_trailing_nbsp : false,
-    verify_html : false,*/
+     force_p_newlines : false,
+     remove_linebreaks : false,
+     force_br_newlines : true,
+     remove_trailing_nbsp : false,
+     verify_html : false,*/
 
     plugins: [
         "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
         "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
         "table contextmenu directionality template textcolor responsivefilemanager paste textcolor colorpicker textpattern imagetools"
     ],
-
 
     //toolbar1: "newdocument fullpage | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | styleselect formatselect fontselect fontsizeselect",
     //toolbar2: "cut copy paste | searchreplace | bullist numlist | outdent indent blockquote | undo redo | link unlink anchor image media code | insertdatetime preview | forecolor backcolor",
@@ -58,4 +58,12 @@ tinymce.init({
         {title: 'Table styles'},
         {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
     ]
+});
+
+
+$(window).load(function(){
+    $.each($('textarea.editor'), function(i, el){
+        if($(el).hasClass('direction'))
+            tinyMCE.editors[i].getBody().dir = $('body').data('dir');
+    });
 });

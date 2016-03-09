@@ -1,31 +1,35 @@
 @section('head')
+    {{-- maybe put it elsewere--}}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Startup CSS -->
     {!! $page->appendAsset(url('/css/aussie/style.css')) !!}
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="/js/aussie/html5shiv.js"></script>
-    <script src="/js/aussie/respond.min.js"></script>
+    <script src="/js/vendor/html5shiv.min.js"></script>
+    <script src="/js/vendor/respond.min.js"></script>
     <![endif]-->
     {!! $page->appendAsset(url('/js/vendor/jquery-1.11.2.min.js')) !!}
-    <script type="text/javascript" src="/js/aussie/first.js?v=1"></script>
+    <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <script src="/js/fancybox/jquery.fancybox.js"></script>
 @append
 
 @section('bottom-scripts')
-        <script language="javascript">
-            var loadingMsg = '<div class="loading"><img src="/img/aussie/loadingBL2.gif" alt=""><div class="loading-text"> Registration is in progress.. </div></div>';
-            var requiredMsg = '<span class="arrow_box"></span>This field is required.';
-        </script>
-        @com('funnel_scripts')
-        <script src="/js/aussie/bootstrap.min.js"></script>
+
+    <script language="javascript">
+        var loadingMsg = '<div class="loading"><img src="/img/aussie/loadingBL2.gif" alt=""><div class="loading-text"> Registration is in progress.. </div></div>';
+        var requiredMsg = '<span class="arrow_box"></span>This field is required.';
+    </script>
+    @com('funnel_scripts')
+    <script src="/js/aussie/bootstrap.min.js"></script>
+
 @append
 
 
 @section('page-layout')
-
     <table width="100%" border="0" cellspacing="0" cellpadding="0" background="/img/aussie/bg.png">
         <tbody><tr>
             <td height="134" valign="top"><center>
-                <img src="/img/aussie/tit.png" width="790" height="103" style="padding-bottom:-10px;">
+                <img src="/img/aussie/tit.png" width="970" height="108" style="padding-bottom:-10px;">
             </center></td>
         </tr>
         </tbody></table>
@@ -546,30 +550,44 @@
                         </div>
                     </div>
                 </center>
+
+
                 <p style="font-family: 'Cabin', sans-serif; font-size:46px; color:#1e387b">&nbsp;</p>
                 <p style="font-family: 'Cabin', sans-serif; font-size:46px; color:#1e387b">&nbsp;</p>
+
+
+
                 <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#1e387b" style="color:#090;">
                     <tbody><tr>
-                        <td height="50" bgcolor="#1e387b"><center>
+                        <td height="50" bgcolor="#1e387b" align="center">
                             <table class="footer" width="880" border="0" cellspacing="0" cellpadding="0" style="color:#cedbff;">
-                                <tbody><tr>
-                                    <!-- <td><Center>What is the Aussie Method?</Center></td>-->
-                                    <td><center>
-                                        Copyright 2015 Aussie Method. All Right Reserved.
-                                    </center></td>
-                                    <td><center>
-                                            @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Privacy', 'target'=>'_blank'])
-                                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'target'=>'_blank'])
-                                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Disclaimer', 'target'=>'_blank'])
-                                            | @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'text'=>'Support', 'target'=>'_blank'])
-                                    </center></td>
+                                <tbody>
+                                <tr>
+                                    <td align="left">
+                                        Copyright 2016 Aussie Method. All Right Reserved.
+                                    </td>
+                                    <td align="right">
+                                            @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/../policy", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Privacy'])
+                                        |
+                                            @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/../terms", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Terms'])
+                                    </td>
                                 </tr>
-                                </tbody></table>
-                        </center></td>
+                                </tbody>
+                            </table>
+                        </td>
                     </tr>
-                    </tbody></table></strong></center></td>
+                    </tbody>
+                </table>
+
+
+                    </strong>
+                </center>
+            </td>
         </tr>
-        </tbody></table>
+        </tbody>
+    </table>
+
+
 
     <!-- Placed at the end of the document so the pages load faster -->
     <div id="expop_dim"></div>
@@ -602,5 +620,9 @@
         <iframe src="/aussie/results" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
     </div>
     <div id="hoverbox" style="display: none; filter: alpha(opacity=60); KHTMLOpacity: 0.60; MozOpacity: 0.60; opacity: 0.60; position: fixed;background-color: #000000; z-index:0; width: 100%; height: 100%; left: 0px; top:0px;" onClick="closex()"></div>
+
+
+
+
 
 @endsection

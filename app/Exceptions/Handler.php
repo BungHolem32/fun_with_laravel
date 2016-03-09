@@ -36,7 +36,16 @@ class Handler extends ExceptionHandler {
 	 */
 	public function render($request, Exception $e)
 	{
-		return parent::render($request, $e);
+		//return parent::render($request, $e);
+		//dd(get_class($e));
+		switch(get_class($e)){
+			case 'App\Exceptions\SpotException':
+                return response()->view('layouts.spoterror', ['error', $e]);
+				break;
+			default:
+				//return response()->view('layouts.error', ['error'=>$e]);
+				return parent::render($request, $e);
+		}
 	}
 
 }

@@ -1,5 +1,37 @@
 <?php
 
+/**
+ * Checking if the url is cache able - meaning the page should be cached
+ * if request is GET
+ * AND if not an admin page
+ * AND if url is assumed to be a home page - only '/', or one slug, possibly with two-digit language code.
+ */
+$uri = explode("?", $_SERVER['REQUEST_URI']);
+$url = $_SERVER['HTTP_HOST'].$uri[0];
+$cacheable = ($_SERVER['REQUEST_METHOD'] == 'GET'
+				&& strpos($url, $_SERVER['HTTP_HOST'].'/admin') !== 0
+				&& strpos($url, $_SERVER['HTTP_HOST'].'/getLocation') !== 0
+				&& strpos($url, $_SERVER['HTTP_HOST'].'/runBot') !== 0
+				&& strpos($url, $_SERVER['HTTP_HOST'].'/logout') !== 0
+				&& strpos($url, $_SERVER['HTTP_HOST'].'/lp/') !== 0
+				&& preg_match('/^\/((\w{2}\/)?\w+\/?)?$/', $uri[0])
+				&& $_SERVER['REMOTE_ADDR'] != '31.154.27.50');
+if($cacheable){
+	// its not admin: do cache
+	$filename = '../storage/html/'.md5($url).'.html';
+	/*echo time();
+	echo '<br>'.filemtime($filename);
+	echo '<br>'.(time() - filemtime($filename)).'<br>';*/
+	if (file_exists($filename) && time() - filemtime($filename) < (5 * 60)) {
+		// load from html file
+		header('X-brute-cache: true');
+		ob_end_clean();
+		readfile($filename);
+		die;
+	}
+}
+
+
 
 /**
  * Laravel - A PHP Framework For Web Artisans
@@ -57,6 +89,13 @@ $kernel = $app->make('Illuminate\Contracts\Http\Kernel');
 $response = $kernel->handle(
 	$request = Illuminate\Http\Request::capture()
 );
+
+// Save cache in html file
+if($cacheable){
+	file_put_contents($filename,$response->getContent().'<!-- Url: '.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'-->');
+}
+
+
 
 $response->send();
 

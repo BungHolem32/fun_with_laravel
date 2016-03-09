@@ -2,6 +2,7 @@
 
 use App\Customer;
 use App\Http\Requests;
+use App\IpLog;
 use App\Languages;
 use App\mongo;
 use App\Services\SpotApi;
@@ -29,24 +30,36 @@ class FormController extends Controller {
     }
 
     public function postForm(){
-        $res = SpotApi::sendRequest('Customer', 'add', Request::all());
-        if($res['err'] === 0){
-            Customer::login(\Request::all());
-            $res['destination'] = $this->getDestination();
-        }
-        elseif($res['errs']['error'] == 'emailAlreadyExists'){
-            $res['err']=0;
-            $ans = (array) Customer::login(\Request::all());
-            if(isset($ans['err']) && $ans['err']===1)
-                \Session::flash('flashMsg', $ans['errs']['error']);
-            $res['destination'] = $this->getDestination();
-        }
+            $funnelPage = \App\Page::find(Request::get('parentPage'));
+            if($funnelPage->switches->showSmsField === "1") {
+                if (!SmsController::isSmsVerified()) {
+                    $res = ['err'=>1, 'errs' =>['error'=>'wrongSmsCode']];
+                    die(json_encode($res));
+                }
+                \Session::forget('SMS_CODE');
+            }
+
+            $res = SpotApi::sendRequest('Customer', 'add', Request::all());
+
+            if($res['err'] === 0){
+                Customer::login(\Request::all());
+                IpLog::add(\Request::ip(), 'createAccount');
+                $res['destination'] = $this->getDestination();
+            }
+            elseif($res['errs']['error'] == 'emailAlreadyExists'){
+                $res['err']=0;
+                $ans = (array) Customer::login(\Request::all());
+                if(isset($ans['err']) && $ans['err']===1)
+                    \Session::flash('flashMsg', $ans['errs']['error']);
+                $res['destination'] = $this->getDestination();
+            }
         echo json_encode($res);
     }
 
     private function getDestination(){
         $funnelPage = \App\Page::find(Request::get('parentPage'));
         $destenation = $funnelPage->destinationSite->get();
+        if(empty($destenation)) $destenation = '';
         $append = '';
         if(strpos($destenation,'rboptions.com') !== false)
             $append = 'users.php?act=check&email='.Request::get('email').'&password='.Request::get('password');
@@ -54,7 +67,7 @@ class FormController extends Controller {
         return $destenation.$append;
     }
 
-    public function postEmailForm(){
+    public function postEmailForm($lang = 'en'){
         $res['err'] = 1;
         $res['msg'] = 'Please try again later.';
 
@@ -65,15 +78,18 @@ class FormController extends Controller {
             $ans = MailVerify::verify(Request::get('email'));
             if($ans === true){
                 // TODO: add mixpanel event fire here.
-                $this->addMailToMixpanel(Request::get('email'),Request::get('pageId'));
+                // This send the mail to mixpanel an comment to activate.
+                //$this->addMailToMixpanel(Request::get('email'),Request::get('pageId'));
                 $res['err'] = 0;
+                $res['msg'] = '';
             }
             else{
                 $errMsg = isset($ans['error']) ? $ans['error'] : 'invalid email address';
                 $res['errs']['error'] = $res['msg'] = Languages::getTrans($errMsg);
             }
-
         }
+
+        session('local')->code = $lang;
 
         if($res['err'] === 0)
             $res['destination'] = $this->getDestinationByPageId(Request::get('pageId'));
@@ -81,12 +97,18 @@ class FormController extends Controller {
         echo json_encode($res);
     }
 
+    /**
+     * @param string $email
+     * @param int $pageId
+     * @return void
+     */
     private function addMailToMixpanel($email,$pageId){
         require base_path().'/app/Lib/Mixpanel/Mixpanel.php';
         // get the Mixpanel class instance, replace with your project token
         $ip = Request::ip();
         $pageTitle = \App\Page::find($pageId)->title->get();
-        $countryISO = json_decode(file_get_contents('http://api-v2.rboptions.com/locator/'.$ip),true)['iso'];
+        //$countryISO = json_decode(file_get_contents('http://api-v2.rboptions.com/locator/'.$ip),true)['iso'];
+        $countryISO = json_decode(file_get_contents('http://locator.rboptions.com/locator/'.$ip),true)['iso'];
 
         $mp = \Mixpanel::getInstance(self::mixPanelProjectToken);
         $mp->people->set(crc32($email), array(
@@ -108,12 +130,10 @@ class FormController extends Controller {
         unset($append['_token']);
         unset($append['pageId']);
 
-        // Get destenation from funnel children.
-
         // new code for lang support
-        return'/'.session('local')->code.'/'.$page->getFirstChild()->fullSlug().'?'.http_build_query($append);
+        return '/'.session('local')->code.'/'.$page->getFirstChild()->fullSlug().'?'.http_build_query($append);
 
         // Old code
-        //return'/'.Request::local()->code.'/'.$page->getFirstChild()->fullSlug().'?'.http_build_query($append).'&'.session('local')->code;
+        //return '/'.Request::local()->code.'/'.$page->getFirstChild()->fullSlug().'?'.http_build_query($append).'&'.session('local')->code;
     }
 }

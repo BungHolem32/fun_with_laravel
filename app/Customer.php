@@ -1,5 +1,6 @@
 <?php namespace App;
 
+use App\Exceptions\SpotException;
 use App\Services\SpotApi;
 use Log;
 
@@ -22,6 +23,8 @@ class Customer
     public $authKeyExpiry;
     public $languageIso = 'EN';
     public $loginStr;
+    public $password;
+    public $autologin_link = "";
 
     public static function get($arg=null){
 
@@ -75,6 +78,8 @@ class Customer
                 'email'=>$data['email'],
                 'password'=>$data['password']
             ]);
+            $c->password = $data['password'];
+            $c->setAutologinLink("http://www.rboptions.com/users.php?act=check&email=".$c->email."&password=".$c->password);
             $c->isLogged = true; // this belongs here, not in setup, so if we load() a customer we will have the data but without being logged in
             \Session::put('spotCustomer', $c);
             \Session::save();
@@ -100,7 +105,7 @@ class Customer
 
         $data = SpotApi::sendRequest('Customer', 'view', ['FILTER'=>$filter]);
         if($data['err'] !== 0){
-            throw new \Exception($data['errs']['error']);
+            throw new SpotException($data['errs']['error']);
         }
         //prepare data - view returns subarrays of customer, e.g. DATA_0=>[], DATA_1=>[]. we only have one record and need to prefix each key with data_ to be consistent with the form that 'verify' method returns
 
@@ -141,6 +146,56 @@ class Customer
     public function __wakeup(){
         $this->loadCustomerData();
     }
+
+    /**
+     * @return mixed
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param mixed $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param mixed $email
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAutologinLink() {
+        return empty($this->autologin_link) ? "http://www.rboptions.com/users.php?act=login" : $this->autologin_link;
+    }
+
+    /**
+     * @param mixed $autologin_link
+     */
+    public function setAutologinLink($autologin_link)
+    {
+        $this->autologin_link = $autologin_link;
+    }
+
+
+
 }
 
 /*

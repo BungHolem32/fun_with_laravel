@@ -1,8 +1,10 @@
 <?php namespace App\Http\Controllers;
 
+use App\Lib\Helpers\Generate;
 use Illuminate\Foundation\Bus\DispatchesCommands;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use PhpSpec\Exception\Exception;
 use Request;
 
 abstract class Controller extends BaseController {
@@ -12,13 +14,26 @@ abstract class Controller extends BaseController {
 
     public function __construct(){
         \View::share ( 'user', \Auth::getUser());
+        //throw new SpotException('');
     }
 
-    public static function forThis($page,$method){
-        $controllerStr = 'App\Http\Controllers\\' . $page->controller;
-        $controller = new $controllerStr();
-        $page->controller = $controller;
-        return $controller->$method($page);
+    public static function forThis($page,$method, $nocheck=false){
+        if(!$nocheck && $method == 'index' && !$page->inDomain()) { // check if user may access page, but allows admin to edit
+            abort(404);
+        }
+        try {
+            $controllerStr = 'App\Http\Controllers\\' . $page->controller;
+            $controller = new $controllerStr();
+            $page->controller = $controller;
+            return $controller->$method($page);
+        }catch(\Exception $e){
+            switch(get_class($e)){
+                case 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException':
+                    throw $e;
+            }
+            \Log::error($e);
+            return view('layouts.spoterror')->with('error', $e);
+        }
     }
 
     protected function dirName(){
@@ -47,12 +62,23 @@ abstract class Controller extends BaseController {
     }
 
 
+
     public function update($page)
     {
         $status = 1;
         $input = Request::all();
+
+        if(!empty($_FILES)){
+            foreach($_FILES['files']['name'] as $key=>$filename) {
+                $saved_file = Generate::savePicFile($filename, $_FILES['files']['tmp_name'][$key]);
+                if (!empty($saved_file)) {
+                    $input['mongo'][$key] = $saved_file;
+                }
+            }
+        }
+
+
         foreach($input['mongo'] as $key => $fieldValue) {
-            //d($page->$key);
             if($page->$key = $fieldValue)
                 $fields[$key] = 1;
             else{
@@ -60,6 +86,9 @@ abstract class Controller extends BaseController {
                 $status = 0;
             }
         }
+
+        // deletes all files in html cache folder
+        array_map('unlink', glob(base_path()."/storage/html/*"));
 
         if (Request::ajax())
         {

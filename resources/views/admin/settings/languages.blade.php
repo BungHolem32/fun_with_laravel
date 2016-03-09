@@ -8,7 +8,7 @@
 
 @section('content')
     <h1>Languages Page</h1>
-    <h2>Do not Change this page without consulting with Yuri or Rotem!!.</h2>
+    <h2>Do not Change this page without consulting with Rotem!!.</h2>
     <br/>
 
     {!! Form::open(['url' => '/admin/languages']) !!}

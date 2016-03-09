@@ -1,3 +1,4 @@
+<?php $c = \Session::get('spotCustomer'); ?>
 <div class="modal animated fadeInDown" id="thanku" tabindex="-1" role="dialog" aria-labelledby="depositModalLabel" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -27,12 +28,12 @@
         <div class="modal-content">
             <div class="modal-header depositTitle">
                 <button onclick="" type="image" class="close">×</button>
-                Welcome to Aussie Method!
+                Welcome to {{ $page->title_h1 }} Method!
             </div>
             <div class="modal-body">
                 <div class="welcome-top-content">
                     This Software cannot do anything until your account has a positive balance to run trades,
-                    so make sure to deposit some money into your Aussie Method trading account to get started.
+                    so make sure to deposit some money into your {{ $page->title_h1 }} Method trading account to get started.
                     <br><span style="">(Remember, this is your money &amp; you can always withdraw it at any time.)</span>
                 </div>
                 <div style="margin: 0 auto;">
@@ -48,7 +49,7 @@
                             </div>
                             <div class="col-md-12  col-sm-12" style="padding: 0px !important;font-size: 20px;text-align: center;border-top: 1px dashed black;background: rgb(236, 240, 241);">
                                 <div style="color: #54bcc8;font-size: 18px;font-weight: 600;-moz-border-radius: 2px;padding: .5em 1em;line-height: 1;text-align: left;">
-                                    Step 2 - Activate your Aussie Method software.
+                                    Step 2 - Activate your {{ $page->title_h1 }} Method software.
                                 </div>
                                 <img src="/img/aussie/panel/rocket.gif" style="width: 120px; display: block; margin: 0 auto;">
                             </div>
@@ -81,7 +82,7 @@
         <div class="modal-content box">
             <div class="modal-header bg-brand-title box-head depositTitle">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h2 class="modal-title" id="myModalLabel">Aussie Method FAQ</h2>
+                <h2 class="modal-title" id="myModalLabel">{{ $page->title_h1 }} Method FAQ</h2>
             </div>
             <div class="modal-body" style="background: white;">
                 <div class="panel-group" id="accordion">
@@ -89,13 +90,13 @@
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#accordion" href="#">
-                                    <i class="fa fa-bullseye" style="color: black;"></i> How much does Aussie Method cost?
+                                    <i class="fa fa-bullseye" style="color: black;"></i> How much does {{ $page->title_h1 }} Method cost?
                                 </a>
                             </h4>
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <p> Aussie Method is completely free of charge. As we said before, we don’t need nor want your credit card or Paypal details.</p>
+                                <p> {{ $page->title_h1 }} Method is completely free of charge. As we said before, we don’t need nor want your credit card or Paypal details.</p>
                             </div>
                         </div>
                     </div>
@@ -103,7 +104,7 @@
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#accordion" href="#">
-                                    <i class="fa fa-bullseye" style="color: black;"></i> How much money can I make with Aussie Method?
+                                    <i class="fa fa-bullseye" style="color: black;"></i> How much money can I make with {{ $page->title_h1 }} Method?
                                 </a>
                             </h4>
                         </div>
@@ -117,15 +118,15 @@
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#accordion" href="#">
-                                    <i class="fa fa-bullseye" style="color: black;"></i> How can I make a profit using Aussie Method?
+                                    <i class="fa fa-bullseye" style="color: black;"></i> How can I make a profit using {{ $page->title_h1 }} Method?
                                 </a>
                             </h4>
                         </div>
                         <div id="collapseFour" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <p> In 3 easy steps, you will be on your way to riches with Aussie Method:<br>
+                                <p> In 3 easy steps, you will be on your way to riches with {{ $page->title_h1 }} Method:<br>
                                     1. Make a deposit.<br>
-                                    2. Start using Aussie Method.<br>
+                                    2. Start using {{ $page->title_h1 }} Method.<br>
                                     3. Watch your profits grow.<br>
                                 </p>
                             </div>
@@ -149,13 +150,13 @@
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#accordion" href="#">
-                                    <i class="fa fa-bullseye" style="color: black;"></i> Do I need to have previous experience with binary options trading in order to use Aussie Method?
+                                    <i class="fa fa-bullseye" style="color: black;"></i> Do I need to have previous experience with binary options trading in order to use {{ $page->title_h1 }} Method?
                                 </a>
                             </h4>
                         </div>
                         <div id="collapseSix" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <p> No, you do not. Aussie Method is designed to work fully automated and 100% hands free, so even a complete newbie can make a profit.</p>
+                                <p> No, you do not. {{ $page->title_h1 }} Method is designed to work fully automated and 100% hands free, so even a complete newbie can make a profit.</p>
                             </div>
                         </div>
                     </div>
@@ -294,7 +295,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="font-size:30px;">×</button>
                 <h4 class="modal-title " id="myModalLabel">Deposit Now Into Your {{ $page->brand->name }} Broker Account </h4>
                 <p style="font-size: 15px; padding-top: 8px; margin-bottom: 0;">
-                    <a class="cant-deposit" href="{{$page->brand->loginLink}}" style="font-weight: bold; color: black;">Can't See This Page Correct?  Click Here </a> </p>
+                    <a class="cant-deposit" href="{{$c->getAutologinLink()}}" style="font-weight: bold; color: black;">Can't See This Page Correct?  Click Here </a> </p>
             </div>
             <div class="modal-footer">
                                                 <span class="pull-left ajax-loader">
@@ -331,7 +332,7 @@
                             <div class="row">
                                 <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 text-center lead">
                                     <p>
-                                        Fill in the necessary information in order to open your The Aussie Method account and just watch it fill with you earnings.
+                                        Fill in the necessary information in order to open your The {{ $page->title_h1 }} Method account and just watch it fill with you earnings.
                                     </p>
                                 </div>
                             </div>
@@ -478,20 +479,20 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-24 height">
                                     <i class="fa fa-wrench"></i>
             <span class="button_box">
-                In order to unlock your The Aussie Method Account, You have to fund your {{ $page->brand->name }} broker account.
+                In order to unlock your The {{ $page->title_h1 }} Method Account, You have to fund your {{ $page->brand->name }} broker account.
             </span>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-24 height">
                                     <i class="fa fa-check"></i>
             <span class="button_box">
-                Your {{ $page->brand->name }} account is fully connected to your The Aussie Method. Once you get started within 3 short minutes you will see your cash flow straight to your account!
+                Your {{ $page->brand->name }} account is fully connected to your The {{ $page->title_h1 }} Method. Once you get started within 3 short minutes you will see your cash flow straight to your account!
             </span>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-24 height">
                                     <i class="fa fa-briefcase"></i>
             <span class="button_box deposit-link-box">
                 Deposit Form Is Currently Not Working?
-                <a href="{{ $page->brand->loginLink }}" class="broker-login js-broker-login animated bounce" target="_blank">Click Here</a>
+                <a href="{{ $c->getAutologinLink() }}" class="broker-login js-broker-login animated bounce" target="_blank">Click Here</a>
                 To Deposit In Your {{ $page->brand->name }} Broker Website.
             </span>
                                 </div>

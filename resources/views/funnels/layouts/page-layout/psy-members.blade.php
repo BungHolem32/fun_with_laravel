@@ -1,13 +1,10 @@
 @section('head')
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     {!! $page->appendAsset(url('/css/clean-styles.css')) !!}
-    {!! $page->appendAsset(url('/css/psy.css')) !!}
+    {!! $page->appendAsset(url('/css/psy-'.Request::local()->dir.'.css')) !!}
 @append
 
 @section('bottom-scripts')
-    <script>
-        var inputsCss = 'visibility:hidden;';
-    </script>
     @com('funnel_scripts')
 @append
 
@@ -17,7 +14,19 @@
         @include('funnels.layouts._partials._video')
     </div>
 
-    @include('funnels.layouts._partials._form', ['funnelId' => $page->getParent()->id])
+    <div class="container">
+        <div class="wrap">
+            <div class="text-center">
+            <span style="color:#F2B31D;font-size:20px;font-family:Open-sans,sans-serif;">
+                <span id="step">@ln(STEP 1):</span>
+            </span>
+            <span style="color:#fff;font-family:Open-sans,sans-serif;  font-size: 20px;">
+                <span id="fund">@ln(CREATE YOUR ACCOUNT)</span>
+            </span>
+            </div>
+            @include('funnels.layouts._partials._form', ['funnelId' => $page->getParent()->id])
+        </div>
+    </div>
 
     @if(Request::get('rs'))
         <div class="formwrap">
@@ -26,6 +35,7 @@
             </div>
         </div>
     @endif
+
 
     @if($page->getRoot()->thankyoupage->get())
         <div id="thankyou" class="thankyou">

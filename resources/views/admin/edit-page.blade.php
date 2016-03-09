@@ -7,7 +7,7 @@
 
 @section('content')
 <div class="row">
-    {!! Form::open() !!}
+    {!! Form::open(['files'=>true]) !!}
     <div class="col-lg-8 bg-{{ strtolower(Request::local()->code) }} main-edit">
         <h1 class="animated rubberBand"><small>EDIT: </small>{{ $page->title }}</h1>
         <small>@include('admin.partials._breadcrumbs')</small>
@@ -15,6 +15,10 @@
             <div class="form-group">
                 {!! Form::label('title', 'System Title:') !!}
                 {!! Form::text('title', $page['title'], ['name'=>'mongo[title]', 'class'=>'form-control']) !!}
+            </div>
+            <div class="form-group">
+                {!! Form::label('domain', 'Accessible from domain:') !!}
+                {!! Form::text('domain', $page->domain, ['name'=>'mongo[domain]', 'class'=>'form-control']) !!}
             </div>
             @yield('edit')
             <div class="form-group">

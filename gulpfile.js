@@ -1,5 +1,6 @@
 var elixir = require('laravel-elixir');
 var fs = require('fs');
+elixir.config.sourcemaps = true;
 
 /*
  |--------------------------------------------------------------------------
@@ -12,15 +13,11 @@ var fs = require('fs');
  |
  */
 
-
-
 elixir(function(mix) {
 
-    mix.less(['admin.less'], 'public_html/adminpanel/css/admin.css');
-
-    /*mix.less(['admin.less'], 'public/css/admin.css')
-        .less(['load-ltr.less'], 'public/css/styles-0.css')
-        .less(['load-rtl.less'], 'public/css/styles-1.css');*/
+    /*mix.less(['admin.less'], 'public_html/adminpanel/css/admin.css')
+        */mix.less(['load-ltr.less'], 'public_html/css/bootstrap/rboptions-org-0.css')
+             .less(['load-rtl.less'], 'public_html/css/bootstrap/rboptions-org-1.css');
 
     //mix.less(['brand/pages/trade.less'], 'public/css/trade.css');
     //mix.less(['brand/pages/accounts.less'], 'public/css/accounts.css');

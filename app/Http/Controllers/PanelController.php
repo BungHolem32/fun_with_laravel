@@ -86,6 +86,11 @@ class PanelController extends Controller {
             $data['Phone'] = \Request::get('phone');;
             $data['email'] = \Request::get('email');
 
+            // Testing for Ip change
+            /*$data['IPAddress'] = \Request::ip();
+            $data['ip'] = \Request::ip();
+            $data['Ip'] = \Request::ip();*/
+
             // do we need those?
             //$data['State'] = 'NY';
 

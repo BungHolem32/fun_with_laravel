@@ -12,7 +12,7 @@ class SpotApi
     const ourApiPassword = '5648ac05c4849';
     */
     const ourApiUsername = 'Sitev2';
-    const ourApiPassword = '559152ad63f5c';
+    const ourApiPassword = '56c09fc848049';
     //const API_URL = "http://api-spotplatform.rboptions.com/api";
     const API_URL = "http://api-v2.rboptions.com/api";
 
@@ -59,9 +59,11 @@ class SpotApi
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         //curl_setopt($ch, CURLOPT_INTERFACE, $_SERVER["SERVER_ADDR"]);
         curl_setopt($ch, CURLOPT_TIMEOUT, self::TIMEOUT);
-	    /*curl_setopt($ch, CURLOPT_VERBOSE, true);
+
+	    curl_setopt($ch, CURLOPT_VERBOSE, true);
 	    $v = fopen(base_path().'/logs/spot.log', 'a');
-	    curl_setopt($ch, CURLOPT_STDERR, $v);*/
+	    curl_setopt($ch, CURLOPT_STDERR, $v);
+
         $result = curl_exec($ch);
         return $result;
     }
@@ -98,8 +100,8 @@ class SpotApi
             $answer['errs'] = $errs;
             return $answer;
         }
-	    //Log::debug('Spot Error', $answer);
-        $answer['errs']['error'] = $answer['msg'] = 'Error Connection was not established.';
+	    Log::debug('Spot Error', $answer);
+        $answer['errs']['error'] = $answer['msg'] = 'Error - Connection was not established.';
         return $answer;
     }
 
@@ -132,9 +134,11 @@ class SpotApi
         }
 
         //dd($newData);
-        $location = json_decode(file_get_contents('http://api-v2.rboptions.com/locator/'.\Request::ip()));
+        //$location = json_decode(file_get_contents('http://api-v2.rboptions.com/locator/'.\Request::ip()));
+        $location = json_decode(file_get_contents('http://locator.rboptions.com/locator/'.\Request::ip()));
         $newData['registrationCountry']=$location->countryId;
 
         return $newData;
     }
 }
+

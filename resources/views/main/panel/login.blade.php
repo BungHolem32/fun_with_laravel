@@ -2,6 +2,11 @@
     <link rel="stylesheet" href="/css/aussie/panel/style.css" />
     <link rel="stylesheet" href="/css/aussie/panel/custom.css" />
     <link href='https://fonts.googleapis.com/css?family=Oswald:300,400,700|Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <style>
+        .bg-login{
+            background:url(../../../img/aussie/panel/{{$page->title_h1}}_bg.jpg) center center fixed;
+        }
+    </style>
 @append
 
 @section('bottom-scripts')
@@ -46,7 +51,7 @@
     <div class="bg-login">
         <div class="login-logo-w">
             <a href="/login" class="logo logo-login">
-                <img src="/img/aussie/panel/logo.png" alt="aussiemethod" id="logo_login">
+                <img src="{{ $page->panel_logo }}" alt="aussiemethod" id="logo_login">
             </a>
         </div>
         {{-- WRAPPER --}}

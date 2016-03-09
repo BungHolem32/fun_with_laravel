@@ -9,14 +9,20 @@ use Request;
 
 class AbstractFunnelController extends Controller {
 
+    protected $show_recaptcha = false;
+    protected $form = null;
+
+    public function __construct(){
+        parent::__construct();
+    }
 
     public function index($page)
     {
-        /*if(Request::get('rs') == 1){
-            $page->
-        }*/
-        return view($this->dirName().'/index')->with('page', $page);
-        //return view('funnels.funnelClean')->with('page', $page);
+        $this->form = \App\Page::find($page->formType);
+        view()->share('show_recaptcha', $this->show_recaptcha);
+        return view($this->dirName().'/index')
+                ->with('page', $page)
+                ->with('form', $this->form);
     }
 
     public function getPageLayouts(){
