@@ -20,7 +20,7 @@ class Recaptcha
         if(IpLog::count(\Request::ip(), 'createAccount')) {
             if(!self::validateCaptcha()){
                 //Response::header('HTTP/1.1 403 Incorrect Captcha');
-                return response(['err'=>1, 'errs'=>['error'=>Languages::getTrans('Incorrect Captcha')]], 412);
+                return response(['err'=>1, 'errs'=>['error'=>Languages::getTrans('Incorrect Captcha')]], 200);
             }
         }
         return $next($request);
