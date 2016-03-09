@@ -6,10 +6,7 @@
 .idea
 *.log
 
-storage/framework/sessions
-storage/framework/views
-storage/html
-storage/logs
+
 
 .env.*.php
 .env.php
