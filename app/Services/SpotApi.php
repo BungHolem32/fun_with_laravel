@@ -61,8 +61,7 @@ class SpotApi
         curl_setopt($ch, CURLOPT_TIMEOUT, self::TIMEOUT);
 
 	    curl_setopt($ch, CURLOPT_VERBOSE, true);
-	    $v = fopen(base_path().'/logs/spot.log', 'a');
-	    curl_setopt($ch, CURLOPT_STDERR, $v);
+
 
         $result = curl_exec($ch);
         return $result;
