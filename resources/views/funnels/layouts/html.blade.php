@@ -2,12 +2,26 @@
 <html class="no-js" lang="en">
 <head>
     @include('funnels.layouts._head')
-    {!! $page->getParent()->scripts->headScripts !!}
-    {!! $page->scripts->headScripts !!}
+
+    @if ($page->getParent()->scripts->headScripts === $page->scripts->headScripts)
+        {!! $page->scripts->headScripts !!}
+    @else
+        {!! $page->getParent()->scripts->headScripts !!}
+        {!! $page->scripts->headScripts !!}
+    @endif
+
+
 </head>
 <body>
-{!! $page->getParent()->scripts->afterBodyScripts !!}
-{!! $page->scripts->afterBodyScripts !!}
+
+
+    @if ($page->getParent()->scripts->afterBodyScripts === $page->scripts->afterBodyScripts)
+        {!! $page->scripts->afterBodyScripts !!}
+    @else
+        {!! $page->getParent()->scripts->afterBodyScripts !!}
+        {!! $page->scripts->afterBodyScripts !!}
+    @endif
+
 
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -16,8 +30,14 @@
     @yield('page-layout')
 
     @include('funnels.layouts._scripts-bottom')
-{!! $page->getParent()->scripts->bodyEndScripts !!}
-{!! $page->scripts->bodyEndScripts !!}
+
+
+    @if ($page->getParent()->scripts->bodyEndScripts === $page->scripts->bodyEndScripts)
+        {!! $page->scripts->bodyEndScripts !!}
+    @else
+        {!! $page->getParent()->scripts->bodyEndScripts !!}
+        {!! $page->scripts->bodyEndScripts !!}
+    @endif
 
 </body>
 </html>
