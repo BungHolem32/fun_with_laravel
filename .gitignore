@@ -6,6 +6,8 @@
 .idea
 *.log
 
+gulpfile.js
+
 storage/framework/sessions
 storage/framework/views
 storage/html
