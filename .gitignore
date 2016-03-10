@@ -16,4 +16,3 @@ storage/logs
 .env.*.php
 .env.php
 .env
-.env.example
