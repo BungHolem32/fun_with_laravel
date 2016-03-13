@@ -492,9 +492,9 @@
                 <tr>
                     <td align="left"> Copyright 2016 Aussie Method. All Right Reserved. </td>
                     <td align="right">
-                        @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'class'=>'fancybox_iframe', 'text'=>'Privacy', 'target'=>'_blank'])
+                        @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/policy", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Privacy'])
                         |
-                        @include('funnels.layouts._partials._link', ['page' => \App\Page::find(40), 'class'=>'fancybox_iframe', 'text'=>'Terms', 'target'=>'_blank'])
+                        @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/terms", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Terms'])
                     </td>
                 </tr>
             </table>
