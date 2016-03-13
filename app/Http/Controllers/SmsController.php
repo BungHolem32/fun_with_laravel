@@ -69,7 +69,7 @@ class SmsController extends Controller {
         //die();
 
         if ($res->messages[0]->status != 0) {
-            echo(json_encode (['err'=>1, 'errs'=>['error'=>'Error while sending SMS to '.$phone, 'action'=>'reload']])); // error during SMS sending
+            echo(json_encode (['err'=>1, 'errs'=>['error'=>'Error while sending SMS to '.$phone, 'action'=>'stay']])); // error during SMS sending
             return;
         }
 

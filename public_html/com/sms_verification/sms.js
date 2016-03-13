@@ -47,10 +47,12 @@ function sendSMS() {
         success: function(res) {
             if(res.err === 0){
                 showSmsForm();
+                $('#other-error').css('visibility', 'hidden');
                 $('#other-error').hide();
             }
             else {
                 $('#other-error').html(res.errs.error);
+                $('#other-error').css('visibility', 'visible');
                 $('#other-error').show();
 
                 //alert(res.errs.error);
