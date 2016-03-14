@@ -37,15 +37,15 @@
                 <p class="main-text">Only at Huge Options you get a head start in binary options trading with 10 risk-free trades bonus!
                     <br /> <br />
                     Whatever you win is yours and whatever you lose, well... you don’t lose! </p>
-                <p><img src="img/lp/protected/bg.png" class="img-responsive" alt="" /></p>
+                <p><img src="/img/lp/protected/bg.png" class="img-responsive" alt="" /></p>
             </div>
 
             <!-- END PARAGRAPH !-->
             <!-- FORM !-->
             <div class="col-xs-12 col-sm-6 col-lg-4">
                 @include('funnels.layouts._partials._form', ['funnelId' => $page->id])
-                <div class="logos"><img src="img/lp/protected/iconos.png" alt="" /></div>
-                <div class="logos"><img src="img/lp/protected/logos.png" alt="" /></div>
+                <div class="logos"><img src="/img/lp/protected/iconos.png" alt="" /></div>
+                <div class="logos"><img src="/img/lp/protected/logos.png" alt="" /></div>
             </div><!-- end form !-->
 
 
