@@ -7655,7 +7655,8 @@ body #wrap{
     font-family: monospace;
     position: relative;
     top: -95px;
-    background-color: #16191E;
+    background-color: #27579F;
     height: 80px;
     padding-top: 16px;
+    text-align: center;
 }
