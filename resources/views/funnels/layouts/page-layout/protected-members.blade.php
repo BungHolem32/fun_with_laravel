@@ -33,7 +33,7 @@
 
         <div class="row">
             <!-- PARAGRAPH !-->
-            <div class="col-xs-12 col-sm-6 col-lg-8">
+            <div class="col-xs-12 col-sm-6 col-lg-8" style="position: relative;overflow: hidden;">
                 <p class="main-text">Only at Huge Options you get a head start in binary options trading with 10 risk-free trades bonus!
                     <br /> <br />
                     Whatever you win is yours and whatever you lose, well... you don’t lose! </p>

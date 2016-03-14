@@ -7654,9 +7654,12 @@ body #wrap{
     font-size: 17px;
     font-family: monospace;
     position: relative;
-    top: -95px;
+    top: 195px;
     background-color: #27579F;
-    height: 80px;
+    height: 75px;
     padding-top: 16px;
     text-align: center;
+    width: 100%;
+    display: inline-block;
+    position: absolute;
 }
