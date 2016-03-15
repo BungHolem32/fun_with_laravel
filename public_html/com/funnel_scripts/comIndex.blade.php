@@ -5,10 +5,15 @@
     $(function(){ // add query string to form action
         $('form').each(function(){
             var action = $(this).attr('action').split('?');
+
+            // if its a postEmailForm action
             if(action[0].indexOf('postEmailForm')>-1){
-                if(action.length == 1) { // only add params if none are set
-                    $(this).attr('action', action[0] + window.location.search);
-                }
+
+                // The postEmailForm should never have any parameters on the action
+                // here we add the pages parameters to the form, which is always safe
+
+                // Change the action => adds the params to action.
+                $(this).attr('action', action[0] + window.location.search);
             }
         });
     });
