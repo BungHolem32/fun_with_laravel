@@ -9,6 +9,7 @@
     <![endif]-->
 @append
 
+
 @section('bottom-scripts')
     @com('funnel_scripts')
     {{--<script src="/js/lp/binary-currencies.js"></script>--}}
