@@ -26,7 +26,7 @@
 
         <!-- TITLE !-->
         <p>
-        <h1>You Are 100% <span style="color:#F8C750">Protected</span></h1>
+        <h1>{!! $page->htmlHeader !!}</h1>
         <br />
         </p>
 
@@ -35,9 +35,7 @@
         <div class="row">
             <!-- PARAGRAPH !-->
             <div class="col-xs-12 col-sm-6 col-lg-8" style="position: relative;overflow: hidden;">
-                <p class="main-text">Only at Huge Options you get a head start in binary options trading with 10 risk-free trades bonus!
-                    <br /> <br />
-                    Whatever you win is yours and whatever you lose, well... you don’t lose! </p>
+                <p class="main-text">{!! $page->smallHeader !!}</p>
                 <p><img src="/img/lp/protected/bg.png" class="img-responsive" alt="" /></p>
             </div>
 
