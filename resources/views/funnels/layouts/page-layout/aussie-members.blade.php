@@ -10,6 +10,7 @@
     <![endif]-->
     {!! $page->appendAsset(url('/js/vendor/jquery-1.11.2.min.js')) !!}
     <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="/js/aussie/first.js?v=1"></script>
     <script src="/js/fancybox/jquery.fancybox.js"></script>
 @append
 
