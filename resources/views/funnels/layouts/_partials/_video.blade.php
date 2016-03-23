@@ -22,9 +22,22 @@ if(!isset($_GET['dev_video'])):
 @append
 
 @if(str_contains($videoUrl, 'youtube.com'))
+    <?php
+        $search = "/\s*[a-zA-Z\/\/:\.]*youtube.com\/watch\?v=([a-zA-Z0-9\-_]+)([a-zA-Z0-9\/\*\-\_\?\&\;\%\=\.]*)/i";
+        $replace= "//www.youtube.com/embed/$1";
+        $videoUrl = preg_replace($search, $replace, $videoUrl);
+    ?>
     <div class="video">
         <iframe id="ytplayer" type="text/html" width="{{ $w }}" height="{{ $h }}"
-            src="{!! $videoUrl !!}?autoplay=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;autohide=1" frameborder="0">
+            src="{!! $videoUrl !!}?autoplay=1&showinfo=0&rel=0&modestbranding=1&autohide=1&controls=0" frameborder="0">
+        </iframe>
+    </div>
+
+@elseif(str_contains($videoUrl, 'vimeo.com'))
+    <div class="video">
+        <iframe src="{!! $videoUrl !!}?autoplay=1&badge=0&byline=0"
+                width="{{ $w }}" height="{{ $h }}"
+                frameborder="0">
         </iframe>
     </div>
 
