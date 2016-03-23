@@ -1,0 +1,57 @@
+{
+  "global": {
+    "tradersOnline": [
+      "just downloaded Zulander Hack Software",
+      "just joined queue to watch video",
+      "just made $181 PROFIT",
+      "just completed watching video",
+      "just joined queue to watch video",
+      "just made $371 PROFIT",
+      "just joined queue to watch video",
+      "just downloaded Zulander Hack Software",
+      "just landed on download page",
+      "just made $139 PROFIT",
+      "just downloaded Zulander Hack Software",
+      "just landed on download page",
+      "just joined queue to watch video",
+      "just made $96 LOSS",
+      "just joined queue to watch video",
+      "just joined queue to watch video",
+      "just joined queue to watch video",
+      "just made $409 PROFIT",
+      "just completed watching video",
+      "just joined queue to watch video",
+      "just joined queue to watch video"
+    ]
+  },
+  "uk": {
+    "traders": [
+      {"name": "Peter R", "address": "Netanya, Israel"},
+      {"name": "Peter R", "address": "Netanya, Israel"},
+      {"name": "Peter R", "address": "Netanya, Israel"},
+      {"name": "Peter R", "address": "Netanya, Israel"},
+      {"name": "Peter R", "address": "Netanya, Israel"},
+      {"name": "Peter R", "address": "Netanya, Israel"},
+      {"name": "Peter R", "address": "Netanya, Israel"},
+      {"name": "Peter R", "address": "Netanya, Israel"},
+      {"name": "Peter R", "address": "Netanya, Israel"},
+      {"name": "Peter R", "address": "Netanya, Israel"},
+      {"name": "Peter R", "address": "Netanya, Israel"}
+    ],
+    "avatars": [
+      {"name": "Peter R", "address": "Netanya, Israel", "pic": "photo.jpg"},
+      {"name": "David B", "address": "Tel Aviv, Israel", "pic": "photo.jpg"},
+      {"name": "Moshe T", "address": "Herzliya, Israel", "pic": "photo.jpg"},
+      {"name": "Nadav J", "address": "Rehovot, Israel", "pic": "photo.jpg"},
+      {"name": "Yoval P", "address": "Dimona, Israel", "pic": "photo.jpg"},
+      {"name": "Shlomi Y", "address": "Ashkelon, Israel", "pic": "photo.jpg"}
+    ],
+    "licenses": {
+      "count": 10,
+      "timer": {
+        "start": 40,
+        "interval": 2500
+      }
+    }
+  }
+}
