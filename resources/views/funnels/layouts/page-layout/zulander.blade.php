@@ -1,11 +1,12 @@
 <?php
-$countryCode = false;
-$countryName = false;
-$content = json_decode(file_get_contents(url("/js/zulander/content.json")),true);
-//    $loc = \App\Services\Location::getByUserIp();
-//    $countryCode = strtolower($loc['iso']);
-//    $countryName = strtolower($loc['countryName']);
+$countryCode        = false;
+$countryName        = false;
 $locationContent    = null;
+
+$content        = json_decode(file_get_contents(url("/js/zulander/content.json")),true);
+$loc            = \App\Services\Location::getByUserIp();
+$countryCode    = strtolower($loc['iso']);
+$countryName    = strtolower($loc['countryName']);
 
 if(!$countryCode) {
     $countryCode = 'uk';
