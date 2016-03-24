@@ -72,11 +72,21 @@ foreach($content as $country => $data) {
                 <div class="avideo text-center">Claim One Of <span class="st1"><strike>10</strike> <strong class="count">10</strong> FREE LICENSES In {{$countryName}}</span> To Make <span class="st2">$1,008</span> <strong>Every 5 MINUTES >></strong></div>
                 <div class="free">
                     <form>
+
+                        {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post']) !!}
+                        <input type="hidden" name="pageId" value="{{ $page->id }}">
+                        @if($page->switches->showEmailField)
+                            <input id="firstPageSignUpMail" type="email" name="email" placeholder="@ln(Email):" required="required" />
+                        @endif
+                        <input class="hov" type="submit" />
+                        {!! Form::close() !!}
+
                         <div class="f1  hidden-sm hidden-xs text-center">
                             <img src={{ url("/img/zulander/content/flags/small-".$countryCode.".png") }} alt="" />
                             <span></span>
                             <input type="email" value="" placeholder="Please enter your email here" name=""/>
                         </div>
+                    </form>
                         <div class="f2 text-center">
                             <input type="submit" value="GIVE ME A FREE LICENSE!" class="go1"/>
                             <div class="strelka visible-xs"><img src={{ url("/img/zulander/strelka2.png") }} class="/img-responsive"  alt=""/></div>
@@ -102,7 +112,6 @@ foreach($content as $country => $data) {
                                 <img src={{ url("/img/zulander/sec5.jpg") }} alt="" />
                             </div>
                         </div>
-                    </form>
                 </div>
                 <div class="review">
                     <div class="line-l">
