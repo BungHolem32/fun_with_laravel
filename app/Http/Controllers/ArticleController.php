@@ -4,5 +4,6 @@ use Franzose\ClosureTable\Tests\Models\Page;
 
 class ArticleController extends Controller {
 
+    // test
 
 }
