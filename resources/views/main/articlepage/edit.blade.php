@@ -32,6 +32,10 @@
         @if($page->background) <img src="{{ $page->background }}" width='100%'> @endif
     </div>
     <div class="form-group">
+        {!! Form::label('customCss', 'Custom Css (url):') !!}
+        {!! Form::text('customCss', $page['customCss'], ['name'=>'mongo[customCss]', 'class'=>'form-control']) !!}
+    </div>
+    <div class="form-group">
         {!! Form::label('openAccountLink', 'Open Account Link:') !!}
         {!! Form::text('openAccountLink', $page['openAccountLink'], ['name'=>'mongo[openAccountLink]', 'class'=>'form-control']) !!}
     </div>

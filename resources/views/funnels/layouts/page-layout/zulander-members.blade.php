@@ -1,10 +1,24 @@
 <?php
+$countryCode = false;
+$countryName = false;
 $content = json_decode(file_get_contents(url("/js/zulander/content.json")),true);
 //    $loc = \App\Services\Location::getByUserIp();
-//    $countryCode = $loc['iso'];
-$countryCode = false;
-if(!$countryCode) $countryCode = 'uk';
-$locationContent = json_encode($content[$countryCode]);
+//    $countryCode = strtolower($loc['iso']);
+//    $countryName = strtolower($loc['countryName']);
+$locationContent    = null;
+
+if(!$countryCode) {
+    $countryCode = 'uk';
+    $countryName = 'United Kingdom';
+}
+
+foreach($content as $country => $data) {
+    $codes = explode('_',$country);
+    if(in_array($countryCode,$codes)) {
+        $locationContent = $content[$country];
+        break;
+    }
+}
 ?>
 
 @section('head')
@@ -19,7 +33,7 @@ $locationContent = json_encode($content[$countryCode]);
     {!! $page->appendAsset(url('/js/zulander/myClock.js')) !!}
     {!! $page->appendAsset(url('/js/zulander/jquery.knob.js')) !!}
     <script type="text/javascript">
-        var locationContent = <?php echo $locationContent ?>;
+        var locationContent = <?php echo json_encode($locationContent) ?>;
     </script>
     {!! $page->appendAsset(url('/js/zulander/script.js')) !!}
 @append
@@ -33,7 +47,7 @@ $locationContent = json_encode($content[$countryCode]);
         <div class="content">
             <div class="lenta">
                 <div class="lenta-l text-center">
-                    <span><strong>CONGRATULATIONS:</strong>You just Completed Step One &<br />Joined the LIVE Queue For Israel!</span>
+                    <span><strong>CONGRATULATIONS:</strong>You just Completed Step One &<br />Joined the LIVE Queue For {{$countryName}}!</span>
                 </div>
             </div>
             <div class="title text-center">
@@ -59,7 +73,7 @@ $locationContent = json_encode($content[$countryCode]);
                     You Only Have <span>7 MINUTES</span> To Open A Trading Account & Start Making Up To <span>$1,008 EVERY 5 MINUTES!</span>
                 </div>
                 <div><div id="clock1"></div></div>
-                <div class="foot"><strong>You Must Enter Your Details In The Form</strong> Before The Clock Hits Zero. There Are Currently 1591 People In Israel Waiting To Take Your FREE License.</div>
+                <div class="foot"><strong>You Must Enter Your Details In The Form</strong> Before The Clock Hits Zero. There Are Currently 1591 People In {{$countryName}} Waiting To Take Your FREE License.</div>
             </div>
             <div class="simletext  hidden-sm hidden-xs">
                 <p>Zulander Hack is a completely NEW and UNSEEN Binary Options software...</p>
@@ -112,7 +126,7 @@ $locationContent = json_encode($content[$countryCode]);
 
                     </div>
                 </div>
-                <div class="foot"><strong>You Must Enter Your Details In The Form</strong> Before The Clock Hits Zero. There Are Currently 1591 People In Israel Waiting To Take Your FREE License.</div>
+                <div class="foot"><strong>You Must Enter Your Details In The Form</strong> Before The Clock Hits Zero. There Are Currently 1591 People In {{ $countryName }} Waiting To Take Your FREE License.</div>
             </div>
             <div class="step4 text-center">STEP THREE: <span>MAKE A DEPOSIT<br/>INTO YOUR BROKER ACCOUNT</span></div>
             <div class="simletext">

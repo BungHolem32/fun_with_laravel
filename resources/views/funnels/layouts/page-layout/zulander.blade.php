@@ -1,10 +1,24 @@
 <?php
-    $content = json_decode(file_get_contents(url("/js/zulander/content.json")),true);
+$countryCode = false;
+$countryName = false;
+$content = json_decode(file_get_contents(url("/js/zulander/content.json")),true);
 //    $loc = \App\Services\Location::getByUserIp();
-//    $countryCode = $loc['iso'];
-    $countryCode = false;
-    if(!$countryCode) $countryCode = 'uk';
-    $locationContent    = json_encode($content[$countryCode]);
+//    $countryCode = strtolower($loc['iso']);
+//    $countryName = strtolower($loc['countryName']);
+$locationContent    = null;
+
+if(!$countryCode) {
+    $countryCode = 'uk';
+    $countryName = 'united kingdom';
+}
+
+foreach($content as $country => $data) {
+    $codes = explode('_',$country);
+    if(in_array($countryCode,$codes)) {
+        $locationContent = $content[$country];
+        break;
+    }
+}
 ?>
 
 @section('head')
@@ -19,7 +33,7 @@
     {!! $page->appendAsset(url('/js/zulander/myClock.js')) !!}
     {!! $page->appendAsset(url('/js/zulander/jquery.knob.js')) !!}
     <script type="text/javascript">
-        var locationContent = <?php echo $locationContent ?>;
+        var locationContent = <?php echo json_encode($locationContent) ?>;
     </script>
     {!! $page->appendAsset(url('/js/zulander/script.js')) !!}
 @append
@@ -32,7 +46,7 @@
             <div class="content">
                 <div class="lenta">
                     <div class="lenta-l text-center">
-                        <img src={{ url("/img/zulander/icon.png") }} alt=""/> <span><strong>CONFIRMED:</strong>You’ve been Invited to watch this Weird Presentation because you’re in Israel</span>
+                        <img src={{ url("/img/zulander/content/flags/small-".$countryCode.".png") }} alt=""/> <span><strong>CONFIRMED:</strong>You’ve been Invited to watch this Weird Presentation because you’re in {{$countryName}}</span>
                     </div>
                 </div>
                 <div class="title text-center">
@@ -41,7 +55,7 @@
                 <div class="bvideo text-center">Don’t Miss The Surprise At The End Of This Short Video...</div>
                 <div class="mvideo">
                     <div class="video-player">
-{{--                        @include('funnels.layouts._partials._video',  ['w'=>'100%', 'hd'=>360])--}}
+                        @include('funnels.layouts._partials._video',  ['w'=>'100%', 'hd'=>360])
                         <div class="video-progress">
                             <div class="video-progress-viewers">
                                 <img src={{ url("/img/zulander/eye.png") }}>
@@ -54,11 +68,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="avideo text-center">Claim One Of <span class="st1"><strike>10</strike> <strong class="count">10</strong> FREE LICENSES In Israel</span> To Make <span class="st2">$1,008</span> <strong>Every 5 MINUTES >></strong></div>
+                <div class="avideo text-center">Claim One Of <span class="st1"><strike>10</strike> <strong class="count">10</strong> FREE LICENSES In {{$countryName}}</span> To Make <span class="st2">$1,008</span> <strong>Every 5 MINUTES >></strong></div>
                 <div class="free">
                     <form>
                         <div class="f1  hidden-sm hidden-xs text-center">
-                            <img src={{ url("/img/zulander/icon.png") }} alt="" />
+                            <img src={{ url("/img/zulander/content/flags/small-".$countryCode.".png") }} alt="" />
                             <span></span>
                             <input type="email" value="" placeholder="Please enter your email here" name=""/>
                         </div>
@@ -98,27 +112,25 @@
                     <div class="row">
                         <div id="carousel-example-generic" class="carousel slide">
                             <div class="carousel-inner" role="listbox">
-                                @for($i=0; $i<count($content[$countryCode]['avatars']); $i++)
+                                @for($i=0; $i<count($locationContent['stories']); $i++)
                                     <div class="col-md-4 col-sm-4 active">
                                         <div class="block">
                                             <div class="row">
                                                 <div class="col-md-5 col-sm-5 col-xs-5 photo">
-                                                    <img src={{ url("/img/zulander/".$content[$countryCode]['avatars'][$i]['pic']) }} width="100" alt="" class="/img-circle">
-                                                    <div class="flag"><img src={{ url("/img/zulander/".$countryCode.".png") }} alt=""/></div>
+                                                    <img src={{ url("/img/zulander/content/peoples/".$locationContent['stories'][$i]['avatar']) }} width="100" alt="" class="/img-circle">
+                                                    <div class="flag"><img src={{ url("/img/zulander/content/flags/".$locationContent['stories'][$i]['flag']) }} alt=""/></div>
                                                 </div>
                                                 <div class="col-md-7 col-sm-7 col-xs-7 name">
-                                                    <strong>{{ $content[$countryCode]['avatars'][$i]['name'] }}</strong><br/>{{ $content[$countryCode]['avatars'][$i]['address'] }}
+                                                    <strong>{{ str_replace('+',' ',explode('-',$locationContent['stories'][$i]['avatar'])[0]) }}</strong><br/>{{ str_replace('.jpg','',str_replace('+',' ',explode('-',$locationContent['stories'][$i]['avatar'])[1])) }}
                                                 </div>
                                                 <div class="clear clearfix"></div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <div class="text">
-                                                        <p>"It probably took about 7 or 8 clicks to set up the software.</p>
-                                                        <p>I was then literally making money within five minutes of setting up the software.</p>
-                                                        <p>I choose to trade on autopilot which means I don’t have to even log in if I don’t want to.</p>
-                                                        <p>The software does all the hard work for me!</p>
-                                                        <p>My account statistics are showing an 89.3% success rate so far - that’s AMAZING!"</p>
-                                                        <p>Started Using Software: <strong>Monday 4th January 2016</strong></p>
-                                                        <p>Starting Balance: <strong>$250</strong></p>
+                                                        @for($x=0; $x<count($content['global'][$i]); $x++)
+                                                            {!! $content['global'][$i][$x] !!}
+                                                        @endfor
+                                                        <p>Started Using Software: <strong>{{ $locationContent['stories'][$i]['startDate'] }}</strong></p>
+                                                        <p>Starting Balance: <strong>${{ $locationContent['stories'][$i]['balance'] }}</strong></p>
                                                     </div>
                                                     <div class="total text-center">Total earned: <span>$121,589</span> <strong>(withdrawn)</strong></div>
                                                     <div class="rate">
@@ -151,7 +163,7 @@
                 </div>
             </div>
             <div class="footer text-center">
-                <div class="links"><a href="#">Site Agreement</a> | <a href="#">Risk Disclaimer</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a> | <a href="#">Affiliates</a></div>
+                <div class="links"><a href="/zulander/agreement">Site Agreement</a> | <a href="/zulander/disclosure">Risk Disclaimer</a> | <a href="/zulander/policy">Privacy Policy</a></div>
                 <div class="copyright">Copyright © 2016 zulanderhack.co</div>
                 <div class="right">
                     <p>RISK Disclaimer: http://zulanderhack.co makes no representations regarding the legality of access to or use of this website or its content in any jurisdiction. Not all services offered through this website are permitted for use in al countries. Investing in financial instruments involves a high degree of risk and may bot be suitable for all investors. We strongly advise that you read our Website Terms of Service and Risk Disclosure Statement before accessing this website. http://zulanderhack.co and its officials are not responsible for any losses related to use of its services or software. If necessary seek independent advice prior to accessing this website. Users must be aware of their individual tax liability in their country of residence.</p>
@@ -169,7 +181,7 @@
             <div class="desc">
                 <div class="date">28 February 2016</div>
                 <img src={{ url("/img/zulander/module.png") }} alt="" />
-                <div class="intro">Total Profit Generated By<br/>Our Beta Tester Group<br/>In Israel:</div>
+                <div class="intro">Total Profit Generated By<br/>Our Beta Tester Group<br/>In {{$countryName}}:</div>
                 <img src={{ url("/img/zulander/icon.png") }} alt="" width="29"/>
             </div>
             <div class="foot">
@@ -183,8 +195,8 @@
                 <img src={{ url("/img/zulander/module.png") }} alt="" />
                 <div class="intro-list">
                     <ul id="ticker">
-                        @for($i=0; $i<count($content[$countryCode]['traders']); $i++)
-                            <li>{{ $content[$countryCode]['traders'][$i]['name'] }}, {{ $content[$countryCode]['traders'][$i]['address'] }} {{ $content['global']['tradersOnline'][$i] }}</li>
+                        @for($i=0; $i<count($locationContent['traders']); $i++)
+                            <li>{{ $locationContent['traders'][$i] }}</li>
                         @endfor
                     </ul>
                 </div>

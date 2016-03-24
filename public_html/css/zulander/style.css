@@ -19,7 +19,6 @@ a { color:#0072ff;}
 	-moz-box-shadow: 0px 0px 76px 16px rgba(0,0,0,1);
 	box-shadow: 0px 0px 76px 16px rgba(0,0,0,1);
 }
-
 .content .lenta { width:100%; height:117px; background:#00ccff url(/img/zulander/lenta-bg.jpg) repeat-x 0 0; position:relative;}
 .content .lenta-l {  width:100%; height:117px; background:url(/img/zulander/lenta-left.jpg) no-repeat 0 0; padding:42px 0 0 0;}
 .content .lenta-l:after { width:17px; height:117px; content: " "; background-image: url(/img/zulander/lenta-right.jpg); position: absolute; right:-17px; top:0;}
@@ -452,7 +451,7 @@ div#second .go3 { width:561px; height:89px; border:none; background:#f4f4f5 url(
 .carousel-control.right { background-image:none;}
 
 /**/
-#timer2 .col-xs-8 {     padding: 0px}
+#timer2 .col-xs-8 { padding: 0 }
 
 /**/
 .carousel-control { color:#333; text-shadow:none;}
@@ -460,3 +459,12 @@ div#second .go3 { width:561px; height:89px; border:none; background:#f4f4f5 url(
 .glyphicon-chevron-right:before { color:#333;}
 .glyphicon-chevron-left { background:#c0c0c0; border-radius:50%; padding:7px;}
 .glyphicon-chevron-right { background:#c0c0c0; border-radius:50%; padding:7px;}
+
+.articlePage.wrapper{
+    padding: 1em;
+    width: 100%;
+}
+.container .logo { text-align: center; }
+.articlePage .marketing { color: #d2d1d1; width: 100%; }
+.navbar-wrapper, .underBodyLinks, .payments, footer { display: none; }
+
