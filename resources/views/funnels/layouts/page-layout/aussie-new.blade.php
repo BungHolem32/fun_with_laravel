@@ -8,18 +8,10 @@
     <script src="/js/vendor/respond.min.js"></script>
     <![endif]-->
     {{--<script type="text/javascript" src="/js/aussie-new/first.js"></script>--}}
-    <script type="text/javascript" src="/js/aussie-new/second.js"></script>
     <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen"/>
 @append
 @section('bottom-scripts')
-    <script src="/js/aussie-new/second.js"></script>
-    <script language="javascript">
-        var loading = 1;
-        var loadingTimeOut = 1000;
-        var loadingMsg = '<div class="loading"><img src="/img/aussie/loadingBL2.gif" alt=""><div class="loading-text"> Registration is in progress.. </div></div>';
-    </script>
     @com('funnel_scripts')
-    <script src="/js/aussie-new/bootstrap.min.js"></script>
     <script src="/js/fancybox/jquery.fancybox.js"></script>
     <script>
         var nm = ["Harvey", "Christopher", "David", "Morgan", "Jason", "Travis", "Charlie", "Robert", "Henry", "Kieran", "Charles", "Joseph", "Ellis", "Billy", "Andrew", "Johnny", "George", "Sebastian", "Cameron", "Tory", "Joel", "Adam", "Bryce", "Dwayne", "Vincent", "Leon", "Aidan", "Aidan", "David", "Jacob", "Ben", "Alex", "Enrique", "Dennis", "Nathan", "Charles", "Robert", "Alfie", "Dominic", "Leon", "John", "Daniel", "Charles", "Romeo", "Noah", "Anthony", "James", "Mohammed", "Louis", "Joseph", "Ellis", "Kai", "Jay", "Noah", "Lewis", "Anthony", "Jamie", "Elliot", "Ronald", "Troy", "Reece", "Richard", "Joel", "Callum", "Jack", "Richard", "Nicholas", "Cameron", "Harry", "William", "Lyle", "Frank", "Norman", "Anthony", "Morgan", "Geoffrey", "Alejandro", "Zak", "Anthony", "Kieran", "Ross", "Paul", "Sam", "Richard", "Michael", "Roger", "Charles", "Reece", "Brandon", "Robert", "Luca", "Harrison", "Ryan", "Taylor", "Frank", "Larry", "Billy", "Sam", "Finlay", "Zara", "Georgia", "Sylvie", "Kiera", "Margaret", "Patria", "Ava", "Diane", "Skye", "Helen", "Jennifer", "Isabella", "Faith", "Jessica", "Penny", "Rebecca", "Summer", "Tamara", "Tamika", "Magdalene", "Wendy", "Genevieve", "Stephanie", "Erin", "Abby", "Ann", "Abbie", "Leigh", "Shanna", "Tilly", "Laura", "Mary", "Paula", "Isabel", "Ella", "Tatiana", "Mary", "Tegan", "Cynthia", "Abigail", "Lauren", "Laura", "Katherine", "Naomi", "Barbara", "Melisa", "Pamela", "Leeann", "Jodie", "Terri", "Caitlin", "Roberta", "Daisy", "Molly", "Frieda", "Louise", "Elizabeth", "Stella", "Billie", "Gracie", "Sienna", "Katie", "Mildred", "Kayleigh", "Christy", "Kiera", "Yun", "Courtney", "Tegan", "Sheila", "Ray", "Lydia", "Mamie", "Keira", "Matilda", "Sonya", "Ava", "Cerys", "Eleanor", "Grace", "Jodie", "Sharon", "Elva", "Eleanor", "Freya", "Bessie", "Sofia", "Amelie", "Brenda", "Poppy", "Tegan", "Sienna", "Leah", "Antoinette", "Zoe"];
@@ -60,7 +52,6 @@
 
             document.getElementById("facebook-tab").innerHTML = "<div style='clear:both;'></div><div class='feed_name1'><img src='/img/aussie-new/fw/" + images[counter] + "' height='40' /><b><a class='fbname social-name' href='#'>" + nm[counter] + "</a></b><br/><span id='curr_time_" + cnt + "' class='ctime1' sec='60'>1 minute</span><div style='clear:both;'></div><div id='data1' class='fb-data'> <span> " + data[dc] + "</span></div><div class='facebook-tab'>Like <span class='dash'>-</span> Comment <span class='dash'>-</span> Share </div></div> " + document.getElementById("facebook-tab").innerHTML;
             if (feed_name1.length > 4) {
-                var suffled = shuffleArray(feed_name1);
                 $('.feed_name1').last().remove();
             }
             cnt++;
@@ -163,43 +154,8 @@
             autoRefresh();
 
     </script>
-    <script>
-        // need to put in js file all of this
-        $("a.fancybox").fancybox();
-
-
-        $(document).on('click', '.fancybox_iframe', function (e) {
-            e.preventDefault();
-            $.fancybox({
-                href: $(this).attr('href'),
-                type: 'iframe'
-            });
-        });
-
-        if ($('#back-to-top').length) {
-            var scrollTrigger = 100, // px
-                    backToTop = function () {
-                        var scrollTop = $(window).scrollTop();
-                        if (scrollTop > scrollTrigger) {
-                            $('#back-to-top').addClass('show');
-                        } else {
-                            $('#back-to-top').removeClass('show');
-                        }
-                    };
-            backToTop();
-            $(window).on('scroll', function () {
-                backToTop();
-            });
-            $('#back-to-top').on('click', function (e) {
-                e.preventDefault();
-                $('html,body').animate({
-                    scrollTop: 0
-                }, 700);
-            });
-        }
-    </script>
+    <script type="text/javascript" src="/js/aussie-new/funnel-object.js"></script>
     {!! $page->appendAsset(url('/js/firstPage.js')) !!}
-
 @append
 
 @section('page-layout')
@@ -252,7 +208,7 @@
                     </div>
 
                     <!--Form Tag-->
-                    <div id="form_part" class='col-md-5 col-sm-12'>
+                    <div id="form_part" class='col-md-5 col-sm-12 form-first'>
                         {{--TEXT--}}
                         <p>START <strong>NOW</strong></p>
                         <p>Enter your email below to gain instant
@@ -264,7 +220,7 @@
                             <input id="firstPageSignUpMail" type="email" name="email" placeholder="YOUR EMAIL ADDRESS.."
                                    required="required" class="col-sm-12"/>
                         @endif
-                        <input type="submit" class="align-center col-md-12 col-sm-12" value=""/>
+                        <input type="submit" class="align-center col-md-12 col-sm-12 submit-aussie" value=""/>
                         {!! Form::close() !!}
                         <div class="col-md-12 col-sm-12">
                             <img src="/img/aussie-new/trust.png" class="trust-pic" width="100%">
@@ -295,7 +251,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <a class="fancybox" rel="group" href="/img/aussie/guarantee.png">
-                            <img src="img/aussie-new/hey.png" alt="first_pic-jake-pertu pic"
+                            <img src="/img/aussie-new/hey.png" alt="first_pic-jake-pertu pic"
                                  class=" col-md-12 col-sm-12  col-xs-12 jake-pertu">
                         </a>
                     </div>
@@ -310,11 +266,11 @@
                         <h2 class="title-question">Success Stories</h2>
                     </header>
                     <div class="pic-iphone col-md-12">
-                        <img src="img/aussie-new/iphone.png" alt="iphone-massage-pic"
+                        <img src="/img/aussie-new/iphone.png" alt="iphone-massage-pic"
                              class="col-md-12 col-sm-12  col-xs-12 iphone-pic">
                     </div>
                     <div class="pic-facebook col-md-12">
-                        <img src="img/aussie-new/face.png" alt="facebook-pic"
+                        <img src="/img/aussie-new/face.png" alt="facebook-pic"
                              class="col-md-12 col-sm-12  col-xs-12 facebook-pic">
                     </div>
                 </div>
@@ -336,11 +292,11 @@
                         {{--TWEET AND FACEBOOK TITLES--}}
                         <div class="images col-md-12 col-xs-12">
                             <div class="logotag facebook  col-md-6  col-sm-11 col-xs-12">
-                                <img src="img/aussie-new/fb.png" alt="facebook logo"
+                                <img src="/img/aussie-new/fb.png" alt="facebook logo"
                                      class=''>
                             </div>
                             <div class="logotag tweeter col-md-6  col-sm-5  col-xm-6">
-                                <img src="img/aussie-new/twt.png" alt="tweeter logo"
+                                <img src="/img/aussie-new/twt.png" alt="tweeter logo"
                                      class=''>
                             </div>
                         </div>
@@ -348,7 +304,7 @@
                         <div id="content-social " class="col-md-12">
                             <div id="facebook-tab" class="col-md-6">
                                 <div class="logotag tweet-2 col-md-6 col-sm-12  col-xm-6">
-                                    <img src="img/aussie-new/twt.png" alt="facebook logo"
+                                    <img src="/img/aussie-new/twt.png" alt="facebook logo"
                                     >
                                 </div>
                             </div>

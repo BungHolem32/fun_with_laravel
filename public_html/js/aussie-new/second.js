@@ -1,4 +1,5 @@
 /*CREATE VARIABLES HTML , TIMES (USE IN QUESTION-ANSWERS FUNCTION )*/
+
 var html, times;
 
 /*ALL ARRAYS FOR "Live Third Party Verified Results!"*/
@@ -136,104 +137,85 @@ function getDateTime(sec) {
 
 $(document).ready(function () {
 
-    $('.q-section').click(function () {
-        $(this).next().slideToggle()
-            .parent().siblings().find('.a-section').slideUp();
-    });
+    // $('.q-section').click(function () {
+    //     $(this).next().slideToggle()
+    //         .parent().siblings().find('.a-section').slideUp();
+    // });
 
 // LOAD VIDEO IF SCROLL
-    $(window).on('scroll', function () {
-        if ($('.onscroll_video').length > 0)
-            if (($(window).scrollTop() + 200) > ($('.onscroll_video').offset().top - $('.onscroll_video').parent().height()) && !$('.onscroll_video video').hasClass('on')) {
-                $('.onscroll_video video').addClass('on').get(0).play();
-                console.log('.onscroll_video video');
-            }
-    });
+//     $(window).on('scroll', function () {
+//         if ($('.onscroll_video').length > 0)
+//             if (($(window).scrollTop() + 200) > ($('.onscroll_video').offset().top - $('.onscroll_video').parent().height()) && !$('.onscroll_video video').hasClass('on')) {
+//                 $('.onscroll_video video').addClass('on').get(0).play();
+//                 console.log('.onscroll_video video');
+//             }
+//     });
 
-    $(document).on('click', '.fancybox_iframe', function (e) {
-        e.preventDefault();
-        $.fancybox({
-            href: $(this).attr('href'),
-            type: 'iframe'
-        });
-    });
+    // $(document).on('click', '.fancybox_iframe', function (e) {
+    //     e.preventDefault();
+    //     $.fancybox({
+    //         href: $(this).attr('href'),
+    //         type: 'iframe'
+    //     });
+    // });
 
-    if ($('#back-to-top').length) {
-        var scrollTrigger = 100, // px
-            backToTop = function () {
-                var scrollTop = $(window).scrollTop();
-                if (scrollTop > scrollTrigger) {
-                    $('#back-to-top').addClass('show');
-                } else {
-                    $('#back-to-top').removeClass('show');
-                }
-            };
-        backToTop();
-        $(window).on('scroll', function () {
-            backToTop();
-        });
-        $('#back-to-top').on('click', function (e) {
-            e.preventDefault();
-            $('html,body').animate({
-                scrollTop: 0
-            }, 700);
-        });
-    }
+    // if ($('#back-to-top').length) {
+    //     var scrollTrigger = 100, // px
+    //         backToTop = function () {
+    //             var scrollTop = $(window).scrollTop();
+    //             if (scrollTop > scrollTrigger) {
+    //                 $('#back-to-top').addClass('show');
+    //             } else {
+    //                 $('#back-to-top').removeClass('show');
+    //             }
+    //         };
+    //     backToTop();
+    //     $(window).on('scroll', function () {
+    //         backToTop();
+    //     });
+    //     $('#back-to-top').on('click', function (e) {
+    //         e.preventDefault();
+    //         $('html,body').animate({
+    //             scrollTop: 0
+    //         }, 700);
+    //     });
+    // }
 });
 
-$('.q-section').each(function () {
-    var tis = $(this), state = true, answer = tis.next('div').slideDown();
-    tis.click(function () {
-        state = !state;
-        answer.slideToggle(state);
-        tis.toggleClass('active', state);
-    });
-});
 
-function tbox0() {
-    $("#hoverbox").show();
+/*POPUP THE ELEMENT*/
+function tbox(showId) {
+    $('#hoverbox').show();
     hideall();
-    $("#tb0").show();
+    var data = ['<h4 align="center"><strong class="grey">Average Profit Per Hour: ',
+            '</strong></h4>',
+            '<iframe src="/aussie/results" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>'],
+        profit = {
+            tb0: "$3,760",
+            tb1: "$1,350",
+            tb2: "$2,140",
+            tb3: "$1,700"
+        },
+
+        content = data[0] + profit[showId] + data[1];
+    $('#' + showId).find('h4').remove();
+    $('#' + showId)
+        .prepend(content)
+        .append(data[2])
+        .promise()
+        .done(function () {
+            setTimeout(function () {
+                $('#' + showId).show();
+            }, 600);
+
+        });
 }
 
-function tbox1() {
-    $("#hoverbox").show();
-    hideall();
-    $("#tb1").show();
-}
-
-function tbox2() {
-    $("#hoverbox").show();
-    hideall();
-    $("#tb2").show();
-}
-
-function tbox3() {
-    $("#hoverbox").show();
-    hideall();
-    $("#tb3").show();
-}
-
-function tbox4() {
-    $("#hoverbox").show();
-    hideall();
-    $("#tb4").show();
-}
-
-function tbox5() {
-    $("#hoverbox").show();
-    hideall();
-    $("#tb5").show();
-}
-
-function tbox6() {
-    $("#hoverbox").show();
-    hideall();
-    $("#tb6").show();
-}
-
-function closex() {
+/*HIDE ALL ELEMENTS*/
+function closex(elem) {
     $("#hoverbox").hide();
+    $('#' + elem).find('iframe,h4').remove();
+
     hideall();
 }
 
@@ -280,15 +262,15 @@ $('body').on('click', '.left-button', function () {
     /*ADD QUESTION AND ANSWERS*/
     function addQuestionAnswer() {
         var questions = ['What is the Aussie Method?', 'How much money can I make with this software?', 'How long does each trade last??', 'Do I need to use my credit card when I signup?',
-            'Does your software work with Mac computers?', 'I don"t have much free time - Is the Aussie Method really automated?', 'How easy is it to use the software?',
+            'Does your software work with Mac computers?', 'I don\'t have much free time - Is the Aussie Method really automated?', 'How easy is it to use the software?',
             'What about customer support?'];
-        var answers = ['The Aussie Method is a 100% FREE software that will trade on the binary options markets with just 1 click! It"s fully automated and places the winning trades for you!',
+        var answers = ['The Aussie Method is a 100% FREE software that will trade on the binary options markets with just 1 click! It\'s fully automated and places the winning trades for you!',
             'To put it in short, there"s no limit. To put it more technically, it really depends on how much money you fund your account with. Most of our members fund their account with' +
             '$300, and make about $800-1000 daily. Those who fund their account with $1,000 or over make over $2,500 per day!', 'Anywhere from a minute to an hour. So you will see your profits right' +
             'away, no more waiting for long periods of time.', 'NO WAY. The Aussie Method App is 100% FREE. You will NOT be asked for your credit card or paypal or bank information when you download the Aussie Method System!' +
-            'Once you are in the members area, we will recommend a binary options broker that you can exploit. For this, you"ll need funds to deposit in order to start making profits. This is YOUR money that you are just depositing to trade with, and you can withdraw it at' + 'any time!',
+            'Once you are in the members area, we will recommend a binary options broker that you can exploit. For this, you\'ll need funds to deposit in order to start making profits. This is YOUR money that you are just depositing to trade with, and you can withdraw it at' + 'any time!',
             'It is a web based application which means it can be used on  Windows, Mac or Linux based  systems! You just need a web browser.', ' You simply click play in the software and it will trade for you! You can walk away from' +
-            'your computer, and enjoy your profits! You don"t have to be anywhere near the software for it to work for you and make you thousands per day!', '<span>VERY EASY!</span> Once you sign up in the members area by' + 'filling in a simple form, the' +
+            'your computer, and enjoy your profits! You don\'t have to be anywhere near the software for it to work for you and make you thousands per day!', '<span>VERY EASY!</span> Once you sign up in the members area by' + 'filling in a simple form, the' +
             'software is infront of you, click play, make profits! There is no complicated setup!', 'Our customer support team operates 7 days per week - 24 hours a day. We have email support but more importantly we have a FULL live chat system in the members area with our' +
             'support agents ready to help you at ANY time! 2am? NO PROBLEM!'];
 
@@ -300,30 +282,4 @@ $('body').on('click', '.left-button', function () {
         qN.append(html);
     }
 
-    /*CHANGE PIC BY WIDTH*/
-    function changePicByWidth(mobile, desktop) {
-        var width = $(window).width();
-        if (width < 990) {
-
-            $('.iphone-pic').attr('src', mobile[1]);
-            $('.facebook-pic').attr('src', mobile[2]);
-            $('.trust-pic').attr('src', mobile[3]);
-        } else {
-            $('.iphone-pic').attr('src', desktop[1]);
-            $('.facebook-pic').attr('src', desktop[2]);
-            $('.trust-pic').attr('src', mobile[3]);
-        }
-    }
-
-    var mobile = ['/img/aussie-new/hey-mobile.png', '/img/aussie-new/iphone-mobile.png', '/img/aussie-new/face-mobile.png','/img/aussie-new/trust-mobile.png'],
-        desktop = ['/img/aussie-new/hey.png', '/img/aussie-new/iphone.png', '/img/aussie-new/face.png','/img/aussie-new/trust.png'];
-
-    //INITIATE THE FUNCTION
-    addQuestionAnswer();
-
-    //CHANGE PIC ON RESIZE
-    $(window).resize(function () {
-        changePicByWidth(mobile, desktop);
-    });
-    changePicByWidth(mobile, desktop);
 })();

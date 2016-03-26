@@ -2,17 +2,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Startup CSS -->
     {!! $page->appendAsset(url('css/aussie-new/style-0.css')) !!}
+    {!! $page->appendAsset(url('css/aussie-new/style-members-0.css')) !!}
     <!--[if lt IE 9]>
     <!--[if lt IE 9]>
     <script src="/js/vendor/html5shiv.min.js"></script>
     <script src="/js/vendor/respond.min.js"></script>
     <![endif]-->
-    {{--<script type="text/javascript" src="/js/aussie-new/first.js"></script>--}}
-    <script type="text/javascript" src="/js/aussie-new/second.js"></script>
     <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen"/>
+
 @append
 @section('bottom-scripts')
-    <script src="/js/aussie-new/second.js"></script>
+    <script src="/js/aussie-new/funnel-object.js"></script>
     <script language="javascript">
         var loading = 1;
         var loadingTimeOut = 1000;
@@ -60,7 +60,6 @@
 
             document.getElementById("facebook-tab").innerHTML = "<div style='clear:both;'></div><div class='feed_name1'><img src='/img/aussie-new/fw/" + images[counter] + "' height='40' /><b><a class='fbname social-name' href='#'>" + nm[counter] + "</a></b><br/><span id='curr_time_" + cnt + "' class='ctime1' sec='60'>1 minute</span><div style='clear:both;'></div><div id='data1' class='fb-data'> <span> " + data[dc] + "</span></div><div class='facebook-tab'>Like <span class='dash'>-</span> Comment <span class='dash'>-</span> Share </div></div> " + document.getElementById("facebook-tab").innerHTML;
             if (feed_name1.length > 4) {
-                var suffled = shuffleArray(feed_name1);
                 $('.feed_name1').last().remove();
             }
             cnt++;
@@ -199,25 +198,27 @@
             });
         }
     </script>
+    {{--<script type="text/javascript" src="/js/aussie-new/first.js"></script>--}}
+    {{--<script type="text/javascript" src="/js/aussie-new/second.js"></script>--}}
     {!! $page->appendAsset(url('/js/firstPage.js')) !!}
 
 @append
 
 @section('page-layout')
 
-    <div id="wrapper">
+    <div id="wrapper" class="second-page">
 
-        <!--WORK LOGO FIXED AT TOP LEFT IN  THE SCREEN-->
-        <section id="works-fixed">
-            <img src="/img/aussie-new/callout.png" alt="">
-        </section>
+        {{--<!--WORK LOGO FIXED AT TOP LEFT IN  THE SCREEN-->--}}
+        {{--<section id="works-fixed">--}}
+        {{--<img src="/img/aussie-new/callout.png" alt="">--}}
+        {{--</section>--}}
 
         {{--TOP STRIP POSITION ABSOLUTE--}}
         <section id="top_strip">
             <div class="container-fluid"></div>
         </section>
 
-        <!--HEADER TAG-->
+        <!--==============================================HEADER TAG=================================================-->
         <header class="container">
 
             <!--LOGOS PART-->
@@ -235,11 +236,13 @@
 
             </div>
         </header>
+        <!--==============================================HEADER TAG=================================================-->
 
-        <!--MAIN TAG-->
+        <!--===============================================MAIN TAG==================================================-->
         <main class="container-fluid">
             <!--VIDEO AND FORM TAGS-->
 
+            {{--TOP PART  - FORM AND VIDEO --}}
             <section id="video_n_form" class="container">
 
                 <div class="row">
@@ -252,73 +255,224 @@
                         @include('funnels.layouts._partials._video',  ['w'=>'100%','h'=>'100%'])
                     </div>
 
-                    <!--Form Tag-->
-                    <div id="form_part" class='col-md-5 col-sm-12'>
-                        {{--TEXT--}}
-                        <p>START <strong>NOW</strong></p>
-                        <p>Enter your email below to gain instant
-                            free access to the Aussie Method system
-                        </p>
-                        {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post','align'=>'center']) !!}
-                        <input type="hidden" name="pageId" value="{{ $page->id }}">
-                        @if($page->switches->showEmailField)
-                            <input id="firstPageSignUpMail" type="email" name="email" placeholder="YOUR EMAIL ADDRESS.."
-                                   required="required" class="col-sm-12"/>
-                        @endif
-                        <input type="submit" class="align-center col-md-12 col-sm-12" value=""/>
-                        {!! Form::close() !!}
-
-                        <img src="/img/aussie/certs.png">
+                    <!--CONTENT AND FORM  Tag-->
+                    <div id="form_part" class='col-md-5 col-sm-12 form-second'>
+                        {{--FORM PLACE--}}
+                        @include('funnels.layouts._partials._form', ['funnelId' => $page->getParent()->id])
                     </div>
 
                 </div>
             </section>
 
-            <!--STRIP TAG WITH LINKS TO ALL OF THE INCENTIVES-->
-            <section id="strip_href">
+
+            <!--STRIP TAG WITH LINKS TO ALL OF THE INSENSITIVE -->
+            <section id="strip_href" class="site-navbar">
+
                 <div class="container">
                     <ul class="row">
-                        <li class="col-md-4 col-sm-12 col-xs-12"><a href="#jake-pertu">Who am I?</a>
-                        </li>
-                        <li class="col-md-4 col-sm-12 col-xs-12"><a href="#success-pic">Getting Started</a></li>
-                        <li class="col-md-4 col-sm-12 col-xs-12"><a href="#video-how-method-works">Current Members Trading Accounts</a></li>
+                        <div class="col-md-12">
+                            <li class="col-md-3 col-sm-12 col-xs-12"><a href="#3-steps">Getting Started</a></li>
+                            <li class="col-md-4 col-sm-12 col-xs-12"><a href="#success">Current Members Trading
+                                    Accounts</a></li>
+                            <li class="col-md-5 col-sm-12 col-xs-12"><a href="#live-result-pic">See Live Facebook &amp;
+                                    Twitter Feedback</a></li>
+                        </div>
                     </ul>
                 </div>
+
             </section>
 
             <!--========================PICS PART START================================ -->
 
-            <!--JAKE PERTU PIC-->
-            <section id="jake-pertu" class="container">
+            <!--3 STEPS PAGE PIC-->
+            <section id="3-steps" class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <a class="fancybox" rel="group" href="/img/aussie/guarantee.png">
-                            <img src="img/aussie-new/3step.png" alt="first_pic-jake-pertu pic"
-                                 class=" col-md-12 col-sm-12  col-xs-12 jake-pertu">
-                        </a>
+                        {{--<a class="fancybox" rel="group" href="/img/aussie/guarantee.png">--}}
+                        <img src="/img/aussie-new/3step.png" alt="3 steps proccess pic"
+                             class=" col-md-12 col-sm-12  col-xs-12 3-step-proccess">
+                        {{--</a>--}}
                     </div>
                 </div>
             </section>
 
 
-            <!--WHATS UP PIC-->
-            <section id="success-pic" class="container">
+            <!--FIRST SUCCESS STORY-->
+            <section id="success" class="container success-part">
                 <div class="row">
+
+                    {{--TITLE SECTION--}}
                     <header class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-offset-1 col-xs-10">
-                        <h2 class="title-question">Success Stories</h2>
+                        <h2 class="title-question">Check Out My LIVE Personal Trading Account</h2>
                     </header>
-                    <div class="pic-iphone col-md-12">
-                        <img src="img/aussie-new/iphone.png" alt="iphone-massage-pic"
-                             class="col-md-12 col-sm-12  col-xs-12 iphone-pic">
+
+                    {{--SUCCESS STORIES INNER WRAPPER--}}
+                    <div class="col-md-12 col-sm-12 col-xs-12 success-stories">
+
+                        {{--FIRST PART PIC HUMAN--}}
+                        <div class="success-human-pic col-md-4 col-sm-12 col-xs-12 first-human">
+                            <img src="/img/aussie-new/man.png" alt="man-that-successed-pic"
+                                 class="col-md-10 col-sm-10 col-sm-offset-1  col-xs-12 man-that-successed-pic">
+                        </div>
+
+                        {{--SECOND PART CONTENT TEXT --}}
+                        <div class="success-text col-md-4 col-sm-12 col-xs-12 ">
+                            <p>
+                                {{--title--}}
+                                <span class="success-title">Jake Pertu - Aussie Method Founder</span>
+                                {{--profit text--}}
+                                <span class="success-profit bold">Profit To Date:</span>
+                                {{--price--}}
+                                <span class="success-money bold underline">$2,187,612.00</span>
+                            </p>
+
+                            {{--click here To view Live Account--}}
+                            <p class="success-button">
+                                <a href="#customers" onclick="tbox('tb0')" class="bold">Click Here To View <br> My Live
+                                    Account</a>
+                            </p>
+                        </div>
+
+                        {{--THIRD PART VERIFIED PIC--}}
+                        <div class="success-verified-pic col-md-4 col-sm-12 col-xs-12 center-block">
+                            <img src="/img/aussie-new/vta.png" alt="verified-pic">
+                        </div>
                     </div>
-                    <div class="pic-facebook col-md-12">
-                        <img src="img/aussie-new/face.png" alt="facebook-pic"
-                             class="col-md-12 col-sm-12  col-xs-12 facebook-pic">
+
+                </div>
+            </section>
+
+
+            <!--SECOND SUCCESS STORY-->
+            <section class="container success-part">
+                <div class="row">
+
+                    {{--TITLE SECTION--}}
+                    <header class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-offset-1 col-xs-10">
+                        <h2 class="title-question">More Accounts From Our Customers</h2>
+                    </header>
+
+                    {{--SUCCESS STORIES INNER WRAPPER--}}
+                    <div class="col-md-12  col-sm-12 col-xs-12 success-stories">
+
+                        {{--FIRST PART PIC HUMAN--}}
+                        <div class="success-human-pic col-md-4 col-sm-12 col-xs-12 other-humans">
+                            <img src="/img/aussie-new/p1.png" alt="man-that-successed-pic"
+                                 class="col-md-10 col-sm-10 col-sm-offset-1  col-xs-12 man-that-successed-pic">
+                        </div>
+
+                        {{--SECOND PART CONTENT TEXT --}}
+                        <div class="success-text other-success col-md-4 col-sm-12 col-xs-12">
+                            <p>
+                                {{--title--}}
+                                <span class="success-title">Nulala Gathercole</span>
+                                {{--date--}}
+                                <span class="success-date">Start Date: 19th May 2015</span>
+                                {{--profit text--}}
+                                <span class="success-profit bold">Profit To Date:</span>
+                                {{--price--}}
+                                <span class="success-money bold underline">$212,450.00</span>
+                            </p>
+
+                            {{--click here To view Live Account--}}
+                            <p class="success-button">
+                                <a href="#customers" onclick="tbox('tb1');" class="bold">Click Here To View <br> My Live
+                                    Statement</a>
+                            </p>
+
+                        </div>
+                        {{--THIRD PART VERIFIED PIC--}}
+                        <div class="success-verified-pic col-md-4 col-sm-12 col-xs-12">
+                            <img src="/img/aussie-new/vta.png" alt="verified-pic">
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!--TWEETER & FACEBOOK TAGS-->
+
+            <!--THIRD SUCCESS STORY-->
+            <section class="container success-part">
+                <div class="row">
+
+                    {{--SUCCESS STORIES INNER WRAPPER--}}
+                    <div class="col-md-12 col-sm-12 col-xs-12 success-stories">
+
+                        {{--FIRST PART PIC HUMAN--}}
+                        <div class="success-human-pic col-md-4 col-sm-12 col-xs-12 other-humans">
+                            <img src="/img/aussie-new/p2.png" alt="man-that-successed-pic"
+                                 class="col-md-10 col-sm-10 col-sm-offset-1  col-xs-12 man-that-successed-pic">
+                        </div>
+
+                        {{--SECOND PART CONTENT TEXT --}}
+                        <div class="success-text other-success col-md-4 col-sm-12 col-xs-12">
+
+                            <p>
+                                {{--title--}}
+                                <span class="success-title">James Taylor</span>
+                                {{--date--}}
+                                <span class="success-date">Start Date: 28th May 2015</span>
+                                {{--profit text--}}
+                                <span class="success-profit bold">Profit To Date:</span>
+                                {{--price--}}
+                                <span class="success-money bold underline">$196,201.00</span>
+                            </p>
+
+                            {{--click here To view Live Account--}}
+                            <p class="success-button">
+                                <a href="#customers" onclick="tbox('tb2');" class="bold">Click Here To View <br> My Live
+                                    Statement</a>
+                            </p>
+                        </div>
+                        {{--THIRD PART VERIFIED PIC--}}
+                        <div class="success-verified-pic col-md-4 col-sm-12 col-xs-12">
+                            <img src="/img/aussie-new/vta.png" alt="verified-pic">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--FOURTH SUCCESS STORY-->
+            <section class="container success-part">
+                <div class="row">
+
+                    {{--SUCCESS STORIES INNER WRAPPER--}}
+                    <div class="col-md-12 col-sm-12 col-xs-12 success-stories">
+
+                        {{--FIRST PART PIC HUMAN--}}
+                        <div class="success-human-pic col-md-4 col-sm-12 col-xs-12 other-humans">
+                            <img src="/img/aussie-new/p3.png" alt="man-that-successed-pic"
+                                 class="col-md-10 col-sm-10 col-sm-offset-1  col-xs-12 man-that-successed-pic">
+                        </div>
+
+                        {{--SECOND PART CONTENT TEXT --}}
+                        <div class="success-text col-md-4 col-sm-12 col-xs-12 other-success">
+                            <p>
+                                {{--title--}}
+                                <span class="success-title">Demetris Bell</span>
+                                {{--date--}}
+                                <span class="success-date">Start Date: 2nd June 2015</span>
+                                {{--profit text--}}
+                                <span class="success-profit bold">Profit To Date:</span>
+                                {{--price--}}
+                                <span class="success-money bold underline">$103,870.00</span>
+                            </p>
+
+                            {{--click here To view Live Account--}}
+                            <p class="success-button">
+                                <a href="#customers" onclick="tbox('tb3');" class="bold">Click Here To View <br> My Live
+                                    Statement</a>
+                            </p>
+                        </div>
+
+                        {{--THIRD PART VERIFIED PIC--}}
+                        <div class="success-verified-pic col-md-4 col-sm-12 col-xs-12">
+                            <img src="/img/aussie-new/vta.png" alt="verified-pic">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--TWEETER & FACEBOOK TAGS LIVE RESULTS -->
             <section id="live-result-pic" class="container">
 
                 <div class="row">
@@ -334,11 +488,11 @@
                         {{--TWEET AND FACEBOOK TITLES--}}
                         <div class="images col-md-12 col-xs-12">
                             <div class="logotag facebook  col-md-6  col-sm-11 col-xs-12">
-                                <img src="img/aussie-new/fb.png" alt="facebook logo"
+                                <img src="/img/aussie-new/fb.png" alt="facebook logo"
                                      class=''>
                             </div>
                             <div class="logotag tweeter col-md-6  col-sm-5  col-xm-6">
-                                <img src="img/aussie-new/twt.png" alt="tweeter logo"
+                                <img src="/img/aussie-new/twt.png" alt="tweeter logo"
                                      class=''>
                             </div>
                         </div>
@@ -346,7 +500,7 @@
                         <div id="content-social " class="col-md-12">
                             <div id="facebook-tab" class="col-md-6">
                                 <div class="logotag tweet-2 col-md-6 col-sm-12  col-xm-6">
-                                    <img src="img/aussie-new/twt.png" alt="facebook logo"
+                                    <img src="/img/aussie-new/twt.png" alt="facebook logo"
                                     >
                                 </div>
                             </div>
@@ -380,7 +534,7 @@
                                         name="results"></a>Live Third Party Verified Results!</strong></p>
                         <table class="table table-striped table-bordered shadowed table-hover"
                                id="positionsHistoryTable"
-                               style="background-color:#FFF;" bgcolor="#FFFFFF"  >
+                               style="background-color:#FFF;" bgcolor="#FFFFFF">
                             <thead>
                             <tr>
                                 <th background="/img/aussie/topb.png"><font
@@ -411,9 +565,6 @@
                 </div>
             </section>
 
-
-            <section>
-            </section>
             <!--===========================PICS PART END===================================-->
 
 
@@ -432,6 +583,9 @@
                 </div>
             </section>
         </main>
+        <!--===============================================MAIN TAG======================================================-->
+
+        <!--===============================================FOOTER TAG====================================================-->
 
         <footer class="row col-md-12">
 
@@ -444,7 +598,42 @@
                 @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/terms", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Terms'])
             </div>
         </footer>
+
+        <!--===============================================FOOTER TAG====================================================-->
     </div>
-    {{--<script type="text/javascript" src="/js/aussie-new/first.js"></script>--}}
     <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+
+    <div id="hoverbox"
+         style="display: none; filter: alpha(opacity=60); KHTMLOpacity: 0.60; MozOpacity: 0.60; opacity: 0.60; position: fixed;background-color: #000000; z-index:0; width: 100%; height: 100%; left: 0px; top:0px;"
+         onClick="closex()">
+    </div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <div id="expop_dim"></div>
+    <div id="tb0" class="popup"
+         style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
+        <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;"
+             onClick="_funnel.hide_trade('tb0')">X
+        </div>
+    </div>
+    <div id="tb1" class="popup"
+         style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
+        <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;"
+             onClick="_funnel.hide_trade('tb1')">X
+        </div>
+    </div>
+    <div id="tb2" class="popup"
+         style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
+        <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;"
+             onClick="_funnel.hide_trade('tb2')">X
+        </div>
+    </div>
+    <div id="tb3" class="popup"
+         style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
+        <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;"
+             onClick="_funnel.hide_trade('tb3')">X
+        </div>
+
+    </div>
 @endsection

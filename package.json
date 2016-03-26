@@ -18,6 +18,7 @@
   "homepage": "https://github.com/rbadmin/funnels#readme",
   "dependencies": {
     "gulp": "^3.9.1",
+    "gulp-install": "^0.6.0",
     "laravel-elixir": "^5.0.0"
   },
   "devDependencies": {

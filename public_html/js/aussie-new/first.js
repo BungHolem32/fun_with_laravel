@@ -1,3 +1,4 @@
+/*
 position = ['CALL', 'PUT'];
 asset = ['USD/CHF', 'GBP/USD', 'CHF/JPY', 'EUR/USD', 'NZD/USD', 'USD/CAD', 'EUR/JPY', 'EUR/CHF', 'EUR/GBP', 'NZD/USD', 'GBP/CHF'];
 profit = 0;
@@ -50,8 +51,8 @@ function mkChanges(times) {
     }
     else {
         var len = $("#trades tr").length;
-
-        var p = rand_num(1, 100);
+   
+ var p = rand_num(1, 100);
         p = p % 2;
         var xposition = position[p];
 
@@ -84,14 +85,14 @@ function mkChanges(times) {
 
     //$("#trades").html(html);
 
-    /*$("#TOTAL").html("$"+numberCom(profit));
+ /!*$("#TOTAL").html("$"+numberCom(profit));
      $("#WON").html("100 %");
-     $("#LOST").html("0 %");*/
+ $("#LOST").html("0 %");*!/
     clearInterval(mC);
     mC = setInterval(mkChanges, rand_num(700, 3000));
 }
 var mC = setInterval(mkChanges, rand_num(700, 3000));
-/*$("#TOTAL").html("$"+numberCom(profit));*/
+ /!*$("#TOTAL").html("$"+numberCom(profit));*!/
 function getDateTime(sec) {
 
     var now = new Date(Date.now() - (sec * 1000));
@@ -304,3 +305,4 @@ $(document).ready(function () {
 
 
 
+ */
