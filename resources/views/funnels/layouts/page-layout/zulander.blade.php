@@ -84,7 +84,6 @@ if(!$locationContent) {
                             <img src={{ url("/img/zulander/content/flags/small-".$countryCode.".png") }} alt="" />
                             <span></span>
                             @if($page->switches->showEmailField)
-                                {{--<input id="firstPageSignUpMail" type="email" name="email" placeholder="@ln(Email):" required="required" />--}}
                                 <input id="firstPageSignUpMail" type="email" value="" placeholder="Please enter your email here" required="required" name="email"/>
                             @endif
                         </div>

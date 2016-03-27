@@ -102,7 +102,6 @@ if(!$locationContent) {
                     <img src={{ url("img/zulander/RBOPTION.jpg") }} alt="" />
                     <div id="second">
                         @include('funnels.layouts._partials._form-mobile', ['funnelId' => $page->getParent()->id]);
-                        <input id="submit" name="submit" type="submit" value="YES! TAKE ME TO THE FINAL STEP" class="go2 active-submit" data-cip-id="submit"/>
                         <div class="yes">I understand that if I leave this page I will never see it again. I want to be financially free and never have to worry about money again. I realize that Zulander Hack can help me achieve this and TODAY <strong>only <strike>3</strike> 2 FREE licenses</strong> are being given away.</div>
                         <div class=" hidden-sm hidden-xs">
                             <input type="submit" value="NO, LET SOMEONE ELSE HAVE MY LICENSE" class="go3"/>

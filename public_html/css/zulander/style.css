@@ -464,6 +464,9 @@ div#second .go3 { width:561px; height:89px; border:none; background:#f4f4f5 url(
     padding: 1em;
     width: 100%;
 }
+
+#submit { box-shadow: none !important; border: none !important; -webkit-box-shadow: none !important; }
+
 .container .logo { text-align: center; }
 .articlePage .marketing { color: #d2d1d1; width: 100%; }
 .navbar-wrapper, .underBodyLinks, .payments, footer { display: none; }

@@ -22,7 +22,8 @@ $(document).ready(function() {
 	});
 
 	$('#phone').parent().removeClass('col-lg-6 col-md-6 col-sm-6').addClass('col-lg-12 col-md-12 col-sm-12');
-	$('#submit').not('.active-submit').remove();
+	// $('#submit').not('.active-submit').remove();
+	$('#submit').removeClass().addClass('go2 active-submit').val('YES! TAKE ME TO THE FINAL STEP');
 	$('input').removeClass('form-control');
 });
 
