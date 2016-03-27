@@ -1,32 +1,3 @@
-<?php
-$countryCode        = false;
-$countryName        = false;
-$locationContent    = null;
-
-$content        = json_decode(file_get_contents(url("/js/zulander/content.json")),true);
-$loc            = \App\Services\Location::getByUserIp();
-$countryCode    = strtolower($loc['iso']);
-$countryName    = strtolower($loc['countryName']);
-
-if(!$countryCode) {
-    $countryCode = 'uk';
-    $countryName = 'united kingdom';
-}
-
-foreach($content as $country => $data) {
-    $codes = explode('_',$country);
-    if(in_array($countryCode,$codes)) {
-        $locationContent = $content[$country];
-        break;
-    }
-}
-
-if(!$locationContent) {
-    $locationContent = $content['be_cz_fr_de_it_nl_no_pl_es_sz'];
-}
-
-?>
-
 @section('head')
     {!! $page->appendAsset(url('/css/zulander/bootstrap.min.css')) !!}
     {!! $page->appendAsset(url('/css/zulander/style.css')) !!}
@@ -37,23 +8,19 @@ if(!$locationContent) {
     @com('funnel_scripts')
     {!! $page->appendAsset(url('/js/firstPage.js')) !!}
     {!! $page->appendAsset(url('/js/zulander/bootstrap.min.js')) !!}
-    {!! $page->appendAsset(url('/js/zulander/myClock.js')) !!}
     {!! $page->appendAsset(url('/js/zulander/jquery.knob.js')) !!}
-    <script type="text/javascript">
-        var locationContent = <?php echo json_encode($locationContent) ?>;
-    </script>
     {!! $page->appendAsset(url('/js/zulander/script.js')) !!}
 @append
 
 @section('page-layout')
         <div class="wrapper">
             <div class="logo text-center">
-                <a href="/"><img src={{ url("/img/zulander/logo.png" )}} alt=""/></a>
+                <a href="/"><img src="/img/zulander/logo.png" alt=""/></a>
             </div>
             <div class="content">
                 <div class="lenta">
                     <div class="lenta-l text-center">
-                        <img src={{ url("/img/zulander/content/flags/small-".$countryCode.".png") }} alt=""/> <span><strong>CONFIRMED:</strong>You’ve been Invited to watch this Weird Presentation because you’re in {{$countryName}}</span>
+                        <img class="country-logo" src="/img/zulander/loader.gif" alt=""/> <span><strong>CONFIRMED:</strong>You’ve been Invited to watch this Weird Presentation because you’re in <span class="country-name">...</span></span>
                     </div>
                 </div>
                 <div class="title text-center">
@@ -75,13 +42,13 @@ if(!$locationContent) {
                         </div>
                     </div>
                 </div>
-                <div class="avideo text-center">Claim One Of <span class="st1"><strike>10</strike> <strong class="count">10</strong> FREE LICENSES In {{$countryName}}</span> To Make <span class="st2">$1,008</span> <strong>Every 5 MINUTES >></strong></div>
+                <div class="avideo text-center">Claim One Of <span class="st1"><strike>10</strike> <strong class="count">10</strong> FREE LICENSES In <span class="country-name">...</span></span> To Make <span class="st2">$1,008</span> <strong>Every 5 MINUTES >></strong></div>
                 <div class="free">
 
                     {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post']) !!}
                     <input type="hidden" name="pageId" value="{{ $page->id }}">
                     <div class="f1  hidden-sm hidden-xs text-center">
-                            <img src={{ url("/img/zulander/content/flags/small-".$countryCode.".png") }} alt="" />
+                            <img class="country-logo" src="/img/zulander/loader.gif" alt="" />
                             <span></span>
                             @if($page->switches->showEmailField)
                                 <input id="firstPageSignUpMail" type="email" value="" placeholder="Please enter your email here" required="required" name="email"/>
@@ -89,7 +56,7 @@ if(!$locationContent) {
                         </div>
                         <div class="f2 text-center" id="formSection">
                             <input id="getLicenseBtn" type="submit" value="GIVE ME A FREE LICENSE!" class="go1"/>
-                            <div class="strelka visible-xs"><img src={{ url("/img/zulander/strelka2.png") }} class="/img-responsive"  alt=""/></div>
+                            <div class="strelka visible-xs"><img src="/img/zulander/strelka2.png" class="/img-responsive"  alt=""/></div>
                             <div id="timer2" class="visible-sm visible-xs">
                                 <div class="col-sm-4 col-xs-4">
                                     <div class="progress-radial progress-100">
@@ -123,37 +90,7 @@ if(!$locationContent) {
                     <div class="row">
                         <div id="carousel-example-generic" class="carousel slide">
                             <div class="carousel-inner" role="listbox">
-                                @for($i=0; $i<count($locationContent['stories']); $i++)
-                                    <div class="col-md-4 col-sm-4 active">
-                                        <div class="block">
-                                            <div class="row">
-                                                <div class="col-md-5 col-sm-5 col-xs-5 photo">
-                                                    <img src={{ url("/img/zulander/content/peoples/".$locationContent['stories'][$i]['avatar']) }} width="100" alt="" class="/img-circle">
-                                                    <div class="flag"><img src={{ url("/img/zulander/content/flags/".$locationContent['stories'][$i]['flag']) }} alt=""/></div>
-                                                </div>
-                                                <div class="col-md-7 col-sm-7 col-xs-7 name">
-                                                    <strong>{{ str_replace('+',' ',explode('-',$locationContent['stories'][$i]['avatar'])[0]) }}</strong><br/>{{ str_replace('.jpg','',str_replace('+',' ',explode('-',$locationContent['stories'][$i]['avatar'])[1])) }}
-                                                </div>
-                                                <div class="clear clearfix"></div>
-                                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                                    <div class="text">
-                                                        @for($x=0; $x<count($content['global'][$i]); $x++)
-                                                            {!! $content['global'][$i][$x] !!}
-                                                        @endfor
-                                                        <p>Started Using Software: <strong>{{ $locationContent['stories'][$i]['startDate'] }}</strong></p>
-                                                        <p>Starting Balance: <strong>${{ $locationContent['stories'][$i]['balance'] }}</strong></p>
-                                                    </div>
-                                                    <div class="total text-center">Total earned: <span>$121,589</span> <strong>(withdrawn)</strong></div>
-                                                    <div class="rate">
-                                                        <div class="star text-center"><img src={{ url("/img/zulander/star.png") }} alt="" /></div>
-                                                        <div class="trade text-center"><img src={{ url("/img/zulander/trader.png") }} alt="" /></div>
-                                                        <div class="verified text-right"><img src={{ url("/img/zulander/verified.png") }} alt="" /></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endfor
+                                <div id="stories"></div>
                             </div>
                             <div class=" hidden-lg hidden-md hidden-sm">
                                 <!-- Controls -->
@@ -170,7 +107,7 @@ if(!$locationContent) {
                     </div>
                 </div>
                 <div class="lasBtn text-center">
-                    <a href="#firstPageSignUpMail" class="goToMembers"><img src={{ url("/img/zulander/btn1.png") }} alt=""/></a>
+                    <a href="#firstPageSignUpMail" class="goToMembers"><img src="/img/zulander/btn1.png" alt=""/></a>
                 </div>
             </div>
             <div class="footer text-center">
@@ -191,12 +128,12 @@ if(!$locationContent) {
             <div class="title">LIVE Results</div>
             <div class="desc">
                 <div class="date">28 February 2016</div>
-                <img src={{ url("/img/zulander/module.png") }} alt="" />
-                <div class="intro">Total Profit Generated By<br/>Our Beta Tester Group<br/>In {{$countryName}}:</div>
-                <img src={{ url("/img/zulander/content/flags/small-".$countryCode.".png") }} alt="" width="29"/>
+                <img src="/img/zulander/module.png" alt="" />
+                <div class="intro">Total Profit Generated By<br/>Our Beta Tester Group<br/>In <span class="country-name">...</span>:</div>
+                <img class="country-logo" src="/img/zulander/loader.gif" alt="" width="29"/>
             </div>
             <div class="foot">
-                1 Feb 2016 - 28 Feb 2016:<br/><span id="result"><img src={{ url("/img/zulander/loader.gif") }} alt="" /></span>
+                1 Feb 2016 - 28 Feb 2016:<br/><span id="result"><img src="/img/zulander/loader.gif" alt="" /></span>
             </div>
         </div>
         <div class="online text-center hidden-sm hidden-xs">
@@ -205,11 +142,7 @@ if(!$locationContent) {
                 <div class="date">28 February 2016 08:53am</div>
                 <img src={{ url("/img/zulander/module.png") }} alt="" />
                 <div class="intro-list">
-                    <ul id="ticker">
-                        @for($i=0; $i<count($locationContent['traders']); $i++)
-                            <li>{{ $locationContent['traders'][$i] }}</li>
-                        @endfor
-                    </ul>
+                    <ul id="ticker"></ul>
                 </div>
             </div>
         </div>
@@ -217,11 +150,11 @@ if(!$locationContent) {
             <div class="title"><span><strong class="count"></strong> FREE LICENSES</span> LEFT</div>
             <div class="anime text-center">
                 <div class="progress-radial progress-100">
-                    <div class="overlay"><strong><img src={{ url("/img/zulander/loader.gif") }} alt="" /></strong><br><span>LEFT</span></div>
+                    <div class="overlay"><strong><img src="/img/zulander/loader.gif" alt="" /></strong><br><span>LEFT</span></div>
                 </div>
             </div>
             <div class="minigo">
-                <a href="#firstPageSignUpMail" class="goToMembers"><img src={{ url("/img/zulander/btn1.png") }} alt="" width="230"/></a>
+                <a href="#firstPageSignUpMail" class="goToMembers"><img src="/img/zulander/btn1.png" alt="" width="230"/></a>
             </div>
         </div>
 @endsection
