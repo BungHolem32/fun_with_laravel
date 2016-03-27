@@ -86,7 +86,7 @@ function updateLicensesCounter() {
 function updateVideoViewers() {
 	if(document.getElementsByClassName('video-progress').length > 1) return;
 	var rand		= Math.round(Math.random() * (8000 - 200)) + 200;
-	var viewers		= parseInt((getCookies).viewers) || 1871;
+	var viewers		= parseInt(getCookies().viewers) || 1871;
 	var newViewers	= viewers + 1;
 
 	$('.video-progress-viewers-count').each(function () {
