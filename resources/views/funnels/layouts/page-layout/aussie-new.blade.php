@@ -7,7 +7,6 @@
     <script src="/js/vendor/html5shiv.min.js"></script>
     <script src="/js/vendor/respond.min.js"></script>
     <![endif]-->
-    {{--<script type="text/javascript" src="/js/aussie-new/first.js"></script>--}}
     <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen"/>
 @append
 @section('bottom-scripts')
@@ -250,7 +249,7 @@
             <section id="jake-pertu" class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <a class="fancybox" rel="group" href="/img/aussie/guarantee.png">
+                        <a class="fancybox" rel="group" href="/img/aussie-new/guarantee.png">
                             <img src="/img/aussie-new/hey.png" alt="first_pic-jake-pertu pic"
                                  class=" col-md-12 col-sm-12  col-xs-12 jake-pertu">
                         </a>
@@ -331,6 +330,7 @@
                 </div>
             </section>
 
+            {{--LIVE THIRD PARTY  PART--}}
             <section id="live-third-party" class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12 align-center">
@@ -341,19 +341,19 @@
                                style="background-color:#FFF;" bgcolor="#FFFFFF">
                             <thead>
                             <tr>
-                                <th background="/img/aussie/topb.png"><font
+                                <th background="/img/aussie-new/topb.png"><font
                                             style="font-family: 'Cabin', sans-serif;; color:#000 !important;">
                                         <center>Aussie Method Member</center>
                                     </font></th>
-                                <th background="/img/aussie/topb.png"><font
+                                <th background="/img/aussie-new/topb.png"><font
                                             style="font-family: 'Cabin', sans-serif;; color:#000 !important;">
                                         <center>Profit</center>
                                     </font></th>
-                                <th background="/img/aussie/topb.png"><font
+                                <th background="/img/aussie-new/topb.png"><font
                                             style="font-family: 'Cabin', sans-serif;; color:#000 !important;">
                                         <center>Trade Time</center>
                                     </font></th>
-                                <th background="/img/aussie/topb.png"><font
+                                <th background="/img/aussie-new/topb.png"><font
                                             style="font-family: 'Cabin', sans-serif;; color:#000 !important;">
                                         <center>
                                             Currency
@@ -403,6 +403,5 @@
             </div>
         </footer>
     </div>
-    {{--<script type="text/javascript" src="/js/aussie-new/first.js"></script>--}}
     <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
 @endsection

@@ -285,11 +285,34 @@
             <!--========================PICS PART START================================ -->
 
             <!--3 STEPS PAGE PIC-->
+            {{--DESKTOP VIEW--}}
             <section id="3-steps" class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 desktop-steps">
                         {{--<a class="fancybox" rel="group" href="/img/aussie/guarantee.png">--}}
                         <img src="/img/aussie-new/3step.png" alt="3 steps proccess pic"
+                             class="3-step-proccess">
+                        {{--</a>--}}
+                    </div>
+                </div>
+
+                {{--MOBILE VIEW--}}
+                <div class="row mobile-steps">
+                    <div class="col-md-12 hidden mobile-steps">
+                        {{--<a class="fancybox" rel="group" href="/img/aussie/guarantee.png">--}}
+                        <img src="/img/aussie-new/step-1.png" alt="3 steps proccess pic"
+                             class=" col-md-12 col-sm-12  col-xs-12 3-step-proccess">
+                        {{--</a>--}}
+                    </div>
+                    <div class="col-md-12 hidden mobile-steps">
+                        {{--<a class="fancybox" rel="group" href="/img/aussie/guarantee.png">--}}
+                        <img src="/img/aussie-new/step-2.png" alt="3 steps proccess pic"
+                             class=" col-md-12 col-sm-12  col-xs-12 3-step-proccess">
+                        {{--</a>--}}
+                    </div>
+                    <div class="col-md-12 hidden mobile-steps">
+                        {{--<a class="fancybox" rel="group" href="/img/aussie/guarantee.png">--}}
+                        <img src="/img/aussie-new/step-3.png" alt="3 steps proccess pic"
                              class=" col-md-12 col-sm-12  col-xs-12 3-step-proccess">
                         {{--</a>--}}
                     </div>
@@ -328,7 +351,7 @@
 
                             {{--click here To view Live Account--}}
                             <p class="success-button">
-                                <a href="#customers" onclick="tbox('tb0')" class="bold">Click Here To View <br> My Live
+                                <a href="#customers" onclick="_funnel.popup_trade.init('tb0')" class="bold">Click Here To View <br> My Live
                                     Account</a>
                             </p>
                         </div>
@@ -376,7 +399,7 @@
 
                             {{--click here To view Live Account--}}
                             <p class="success-button">
-                                <a href="#customers" onclick="tbox('tb1');" class="bold">Click Here To View <br> My Live
+                                <a href="#customers" onclick="_funnel.popup_trade.init('tb1');" class="bold">Click Here To View <br> My Live
                                     Statement</a>
                             </p>
 
@@ -419,7 +442,7 @@
 
                             {{--click here To view Live Account--}}
                             <p class="success-button">
-                                <a href="#customers" onclick="tbox('tb2');" class="bold">Click Here To View <br> My Live
+                                <a href="#customers" onclick="_funnel.popup_trade.init('tb2');" class="bold">Click Here To View <br> My Live
                                     Statement</a>
                             </p>
                         </div>
@@ -459,7 +482,7 @@
 
                             {{--click here To view Live Account--}}
                             <p class="success-button">
-                                <a href="#customers" onclick="tbox('tb3');" class="bold">Click Here To View <br> My Live
+                                <a href="#customers" onclick="_funnel.popup_trade.init('tb3');" class="bold">Click Here To View <br> My Live
                                     Statement</a>
                             </p>
                         </div>
@@ -605,7 +628,7 @@
 
     <div id="hoverbox"
          style="display: none; filter: alpha(opacity=60); KHTMLOpacity: 0.60; MozOpacity: 0.60; opacity: 0.60; position: fixed;background-color: #000000; z-index:0; width: 100%; height: 100%; left: 0px; top:0px;"
-         onClick="closex()">
+         onClick="_funnel.popup_trade.hide_trade()">
     </div>
 
     <!-- Placed at the end of the document so the pages load faster -->
@@ -614,25 +637,25 @@
     <div id="tb0" class="popup"
          style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
         <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;"
-             onClick="_funnel.hide_trade('tb0')">X
+             onClick="_funnel.popup_trade.hide_trade('tb0')">X
         </div>
     </div>
     <div id="tb1" class="popup"
          style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
         <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;"
-             onClick="_funnel.hide_trade('tb1')">X
+             onClick="_funnel.popup_trade.hide_trade('tb1')">X
         </div>
     </div>
     <div id="tb2" class="popup"
          style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
         <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;"
-             onClick="_funnel.hide_trade('tb2')">X
+             onClick="_funnel.popup_trade.hide_trade('tb2')">X
         </div>
     </div>
     <div id="tb3" class="popup"
          style="position:fixed;z-index:1; display:none; border:1px solid #FFF; width:60%; border-radius:5px; height:80%; overflow:hidden; background-color:#FFF; left:20%; top:10%;">
         <div style="position: absolute;right: 0;top: 0;width: 25px;height: 25px;background: #000;border-radius: 4px;text-align: center;font-size: 18px;color: #FFF; cursor:pointer;"
-             onClick="_funnel.hide_trade('tb3')">X
+             onClick="_funnel.popup_trade.hide_trade('tb3')">X
         </div>
 
     </div>

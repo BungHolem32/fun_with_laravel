@@ -22,11 +22,11 @@ elixir(function(mix) {
     /*mix.less(['base-funnel-load-ltr.less'], 'public_html/css/lp/binary-currencies-0.css')
         .less(['base-funnel-load-rtl.less'], 'public_html/css/lp/binary-currencies-1.css');*/
 
-    mix.less(['base-funnel-load-ltr.less'], 'public_html/css/aussie-new/style-0.css')
-        .less(['base-funnel-load-rtl.less'], 'public_html/css/aussie-new/style-1.css');
+    //mix.less(['base-funnel-load-ltr.less'], 'public_html/css/aussie-new/style-0.css')
+    //    .less(['base-funnel-load-rtl.less'], 'public_html/css/aussie-new/style-1.css');
 
 
-    // mix.less(['aussie-member-new.less'], 'public_html/css/aussie-new/style-members-0.css');
+     mix.less(['aussie-member-new.less'], 'public_html/css/aussie-new/style-members-0.css');
     // .less(['base-funnel-load-rtl.less'], 'public_html/css/aussie-new/style-members-1.css');
 
     //mix.less(['brand/pages/trade.less'], 'public/css/trade.css');
