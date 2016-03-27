@@ -70,7 +70,7 @@ function getUserContent() {
 				traders += '<li>'+data.content.traders[i]+'</li>';
 			}
 
-			$('.country-logo').attr('src',"/img/zulander/small-"+data.countryCode+".png");
+			$('.country-logo').attr('src',"/img/zulander/content/flags/small-"+data.countryCode+".png");
 			$('.country-name').html(data.countryName);
 			$('#ticker').html(traders);
 			$('#stories').html(stories);
