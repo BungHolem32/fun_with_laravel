@@ -20,7 +20,11 @@ $.fn.myClock = function(setup){
   timeMess += '<span class="block-clock"><span class="line"></span><span class="clock-1">You Must Enter Your Details In The Form</strong> Before The Clock Hits Zero. There Are Currently 1591 People In Israel Waiting To Take Your FREE License.</span></span>';
   $(elem).html(timeMess);
 
-  if($(this).attr("id")){  	var elemCookie = $(this).attr("id");  }else{  	var elemCookie = $(elem).children().parent().attr('class');  }
+  if($(this).attr("id")){
+  	var elemCookie = $(this).attr("id");
+  }else{
+  	var elemCookie = $(elem).children().parent().attr('class');
+  }
 
   if(settings.endDate != 0) startDate = new Date(settings.endDate);
   else startDate = new Date();

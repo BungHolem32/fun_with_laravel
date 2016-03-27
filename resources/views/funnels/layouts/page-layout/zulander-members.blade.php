@@ -20,6 +20,11 @@ foreach($content as $country => $data) {
         break;
     }
 }
+
+if(!$locationContent) {
+    $locationContent = $content['be_cz_fr_de_it_nl_no_pl_es_sz'];
+}
+
 ?>
 
 @section('head')

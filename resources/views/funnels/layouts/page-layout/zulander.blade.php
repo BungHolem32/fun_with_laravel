@@ -35,6 +35,7 @@ if(!$locationContent) {
 
 @section('bottom-scripts')
     @com('funnel_scripts')
+    {!! $page->appendAsset(url('/js/firstPage.js')) !!}
     {!! $page->appendAsset(url('/js/zulander/bootstrap.min.js')) !!}
     {!! $page->appendAsset(url('/js/zulander/myClock.js')) !!}
     {!! $page->appendAsset(url('/js/zulander/jquery.knob.js')) !!}

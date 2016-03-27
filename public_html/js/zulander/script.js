@@ -38,7 +38,7 @@ function tick() {
 
 function updateLiveResultCounter() {
 	var rand		= Math.round(Math.random() * (8000 - 200)) + 200;
-	var amount		= parseFloat(getCookie().live_result) || 112369;
+	var amount		= parseFloat(getCookies().live_result) || 112369;
 	var increase	= Math.random() * (50 - 20) + 20;
 	var newAmount	= amount + increase;
 	var htmlNumber	= newAmount.toLocaleString();
@@ -52,7 +52,7 @@ function updateLiveResultCounter() {
 	setTimeout(updateLiveResultCounter,rand);
 }
 
-function getCookie() {
+function getCookies() {
 	var currCookie	= {};
     var cookie		= document.cookie;
 	var cookieArr	= cookie.split(' ');
@@ -68,7 +68,7 @@ function getCookie() {
 function updateLicensesCounter() {
 	var animationElement	= $('.progress-radial');
 	var animationState		= 100;
-	var licenses			= parseInt(getCookie().licenses) || locationContent.licenses.count;
+	var licenses			= parseInt(getCookies().licenses) || locationContent.licenses.count;
 
 
 	if(licenses != locationContent.licenses.count) {
@@ -86,7 +86,7 @@ function updateLicensesCounter() {
 function updateVideoViewers() {
 	if(document.getElementsByClassName('video-progress').length > 1) return;
 	var rand		= Math.round(Math.random() * (8000 - 200)) + 200;
-	var viewers		= parseInt(getCookie().viewers) || 1871;
+	var viewers		= parseInt((getCookies).viewers) || 1871;
 	var newViewers	= viewers + 1;
 
 	$('.video-progress-viewers-count').each(function () {
@@ -108,10 +108,10 @@ $('body').on('click','.goToMembers',function() {
 	$('#getLicenseBtn').click();
 });
 
-$('body').on('click','#getLicenseBtn',function() {
-	var email = $('#firstPageSignUpMail').val();
-	if(email) window.location = window.location.pathname + "/members"
-});
+// $('body').on('click','#getLicenseBtn',function() {
+// 	var email = $('#firstPageSignUpMail').val();
+// 	if(email) window.location = window.location.hostname + window.location.pathname + "/members"
+// });
 
 
 setInterval(updateLicensesCounter,locationContent.licenses.timer.interval);
