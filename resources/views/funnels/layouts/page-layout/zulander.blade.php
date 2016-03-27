@@ -20,6 +20,11 @@ foreach($content as $country => $data) {
         break;
     }
 }
+
+if(!$locationContent) {
+    $locationContent = $content['be_cz_fr_de_it_nl_no_pl_es_sz'];
+}
+
 ?>
 
 @section('head')
@@ -71,14 +76,19 @@ foreach($content as $country => $data) {
                 </div>
                 <div class="avideo text-center">Claim One Of <span class="st1"><strike>10</strike> <strong class="count">10</strong> FREE LICENSES In {{$countryName}}</span> To Make <span class="st2">$1,008</span> <strong>Every 5 MINUTES >></strong></div>
                 <div class="free">
-                    <form>
-                        <div class="f1  hidden-sm hidden-xs text-center">
+
+                    {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post']) !!}
+                    <input type="hidden" name="pageId" value="{{ $page->id }}">
+                    <div class="f1  hidden-sm hidden-xs text-center">
                             <img src={{ url("/img/zulander/content/flags/small-".$countryCode.".png") }} alt="" />
                             <span></span>
-                            <input type="email" value="" placeholder="Please enter your email here" name=""/>
+                            @if($page->switches->showEmailField)
+                                {{--<input id="firstPageSignUpMail" type="email" name="email" placeholder="@ln(Email):" required="required" />--}}
+                                <input id="firstPageSignUpMail" type="email" value="" placeholder="Please enter your email here" required="required" name="email"/>
+                            @endif
                         </div>
-                        <div class="f2 text-center">
-                            <input type="submit" value="GIVE ME A FREE LICENSE!" class="go1"/>
+                        <div class="f2 text-center" id="formSection">
+                            <input id="getLicenseBtn" type="submit" value="GIVE ME A FREE LICENSE!" class="go1"/>
                             <div class="strelka visible-xs"><img src={{ url("/img/zulander/strelka2.png") }} class="/img-responsive"  alt=""/></div>
                             <div id="timer2" class="visible-sm visible-xs">
                                 <div class="col-sm-4 col-xs-4">
@@ -92,17 +102,17 @@ foreach($content as $country => $data) {
                                 <div class="clear clearfix"></div>
                             </div>
                         </div>
-                        <div class="f3 text-center">
-                            <div class="fieldset">
-                                <div class="legend">100% Secured By</div>
-                                <img src={{ url("/img/zulander/sec1.jpg") }} alt="" />
-                                <img src={{ url("/img/zulander/sec2.jpg") }} alt="" />
-                                <img src={{ url("/img/zulander/sec3.jpg") }} alt="" />
-                                <img src={{ url("/img/zulander/sec4.jpg") }} alt="" />
-                                <img src={{ url("/img/zulander/sec5.jpg") }} alt="" />
-                            </div>
+                    {!! Form::close() !!}
+                    <div class="f3 text-center">
+                        <div class="fieldset">
+                            <div class="legend">100% Secured By</div>
+                            <img src={{ url("/img/zulander/sec1.jpg") }} alt="" />
+                            <img src={{ url("/img/zulander/sec2.jpg") }} alt="" />
+                            <img src={{ url("/img/zulander/sec3.jpg") }} alt="" />
+                            <img src={{ url("/img/zulander/sec4.jpg") }} alt="" />
+                            <img src={{ url("/img/zulander/sec5.jpg") }} alt="" />
                         </div>
-                    </form>
+                    </div>
                 </div>
                 <div class="review">
                     <div class="line-l">
@@ -160,7 +170,7 @@ foreach($content as $country => $data) {
                     </div>
                 </div>
                 <div class="lasBtn text-center">
-                    <a href="#"><img src={{ url("/img/zulander/btn1.png") }} alt=""/></a>
+                    <a href="#firstPageSignUpMail" class="goToMembers"><img src={{ url("/img/zulander/btn1.png") }} alt=""/></a>
                 </div>
             </div>
             <div class="footer text-center">
@@ -211,7 +221,7 @@ foreach($content as $country => $data) {
                 </div>
             </div>
             <div class="minigo">
-                <a href="#"><img src={{ url("/img/zulander/btn1.png") }} alt="" width="230"/></a>
+                <a href="#firstPageSignUpMail" class="goToMembers"><img src={{ url("/img/zulander/btn1.png") }} alt="" width="230"/></a>
             </div>
         </div>
 @endsection

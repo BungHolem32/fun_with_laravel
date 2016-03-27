@@ -22,7 +22,6 @@ foreach($content as $country => $data) {
 }
 ?>
 
-
 @section('head')
     {!! $page->appendAsset(url('/css/zulander/bootstrap.min.css')) !!}
     {!! $page->appendAsset(url('/css/zulander/style.css')) !!}

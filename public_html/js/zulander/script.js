@@ -104,6 +104,15 @@ if (screen.width < 768) {
     $('#carousel-example-generic .col-md-4').removeClass('col-md-4');
 }
 
+$('body').on('click','.goToMembers',function() {
+	$('#getLicenseBtn').click();
+});
+
+$('body').on('click','#getLicenseBtn',function() {
+	var email = $('#firstPageSignUpMail').val();
+	if(email) window.location = window.location.pathname + "/members"
+});
+
 
 setInterval(updateLicensesCounter,locationContent.licenses.timer.interval);
 updateLicensesCounter();
