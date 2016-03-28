@@ -4,23 +4,37 @@ var locationContent = null;
 
 $(document).ready(function() {
 	if(window.location.pathname == '/zulander/members') {
-		$('#clock1').myClock({
-			endTime:7,
-			circle:0,
-			separTime:'',
-			dateOff:0,
-			cookie:1,
-			cookieTime:30
+		var startTime = parseFloat(getCookies().clock) || (60 * 7);
+		var clockOne = $('#clock1').FlipClock({
+			clockFace: 'MinuteCounter',
+			autoStart: false,
+			callbacks: {
+				stop: function() {
+					// $('.message').html('The clock has stopped!')
+				}
+			}
 		});
 
-		$('#clock2').myClock({
-			endTime:7.5,
-			circle:0,
-			separTime:'',
-			dateOff:0,
-			cookie:1,
-			cookieTime:30
+		var clockTwo = $('#clock2').FlipClock({
+			clockFace: 'MinuteCounter',
+			autoStart: false,
+			callbacks: {
+				stop: function() {
+					// $('.message').html('The clock has stopped!')
+				},
+				interval: function () {
+					document.cookie="clock="+(--startTime)+"; expires="+nextYearUnix;
+				}
+			}
 		});
+
+		clockOne.setTime(startTime);
+		clockOne.setCountdown(true);
+		clockOne.start();
+
+		clockTwo.setTime(startTime);
+		clockTwo.setCountdown(true);
+		clockTwo.start();
 
 		$('#phone').parent().removeClass('col-lg-6 col-md-6 col-sm-6').addClass('col-lg-12 col-md-12 col-sm-12');
 		$('#submit').removeClass().addClass('go2 active-submit').val('YES! TAKE ME TO THE FINAL STEP');

@@ -29,6 +29,7 @@ if(!$locationContent) {
 
 @section('head')
     {!! $page->appendAsset(url('/css/zulander/bootstrap.min.css')) !!}
+    {!! $page->appendAsset(url('/css/zulander/flipclock.css')) !!}
     {!! $page->appendAsset(url('/css/zulander/style.css')) !!}
     {!! $page->appendAsset(url('/css/zulander/resp.css')) !!}
 @append
@@ -37,7 +38,7 @@ if(!$locationContent) {
     @com('funnel_scripts')
     {!! $page->appendAsset(url('/js/zulander/moment.min.js')) !!}
     {!! $page->appendAsset(url('/js/zulander/bootstrap.min.js')) !!}
-    {!! $page->appendAsset(url('/js/zulander/myClock.js')) !!}
+    {!! $page->appendAsset(url('/js/zulander/flipclock.min.js')) !!}
     {!! $page->appendAsset(url('/js/zulander/jquery.knob.js')) !!}
     <script type="text/javascript">
         var locationContent = <?php echo json_encode($locationContent) ?>;
@@ -79,7 +80,7 @@ if(!$locationContent) {
                 <div class="title">
                     You Only Have <span>7 MINUTES</span> To Open A Trading Account & Start Making Up To <span>$1,008 EVERY 5 MINUTES!</span>
                 </div>
-                <div><div id="clock1"></div></div>
+                <div><div id="clock1" class="clock"></div></div>
                 <div class="foot"><strong>You Must Enter Your Details In The Form</strong> Before The Clock Hits Zero. There Are Currently 1591 People In {{$countryName}} Waiting To Take Your FREE License.</div>
             </div>
             <div class="simletext  hidden-sm hidden-xs">
@@ -128,9 +129,7 @@ if(!$locationContent) {
                     You Only Have <span>7 MINUTES</span> To Open A Trading Account & Start Making Up To <span>$1,008 EVERY 5 MINUTES!</span>
                 </div>
                 <div>
-                    <div id="clock2">
-
-                    </div>
+                    <div id="clock2" class="clock"></div>
                 </div>
                 <div class="foot"><strong>You Must Enter Your Details In The Form</strong> Before The Clock Hits Zero. There Are Currently 1591 People In {{ $countryName }} Waiting To Take Your FREE License.</div>
             </div>

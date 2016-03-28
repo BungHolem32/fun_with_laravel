@@ -231,15 +231,8 @@ div#second .go3 { width:561px; height:89px; border:none; background:#f4f4f5 url(
 #timer2 .title { font-size:26px; text-transform:uppercase; margin:5px 0 0 0;}
 #timer2 .title span { font-size:26px; text-transform:uppercase; color:#00ccff; font-family: RobotoCondensed-Bold;}
 
-/**/
-#clock1 { margin:20px 0; font-family:Impact;}
-#clock2 { margin:20px 0; font-family:Impact;}
-.clock-hours {  display:inline-block; width:108px; height:125px; background:url(/img/zulander/h.png) no-repeat center center; text-align:center; color:#e7e8ea; font-size:78px; padding:15px 0; overflow:hidden;}
-.clock-minutes {  display:inline-block; width:108px; height:125px; background:url(/img/zulander/m.png) no-repeat center center; text-align:center; color:#e7e8ea; font-size:78px; padding:15px 0; overflow:hidden;}
-.clock-seconds {  display:inline-block; width:108px; height:125px; background:url(/img/zulander/s.png) no-repeat center center; text-align:center; color:#e7e8ea; font-size:78px; padding:15px 0; overflow:hidden;}
-.clock-1 {  display:inline-block; width:240px; height:125px; background:#37b246; color:#fff; padding:5px; overflow:hidden; font-size:16px; font-family: RobotoCondensed-Regular; text-align:left; margin:0 0 0 50px; display:none;}
+.clock { margin: 20px auto; font-family: Impact; max-width: 300px !important; width: auto !important; text-align: center; }
 
-/**/
 .anime ul { margin:0 0 5px 0; padding:0;}
 .chart{
   display: inline-block;
