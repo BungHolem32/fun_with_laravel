@@ -11,6 +11,7 @@
   text-decoration: underline;
 }
 
+/**/
 .submit{
     display: block;
     color: transparent;
@@ -23,7 +24,7 @@
     margin: 16px auto;
 }
 
-/*SUCCESS STORIES PICS*/
+/*SUCCESS STORIES PART (3 parts human-pic,text,verified-pic*/
 .success-stories {
   border: 1px solid gray;
   box-shadow: 0.1em 0.1em 0.7em 0.2em gray;
@@ -38,7 +39,7 @@
 
   /*SUCCESS TEXT*/
   .success-text {
-    margin-top: 5.8em;
+    margin-top: 3.8em;
 
     /*PARAGRAPH*/
     p {
@@ -112,18 +113,6 @@ body .popup h4 {
 @media (min-width: 992px) and (max-width: 1200px) {
   .success-stories .success-text p.success-button {
     font-size: 2.6em;
-  }
-
-  .field {
-    height: 3.1em !important;
-  }
-
-  .field input[type="text"],
-  .field input[type="password"],
-  .field input[type="email"],
-  input#email, input#password {
-    height: 2.5em !important;
-    margin: 0em 0;
   }
 
   .other-humans {
@@ -219,6 +208,10 @@ body .popup h4 {
     font-size: 1.4em;
   }
 
+  .col-sm-6 {
+    width: 100%;
+  }
+
   .field {
     height: auto !important;
   }
@@ -231,6 +224,9 @@ body .popup h4 {
     position: relative;
     left: 81px;
     bottom: 1em;
+  }
+  .col-sm-6 {
+    width: 100%;
   }
 
   .field {
@@ -267,7 +263,7 @@ div.feed_name2, div.feed_name1 {
 .field input[type="password"],
 .field input[type="email"],
 .field input[type="phone"] {
-  height: 3.5em;
+  height: 4.6em;
 }
 
 .hidden {
@@ -284,4 +280,12 @@ div.feed_name2, div.feed_name1 {
   input[type=submit]{
     .submit;
   }
+  .form-control{
+    box-shadow: none;
+  }
+}
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 0px;
 }

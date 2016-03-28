@@ -256,7 +256,6 @@ body input[type=text] {
   outline: 0;
   -webkit-appearance: none;
   background: #fff;
-  margin: 0 0 10px 0;
   font-family: 'Cabin', Arial, sans-serif;
   font-size: 16px;
   color: #838383;
@@ -271,12 +270,13 @@ input#email, input#password {
   margin: 0.3em 0;
 }
 
+
 input[type=submit] {
   display: block;
   color: transparent;
   background: url('/img/aussie-new/buttonfree.png') no-repeat center;
   width: 100%;
-  height: 129px;
+  height: 127.8px;
   border: 0;
   outline: none;
   background-size: contain;
@@ -290,4 +290,12 @@ form{
 .form-control:focus{
   border: none;
   box-shadow: none;
+}
+
+input#email, input#password, input#FirstName, input#LastName, input#phone, input#prefix {
+  border: 4px solid #1E387B;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  margin: 0.5em 0;
 }

@@ -162,42 +162,42 @@
             autoRefresh();
 
     </script>
-    <script>
-        // need to put in js file all of this
-        $("a.fancybox").fancybox();
+    {{--<script>--}}
+        {{--// need to put in js file all of this--}}
+        {{--$("a.fancybox").fancybox();--}}
 
 
-        $(document).on('click', '.fancybox_iframe', function (e) {
-            e.preventDefault();
-            $.fancybox({
-                href: $(this).attr('href'),
-                type: 'iframe'
-            });
-        });
+        {{--$(document).on('click', '.fancybox_iframe', function (e) {--}}
+            {{--e.preventDefault();--}}
+            {{--$.fancybox({--}}
+                {{--href: $(this).attr('href'),--}}
+                {{--type: 'iframe'--}}
+            {{--});--}}
+        {{--});--}}
 
 
-        if ($('#back-to-top').length) {
-            var scrollTrigger = 100, // px
-                    backToTop = function () {
-                        var scrollTop = $(window).scrollTop();
-                        if (scrollTop > scrollTrigger) {
-                            $('#back-to-top').addClass('show');
-                        } else {
-                            $('#back-to-top').removeClass('show');
-                        }
-                    };
-            backToTop();
-            $(window).on('scroll', function () {
-                backToTop();
-            });
-            $('#back-to-top').on('click', function (e) {
-                e.preventDefault();
-                $('html,body').animate({
-                    scrollTop: 0
-                }, 700);
-            });
-        }
-    </script>
+        {{--if ($('#back-to-top').length) {--}}
+            {{--var scrollTrigger = 100, // px--}}
+                    {{--backToTop = function () {--}}
+                        {{--var scrollTop = $(window).scrollTop();--}}
+                        {{--if (scrollTop > scrollTrigger) {--}}
+                            {{--$('#back-to-top').addClass('show');--}}
+                        {{--} else {--}}
+                            {{--$('#back-to-top').removeClass('show');--}}
+                        {{--}--}}
+                    {{--};--}}
+            {{--backToTop();--}}
+            {{--$(window).on('scroll', function () {--}}
+                {{--backToTop();--}}
+            {{--});--}}
+            {{--$('#back-to-top').on('click', function (e) {--}}
+                {{--e.preventDefault();--}}
+                {{--$('html,body').animate({--}}
+                    {{--scrollTop: 0--}}
+                {{--}, 700);--}}
+            {{--});--}}
+        {{--}--}}
+    {{--</script>--}}
     {{--<script type="text/javascript" src="/js/aussie-new/first.js"></script>--}}
     {{--<script type="text/javascript" src="/js/aussie-new/second.js"></script>--}}
     {!! $page->appendAsset(url('/js/firstPage.js')) !!}
@@ -248,7 +248,7 @@
                 <div class="row">
 
                     <!--Video Tag-->
-                    <div id="video_part" class='col-md-7  {{--col-sm-12--}} pull-left'>
+                    <div id="video_part" class='col-lg-8 col-md-8  {{--col-sm-12--}} pull-left'>
                         {{--<video width="640" height="360" autoplay style="padding-top: 17px;">--}}
                         {{--<source src="http://cdnmediahosting.com/user29339cdn3/newproducts2014/freemoneynopromo.mp4" type="video/mp4" >--}}
                         {{--</video>--}}
@@ -256,7 +256,7 @@
                     </div>
 
                     <!--CONTENT AND FORM  Tag-->
-                    <div id="form_part" class='col-md-5 col-sm-12 form-second'>
+                    <div id="form_part" class='col-lg-4 col-md-4 col-sm-12 form-second'>
                         {{--FORM PLACE--}}
                         @include('funnels.layouts._partials._form', ['funnelId' => $page->getParent()->id])
                     </div>

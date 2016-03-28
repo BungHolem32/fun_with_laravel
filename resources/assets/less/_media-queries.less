@@ -6,6 +6,13 @@
   .logotag.tweet-2.col-md-6.col-sm-12.col-xm-6{
     .none;
   }
+  .col-lg-6.col-md-6.col-sm-6.col-xs-6.field:nth-of-type(1) {
+    padding-right: 1.5px;
+  }
+
+  .col-lg-6.col-md-6.col-sm-6.col-xs-6.field:nth-of-type(2) {
+    padding-left: 1.5px;
+  }
 }
 
 /*BETWEEN 1300PX TO 1000PX */
@@ -18,6 +25,14 @@
 
   #works-fixed {
     .none;
+  }
+
+  .col-lg-6.col-md-6.col-sm-6.col-xs-6.field:nth-of-type(1) {
+    padding-right: 1.5px;
+  }
+
+  .col-lg-6.col-md-6.col-sm-6.col-xs-6.field:nth-of-type(2) {
+    padding-left: 1.5px;
   }
 }
 
@@ -38,6 +53,18 @@
 @media (max-width: 1000px) {
   input[type="text"] {
     width: 300px;
+  }
+
+}
+
+@media (min-width: 990px) and (max-width: 1200px){
+  input#email, input#password, input#FirstName, input#LastName, input#phone, input#prefix{
+    height: 3.8em;
+  }
+
+  input[type=submit]{
+    height: 100.8px !important;
+    box-shadow: none;
   }
 
 }
@@ -73,6 +100,12 @@
     background: url('@{directory}aussie-new/buttonfree_mobile.png') no-repeat center;
     margin: 1em 0;
     .bs;
+  }
+  input[type="submit"]{
+    height: 198px;
+  }
+  .form-control{
+    box-shadow: none;
   }
 }
 
@@ -120,6 +153,10 @@
   .logotag.tweet-2.col-md-6.col-sm-12.col-xm-6{
     .block;
   }
+
+  .form-control{
+    box-shadow: none;
+  }
 }
 
 /*MIN WIDTH 578PX MAX 599PX*/
@@ -158,6 +195,7 @@
   div.video-n-images div.video-tag video {
     margin-top: 5.9%;
   }
+
 
   body #wrapper main section .form-first p:nth-of-type(2) {
     text-align: center;
@@ -202,6 +240,10 @@
     position: relative;
     left: 6em;
     bottom: 2.4em;
+  }
+
+  input[type=submit]{
+    height: 118px;
   }
 
   #works-fixed,
@@ -307,4 +349,3 @@
     .backPic_mobile
   }
 }
-
