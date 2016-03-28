@@ -451,8 +451,8 @@ div#second .go3 { width:561px; height:89px; border:none; background:#f4f4f5 url(
 .carousel-control { color:#333; text-shadow:none;}
 .glyphicon-chevron-left:before { color:#333;}
 .glyphicon-chevron-right:before { color:#333;}
-.glyphicon-chevron-left { background:#c0c0c0; border-radius:50%; padding:7px;}
-.glyphicon-chevron-right { background:#c0c0c0; border-radius:50%; padding:7px;}
+.glyphicon-chevron-left { background:#c0c0c0; border-radius:50%; padding: 7px;}
+.glyphicon-chevron-right { background:#c0c0c0; border-radius:50%; padding: 7px;}
 
 .articlePage.wrapper{
     padding: 1em;
@@ -464,4 +464,6 @@ div#second .go3 { width:561px; height:89px; border:none; background:#f4f4f5 url(
 .container .logo { text-align: center; }
 .articlePage .marketing { color: #d2d1d1; width: 100%; }
 .navbar-wrapper, .underBodyLinks, .payments, footer { display: none; }
+
+.story { height: 360px !important; }
 

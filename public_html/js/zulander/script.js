@@ -71,7 +71,7 @@ function getUserContent() {
 				avatar.startDate	= data.content.stories[i].startDate;
 				avatar.balance		= data.content.stories[i].balance;
 
-				stories += '<div class="col-md-4 col-sm-4 active"><div class="block"> <div class="row"> <div class="col-md-5 col-sm-5 col-xs-5 photo"> <img src="/img/zulander/content/peoples/'+avatar.pic+'" width="100" alt="" class="/img-circle"> <div class="flag"><img src="/img/zulander/content/flags/' + avatar.flag + '" alt=""/></div> </div> <div class="col-md-7 col-sm-7 col-xs-7 name"><strong>'+avatar.name+'</strong><br/>'+avatar.address+'</div><div class="clear clearfix"></div> <div class="col-md-12 col-sm-12 col-xs-12"> <div class="text">';
+				stories += '<div class="col-md-4 col-sm-4 active"><div class="block"> <div class="row"> <div class="col-md-5 col-sm-5 col-xs-5 photo"> <img src="/img/zulander/content/peoples/'+avatar.pic+'" width="100" alt="" class="/img-circle"> <div class="flag"><img src="/img/zulander/content/flags/' + avatar.flag + '" alt=""/></div> </div> <div class="col-md-7 col-sm-7 col-xs-7 name"><strong>'+avatar.name+'</strong><br/>'+avatar.address+'</div><div class="clear clearfix"></div> <div class="col-md-12 col-sm-12 col-xs-12"> <div class="text story">';
 
 				for(var x=0; x<data.avatarsText[i].length; x++) {
 					stories += data.avatarsText[i][x];
