@@ -6,6 +6,36 @@
 
 @directory: "/img/";
 // ======= aussie-new:
+
+/*=================================MIXING CLASSES================================ */
+/*DISPLAY NONE*/
+.none {
+  display: none;
+}
+
+/*DISPLAY BLOCK*/
+.block {
+  display: block;
+}
+
+/*BACKGROUND SIZE 100%*/
+.bs {
+  background: 100%;
+}
+/*LIVE SECTION*/
+.section-live{
+  box-shadow: 1px 1px 31px 11.4px lightgray;
+  width: 85.8%;
+}
+
+//MOBILEPIC
+.backPic_mobile{
+  background: url('@{directory}aussie-new/buttonfree_mobile.png') no-repeat center;
+  .bs;
+  margin: 1.5em 0;
+}
+/*=================================MIXING CLASSES================================ */
+
 body {
 
   /*WRAPPER FOR ALL CONTENT*/
@@ -14,6 +44,7 @@ body {
     background: url('@{directory}aussie-new/mainbg.jpg') no-repeat;
     background-size: cover;
 
+    /*H2 HEADER*/
     h2 {
       color: #1F3A79;
       font-size: 2.5em;
@@ -26,11 +57,12 @@ body {
       position: fixed;
       right: 0;
       z-index: 1;
-      @media (max-width:1300px) {
+      @media (max-width: 1300px) {
         display: none;
       }
     }
 
+    /*NAV BAR STRIP*/
     section#top_strip {
       background: url('@{directory}aussie-new/top_strip_bg.png');
       height: 134px;
@@ -109,12 +141,12 @@ body {
 
             /*SUBMIT BUTTON*/
             &.submit-aussie {
-              background: url('/img/aussie-new/buttonfree.png') no-repeat top center;
+              background: url('@{directory}aussie-new/buttonfree.png') no-repeat top center;
               background-size: 100%;
 
               /*MOBILE VIEW*/
               @media (max-width: 990px) {
-                background: url('/img/aussie-new/buttonfree_mobile.png') no-repeat top center;
+                background: url('@{directory}aussie-new/buttonfree_mobile.png') no-repeat top center;
                 background-size: 100%;
                 margin: 1em 0;
               }
@@ -155,7 +187,7 @@ body {
         /*FAQ*/
         #frequently-asked-questions {
           direction: ltr;
-         /*HEADER */
+          /*HEADER */
           header {
 
             /*H2 TAG*/
@@ -169,8 +201,12 @@ body {
 
         /*LIVE RESULT PIC*/
         #live-result-pic {
+          @media (max-width: 560px) {
+            box-shadow: 1px 1px 31px 11.4px lightgray;
+            width: 85.8%;
+          }
 
-         /*ROW INSIDE LIVE RESULT */
+          /*ROW INSIDE LIVE RESULT */
           div.row {
             #facebook-tab .feed_name1 span#curr_time_8 {
               float: left;
@@ -208,10 +244,11 @@ body {
 }
 
 /**/
-  section div img.col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2.col-xs-10.col-xs-offset-1 {
+section div img.col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2.col-xs-10.col-xs-offset-1 {
   left: 6% !important;
 }
 
+/*TWEETER AND FACEBOOK TAG (DIVS)*/
 div.feed_name2, div.feed_name1 {
   border: 1px solid gray;
   padding: 4px;
@@ -221,21 +258,26 @@ div.feed_name2, div.feed_name1 {
   min-height: 170px;
 }
 
+/*FOOTER ROW*/
 footer.row {
   background-color: #1F3A79;
   color: white;
   margin: 0;
   padding: 1em;
-
-  a.fancybox_iframe {
-    color: white;
-  }
 }
 
+/*funncy BOX IFRAME */
+a.fancybox_iframe {
+  color: white;
+  font-size: 11px;
+}
+
+/*LOGO TAG*/
 .logotag {
   padding: 1.4em 0;
 }
 
+/*VIDEO TAG*/
 div.video-n-images div.video-tag video {
   position: absolute;
   top: 6.1em;
@@ -244,10 +286,12 @@ div.video-n-images div.video-tag video {
   height: auto;
 }
 
+/*ON ERROR TEXT COLOR RED*/
 .error {
   color: red;
 }
 
+/*BACK TO TOP ICON*/
 #back-to-top {
   position: fixed;
   bottom: 40px;
@@ -270,22 +314,22 @@ div.video-n-images div.video-tag video {
   font-weight: bolder;
 }
 
+/*BACK TO TOP ICON ON OVER*/
 #back-to-top:hover {
   background: #e9ebec;
 }
 
+/*BACK TO TOP SHOW */
 #back-to-top.show {
   opacity: 1;
 }
 
+/*CONTENT TAG */
 #content {
   height: 2000px;
 }
 
-.fancybox_iframe {
-  font-size: 11px;;
-}
-
+/*QUESTION P STYLE*/
 .title-question {
   color: #1E3977;
   font-weight: bold;
@@ -293,6 +337,7 @@ div.video-n-images div.video-tag video {
   user-select: none;
 }
 
+/*SOCIAL TAG */
 body .social {
   box-shadow: -1px 3px 25px 8px #D3D3D1;
   background: #F0F0F0;
@@ -300,74 +345,77 @@ body .social {
   left: 4%;
 }
 
+/*FACEBOOK LIKE*/
 .facebook-tab {
   color: gray;
 }
 
+/*TIME OF THE TWEETER MESSAGE*/
 .ctime2 {
   float: right;
 }
 
+/*TIME OF THE FACEBOOK MESSAGE */
 .ctime1 {
   position: relative;
   left: 2.4em;
-  bottom: 0.8em;
+  bottom: 1em;
 }
 
+/*FACEBOOK TITLE*/
 .fbname {
   color: #1F3A79;
 }
 
+/*TWEETER TITLE*/
 a.twtname {
   color: black;
 }
 
+/*TWEET TEXT*/
 .twt-data {
   display: inline-block;
-  width: 89.1%;
   vertical-align: middle;
-}
-
-img.twt-image {
-  border-radius: 0.3em;
-  vertical-align: top;
-}
-
-.twt-data {
-  display: inline-block;
   width: 100%;
-  vertical-align: middle;
   padding: 0 0.6em;
   height: 7.9em;
   text-align: justify;
 }
 
+/*TWEET IMAGE*/
+img.twt-image {
+  border-radius: 0.3em;
+  vertical-align: top;
+}
+
+/*DIV OF THE FACEBOOK MESSAGE*/
 .feed_name1 {
   min-height: 14.3em;
 }
 
+/*FACEBOOK DATA*/
 .fb-data {
   margin-top: -0.6em;
 }
 
+/*BG-COLOR OF THE ODD TR*/
 .table-striped > tbody > tr:nth-child(odd) {
   background-color: lightgray;
 }
 
-/*table third party varified results*/
-.table > thead > tr > td.success, .table > tbody > tr > td.success, .table > tfoot > tr > td.success, .table > thead > tr > th.success, .table > tbody > tr > th.success, .table > tfoot > tr > th.success, .table > thead > tr.success > td, .table > tbody > tr.success > td, .table > tfoot > tr.success > td, .table > thead > tr.success > th, .table > tbody > tr.success > th, .table > tfoot > tr.success > th {
-  background: none;
-}
-
-.table-hover > tbody > tr > td.success:hover, .table-hover > tbody > tr > th.success:hover, .table-hover > tbody > tr.success:hover > td, .table-hover > tbody > tr:hover > .success, .table-hover > tbody > tr.success:hover > th {
-  background-color: #94a3a8;
-}
-
+/*LIVE THIRD PARTY WRAPPER*/
 section#live-third-party {
   box-shadow: 1px 1px 31px 11.4px lightgray;
 }
 
+/*TABLE THIRD PARTY VARIFIED RESULTS*/
+.table > thead > tr > td.success, .table > tbody > tr > td.success, .table > tfoot > tr > td.success, .table > thead > tr > th.success, .table > tbody > tr > th.success, .table > tfoot > tr > th.success, .table > thead > tr.success > td, .table > tbody > tr.success > td, .table > tfoot > tr.success > td, .table > thead > tr.success > th, .table > tbody > tr.success > th, .table > tfoot > tr.success > th {
+  background: none;
+}
 
-
+/*TABLE THIRD PARTY ON OVER*/
+.table-hover > tbody > tr > td.success:hover, .table-hover > tbody > tr > th.success:hover, .table-hover > tbody > tr.success:hover > td, .table-hover > tbody > tr:hover > .success, .table-hover > tbody > tr.success:hover > th {
+  background-color: #94a3a8;
+}
 
 @import "_media-queries.less";

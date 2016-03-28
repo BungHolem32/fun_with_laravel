@@ -1,4 +1,5 @@
 @import 'fonts.less';
+@import 'form.less';
 
 /*BOLD THE ELEMENT*/
 .bold {
@@ -8,6 +9,18 @@
 /*UNDERLINE */
 .underline {
   text-decoration: underline;
+}
+
+.submit{
+    display: block;
+    color: transparent;
+    background: url('/img/aussie-new/buttonfree_mobile.png') no-repeat center;
+    width: 100%;
+    height: 197px;
+    border: 0;
+    outline: none;
+    background-size: contain;
+    margin: 16px auto;
 }
 
 /*SUCCESS STORIES PICS*/
@@ -23,12 +36,14 @@
     margin: 4.5em 0 0 0;
   }
 
-  /*success text*/
+  /*SUCCESS TEXT*/
   .success-text {
     margin-top: 5.8em;
 
-    /*paragraph*/
+    /*PARAGRAPH*/
     p {
+
+      /*SUCCESS BUTTON*/
       &.success-button {
         font-family: cabinbold;
         font-size: 3.2em;
@@ -37,7 +52,11 @@
           color: #1F3A79;;
         }
       }
+
+      /*SPAN  TAG*/
       span {
+
+        /*TITLE*/
         &.success-title {
           font-size: 1.7em;
           font-family: cabinmedium;
@@ -45,52 +64,64 @@
         }
       }
     }
+    /*OTHER PICS (BESIDE THE FIRST ONE )*/
     &.other-success {
       margin: 4em 0;
     }
   }
 }
 
+/*ALL THE */
 span[class^="success"] {
   font-size: 1.5em;
   font-weight: 500;
   line-height: 1.3em;
 }
 
+/*DATE CONTENT [SPAN TAG]*/
 span.success-date {
   display: block;
 }
 
+/*QUESTION TITLE*/
 p.title-question.text-left.pull-left {
   font-size: 1.6em;
 }
 
+/*ANSWER TEXT*/
 .answer-text {
   font-size: 1.3em;
 }
 
+/**/
 .feed_name1 {
   font-size: 1.2em;
 }
 
+/*OTHER HUMAN PICS*/
 .other-humans {
   margin-top: 2.9em;
 }
 
+/*POPUP TITLE */
 body .popup h4 {
   font-size: 36px;
 }
 
-/*first step tablet*/
+/*FIRST STEP TABLET FROM  MIN-WIDTH-992PX TO MAX-WIDTH-1200PX*/
 @media (min-width: 992px) and (max-width: 1200px) {
   .success-stories .success-text p.success-button {
     font-size: 2.6em;
   }
+
   .field {
     height: 3.1em !important;
   }
 
-  .field input[type="text"],  .field input[type="password"], .field input[type="email"], input#email, input#password {
+  .field input[type="text"],
+  .field input[type="password"],
+  .field input[type="email"],
+  input#email, input#password {
     height: 2.5em !important;
     margin: 0em 0;
   }
@@ -117,14 +148,16 @@ body .popup h4 {
   }
 }
 
-/**/
+/*MIN-WIDTH 768PX TO MAX-WIDTH 991PX*/
 @media (min-width: 768px) and (max-width: 991px) {
   .success-profit {
     display: block;
   }
+
   .col-sm-6 {
     width: 100%;
   }
+
   .field {
     height: auto !important;
   }
@@ -135,7 +168,6 @@ body .popup h4 {
     width: 100%;
     height: 221px;
   }
-
 
   .success-stories .success-verified-pic {
     margin: 2.8em 0;
@@ -165,34 +197,38 @@ body .popup h4 {
     width: 30px;
   }
 
-  .ctime1 {
-    left: 84.1px;
+  .second-page .ctime1 {
+    left: 43px ;
   }
 
   p.title-question.text-left.pull-left {
     font-size: 1.45em;
   }
 
-  div.feed_name2, div.feed_name1 {
+  div.feed_name2,
+  div.feed_name1 {
     font-size: 1.5em;
   }
-
 }
 
+/*MIN-WIDTH 500PX TO MAX-WIDTH 767PX*/
 @media (min-width: 500px) and (max-width: 767px) {
 
-  div.feed_name2, div.feed_name1 {
+  div.feed_name2,
+  div.feed_name1 {
     font-size: 1.4em;
   }
 
   .ctime1 {
     left: 84px;
   }
+
   .field {
     height: auto !important;
   }
 }
 
+/*MIN-WIDTH 200PX TO MAX-WIDTH 499PX*/
 @media (min-width: 200px) and (max-width: 499px) {
 
   .ctime1 {
@@ -200,6 +236,7 @@ body .popup h4 {
     left: 2.1em;
     bottom: 0.7em;
   }
+
   .field {
     height: auto !important;
   }
@@ -225,350 +262,34 @@ div.feed_name2, div.feed_name1 {
   min-height: 204px;
   font-size: 1.3em;
 }
-//
-//.field.phoneFields {
-//  text-align: left;
-//  text-indent: 1.3%;
-//}
-//
-//.field:first-of-type, .field:nth-of-type(2) {
-//  display: inline-block;
-//  width: 47.2%;
-//  margin: 0.4em;
-//}
-//
-//.field:nth-of-type(3), .field:nth-of-type(4) {
-//  width: 97%;
-//  text-align: center;
-//  margin: 0 auto;
-//}
-
-
-.form.second{
-  /* margin-top: 12px;*/
-}
-.form input:focus{
-  border-color: #AFBDC8;
-}
-.second input[type=text],.second  input[type=email],.second  input[type=tel],.second input[type=password] {
-  /* margin: 0 0 -3px 0;*/
-}
-
-label.error {
-  background: #820705;
-  border: 1px solid transparent;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  font-size: 11px !important;
-  line-height: 12px;
-  padding: 3px;
-  color: #fff;
-  position: absolute;
-  top: -26px;
-  width: 131px;
-  left: 18px;
-}
-label {
-  display: inline-block;
-  margin-bottom: 5px;
-  font-weight: 700;
-}
-
-.btn:hover, .btn:focus {
-  color: transparent;
-  outline: none;
-}
-/*#form input:not(#submit):focus{
- border: 4px solid #AFBDC8;
-}*/
-#form label {
-  font-size: 13px;
-  line-height: 12px;
-}
-
-.form.second .text-center{
-  display: none;
-}
-#form .row >*:nth-child(3),#form .row >*:nth-child(4),#form .row >*:nth-child(5){
-  width: 100%;
-}
-#form .row > *:nth-child(1) input, #form .row > *:nth-child(2) input {
-  width: 100%;
-}
-#form .row >*:nth-child(2){
-  position: relative;
-}
-.form.second,.form.second .container{
-  max-width: 326px;
-}
-#form input[type=phone]{
-  border: 4px solid #1e387b;
-  border-radius: 6px !important;
-  -webkit-border-radius: 6px !important;
-  -moz-border-radius: 6px !important;
-  -khtml-border-radius: 6px !important;
-  background: #ffffff;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  color: #000000;
-  text-align: left !important;
-  padding: 4px 10px;
-  margin: 0 0 0 0 !important;
-  outline: 0;
-  -webkit-appearance: none;
-}
-
-#form #phone {
-  width: 70.9%;
-  margin-left: 1.1% !important;
-}
-#form #prefix{
-  width: 28%;
-}
-
-
-.first_em > video{
-  position: relative;
-  top: 3px;
-}
-.sec_em > video{
-  position: relative;
-  top: -13px;
-  max-height: 380px;
-}
-.loading{
-  font-size: 20px;
-}
-
-.form.second .wrap{
-  position: relative;
-}
-
-.form.second .loading{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  background: #fff;
-  color: rgb(30, 56, 123) !important;
-  background: #ffffff !important;
-  border: 4px solid #1e387b !important;
-  border-radius: 0 !important;
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
-  -khtml-border-radius: 0 !important;
-  padding-top: 100px;
-  font-size: 19px;
-  box-shadow: 0 0 4px 2px rgba(0,0,0,0.3);
-}
-.f_first{
-  position: relative;
-}
-.f_first .loading{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  background: #fff;
-  color: rgb(30, 56, 123) !important;
-  background: #ffffff !important;
-  border: 4px solid #1e387b !important;
-  border-radius: 0 !important;
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
-  -khtml-border-radius: 0 !important;
-  padding-top: 100px;
-  font-size: 19px;
-  box-shadow: 0 0 4px 2px rgba(0,0,0,0.3);
-}
-.loading-text{
-  margin-top: 20px;
-}
-.form.second{
-  position: relative;
-  top: -10px;
-}
-.FAQ-pan .a-section{
-  display: block;
-}
-
-.tradessect {
-  font-weight: normal;
-}
-
-
- input[aria-invalid=true]{
-  border: 4px solid #a94442 !important;
-}
-
- input[aria-invalid=true]:focus {
-  border: 0px solid  #843534 !important;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px #ce8483;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px #ce8483;
-}
- input[aria-invalid=false]{
-  border: 4px solid #3c763d !important;
-  position: relative;
-}
-input[aria-invalid=false]:focus {
-  border: 0px solid  #843534 !important;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px #67b168;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px #67b168;
-}
- input[aria-invalid=false]{
-  background: #fff url('../../img/aussie/checkmark.png') 90%51% no-repeat;
-}
-
-
-
- label.error {
-  background: #820705;
-  border: 1px solid transparent;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  font-size: 11px !important;
-  line-height: 12px;
-  padding: 3px;
-  color: #fff;
-  position: absolute;
-  top: -26px;
-  width: 131px;
-  left: 18px;
-}
-
-
-label.error:after {
-  top: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-color: rgba(130, 7, 5, 0);
-  border-top-color: #820705;
-  border-width: 6px;
-  margin-left: -10px;
-}
-#prefix-error{
-  display: none !important;
-}
-#phone-error{
-  left: 136px;
-}
-#form #prefix{
-  text-align: center !important;
-}
-
-.footer a{
-  color: #cedbff;
-}
-
-.g-recaptcha{
-  margin: 0 auto 9px;
-  position: relative;
-  width: 304px;
-  left: -11px;
-  top: 14px;
-  height: 76px;
-  overflow: hidden;
-}
-.g-recaptcha iframe{
-  border-radius: 32px;
-  width: 299px;
-  height: 74px;
-}
-.g-recaptcha:after{
-  content: '';
-  background: #f3f3f3;
-  position: absolute;
-  top: 0;
-  left: 2px;
-  width: 2px;
-  height: 100%;
-}
-.g-recaptcha > div{
-  position: relative;
-  top: -2px;
-}
-
-
-body input[type=text] {
-  border: 4px solid #1e387b;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-  padding: 4px 7px;
-  outline: 0;
-  -webkit-appearance: none;
-  background: #fff;
-  margin: 0 0 10px 0;
-  font-family: 'Cabin', Arial, sans-serif;
-  font-size: 16px;
-  color: #838383;
-  height: 60px;
-}
-
-input#email, input#password {
-  border: 4px solid #1E387B;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  margin: 0.3em 0;
-}
-
-input[type=submit] {
-  display: block;
-  color: transparent;
-  background: url('/img/aussie-new/buttonfree.png') no-repeat center;
-  width: 100%;
-  height: 129px;
-  border: 0;
-  outline: none;
-  background-size: contain;
-  margin: 0 auto;
-}
-
-form{
-  width: 100% !important;
-}
-
-  @media (min-width: 200px) and (max-width: 998px ) {
-
-  input[type=submit] {
-    display: block;
-    color: transparent;
-    background: url('/img/aussie-new/buttonfree_mobile.png') no-repeat center;
-    width: 100%;
-    height: 197px;
-    border: 0;
-    outline: none;
-    background-size: contain;
-    margin: 16px auto;
-  }
-}
-
-.form-control:focus{
-  border: none;
-  box-shadow: none;
-}
 
 .col-lg-6.col-md-6.col-sm-6.col-xs-12.field {
   width: 100%;
 }
 
-.field input[type="text"], .field input[type="password"], .field input[type="email"], .field input[type="phone"] {
+.field input[type="text"],
+.field input[type="password"],
+.field input[type="email"],
+.field input[type="phone"] {
   height: 3.5em;
 }
+
 .field {
   height: 4.2em;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
 .col-lg-6.col-md-6.col-sm-6.col-xs-12.field.phoneFields {
   margin-top: 0.3em;
+}
+
+/*MIN-WIDTH 200PX TO MAX-WIDTH 998PX*/
+@media (min-width: 200px) and (max-width: 998px ) {
+
+  input[type=submit]{
+    .submit;
+  }
 }

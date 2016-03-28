@@ -1,34 +1,25 @@
 /*MEDIA QUERY*/
 
 /*BIGGER THEN 1300px*/
-@media (min-width: 1300px ) {
+@media (min-width: 1301px ) {
   img.col-sm-offset-1.col-sm-10.col-xs-offset-1.col-xs-10.text-center {
-    display: none;
+    .none;
   }
 }
 
-/*BETWEEN */
-@media (min-width: 1001px) and (max-width: 1300px) {
+/*BETWEEN 1300PX TO 1000PX */
+@media (min-width: 995px) and (max-width: 1300px) {
 
   img.col-sm-offset-1.col-sm-10.col-xs-offset-1.col-xs-10.text-center {
-    display: none;
+    .none;
   }
 
   #works-fixed {
-    display: none;
+    .none;
   }
 }
 
-@media (max-width: 1000px) {
-  input[type="text"] {
-    width: 300px;
-  }
-
-  #works-fixed {
-    display: none;
-  }
-}
-
+/*BETWEEN 1215PX TO  MAX WIDTH 995PX */
 @media (min-width: 995px) and (max-width: 1215px) {
 
   body #wrapper main section .form-first p:nth-of-type(2) {
@@ -37,27 +28,35 @@
     text-align: center;
   }
 
-  #works-fixed {
-    display: none;
+  div.feed_name1, div.feed_name2 {
+    min-height: 200px;
   }
 }
 
+@media (max-width: 1000px) {
+  input[type="text"] {
+    width: 300px;
+  }
+
+}
+
+/*MIN WIDTH 641PX MAX WIDTH 990PX*/
 @media (min-width: 641px) and (max-width: 990px) {
 
+  .logotag.facebook.col-md-7.col-sm-5.col-xm-6,
+  #works-fixed,
+  .tweeter,
+  img.col-sm-offset-3.col-sm-4.col-xs-offset-1.col-xs-4.col-md-5,
+  .logotag.tweet-2.col-md-6.col-sm-12.col-xm-6{
+    .none;
+  }
+
   input {
-    display: block;
+    .block;
   }
 
   ul li {
     border-bottom: 1px solid white;
-  }
-
-  .tweeter {
-    display: none;
-  }
-
-  .logotag.facebook.col-md-7.col-sm-5.col-xm-6 {
-    display: none;
   }
 
   .container ul.row {
@@ -69,23 +68,20 @@
   }
 
   body #wrapper main section .g-first input[type=submit] {
-    background: url('/img/aussie-new/buttonfree_mobile.png') no-repeat center;
-    background-size: 100%;
+    background: url('@{directory}aussie-new/buttonfree_mobile.png') no-repeat center;
     margin: 1em 0;
-  }
-
-  img.col-sm-offset-3.col-sm-4.col-xs-offset-1.col-xs-4.col-md-5 {
-    display: none;
+    .bs;
   }
 }
 
-@media (max-width: 640px) {
-  #works-fixed {
-    display: none;
-  }
+/*MAX WIDTH 640px*/
+@media (min-width: 601px) and (max-width: 640px) {
 
-  img.col-sm-offset-3.col-sm-4.col-xs-offset-1.col-xs-4.col-md-5 {
-    display: none;
+  #works-fixed,
+  .tweeter,
+  img.col-sm-offset-3.col-sm-4.col-xs-offset-1.col-xs-4.col-md-5,
+  .logotag.tweet-2.col-md-6.col-sm-12.col-xm-6{
+    .none;
   }
 
   ul.row {
@@ -104,26 +100,9 @@
     top: 40px;
     height: 212px;
   }
-}
-
-@media (min-width: 990px)  and(max-width: 1200px) {
-  div.feed_name1, div.feed_name2 {
-    min-height: 200px;
-  }
-
-  .feed_name1 img, .feed_name2 img {
-    height: 100%;
-  }
-}
-
-@media (min-width: 601px)  and  (max-width: 1000px) {
 
   div.video-n-images div.video-tag video {
     margin-top: 1.5%;
-  }
-
-  .ctime1 {
-    left: 82px;
   }
 
   body #wrapper main section .form-first p:nth-of-type(2) {
@@ -133,16 +112,13 @@
   .feed_name1 img, .feed_name2 img {
     height: 100%;
   }
-}
 
-@media (min-width: 999px) and  (max-width: 600px) {
-
-  div.video-n-images div.video-tag video {
-    margin-top: 5.3%;
+  .ctime1 {
+    left: 20% !important;
   }
-
 }
 
+/*MIN WIDTH 578PX MAX 599PX*/
 @media (min-width: 578px) and (max-width: 599px) {
 
   div.video-n-images div.video-tag video {
@@ -160,10 +136,19 @@
   .ctime1 {
     position: relative;
     left: 6em;
-    bottom: 2.4em;
+  }
+
+  #works-fixed ,
+  .tweeter,
+  .logotag.tweet-2.col-md-6.col-sm-12.col-xm-6{
+    .none;
+  }
+  section#live-third-party {
+    .section-live;
   }
 }
 
+/*MIN WIDTH 500 MAX 577PX*/
 @media (min-width: 500px) and (max-width: 577px) {
 
   div.video-n-images div.video-tag video {
@@ -180,11 +165,21 @@
 
   .ctime1 {
     position: relative;
-    left: 6em;
-    bottom: 2.4em;
+    left: 16%;
+    bottom: 1em;
+  }
+
+  #works-fixed,
+  .tweeter,
+  .logotag.tweet-2.col-md-6.col-sm-12.col-xm-6{
+    .none;
+  }
+  section#live-third-party {
+    .section-live;
   }
 }
 
+/*MIN WIDTH 454 MAX 499PX*/
 @media (min-width: 454px) and (max-width: 499px) {
 
   div.video-n-images div.video-tag video {
@@ -204,8 +199,18 @@
     left: 6em;
     bottom: 2.4em;
   }
+
+  #works-fixed,
+  .tweeter,
+  .logotag.tweet-2.col-md-6.col-sm-12.col-xm-6{
+    .none;
+  }
+  section#live-third-party {
+    .section-live;
+  }
 }
 
+/*MIN WIDTH 430 MAX 453PX*/
 @media (min-width: 430px) and (max-width: 453px) {
 
   div.video-n-images div.video-tag video {
@@ -226,8 +231,18 @@
     left: 6em;
     bottom: 2.4em;
   }
+
+  #works-fixed,
+  .tweeter,
+  .logotag.tweet-2.col-md-6.col-sm-12.col-xm-6{
+    .none;
+  }
+  section#live-third-party {
+    .section-live;
+  }
 }
 
+/*MIN WIDTH 400 MAX 429PX*/
 @media (min-width: 400px) and (max-width: 429px) {
 
   div.video-n-images div.video-tag video {
@@ -235,6 +250,15 @@
     height: 10em;
   }
 
+  #works-fixed,
+  .tweeter,
+  .logotag.tweet-2.col-md-6.col-sm-12.col-xm-6{
+    .none;
+  }
+  section#live-third-party {
+    .section-live;
+  }
+
   body #wrapper main section .form-first p:nth-of-type(2) {
     text-align: center;
   }
@@ -246,12 +270,21 @@
   }
 }
 
-@media (max-width: 399px) {
+/*MIN WIDTH 100 AND MAX WIDTH 399PX*/
+@media (min-width: 100px) and (max-width: 399px) {
 
   div.video-n-images div.video-tag video {
     margin-top: 7%;
     height: 7.5em;
   }
+  section#live-third-party {
+    .section-live;
+  }
+  #works-fixed ,
+  .tweeter,
+  .logotag.tweet-2.col-md-6.col-sm-12.col-xm-6{
+    .none;
+  }
 
   body #wrapper main section .form-first p:nth-of-type(2) {
     text-align: center;
@@ -264,30 +297,10 @@
   }
 }
 
-@media (max-width: 560px) {
-  section#live-third-party {
-    box-shadow: 1px 1px 31px 11.4px lightgray;
-    width: 85.8%;
-  }
-
-}
-
-@media (min-width: 993px) {
-  .logotag.tweet-2.col-md-6.col-sm-12.col-xm-6 {
-    display: none;
-  }
-}
-
-@media (min-width: 200px) and (max-width: 992px ) {
-  .tweeter {
-    display: none;
-  }
-
+/*MOBILE BUTTON PIC */
+@media (max-width:920px) {
   body #wrapper main section .g-first input[type=submit] {
-    background: url('/img/aussie-new/buttonfree_mobile.png') no-repeat center;
-    background-size: 100%;
-    margin: 1.5em 0;
+    .backPic_mobile
   }
 }
-
 

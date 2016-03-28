@@ -16,20 +16,20 @@ $cacheable = ($_SERVER['REQUEST_METHOD'] == 'GET'
 				&& strpos($url, $_SERVER['HTTP_HOST'].'/lp/') !== 0
 				&& preg_match('/^\/((\w{2}\/)?\w+\/?)?$/', $uri[0])
 				&& $_SERVER['REMOTE_ADDR'] != '31.154.27.50');
-//if($cacheable){
-//	// its not admin: do cache
-//	$filename = '../storage/html/'.md5($url).'.html';
-//	/*echo time();
-//	echo '<br>'.filemtime($filename);
-//	echo '<br>'.(time() - filemtime($filename)).'<br>';*/
-//	if (file_exists($filename) && time() - filemtime($filename) < (5 * 60)) {
-//		// load from html file
-//		header('X-brute-cache: true');
-//		ob_end_clean();
-//		readfile($filename);
-//		die;
-//	}
-//}
+if($cacheable){
+	// its not admin: do cache
+	$filename = '../storage/html/'.md5($url).'.html';
+	/*echo time();
+	echo '<br>'.filemtime($filename);
+	echo '<br>'.(time() - filemtime($filename)).'<br>';*/
+	if (file_exists($filename) && time() - filemtime($filename) < (5 * 60)) {
+		// load from html file
+		header('X-brute-cache: true');
+		ob_end_clean();
+		readfile($filename);
+		die;
+	}
+}
 
 
 
