@@ -1,3 +1,9 @@
+/*UL TAG*/
+ul {
+    padding: 0;
+}
+
+/*LI TAG*/
 .side-menu li {
     display: inline-block;
     padding: 12px;
@@ -9,8 +15,9 @@
     padding: 2em 1em;
 }
 
-ul {
-    padding: 0;
+/*HREF A */
+.side-menu li a{
+    font-size:1.19em;
 }
 
 .logo-pic-pannel{
@@ -21,6 +28,17 @@ ul {
 #logo {
     max-height: 110px;
     margin: 0 auto;
+    width:auto;
+    min-width: 160px;
+}
+
+@media (max-width:1200px ) {
+    i.fa {
+        display: block;
+    }
+    li.col-xm-12.col-md-2.col-lg-2{
+        padding: 2em 3px;
+    }
 }
 
 @media (max-width: 990px ) {
@@ -38,10 +56,13 @@ ul {
 }
 
 
-@media (max-width: 784px ) {
+@media (max-width: 764px ) {
     .side-menu li {
-        width: 30%;
+        width: 48%;
         padding: 2em 0 !important;
+    }
+    .side-menu>li a {
+        font-size: 1.6em;
     }
 }
 
@@ -49,5 +70,9 @@ ul {
     .side-menu li {
         width: 100%;
         padding: 2em 0 !important;
+
+    }
+    .side-menu>li a {
+        font-size: 26px;
     }
 }

@@ -616,9 +616,8 @@
                 Right Reserved.
             </div>
             <div id="right-footer" class="col-md-1 col-sm-2 col-xs-3 push-right">
-                @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/policy", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Privacy'])
-                |
-                @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/terms", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Terms'])
+                <a class="fancybox_iframe" href="/EN/aussie-new/policy" target="&quot;_blank&quot;">Privacy |</a>
+                <a class="fancybox_iframe" href="/EN/aussie/members/../terms" target="&quot;_blank&quot;">Terms </a>
             </div>
         </footer>
 

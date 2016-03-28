@@ -69,11 +69,9 @@ class SpotApi
 
 
     private static function processAnswer($answer){
-        echo($answer);
         $answer = json_decode($answer,true);
         $answer['err'] = 1;
         if(isset($answer['status']) && isset($answer['status']['connection_status']) && $answer['status']['connection_status'] == 'successful'){
-
             // batch operation - prepare parent values from all batches
             if(array_key_exists('BATCH_0', $answer)){
                 $answer['status']['errors'] = [];

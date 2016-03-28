@@ -1,7 +1,7 @@
 @section('head')
+
     <link rel="stylesheet" href="/css/aussie/panel/style.css" />
     <link rel="stylesheet" href="/css/aussie-new/panel/style-new.css" />
-
     <link rel="stylesheet" href="/css/aussie/panel/custom.css" />
 @append
 
@@ -25,8 +25,8 @@
                     <h4 style="font-size: 15px; font-weight: bold;margin-top: 4px;margin-bottom: 3px;" id="toggleProfileDetailsLink" class="text-capitalize">
                         @ln(account details)
                     </h4>
-                    <span class="text-capitalize" style="font-size:13px;">@ln(email): {{ App\Customer::get()->email }}</span><br>
-                    <span class="text-capitalize" style="font-size:13px;">@ln(broker name): {{ $page->brand->name }}</span><br>
+                    <span class="" style="font-size:13px;">@ln(email): {{ App\Customer::get()->email }}</span><br>
+                    <span style="font-size:13px;text-transform: capitalize">@ln(broker name): {{ $page->brand->name }}</span><br>
                     <span id="balanceStatus" style="font-size:13px;">
                         @ln(Balance): <span class="balance">$ 0.00</span>
                         <i class="getLoading fa fa-refresh fa-spin"></i>
@@ -76,7 +76,7 @@
                     <li class="col-xm-12 col-md-1 col-lg-1">
                         <a id="afaqModal" href="javascript:;" data-toggle="modal" data-target="#faqModal" data-backdrop="false">
                             <span class="badge pull-right"></span>
-                            <i class="fa fa-comments-o uppercase"></i> @ln(faq)
+                            <i class="fa fa-comments-o text-uppercase"></i> @ln(faq)
                         </a>
                     </li>
                     <li class="hidden">

@@ -226,7 +226,6 @@
                     $('#3-steps').find('.desktop-steps').addClass('hidden');
                 }
                 if (width > 990) {
-                    console.log(width);
                     $('.iphone-pic').attr('src', desktop[0]);
                     $('.facebook-pic').attr('src', desktop[1]);
                     $('.trust-pic').attr('src', mobile[2]);
@@ -373,7 +372,6 @@
 
     /*8 SHUFFLE THE ARRAY*/
     var mC = setInterval(funnelControll.live_trade.init, funnelControll.live_trade.get_random_number(700, 3000));
-    console.log(mC);
 
     /*9 LOADING IN PROCCESS*/
     funnelControll.loading();
