@@ -29,7 +29,7 @@
             value: {
                 /*INITIALISE THE PROCCESS*/
                 init: function (times) {
-                    var number_of_element_on_trade = $("#trades").find("tr").length;
+                    var number_of_element_on_trade = $("#trades").find(".line-trades").length;
 
                     /*IF VALUE INSERTED THEN CREATE 11 TD IN TABLE*/
                     if (times == 11) {
@@ -46,7 +46,7 @@
 
                         /*IF NUMBER OF ELEMENTS BIGER THEN 11 THEN SUFFLE ARRAY*/
                         if (number_of_element_on_trade > 11) {
-                            var array = $("#trades").find("tr");
+                            var array = $("#trades").find(".line-trades");
                             html = funnelControll.live_trade.shuffle_array(array);
                         }
                         $('#trades').html(html);
@@ -69,18 +69,7 @@
 
                     /*RANDOM NAME */
                     var name = funnelControll.names[this.get_random_number(0, funnelControll.names.length)];
-
-                    var template_trade = '<tr rv-class-success="position.status | eq won" rv-show="position.status | not_eq open" <!--class="success user-trade"-->>' +
-                        '<td rv-text="position.optionEndDate" align="center">' +
-                        '<font style="font-family: \'Cabin\', sans-serif;">' +
-                        '<span style="color:#1e387b; font-weight:bold; font-size:14px;">' + name + '</span>' +
-                        ' just won a trade...</font></td>' +
-                        '<td class="payoutwon" align="center">' +
-                        '<font style="font-family: \'Cabin\', sans-serif !important; font-size:16px; font-weight:bold">$ ' + this.number_comb(payout) + '</font>' +
-                        '</td><td rv-text="position.optionEndDate" align="center"><font style="font-family: \'Cabin\', sans-serif;">'
-                        + this.get_date_time(this.get_random_number(1, 10)) + '</font></td><td align="center"><span rv-text="position.name">' +
-                        '<font style="font-family: \'Cabin\', sans-serif;">' + xasset + '</span></font>' +
-                        '</td></tr>';
+                    var template_trade   = "<div class=\'line-trades col-md-12 col-sm-12 col-xs-12 text-center\'>\n    <div class=\"trade-name col-lg-4 col-md-4 col-sm-4 col-xs-4 trades\">" + name + "</div>\n    <div class=\"trade-profit col-lg-2 col-md-2 col-sm-2 col-xs-2 trades\">" + this.number_comb(payout) + "</div>\n    <div class=\"trade-time col-lg-3 col-md-3 col-sm-3 col-xs-3 trades\">" + this.get_date_time(this.get_random_number(1, 10)) + "</div>\n    <div class=\"trade-currency col-lg-3 col-md-3 col-sm-3 col-xs-3 trades\">"+xasset+"</div>\n</div>";
 
 
                     if (len > 11) {
@@ -186,7 +175,7 @@
                 /*HIDE ALL ELEMENTS IN MEMBER PAGE*/
                 hide_trade: function (elem) {
                     $("#hoverbox").hide();
-                    if(elem){
+                    if (elem) {
                         $('#' + elem).find('iframe,h4').remove();
                     }
                     $('[id^="tb"]').hide();
@@ -322,9 +311,9 @@
         },
 
         /*REMOVE CSS MEMBERS */
-        remove_form_css_members :{
-            value:function(){
-                $().ready(function(){
+        remove_form_css_members: {
+            value: function () {
+                $().ready(function () {
 
                 })
             },
@@ -379,7 +368,7 @@
     ///*10 REMOVE ALL */
     funnelControll.remove_form_css_members();
 
-    $('#prefix').attr({'placeholder':'+972'});
+    $('#prefix').attr({'placeholder': '+972'});
 }())
 ;
 /**

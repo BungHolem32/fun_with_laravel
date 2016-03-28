@@ -198,31 +198,36 @@
 
                 <div class="row">
 
-                    <!--Video Tag-->
-                    <div id="video_part" class='col-md-7  {{--col-sm-12--}} pull-left'>
-                        {{--<video width="640" height="360" autoplay style="padding-top: 17px;">--}}
-                        {{--<source src="http://cdnmediahosting.com/user29339cdn3/newproducts2014/freemoneynopromo.mp4" type="video/mp4" >--}}
-                        {{--</video>--}}
-                        @include('funnels.layouts._partials._video',  ['w'=>'100%','h'=>'100%'])
-                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12">
 
-                    <!--Form Tag-->
-                    <div id="form_part" class='col-md-4  col-sm-12 form-first'>
-                        {{--TEXT--}}
-                        <p>START <strong>NOW</strong></p>
-                        <p>Enter your email below to gain instant
-                            free access to the Aussie Method system
-                        </p>
-                        {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post','align'=>'center']) !!}
-                        <input type="hidden" name="pageId" value="{{ $page->id }}">
-                        @if($page->switches->showEmailField)
-                            <input id="firstPageSignUpMail" type="email" name="email" placeholder="YOUR EMAIL ADDRESS.."
-                                   required="required" class="col-sm-12"/>
-                        @endif
-                        <input type="submit" class="align-center col-md-12 col-sm-12 submit-aussie" value=""/>
-                        {!! Form::close() !!}
-                        <div class="col-md-12 col-sm-12">
-                            <img src="/img/aussie-new/certs.png" class="trust-pic">
+
+                        <!--Video Tag-->
+                        <div id="video_part" class='col-lg-8 col-md-8  col-sm-12 col-xs-12 pull-left'>
+                            {{--<video width="640" height="360" autoplay style="padding-top: 17px;">--}}
+                            {{--<source src="http://cdnmediahosting.com/user29339cdn3/newproducts2014/freemoneynopromo.mp4" type="video/mp4" >--}}
+                            {{--</video>--}}
+                            @include('funnels.layouts._partials._video',  ['w'=>'100%','h'=>'100%'])
+                        </div>
+
+                        <!--Form Tag-->
+                        <div id="form_part" class='col-lg-8 col-md-3  col-sm-12 form-first'>
+                            {{--TEXT--}}
+                            <p>START <strong>NOW</strong></p>
+                            <p>Enter your email below to gain instant
+                                free access to the Aussie Method system
+                            </p>
+                            {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post','align'=>'center']) !!}
+                            <input type="hidden" name="pageId" value="{{ $page->id }}">
+                            @if($page->switches->showEmailField)
+                                <input id="firstPageSignUpMail" type="email" name="email"
+                                       placeholder="YOUR EMAIL ADDRESS.."
+                                       required="required" class="col-sm-12"/>
+                            @endif
+                            <input type="submit" class="align-center col-md-12 col-sm-12 submit-aussie" value=""/>
+                            {!! Form::close() !!}
+                            <div class="col-md-12 col-sm-12">
+                                <img src="/img/aussie-new/certs.png" class="trust-pic">
+                            </div>
                         </div>
                     </div>
 
@@ -264,13 +269,13 @@
                     <header class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-offset-1 col-xs-10">
                         <h2 class="title-question">Success Stories</h2>
                     </header>
-                    <div class="pic-iphone col-md-12">
+                    <div class="pic-iphone col-md-12 col-sm-12 col-xs-12">
                         <img src="/img/aussie-new/iphone.png" alt="iphone-massage-pic"
-                             class="img-responive center-block iphone-pic">
+                             class="img-responsive center-block iphone-pic">
                     </div>
-                    <div class="pic-facebook col-md-12">
+                    <div class="pic-facebook col-md-12 col-sm-12 col-xs-12">
                         <img src="/img/aussie-new/face.png" alt="facebook-pic"
-                             class="img-responive center-block facebook-pic">
+                             class="img-responsive center-block facebook-pic">
                     </div>
                 </div>
             </section>
@@ -332,8 +337,30 @@
 
             {{--LIVE THIRD PARTY  PART--}}
             <section id="live-third-party" class="container center-block">
+
                 <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12 align-center">
+
+                    <div class="col-md-12  col-sm-12  col-xs-12  align-center">
+
+                        <header class="col-md-12 col-sm-12 col-xs-12  text-center center-block"> Live Third Party
+                            Verified Results!
+                        </header>
+
+                        {{--headers--}}
+                        <ul class="col-md-12">
+                            <ul class="col-md-12">
+                                <li class="title-1 col-md-4">Aussie Method Member</li>
+                                <li class="title-2 col-md-2">Profit</li>
+                                <li class="title-3 col-md-3">Trade Time</li>
+                                <li class="title-3 col-md-3">Currency</li>
+                            </ul>
+
+                            <div id="trades"></div>
+                    </div>
+                </div>
+            </section>
+
+            {{--
                         <p style="font-family: 'Cabin', sans-serif; font-size:2.5em; color:#1e387b"><strong><a
                                         name="results"></a>Live Third Party Verified Results!</strong></p>
                         <table class="table table-striped table-bordered shadowed table-hover"
@@ -365,14 +392,8 @@
 
                             </tbody>
                         </table>
-                    </div>
-                </div>
-            </section>
-
-
-            <section>
-            </section>
-            <!--===========================PICS PART END===================================-->
+            --}}
+                    <!--===========================PICS PART END===================================-->
 
 
             <!--===============================FREQUENTLY-ASKED-QUESTIONS PART===============================================-->
