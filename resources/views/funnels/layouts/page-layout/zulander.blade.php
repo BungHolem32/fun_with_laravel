@@ -134,7 +134,7 @@
                 <img class="country-logo" src="/img/zulander/loader.gif" alt="" width="29"/>
             </div>
             <div class="foot">
-                1 Feb 2016 - 28 Feb 2016:<br/><span id="result"><img src="/img/zulander/loader.gif" alt="" /></span>
+                <div id="month-days"></div><br/><span id="result"><img src="/img/zulander/loader.gif" alt="" /></span>
             </div>
         </div>
         <div class="online text-center hidden-sm hidden-xs">
