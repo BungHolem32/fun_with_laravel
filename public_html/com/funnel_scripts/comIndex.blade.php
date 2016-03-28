@@ -40,7 +40,7 @@
         var exitsplashmessage = '***************************************\n\n{!! br2nl($tempMsg) !!}\n\n\n***************************************';
         var exitsplashpage = '{{$tempLink}}';
     </script>
-    <script language="javascript" src="/js/ExitSplashScript.js"></script>
+    <script language="javascript" src="/js/ExitSplashScriptJQuery.js"></script>
 @endif
 
 
