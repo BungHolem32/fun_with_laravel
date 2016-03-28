@@ -21,9 +21,9 @@ $.fn.myClock = function(setup){
   $(elem).html(timeMess);
 
   if($(this).attr("id")){
-  	var elemCookie = $(this).attr("id");
+    var elemCookie = $(this).attr("id");
   }else{
-  	var elemCookie = $(elem).children().parent().attr('class');
+    var elemCookie = $(elem).children().parent().attr('class');
   }
 
   if(settings.endDate != 0) startDate = new Date(settings.endDate);
@@ -44,26 +44,26 @@ $.fn.myClock = function(setup){
     stopClock[elemCookie] = '0';
   }
   var intervalID = setInterval(
-    function(){
-      endTime = new Date();
-      endTimeUTC = endTime.getTime();
-      ostTime = new Date(startTimeUTC-endTime+zoneTime);
-      d = Math.floor(ostTime.getDate()-1);
-      h = Math.floor(ostTime.getHours());
-      m = Math.floor(ostTime.getMinutes());
-      s = Math.floor(ostTime.getSeconds());
-      if(startTimeUTC <= endTimeUTC+1*1000){
-        s = m = h = d = '00';
-       	if(settings.circle == 1){
-       	  startTimeUTC = Math.floor(endTimeUTC+(settings.endTime*60*1000));
-       	}else{stopClock[elemCookie] = '1';clearInterval(intervalID);}
+      function(){
+        endTime = new Date();
+        endTimeUTC = endTime.getTime();
+        ostTime = new Date(startTimeUTC-endTime+zoneTime);
+        d = Math.floor(ostTime.getDate()-1);
+        h = Math.floor(ostTime.getHours());
+        m = Math.floor(ostTime.getMinutes());
+        s = Math.floor(ostTime.getSeconds());
+        if(startTimeUTC <= endTimeUTC+1*1000){
+          s = m = h = d = '00';
+          if(settings.circle == 1){
+            startTimeUTC = Math.floor(endTimeUTC+(settings.endTime*60*1000));
+          }else{stopClock[elemCookie] = '1';clearInterval(intervalID);}
+        }
+        if(settings.dateOff == 1) $(elem).children('.block-clock').children('.clock-date').html(addZero(d));
+        $(elem).children('.block-clock').children('.clock-hours').html(addZero(h));
+        $(elem).children('.block-clock').children('.clock-minutes').html(addZero(m));
+        $(elem).children('.block-clock').children('.clock-seconds').html(addZero(s));
       }
-      if(settings.dateOff == 1) $(elem).children('.block-clock').children('.clock-date').html(addZero(d));
-      $(elem).children('.block-clock').children('.clock-hours').html(addZero(h));
-      $(elem).children('.block-clock').children('.clock-minutes').html(addZero(m));
-      $(elem).children('.block-clock').children('.clock-seconds').html(addZero(s));
-    }
-  ,10);
+      ,10);
 
   function addZero(num){
     str = num+'';
@@ -82,7 +82,7 @@ $.fn.myClock = function(setup){
     }
 
     if (expires && expires.toUTCString) {
-  	  options.expires = expires.toUTCString();
+      options.expires = expires.toUTCString();
     }
 
     value = encodeURIComponent(value);
@@ -93,7 +93,7 @@ $.fn.myClock = function(setup){
       var propValue = options[propName];
       if (propValue !== true) {
         updatedCookie += "=" + propValue;
-       }
+      }
     }
 
     document.cookie = updatedCookie;
@@ -102,7 +102,7 @@ $.fn.myClock = function(setup){
 
   function getCookie(name) {
     var matches = document.cookie.match(new RegExp(
-      "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
     ));
     return matches ? decodeURIComponent(matches[1]) : undefined;
   }
