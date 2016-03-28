@@ -1,13 +1,8 @@
-<?php namespace App\Http\Controllers;
+<?php namespace App\Http\Controllers\Ajax;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
-//use Illuminate\Http\Request;
-use App\mongo;
-use Request;
-use Illuminate\Support\Facades\Auth;
 
-class ZulanderController extends Base\AbstractFunnelController {
+class ZulanderController extends \App\Http\Controllers\Base\AbstractFunnelController {
 
     public function getUserContent() {
         $locationContent    = null;

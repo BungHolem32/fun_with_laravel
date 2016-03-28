@@ -28,7 +28,7 @@ Route::post('ajaxLogin', ['uses' => 'OpenAccountController@ajaxLogin'] );
 Route::get('logout', ['uses' => 'OpenAccountController@logout'] );
 Route::post('ajaxLogout', ['uses' => 'OpenAccountController@ajaxLogout'] );
 Route::get('aussie/debug', ['uses' => 'PanelController@debug']);
-Route::get('ajax/zulanderContent', ['uses' => 'ZulanderController@getUserContent']);
+Route::get('ajax/zulanderContent', ['uses' => 'Ajax\ZulanderController@getUserContent']);
 
 
 Route::group(['middleware' => 'auth', 'prefix'=>'admin'], function(){
