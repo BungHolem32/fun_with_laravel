@@ -74,15 +74,23 @@ function getUserContent() {
 			$('.country-name').html(data.countryName);
 			$('#ticker').html(traders);
 			$('#stories').html(stories);
+			$('.date').html(moment().format("MMM Do YYYY"));
 
 			setInterval(updateLicensesCounter,locationContent.content.licenses.timer.interval);
 			updateLicensesCounter();
 			updateLiveResultCounter();
 			updateVideoViewers();
+			realTimeDisplay();
 			setInterval(tick, 2000);
+			setInterval(realTimeDisplay, 1000);
 		},
 		dataType: 'json'
 	})
+}
+
+function realTimeDisplay() {
+	var time = moment().format('MMMM Do YYYY, h:mm:ss a');
+	$('.current-time').html(time);
 }
 
 function updateLiveResultCounter() {
