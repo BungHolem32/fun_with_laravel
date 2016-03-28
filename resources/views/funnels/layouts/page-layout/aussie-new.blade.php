@@ -179,11 +179,11 @@
 
                 <!--COMPANY LOGO-->
                 <div id="company" class="pull-left col-md-2 col-sm-2 col-xs-2  ">
-                    <img src="/img/aussie-new/logo.png" alt="company logo">
+                    <img src="/img/aussie-new/aussieLogo.jpg" alt="company logo">
                 </div>
 
                 <!--MAN LOGO-->
-                <div class="man col-md-5 pull-right col-sm-4 col-xs-5 text-right">
+                <div class="man col-md-5 pull-right col-sm-4 col-xs-5 text-center">
                     <img src="/img/aussie-new/jake-petro.jpg" alt="man pic">
                 </div>
 
@@ -207,7 +207,7 @@
                     </div>
 
                     <!--Form Tag-->
-                    <div id="form_part" class='col-md-5 col-sm-12 form-first'>
+                    <div id="form_part" class='col-md-4  col-sm-12 form-first'>
                         {{--TEXT--}}
                         <p>START <strong>NOW</strong></p>
                         <p>Enter your email below to gain instant
@@ -222,7 +222,7 @@
                         <input type="submit" class="align-center col-md-12 col-sm-12 submit-aussie" value=""/>
                         {!! Form::close() !!}
                         <div class="col-md-12 col-sm-12">
-                            <img src="/img/aussie-new/trust.png" class="trust-pic" width="100%">
+                            <img src="/img/aussie-new/certs.png" class="trust-pic">
                         </div>
                     </div>
 
@@ -235,7 +235,7 @@
                     <ul class="row">
                         <li class="col-md-offset-1 col-md-2 col-sm-12 col-xs-12"><a href="#jake-pertu">Who am I?</a>
                         </li>
-                        <li class="col-md-3 col-sm-12 col-xs-12"><a href="#success-pic">Success Stories</a></li>
+                        <li class="col-md-2 col-sm-12 col-xs-12"><a href="#success-pic">Success Stories</a></li>
                         <li class="col-md-2 col-sm-12 col-xs-12"><a href="#video-how-method-works">How It Works</a></li>
                         <li class="col-md-2 col-sm-12 col-xs-12"><a href="#live-third-party">Live Results</a></li>
                         <li class="col-md-2 col-sm-12 col-xs-12"><a href="#frequently-asked-questions">FAQs</a></li>
@@ -251,7 +251,7 @@
                     <div class="col-md-12">
                         <a class="fancybox" rel="group" href="/img/aussie-new/guarantee.png">
                             <img src="/img/aussie-new/hey.png" alt="first_pic-jake-pertu pic"
-                                 class=" col-md-12 col-sm-12  col-xs-12 jake-pertu">
+                                 class="jake-pertu img-responsive center-block">
                         </a>
                     </div>
                 </div>
@@ -266,11 +266,11 @@
                     </header>
                     <div class="pic-iphone col-md-12">
                         <img src="/img/aussie-new/iphone.png" alt="iphone-massage-pic"
-                             class="col-md-12 col-sm-12  col-xs-12 iphone-pic">
+                             class="img-responive center-block iphone-pic">
                     </div>
                     <div class="pic-facebook col-md-12">
                         <img src="/img/aussie-new/face.png" alt="facebook-pic"
-                             class="col-md-12 col-sm-12  col-xs-12 facebook-pic">
+                             class="img-responive center-block facebook-pic">
                     </div>
                 </div>
             </section>
@@ -322,7 +322,7 @@
                     </header>
 
                     <div class="video-n-images col-md-12">
-                        <img src="/img/aussie-new/ipad.png" alt="ipad image" class="col-md-12 col-sm-12  col-xs-12">
+                        <img src="/img/aussie-new/ipad.png" alt="ipad image" class="img-responsive center-block">
                         <div class="video-tag">
                             @include('funnels.layouts._partials._video', ['video_url'=>'http://video.chaki.netdna-cdn.com/guide4f.mp4','w'=>'100%', 'h'=>'100%','autoplay'=>'false'])
                         </div>
@@ -331,7 +331,7 @@
             </section>
 
             {{--LIVE THIRD PARTY  PART--}}
-            <section id="live-third-party" class="container">
+            <section id="live-third-party" class="container center-block">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12 align-center">
                         <p style="font-family: 'Cabin', sans-serif; font-size:2.5em; color:#1e387b"><strong><a

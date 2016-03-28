@@ -228,7 +228,7 @@
                 if (width > 990) {
                     $('.iphone-pic').attr('src', desktop[0]);
                     $('.facebook-pic').attr('src', desktop[1]);
-                    $('.trust-pic').attr('src', mobile[2]);
+                    $('.trust-pic').attr('src', desktop[2]);
                     $('.mobile-steps').find('.mobile-steps').addClass('hidden');
                     $('#3-steps').find('.desktop-steps').removeClass('hidden');
                 }
