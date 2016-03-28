@@ -173,6 +173,7 @@ div#second .go3 { width:561px; height:89px; border:none; background:#f4f4f5 url(
     z-index: 1000;
 	width:230px;
 }
+.current-time { font-size:16px; color:#9d9d9d; margin:10px 0; }
 .live .title { background:#ff6600; color:#fff; font-size:26px;}
 .live .desc .date { font-size:16px; color:#9d9d9d; margin:10px 0;}
 .live .desc .intro { font-size:19px; color:#585858; margin:0 0 10px 0;}
@@ -230,15 +231,8 @@ div#second .go3 { width:561px; height:89px; border:none; background:#f4f4f5 url(
 #timer2 .title { font-size:26px; text-transform:uppercase; margin:5px 0 0 0;}
 #timer2 .title span { font-size:26px; text-transform:uppercase; color:#00ccff; font-family: RobotoCondensed-Bold;}
 
-/**/
-#clock1 { margin:20px 0; font-family:Impact;}
-#clock2 { margin:20px 0; font-family:Impact;}
-.clock-hours {  display:inline-block; width:108px; height:125px; background:url(/img/zulander/h.png) no-repeat center center; text-align:center; color:#e7e8ea; font-size:78px; padding:15px 0; overflow:hidden;}
-.clock-minutes {  display:inline-block; width:108px; height:125px; background:url(/img/zulander/m.png) no-repeat center center; text-align:center; color:#e7e8ea; font-size:78px; padding:15px 0; overflow:hidden;}
-.clock-seconds {  display:inline-block; width:108px; height:125px; background:url(/img/zulander/s.png) no-repeat center center; text-align:center; color:#e7e8ea; font-size:78px; padding:15px 0; overflow:hidden;}
-.clock-1 {  display:inline-block; width:240px; height:125px; background:#37b246; color:#fff; padding:5px; overflow:hidden; font-size:16px; font-family: RobotoCondensed-Regular; text-align:left; margin:0 0 0 50px; display:none;}
+.clock { margin: 20px auto; font-family: Impact; max-width: 300px !important; width: auto !important; text-align: center; }
 
-/**/
 .anime ul { margin:0 0 5px 0; padding:0;}
 .chart{
   display: inline-block;
@@ -457,14 +451,19 @@ div#second .go3 { width:561px; height:89px; border:none; background:#f4f4f5 url(
 .carousel-control { color:#333; text-shadow:none;}
 .glyphicon-chevron-left:before { color:#333;}
 .glyphicon-chevron-right:before { color:#333;}
-.glyphicon-chevron-left { background:#c0c0c0; border-radius:50%; padding:7px;}
-.glyphicon-chevron-right { background:#c0c0c0; border-radius:50%; padding:7px;}
+.glyphicon-chevron-left { background:#c0c0c0; border-radius:50%; padding: 7px;}
+.glyphicon-chevron-right { background:#c0c0c0; border-radius:50%; padding: 7px;}
 
 .articlePage.wrapper{
     padding: 1em;
     width: 100%;
 }
+
+#submit { box-shadow: none !important; border: none !important; -webkit-box-shadow: none !important; }
+
 .container .logo { text-align: center; }
 .articlePage .marketing { color: #d2d1d1; width: 100%; }
 .navbar-wrapper, .underBodyLinks, .payments, footer { display: none; }
+
+.story { height: 360px !important; }
 

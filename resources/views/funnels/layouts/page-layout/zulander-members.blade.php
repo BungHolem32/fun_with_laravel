@@ -20,19 +20,25 @@ foreach($content as $country => $data) {
         break;
     }
 }
-?>
 
+if(!$locationContent) {
+    $locationContent = $content['be_cz_fr_de_it_nl_no_pl_es_sz'];
+}
+
+?>
 
 @section('head')
     {!! $page->appendAsset(url('/css/zulander/bootstrap.min.css')) !!}
+    {!! $page->appendAsset(url('/css/zulander/flipclock.css')) !!}
     {!! $page->appendAsset(url('/css/zulander/style.css')) !!}
     {!! $page->appendAsset(url('/css/zulander/resp.css')) !!}
 @append
 
 @section('bottom-scripts')
     @com('funnel_scripts')
+    {!! $page->appendAsset(url('/js/zulander/moment.min.js')) !!}
     {!! $page->appendAsset(url('/js/zulander/bootstrap.min.js')) !!}
-    {!! $page->appendAsset(url('/js/zulander/myClock.js')) !!}
+    {!! $page->appendAsset(url('/js/zulander/flipclock.min.js')) !!}
     {!! $page->appendAsset(url('/js/zulander/jquery.knob.js')) !!}
     <script type="text/javascript">
         var locationContent = <?php echo json_encode($locationContent) ?>;
@@ -44,7 +50,7 @@ foreach($content as $country => $data) {
     <body id="second">
     <div class="wrapper">
         <div class="logo text-center">
-            <a href="/"><img src={{ url("/img/zulander/logo.png") }} alt=""/></a>
+            <a href="/"><img src="/img/zulander/logo.png" alt=""/></a>
         </div>
         <div class="content">
             <div class="lenta">
@@ -60,12 +66,12 @@ foreach($content as $country => $data) {
                     @include('funnels.layouts._partials._video',  ['w'=>'100%', 'hd'=>360])
                     <div class="video-progress">
                         <div class="video-progress-viewers">
-                            <img src={{ url("/img/zulander/eye.png") }}>
+                            <img src="/img/zulander/eye.png">
                             <span class="video-progress-viewers-count"></span> VIEWERS
                         </div>
-                        <div class="video-progress-stream"><img src={{ url("/img/zulander/streaming.gif") }}></div>
+                        <div class="video-progress-stream"><img src="/img/zulander/streaming.gif"></div>
                         <div class="video-progress-buttons">
-                            <img src={{ url("/img/zulander/presetintegrate.png") }}>
+                            <img src="/img/zulander/presetintegrate.png">
                         </div>
                     </div>
                 </div>
@@ -74,7 +80,7 @@ foreach($content as $country => $data) {
                 <div class="title">
                     You Only Have <span>7 MINUTES</span> To Open A Trading Account & Start Making Up To <span>$1,008 EVERY 5 MINUTES!</span>
                 </div>
-                <div><div id="clock1"></div></div>
+                <div><div id="clock1" class="clock"></div></div>
                 <div class="foot"><strong>You Must Enter Your Details In The Form</strong> Before The Clock Hits Zero. There Are Currently 1591 People In {{$countryName}} Waiting To Take Your FREE License.</div>
             </div>
             <div class="simletext  hidden-sm hidden-xs">
@@ -95,10 +101,9 @@ foreach($content as $country => $data) {
                 <div class="green text-center">
                     <div class="title"><strong>Read This Carefully To Complete Step Two</strong><br/><br/></div>
                     <div class="stepdesc">To complete Step Two, and get your free copy of Zulander Hack...<br/>...you must FILL IN THE FORM below...</div>
-                    <img src={{ url("img/zulander/RBOPTION.jpg") }} alt="" />
+                    <img src="/img/zulander/RBOPTION.jpg" alt="" />
                     <div id="second">
                         @include('funnels.layouts._partials._form-mobile', ['funnelId' => $page->getParent()->id]);
-                        <input id="submit" name="submit" type="submit" value="YES! TAKE ME TO THE FINAL STEP" class="go2 active-submit" data-cip-id="submit"/>
                         <div class="yes">I understand that if I leave this page I will never see it again. I want to be financially free and never have to worry about money again. I realize that Zulander Hack can help me achieve this and TODAY <strong>only <strike>3</strike> 2 FREE licenses</strong> are being given away.</div>
                         <div class=" hidden-sm hidden-xs">
                             <input type="submit" value="NO, LET SOMEONE ELSE HAVE MY LICENSE" class="go3"/>
@@ -124,9 +129,7 @@ foreach($content as $country => $data) {
                     You Only Have <span>7 MINUTES</span> To Open A Trading Account & Start Making Up To <span>$1,008 EVERY 5 MINUTES!</span>
                 </div>
                 <div>
-                    <div id="clock2">
-
-                    </div>
+                    <div id="clock2" class="clock"></div>
                 </div>
                 <div class="foot"><strong>You Must Enter Your Details In The Form</strong> Before The Clock Hits Zero. There Are Currently 1591 People In {{ $countryName }} Waiting To Take Your FREE License.</div>
             </div>
@@ -137,7 +140,7 @@ foreach($content as $country => $data) {
                 <p><strong>IMPORTANT:<br/>THE MORE YOU DEPOSIT, THE MORE YOU CAN TRADE, AND THE MORE YOU CAN PROFIT...</strong><br/>The sooner you make the deposit...<br/>...the quicker you will activate your account and secure your FREE license to use Zulander Hack<br/><strong><span>(to be sold globally at $100,000 - yes, $100,000 - on Monday 6th June)...</span></strong></p>
             </div>
             <div class="btn5 visible-sm visible-xs text-center">
-                <a href=""><img src={{ url("/img/zulander/btn5.png") }} class="img-responsive" alt=""/></a>
+                <a href=""><img src="/img/zulander/btn5.png" class="img-responsive" alt=""/></a>
             </div>
             <div class="sert text-center">
                 <div class="title">FINAL STEP: <span>LOG IN AND<br/>ACCESS YOUR SOFTWARE</span></div>
@@ -145,7 +148,7 @@ foreach($content as $country => $data) {
                 <div class="status">Status: <span>Unconfirmed</span></div>
             </div>
             <div class="box text-center">
-                <img src={{ url("/img/zulander/box.png") }} alt="" />
+                <img src="/img/zulander/box.png" alt="" />
             </div>
             <div class="faq">
                 <div class="simletext">
@@ -173,11 +176,11 @@ foreach($content as $country => $data) {
                 <p>If you have followed all of the steps above you are now fully set and well on your way to making money TODAY!</p>
                 <p>If you experience any issues, or have any questions, just contact us on the email below so that your dedicated success coach can help you: <a href="">email@email.com</a></p>
                 <p>I hope you make it and can't wait to get started with you!</p>
-                <img src={{ url("/img/zulander/signature.jpg") }} class="signature" alt="" />
+                <img src="/img/zulander/signature.jpg" class="signature" alt="" />
                 <p><strong>Mike Wright and the Zulander Hack Support Team</strong></p>
             </div>
             <div class="lasBtn text-center">
-                <a href="#"><img src={{ url("/img/zulander/btn2.png") }} alt=""/></a>
+                <a href="#"><img src="/img/zulander/btn2.png" alt=""/></a>
             </div>
         </div>
         <div class="footer text-center">
@@ -198,11 +201,11 @@ foreach($content as $country => $data) {
         <div class="title"><span><strong class="count"></strong> FREE LICENSES</span> LEFT</div>
         <div class="anime text-center">
             <div class="progress-radial progress-100">
-                <div class="overlay"><strong><img src={{ url("/img/zulander/loader.gif") }} alt="" /></strong><br><span>LEFT</span></div>
+                <div class="overlay"><strong><img src="/img/zulander/loader.gif" alt="" /></strong><br><span>LEFT</span></div>
             </div>
         </div>
         <div class="minigo">
-            <a href="#"><img src={{ url("/img/zulander/btn1.png") }} alt="" width="230"/></a>
+            <a href="#"><img src="/img/zulander/btn1.png" alt="" width="230"/></a>
         </div>
     </div>
 
