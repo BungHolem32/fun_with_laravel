@@ -47,17 +47,33 @@
             var dc = rand_num(0, data.length);
             var oldtime = new Date();
             var old_time = oldtime.getSeconds();
-            var feed_name1 = $('.feed_name1');
+            var feed_name1 = $('.facebook-massages');
 
-            document.getElementById("facebook-tab").innerHTML = "<div style=\'clear:both;\'>\n</div><div class=\'feed_name1\'><img src=\'/img/aussie-new/fw/" + images[counter] + "\' height=\'40\' /><b><a class=\'fbname social-name\' href=\'#\'>" + nm[counter] + "</a></b><br/><span id=\'curr_time_" + cnt + "\' class=\'ctime1\' sec=\'60\'>1 minute</span><div style=\'clear:both;\'></div><div id=\'data1\' class=\'fb-data\'> <span> " + data[dc] + "</span></div><div class=\'facebook-tab\'>Like <span class=\'dash\'>-</span> Comment <span class=\'dash\'>-</span> Share </div></div> " + document.getElementById("facebook-tab").innerHTML;
+//            document.getElementById("facebook-tab").innerHTML = "<div style=\'clear:both;\'></div>\n<div class=\'feed_name1\'>\n    <img src=\'/img/aussie-new/fw/" + images[counter] + "\' height=\'40\'/>\n    <b><a class=\'fbname social-name\' href=\'#\'>" + nm[counter] + "</a></b>\n    <br/>\n    <span id=\'curr_time_" + cnt + "\' class=\'ctime1\' sec=\'60\'>1 minute</span>\n    <div style=\'clear:both;\'></div>\n    <div id=\'data1\' class=\'fb-data\'>\n        <span> " + data[dc] + "</span>\n    </div>\n    <div class=\'facebook-tab\'>Like <span class=\'dash\'>-</span> Comment <span class=\'dash\'>-</span> Share</div>\n</div> " + document.getElementById("facebook-tab").innerHTML;
+            document.getElementById("facebook-tab").innerHTML = "<div class=\'facebook-massages\'>\n    <div " +
+                    "class=\"fb-img-name-time head\">\n    " +
+                    "<div class=\'fb-img col-md-3 col-sm-3 col-xs-3 pull-left\'>\n        " +
+                    "<img class=\'fb-human-image img-responsive\' src=\"/img/aussie-new/fw/" + images[counter] + "\" alt=\"\">\n    " +
+                    "</div>\n        <div class=\'fb-name-n-time col-md-3 text-left pull-left\'>\n        " +
+                    "<h4 class=\'fb-name bold\'>" + nm[counter] + "</h4>\n        " +
+                    "<h5 id=\'curr_time_"+ cnt + " \' class=\'ctime1 fb-time\' data-sec=\'60\' class=\'fb-time\'>1 minute</h5>\n    " +
+                    "</div>\n\n    </div>\n" +
+                    "<div class=\"bottom\">\n    " +
+                    "<p class=\"content text-left col-md-12 col-sm-12 col-xs-12\"> " + data[dc] + "<span" +
+                    "class=\"bold\"></span>\n        </p>\n    " +
+                    "<div class=\'fb-tab col-md-12 col-sm-12 col-xs-12 pull-left text-left\'>Like <span class=\'dash\'>-</span> Comment\n            <span class=\'dash\'>-</span> Share" +
+                    "</div>\n    </div>\n</div>"+document.getElementById("facebook-tab").innerHTML;
             if (feed_name1.length > 4) {
-                $('.feed_name1').last().remove();
+                console.log(feed_name1.length);
+                $('.facebook-massages').last().remove();
             }
+
             cnt++;
 
             for (i = 1; i < cnt; i++) {
                 var day = hour = minute = 0;
-                sec1 = $("#curr_time_" + i).attr('sec');
+                sec1 = $("#curr_time_" + i).data('sec')
+                console.log(sec1);
                 sec1 = parseInt(sec1) + 60;//rand_num(60,360);
                 $("#curr_time_" + i).attr('sec', sec1)
                 minute = sec1 / 60;
@@ -113,27 +129,36 @@
         var cnt = 1;
         var num = null;
         function autoRefresh() {
-            num = $('.feed_name2').length;
+            num = $('.twt-message').length;
             var counter = rand_num(0, images.length);
             var dc = rand_num(0, data.length);
             var oldtime = new Date();
             var old_time = oldtime.getSeconds();
-            document.getElementById("tweets-tab").innerHTML = "<div style='clear:both;'></div>" +
-                    "<div class='feed_name2'><img class='twt-image' src='/img/aussie-new/tw/" + images[counter] + "' height='50' />" +
-                    "<div id='data2' class='twt-data' style='display:inline-block'>" +
-                    "<b>" +
-                    "<a class='twtname social-name' href='#'>" + nm[counter] + "</a></b>" +
-                    "<span id='curr_time_" + cnt + "' class='ctime2' sec='60'>1 minute ago</span>" +
-                    "<p> " + data[dc] + "</p></div>" +
-                    "</div>" + document.getElementById("tweets-tab").innerHTML;
+///*            document.getElementById("twt-message").innerHTML = "<div style='clear:both;'></div>" +
+//                    "<div class='feed_name2'><img class='twt-image' src='/img/aussie-new/tw/" + images[counter] + "' height='50' />" +
+//                    "<div id='data2' class='twt-data' style='display:inline-block'>" +
+//                    "<b>" +
+//                    "<a class='twtname social-name' href='#'>" + nm[counter] + "</a></b>" +
+//                    "<span id='curr_time_" + cnt + "' class='ctime2' sec='60'>1 minute ago</span>" +
+//                    "<p> " + data[dc] + "</p></div>" +
+//      */              "</div>" + document.getElementById("tweets-tab").innerHTML;
+
+            document.getElementById("tweets-tab").innerHTML =  " <div class=\"twt-message\">\n    <div " +
+                    "class=\"twt-img-name-time head\">\n    " +
+                    "<div class=\'twt-img col-md-3 col-sm-3 col-xs-3 pull-left\'>\n        " +
+                    "<img class=\'twt-human-image img-responsive\' src=\"/img/aussie-new/fw/" + images[counter] + "\" alt=\"\">\n    " +
+                    "</div>\n    <div class=\'twt-name-n-time col-md-3 col-sm-3 col-xs-3 text-left pull-left\'>\n        " +
+                    "<h4 class=\'twt-name bold\'>" + nm[counter] + "</h4>\n        " +
+                    "<h5 id=\'curr_time_"+ cnt+ " \' class=\'ctime1 twt-time\' sec=\'60\' class=\'twt-time\'>1 minute</h5>\n    " +
+                    "</div>\n\n</div>\n" +
+                    "<div class=\"bottom\">\n    " +
+                    "<p class=\"content text-left col-md-12 col-sm-12 col-xs-12\"> " + data[dc] + "        <span" +
+                    " class=\"bold\"></span>\n    </p>\n    " + "\n    </div>\n</div>"+ document.getElementById("tweets-tab").innerHTML;
             if (num > 4) {
-                $('.feed_name2').last().remove();
+                $('.twt-message').last().remove();
             }
             cnt++;
 
-/*
-            x = '<div>\n    <div class="facebook-comment col-md-6 col-sm-12 col-xs-12">\n        <div class="row">\n            <header>\n                <h2 class="capitlize col-md-6 col-sm-12 col-xs-12"> Comments </h2>\n            </header>\n\n            <div class="top content">\n                <div class="facebook-human col-1">\n                    <img src="/img/aussie-new""+ images[counter] + " alt="">\n                </div>\n                <div class="facebook-name col-1">"+ nm[counter]+" </div>\n                <div class="facebook-time col-1">"+cnt+" </div>\n            </div>\n            <div class="bottom-content">\n                <div class="facbook-msg">\n                    <p><span> </span>  </p>    \n                </div>\n                <div class="facebook-like">\n                    \n                </div>\n            </div>\n        </div>\n    </div>\n</div>'
-*/
 
             for (i = 1; i < cnt; i++) {
                 var day = hour = minute = 0;
@@ -314,8 +339,12 @@
                         <div id="content-social " class="col-md-12">
                             <div id="facebook-tab" class="col-md-6">
                                 <div class="logotag tweet-2 col-md-6 col-sm-12  col-xm-6">
-                                    <img src="/img/aussie-new/twt.png" alt="facebook logo"
-                                    >
+                                    <img src="/img/aussie-new/twt.png" alt="facebook logo">
+                                    <!-- header FACEBOOK -->
+                                    <header class='col-lg-6 col-md-6 col-sm-12-col-xs-12'>
+                                        <h4 class="fb-title capitalize">comments</h4>
+                                    </header>
+
                                 </div>
                             </div>
                             <div id="tweets-tab" class="col-md-6 ">

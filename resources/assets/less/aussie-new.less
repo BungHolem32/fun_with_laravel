@@ -434,40 +434,44 @@ body {
 
                 /*FACEBOOK TAB CONTENT*/
                 #facebook-tab {
+                  background: white;
+                  border: 1px solid lightgray;
+                  padding: 0;
+                  min-height: 15em;
 
-                  /*DIV OF THE FACEBOOK MESSAGE*/
-                  .feed_name1 {
-                    //min-height: 14.3em;
+                  /*FACEBOOK IMAGE NAME AND TIME*/
+                  .fb-img-name-time {
+                    .fb-img {
+                      padding: 0.5em;
 
-                    .social-name.fbname {
-                      color: #1F3A79;
-                    }
-
-                    .ctime1 {
-                      position: relative;
-                      left: 2.4em;
-                      bottom: 1em;
-                      float: left;
-
-                      @media (max-width: 1200px) {
-                        left: 44px;
+                      /*IMAGE TIME*/
+                      .fb-human-image {
+                        border-radius: 11px;
                       }
-                      @media (max-width: 1200px) and (min-width: 992px) {
-                        left: 42px !important;
+                    }
+
+                    /*NAME AND TIME IN FACEBOOK*/
+                    .fb-name-n-time {
+                      color: #3B5997;
+                      font-size: 1.4em;
+                      /*TIME*/
+                      .ctime {
+                        color: #8B9396;
                       }
-
+                      /*NAME*/
+                      .fb-name{
+                        color: inherit;
+                      }
                     }
 
-                    /*FACEBOOK DATA*/
-                    .fb-data {
-                      margin-top: -0.6em;
-
-                    }
-                    /*FACEBOOK LIKE*/
-                    .facebook-tab {
-                      color: gray;
+                    /*BOTTOM CONTENT (MESSAGE)*/
+                    .bottom {
+                      .fb-tab {
+                        color: #3B5997;
+                      }
                     }
                   }
+                  /*PLACE FOR CHAT (COMMENT IN THE BOTTOM*/
                 }
 
                 /*TWEETS TAB CONTENT*/
@@ -763,7 +767,10 @@ body {
                   }
                 }
 
+                /*TRADES WRAPPER */
                 #trades {
+
+                  /*TRADE GENERAL*/
                   .line-trades {
                     background: white;
                     padding-left: 0;
@@ -775,10 +782,13 @@ body {
                       }
                     }
 
+                    /*ALL THE PART OF THE TRADE*/
                     .trades {
+                      /*PROFIT PART*/
                       &.trade-profit {
                         font-weight: 600;
                       }
+                      /*FIRST WORD PART*/
                       .first-word {
                         font-weight: bold;
                       }
@@ -800,6 +810,7 @@ body {
                 width: 85.8%;
               }
 
+              /*SOCIAL WRAPPER*/
               .social {
                 box-shadow: -1px 3px 25px 8px #D3D3D1;
                 background: #F0F0F0;
@@ -816,6 +827,7 @@ body {
                   max-width: 86%;
                 }
 
+                /*WRAPPER INNER FOR CONTENT*/
                 #content-social {
 
                   /*FACEBOOK TAB CONTENT*/
@@ -825,6 +837,7 @@ body {
                     .feed_name1 {
                       //min-height: 14.3em;
 
+                      /**/
                       .social-name.fbname {
                         color: #1F3A79;
                       }
@@ -974,7 +987,6 @@ section div img.col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2.col-xs-10.col-
   left: 6% !important;
 }
 
-
 ///*BG-COLOR OF THE ODD TR*/
 //.table-striped > tbody > tr:nth-child(odd) {
 //  background-color: lightgray;
@@ -992,6 +1004,43 @@ section div img.col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2.col-xs-10.col-
 
 
 
-
+///*DIV OF THE FACEBOOK MESSAGE*/
+//.feed_name1 {
+//  //min-height: 14.3em;
+//
+//  .social-name.fbname {
+//    color: #1F3A79;
+//  }
+//
+//  .ctime1 {
+//    position: relative;
+//    left: 2.4em;
+//    bottom: 1em;
+//    float: left;
+//
+//    @media (max-width: 1200px) {
+//      left: 44px;
+//    }
+//    @media (max-width: 1200px) and (min-width: 992px) {
+//      left: 42px !important;
+//    }
+//
+//  }
+//
+//  /*FACEBOOK DATA*/
+//  .fb-data {
+//    margin-top: -0.6em;
+//
+//  }
+//  /*FACEBOOK LIKE*/
+//  .facebook-tab {
+//    color: gray;
+//  }
+//
+//  /* NEW FACE BOOK LIKE COMMENT SHARE*/
+//  .fb-tab {
+//    color: #39588F;
+//  }
+//}
 
 
