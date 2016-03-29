@@ -62,26 +62,28 @@ function getUserContent() {
 			var stories		= '';
 			var traders		= '';
 
-			for(var i=0; i<data.content.stories.length; i++) {
+			for(var i=0; i<data.content.avatars.length; i++) {
 				var avatar	= {};
-				avatar.pic			= data.content.stories[i].avatar;
-				avatar.name			= data.content.stories[i].avatar.split('-')[0].replace('+',' ');
-				avatar.address		= data.content.stories[i].avatar.split('-')[1].replace('+',' ').replace('.jpg',' ');
-				avatar.flag			= data.content.stories[i].flag;
-				avatar.startDate	= data.content.stories[i].startDate;
-				avatar.balance		= data.content.stories[i].balance;
+
+				avatar.pic			= data.content.avatars[i].pic + ".jpg";
+				avatar.name			= data.content.avatars[i].pic.split('-')[0].split('+').join(' ');
+				avatar.address		= data.content.avatars[i].pic.split('-')[1].split('+').join(' ');
+				avatar.flag			= 'small-' + data.content.avatars[i].flag + '.png';
+				avatar.startDate	= data.avatarsText[i].startDate;
+				avatar.balance		= data.avatarsText[i].balance;
+				avatar.earned		= data.avatarsText[i].earned;
 
 				stories += '<div class="col-md-4 col-sm-4 active"><div class="block"> <div class="row"> <div class="col-md-5 col-sm-5 col-xs-5 photo"> <img src="/img/zulander/content/peoples/'+avatar.pic+'" width="100" alt="" class="/img-circle"> <div class="flag"><img src="/img/zulander/content/flags/' + avatar.flag + '" alt=""/></div> </div> <div class="col-md-7 col-sm-7 col-xs-7 name"><strong>'+avatar.name+'</strong><br/>'+avatar.address+'</div><div class="clear clearfix"></div> <div class="col-md-12 col-sm-12 col-xs-12"> <div class="text story">';
 
-				for(var x=0; x<data.avatarsText[i].length; x++) {
-					stories += data.avatarsText[i][x];
+				for(var x=0; x<data.avatarsText[i].story.length; x++) {
+					stories += data.avatarsText[i].story[x];
 				}
 
-				stories += '<p>Started Using Software: <strong>'+avatar.startDate+'</strong></p> <p>Starting Balance: <strong>$'+avatar.balance+'</strong></p> </div> <div class="total text-center">Total earned: <span>$121,589</span> <strong>(withdrawn)</strong></div> <div class="rate"> <div class="star text-center"><img src="/img/zulander/star.png" alt="" /></div> <div class="trade text-center"><img src="/img/zulander/trader.png" alt="" /></div> <div class="verified text-right"><img src="/img/zulander/verified.png" alt="" /></div></div></div></div></div></div>';
+				stories += '<p>Started Using Software: <strong>'+avatar.startDate+'</strong></p> <p>Starting Balance: <strong>$'+avatar.balance+'</strong></p> </div> <div class="total text-center">Total earned: <span>$'+avatar.earned+'</span> <strong>(withdrawn)</strong></div> <div class="rate"> <div class="star text-center"><img src="/img/zulander/star.png" alt="" /></div> <div class="trade text-center"><img src="/img/zulander/trader.png" alt="" /></div> <div class="verified text-right"><img src="/img/zulander/verified.png" alt="" /></div></div></div></div></div></div>';
 			}
 
-			for(i=0; i<data.content.traders.length; i++) {
-				traders += '<li>'+data.content.traders[i]+'</li>';
+			for(i=0; i<data.traders.length; i++) {
+				traders += '<li>'+data.traders[i]+'</li>';
 			}
 
 			$('.country-logo').attr('src',"/img/zulander/content/flags/small-"+data.countryCode+".png");

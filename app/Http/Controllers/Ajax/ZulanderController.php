@@ -12,26 +12,27 @@ class ZulanderController extends \App\Http\Controllers\Base\AbstractFunnelContro
         $loc                        = \App\Services\Location::getByUserIp();
         $response['countryCode']    = strtolower($loc['iso']);
         $response['countryName']    = strtolower($loc['countryName']);
-        $response['avatarsText']    = $content['global'];
+        $response['avatarsText']    = $content['global']['stories'];
 
-        if(!$response['countryCode']) {
-            $response['countryCode'] = 'uk';
+        if(!$response['countryCode'] ||  $response['countryCode'] == '-') {
+            $response['countryCode'] = 'gb';
             $response['countryName'] = 'united kingdom';
         }
 
-        foreach($content as $country => $data) {
+        foreach($content['traders'] as $country => $data) {
             $codes = explode('_',$country);
             if(in_array($response['countryCode'],$codes)) {
-                $response['content'] = $content[$country];
+                $response['traders'] = $content['traders'][$country];
                 break;
             }
         }
 
-        if(!isset($response['content'])) {
-            $response['content'] = $content['be_cz_fr_de_it_nl_no_pl_es_sz'];
+        if(array_key_exists($response['countryCode'],$content)) {
+            $response['content'] = $content[$response['countryCode']];
         }
-
+        else {
+            $response['content'] = $content['gb'];
+        }
         return response()->json($response);
     }
-
 }
