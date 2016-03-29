@@ -3,6 +3,18 @@ ul {
     padding: 0;
 }
 
+.capitalize{
+    text-transform: capitalize !important;
+}
+
+.uppercase{
+    text-transform: uppercase !important;
+}
+
+.lowercase{
+    text-transform: lowercase !important;
+}
+
 /*LI TAG*/
 .side-menu li {
     display: inline-block;

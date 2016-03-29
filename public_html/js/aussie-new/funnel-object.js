@@ -210,16 +210,20 @@
 
                     $('.iphone-pic').attr('src', mobile[0]);
                     $('.facebook-pic').attr('src', mobile[1]);
-                    $('.trust-pic').attr('src', mobile[2]);
                     $('.mobile-steps').find('.hidden').removeClass('hidden');
                     $('#3-steps').find('.desktop-steps').addClass('hidden');
                 }
                 if (width > 990) {
                     $('.iphone-pic').attr('src', desktop[0]);
                     $('.facebook-pic').attr('src', desktop[1]);
-                    $('.trust-pic').attr('src', desktop[2]);
                     $('.mobile-steps').find('.mobile-steps').addClass('hidden');
                     $('#3-steps').find('.desktop-steps').removeClass('hidden');
+                }
+                if(width<1200){
+                    $('img.trust-pic').attr('src',mobile[2]);
+                }
+                if(width>1200){
+                    $('img.trust-pic').attr('src',desktop[2]);
                 }
             }
             ,
@@ -329,7 +333,7 @@
     /*==================================================LAUNCH ALL FUNCTIONS========================================= */
 
     /*MOBILE AND DESKTOP PICS*/
-    var desktop = ['/img/aussie-new/iphone.png', '/img/aussie-new/face.png', '/img/aussie-new/trust.png', 'url("/img/aussie-new/buttonfree.png") no-repeat center'],
+    var desktop = ['/img/aussie-new/iphone.png', '/img/aussie-new/face.png', '/img/aussie-new/certs.png', 'url("/img/aussie-new/buttonfree.png") no-repeat center'],
         mobile = ['/img/aussie-new/iphone-mobile.png', '/img/aussie-new/face-mobile.png', '/img/aussie-new/trust-mobile.png', 'url("/img/aussie-new/buttonfree_mobile.png") no-repeat center'];
 
     /*1-CHANGE PIC ON RESIZE*/

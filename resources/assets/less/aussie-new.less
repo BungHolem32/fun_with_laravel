@@ -44,6 +44,7 @@ body {
   #wrapper {
     //min-width: 400px;
     background: url('/img/aussie-new/mainbg.jpg') repeat-y top center;
+    min-width: 480px;
 
     /*H2 HEADER*/
     h2 {
@@ -389,7 +390,7 @@ span.ctime1 {
   position: relative;
   left: 2.4em;
   bottom: 1em;
-  @media (max-width:1200px){
+  @media (max-width: 1200px) {
     left: 44px !important;
   }
 }
@@ -463,18 +464,25 @@ ul {
 }
 
 section#live-third-party {
-  max-width: 42.4%;
+  max-width: 46.4%;
   @media (max-width: 1200px) {
     max-width: 77.4%;
   }
 }
 
-.left-button img.pull-left {
-  margin-top: 0em;
-  width: 2.2%;
-  @media (max-width: 1200px) {
-    margin-top: 0;
-    width: 2.7%;
+.question_n_answer {
+
+  max-width: 76%;
+  margin: 0 auto;
+  left: 11.3%;
+  .left-button img.pull-left {
+    margin-top: 0em;
+    width: 3%;
+
+    @media (max-width: 1200px) {
+      margin-top: 0;
+      width: 2.7%;
+    }
   }
 }
 
