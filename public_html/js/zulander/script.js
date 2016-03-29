@@ -87,7 +87,7 @@ function getUserContent() {
 			}
 
 			$('.country-logo').attr('src',"/img/zulander/content/flags/small-"+data.countryCode+".png");
-			$('.country-name').html(data.countryName);
+			$('.country-name').html(data.countryName.capitalizeFirstLetter());
 			$('#ticker').html(traders);
 			$('#stories').html(stories);
 			$('.date').html(moment().format("D MMMM YYYY"));
@@ -108,6 +108,10 @@ function getUserContent() {
 function realTimeDisplay() {
 	var time = moment().format('D MMMM YYYY, h:mm:ss a');
 	$('.current-time').html(time);
+}
+
+String.prototype.capitalizeFirstLetter = function() {
+	return this.charAt(0).toUpperCase() + this.slice(1);
 }
 
 function updateLiveResultCounter() {
