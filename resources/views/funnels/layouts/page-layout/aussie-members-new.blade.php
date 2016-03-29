@@ -163,40 +163,40 @@
 
     </script>
     {{--<script>--}}
-        {{--// need to put in js file all of this--}}
-        {{--$("a.fancybox").fancybox();--}}
+    {{--// need to put in js file all of this--}}
+    {{--$("a.fancybox").fancybox();--}}
 
 
-        {{--$(document).on('click', '.fancybox_iframe', function (e) {--}}
-            {{--e.preventDefault();--}}
-            {{--$.fancybox({--}}
-                {{--href: $(this).attr('href'),--}}
-                {{--type: 'iframe'--}}
-            {{--});--}}
-        {{--});--}}
+    {{--$(document).on('click', '.fancybox_iframe', function (e) {--}}
+    {{--e.preventDefault();--}}
+    {{--$.fancybox({--}}
+    {{--href: $(this).attr('href'),--}}
+    {{--type: 'iframe'--}}
+    {{--});--}}
+    {{--});--}}
 
 
-        {{--if ($('#back-to-top').length) {--}}
-            {{--var scrollTrigger = 100, // px--}}
-                    {{--backToTop = function () {--}}
-                        {{--var scrollTop = $(window).scrollTop();--}}
-                        {{--if (scrollTop > scrollTrigger) {--}}
-                            {{--$('#back-to-top').addClass('show');--}}
-                        {{--} else {--}}
-                            {{--$('#back-to-top').removeClass('show');--}}
-                        {{--}--}}
-                    {{--};--}}
-            {{--backToTop();--}}
-            {{--$(window).on('scroll', function () {--}}
-                {{--backToTop();--}}
-            {{--});--}}
-            {{--$('#back-to-top').on('click', function (e) {--}}
-                {{--e.preventDefault();--}}
-                {{--$('html,body').animate({--}}
-                    {{--scrollTop: 0--}}
-                {{--}, 700);--}}
-            {{--});--}}
-        {{--}--}}
+    {{--if ($('#back-to-top').length) {--}}
+    {{--var scrollTrigger = 100, // px--}}
+    {{--backToTop = function () {--}}
+    {{--var scrollTop = $(window).scrollTop();--}}
+    {{--if (scrollTop > scrollTrigger) {--}}
+    {{--$('#back-to-top').addClass('show');--}}
+    {{--} else {--}}
+    {{--$('#back-to-top').removeClass('show');--}}
+    {{--}--}}
+    {{--};--}}
+    {{--backToTop();--}}
+    {{--$(window).on('scroll', function () {--}}
+    {{--backToTop();--}}
+    {{--});--}}
+    {{--$('#back-to-top').on('click', function (e) {--}}
+    {{--e.preventDefault();--}}
+    {{--$('html,body').animate({--}}
+    {{--scrollTop: 0--}}
+    {{--}, 700);--}}
+    {{--});--}}
+    {{--}--}}
     {{--</script>--}}
     {{--<script type="text/javascript" src="/js/aussie-new/first.js"></script>--}}
     {{--<script type="text/javascript" src="/js/aussie-new/second.js"></script>--}}
@@ -351,7 +351,8 @@
 
                             {{--click here To view Live Account--}}
                             <p class="success-button">
-                                <a href="#customers" onclick="_funnel.popup_trade.init('tb0')" class="bold">Click Here To View <br> My Live
+                                <a href="#customers" onclick="_funnel.popup_trade.init('tb0')" class="bold">Click Here
+                                    To View <br> My Live
                                     Account</a>
                             </p>
                         </div>
@@ -399,7 +400,8 @@
 
                             {{--click here To view Live Account--}}
                             <p class="success-button">
-                                <a href="#customers" onclick="_funnel.popup_trade.init('tb1');" class="bold">Click Here To View <br> My Live
+                                <a href="#customers" onclick="_funnel.popup_trade.init('tb1');" class="bold">Click Here
+                                    To View <br> My Live
                                     Statement</a>
                             </p>
 
@@ -442,7 +444,8 @@
 
                             {{--click here To view Live Account--}}
                             <p class="success-button">
-                                <a href="#customers" onclick="_funnel.popup_trade.init('tb2');" class="bold">Click Here To View <br> My Live
+                                <a href="#customers" onclick="_funnel.popup_trade.init('tb2');" class="bold">Click Here
+                                    To View <br> My Live
                                     Statement</a>
                             </p>
                         </div>
@@ -482,7 +485,8 @@
 
                             {{--click here To view Live Account--}}
                             <p class="success-button">
-                                <a href="#customers" onclick="_funnel.popup_trade.init('tb3');" class="bold">Click Here To View <br> My Live
+                                <a href="#customers" onclick="_funnel.popup_trade.init('tb3');" class="bold">Click Here
+                                    To View <br> My Live
                                     Statement</a>
                             </p>
                         </div>
@@ -553,37 +557,20 @@
             <section id="live-third-party" class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12 align-center">
-                        <p style="font-family: 'Cabin', sans-serif; font-size:2.5em; color:#1e387b"><strong><a
-                                        name="results"></a>Live Third Party Verified Results!</strong></p>
-                        <table class="table table-striped table-bordered shadowed table-hover"
-                               id="positionsHistoryTable"
-                               style="background-color:#FFF;" bgcolor="#FFFFFF">
-                            <thead>
-                            <tr>
-                                <th background="/img/aussie/topb.png"><font
-                                            style="font-family: 'Cabin', sans-serif;; color:#000 !important;">
-                                        <center>Aussie Method Member</center>
-                                    </font></th>
-                                <th background="/img/aussie/topb.png"><font
-                                            style="font-family: 'Cabin', sans-serif;; color:#000 !important;">
-                                        <center>Profit</center>
-                                    </font></th>
-                                <th background="/img/aussie/topb.png"><font
-                                            style="font-family: 'Cabin', sans-serif;; color:#000 !important;">
-                                        <center>Trade Time</center>
-                                    </font></th>
-                                <th background="/img/aussie/topb.png"><font
-                                            style="font-family: 'Cabin', sans-serif;; color:#000 !important;">
-                                        <center>
-                                            Currency
-                                        </center>
-                                    </font></th>
-                            </tr>
-                            </thead>
-                            <tbody id="trades">
+                        <header>
+                            <h2>Live Third Party Verified Results!</h2>
+                        </header>
 
-                            </tbody>
-                        </table>
+                        {{--table layout--}}
+                        <div class="table-trader col-md-12 col-sm-12 col-xs-12 align-center">
+                            <ul class="col-md-12 col-sm-12 col-xs-12 align-center">
+                                <li class="col-lg-6 col-md-4 col-sm-4 col-xs-4">Aussie Method Member</li>
+                                <li class="col-lg-1 col-md-2 col-sm-2 col-xs-2">Profit</li>
+                                <li class="col-lg-3 col-md-3 col-sm-3 col-xs-3">Trade Time</li>
+                                <li class="col-lg-2 col-md-3 col-sm-3 col-xs-3">Currency</li>
+                            </ul>
+                            <div id="trades"></div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -659,3 +646,14 @@
 
     </div>
 @endsection
+
+
+<div id="feed_content2">
+    <div style="clear:both;"></div>
+    <div id="feed_name2"><img src="/img/aussie/tw/9.jpg" height="50">
+        <div id="data2"><b><a href="#">Henry</a></b><span id="curr_time_8" class="ctime" sec="60">1 minute ago</span>
+            <p> Deposited $250 @<b class="p-nickname">aussiemethod</b> with the verified trader system now my account
+                sits at over $30k in just a week #Lovethis #millionairestatus</p></div>
+    </div>
+
+</div>

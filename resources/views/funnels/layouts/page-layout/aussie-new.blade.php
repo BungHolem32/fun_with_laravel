@@ -49,7 +49,7 @@
             var old_time = oldtime.getSeconds();
             var feed_name1 = $('.feed_name1');
 
-            document.getElementById("facebook-tab").innerHTML = "<div style='clear:both;'></div><div class='feed_name1'><img src='/img/aussie-new/fw/" + images[counter] + "' height='40' /><b><a class='fbname social-name' href='#'>" + nm[counter] + "</a></b><br/><span id='curr_time_" + cnt + "' class='ctime1' sec='60'>1 minute</span><div style='clear:both;'></div><div id='data1' class='fb-data'> <span> " + data[dc] + "</span></div><div class='facebook-tab'>Like <span class='dash'>-</span> Comment <span class='dash'>-</span> Share </div></div> " + document.getElementById("facebook-tab").innerHTML;
+            document.getElementById("facebook-tab").innerHTML = "<div style=\'clear:both;\'>\n</div><div class=\'feed_name1\'><img src=\'/img/aussie-new/fw/" + images[counter] + "\' height=\'40\' /><b><a class=\'fbname social-name\' href=\'#\'>" + nm[counter] + "</a></b><br/><span id=\'curr_time_" + cnt + "\' class=\'ctime1\' sec=\'60\'>1 minute</span><div style=\'clear:both;\'></div><div id=\'data1\' class=\'fb-data\'> <span> " + data[dc] + "</span></div><div class=\'facebook-tab\'>Like <span class=\'dash\'>-</span> Comment <span class=\'dash\'>-</span> Share </div></div> " + document.getElementById("facebook-tab").innerHTML;
             if (feed_name1.length > 4) {
                 $('.feed_name1').last().remove();
             }
@@ -118,11 +118,22 @@
             var dc = rand_num(0, data.length);
             var oldtime = new Date();
             var old_time = oldtime.getSeconds();
-            document.getElementById("tweets-tab").innerHTML = "<div style='clear:both;'></div><div class='feed_name2'><img class='twt-image' src='/img/aussie-new/tw/" + images[counter] + "' height='50' /><div id='data2' class='twt-data' style='display:inline-block'><b><a class='twtname social-name' href='#'>" + nm[counter] + "</a></b><span id='curr_time_" + cnt + "' class='ctime2' sec='60'>1 minute ago</span><p> " + data[dc] + "</p></div></div>" + document.getElementById("tweets-tab").innerHTML;
+            document.getElementById("tweets-tab").innerHTML = "<div style='clear:both;'></div>" +
+                    "<div class='feed_name2'><img class='twt-image' src='/img/aussie-new/tw/" + images[counter] + "' height='50' />" +
+                    "<div id='data2' class='twt-data' style='display:inline-block'>" +
+                    "<b>" +
+                    "<a class='twtname social-name' href='#'>" + nm[counter] + "</a></b>" +
+                    "<span id='curr_time_" + cnt + "' class='ctime2' sec='60'>1 minute ago</span>" +
+                    "<p> " + data[dc] + "</p></div>" +
+                    "</div>" + document.getElementById("tweets-tab").innerHTML;
             if (num > 4) {
                 $('.feed_name2').last().remove();
             }
             cnt++;
+
+/*
+            x = '<div>\n    <div class="facebook-comment col-md-6 col-sm-12 col-xs-12">\n        <div class="row">\n            <header>\n                <h2 class="capitlize col-md-6 col-sm-12 col-xs-12"> Comments </h2>\n            </header>\n\n            <div class="top content">\n                <div class="facebook-human col-1">\n                    <img src="/img/aussie-new""+ images[counter] + " alt="">\n                </div>\n                <div class="facebook-name col-1">"+ nm[counter]+" </div>\n                <div class="facebook-time col-1">"+cnt+" </div>\n            </div>\n            <div class="bottom-content">\n                <div class="facbook-msg">\n                    <p><span> </span>  </p>    \n                </div>\n                <div class="facebook-like">\n                    \n                </div>\n            </div>\n        </div>\n    </div>\n</div>'
+*/
 
             for (i = 1; i < cnt; i++) {
                 var day = hour = minute = 0;
@@ -159,7 +170,7 @@
 
 @section('page-layout')
 
-    <div id="wrapper">
+    <div id="wrapper" class="first-page">
 
         <!--WORK LOGO FIXED AT TOP LEFT IN  THE SCREEN-->
         <section id="works-fixed">
@@ -334,38 +345,50 @@
             <section id="live-third-party" class="container center-block">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12 align-center">
-                        <p style="font-family: 'Cabin', sans-serif; font-size:2.5em; color:#1e387b"><strong><a
-                                        name="results"></a>Live Third Party Verified Results!</strong></p>
+                        <header>
+                          <h2>Live Third Party Verified Results!</h2>
+                        </header>
 
-                        <table class="table table-striped table-bordered shadowed table-hover"
-                               id="positionsHistoryTable"
-                               style="background-color:#FFF;" bgcolor="#FFFFFF">
-                            <thead>
-                            <tr>
-                                <th background="/img/aussie-new/topb.png"><font
-                                            style="font-family: 'Cabin', sans-serif;; color:#000 !important;">
-                                        <center>Aussie Method Member</center>
-                                    </font></th>
-                                <th background="/img/aussie-new/topb.png"><font
-                                            style="font-family: 'Cabin', sans-serif;; color:#000 !important;">
-                                        <center>Profit</center>
-                                    </font></th>
-                                <th background="/img/aussie-new/topb.png"><font
-                                            style="font-family: 'Cabin', sans-serif;; color:#000 !important;">
-                                        <center>Trade Time</center>
-                                    </font></th>
-                                <th background="/img/aussie-new/topb.png"><font
-                                            style="font-family: 'Cabin', sans-serif;; color:#000 !important;">
-                                        <center>
-                                            Currency
-                                        </center>
-                                    </font></th>
-                            </tr>
-                            </thead>
-                            <tbody id="trades">
+                        {{--table layout--}}
+                        <div class="table-trader col-md-12 col-sm-12 col-xs-12 align-center">
+                            <ul class="col-md-12 col-sm-12 col-xs-12 align-center">
+                                <li class="col-lg-6 col-md-4 col-sm-4 col-xs-4">Aussie Method Member</li>
+                                <li class="col-lg-1 col-md-2 col-sm-2 col-xs-2">Profit</li>
+                                <li class="col-lg-3 col-md-3 col-sm-3 col-xs-3">Trade Time</li>
+                                <li class="col-lg-2 col-md-3 col-sm-3 col-xs-3">Currency</li>
+                            </ul>
+                            <div id="trades"></div>
+                        </div>
 
-                            </tbody>
-                        </table>
+                        {{--<table class="table table-striped table-bordered shadowed table-hover"--}}
+                        {{--id="positionsHistoryTable"--}}
+                        {{--style="background-color:#FFF;" bgcolor="#FFFFFF">--}}
+                        {{--<thead>--}}
+                        {{--<tr>--}}
+                        {{--<th background="/img/aussie-new/topb.png"><font--}}
+                        {{--style="font-family: 'Cabin', sans-serif;; color:#000 !important;">--}}
+                        {{--<center>Aussie Method Member</center>--}}
+                        {{--</font></th>--}}
+                        {{--<th background="/img/aussie-new/topb.png"><font--}}
+                        {{--style="font-family: 'Cabin', sans-serif;; color:#000 !important;">--}}
+                        {{--<center>Profit</center>--}}
+                        {{--</font></th>--}}
+                        {{--<th background="/img/aussie-new/topb.png"><font--}}
+                        {{--style="font-family: 'Cabin', sans-serif;; color:#000 !important;">--}}
+                        {{--<center>Trade Time</center>--}}
+                        {{--</font></th>--}}
+                        {{--<th background="/img/aussie-new/topb.png"><font--}}
+                        {{--style="font-family: 'Cabin', sans-serif;; color:#000 !important;">--}}
+                        {{--<center>--}}
+                        {{--Currency--}}
+                        {{--</center>--}}
+                        {{--</font></th>--}}
+                        {{--</tr>--}}
+                        {{--</thead>--}}
+                        {{--<tbody id="trades">--}}
+
+                        {{--</tbody>--}}
+                        {{--</table>--}}
                     </div>
                 </div>
             </section>
@@ -379,14 +402,11 @@
             <!--===============================FREQUENTLY-ASKED-QUESTIONS PART===============================================-->
             <section id="frequently-asked-questions" class="row">
                 {{--HEADER TITLE--}}
-                <header class="col-md-12 col-sm-12 col-xs-12">
-                    <h2>Frequently Asked Questions</h2>
-                </header>
+
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12 question_n_answer">
-
-                        </div>
+                        <header class="col-md-12 col-sm-12 col-xs-12"><h2>Frequently Asked Questions</h2></header>
+                        <div class="col-md-12 question_n_answer"></div>
                     </div>
                 </div>
             </section>

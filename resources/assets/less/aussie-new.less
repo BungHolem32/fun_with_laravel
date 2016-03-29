@@ -3,6 +3,7 @@
 @import "bootstrap/variables";
 @import "bootstrap/bootstrap";
 @import "_helpers";
+@import "_media-queries.less";
 
 @directory: "/img/";
 // ======= aussie-new:
@@ -29,14 +30,26 @@
   width: 85.8%;
 }
 
-//MOBILEPIC
+//MOBILE-PIC
 .backPic_mobile {
   background: url('@{directory}aussie-new/buttonfree_mobile.png') no-repeat center;
   .bs;
   margin: 1.5em 0;
 }
 
+/*funncy BOX IFRAME */
+a.fancybox_iframe {
+  color: white;
+  font-size: 11px;
+}
+
+.cpaitalize {
+  text-transform: capitalize !important;
+}
+
 /*=================================MIXING CLASSES================================ */
+
+/*==================================LAYOUT PAGE=================================== */
 
 body {
 
@@ -46,450 +59,939 @@ body {
     background: url('/img/aussie-new/mainbg.jpg') repeat-y top center;
     min-width: 480px;
 
-    /*H2 HEADER*/
-    h2 {
-      color: #1F3A79;
-      font-size: 2.5em;
-      font-family: 'Cabin', sans-serif;
-      font-weight: bold;
-      max-width: 76%;
-      margin: 0 auto 1em;
+    &.first-page {
 
-    }
+      /*TOP HEADER*/
+      > header {
 
-    /*FIXED LOGO "WORKS ANYWHERE"*/
-    section#works-fixed {
-      position: fixed;
-      right: 0;
-      z-index: 1;
-      @media (max-width: 1300px) {
-        display: none;
+        h2 {
+          color: #1F3A79;
+          font-size: 51.2px;
+          font-family: 'Cabin', sans-serif;
+        }
+
       }
-    }
-
-    /*NAV BAR STRIP*/
-    section#top_strip {
-      background: url('@{directory}aussie-new/top_strip_bg.png');
-      height: 110px;
-      position: absolute;
-      top: -5px;
-      left: 0;
-      right: 0;
-    }
-
-    /*TOP HEADER*/
-    > header {
-
-      h2 {
-        color: #1F3A79;
-        font-size: 51.2px;
-        font-family: 'Cabin', sans-serif;
-      }
-
-    }
-
-    /*MAIN LAYOUT*/
-    main {
 
       /*GENERAL SECTION*/
       section {
-        margin: 1.5% auto;
         text-align: center;
 
-        #video-how-method-works {
-
-          .video-n-images {
-            background: url('@{directory}aussie-new/ipad.png') no-repeat top center;
-            .video-tag {
-              position: absolute;
-              top: 4.8em;
-              left: 17.9%;
-              width: 68%;
-              height: 67%;
-            }
+        /*FIXED LOGO "WORKS ANYWHERE"*/
+        &#works-fixed {
+          position: fixed;
+          margin: 0;
+          right: 0;
+          z-index: 1;
+          @media (max-width: 1300px) {
+            display: none;
           }
         }
 
-        /*VIDEO PART*/
-        #video_part video {
-          border: 5px solid #1F3A79 !important;
+        /*NAV BAR STRIP*/
+        &#top_strip {
+          background: url('@{directory}aussie-new/top_strip_bg.png');
+          height: 110px;
+          position: absolute;
+          margin: 0;
+          top: -5px;
+          left: 0;
+          right: 0;
         }
-        /*FIRST FORM - LANDING PAGE*/
-        .form-first {(max-width: 1300 px) and (min-width: 990 px) {
-          margin-top: 1em;
-        }
+      }
 
-          /*PARAGRAPH*/
-          p {
-            font-family: 'Cabin', sans-serif;
+      /*H2 HEADER*/
+      h2 {
+        color: #1F3A79;
+        font-size: 2.5em;
+        font-family: 'Cabin', sans-serif;
+        font-weight: bold;
+        max-width: 76%;
+        margin: 0 auto 1em;
 
-            /*FIRST ELEMENT IN PARAGRPAH*/
-            &:nth-of-type(1) {
-              font-size: 49.8px;
-              color: #1e387b;
-              margin-top: -0.1em !important;
-              font-family: 'Cabin', sans-serif;
+      }
 
-              @media (max-width: 1300px) and (min-width: 990px) {
-                font-size: 49.8px;
-                color: #1e387b;
-                margin-top: 0.4em;
-                font-family: 'Cabin', sans-serif;
-              }
-            }
-          }
+      /*MAIN LAYOUT*/
+      main {
+        section {
+          margin: 1.5em auto;
+          /*VIDEO AND FORM*/
+          &#video_n_form {
 
-          /*INPUTS*/
-          input {
-            outline: none;
-            width: 100%;
-            background-size: 100%;
-            border: none;
-            height: 142px;
+            #form_part {
 
-            /*SUBMIT BUTTON*/
-            &.submit-aussie {
-              background: url('/img/aussie-new/buttonfree.png') no-repeat top center;
-              background-size: contain;
-              height: 82px;
-              margin: 1em 0;
+              /*FIRST FORM - LANDING PAGE*/
+              &.form-first {
+                width: 29.3%;
+                margin-left: 1em;
 
-              /*MOBILE VIEW*/
-              @media (max-width: 990px) {
-                background: url('@{directory}aussie-new/buttonfree_mobile.png') no-repeat top center;
-                background-size: 100%;
-                margin: 1em 0;
-                height: 188px;
-              }
-            }
+                @media (max-width: 1300px) and (min-width: 990px) {
+                  margin-top: 1em;
+                }
 
-            /*MAIL TEXT INPUT*/
-            &#firstPageSignUpMail {
-              @media (max-width: 1200px) and (min-width: 990px) {
-                margin: 1em 0;
-                @media (max-width: 640px) {
-                  height: 100px;
-                  margin: 1em 0;
+                @media (max-width: 1200px) and (min-width: 990px ) {
+                  margin-top: 0.1em;
+                }
+
+                /*PARAGRAPH*/
+                p {
+                  font-family: 'Cabin', sans-serif;
+
+                  /*FIRST ELEMENT IN PARAGRPAH*/
+                  &:nth-of-type(1) {
+                    font-size: 49.8px;
+                    color: #1e387b;
+                    margin-top: -0.1em !important;
+                    font-family: 'Cabin', sans-serif;
+
+                    @media (max-width: 1300px) and (min-width: 990px) {
+                      font-size: 49.8px;
+                      color: #1e387b;
+                      margin-top: 0.4em;
+                      font-family: 'Cabin', sans-serif;
+                    }
+                  }
+                }
+
+                /*INPUTS*/
+                input {
+                  outline: none;
+                  width: 100%;
+                  background-size: 100%;
+                  border: none;
+                  height: 142px;
+
+                  /*SUBMIT BUTTON*/
+                  &.submit-aussie {
+                    @media (max-width: 599px) {
+                      height: 144px !important;
+
+                    }
+                    background: url('/img/aussie-new/buttonfree.png') no-repeat top center;
+                    background-size: contain;
+                    height: 82px;
+                    margin: 1em 0;
+
+                    /*MOBILE VIEW*/
+                    @media (max-width: 990px) {
+                      background: url('@{directory}aussie-new/buttonfree_mobile.png') no-repeat top center;
+                      background-size: 100%;
+                      margin: 1em 0;
+                      height: 188px;
+                    }
+                  }
+
+                  /*MAIL TEXT INPUT*/
+                  &#firstPageSignUpMail {
+                    @media (max-width: 1200px) and (min-width: 990px) {
+                      margin: 1em 0;
+                      @media (max-width: 640px) {
+                        height: 100px;
+                        margin: 1em 0;
+                      }
+                    }
+                    border: 4.0px solid #1F3A79;
+                    height: 63px;
+                    border-radius: 6px;
+                    margin: 1em 0 -0.5em;
+                    text-align: center;
+                  }
                 }
               }
-              border: 4.0px solid #1F3A79;
-              height: 63px;
-              border-radius: 6px;
-              margin: 1em 0 -0.5em;
-              text-align: center;
+            }
+
+            /*VIDEO PART*/
+            #video_part video {
+              border: 5px solid #1F3A79 !important;
             }
           }
-        }
 
-        /*SECTION STRIP HREF*/
-        &#strip_href {
-          background-color: #1F3978;
+          /*HOW METHOD WORKS PART*/
+          &#video-how-method-works {
 
-          /*UL TAG*/
-          ul {
+            .video-n-images {
+              /*VIDEO TAG*/
+              .video-tag {
+                position: absolute;
+                top: 5.2em;
+                left: 246.3px;
+                width: 58%;
+                height: auto;
+                @media (min-width: 990px) and (max-width: 1200px ) {
+                  position: absolute;
+                  top: 5.2em;
+                  left: 159.3px;
+                  width: 67.7%;
+                  height: auto;
+                }
+                @media (min-width: 778px) and (max-width: 989px) {
+                  position: absolute;
+                  top: 9.9em;
+                  left: 15.1px;
+                  width: 98.8%;
+                  height: auto;
+                }
+                @media (min-width: 760px) and (max-width: 777px) {
+                  position: absolute;
+                  top: 9.8em;
+                  left: 15.3px;
+                  width: 98.3%;
+                  height: auto;
+                }
+                @media (min-width: 640px) and (max-width: 759px) {
+                  position: absolute;
+                  top: 11.2em;
+                  left: 5.3px;
+                  width: 99.5%;
+                  height: auto;
+                }
+                @media (min-width: 600px) and (max-width: 639px) {
+                  position: absolute;
+                  top: 12.2em;
+                  left: 5.3px;
+                  width: 99.5%;
+                  height: auto;
+                }
+                @media (min-width: 500px) and (max-width: 599px) {
+                  position: absolute;
+                  top: 10.2em;
+                  left: 5.3px;
+                  width: 99.5%;
+                  height: auto;
+                }
+                @media (min-width: 300px) and (max-width: 500px) {
+                  position: absolute;
+                  top: 10.2em;
+                  left: 5.3px;
+                  width: 99.5%;
+                  height: auto;
 
-            /*HREF TAG IN STRIP*/
-            li {
-              font-size: 1.4em;
+                }
 
-              /*HREF TAG*/
-              a {
-                color: white;
+              }
+            }
+          }
+          /*SECTION STRIP HREF*/
+          &#strip_href {
+            background-color: #1F3978;
+
+            /*UL TAG*/
+            ul {
+              /*HREF TAG IN STRIP*/
+              li {
+                font-size: 1.4em;
+
+                /*HREF TAG*/
+                a {
+                  color: white;
+                  font-family: 'Cabin', sans-serif;
+                }
+              }
+              list-style: none;
+              line-height: 60px;
+            }
+          }
+
+          /*FAQ*/
+          &#frequently-asked-questions {
+            direction: ltr;
+            /*HEADER */
+            header {
+
+              /*H2 TAG*/
+              h2 {
+                color: #1F3A79;
+                font-size: 51.2px;
                 font-family: 'Cabin', sans-serif;
               }
             }
 
-            list-style: none;
-            line-height: 60px;
-          }
-        }
+            /*ANSWER QUESTION TEXT*/
+            .question_n_answer {
 
-        /*FAQ*/
-        #frequently-asked-questions {
-          direction: ltr;
-          /*HEADER */
-          header {
+              max-width: 76%;
+              margin: 0 auto;
+              left: 11.3%;
 
-            /*H2 TAG*/
-            h2 {
-              color: #1F3A79;
-              font-size: 51.2px;
-              font-family: 'Cabin', sans-serif;
+              @media (max-width: 990px) {
+                max-width: 100%;
+                left: 0;
+              }
+
+              .question {
+
+                .left-button {
+                  margin-top: 0em;
+                  img {
+                    &.plus-icon {
+                      position: relative;
+                      top: 3px;
+                      width: 23px;
+                    }
+                  }
+
+                  @media (max-width: 1200px) {
+                    margin-top: 0;
+                  }
+                  /*QUESTION P STYLE*/
+                  p.title-question {
+                    color: #1E3977;
+                    font-weight: bold;
+                    .margin(0, 0, 10px, 10px);
+                    user-select: none;
+                  }
+                }
+                .answer {
+
+                  /*ANSWER TEXT*/
+                  .answer-text {
+                    border: 1px dotted gray;
+                    background: white;
+                    padding: 0.5em;
+                    margin-bottom: 0.5em;
+                  }
+                }
+              }
             }
           }
-        }
 
-        /*LIVE RESULT PIC*/
-        #live-result-pic {
-          @media (max-width: 560px) {
-            box-shadow: 1px 1px 31px 11.4px lightgray;
-            width: 85.8%;
-          }
+          /*LIVE THIRD PARTY*/
+          &#live-third-party {
 
-          /*ROW INSIDE LIVE RESULT */
-          div.row {
-            #facebook-tab .feed_name1 span#curr_time_8 {
-              float: left;
+            max-width: 928px;
+
+            .table-trader {
+              background: white;
+              padding: 2em;
+              box-shadow: 1px 1px 6px 1px #B5B5B5;
+              ul {
+                list-style: none;
+                padding: 0;
+                li {
+                  color: black;
+                  font-weight: bold;
+                  font-size: 1.4em;
+                  border-top: 4px solid #0086C6;
+                  border-bottom: 1px solid white;
+                  border-right: 1px solid white;
+                  border-left: 1px solid white;
+                }
+              }
+
+              #trades {
+                .line-trades {
+                  background: white;
+                  padding-left: 0;
+                  padding-right: 0;
+                  &:nth-of-type(odd) {
+                    background: #D8D8D8;
+                    &:hover {
+                      background: gray;
+                    }
+                  }
+
+                  .trades {
+                    &.trade-profit {
+                      font-weight: 600;
+                    }
+                    .first-word {
+                      font-weight: bold;
+                    }
+
+                    @media (max-width: 1347px) {
+                      min-height: 50px;
+                    }
+                    padding: 0.2em;
+                    border: 1px solid white;
+                  }
+                }
+              }
             }
-            #tweets-tab .feed_name2 span#curr_time_8 {
-              float: right;
-            }
           }
-        }
+          /*LIVE FACEBOOK FEEDS*/
+          &#live-result-pic {
+            @media (max-width: 560px) {
+              box-shadow: 1px 1px 31px 11.4px lightgray;
+              width: 85.8%;
+            }
 
-        /*SOCIAL TAG*/
-        #social {
+            .social {
+              box-shadow: -1px 3px 25px 8px #D3D3D1;
+              background: #F0F0F0;
+              padding-bottom: 2em;
+              margin: 0px 12.3%;
+              display: block;
+              max-width: 75%;
+              @media (max-width: 1199px) {
+                margin: 0px 4.6%;
+                max-width: 90%;
+              }
+              @media (max-width: 1010px) {
+                margin: 0px 6%;
+                max-width: 86%;
+              }
 
-          /*LOGO*/
-          .logotag {
-            padding: 1.4em 0;
+              #content-social {
+
+                /*FACEBOOK TAB CONTENT*/
+                #facebook-tab {
+
+                  /*DIV OF THE FACEBOOK MESSAGE*/
+                  .feed_name1 {
+                    //min-height: 14.3em;
+
+                    .social-name.fbname {
+                      color: #1F3A79;
+                    }
+
+                    .ctime1 {
+                      position: relative;
+                      left: 2.4em;
+                      bottom: 1em;
+                      float: left;
+
+                      @media (max-width: 1200px) {
+                        left: 44px;
+                      }
+                      @media (max-width: 1200px) and (min-width: 992px) {
+                        left: 42px !important;
+                      }
+
+                    }
+
+                    /*FACEBOOK DATA*/
+                    .fb-data {
+                      margin-top: -0.6em;
+
+                    }
+                    /*FACEBOOK LIKE*/
+                    .facebook-tab {
+                      color: gray;
+                    }
+                  }
+                }
+
+                /*TWEETS TAB CONTENT*/
+                #tweets-tab {
+
+                  /*DIV OF THE FACEBOOK MESSAGE*/
+                  .feed_name2 {
+                    //min-height: 14.3em;
+
+                    img {
+                      /*TWEET IMAGE*/
+                      &.twt-image {
+                        border-radius: 0.3em;
+                        vertical-align: top;
+                      }
+                    }
+                    .social-name {
+                      &.twtname {
+                        color: black;
+                      }
+                    }
+
+                    .ctime2 {
+                      float: right;
+                    }
+
+                    /*TWEET DATA*/
+                    .twt-data {
+                      display: inline-block;
+                      vertical-align: middle;
+                      width: 100%;
+                      padding: 0 0.6em;
+                      height: 7.9em;
+                      text-align: justify;
+                    }
+                  }
+                }
+              }
+            }
+            /*TWEETER AND FACEBOOK TAG (DIVS)*/
+            div.feed_name2, div.feed_name1 {
+              border: 1px solid gray;
+              padding: 4px;
+              margin-bottom: 0em;
+              text-align: left;
+              background: white;
+            }
+
+            .images {
+              .logotag {
+                padding: 1.4em 0;
+              }
+            }
           }
         }
       }
     }
-  }
 
-  /*CONTAINER FLUID SET PADDING 0*/
-  .container-fluid {
-    padding: 0 !important;
+    /*MEMBER PAGE END */
+    &.second-page {
+
+      /*TOP HEADER*/
+      > header {
+
+        h2 {
+          color: #1F3A79;
+          font-size: 51.2px;
+          font-family: 'Cabin', sans-serif;
+        }
+
+      }
+
+      /*GENERAL SECTION*/
+      section {
+        text-align: center;
+
+        /*FIXED LOGO "WORKS ANYWHERE"*/
+        &#works-fixed {
+          position: fixed;
+          margin: 0;
+          right: 0;
+          z-index: 1;
+          @media (max-width: 1300px) {
+            display: none;
+          }
+        }
+
+        /*NAV BAR STRIP*/
+        &#top_strip {
+          background: url('@{directory}aussie-new/top_strip_bg.png');
+          height: 110px;
+          position: absolute;
+          margin: 0;
+          top: -5px;
+          left: 0;
+          right: 0;
+        }
+      }
+
+      /*H2 HEADER*/
+      h2 {
+        color: #1F3A79;
+        font-size: 2.5em;
+        font-family: 'Cabin', sans-serif;
+        font-weight: bold;
+        max-width: 76%;
+        margin: 0 auto 1em;
+
+      }
+
+      /*MAIN LAYOUT*/
+      main {
+        section {
+          margin: 1.5em auto;
+          /*VIDEO AND FORM*/
+          &#video_n_form {
+
+            #form_part {
+
+              /*VIDEO PART*/
+              #video_part video {
+                border: 5px solid #1F3A79 !important;
+              }
+            }
+
+            /*HOW METHOD WORKS PART*/
+            &#video-how-method-works {
+
+              .video-n-images {
+                /*VIDEO TAG*/
+                .video-tag {
+                  position: absolute;
+                  top: 5.2em;
+                  left: 246.3px;
+                  width: 58%;
+                  height: auto;
+                  @media (min-width: 990px) and (max-width: 1200px ) {
+                    position: absolute;
+                    top: 5.2em;
+                    left: 159.3px;
+                    width: 67.7%;
+                    height: auto;
+                  }
+                  @media (min-width: 778px) and (max-width: 989px) {
+                    position: absolute;
+                    top: 9.9em;
+                    left: 15.1px;
+                    width: 98.8%;
+                    height: auto;
+                  }
+                  @media (min-width: 760px) and (max-width: 777px) {
+                    position: absolute;
+                    top: 9.8em;
+                    left: 15.3px;
+                    width: 98.3%;
+                    height: auto;
+                  }
+                  @media (min-width: 640px) and (max-width: 759px) {
+                    position: absolute;
+                    top: 11.2em;
+                    left: 5.3px;
+                    width: 99.5%;
+                    height: auto;
+                  }
+                  @media (min-width: 600px) and (max-width: 639px) {
+                    position: absolute;
+                    top: 12.2em;
+                    left: 5.3px;
+                    width: 99.5%;
+                    height: auto;
+                  }
+                  @media (min-width: 500px) and (max-width: 599px) {
+                    position: absolute;
+                    top: 10.2em;
+                    left: 5.3px;
+                    width: 99.5%;
+                    height: auto;
+                  }
+                  @media (min-width: 300px) and (max-width: 500px) {
+                    position: absolute;
+                    top: 10.2em;
+                    left: 5.3px;
+                    width: 99.5%;
+                    height: auto;
+                  }
+                }
+              }
+            }
+            /*SECTION STRIP HREF*/
+            &#strip_href {
+              background-color: #1F3978;
+
+              /*UL TAG*/
+              ul {
+                /*HREF TAG IN STRIP*/
+                li {
+                  font-size: 1.4em;
+
+                  /*HREF TAG*/
+                  a {
+                    color: white;
+                    font-family: 'Cabin', sans-serif;
+                  }
+                }
+                list-style: none;
+                line-height: 60px;
+              }
+            }
+
+            /*FAQ*/
+            &#frequently-asked-questions {
+              direction: ltr;
+              /*HEADER */
+              header {
+
+                /*H2 TAG*/
+                h2 {
+                  color: #1F3A79;
+                  font-size: 51.2px;
+                  font-family: 'Cabin', sans-serif;
+                }
+              }
+
+              /*ANSWER QUESTION TEXT*/
+              .question_n_answer {
+
+                max-width: 76%;
+                margin: 0 auto;
+                left: 11.3%;
+
+                @media (max-width: 990px) {
+                  max-width: 100%;
+                  left: 0;
+                }
+
+                /*QUESTION ANSWER*/
+                .question {
+
+                  .left-button {
+                    margin-top: 0em;
+                    img {
+                      &.plus-icon {
+                        position: relative;
+                        top: 3px;
+                        width: 23px;
+                      }
+                    }
+
+                    @media (max-width: 1200px) {
+                      margin-top: 0;
+                    }
+                    /*QUESTION P STYLE*/
+                    p.title-question {
+                      color: #1E3977;
+                      font-weight: bold;
+                      .margin(0, 0, 10px, 10px);
+                      user-select: none;
+                    }
+                  }
+                  .answer {
+
+                    /*ANSWER TEXT*/
+                    .answer-text {
+                      border: 1px dotted gray;
+                      background: white;
+                      padding: 0.5em;
+                      margin-bottom: 0.5em;
+                    }
+                  }
+                }
+              }
+            }
+
+            /*LIVE THIRD PARTY*/
+            &#live-third-party {
+
+              max-width: 928px;
+
+              .table-trader {
+                background: white;
+                padding: 2em;
+                box-shadow: 1px 1px 6px 1px #B5B5B5;
+                ul {
+                  padding: 0;
+                  li {
+                    color: black;
+                    font-weight: bold;
+                    font-size: 1.4em;
+                    border-top: 4px solid #0086C6;
+                    border-bottom: 1px solid white;
+                    border-right: 1px solid white;
+                    border-left: 1px solid white;
+                  }
+                }
+
+                #trades {
+                  .line-trades {
+                    background: white;
+                    padding-left: 0;
+                    padding-right: 0;
+                    &:nth-of-type(odd) {
+                      background: #D8D8D8;
+                      &:hover {
+                        background: gray;
+                      }
+                    }
+
+                    .trades {
+                      &.trade-profit {
+                        font-weight: 600;
+                      }
+                      .first-word {
+                        font-weight: bold;
+                      }
+
+                      @media (max-width: 1347px) {
+                        min-height: 50px;
+                      }
+                      padding: 0.2em;
+                      border: 1px solid white;
+                    }
+                  }
+                }
+              }
+            }
+            /*LIVE FACEBOOK FEEDS*/
+            &#live-result-pic {
+              @media (max-width: 560px) {
+                box-shadow: 1px 1px 31px 11.4px lightgray;
+                width: 85.8%;
+              }
+
+              .social {
+                box-shadow: -1px 3px 25px 8px #D3D3D1;
+                background: #F0F0F0;
+                padding-bottom: 2em;
+                margin: 0px 12.3%;
+                display: block;
+                max-width: 75%;
+                @media (max-width: 1199px) {
+                  margin: 0px 4.6%;
+                  max-width: 90%;
+                }
+                @media (max-width: 1010px) {
+                  margin: 0px 6%;
+                  max-width: 86%;
+                }
+
+                #content-social {
+
+                  /*FACEBOOK TAB CONTENT*/
+                  #facebook-tab {
+
+                    /*DIV OF THE FACEBOOK MESSAGE*/
+                    .feed_name1 {
+                      //min-height: 14.3em;
+
+                      .social-name.fbname {
+                        color: #1F3A79;
+                      }
+
+                      .ctime1 {
+                        position: relative;
+                        left: 2.4em;
+                        bottom: 1em;
+                        float: left;
+
+                        @media (max-width: 1200px) {
+                          left: 44px;
+                        }
+                        @media (max-width: 1200px) and (min-width: 992px) {
+                          left: 42px !important;
+                        }
+
+                      }
+
+                      /*FACEBOOK DATA*/
+                      .fb-data {
+                        margin-top: -0.6em;
+
+                      }
+                      /*FACEBOOK LIKE*/
+                      .facebook-tab {
+                        color: gray;
+                      }
+                    }
+                  }
+
+                  /*TWEETS TAB CONTENT*/
+                  #tweets-tab {
+
+                    /*DIV OF THE FACEBOOK MESSAGE*/
+                    .feed_name2 {
+                      //min-height: 14.3em;
+
+                      img {
+                        /*TWEET IMAGE*/
+                        &.twt-image {
+                          border-radius: 0.3em;
+                          vertical-align: top;
+                        }
+                      }
+                      .social-name {
+                        &.twtname {
+                          color: black;
+                        }
+                      }
+
+                      .ctime2 {
+                        float: right;
+                      }
+
+                      /*TWEET DATA*/
+                      .twt-data {
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 100%;
+                        padding: 0 0.6em;
+                        height: 7.9em;
+                        text-align: justify;
+                      }
+                    }
+                  }
+                }
+              }
+              /*TWEETER AND FACEBOOK TAG (DIVS)*/
+              div.feed_name2, div.feed_name1 {
+                border: 1px solid gray;
+                padding: 4px;
+                margin-bottom: 0em;
+                text-align: left;
+                background: white;
+              }
+
+              .images {
+                .logotag {
+                  padding: 1.4em 0;
+                }
+              }
+            }
+          }
+
+        }
+
+        /*MEMBER PAGE END */
+
+        ///*SOCIAL TAG*/
+        //#social {
+        //  /*LOGO*/
+        //  .logotag {
+        //    padding: 1.4em 0;
+        //  }
+        //}
+      }
+    }
+
+    /*BACK TO TOP ICON*/
+    #back-to-top {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      z-index: 9999;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      line-height: 30px;
+      background: #f5f5f5;
+      color: #444;
+      cursor: pointer;
+      border: 0;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: opacity 0.2s ease-out;
+      opacity: 0;
+      font-size: 50px;
+      padding-top: 10px;
+      font-weight: bolder;
+    }
+
+    /*BACK TO TOP SHOW */
+    #back-to-top {
+      &.show {
+        opacity: 1;
+      }
+      &:hover {
+        background: #e9ebec;
+      }
+    }
+    /*FOOTER ROW*/
+    footer.row {
+      background-color: #1F3A79;
+      color: white;
+      margin: 0;
+      padding: 1em;
+    }
   }
 }
 
-/*ANSWER TEXT*/
-.answer-text {
-  border: 1px dotted gray;
-  background: white;
-  padding: 0.5em;
-  margin-bottom: 0.5em;
-}
+/*ROW INSIDE LIVE RESULT */
 
-/**/
+/*======================================ARANGGED=========================================*/
+
 section div img.col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2.col-xs-10.col-xs-offset-1 {
   left: 6% !important;
 }
 
-/*TWEETER AND FACEBOOK TAG (DIVS)*/
-div.feed_name2, div.feed_name1 {
-  border: 1px solid gray;
-  padding: 4px;
-  margin-bottom: 0em;
-  text-align: left;
-  background: white;
-  min-height: 170px;
-}
 
-/*FOOTER ROW*/
-footer.row {
-  background-color: #1F3A79;
-  color: white;
-  margin: 0;
-  padding: 1em;
-}
+///*BG-COLOR OF THE ODD TR*/
+//.table-striped > tbody > tr:nth-child(odd) {
+//  background-color: lightgray;
+//}
+//
+///*TABLE THIRD PARTY VARIFIED RESULTS*/
+//.table > thead > tr > td.success, .table > tbody > tr > td.success, .table > tfoot > tr > td.success, .table > thead > tr > th.success, .table > tbody > tr > th.success, .table > tfoot > tr > th.success, .table > thead > tr.success > td, .table > tbody > tr.success > td, .table > tfoot > tr.success > td, .table > thead > tr.success > th, .table > tbody > tr.success > th, .table > tfoot > tr.success > th {
+//  background: none;
+//}
+//
+///*TABLE THIRD PARTY ON OVER*/
+//.table-hover > tbody > tr > td.success:hover, .table-hover > tbody > tr > th.success:hover, .table-hover > tbody > tr.success:hover > td, .table-hover > tbody > tr:hover > .success, .table-hover > tbody > tr.success:hover > th {
+//  background-color: #94a3a8;
+//}
 
-/*funncy BOX IFRAME */
-a.fancybox_iframe {
-  color: white;
-  font-size: 11px;
-}
 
-/*LOGO TAG*/
-.logotag {
-  padding: 1.4em 0;
-}
 
-/*VIDEO TAG*/
-div.video-n-images div.video-tag video {
-  position: absolute;
-  top: 5.1em;
-  left: 22.2%;
-  width: 56%;
-  height: auto;
-}
 
-/*ON ERROR TEXT COLOR RED*/
-.error {
-  color: red;
-}
 
-/*BACK TO TOP ICON*/
-#back-to-top {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  z-index: 9999;
-  width: 60px;
-  height: 60px;
-  text-align: center;
-  line-height: 30px;
-  background: #f5f5f5;
-  color: #444;
-  cursor: pointer;
-  border: 0;
-  border-radius: 2px;
-  text-decoration: none;
-  transition: opacity 0.2s ease-out;
-  opacity: 0;
-  font-size: 50px;
-  padding-top: 10px;
-  font-weight: bolder;
-}
 
-/*BACK TO TOP ICON ON OVER*/
-#back-to-top:hover {
-  background: #e9ebec;
-}
-
-/*BACK TO TOP SHOW */
-#back-to-top.show {
-  opacity: 1;
-}
-
-/*CONTENT TAG */
-#content {
-  height: 2000px;
-}
-
-/*QUESTION P STYLE*/
-.title-question {
-  color: #1E3977;
-  font-weight: bold;
-  .margin(0, 0, 10px, 10px);
-  user-select: none;
-}
-
-/*SOCIAL TAG */
-body .social {
-  box-shadow: -1px 3px 25px 8px #D3D3D1;
-  background: #F0F0F0;
-  padding-bottom: 2em;
-  margin: 0px 12.3%;
-  display: block;
-  max-width: 75%;
-  @media (max-width: 1199px) {
-    margin: 0px 4.6%;
-    max-width: 90%;
-  }
-  @media (max-width: 1010px) {
-    margin: 0px 6%;
-    max-width: 86%;
-  }
-}
-
-/*FACEBOOK LIKE*/
-.facebook-tab {
-  color: gray;
-}
-
-/*TIME OF THE TWEETER MESSAGE*/
-.ctime2 {
-  float: right;
-}
-
-/*TIME OF THE FACEBOOK MESSAGE */
-span.ctime1 {
-  position: relative;
-  left: 2.4em;
-  bottom: 1em;
-  @media (max-width: 1200px) {
-    left: 44px !important;
-  }
-}
-
-/*FACEBOOK TITLE*/
-.fbname {
-  color: #1F3A79;
-}
-
-/*TWEETER TITLE*/
-a.twtname {
-  color: black;
-}
-
-/*TWEET TEXT*/
-.twt-data {
-  display: inline-block;
-  vertical-align: middle;
-  width: 100%;
-  padding: 0 0.6em;
-  height: 7.9em;
-  text-align: justify;
-}
-
-/*TWEET IMAGE*/
-img.twt-image {
-  border-radius: 0.3em;
-  vertical-align: top;
-}
-
-/*DIV OF THE FACEBOOK MESSAGE*/
-.feed_name1 {
-  min-height: 14.3em;
-}
-
-/*FACEBOOK DATA*/
-.fb-data {
-  margin-top: -0.6em;
-}
-
-/*BG-COLOR OF THE ODD TR*/
-.table-striped > tbody > tr:nth-child(odd) {
-  background-color: lightgray;
-}
-
-/*LIVE THIRD PARTY WRAPPER*/
-section#live-third-party {
-  box-shadow: 1px 1px 31px 11.4px lightgray;
-}
-
-/*TABLE THIRD PARTY VARIFIED RESULTS*/
-.table > thead > tr > td.success, .table > tbody > tr > td.success, .table > tfoot > tr > td.success, .table > thead > tr > th.success, .table > tbody > tr > th.success, .table > tfoot > tr > th.success, .table > thead > tr.success > td, .table > tbody > tr.success > td, .table > tfoot > tr.success > td, .table > thead > tr.success > th, .table > tbody > tr.success > th, .table > tfoot > tr.success > th {
-  background: none;
-}
-
-/*TABLE THIRD PARTY ON OVER*/
-.table-hover > tbody > tr > td.success:hover, .table-hover > tbody > tr > th.success:hover, .table-hover > tbody > tr.success:hover > td, .table-hover > tbody > tr:hover > .success, .table-hover > tbody > tr.success:hover > th {
-  background-color: #94a3a8;
-}
-
-.form-first {
-  @media (max-width: 1200px) and (min-width: 990px ) {
-    margin-top: 0.1em;
-  }
-  width: 29.3%;
-  margin-left: 1em;
-}
-
-ul {
-  list-style: none;
-}
-
-section#live-third-party {
-  max-width: 46.4%;
-  @media (max-width: 1200px) {
-    max-width: 77.4%;
-  }
-}
-
-.question_n_answer {
-
-  max-width: 76%;
-  margin: 0 auto;
-  left: 11.3%;
-  .left-button img.pull-left {
-    margin-top: 0em;
-    width: 3%;
-
-    @media (max-width: 1200px) {
-      margin-top: 0;
-      width: 2.7%;
-    }
-  }
-}
-
-.trades {
-  padding: 0.2em;
-  border: 1px solid;
-  background: white;
-}
-
-@import "_media-queries.less";

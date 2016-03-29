@@ -52,8 +52,8 @@
                         $('#trades').html(html);
                     }
 
-                    clearInterval(mC);
-                    mC = setInterval(funnelControll.live_trade.init, funnelControll.live_trade.get_random_number(700, 3000));
+                    // clearInterval(mC);
+                    // mC = setInterval(funnelControll.live_trade.init, funnelControll.live_trade.get_random_number(700, 3000));
                 },
                 create_random_template_for_trades: function (len) {
 
@@ -69,7 +69,7 @@
 
                     /*RANDOM NAME */
                     var name = funnelControll.names[this.get_random_number(0, funnelControll.names.length)];
-                    var template_trade   = "<div class=\'line-trades col-md-12 col-sm-12 col-xs-12 text-center\'>\n    <div class=\"trade-name col-lg-4 col-md-4 col-sm-4 col-xs-4 trades\">" + name + "</div>\n    <div class=\"trade-profit col-lg-2 col-md-2 col-sm-2 col-xs-2 trades\">" + this.number_comb(payout) + "</div>\n    <div class=\"trade-time col-lg-3 col-md-3 col-sm-3 col-xs-3 trades\">" + this.get_date_time(this.get_random_number(1, 10)) + "</div>\n    <div class=\"trade-currency col-lg-3 col-md-3 col-sm-3 col-xs-3 trades\">"+xasset+"</div>\n</div>";
+                    var template_trade   = "<div class=\'line-trades col-md-12 col-sm-12 col-xs-12 text-center\' rv-class-success=\"position.status | eq won\" rv-show=\"position.status | not_eq open\" class=\"success\">\n    <div class=\"trade-name col-lg-6 col-md-4 col-sm-4 col-xs-4 trades\" rv-text=\"position.optionEndDate\" ><span class=\'first-word\'>" + name + "</span> just won a trade...</div>\n    <div class=\"trade-profit col-lg-1 col-md-2 col-sm-2 col-xs-2 trades\">" + this.number_comb(payout) + "$</div>\n    <div class=\"trade-time col-lg-3 col-md-3 col-sm-3 col-xs-3 trades\">" + this.get_date_time(this.get_random_number(1, 10)) + "</div>\n    <div class=\"trade-currency col-lg-2 col-md-3 col-sm-3 col-xs-3 trades\">"+xasset+"</div>\n</div>";
 
 
                     if (len > 11) {
@@ -192,7 +192,7 @@
                 var qN = $('#frequently-asked-questions .container .row .question_n_answer'),
                     html = '';
                 for (i = 0; i < funnelControll.questions.length; i++) {
-                    html += '<div  class="question_answer col-md-12 col-sm-12 align-left">\n    <div class="row question"><div  class=" col-md-12  col-sm-12 col-xs-12 left-button">\n            <img class="pull-left" src="/img/aussie-new/plus-icon.png" alt="plus-icon">\n            <p class="title-question text-left pull-left">' + funnelControll.questions[i] + '</p>\n        </div>\n        <div  class="col-md-12  col-sm-12 col-xs-12 answer">\n            <div class="answer-text text-left">\n' + funnelControll.answers[i] + '<p class="text-left">\n                \n                </p>\n            </div>\n        </div>\n    </div>\n</div>';
+                    html += '<div  class="question_answer col-md-12 col-sm-12 align-left">\n    <div class="row question"><div  class=" col-md-12  col-sm-12 col-xs-12 left-button">\n            <img class="pull-left plus-icon" src="/img/aussie-new/plus-icon.png" alt="plus-icon" >\n            <p class="title-question text-left pull-left">' + funnelControll.questions[i] + '</p>\n        </div>\n        <div  class="col-md-12  col-sm-12 col-xs-12 answer">\n            <div class="answer-text text-left">\n' + funnelControll.answers[i] + '<p class="text-left">\n                \n                </p>\n            </div>\n        </div>\n    </div>\n</div>';
                 }
                 qN.append(html);
             }
@@ -364,7 +364,8 @@
     funnelControll.live_trade.init(11);
 
     /*8 SHUFFLE THE ARRAY*/
-    var mC = setInterval(funnelControll.live_trade.init, funnelControll.live_trade.get_random_number(700, 3000));
+    // var mC = setInterval(funnelControll.live_trade.init, funnelControll.live_trade.get_random_number(700, 3000));
+    funnelControll.live_trade.init();
 
     /*9 LOADING IN PROCCESS*/
     funnelControll.loading();
