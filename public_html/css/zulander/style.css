@@ -47,7 +47,7 @@ a { color:#0072ff;}
 .content .avideo span.st2 { color:#09cc00;}
 
 .content .free { position:relative;  width:879px; margin:0 auto;}
-.content .free form{ background:#f4f4f5 url(/img/zulander/strelka.png) no-repeat top right;}
+.content .free form{ background:#f4f4f5 url(/img/zulander/hurry.png) no-repeat top right;}
 .content .free:after { width:870px; height:62px; content: " "; background-image: url(/img/zulander/bigShadow.png); position: absolute; left:0; bottom:-62px;}
 .content .free .f1 input { width:384px; font-size:19px; padding:8px 0 8px 50px; margin:3px 0 0 0; border:1px #d7d7d7 solid; -webkit-box-shadow: inset 3px 3px 9px 0px rgba(0,0,0,0.35);  -moz-box-shadow: inset 3px 3px 9px 0px rgba(0,0,0,0.35); box-shadow: inset 3px 3px 9px 0px rgba(0,0,0,0.35);}
 .content .free .f1 span { width:49px; height:54px; display:block; position:absolute; top:5px; left:65px; background-image: url(/img/zulander/mail.png); }

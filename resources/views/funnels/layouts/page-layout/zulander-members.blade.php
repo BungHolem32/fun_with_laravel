@@ -145,7 +145,7 @@
                 <p>If you have followed all of the steps above you are now fully set and well on your way to making money TODAY!</p>
                 <p>If you experience any issues, or have any questions, just contact us on the email below so that your dedicated success coach can help you: <a href="">email@email.com</a></p>
                 <p>I hope you make it and can't wait to get started with you!</p>
-                <img src="/img/zulander/signature.jpg" class="signature" alt="" />
+                <img src="/img/zulander/signature.jpg" class="signature img-responsive" alt="" />
                 <p><strong>Mike Wright and the Zulander Hack Support Team</strong></p>
             </div>
             <div class="lasBtn text-center">
