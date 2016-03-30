@@ -373,7 +373,7 @@
                         }
 
                         /*CHECK IF THE TEMPLATE CREATED*/
-                        if (html != undefined) {
+                        if (html != null) {
                             funnelControll.tweeter_n_facebook_tempalte.get_new_date(html);
                         }
                     }
@@ -394,8 +394,10 @@
                 create_tpl: function (elementID, element_name, sort_name,display) {
 
                     if (element_name == 'tweets') {
+
                         element_name = 'twt';
                         this.element_name = "tweets";
+
                     }else{
                         this.element_name = "facebook";
                     }
@@ -414,7 +416,7 @@
                         "<div class=\'" + sort_name + "-tab col-md-12 col-sm-12 col-xs-12 pull-left text-left\' style='display:"+ display +"'>Like <span class=\'dash\'>-</span> Comment\n            <span class=\'dash\'>-</span> Share" +
                         "</div>\n    </div>\n</div>";
 
-                    console.log
+
                     this.template = $('#' + this.element_name + '-tab').append(this.html_template);
                     this.cnt++;
                     return this.cnt;
@@ -426,8 +428,11 @@
                     var length = $(elementID).length;
                    console.log(elementID);
                     if (length > 4) {
+                        console.log(elementID);
                         pass_limit = true;
+
                     }
+
                     return pass_limit
                 },
 
@@ -501,7 +506,7 @@
     /*9 LOADING IN PROCCESS*/
     funnelControll.loading();
 
-    // funnelControll.tweeter_n_facebook_tempalte.init('.facebook-message', 'facebook', 'fb', 6);
+    funnelControll.tweeter_n_facebook_tempalte.init('.facebook-message', 'facebook', 'fb', 6);
     funnelControll.tweeter_n_facebook_tempalte.init('.tweets-message', 'tweets', 'twt', 6,'none');
 
     setInterval(function () {
