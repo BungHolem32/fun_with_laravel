@@ -1,5 +1,6 @@
 @section('head')
     {!! $page->appendAsset(url('/css/zulander/bootstrap.min.css')) !!}
+    {!! $page->appendAsset(url('/css/zulander/animate.css')) !!}
     {!! $page->appendAsset(url('/css/zulander/flipclock.css')) !!}
     {!! $page->appendAsset(url('/css/zulander/style.css')) !!}
     {!! $page->appendAsset(url('/css/zulander/resp.css')) !!}
@@ -10,8 +11,6 @@
     {!! $page->appendAsset(url('/js/zulander/moment.min.js')) !!}
     {!! $page->appendAsset(url('/js/zulander/bootstrap.min.js')) !!}
     {!! $page->appendAsset(url('/js/zulander/flipclock.min.js')) !!}
-    <script type="text/javascript">
-    </script>
     {!! $page->appendAsset(url('/js/zulander/script.js')) !!}
 @append
 

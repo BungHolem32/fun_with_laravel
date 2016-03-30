@@ -3,8 +3,10 @@ var nextYearUnix	= new Date(new Date().setTime(now.getTime() + 360*24*60*60*1000
 var locationContent = null;
 
 $(document).ready(function() {
-	if(window.location.pathname == '/zulander/members') {
+
+	if($('#clock1').length) {
 		var startTime = parseFloat(getCookies().clock) || (60 * 7);
+
 		var clockOne = $('#clock1').FlipClock({
 			clockFace: 'MinuteCounter',
 			autoStart: false,
@@ -35,11 +37,13 @@ $(document).ready(function() {
 		clockTwo.setTime(startTime);
 		clockTwo.setCountdown(true);
 		clockTwo.start();
-
-		$('#phone').parent().removeClass('col-lg-6 col-md-6 col-sm-6').addClass('col-lg-12 col-md-12 col-sm-12');
-		$('#submit').removeClass().addClass('go2 active-submit').val('YES! TAKE ME TO THE FINAL STEP');
-		$('input').removeClass('form-control');
 	}
+
+
+	$('#phone').parent().removeClass('col-lg-6 col-md-6 col-sm-6').addClass('col-lg-12 col-md-12 col-sm-12');
+	$('#submit').removeClass().addClass('go2 active-submit').val('YES! TAKE ME TO THE FINAL STEP');
+	$('input').removeClass('form-control');
+
 	getUserContent();
 });
 
@@ -92,6 +96,7 @@ function getUserContent() {
 			$('#stories').html(stories);
 			$('.date').html(moment().format("D MMMM YYYY"));
 			$('#month-days').html(moment().format('1 MMM YYYY') + " - " + moment().format('D MMM YYYY') + ":");
+			$('#licenses-count').html(locationContent.content.licenses.count);
 
 			setInterval(updateLicensesCounter,locationContent.content.licenses.timer.interval);
 			updateLicensesCounter();

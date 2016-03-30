@@ -49,7 +49,7 @@ a { color:#0072ff;}
 .content .free { position:relative;  width:879px; margin:0 auto;}
 .content .free form{ background:#f4f4f5 url(/img/zulander/hurry.png) no-repeat top right;}
 .content .free:after { width:870px; height:62px; content: " "; background-image: url(/img/zulander/bigShadow.png); position: absolute; left:0; bottom:-62px;}
-.content .free .f1 input { width:384px; font-size:19px; padding:8px 0 8px 50px; margin:3px 0 0 0; border:1px #d7d7d7 solid; -webkit-box-shadow: inset 3px 3px 9px 0px rgba(0,0,0,0.35);  -moz-box-shadow: inset 3px 3px 9px 0px rgba(0,0,0,0.35); box-shadow: inset 3px 3px 9px 0px rgba(0,0,0,0.35);}
+.content .free .f1 input { width:384px; font-size:19px; padding:8px 0 8px 50px; margin:3px 0 0 10px; border:1px #d7d7d7 solid; -webkit-box-shadow: inset 3px 3px 9px 0px rgba(0,0,0,0.35);  -moz-box-shadow: inset 3px 3px 9px 0px rgba(0,0,0,0.35); box-shadow: inset 3px 3px 9px 0px rgba(0,0,0,0.35);}
 .content .free .f1 span { width:49px; height:54px; display:block; position:absolute; top:5px; left:65px; background-image: url(/img/zulander/mail.png); }
 .content .free .f1 img { margin:-5px 0 0 0;}
 .content .free .go1 { width:453px; height:93px; border:none; background:#f4f4f5 url(/img/zulander/btn1.png); text-indent:-9999px; position:relative;}
@@ -59,7 +59,7 @@ a { color:#0072ff;}
 .content .free .f2 { padding:10px 0 15px; max-width:453px; margin:0 auto;}
 .content .free .f3 { padding:15px 0 15px; max-width:453px; margin:0 auto;}
 
-.content .lasBtn { padding:0 0 10px 0;}
+.content .lasBtn { padding:0 0 30px 0;}
 
 .content .review { width:887px; margin:60px auto 0;}
 .content .review .line-l { width:887px; margin:0 auto; background:url(/img/zulander/line-l.jpg) no-repeat left 30px;}
@@ -181,7 +181,7 @@ div#second .go3 { width:561px; height:89px; border:none; background:#f4f4f5 url(
 .live .title { background:#ff6600; color:#fff; font-size:26px;}
 .live .desc .date { font-size:16px; color:#9d9d9d; margin:10px 0;}
 .live .desc .intro { font-size:19px; color:#585858; margin:0 0 10px 0;}
-.live .desc img { margin:0 0 10px 0;}
+.live .desc img { margin:0 1px 10px 0;}
 .live .foot { background:#eaeaea; font-family: RobotoCondensed-Bold; color:#212121; font-size:20px; line-height:27px; padding:10px 0 5px;}
 .live .foot span { font-family: RobotoCondensed-Bold; font-size:32px; color:#09cc00; line-height:32px;}
 

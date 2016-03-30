@@ -51,7 +51,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="avideo text-center">Claim One Of <span class="st1"><strong class="count">10</strong> FREE LICENSES In <span class="country-name">...</span></span> To Make <span class="st2">$1,008</span> <strong>Every 5 MINUTES >></strong></div>
+                <div class="avideo text-center">Claim One Of <span class="st1"><strike id="licenses-count">0</strike> <strong class="count">10</strong> FREE LICENSES In <span class="country-name">...</span></span> To Make <span class="st2">$1,008</span> <strong>Every 5 MINUTES >></strong></div>
                 <div class="free">
 
                     {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post']) !!}
