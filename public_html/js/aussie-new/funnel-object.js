@@ -1,4 +1,4 @@
-(function () {
+(function ($) {
 
     var funnelControll = {
         position: ['CALL', 'PUT'],
@@ -69,7 +69,7 @@
 
                     /*RANDOM NAME */
                     var name = funnelControll.names[this.get_random_number(0, funnelControll.names.length)];
-                    var template_trade   = "<div class=\'line-trades col-md-12 col-sm-12 col-xs-12 text-center\' rv-class-success=\"position.status | eq won\" rv-show=\"position.status | not_eq open\" class=\"success\">\n    <div class=\"trade-name col-lg-6 col-md-4 col-sm-4 col-xs-4 trades\" rv-text=\"position.optionEndDate\" ><span class=\'first-word\'>" + name + "</span> just won a trade...</div>\n    <div class=\"trade-profit col-lg-1 col-md-2 col-sm-2 col-xs-2 trades\">" + this.number_comb(payout) + "$</div>\n    <div class=\"trade-time col-lg-3 col-md-3 col-sm-3 col-xs-3 trades\">" + this.get_date_time(this.get_random_number(1, 10)) + "</div>\n    <div class=\"trade-currency col-lg-2 col-md-3 col-sm-3 col-xs-3 trades\">"+xasset+"</div>\n</div>";
+                    var template_trade = "<div class=\'line-trades col-md-12 col-sm-12 col-xs-12 text-center\' rv-class-success=\"position.status | eq won\" rv-show=\"position.status | not_eq open\" class=\"success\">\n    <div class=\"trade-name col-lg-6 col-md-4 col-sm-4 col-xs-4 trades\" rv-text=\"position.optionEndDate\" ><span class=\'first-word\'>" + name + "</span> just won a trade...</div>\n    <div class=\"trade-profit col-lg-1 col-md-2 col-sm-2 col-xs-2 trades\">" + this.number_comb(payout) + "$</div>\n    <div class=\"trade-time col-lg-3 col-md-3 col-sm-3 col-xs-3 trades\">" + this.get_date_time(this.get_random_number(1, 10)) + "</div>\n    <div class=\"trade-currency col-lg-2 col-md-3 col-sm-3 col-xs-3 trades\">" + xasset + "</div>\n</div>";
 
 
                     if (len > 11) {
@@ -219,11 +219,11 @@
                     $('.mobile-steps').find('.mobile-steps').addClass('hidden');
                     $('#3-steps').find('.desktop-steps').removeClass('hidden');
                 }
-                if(width<1200){
-                    $('img.trust-pic').attr('src',mobile[2]);
+                if (width < 1200) {
+                    $('img.trust-pic').attr('src', mobile[2]);
                 }
-                if(width>1200){
-                    $('img.trust-pic').attr('src',desktop[2]);
+                if (width > 1200) {
+                    $('img.trust-pic').attr('src', desktop[2]);
                 }
             }
             ,
@@ -324,7 +324,138 @@
             enumerable: true,
             configurable: true,
             writable: true
-        }
+        },
+        tweeter_n_facebook_tempalte: {
+            value: {
+                nm: ["Harvey", "Christopher", "David", "Morgan", "Jason", "Travis", "Charlie", "Robert", "Henry", "Kieran", "Charles", "Joseph", "Ellis", "Billy", "Andrew", "Johnny", "George", "Sebastian", "Cameron", "Tory", "Joel", "Adam", "Bryce", "Dwayne", "Vincent", "Leon", "Aidan", "Aidan", "David", "Jacob", "Ben", "Alex", "Enrique", "Dennis", "Nathan", "Charles", "Robert", "Alfie", "Dominic", "Leon", "John", "Daniel", "Charles", "Romeo", "Noah", "Anthony", "James", "Mohammed", "Louis", "Joseph", "Ellis", "Kai", "Jay", "Noah", "Lewis", "Anthony", "Jamie", "Elliot", "Ronald", "Troy", "Reece", "Richard", "Joel", "Callum", "Jack", "Richard", "Nicholas", "Cameron", "Harry", "William", "Lyle", "Frank", "Norman", "Anthony", "Morgan", "Geoffrey", "Alejandro", "Zak", "Anthony", "Kieran", "Ross", "Paul", "Sam", "Richard", "Michael", "Roger", "Charles", "Reece", "Brandon", "Robert", "Luca", "Harrison", "Ryan", "Taylor", "Frank", "Larry", "Billy", "Sam", "Finlay", "Zara", "Georgia", "Sylvie", "Kiera", "Margaret", "Patria", "Ava", "Diane", "Skye", "Helen", "Jennifer", "Isabella", "Faith", "Jessica", "Penny", "Rebecca", "Summer", "Tamara", "Tamika", "Magdalene", "Wendy", "Genevieve", "Stephanie", "Erin", "Abby", "Ann", "Abbie", "Leigh", "Shanna", "Tilly", "Laura", "Mary", "Paula", "Isabel", "Ella", "Tatiana", "Mary", "Tegan", "Cynthia", "Abigail", "Lauren", "Laura", "Katherine", "Naomi", "Barbara", "Melisa", "Pamela", "Leeann", "Jodie", "Terri", "Caitlin", "Roberta", "Daisy", "Molly", "Frieda", "Louise", "Elizabeth", "Stella", "Billie", "Gracie", "Sienna", "Katie", "Mildred", "Kayleigh", "Christy", "Kiera", "Yun", "Courtney", "Tegan", "Sheila", "Ray", "Lydia", "Mamie", "Keira", "Matilda", "Sonya", "Ava", "Cerys", "Eleanor", "Grace", "Jodie", "Sharon", "Elva", "Eleanor", "Freya", "Bessie", "Sofia", "Amelie", "Brenda", "Poppy", "Tegan", "Sienna", "Leah", "Antoinette", "Zoe"],
+                data: ["Wow this might sound cheesy but I LOVE you guys <b class='p-nickname'>Aussie Method</b> the ONLY system u need for making money online makemoney Aussie Method awesome",
+                    "How long until the money hits my account from my broker account? <b class='p-nickname'>Aussie Method</b> Just withdrawn 5 figures 5figureprofits profits awesome",
+                    "This is like printing money...For Real Take it off the market <b class='p-nickname'>Aussie Method</b> dont want others getting their hands on this selfish",
+                    "Celebrating another profitable day using the <b class='p-nickname'>Aussie Method</b> not had a losing day yet",
+                    "Brilliant stuff, u guys are the bomb <b class='p-nickname'>Aussie Method</b> First trade today and just made $389.11 profit moreprofits Aussie Method",
+                    "Awesome system, made over $2000 in my first 2 hours using the <b class='p-nickname'>Aussie Method</b> system",
+                    "Thank You Thank You Thank You <b class='p-nickname'>Aussie Method</b>",
+                    "Holy crap, this is amazing, I've made $7,891.32 on my very first day using the verified trader system <b class='p-nickname'>Aussie Method</b> system binary amazing",
+                    "<b class='p-nickname'>Aussie Method</b> Sup guys, super sick system u got here",
+                    "Deposited $250 <b class='p-nickname'>Aussie Method</b> with the verified trader system now my account sits at over $30k in just a week Lovethis millionairestatus",
+                    "At last a legit binary system <b class='p-nickname'>Aussie Method</b>",
+                    "Can't thank you guys enough <b class='p-nickname'>Aussie Method</b> been scammed so many times before but this really is the real deal",
+                    "Thanks to <b class='p-nickname'>Aussie Method</b> for finally making a binary system that really works amazing makemoney",
+                    "<b class='p-nickname'>Aussie Method</b> Already up over $3800 and the day is still young",
+                    "Just made $868.44 in a single trade <b class='p-nickname'>Aussie Method</b>",
+                    "<b class='p-nickname'>Aussie Method</b> Just made $918.88 in 34 minutes",
+                    "what is happening?? My account now sits at $23,891.44 I only deposited $300 4 days ago, this is insane <b class='p-nickname'>Aussie Method</b>",
+                    "Thanks support for solving my small problem, looking forward to making lots of cash with this cash thanks Aussie Method support <b class='p-nickname'>Aussie Method</b>",
+                    "WTF.... Thank You This thing is awesome <b class='p-nickname'>Aussie Method</b>"],
+                images: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg", "15.jpg", "16.jpg", "17.jpg", "18.jpg", "19.jpg", "20.jpg", "21.jpg", "22.jpg", "23.jpg", "24.jpg", "25.jpg", "26.jpg", "27.jpg", "28.jpg", "29.jpg", "30.jpg", "31.jpg", "32.jpg", "33.jpg", "34.jpg", "35.jpg", "36.jpg", "37.jpg", "38.jpg", "39.jpg", "40.jpg", "41.jpg", "42.jpg", "43.jpg", "44.jpg", "45.jpg", "46.jpg", "47.jpg", "48.jpg", "49.jpg", "50.jpg", "51.jpg", "52.jpg", "53.jpg", "54.jpg", "55.jpg", "56.jpg", "57.jpg", "58.jpg", "59.jpg", "60.jpg", "61.jpg", "62.jpg", "63.jpg", "64.jpg", "65.jpg", "66.jpg", "67.jpg", "68.jpg", "69.jpg", "70.jpg", "71.jpg", "72.jpg", "73.jpg", "74.jpg", "75.jpg", "76.jpg", "77.jpg", "78.jpg", "79.jpg", "80.jpg", "81.jpg", "82.jpg", "83.jpg", "84.jpg", "85.jpg", "86.jpg", "87.jpg", "88.jpg", "89.jpg", "90.jpg", "91.jpg", "92.jpg", "93.jpg", "94.jpg", "95.jpg", "96.jpg", "97.jpg", "98.jpg", "99.jpg", "1(1).jpg", "2(1).jpg", "3(1).jpg", "4(1).jpg", "5(1).jpg", "6(1).jpg", "7(1).jpg", "8(1).jpg", "9(1).jpg", "10(1).jpg", "11(1).jpg", "12(1).jpg", "13(1).jpg", "14(1).jpg", "15(1).jpg", "16(1).jpg", "17(1).jpg", "18(1).jpg", "19(1).jpg", "20(1).jpg", "21(1).jpg", "22(1).jpg", "23(1).jpg", "24(1).jpg", "25(1).jpg", "26(1).jpg", "27(1).jpg", "28(1).jpg", "29(1).jpg", "30(1).jpg", "31(1).jpg", "32(1).jpg", "33(1).jpg", "34(1).jpg", "35(1).jpg", "36(1).jpg", "37(1).jpg", "38(1).jpg", "39(1).jpg", "40(1).jpg", "41(1).jpg", "42(1).jpg", "43(1).jpg", "44(1).jpg", "45(1).jpg", "46(1).jpg", "47(1).jpg", "48(1).jpg", "49(1).jpg", "50(1).jpg", "51(1).jpg", "52(1).jpg", "53(1).jpg", "54(1).jpg", "55(1).jpg", "56(1).jpg", "57(1).jpg", "58(1).jpg", "59(1).jpg", "60(1).jpg", "61(1).jpg", "62(1).jpg", "63(1).jpg", "64(1).jpg", "65(1).jpg", "66(1).jpg", "67(1).jpg", "68(1).jpg", "69(1).jpg", "70(1).jpg", "71(1).jpg", "72(1).jpg", "73(1).jpg", "74(1).jpg", "75(1).jpg", "76(1).jpg", "77(1).jpg", "78(1).jpg", "79(1).jpg", "80(1).jpg", "81(1).jpg", "82(1).jpg", "83(1).jpg", "84(1).jpg", "85(1).jpg", "86(1).jpg", "87(1).jpg", "88(1).jpg", "89(1).jpg", "90(1).jpg", "91(1).jpg", "92(1).jpg", "93(1).jpg", "94(1).jpg", "95(1).jpg"],
+                cnt: 1,
+                num: null,
+
+                /*START THE FUNCTION*/
+                init: function (elementID, name, sort_name, times,display) {
+
+                    var html, pass_the_limit = null;
+                   
+                    for (i = 0; i < times; i++) {
+                        
+                        /*ASSIGN VARIABLE */
+                        funnelControll.tweeter_n_facebook_tempalte.assign_vals();
+
+                        /*CREATE FOR THE FIRST TIME THE TABLE*/
+                        html = funnelControll.tweeter_n_facebook_tempalte.create_tpl(elementID, name, sort_name,display);
+
+                        /*CHECK THE LENGTH*/
+                        pass_the_limit = funnelControll.tweeter_n_facebook_tempalte.check_length(elementID);
+
+                        /*IF THE PANEL CREATED*/
+                        if (pass_the_limit != undefined) {
+                            $(elementID).last().remove();
+                        }
+
+                        /*CHECK IF THE TEMPLATE CREATED*/
+                        if (html != undefined) {
+                            funnelControll.tweeter_n_facebook_tempalte.get_new_date(html);
+                        }
+                    }
+                },
+
+                /*ASSIGN VARIABLES*/
+                assign_vals: function () {
+
+
+                    this.counter = funnelControll.live_trade.get_random_number(0, this.images.length);
+                    this.dc = funnelControll.live_trade.get_random_number(0, this.data.length);
+                    this.oldtime = new Date();
+                    this.old_time = this.oldtime.getSeconds();
+                    return this;
+                },
+
+                /*CREATE THE TPL */
+                create_tpl: function (elementID, element_name, sort_name,display) {
+
+                    if (element_name == 'tweets') {
+                        element_name = 'twt';
+                        this.element_name = "tweets";
+                    }else{
+                        this.element_name = "facebook";
+                    }
+
+                    this.html_template = "<div class=\'" + element_name + "-message\'>\n    <div " +
+                        "class=\"" + sort_name + "-img-name-time head\">\n    " +
+                        "<div class=\'" + sort_name + "-img col-md-3 col-sm-3 col-xs-3 pull-left\'>\n        " +
+                        "<img class=\'" + sort_name + "-human-image img-responsive\' src=\"/img/aussie-new/fw/" + this.images[this.counter] + "\" alt=\"\">\n    " +
+                        "</div>\n        <div class=\'" + sort_name + "-name-n-time col-md-3 text-left pull-left\'>\n        " +
+                        "<h4 class=\'" + sort_name + "-name bold\'>" + this.nm[this.counter] + "</h4>\n        " +
+                        "<h5 id=\'curr_time_" + this.cnt + "\' class=\'ctime1 " + sort_name + "-time\' data-sec=\'" + funnelControll.live_trade.get_random_number(30, 600) + "\' class=\'" + sort_name + "-time\'>1 minute</h5>\n    " +
+                        "</div>\n\n    </div>\n" +
+                        "<div class=\"bottom\">\n    " +
+                        "<p class=\"content text-left col-md-12 col-sm-12 col-xs-12\"> " + this.data[this.dc] + "<span" +
+                        "class=\"bold\"></span>\n        </p>\n    " +
+                        "<div class=\'" + sort_name + "-tab col-md-12 col-sm-12 col-xs-12 pull-left text-left\' style='display:"+ display +"'>Like <span class=\'dash\'>-</span> Comment\n            <span class=\'dash\'>-</span> Share" +
+                        "</div>\n    </div>\n</div>";
+
+                    console.log
+                    this.template = $('#' + this.element_name + '-tab').append(this.html_template);
+                    this.cnt++;
+                    return this.cnt;
+                },
+
+                /*CHECK LENGTH*/
+                check_length: function (elementID) {
+                    var pass_limit = null;
+                    var length = $(elementID).length;
+                   console.log(elementID);
+                    if (length > 4) {
+                        pass_limit = true;
+                    }
+                    return pass_limit
+                },
+
+
+                /*CHANGE THE MESSAGE DATE */
+                get_new_date: function (html) {
+                    /*RUN THIS AFTER CREATE THE FIRST ELEMENT AND THEN CHANGE THE TIME OF THE INSERTED MESSAGE*/
+                    for (i = 1; i < html; i++) {
+
+                        var day = hour = minute = 0;
+                        sec1 = $("#curr_time_" + i).data('sec');
+                        sec1 = parseInt(sec1) + 60;
+                        $("#curr_time_" + i).attr('data-sec', sec1)
+                        minute = sec1 / 60;
+                        if (minute > 60)
+                            hour = minute / 60;
+                        if (hour > 24)
+                            day = hour / 24;
+                        if (day > 0)
+                            $("#curr_time_" + i).html(parseInt(day) + " days");
+                        else if (hour > 0)
+                            $("#curr_time_" + i).html(parseInt(hour) + " hrs");
+                        else if (minute > 0)
+                            $("#curr_time_" + i).html(parseInt(minute) + " mins");
+                    }
+                }
+            },
+        },
     });
 
     /*ASSIGN GLOBAL VARIABLE FOR THE FUNCTION*/
@@ -370,12 +501,17 @@
     /*9 LOADING IN PROCCESS*/
     funnelControll.loading();
 
-    ///*10 REMOVE ALL */
-    funnelControll.remove_form_css_members();
+    // funnelControll.tweeter_n_facebook_tempalte.init('.facebook-message', 'facebook', 'fb', 6);
+    funnelControll.tweeter_n_facebook_tempalte.init('.tweets-message', 'tweets', 'twt', 6,'none');
 
-    $('#prefix').attr({'placeholder': '+972'});
-}())
-;
+    setInterval(function () {
+        funnelControll.tweeter_n_facebook_tempalte.init('.facebook-message', 1);
+    }, 4000);
+// ///*10 REMOVE ALL */
+// funnelControll.remove_form_css_members();
+})($);
+
+
 /**
  * Created by Ilan Vachtel on 26/03/2016.
  */
