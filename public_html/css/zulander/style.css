@@ -21,6 +21,7 @@ a { color:#0072ff;}
 }
 
 .img-responsive { width: 100%; }
+.img-circle { border-radius: 50%; }
 
 .content .lenta { width:100%; height:117px; background:#00ccff url(/img/zulander/lenta-bg.jpg) repeat-x 0 0; position:relative;}
 .content .lenta-l {  width:100%; height:117px; background:url(/img/zulander/lenta-left.jpg) no-repeat 0 0; padding:42px 0 0 0;}
@@ -58,7 +59,7 @@ a { color:#0072ff;}
 .content .free .f2 { padding:10px 0 15px; max-width:453px; margin:0 auto;}
 .content .free .f3 { padding:15px 0 15px; max-width:453px; margin:0 auto;}
 
-.content .lasBtn { padding:40px 0;}
+.content .lasBtn { padding:0 0 10px 0;}
 
 .content .review { width:887px; margin:60px auto 0;}
 .content .review .line-l { width:887px; margin:0 auto; background:url(/img/zulander/line-l.jpg) no-repeat left 30px;}

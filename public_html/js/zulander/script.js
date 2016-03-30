@@ -72,14 +72,14 @@ function getUserContent() {
 				avatar.startDate	= data.avatarsText[i].startDate;
 				avatar.balance		= data.avatarsText[i].balance;
 				avatar.earned		= data.avatarsText[i].earned;
+				avatar.medal		= data.avatarsText[i].medal;
 
-				stories += '<div class="col-md-4 col-sm-4 active"><div class="block"> <div class="row"> <div class="col-md-5 col-sm-5 col-xs-5 photo"> <img src="/img/zulander/content/peoples/'+avatar.pic+'" width="100" alt="" class="/img-circle"> <div class="flag"><img src="/img/zulander/content/flags/' + avatar.flag + '" alt=""/></div> </div> <div class="col-md-7 col-sm-7 col-xs-7 name"><strong>'+avatar.name+'</strong><br/>'+avatar.address+'</div><div class="clear clearfix"></div> <div class="col-md-12 col-sm-12 col-xs-12"> <div class="text story">';
+				stories += '<div class="col-md-4 col-sm-4 active story-section animated"><div class="block"> <div class="row"> <div class="col-md-5 col-sm-5 col-xs-5 photo"> <img src="/img/zulander/content/peoples/'+avatar.pic+'" width="100" alt="" class="img-circle"> <div class="flag"><img src="/img/zulander/content/flags/' + avatar.flag + '" alt=""/></div> </div> <div class="col-md-7 col-sm-7 col-xs-7 name"><strong>'+avatar.name+'</strong><br/>'+avatar.address+'</div><div class="clear clearfix"></div> <div class="col-md-12 col-sm-12 col-xs-12"> <div class="text story">';
 
 				for(var x=0; x<data.avatarsText[i].story.length; x++) {
 					stories += data.avatarsText[i].story[x];
 				}
-
-				stories += '<p>Started Using Software: <strong>'+avatar.startDate+'</strong></p> <p>Starting Balance: <strong>$'+avatar.balance+'</strong></p> </div> <div class="total text-center">Total earned: <span>$'+avatar.earned+'</span> <strong>(withdrawn)</strong></div> <div class="rate"> <div class="star text-center"><img src="/img/zulander/star.png" alt="" /></div> <div class="trade text-center"><img src="/img/zulander/trader.png" alt="" /></div> <div class="verified text-right"><img src="/img/zulander/verified.png" alt="" /></div></div></div></div></div></div>';
+				stories += '<p>Started Using Software: <strong>'+avatar.startDate+'</strong></p> <p>Starting Balance: <strong>$'+avatar.balance+'</strong></p> </div> <div class="total text-center">Total earned: <span>$'+avatar.earned+'</span> <strong>(withdrawn)</strong></div> <div class="rate"> <div class="star text-center"><img src="/img/zulander/star.png" alt="" /></div> <div class="trade text-center"><img src="/img/zulander/'+avatar.medal+'.png" alt="" /></div> <div class="verified text-right"><img src="/img/zulander/verified.png" alt="" /></div></div></div></div></div></div>';
 			}
 
 			for(i=0; i<data.traders.length; i++) {
@@ -180,12 +180,37 @@ function updateVideoViewers() {
 }
 
 /**/
-if (screen.width < 768) {
-    $('#carousel-example-generic').attr('data-ride', 'carousel');
-    $('#carousel-example-generic .col-md-4').addClass('item');
-    $('#carousel-example-generic .col-md-4').removeClass('col-md-4');
-}
+// if (screen.width < 768) {
+//     $('#carousel-example-generic').attr('data-ride', 'carousel');
+//     $('#carousel-example-generic .col-md-4').addClass('item');
+//     $('#carousel-example-generic .col-md-4').removeClass('col-md-4');
+// }
 
 $('body').on('click','.goToMembers',function() {
 	$('#getLicenseBtn').click();
+});
+
+
+$('body').on('click','.slide-stories',function() {
+	var direction	= $(this).attr('data-direction');
+	var currSlide	= $('.story-section:visible');
+
+	if(direction == 'right') {
+		var nextSlide = currSlide.next();
+		if(!nextSlide.length) return;
+		currSlide.removeClass('bounceInRight').addClass('bounceOutLeft').delay(500).queue(function (next) {
+			currSlide.hide().removeClass('bounceOutLeft');
+			nextSlide.show().addClass('bounceInRight');
+			next();
+		});
+	}
+	else {
+		var prevSlide = currSlide.prev();
+		if(!prevSlide.length) return;
+		currSlide.removeClass('bounceInLeft').addClass('bounceOutRight').delay(500).queue(function (next) {
+			currSlide.hide().removeClass('bounceOutRight');
+			prevSlide.show().addClass('bounceInLeft');
+			next();
+		});
+	}
 });

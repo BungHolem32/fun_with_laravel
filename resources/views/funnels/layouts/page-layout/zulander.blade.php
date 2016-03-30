@@ -1,5 +1,6 @@
 @section('head')
     {!! $page->appendAsset(url('/css/zulander/bootstrap.min.css')) !!}
+    {!! $page->appendAsset(url('/css/zulander/animate.css')) !!}
     {!! $page->appendAsset(url('/css/zulander/style.css')) !!}
     {!! $page->appendAsset(url('/css/zulander/resp.css')) !!}
 @append
@@ -9,7 +10,6 @@
     {!! $page->appendAsset(url('/js/firstPage.js')) !!}
     {!! $page->appendAsset(url('/js/zulander/moment.min.js')) !!}
     {!! $page->appendAsset(url('/js/zulander/bootstrap.min.js')) !!}
-    {!! $page->appendAsset(url('/js/zulander/jquery.knob.js')) !!}
     {!! $page->appendAsset(url('/js/zulander/script.js')) !!}
 @append
 
@@ -24,12 +24,14 @@
                         <img class="country-logo" src="/img/zulander/loader.gif" alt=""/>
                         <span>
                             <strong>CONFIRMED:</strong>
-                            <span>You’ve been Invited to watch this Weird Presentation because you’re in<span>
+                            <span>You’ve been Invited to watch this Weird Presentation because you’re in</span>
                             <span class="country-name">...</span>
                         </span>
                     </div>
                 </div>
-
+                <div class="title text-center">
+                    "This Legal HACK Churns Out Up To <span>$1,008 EVERY 5 MINUTES</span> Like Clockwork..."
+                </div>
                 <div class="title text-center">
                     {!! $page->htmlHeader !!}
                 </div>
@@ -49,7 +51,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="avideo text-center">Claim One Of <span class="st1"><strike>10</strike> <strong class="count">10</strong> FREE LICENSES In <span class="country-name">...</span></span> To Make <span class="st2">$1,008</span> <strong>Every 5 MINUTES >></strong></div>
+                <div class="avideo text-center">Claim One Of <strong class="count">10</strong> FREE LICENSES In <span class="country-name">...</span></span> To Make <span class="st2">$1,008</span> <strong>Every 5 MINUTES >></strong></div>
                 <div class="free">
 
                     {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post']) !!}
@@ -99,17 +101,16 @@
                             <div class="carousel-inner" role="listbox">
                                 <div id="stories"></div>
                             </div>
-                            {{--<div class=" hidden-lg hidden-md hidden-sm">--}}
-                                <!-- Controls -->
-                                {{--<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">--}}
-                                    {{--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>--}}
-                                    {{--<span class="sr-only">Previous</span>--}}
-                                {{--</a>--}}
-                                {{--<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">--}}
-                                    {{--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>--}}
-                                    {{--<span class="sr-only">Next</span>--}}
-                                {{--</a>--}}
-                            {{--</div>--}}
+                            <div class=" hidden-lg hidden-md hidden-sm">
+                                <a class="left carousel-control" role="button">
+                                    <span class="glyphicon glyphicon-chevron-left slide-stories" data-direction="left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" role="button">
+                                    <span class="glyphicon glyphicon-chevron-right slide-stories" data-direction="right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

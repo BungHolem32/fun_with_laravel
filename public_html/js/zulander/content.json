@@ -5,6 +5,7 @@
         "startDate": "March 1, 2016",
         "balance": 250,
         "earned": "117,054",
+        "medal": "trader3",
         "story": [
           "<p>“I was able to get set up within a couple of minutes.</p>",
           "<p>From the time I set up the software, my balance started growing almost instantly.</p>",
@@ -16,6 +17,7 @@
         "startDate": "March 12, 2016",
         "balance": 250,
         "earned": "97,311",
+        "medal": "trader",
         "story": [
           "<p>“I was starting to think there was no way I could make money on my own. I tried everything and most times I failed to make a cent.</p>",
           "<p>I was almost ready to give up. But that’s when I found this software and started making money. Big money.</p>",
@@ -26,6 +28,7 @@
         "startDate": "March 8, 2016",
         "balance": 250,
         "earned": "110,552",
+        "medal": "trader2",
         "story": [
           "<p>I’m a believer! A month of achieving a 90% success rate has convinced me that this system is the closest thing there is to a guaranteed online money maker.</p>",
           "<p>You’d almost have to be trying on purpose to lose money.I barely needed to do anything, and my bank account just kept growing.</p>",
@@ -36,6 +39,7 @@
         "startDate": "March 3, 2016",
         "balance": 250,
         "earned": "101,997",
+        "medal": "trader",
         "story": [
           "<p>Other trading software can’t compete with the Zulander system for getting top performance each and every day.</p>",
           "<p>It’s easy to be fooled by systems that start out strong, but before you know it, they just fall flat and you start losing money.</p>",
@@ -46,6 +50,7 @@
         "startDate": "March 15, 2016",
         "balance": 250,
         "earned": "95,784",
+        "medal": "trader3",
         "story": [
           "<p>I’m pretty sure that I don’t have to worry about paying my mortgage ever again!</p>",
           "<p>I can finally afford to finish paying off my house! It’s such a relief that I don’t need to worry about money anymore.</p>",
@@ -57,6 +62,7 @@
         "startDate": "March 12, 2016",
         "balance": 250,
         "earned": "106,224",
+        "medal": "trader2",
         "story": [
           "<p>“I keep waking up in the middle of the night and checking that this was all free.</p>",
           "<p>How can something that costs nothing be making me so much money?</p>",
