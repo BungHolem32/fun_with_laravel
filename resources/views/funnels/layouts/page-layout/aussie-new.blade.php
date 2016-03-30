@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen"/>
 @append
 @section('bottom-scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
     @com('funnel_scripts')
     <script src="/js/fancybox/jquery.fancybox.js"></script>
     <script>
@@ -47,16 +48,16 @@
             var dc = rand_num(0, data.length);
             var oldtime = new Date();
             var old_time = oldtime.getSeconds();
-            var feed_name1 = $('.facebook-massages');
+            var feed_name1 = $('.facebook-message');
 
 //            document.getElementById("facebook-tab").innerHTML = "<div style=\'clear:both;\'></div>\n<div class=\'feed_name1\'>\n    <img src=\'/img/aussie-new/fw/" + images[counter] + "\' height=\'40\'/>\n    <b><a class=\'fbname social-name\' href=\'#\'>" + nm[counter] + "</a></b>\n    <br/>\n    <span id=\'curr_time_" + cnt + "\' class=\'ctime1\' sec=\'60\'>1 minute</span>\n    <div style=\'clear:both;\'></div>\n    <div id=\'data1\' class=\'fb-data\'>\n        <span> " + data[dc] + "</span>\n    </div>\n    <div class=\'facebook-tab\'>Like <span class=\'dash\'>-</span> Comment <span class=\'dash\'>-</span> Share</div>\n</div> " + document.getElementById("facebook-tab").innerHTML;
-            document.getElementById("facebook-tab").innerHTML = "<div class=\'facebook-massages\'>\n    <div " +
+            document.getElementById("facebook-tab").innerHTML = "<div class=\'facebook-message\'>\n    <div " +
                     "class=\"fb-img-name-time head\">\n    " +
                     "<div class=\'fb-img col-md-3 col-sm-3 col-xs-3 pull-left\'>\n        " +
                     "<img class=\'fb-human-image img-responsive\' src=\"/img/aussie-new/fw/" + images[counter] + "\" alt=\"\">\n    " +
                     "</div>\n        <div class=\'fb-name-n-time col-md-3 text-left pull-left\'>\n        " +
                     "<h4 class=\'fb-name bold\'>" + nm[counter] + "</h4>\n        " +
-                    "<h5 id=\'curr_time_"+ cnt + " \' class=\'ctime1 fb-time\' data-sec=\'60\' class=\'fb-time\'>1 minute</h5>\n    " +
+                    "<h5 id=\'curr_time_"+ cnt + "\' class=\'ctime1 fb-time\' data-sec=\'60\' class=\'fb-time\'>1 minute</h5>\n    " +
                     "</div>\n\n    </div>\n" +
                     "<div class=\"bottom\">\n    " +
                     "<p class=\"content text-left col-md-12 col-sm-12 col-xs-12\"> " + data[dc] + "<span" +
@@ -65,17 +66,16 @@
                     "</div>\n    </div>\n</div>"+document.getElementById("facebook-tab").innerHTML;
             if (feed_name1.length > 4) {
                 console.log(feed_name1.length);
-                $('.facebook-massages').last().remove();
+                $('.facebook-message').last().remove();
             }
 
             cnt++;
 
             for (i = 1; i < cnt; i++) {
                 var day = hour = minute = 0;
-                sec1 = $("#curr_time_" + i).data('sec')
-                console.log(sec1);
+                sec1 = $("#curr_time_" + i).data('sec');
                 sec1 = parseInt(sec1) + 60;//rand_num(60,360);
-                $("#curr_time_" + i).attr('sec', sec1)
+                $("#curr_time_" + i).attr('data-sec', sec1)
                 minute = sec1 / 60;
                 if (minute > 60)
                     hour = minute / 60;
@@ -147,9 +147,9 @@
                     "class=\"twt-img-name-time head\">\n    " +
                     "<div class=\'twt-img col-md-3 col-sm-3 col-xs-3 pull-left\'>\n        " +
                     "<img class=\'twt-human-image img-responsive\' src=\"/img/aussie-new/fw/" + images[counter] + "\" alt=\"\">\n    " +
-                    "</div>\n    <div class=\'twt-name-n-time col-md-3 col-sm-3 col-xs-3 text-left pull-left\'>\n        " +
-                    "<h4 class=\'twt-name bold\'>" + nm[counter] + "</h4>\n        " +
-                    "<h5 id=\'curr_time_"+ cnt+ " \' class=\'ctime1 twt-time\' sec=\'60\' class=\'twt-time\'>1 minute</h5>\n    " +
+                    "</div>\n    <div class=\'twt-name-n-time col-md-9 col-sm-9 col-xs-9  text-left pull-left\'>\n        " +
+                    "<h4 class=\'twt-name bold col-md-8\'>" + nm[counter] + "</h4>\n        " +
+                    "<h5 id=\'curr_time_"+ cnt+"\' class=\'ctime1 twt-time pull-right\' data-sec=\'60\' class=\'twt-time\'>1 minute</h5>\n    " +
                     "</div>\n\n</div>\n" +
                     "<div class=\"bottom\">\n    " +
                     "<p class=\"content text-left col-md-12 col-sm-12 col-xs-12\"> " + data[dc] + "        <span" +
@@ -162,9 +162,9 @@
 
             for (i = 1; i < cnt; i++) {
                 var day = hour = minute = 0;
-                sec1 = $("#curr_time_" + i).attr('sec');
-                sec1 = parseInt(sec1) + 60;//rand_num(60,360);
-                $("#curr_time_" + i).attr('sec', sec1)
+                sec2 = $("#curr_time_" + i).data('sec');
+                sec2 = parseInt(sec1) + 60;//rand_num(60,360);
+                $("#curr_time_" + i).attr('data-sec', sec2);
                 minute = sec1 / 60;
                 if (minute > 60)
                     hour = minute / 60;
@@ -269,12 +269,12 @@
             <section id="strip_href">
                 <div class="container">
                     <ul class="row">
-                        <li class="col-md-offset-1 col-md-2 col-sm-12 col-xs-12"><a href="#jake-pertu">Who am I?</a>
+                        <li class="col-md-offset-1 col-md-2 col-sm-12 col-xs-12 who"><a href="#jake-pertu">Who am I?</a>
                         </li>
-                        <li class="col-md-2 col-sm-12 col-xs-12"><a href="#success-pic">Success Stories</a></li>
-                        <li class="col-md-2 col-sm-12 col-xs-12"><a href="#video-how-method-works">How It Works</a></li>
-                        <li class="col-md-2 col-sm-12 col-xs-12"><a href="#live-third-party">Live Results</a></li>
-                        <li class="col-md-2 col-sm-12 col-xs-12"><a href="#frequently-asked-questions">FAQs</a></li>
+                        <li class="col-md-2 col-sm-12 col-xs-12 success"><a href="#success-pic">Success Stories</a></li>
+                        <li class="col-md-2 col-sm-12 col-xs-12 video"><a href="#video-how-method-works">How It Works</a></li>
+                        <li class="col-md-2 col-sm-12 col-xs-12 live-result"><a href="#live-third-party">Live Results</a></li>
+                        <li class="col-md-2 col-sm-12 col-xs-12 faq"><a href="#frequently-asked-questions">FAQs</a></li>
                     </ul>
                 </div>
             </section>
@@ -337,19 +337,24 @@
                         </div>
 
                         <div id="content-social " class="col-md-12">
+
+                            <header class='col-lg-6 col-md-6 col-sm-12-col-xs-12'>
+                                <h4 class="fb-title capitalize">comments</h4>
+                            </header>
+
+                            <header class='col-lg-6 col-md-6 col-sm-12-col-xs-12'>
+                                <h4 class="tweets-title capitalize">Tweets</h4>
+                            </header>
                             <div id="facebook-tab" class="col-md-6">
                                 <div class="logotag tweet-2 col-md-6 col-sm-12  col-xm-6">
                                     <img src="/img/aussie-new/twt.png" alt="facebook logo">
                                     <!-- header FACEBOOK -->
-                                    <header class='col-lg-6 col-md-6 col-sm-12-col-xs-12'>
-                                        <h4 class="fb-title capitalize">comments</h4>
-                                    </header>
-
                                 </div>
+                                <header class='col-lg-6 col-md-6 col-sm-12-col-xs-12'>
+                                    <h4 class="tweets-title-2 capitalize">Tweets</h4>
+                                </header>
                             </div>
-                            <div id="tweets-tab" class="col-md-6 ">
-
-                            </div>
+                            <div id="tweets-tab" class="col-md-6 "></div>
                         </div>
                     </div>
                 </div>
@@ -443,10 +448,10 @@
 
         <footer class="row col-md-12">
 
-            <div id="left-footer" class="col-md-11 col-sm-10 col-xs-9 push-left"> Copyright 2016 Aussie Method. All
+            <div id="left-footer" class="col-md-10 col-sm-10 col-xs-9 push-left"> Copyright 2016 Aussie Method. All
                 Right Reserved.
             </div>
-            <div id="right-footer" class="col-md-1 col-sm-2 col-xs-3 push-right">
+            <div id="right-footer" class="col-md-2 col-sm-2 col-xs-3 push-right">
                 @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/policy", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Privacy'])
                 |
                 @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/terms", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Terms'])

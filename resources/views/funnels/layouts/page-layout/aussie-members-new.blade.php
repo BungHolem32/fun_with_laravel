@@ -56,19 +56,34 @@
             var dc = rand_num(0, data.length);
             var oldtime = new Date();
             var old_time = oldtime.getSeconds();
-            var feed_name1 = $('.feed_name1');
+            var feed_name1 = $('.facebook-message');
 
-            document.getElementById("facebook-tab").innerHTML = "<div style='clear:both;'></div><div class='feed_name1'><img src='/img/aussie-new/fw/" + images[counter] + "' height='40' /><b><a class='fbname social-name' href='#'>" + nm[counter] + "</a></b><br/><span id='curr_time_" + cnt + "' class='ctime1' sec='60'>1 minute</span><div style='clear:both;'></div><div id='data1' class='fb-data'> <span> " + data[dc] + "</span></div><div class='facebook-tab'>Like <span class='dash'>-</span> Comment <span class='dash'>-</span> Share </div></div> " + document.getElementById("facebook-tab").innerHTML;
+//            document.getElementById("facebook-tab").innerHTML = "<div style=\'clear:both;\'></div>\n<div class=\'feed_name1\'>\n    <img src=\'/img/aussie-new/fw/" + images[counter] + "\' height=\'40\'/>\n    <b><a class=\'fbname social-name\' href=\'#\'>" + nm[counter] + "</a></b>\n    <br/>\n    <span id=\'curr_time_" + cnt + "\' class=\'ctime1\' sec=\'60\'>1 minute</span>\n    <div style=\'clear:both;\'></div>\n    <div id=\'data1\' class=\'fb-data\'>\n        <span> " + data[dc] + "</span>\n    </div>\n    <div class=\'facebook-tab\'>Like <span class=\'dash\'>-</span> Comment <span class=\'dash\'>-</span> Share</div>\n</div> " + document.getElementById("facebook-tab").innerHTML;
+            document.getElementById("facebook-tab").innerHTML = "<div class=\'facebook-message\'>\n    <div " +
+                    "class=\"fb-img-name-time head\">\n    " +
+                    "<div class=\'fb-img col-md-3 col-sm-3 col-xs-3 pull-left\'>\n        " +
+                    "<img class=\'fb-human-image img-responsive\' src=\"/img/aussie-new/fw/" + images[counter] + "\" alt=\"\">\n    " +
+                    "</div>\n        <div class=\'fb-name-n-time col-md-3 text-left pull-left\'>\n        " +
+                    "<h4 class=\'fb-name bold\'>" + nm[counter] + "</h4>\n        " +
+                    "<h5 id=\'curr_time_"+ cnt + "\' class=\'ctime1 fb-time\' data-sec=\'60\' class=\'fb-time\'>1 minute</h5>\n    " +
+                    "</div>\n\n    </div>\n" +
+                    "<div class=\"bottom\">\n    " +
+                    "<p class=\"content text-left col-md-12 col-sm-12 col-xs-12\"> " + data[dc] + "<span" +
+                    "class=\"bold\"></span>\n        </p>\n    " +
+                    "<div class=\'fb-tab col-md-12 col-sm-12 col-xs-12 pull-left text-left\'>Like <span class=\'dash\'>-</span> Comment\n            <span class=\'dash\'>-</span> Share" +
+                    "</div>\n    </div>\n</div>"+document.getElementById("facebook-tab").innerHTML;
             if (feed_name1.length > 4) {
-                $('.feed_name1').last().remove();
+                console.log(feed_name1.length);
+                $('.facebook-message').last().remove();
             }
+
             cnt++;
 
             for (i = 1; i < cnt; i++) {
                 var day = hour = minute = 0;
-                sec1 = $("#curr_time_" + i).attr('sec');
+                sec1 = $("#curr_time_" + i).data('sec');
                 sec1 = parseInt(sec1) + 60;//rand_num(60,360);
-                $("#curr_time_" + i).attr('sec', sec1)
+                $("#curr_time_" + i).attr('data-sec', sec1)
                 minute = sec1 / 60;
                 if (minute > 60)
                     hour = minute / 60;
@@ -122,22 +137,42 @@
         var cnt = 1;
         var num = null;
         function autoRefresh() {
-            num = $('.feed_name2').length;
+            num = $('.twt-message').length;
             var counter = rand_num(0, images.length);
             var dc = rand_num(0, data.length);
             var oldtime = new Date();
             var old_time = oldtime.getSeconds();
-            document.getElementById("tweets-tab").innerHTML = "<div style='clear:both;'></div><div class='feed_name2'><img class='twt-image' src='/img/aussie-new/tw/" + images[counter] + "' height='50' /><div id='data2' class='twt-data' style='display:inline-block'><b><a class='twtname social-name' href='#'>" + nm[counter] + "</a></b><span id='curr_time_" + cnt + "' class='ctime2' sec='60'>1 minute ago</span><p> " + data[dc] + "</p></div></div>" + document.getElementById("tweets-tab").innerHTML;
+///*            document.getElementById("twt-message").innerHTML = "<div style='clear:both;'></div>" +
+//                    "<div class='feed_name2'><img class='twt-image' src='/img/aussie-new/tw/" + images[counter] + "' height='50' />" +
+//                    "<div id='data2' class='twt-data' style='display:inline-block'>" +
+//                    "<b>" +
+//                    "<a class='twtname social-name' href='#'>" + nm[counter] + "</a></b>" +
+//                    "<span id='curr_time_" + cnt + "' class='ctime2' sec='60'>1 minute ago</span>" +
+//                    "<p> " + data[dc] + "</p></div>" +
+//      */              "</div>" + document.getElementById("tweets-tab").innerHTML;
+
+            document.getElementById("tweets-tab").innerHTML =  " <div class=\"twt-message\">\n    <div " +
+                    "class=\"twt-img-name-time head\">\n    " +
+                    "<div class=\'twt-img col-md-3 col-sm-3 col-xs-3 pull-left\'>\n        " +
+                    "<img class=\'twt-human-image img-responsive\' src=\"/img/aussie-new/fw/" + images[counter] + "\" alt=\"\">\n    " +
+                    "</div>\n    <div class=\'twt-name-n-time col-md-9 col-sm-9 col-xs-9  text-left pull-left\'>\n        " +
+                    "<h4 class=\'twt-name bold col-md-8\'>" + nm[counter] + "</h4>\n        " +
+                    "<h5 id=\'curr_time_"+ cnt+"\' class=\'ctime1 twt-time pull-right\' data-sec=\'60\' class=\'twt-time\'>1 minute</h5>\n    " +
+                    "</div>\n\n</div>\n" +
+                    "<div class=\"bottom\">\n    " +
+                    "<p class=\"content text-left col-md-12 col-sm-12 col-xs-12\"> " + data[dc] + "        <span" +
+                    " class=\"bold\"></span>\n    </p>\n    " + "\n    </div>\n</div>"+ document.getElementById("tweets-tab").innerHTML;
             if (num > 4) {
-                $('.feed_name2').last().remove();
+                $('.twt-message').last().remove();
             }
             cnt++;
 
+
             for (i = 1; i < cnt; i++) {
                 var day = hour = minute = 0;
-                sec1 = $("#curr_time_" + i).attr('sec');
-                sec1 = parseInt(sec1) + 60;//rand_num(60,360);
-                $("#curr_time_" + i).attr('sec', sec1)
+                sec2 = $("#curr_time_" + i).data('sec');
+                sec2 = parseInt(sec1) + 60;//rand_num(60,360);
+                $("#curr_time_" + i).attr('data-sec', sec2);
                 minute = sec1 / 60;
                 if (minute > 60)
                     hour = minute / 60;
@@ -226,7 +261,7 @@
 
                 <!--COMPANY LOGO-->
                 <div id="company" class="pull-left col-md-2 col-sm-2 col-xs-2  ">
-                    <img src="/img/aussie-new/logo.png" alt="company logo">
+                    <img src="/img/aussie-new/aussieLogo.jpg" alt="company logo">
                 </div>
 
                 <!--MAN LOGO-->
@@ -271,10 +306,10 @@
                 <div class="container">
                     <ul class="row">
                         <div class="col-md-12">
-                            <li class="col-md-3 col-sm-12 col-xs-12"><a href="#3-steps">Getting Started</a></li>
-                            <li class="col-md-4 col-sm-12 col-xs-12"><a href="#success">Current Members Trading
+                            <li class="col-md-3 col-sm-12 col-xs-12 steps-m"><a href="#3-steps">Getting Started</a></li>
+                            <li class="col-md-4 col-sm-12 col-xs-12 success-m"><a href="#success">Current Members Trading
                                     Accounts</a></li>
-                            <li class="col-md-5 col-sm-12 col-xs-12"><a href="#live-result-pic">See Live Facebook &amp;
+                            <li class="col-md-5 col-sm-12 col-xs-12 live-m"><a href="#live-result-pic">See Live Facebook &amp;
                                     Twitter Feedback</a></li>
                         </div>
                     </ul>
@@ -502,6 +537,7 @@
             <!--TWEETER & FACEBOOK TAGS LIVE RESULTS -->
             <section id="live-result-pic" class="container">
 
+
                 <div class="row">
 
                     <!--TITLE TWEETED + FACEBOOK PICS-->
@@ -525,15 +561,24 @@
                         </div>
 
                         <div id="content-social " class="col-md-12">
+
+                            <header class='col-lg-6 col-md-6 col-sm-12-col-xs-12'>
+                                <h4 class="fb-title capitalize">comments</h4>
+                            </header>
+
+                            <header class='col-lg-6 col-md-6 col-sm-12-col-xs-12'>
+                                <h4 class="tweets-title capitalize">Tweets</h4>
+                            </header>
                             <div id="facebook-tab" class="col-md-6">
                                 <div class="logotag tweet-2 col-md-6 col-sm-12  col-xm-6">
-                                    <img src="/img/aussie-new/twt.png" alt="facebook logo"
-                                    >
+                                    <img src="/img/aussie-new/twt.png" alt="facebook logo">
+                                    <!-- header FACEBOOK -->
                                 </div>
+                                <header class='col-lg-6 col-md-6 col-sm-12-col-xs-12'>
+                                    <h4 class="tweets-title-2 capitalize">Tweets</h4>
+                                </header>
                             </div>
-                            <div id="tweets-tab" class="col-md-6 ">
-
-                            </div>
+                            <div id="tweets-tab" class="col-md-6 "></div>
                         </div>
                     </div>
                 </div>
@@ -546,7 +591,7 @@
                     </header>
 
                     <div class="video-n-images col-md-12">
-                        <img src="/img/aussie-new/ipad.png" alt="ipad image" class="col-md-12 col-sm-12  col-xs-12">
+                        <img src="/img/aussie-new/ipad.png" alt="ipad image" class="img-responsive center-block">
                         <div class="video-tag">
                             @include('funnels.layouts._partials._video', ['video_url'=>'http://video.chaki.netdna-cdn.com/guide4f.mp4','w'=>'100%', 'h'=>'100%','autoplay'=>'false'])
                         </div>
@@ -599,10 +644,10 @@
 
         <footer class="row col-md-12">
 
-            <div id="left-footer" class="col-md-11 col-sm-10 col-xs-9 push-left"> Copyright 2016 Aussie Method. All
+            <div id="left-footer" class="col-md-10 col-sm-10 col-xs-9 push-left"> Copyright 2016 Aussie Method. All
                 Right Reserved.
             </div>
-            <div id="right-footer" class="col-md-1 col-sm-2 col-xs-3 push-right">
+            <div id="right-footer" class="col-md-2 col-sm-2 col-xs-3 push-right">
                 <a class="fancybox_iframe" href="/EN/aussie-new/policy" target="&quot;_blank&quot;">Privacy |</a>
                 <a class="fancybox_iframe" href="/EN/aussie/members/../terms" target="&quot;_blank&quot;">Terms </a>
             </div>
@@ -646,14 +691,3 @@
 
     </div>
 @endsection
-
-
-<div id="feed_content2">
-    <div style="clear:both;"></div>
-    <div id="feed_name2"><img src="/img/aussie/tw/9.jpg" height="50">
-        <div id="data2"><b><a href="#">Henry</a></b><span id="curr_time_8" class="ctime" sec="60">1 minute ago</span>
-            <p> Deposited $250 @<b class="p-nickname">aussiemethod</b> with the verified trader system now my account
-                sits at over $30k in just a week #Lovethis #millionairestatus</p></div>
-    </div>
-
-</div>

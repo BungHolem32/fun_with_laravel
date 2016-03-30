@@ -52,8 +52,8 @@
                         $('#trades').html(html);
                     }
 
-                    // clearInterval(mC);
-                    // mC = setInterval(funnelControll.live_trade.init, funnelControll.live_trade.get_random_number(700, 3000));
+                    clearInterval(mC);
+                    mC = setInterval(funnelControll.live_trade.init, funnelControll.live_trade.get_random_number(700, 3000));
                 },
                 create_random_template_for_trades: function (len) {
 
@@ -364,7 +364,7 @@
     funnelControll.live_trade.init(11);
 
     /*8 SHUFFLE THE ARRAY*/
-    // var mC = setInterval(funnelControll.live_trade.init, funnelControll.live_trade.get_random_number(700, 3000));
+    var mC = setInterval(funnelControll.live_trade.init, funnelControll.live_trade.get_random_number(700, 3000));
     funnelControll.live_trade.init();
 
     /*9 LOADING IN PROCCESS*/
