@@ -65,7 +65,7 @@
                         </div>
                         <div class="f2 text-center" id="formSection">
                             <input id="getLicenseBtn" type="submit" value="GIVE ME A FREE LICENSE!" class="go1"/>
-                            <div class="strelka visible-xs"><img src="/img/zulander/hurry2.PNG" class="img-responsive"  alt=""/></div>
+                            <div class="strelka visible-xs"><img src="/img/zulander/hurry2.png" class="img-responsive"  alt=""/></div>
                             <div id="timer2" class="visible-sm visible-xs">
                                 <div class="col-sm-4 col-xs-4">
                                     <div class="progress-radial progress-100">
