@@ -33,7 +33,7 @@ class ZulanderController extends \App\Http\Controllers\Base\AbstractFunnelContro
         else {
             $response['countryCode']    = 'gb';
             $response['countryName']    = 'united kingdom';
-            $response['traders']        = $content['au_nz_gb_ca_sa'];
+            $response['traders']        = $content['traders']['au_nz_gb_ca_sa'];
             $response['content']        = $content['gb'];
         }
         return response()->json($response);
