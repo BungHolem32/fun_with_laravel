@@ -1,32 +1,3 @@
-<?php
-$countryCode        = false;
-$countryName        = false;
-$locationContent    = null;
-
-$content        = json_decode(file_get_contents(url("/js/zulander/content.json")),true);
-$loc            = \App\Services\Location::getByUserIp();
-$countryCode    = strtolower($loc['iso']);
-$countryName    = strtolower($loc['countryName']);
-
-if(!$countryCode) {
-    $countryCode = 'uk';
-    $countryName = 'united kingdom';
-}
-
-foreach($content as $country => $data) {
-    $codes = explode('_',$country);
-    if(in_array($countryCode,$codes)) {
-        $locationContent = $content[$country];
-        break;
-    }
-}
-
-if(!$locationContent) {
-    $locationContent = $content['be_cz_fr_de_it_nl_no_pl_es_sz'];
-}
-
-?>
-
 @section('head')
     {!! $page->appendAsset(url('/css/zulander/bootstrap.min.css')) !!}
     {!! $page->appendAsset(url('/css/zulander/flipclock.css')) !!}
@@ -41,7 +12,6 @@ if(!$locationContent) {
     {!! $page->appendAsset(url('/js/zulander/flipclock.min.js')) !!}
     {!! $page->appendAsset(url('/js/zulander/jquery.knob.js')) !!}
     <script type="text/javascript">
-        var locationContent = <?php echo json_encode($locationContent) ?>;
     </script>
     {!! $page->appendAsset(url('/js/zulander/script.js')) !!}
 @append
@@ -55,7 +25,7 @@ if(!$locationContent) {
         <div class="content">
             <div class="lenta">
                 <div class="lenta-l text-center">
-                    <span><strong>CONGRATULATIONS:</strong>You just Completed Step One &<br />Joined the LIVE Queue For {{$countryName}}!</span>
+                    <span><strong>CONGRATULATIONS:</strong>You just Completed Step One &<br />Joined the LIVE Queue For <span class="country-name">...</span>!</span>
                 </div>
             </div>
             <div class="title text-center">
@@ -81,7 +51,7 @@ if(!$locationContent) {
                     You Only Have <span>7 MINUTES</span> To Open A Trading Account & Start Making Up To <span>$1,008 EVERY 5 MINUTES!</span>
                 </div>
                 <div><div id="clock1" class="clock"></div></div>
-                <div class="foot"><strong>You Must Enter Your Details In The Form</strong> Before The Clock Hits Zero. There Are Currently 1591 People In {{$countryName}} Waiting To Take Your FREE License.</div>
+                <div class="foot"><strong>You Must Enter Your Details In The Form</strong> Before The Clock Hits Zero. There Are Currently 1591 People In <span class="country-name">...</span> Waiting To Take Your FREE License.</div>
             </div>
             <div class="simletext  hidden-sm hidden-xs">
                 <p>Zulander Hack is a completely NEW and UNSEEN Binary Options software...</p>
@@ -105,10 +75,10 @@ if(!$locationContent) {
                     <div id="second">
                         @include('funnels.layouts._partials._form-mobile', ['funnelId' => $page->getParent()->id]);
                         <div class="yes">I understand that if I leave this page I will never see it again. I want to be financially free and never have to worry about money again. I realize the Zulander Hack can help me achieve this and that TODAY <strong>only <span class="count"></span> FREE licenses</strong> are being given away.</div>
-                        <div class=" hidden-sm hidden-xs">
-                            <input type="submit" value="NO, LET SOMEONE ELSE HAVE MY LICENSE" class="go3"/>
+                        {{--<div class="hidden-sm hidden-xs">--}}
+                            <input type="submit" value="NO, LET SOMEONE ELSE HAVE MY LICENSE" class="go3 img-responsive"/>
                             <div class="no">I am refusing my FREE copy of Zulander Hack. I realize this is an amazing software and I will never again have a chance to own a FREE copy. I hereby release my rights to this license and you may give it to a deserving person who is next in the waiting list.</div>
-                        </div>
+                        {{--</div>--}}
                         <div id="timer2" class="visible-sm visible-xs">
                             <div class="col-sm-4 col-xs-4">
                                 <div class="progress-radial progress-100">
@@ -131,7 +101,7 @@ if(!$locationContent) {
                 <div>
                     <div id="clock2" class="clock"></div>
                 </div>
-                <div class="foot"><strong>You Must Enter Your Details In The Form</strong> Before The Clock Hits Zero. There Are Currently 1591 People In {{ $countryName }} Waiting To Take Your FREE License.</div>
+                <div class="foot"><strong>You Must Enter Your Details In The Form</strong> Before The Clock Hits Zero. There Are Currently 1591 People In <span class="country-name">...</span> Waiting To Take Your FREE License.</div>
             </div>
             <div class="step4 text-center">STEP THREE: <span>MAKE A DEPOSIT<br/>INTO YOUR BROKER ACCOUNT</span></div>
             <div class="simletext">
