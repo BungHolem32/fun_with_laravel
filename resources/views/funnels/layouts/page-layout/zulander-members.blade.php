@@ -104,7 +104,7 @@ if(!$locationContent) {
                     <img src="/img/zulander/RBOPTION.jpg" alt="" />
                     <div id="second">
                         @include('funnels.layouts._partials._form-mobile', ['funnelId' => $page->getParent()->id]);
-                        <div class="yes">I understand that if I leave this page I will never see it again. I want to be financially free and never have to worry about money again. I realize that Zulander Hack can help me achieve this and TODAY <strong>only <strike>3</strike> 2 FREE licenses</strong> are being given away.</div>
+                        <div class="yes">I understand that if I leave this page I will never see it again. I want to be financially free and never have to worry about money again. I realize the Zulander Hack can help me achieve this and that TODAY <strong>only <span class="count"></span> FREE licenses</strong> are being given away.</div>
                         <div class=" hidden-sm hidden-xs">
                             <input type="submit" value="NO, LET SOMEONE ELSE HAVE MY LICENSE" class="go3"/>
                             <div class="no">I am refusing my FREE copy of Zulander Hack. I realize this is an amazing software and I will never again have a chance to own a FREE copy. I hereby release my rights to this license and you may give it to a deserving person who is next in the waiting list.</div>

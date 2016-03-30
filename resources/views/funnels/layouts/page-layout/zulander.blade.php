@@ -15,15 +15,21 @@
 
 @section('page-layout')
         <div class="wrapper">
-            <div class="logo text-center">
+            <div class="logo">
                 <a href="/"><img src="/img/zulander/logo.png" alt=""/></a>
             </div>
             <div class="content">
                 <div class="lenta">
                     <div class="lenta-l text-center">
-                        <img class="country-logo" src="/img/zulander/loader.gif" alt=""/> <span><strong>CONFIRMED:</strong>You’ve been Invited to watch this Weird Presentation because you’re in <span class="country-name">...</span></span>
+                        <img class="country-logo" src="/img/zulander/loader.gif" alt=""/>
+                        <span>
+                            <strong>CONFIRMED:</strong>
+                            <span>You’ve been Invited to watch this Weird Presentation because you’re in<span>
+                            <span class="country-name">...</span>
+                        </span>
                     </div>
                 </div>
+
                 <div class="title text-center">
                     {!! $page->htmlHeader !!}
                 </div>
@@ -57,7 +63,7 @@
                         </div>
                         <div class="f2 text-center" id="formSection">
                             <input id="getLicenseBtn" type="submit" value="GIVE ME A FREE LICENSE!" class="go1"/>
-                            <div class="strelka visible-xs"><img src="/img/zulander/strelka2.png" class="/img-responsive"  alt=""/></div>
+                            <div class="strelka visible-xs"><img src="/img/zulander/strelka2.png" class="img-responsive"  alt=""/></div>
                             <div id="timer2" class="visible-sm visible-xs">
                                 <div class="col-sm-4 col-xs-4">
                                     <div class="progress-radial progress-100">
@@ -93,17 +99,17 @@
                             <div class="carousel-inner" role="listbox">
                                 <div id="stories"></div>
                             </div>
-                            <div class=" hidden-lg hidden-md hidden-sm">
+                            {{--<div class=" hidden-lg hidden-md hidden-sm">--}}
                                 <!-- Controls -->
-                                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </div>
+                                {{--<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">--}}
+                                    {{--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>--}}
+                                    {{--<span class="sr-only">Previous</span>--}}
+                                {{--</a>--}}
+                                {{--<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">--}}
+                                    {{--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>--}}
+                                    {{--<span class="sr-only">Next</span>--}}
+                                {{--</a>--}}
+                            {{--</div>--}}
                         </div>
                     </div>
                 </div>

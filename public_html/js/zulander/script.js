@@ -111,8 +111,12 @@ function realTimeDisplay() {
 }
 
 String.prototype.capitalizeFirstLetter = function() {
-	return this.charAt(0).toUpperCase() + this.slice(1);
-}
+	var words = this.split(' ');
+	for(var i=0; i<words.length; i++) {
+		words[i] = words[i].charAt(0).toUpperCase() +  words[i].slice(1);
+	}
+	return words.join(' ');
+};
 
 function updateLiveResultCounter() {
 	var rand		= Math.round(Math.random() * (8000 - 200)) + 200;

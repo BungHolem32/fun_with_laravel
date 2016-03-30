@@ -19,19 +19,37 @@
 	.online { display:none;}
 	#timer2 { display:block!important; margin:20px 0;}
 	#timer2 .title { margin:28px 0 0 0; text-align:left;}
-	.content .lenta-l:after { display:none;}
+	/*.content .lenta-l:after { display:none;}*/
 	#timer2 .title2 { font-size:26px; text-transform:uppercase; margin:5px 0 0 0;}
 	#timer2 .title2 span { font-size:26px; text-transform:uppercase; color:#00ccff; font-family: RobotoCondensed-Bold;}
 }
 @media (max-width: 974px) {
 	.wrapper { width: 100%; margin: 0 auto;}
-	.logo img { width:auto; width:100%!important;}
+	.logo img { width: auto; width: 100% !important;}
 	.content { width:90%; margin:0 auto;}
-	.content .lenta-l { padding:31px 0 0 74px;}
-	.content .lenta-l img { display:none;}
-	.content .lenta span strong { font-size:19px; line-height:12px;}
-	.content .lenta span { font-size:19px; line-height:12px; position:relative;}
-	.content .lenta span:before{ width:50px; height:50px; content: " "; background-image: url(/img/zulander/icon.png); position: absolute; left:-50px; top:5px;}
+
+	.content .lenta-l img {
+		float: left;
+		margin-left: 19px;
+		position: relative;
+		bottom: -4px;
+		width: 40px;
+	}
+
+	.content .lenta-l span, .content .lenta-l strong {
+		font-size: 1em !important;
+	}
+
+	.content .lenta-l > span {
+		position: relative;
+		bottom: 16px;
+	}
+
+	/*.content .lenta-l { padding:31px 0 0 74px;}*/
+	/*.content .lenta-l img { display:none; }*/
+	/*.content .lenta span strong { font-size:19px; line-height:12px;}*/
+	/*.content .lenta span { font-size:19px; line-height:12px; position:relative;}*/
+	/*.content .lenta span:before{ width:50px; height:50px; content: " "; position: absolute; left:-50px; top:5px;}*/
 	.content .title { font-size:24px;}
 	.content .title span { color: #ff9000; font-size: 32px;}
 	.content .bvideo { font-size:20px;}
@@ -70,11 +88,11 @@
 	.carousel-inner { overflow:visible ;}
 	
 	
-	#second .content .lenta-l { padding:50px 0 0 40px;}
-	#second .content .lenta-l img { display:none;}
-	#second .content .lenta strong {font-size: 22px; line-height:16px;}
-	#second .content .lenta span {font-size: 22px; line-height:16px;}
-	#second .content .lenta span:before{ width:50px; height:50px; content: " "; background-image: url(/img/zulander/icon.png); position: absolute; left:-50px; top:5px;}
+	/*#second .content .lenta-l { padding:50px 0 0 40px;}*/
+	/*#second .content .lenta-l img { display:none;}*/
+	/*#second .content .lenta strong {font-size: 22px; line-height:16px;}*/
+	/*#second .content .lenta span {font-size: 22px; line-height:16px;}*/
+	/*#second .content .lenta span:before{ width:50px; height:50px; content: " "; position: absolute; left:-50px; top:5px;}*/
 	#second .content .title span { color: #ff9000; font-size: 24px;}
 	#second .content .title {font-size: 22px;}
 	.content .timer { width:98%;}
@@ -193,7 +211,8 @@
 	#second .content .green .title strong:before { width:25px; height:25px; content: " "; background-image: url(/img/zulander/znak.jpg); background-size:contain; background-repeat: no-repeat; position: absolute; left:-30px; bottom:-2px;}
 }
 @media (max-width:414px) {
-	.content .review { width:372px; overflow:hidden; padding:0 0 50px 0;}
+	/*.content .review { width:372px; overflow:hidden; padding:0 0 50px 0;}*/
+	.content .review { width:100%; overflow:hidden; padding:0 0 50px 0;}
 }
 @media (max-width:375px) {
 	.sert .code { font-size: 10px!important;  padding: 20px 0 0 0;}
@@ -251,15 +270,15 @@
 }
 @media (max-width:320px) {
 	.logo img { width:auto; width:100%!important;}
-	.content .lenta span {
-    font-size: 16px!important;
-    line-height: 12px;
-    position: relative;
-	}
-	.content .lenta span strong {
-    font-size: 16px!important;
-    line-height: 12px;
-	}
+	/*.content .lenta span {*/
+    /*font-size: 16px!important;*/
+    /*line-height: 12px;*/
+    /*position: relative;*/
+    /*}*/
+    /*.content .lenta span strong {*/
+    /*font-size: 16px!important;*/
+    /*line-height: 12px;*/
+    /*}*/
 
 	.video-progress-buttons { display:none;}
 	.video-progress-viewers { width:120px; overflow:hidden; height:30px;}
@@ -298,9 +317,7 @@
 		line-height: 20px;
 	}
 	.sert .code { padding: 15px 0 0 0;}
-	.content .lenta-l {
-		padding: 31px 0 0 60px;
-	}
+	/*.content .lenta-l { padding: 31px 0 0 60px; }*/
 	.content .title, .content .title span {
 		font-size: 18px; line-height:20px;
 	}	

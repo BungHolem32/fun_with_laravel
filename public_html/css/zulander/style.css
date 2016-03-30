@@ -13,17 +13,20 @@ a { color:#0072ff;}
 /**/
 .logo { margin:0; padding:0;}
 
-.content { 
+.content {
 	background:#fff;
 	-webkit-box-shadow: 0px 0px 76px 16px rgba(0,0,0,1);
 	-moz-box-shadow: 0px 0px 76px 16px rgba(0,0,0,1);
 	box-shadow: 0px 0px 76px 16px rgba(0,0,0,1);
 }
+
+.img-responsive { width: 100%; }
+
 .content .lenta { width:100%; height:117px; background:#00ccff url(/img/zulander/lenta-bg.jpg) repeat-x 0 0; position:relative;}
 .content .lenta-l {  width:100%; height:117px; background:url(/img/zulander/lenta-left.jpg) no-repeat 0 0; padding:42px 0 0 0;}
 .content .lenta-l:after { width:17px; height:117px; content: " "; background-image: url(/img/zulander/lenta-right.jpg); position: absolute; right:-17px; top:0;}
 .content .lenta img { margin:-7px 0 0 0;}
-.content .lenta span { font-style:italic; font-size:20px;}
+.content .lenta span { font-style:italic; font-size:20px; }
 .content .lenta strong { color:#fff; font-family: RobotoCondensed-BoldItalic; font-size:24px;}
 
 #second .content .lenta { width:100%; height:160px; background:#00ccff url(/img/zulander/lenta-bg-s.jpg) repeat-x 0 0; position:relative;}
