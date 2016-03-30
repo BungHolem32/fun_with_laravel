@@ -197,44 +197,7 @@
             autoRefresh();
 
     </script>
-    {{--<script>--}}
-    {{--// need to put in js file all of this--}}
-    {{--$("a.fancybox").fancybox();--}}
 
-
-    {{--$(document).on('click', '.fancybox_iframe', function (e) {--}}
-    {{--e.preventDefault();--}}
-    {{--$.fancybox({--}}
-    {{--href: $(this).attr('href'),--}}
-    {{--type: 'iframe'--}}
-    {{--});--}}
-    {{--});--}}
-
-
-    {{--if ($('#back-to-top').length) {--}}
-    {{--var scrollTrigger = 100, // px--}}
-    {{--backToTop = function () {--}}
-    {{--var scrollTop = $(window).scrollTop();--}}
-    {{--if (scrollTop > scrollTrigger) {--}}
-    {{--$('#back-to-top').addClass('show');--}}
-    {{--} else {--}}
-    {{--$('#back-to-top').removeClass('show');--}}
-    {{--}--}}
-    {{--};--}}
-    {{--backToTop();--}}
-    {{--$(window).on('scroll', function () {--}}
-    {{--backToTop();--}}
-    {{--});--}}
-    {{--$('#back-to-top').on('click', function (e) {--}}
-    {{--e.preventDefault();--}}
-    {{--$('html,body').animate({--}}
-    {{--scrollTop: 0--}}
-    {{--}, 700);--}}
-    {{--});--}}
-    {{--}--}}
-    {{--</script>--}}
-    {{--<script type="text/javascript" src="/js/aussie-new/first.js"></script>--}}
-    {{--<script type="text/javascript" src="/js/aussie-new/second.js"></script>--}}
     {!! $page->appendAsset(url('/js/firstPage.js')) !!}
 
 @append
@@ -583,6 +546,7 @@
                     </div>
                 </div>
             </section>
+
             <!--Video How_it_work PIC-->
             <section id="video-how-method-works" class="container">
                 <div class="row">
@@ -599,6 +563,7 @@
                 </div>
             </section>
 
+            {{--LIVE THIRD PARTY TRADE--}}
             <section id="live-third-party" class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12 align-center">
@@ -620,10 +585,10 @@
                 </div>
             </section>
 
-            <!--===========================PICS PART END===================================-->
+            <!--PICS PART END-->
 
 
-            <!--===============================FREQUENTLY-ASKED-QUESTIONS PART===============================================-->
+            <!--FREQUENTLY-ASKED-QUESTIONS PART=-->
             <section id="frequently-asked-questions" class="row">
                 {{--HEADER TITLE--}}
                 <header class="col-md-12 col-sm-12 col-xs-12">

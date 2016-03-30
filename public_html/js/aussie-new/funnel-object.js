@@ -364,13 +364,13 @@
                         /*CREATE FOR THE FIRST TIME THE TABLE*/
                         html = funnelControll.tweeter_n_facebook_tempalte.create_tpl(elementID, name, sort_name,display);
 
-                        /*CHECK THE LENGTH*/
-                        pass_the_limit = funnelControll.tweeter_n_facebook_tempalte.check_length(elementID);
-
-                        /*IF THE PANEL CREATED*/
-                        if (pass_the_limit != undefined) {
-                            $(elementID).last().remove();
-                        }
+                        // /*CHECK THE LENGTH*/
+                        // pass_the_limit = funnelControll.tweeter_n_facebook_tempalte.check_length(elementID);
+                        //
+                        // /*IF THE PANEL CREATED*/
+                        // if (pass_the_limit != undefined) {
+                        //     $(elementID).last().remove();
+                        // }
 
                         /*CHECK IF THE TEMPLATE CREATED*/
                         if (html != null) {
@@ -387,6 +387,11 @@
                     this.dc = funnelControll.live_trade.get_random_number(0, this.data.length);
                     this.oldtime = new Date();
                     this.old_time = this.oldtime.getSeconds();
+
+                    /*REMOVE THE ELMENTS FROM THE ARRAY*/
+                    this.image.splice(this.counter,1);
+                    this.num.splice(this.counter,1);
+                    this.data.splice(this.dc,1);
                     return this;
                 },
 
@@ -402,7 +407,7 @@
                         this.element_name = "facebook";
                     }
 
-                    this.html_template = "<div class=\'" + element_name + "-message\'>\n    <div " +
+                    this.facbook_tpl = "<div class=\'" + element_name + "-message\'>\n    <div " +
                         "class=\"" + sort_name + "-img-name-time head\">\n    " +
                         "<div class=\'" + sort_name + "-img col-md-3 col-sm-3 col-xs-3 pull-left\'>\n        " +
                         "<img class=\'" + sort_name + "-human-image img-responsive\' src=\"/img/aussie-new/fw/" + this.images[this.counter] + "\" alt=\"\">\n    " +
@@ -417,7 +422,7 @@
                         "</div>\n    </div>\n</div>";
 
 
-                    this.template = $('#' + this.element_name + '-tab').append(this.html_template);
+                    this.template = $('#' + this.element_name + '-tab').append(this.facbook_tpl);
                     this.cnt++;
                     return this.cnt;
                 },
@@ -500,14 +505,14 @@
     funnelControll.live_trade.init(11);
 
     /*8 SHUFFLE THE ARRAY*/
-    var mC = setInterval(funnelControll.live_trade.init, funnelControll.live_trade.get_random_number(700, 3000));
+    // var mC = setInterval(funnelControll.live_trade.init, funnelControll.live_trade.get_random_number(700, 3000));
     funnelControll.live_trade.init();
 
     /*9 LOADING IN PROCCESS*/
     funnelControll.loading();
 
     funnelControll.tweeter_n_facebook_tempalte.init('.facebook-message', 'facebook', 'fb', 6);
-    funnelControll.tweeter_n_facebook_tempalte.init('.tweets-message', 'tweets', 'twt', 6,'none');
+    funnelControll.tweeter_n_facebook_tempalte.init('.tweets-message', 'tweets', 'twt', 10,'none');
 
     setInterval(function () {
         funnelControll.tweeter_n_facebook_tempalte.init('.facebook-message', 1);

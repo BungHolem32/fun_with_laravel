@@ -137,7 +137,9 @@
             </section>
 
             <!--TWEETER & FACEBOOK TAGS-->
+            <!--TWEETER & FACEBOOK TAGS LIVE RESULTS -->
             <section id="live-result-pic" class="container">
+
 
                 <div class="row">
 
@@ -163,23 +165,34 @@
 
                         <div id="content-social " class="col-md-12">
 
+                            {{--TITLE FACEBOOK DESKTOP--}}
                             <header class='col-lg-6 col-md-6 col-sm-12-col-xs-12'>
                                 <h4 class="fb-title capitalize">comments</h4>
                             </header>
 
-                            <header class='col-lg-6 col-md-6 col-sm-12-col-xs-12'>
+                            {{--TITLE TWEETS DESKTOP --}}
+                            <header class='col-lg-6 col-md-6 col-sm-12-col-xs-12 tweets-desktop'>
                                 <h4 class="tweets-title capitalize">Tweets</h4>
                             </header>
-                            <div id="facebook-tab" class="col-md-6">
-                                <div class="logotag tweet-2 col-md-6 col-sm-12  col-xm-6">
-                                    <img src="/img/aussie-new/twt.png" alt="facebook logo" class="img-responsive center-block">
-                                    <!-- header FACEBOOK -->
-                                </div>
-                                <header class='col-lg-6 col-md-6 col-sm-12-col-xs-12'>
-                                    <h4 class="tweets-title-2 capitalize">Tweets</h4>
-                                </header>
+
+                            {{--FACEBOOK TAB--}}
+                            <div id="facebook-tab" class="col-md-6"></div>
+
+                            {{--========================================================================================--}}
+
+                            {{--LOGOTAG TWEET PICTURE MOBILE--}}
+                            <div class="logotag tweet-2 col-md-6 col-sm-12  col-xm-6 logotag-desktop">
+                                <img src="/img/aussie-new/twt.png" alt="tweets logo" class="img-responsive center-block">
                             </div>
+
+                            <!-- TITLE TWEETS MOBILE -->
+                            <header class='col-lg-6 col-md-6 col-sm-12-col-xs-12'>
+                                <h4 class="tweets-title-2 capitalize">Tweets</h4>
+                            </header>
+
+                            {{--TWEETER TAB--}}
                             <div id="tweets-tab" class="col-md-6 "></div>
+
                         </div>
                     </div>
                 </div>

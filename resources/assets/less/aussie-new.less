@@ -390,6 +390,9 @@ body {
               padding: 2em;
               box-shadow: 1px 1px 6px 1px #B5B5B5;
               margin: 1.5em 0;
+              @media (max-width: 500px) {
+                padding: 0.5em;
+              }
               ul {
                 list-style: none;
                 padding: 0;
@@ -397,10 +400,12 @@ body {
                   color: black;
                   font-weight: bold;
                   font-size: 1.1em;
-                  border-top: 4px solid #0086C6;
-                  border-bottom: 1px solid white;
-                  border-right: 1px solid white;
-                  border-left: 1px solid white;
+                  border: 1px solid white;
+                  border-top: 4px #0086C6;
+
+                  @media (max-width: 500px) {
+                    font-size: 1em;
+                  }
                 }
               }
 
@@ -444,16 +449,17 @@ body {
               box-shadow: -1px 3px 25px 8px #D3D3D1;
               background: #F0F0F0;
               padding-bottom: 2em;
-              margin: 1.5em 10.3em;
               display: block;
-              max-width: 75%;
+              margin: 0 10em;
+              width: 76%;
+
               @media (max-width: 1199px) {
-                margin: 0px 4.6%;
-                max-width: 90%;
+                margin: 0px auto;
+                width: 100%;
               }
               @media (max-width: 1010px) {
-                margin: 1.5em 6%;
-                max-width: 86%;
+                margin: 0px auto;
+                width: 100%;
               }
 
               #content-social {
@@ -506,9 +512,7 @@ body {
                       }
                     }
                     /*PLACE FOR CHAT (COMMENT IN THE BOTTOM*/
-
                   }
-
                 }
 
                 /*TWEETS TAB CONTENT*/
@@ -967,7 +971,7 @@ body {
                     }
 
                     @media (max-width: 1347px) {
-                      min-height: 50px;
+                      min-height: 73px;
                     }
                     padding: 0.2em;
                     border: 1px solid white;
@@ -996,7 +1000,7 @@ body {
                 width: 100%;
               }
               @media (max-width: 1010px) {
-                margin: 0px 6%;
+                margin: 0px auto;
                 width: 100%;
               }
 
@@ -1208,59 +1212,4 @@ section div img.col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2.col-xs-10.col-
 p.content.text-left.col-md-12.col-sm-12.col-xs-12 {
   font-size: 0.9em;
 }
-
-///*BG-COLOR OF THE ODD TR*/
-//.table-striped > tbody > tr:nth-child(odd) {
-//  background-color: lightgray;
-//}
-//
-///*TABLE THIRD PARTY VARIFIED RESULTS*/
-//.table > thead > tr > td.success, .table > tbody > tr > td.success, .table > tfoot > tr > td.success, .table > thead > tr > th.success, .table > tbody > tr > th.success, .table > tfoot > tr > th.success, .table > thead > tr.success > td, .table > tbody > tr.success > td, .table > tfoot > tr.success > td, .table > thead > tr.success > th, .table > tbody > tr.success > th, .table > tfoot > tr.success > th {
-//  background: none;
-//}
-//
-///*TABLE THIRD PARTY ON OVER*/
-//.table-hover > tbody > tr > td.success:hover, .table-hover > tbody > tr > th.success:hover, .table-hover > tbody > tr.success:hover > td, .table-hover > tbody > tr:hover > .success, .table-hover > tbody > tr.success:hover > th {
-//  background-color: #94a3a8;
-//}
-
-///*DIV OF THE FACEBOOK MESSAGE*/
-//.feed_name1 {
-//  //min-height: 14.3em;
-//
-//  .social-name.fbname {
-//    color: #1F3A79;
-//  }
-//
-//  .ctime1 {
-//    position: relative;
-//    left: 2.4em;
-//    bottom: 1em;
-//    float: left;
-//
-//    @media (max-width: 1200px) {
-//      left: 44px;
-//    }
-//    @media (max-width: 1200px) and (min-width: 992px) {
-//      left: 42px !important;
-//    }
-//
-//  }
-//
-//  /*FACEBOOK DATA*/
-//  .fb-data {
-//    margin-top: -0.6em;
-//
-//  }
-//  /*FACEBOOK LIKE*/
-//  .facebook-tab {
-//    color: gray;
-//  }
-//
-//  /* NEW FACE BOOK LIKE COMMENT SHARE*/
-//  .fb-tab {
-//    color: #39588F;
-//  }
-//}
-
 
