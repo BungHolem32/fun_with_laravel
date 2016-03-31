@@ -105,7 +105,7 @@ body {
         font-family: 'Cabin', sans-serif;
         font-weight: bold;
         max-width: 76%;
-        margin: 0 auto;
+        margin: 1.5em auto;
 
         @media (max-width: 990px) {
           max-width: 100%;
@@ -230,7 +230,7 @@ body {
                 }
                 @media (min-width: 760px) and (max-width: 989px) {
                   position: absolute;
-                  top: 6.9em;
+                  top: 14.6em;
                   left: 126.1px;
                   width: 67.8%;
                   height: auto;
@@ -518,7 +518,7 @@ body {
                 /*TWEETS TAB CONTENT*/
                 #tweets-tab {
 
-                  .twt-message {
+                  .tweets-message {
                     /*DIV OF THE FACEBOOK MESSAGE*/
 
                     .twt-img-name-time {
@@ -650,14 +650,14 @@ body {
 
                 #submit {
 
-                  @media (max-width: 1200px) and (min-width: 990px) {
+                  @media  (min-width: 990px) and (max-width: 1200px){
                     background: url('/img/aussie-new/buttonfree_mobile.png') no-repeat center;
                     max-width: 100%;
                     margin: 1em auto;
                     height: 221px !important;
+                    background-size:contain;
                   }
                 }
-
               }
 
               /*FIRST FORM - LANDING PAGE*/
@@ -701,6 +701,7 @@ body {
                   border: none;
                   height: 142px;
 
+                  /*FIRST FORM */
                   /*SUBMIT BUTTON*/
                   &.submit-aussie {
                     @media (max-width: 599px) {
@@ -712,7 +713,7 @@ body {
                     height: 82px;
                     margin: 1em 0;
 
-                    /*MOBILE VIEW*/
+                    /*MOBILE VIEW CHANGE PICTURE */
                     @media (max-width: 1200px) {
                       background: url('@{directory}aussie-new/buttonfree_mobile.png') no-repeat top center;
                       background-size: 100%;
@@ -720,16 +721,18 @@ body {
                       height: 188px;
                     }
                   }
-                  &[type="submit"] {
-                    @media (max-width: 1200px) and (min-width: 990px) {
-                      height: 266.8px !important;
 
+                  /*SECOND FORM*/
+                  &[type="submit"] {
+                    @media  (min-width: 990px) and (max-width: 1200px) {
+                      height: 266.8px !important;
+                      background-size: contain;
                     }
                   }
 
                   /*MAIL TEXT INPUT*/
                   &#firstPageSignUpMail {
-                    @media (max-width: 1200px) and (min-width: 990px) {
+                    @media (min-width: 990px) and (max-width: 1200px)  {
                       margin: 1em 0;
                       @media (max-width: 640px) {
                         height: 100px;
@@ -773,7 +776,7 @@ body {
                 }
                 @media (min-width: 760px) and (max-width: 989px) {
                   position: absolute;
-                  top: 6.9em;
+                  top: 14.9em;
                   left: 126.1px;
                   width: 67.8%;
                   height: auto;
@@ -781,7 +784,7 @@ body {
 
                 @media (min-width: 640px) and (max-width: 759px) {
                   position: absolute;
-                  top: 9.2em;
+                  top: 16.2em;
                   left: 105.3px;
                   width: 69.5%;
                   height: auto;
@@ -996,11 +999,11 @@ body {
               width: 76%;
 
               @media (max-width: 1199px) {
-                margin: 0px auto;
+                margin: 0 auto;
                 width: 100%;
               }
               @media (max-width: 1010px) {
-                margin: 0px auto;
+                margin: 0 auto;
                 width: 100%;
               }
 
@@ -1158,7 +1161,7 @@ body {
   }
 }
 
-.twt-message, .facebook-message {
+.tweets-message, .facebook-message {
   height: 167.2px;
   background: white;
   border: 1px solid lightgrey;
@@ -1169,6 +1172,7 @@ body {
 
 }
 
+/*EXECUTED STYLES ,DIDNT WORK INSIDE THE INHERITANCE WAY*/
 h4.fb-name {
   color: #39588F;
   padding: 0;
