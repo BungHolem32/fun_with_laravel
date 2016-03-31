@@ -195,7 +195,6 @@ $('body').on('click','.goToMembers',function() {
 	$('#getLicenseBtn').click();
 });
 
-
 $('body').on('click','.slide-stories',function() {
 	var direction	= $(this).attr('data-direction');
 	var currSlide	= $('.story-section:visible');
@@ -203,19 +202,21 @@ $('body').on('click','.slide-stories',function() {
 	if(direction == 'right') {
 		var nextSlide = currSlide.next();
 		if(!nextSlide.length) return;
-		currSlide.removeClass('bounceInRight').addClass('bounceOutLeft').delay(500).queue(function (next) {
-			currSlide.hide().removeClass('bounceOutLeft');
-			nextSlide.show().addClass('bounceInRight');
+		currSlide.removeClass('bounceOutRight bounceInRight bounceInLeft').addClass('bounceOutLeft').queue(function (next) {
+			nextSlide.show().removeClass('bounceOutRight bounceInLeft bounceOutLeft').addClass('bounceInRight');
 			next();
 		});
 	}
 	else {
 		var prevSlide = currSlide.prev();
 		if(!prevSlide.length) return;
-		currSlide.removeClass('bounceInLeft').addClass('bounceOutRight').delay(500).queue(function (next) {
-			currSlide.hide().removeClass('bounceOutRight');
-			prevSlide.show().addClass('bounceInLeft');
+		currSlide.removeClass('bounceInLeft bounceOutLeft bounceInRight').addClass('bounceOutRight').queue(function (next) {
+			prevSlide.show().removeClass('bounceOutRight bounceOutLeft bounceInRight').addClass('bounceInLeft');
 			next();
 		});
 	}
+
+	setTimeout(function () {
+		currSlide.hide();
+	},500);
 });

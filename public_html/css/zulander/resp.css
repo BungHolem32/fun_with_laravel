@@ -47,7 +47,11 @@
 		bottom: 16px;
 	}
 
+	#stories { height: 770px; }
 	.story-section:not(:first-child) { display: none }
+	.story-section { position: absolute; }
+
+
 	/*.content .lenta-l { padding:31px 0 0 74px;}*/
 	/*.content .lenta-l img { display:none; }*/
 	/*.content .lenta span strong { font-size:19px; line-height:12px;}*/
