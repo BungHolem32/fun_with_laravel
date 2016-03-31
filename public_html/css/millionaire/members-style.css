@@ -1,0 +1,404 @@
+.s_form {
+    width: 100%;
+    text-align: left;
+    font: 12px "Helvetica Neue", Helvetica, Arial;
+    margin: initial;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.s_form h4 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.s_form table {
+    width: 100%;
+    border: 0;
+    border-bottom: 0;
+    border-top: 0;
+    margin: 0 0 10px;
+    position: relative;
+    margin: initial;
+    text-align: center
+}
+
+.s_form td {
+    margin: 0 0 10px;
+    border: 0!important;
+    border-bottom: 0 !important;
+    border-top: 0 !important;
+    position: relative;
+    padding: 4px !important;
+}
+
+.s_form input {
+    padding: 16px;
+    color: #666;
+    margin: 0!important
+}
+
+.s_form input,
+.s_form select {
+    width: 100%;
+    border-color: #ddd #ddd #ccc;
+    border-style: solid;
+    box-sizing: border-box;
+    border-width: 1px;
+    margin: initial;
+    -webkit-appearance: none;
+}
+
+.s_form select option {
+    padding: 0px 8px;
+    -webkit-appearance: none;
+}
+
+.s_form .bad {
+    border-color: #FF7C7C;
+}
+
+.s_form select {
+    -webkit-appearance: none;
+    padding: 16px;
+}
+
+.s_form .error {
+    background-color: #f3b700;
+    bottom: 5px;
+    color: #fff;
+    display: inline;
+    font-size: 10px;
+    position: absolute;
+    margin: initial;
+    right: 5px
+}
+
+.s_form label {
+    background-color: #f3b700;
+    color: #ffffff;
+    display: none;
+    font-size: 14px;
+    font-weight: bold;
+    margin: initial;
+    border-radius: 5px;
+    padding: 5px
+}
+
+.s_form .s_button {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 12px 6px;
+}
+
+.s_form .s_button:hover {
+    opacity: 0.80
+}
+
+.s_form .s_loader {
+    display: none;
+    margin-top: 10px
+}
+
+.intl-tel-input {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.intl-tel-input * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box
+}
+
+.intl-tel-input .hide {
+    display: none
+}
+
+.intl-tel-input .v-hide {
+    visibility: hidden
+}
+/*
+.intl-tel-input input,
+.intl-tel-input input[type=text],
+.intl-tel-input input[type=tel] {
+    position: relative;
+    z-index: 0;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-left: 60px !important;
+    margin-left: 0;
+    transition: background-color 100ms ease-out
+}
+*/
+.intl-tel-input input.iti-invalid-key {
+    transition: background-color 0;
+    background-color: #FFC7C7
+}
+
+.intl-tel-input .flag-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 1px
+}
+
+.intl-tel-input .flag-container:hover {
+    cursor: pointer
+}
+
+.intl-tel-input .flag-container:hover .selected-flag {
+    background-color: rgba(0, 0, 0, 0.05)
+}
+
+.intl-tel-input input[disabled]+.flag-container:hover,
+.intl-tel-input input[readonly]+.flag-container:hover {
+    cursor: default
+}
+
+.intl-tel-input input[disabled]+.flag-container:hover .selected-flag,
+.intl-tel-input input[readonly]+.flag-container:hover .selected-flag {
+    background-color: transparent
+}
+
+.intl-tel-input .selected-flag {
+    z-index: 1;
+    position: relative;
+    width: 54px;
+    height: 100%;
+    padding: 0 0 0 16px
+}
+
+.intl-tel-input .selected-flag .iti-flag {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto
+}
+
+.intl-tel-input .selected-flag .arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 4px;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 4px solid #555
+}
+
+.intl-tel-input .selected-flag .arrow.up {
+    border-top: none;
+    border-bottom: 4px solid #555
+}
+
+.intl-tel-input .country-list {
+    list-style: none;
+    position: absolute;
+    z-index: 2;
+    padding: 0;
+    margin: 0 0 0 -1px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border: 1px solid #CCC;
+    white-space: nowrap;
+    max-height: 200px;
+    overflow-y: scroll
+}
+
+.intl-tel-input .country-list.dropup {
+    bottom: 100%;
+    margin-bottom: -1px
+}
+
+.intl-tel-input .country-list .flagi {
+    display: inline-block;
+    width: 20px
+}
+
+@media (max-width: 500px) {
+    .intl-tel-input .country-list {
+        white-space: normal
+    }
+}
+
+.intl-tel-input .country-list .divider {
+    padding-bottom: 5px;
+    margin: 0px 0px 5px 0px;
+    border-bottom: 1px solid #CCC
+}
+
+.intl-tel-input .country-list .country {
+    padding: 5px 10px
+}
+
+.intl-tel-input .country-list .country .dial-code {
+    color: #999
+}
+
+.intl-tel-input .country-list .country.highlight {
+    background-color: rgba(0, 0, 0, 0.05)
+}
+
+.intl-tel-input .country-list .flagi,
+.intl-tel-input .country-list .country-name,
+.intl-tel-input .country-list .dial-code {
+    vertical-align: middle
+}
+
+.intl-tel-input .country-list .flagi,
+.intl-tel-input .country-list .country-name {
+    margin-right: 6px
+}
+
+.intl-tel-input select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 42px;
+    height: 100%;
+    opacity: 0
+}
+
+.intl-tel-input.iti-container {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    z-index: 1060;
+    padding: 1px
+}
+
+.intl-tel-input.iti-container:hover {
+    cursor: pointer
+}
+
+.iti-flag {
+    width: 20px
+}
+
+.iti-flag.be {
+    width: 18px
+}
+
+.iti-flag.ch {
+    width: 15px
+}
+
+.iti-flag.mc {
+    width: 19px
+}
+
+.iti-flag.ne {
+    width: 18px
+}
+
+.iti-flag.np {
+    width: 13px
+}
+
+.iti-flag.va {
+    width: 15px
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2 / 1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+    .iti-flag {
+        background-image: url("../../../../whitelabelrobot.com/robots/images/flags%402x.png")
+    }
+}
+
+.iti-flag.np {
+    background-color: transparent
+}
+
+.intl-tel-input input.iti-invalid-key {
+    background-color: #FFC7C7;
+}
+
+::-webkit-input-placeholder {
+    color:    #CCC !important;
+}
+:-moz-placeholder {
+    color:    #CCC !important;
+}
+::-moz-placeholder {
+    color:    #CCC !important;
+}
+:-ms-input-placeholder {
+    color:    #CCC !important;
+}
+.access-form input {
+    width: 100%;
+    font-size: 20px;
+    border: 1px solid #cfcfcf;
+    text-align: center;
+    padding: 7px 7px 8px;
+    margin: 0 0 8px !important;
+    height: 51px !important;
+}
+
+.access-form .prefix {
+    width: 29%;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.access-form .phone {
+    width: 69%;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.access-form .half-input {
+    width: 49%;
+    padding: 0;
+    margin-top: 10px;
+    float: left;
+    margin-right: 2%;
+}
+
+.access-form input[type="submit"] {
+    padding: 10px 10px 16px !important;
+}
+
+.flag-container {
+    font: 11px "Helvetica Neue", Helvetica, Arial;
+}
+.country:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+.hide {
+    bottom: 100%;
+}
+
+#LastName-error {  }
+#FirstName { width: 100%; }
+#LastName { width: 100%; }
+
+label.error {
+    font-size: 14px;
+    display: block;
+    position: relative;
+    bottom: 8px;
+}
+.access-form {
+    background: none !important;
+    padding: 0 !important;
+}
+.wl-signup {
+    width: 442px !important;
+}
+
+#prefix-error { display: none !important; }
+
+.no-margin-right { margin-right: 0 !important; }

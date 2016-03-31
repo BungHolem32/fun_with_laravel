@@ -1,0 +1,23 @@
+#first-page-form label, #ouibounce-modal label  { position: relative; bottom: 13px; font-size: 0.8em; }
+#open-terms { cursor: pointer !important; }
+.gray-background { position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.52); }
+
+
+#term-modal { display: none; }
+#term-modal .content {
+    width: 90%;
+    max-height: 70%;
+    height: 800px;
+    background-color: white;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    margin-left: -45%;
+    z-index: 999;
+    border-radius: 6px;
+    -webkit-box-shadow: 10px 10px 37px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 37px -13px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 37px -13px rgba(0,0,0,0.75);
+    padding: 10px;
+    overflow-y: scroll;
+}
