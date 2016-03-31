@@ -9,6 +9,9 @@ class MailVerify
     const API_URL = "https://bpi.briteverify.com/emails.json";
 
     public static function verify($email){
+        if(!preg_match('/.*@.*\.[a-z]{2,3}/', $email)) {
+            return false;
+        }
         return self::processAnswer(self::sendRequest($email));
     }
 
