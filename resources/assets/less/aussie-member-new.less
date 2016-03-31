@@ -1,0 +1,293 @@
+@import 'fonts.less';
+@import 'form.less';
+
+/*BOLD THE ELEMENT*/
+.bold {
+  font-weight: bold !important;
+}
+
+/*UNDERLINE */
+.underline {
+  text-decoration: underline;
+}
+
+/**/
+.submit {
+  display: block;
+  color: transparent;
+  background: url('/img/aussie-new/buttonfree_mobile.png') no-repeat center;
+  width: 100%;
+  height: 197px;
+  border: 0;
+  outline: none;
+  background-size: contain;
+  margin: 16px auto;
+}
+
+/*SUCCESS STORIES PART (3 parts human-pic,text,verified-pic*/
+.success-stories {
+  border: 1px solid gray;
+  box-shadow: 0.1em 0.1em 0.7em 0.2em gray;
+  background: white;
+  padding: 0.6em 0;
+  border-radius: 0.3em;
+
+  /*VERIFIED PIC*/
+  .success-verified-pic {
+    margin: 4.5em 0 0 0;
+  }
+
+  /*SUCCESS TEXT*/
+  .success-text {
+    margin-top: 3.8em;
+
+    /*PARAGRAPH*/
+    p {
+
+      /*SUCCESS BUTTON*/
+      &.success-button {
+        font-family: cabinbold;
+        font-size: 3.2em;
+        line-height: 1.1em;
+        a {
+          color: #1F3A79;;
+        }
+      }
+
+      /*SPAN  TAG*/
+      span {
+
+        /*TITLE*/
+        &.success-title {
+          font-size: 1.7em;
+          font-family: cabinmedium;
+          line-height: 1.4em;
+        }
+      }
+    }
+    /*OTHER PICS (BESIDE THE FIRST ONE )*/
+    &.other-success {
+      margin: 4em 0;
+    }
+  }
+}
+
+/*ALL THE */
+span[class^="success"] {
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 1.3em;
+}
+
+/*DATE CONTENT [SPAN TAG]*/
+span.success-date {
+  display: block;
+}
+
+/*QUESTION TITLE*/
+p.title-question.text-left.pull-left {
+  font-size: 1.6em;
+}
+
+/*ANSWER TEXT*/
+.answer-text {
+  font-size: 1.3em;
+}
+
+///**/
+//.feed_name1 {
+//  font-size: 1.2em;
+//}
+
+/*OTHER HUMAN PICS*/
+.other-humans {
+  margin-top: 2.9em;
+}
+
+/*POPUP TITLE */
+body .popup h4 {
+  font-size: 36px;
+}
+
+/*FIRST STEP TABLET FROM  MIN-WIDTH-992PX TO MAX-WIDTH-1200PX*/
+@media (min-width: 992px) and (max-width: 1200px) {
+  .success-stories .success-text p.success-button {
+    font-size: 2.6em;
+  }
+
+  .other-humans {
+    margin: 4.5em 0 0;
+  }
+
+ /* div.feed_name2, div.feed_name1 {
+    min-height: 235px !important;
+    font-size: 1.3em;
+  }
+*/
+  //.ctime1 {
+  //  left: 83px !important;
+  //}
+
+  .first-human {
+    margin-top: 2em;
+  }
+
+  body #wrapper main section#strip_href ul li {
+    font-size: 1.2em;
+  }
+}
+
+/*MIN-WIDTH 768PX TO MAX-WIDTH 991PX*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .success-profit {
+    display: block;
+  }
+
+  .col-sm-6 {
+    width: 100%;
+  }
+
+  .field {
+    height: auto !important;
+  }
+
+  input[type=submit] {
+    display: block;
+    background: url('/img/aussie-new/buttonfree_mobile.png') no-repeat center;
+    width: 100%;
+    height: 221px;
+  }
+
+  .success-stories .success-verified-pic {
+    margin: 2.8em 0;
+  }
+
+  .success-stories .success-text {
+    margin-top: 0.8em;
+  }
+
+  span[class^="success"] {
+    font-size: 2.3em;
+  }
+
+  .success-stories .success-text p span.success-title {
+    font-size: 3em;
+  }
+
+  img.col-md-12.col-sm-10.col-sm-offset-1.col-xs-12.man-that-successed-pic {
+    border-radius: 20em;
+  }
+
+  .question_answer {
+    margin: 2em;
+  }
+
+  img.pull-left {
+    width: 30px;
+  }
+  //
+  //.second-page .ctime1 {
+  //  left: 43px;
+  //}
+
+  p.title-question.text-left.pull-left {
+    font-size: 1.45em;
+  }
+
+  //div.feed_name2,
+  //div.feed_name1 {
+  //  font-size: 1.5em;
+  //}
+}
+
+/*MIN-WIDTH 500PX TO MAX-WIDTH 767PX*/
+@media (min-width: 500px) and (max-width: 767px) {
+
+  //div.feed_name2,
+  //div.feed_name1 {
+  //  font-size: 1.4em;
+  //}
+
+  .col-sm-6 {
+    width: 100%;
+  }
+
+  .field {
+    height: auto !important;
+  }
+}
+
+/*MIN-WIDTH 200PX TO MAX-WIDTH 499PX*/
+@media (min-width: 200px) and (max-width: 499px) {
+
+  //.ctime1 {
+  //  position: relative;
+  //  left: 81px;
+  //  bottom: 1em;
+  //}
+
+  .col-sm-6 {
+    width: 100%;
+  }
+
+  .field {
+    height: auto !important;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .success-stories .success-text {
+    margin: 0;
+  }
+
+  .success-stories .success-verified-pic {
+    margin: 1em 0;
+  }
+
+  .success-stories .success-text.other-success {
+    margin: 1em 0;
+  }
+}
+
+//div.feed_name2, div.feed_name1 {
+//  min-height: 204px;
+//  font-size: 1.3em;
+//}
+
+.col-lg-6.col-md-6.col-sm-6.col-xs-12.field {
+  width: 100%;
+}
+
+.field input[type="text"],
+.field input[type="password"],
+.field input[type="email"],
+.field input[type="phone"] {
+  height: 4.6em;
+}
+
+.hidden {
+  display: none;
+}
+
+.col-lg-6.col-md-6.col-sm-6.col-xs-12.field.phoneFields {
+  margin-top: 0.3em;
+}
+
+/*MIN-WIDTH 200PX TO MAX-WIDTH 998PX*/
+@media (min-width: 200px) and (max-width: 998px ) {
+
+  input[type=submit] {
+    .submit;
+  }
+
+  .form-control {
+    box-shadow: none;
+  }
+}
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 0px;
+}
