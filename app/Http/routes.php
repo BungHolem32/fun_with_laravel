@@ -92,12 +92,15 @@ Route::get('getLocation',   ['uses' => 'FormController@location'] );
 Route::post('postForm',     ['middleware'=>['Recaptcha'], 'uses' => 'FormController@postForm'] );
 Route::post('postEmailForm/{lang}', ['uses' => 'FormController@postEmailForm'] );
 
-Route::post('ajax/refresh', ['uses' => 'PanelController@refresh'] );
-Route::post('ajax/deposit', ['uses' => 'PanelController@deposit'] );
-Route::post('ajax/turnOn', ['uses' => 'PanelController@botOn'] );
-Route::post('ajax/turnOff', ['uses' => 'PanelController@botOff'] );
-Route::post('ajax/setRange', ['uses' => 'PanelController@setBotRange'] );
-Route::get('runBot', ['uses' => 'PanelController@runBot'] );
+
+Route::group(['middleware'=>'loggedIn'], function() {
+    Route::post('ajax/refresh', ['uses' => 'PanelController@refresh']);
+    Route::post('ajax/deposit', ['uses' => 'PanelController@deposit']);
+    Route::post('ajax/turnOn', ['uses' => 'PanelController@botOn']);
+    Route::post('ajax/turnOff', ['uses' => 'PanelController@botOff']);
+    Route::post('ajax/setRange', ['uses' => 'PanelController@setBotRange']);
+    Route::get('runBot', ['uses' => 'PanelController@runBot']);
+});
 
 Route::any('{slug}', ['middleware' => 'spotAuth', function(){
 
