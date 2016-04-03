@@ -115,7 +115,7 @@
             </section>
 
 
-            <!--WHATS UP PIC-->
+            <!--SUCCESS PICS-->
             <section id="success-pic" class="container">
                 <div class="row">
                     <header class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-offset-1 col-xs-10">
@@ -132,7 +132,6 @@
                 </div>
             </section>
 
-            <!--TWEETER & FACEBOOK TAGS-->
             <!--TWEETER & FACEBOOK TAGS LIVE RESULTS -->
             <section id="live-result-pic" class="container">
 
