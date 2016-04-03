@@ -17,16 +17,11 @@
 if(!isset($_GET['dev_video'])):
 ?>
 
-@section('head')
-    <link href="/js/vendor/videojs/video-js.min.css" rel="stylesheet">
-@append
+
 
 @section('bottom-scripts')
     {!! $page->appendAsset(url('/js/video.js')) !!}
 
-    <!-- If you'd like to support IE8 -->
-    {{--<script src="http://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>--}}
-    <script src="/js/vendor/videojs/video.min.js"></script>
 @append
 
 @if(str_contains($videoUrl, 'youtube.com'))
