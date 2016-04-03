@@ -43,7 +43,7 @@
                 </div>
 
                 <!--MAN LOGO-->
-                <div class="man col-md-5 pull-right col-sm-4 col-xs-5 text-center">
+                <div class="man col-md-5 pull-right col-sm-4 col-xs-6 text-center">
                     <img src="/img/aussie-new/jake-petro.jpg" alt="man pic" class="img-responsive">
                 </div>
 

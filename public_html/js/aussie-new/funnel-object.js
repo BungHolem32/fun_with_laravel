@@ -216,7 +216,7 @@
                     $ ( '.facebook-pic' ).attr ( 'src', mobile[ 1 ] );
                     $ ( '.mobile-steps' ).find ( '.hidden' ).removeClass ( 'hidden' );
                     $ ( '#3-steps' ).find ( '.desktop-steps' ).addClass ( 'hidden' );
-                    $('')
+                    $('.success-button').find('a').hide();
                     
                     /*REMOVE FANCYBOX*/
                     $ ( '#jake-pertu' ).find ( '.fancybox' ).removeClass ().removeAttr ( 'href' );
@@ -226,6 +226,7 @@
                     $ ( '.facebook-pic' ).attr ( 'src', desktop[ 1 ] );
                     $ ( '.mobile-steps' ).find ( '.mobile-steps' ).addClass ( 'hidden' );
                     $ ( '#3-steps' ).find ( '.desktop-steps' ).removeClass ( 'hidden' );
+                    $('.success-button').find('a').show();
                     
                     /*ADD FANCYBOX*/
                     $ ( '#jake-pertu' ).find ( 'a' ).addClass ( 'fancybox' ).attr ( 'href', '/img/aussie-new/guarantee.png' );
