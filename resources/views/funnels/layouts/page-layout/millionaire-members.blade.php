@@ -140,7 +140,8 @@
                                 {{--<span class="title">24/7 Live Chat</span>--}}
                                 {{--<span>Available For Members</span>--}}
                             {{--</a>--}}
-                            <a class="terms" id="open-terms" onclick="openTerms()">
+                            {{--<a class="terms" id="open-terms" onclick="openTerms()">--}}
+                            <a class="terms" id="open-terms">
                                 <span class="title">Terms</span>
                                 <span>Disclaimer &amp; Privacy Policy</span>
                             </a>
