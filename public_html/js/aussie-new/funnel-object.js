@@ -428,11 +428,13 @@
                     if ( element_name == 'tweets' ) {
                         // time = this.time_twt +=30;
                         images = this.images2;
-                        cls    = [ "col-md-8 col-sm-8 col-xs-8", 'col-md-8', 'pull-right', "col-md-6 col-sm-5  col-xs-4", "col-md-5 col-sm-4 col-xs-4" ]
+                        display = 'none';
+                        cls    = [ "col-md-8 col-sm-8 col-xs-12", 'col-md-8', 'pull-right', "col-md-6 col-sm-5  col-xs-4", "col-md-5 col-sm-4 col-xs-5" ]
 
                     } else {
                         // time = this.time_facebook +=30;
                         images = this.images1;
+                        display:'block';
                         cls    = [ "col-md-3 col-sm-3 col-xs-3", '', '' ];
 
                     }

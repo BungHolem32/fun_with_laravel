@@ -11417,6 +11417,9 @@ body {
     width: 300px;
   }
 }
+@media (max-width: 480px) {
+  font-size: 1em;
+}
 @media (min-width: 990px) and (max-width: 1200px) {
   input#email,
   input#password,
@@ -11440,6 +11443,11 @@ body {
 @media (max-width: 1199px) {
   .form-first p:nth-of-type(2) {
     font-size: 40px !important;
+  }
+}
+@media (max-width: 640px) {
+  .form-first p:nth-of-type(2) {
+    font-size: 1em !important;
   }
 }
 @media (max-width: 1200px) {
@@ -11740,7 +11748,7 @@ body {
 }
 body #wrapper {
   background: url('/img/aussie-new/mainbg.jpg') repeat-y top center;
-  min-width: 480px;
+  min-width: 320px;
   /*MEMBER PAGE END */
   /*BACK TO TOP ICON*/
   /*BACK TO TOP SHOW */
@@ -11782,6 +11790,22 @@ body #wrapper.first-page section#top_strip {
   left: 0;
   right: 0;
 }
+@media (max-width: 990px) {
+  body #wrapper.first-page section#top_strip {
+    height: 10.6%;
+  }
+}
+@media (max-width: 768px) {
+  body #wrapper.first-page section#top_strip {
+    height: 24vw;
+    /*height: 15vw;*/
+  }
+}
+@media (max-width: 480px) {
+  body #wrapper.first-page section#top_strip {
+    height: 13vw;
+  }
+}
 body #wrapper.first-page h2 {
   color: #1F3A79;
   font-size: 2.5em;
@@ -11793,6 +11817,11 @@ body #wrapper.first-page h2 {
 @media (max-width: 990px) {
   body #wrapper.first-page h2 {
     max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  body #wrapper.first-page h2 {
+    font-size: 1.4em;
   }
 }
 body #wrapper.first-page main section {
@@ -11826,6 +11855,11 @@ body #wrapper.first-page main section#video_n_form #form_part.form-first {
     margin-top: 0.1em;
   }
 }
+@media (max-width: 600px) {
+  body #wrapper.first-page main section#video_n_form #form_part.form-first {
+    margin-left: 0;
+  }
+}
 body #wrapper.first-page main section#video_n_form #form_part.form-first p {
   font-family: 'Cabin', sans-serif;
   /*FIRST ELEMENT IN PARAGRPAH*/
@@ -11842,6 +11876,11 @@ body #wrapper.first-page main section#video_n_form #form_part.form-first p:nth-o
     color: #1e387b;
     margin-top: 0.4em;
     font-family: 'Cabin', sans-serif;
+  }
+}
+@media (max-width: 640px) {
+  body #wrapper.first-page main section#video_n_form #form_part.form-first p:nth-of-type(1) {
+    font-size: 2em;
   }
 }
 body #wrapper.first-page main section#video_n_form #form_part.form-first input {
@@ -11863,7 +11902,7 @@ body #wrapper.first-page main section#video_n_form #form_part.form-first input.s
 }
 @media (max-width: 599px) {
   body #wrapper.first-page main section#video_n_form #form_part.form-first input.submit-aussie {
-    height: 144px !important;
+    height: 25.4vw !important;
   }
 }
 @media (max-width: 1200px) {
@@ -11956,8 +11995,17 @@ body #wrapper.first-page main section#video-how-method-works .video-n-images .vi
 @media (min-width: 300px) and (max-width: 500px) {
   body #wrapper.first-page main section#video-how-method-works .video-n-images .video-tag {
     position: absolute;
-    top: 15.1em;
+    top: 7.6em;
     left: 74.3px;
+    width: 66.5%;
+    height: auto;
+  }
+}
+@media (min-width: 320px) and (max-width: 378px) {
+  body #wrapper.first-page main section#video-how-method-works .video-n-images .video-tag {
+    position: absolute;
+    top: 8.7em;
+    left: 56.2px;
     width: 66.5%;
     height: auto;
   }
@@ -12051,6 +12099,11 @@ body #wrapper.first-page main section#frequently-asked-questions .question_n_ans
   -ms-user-select: none;
   user-select: none;
 }
+@media (max-width: 480px) {
+  body #wrapper.first-page main section#frequently-asked-questions .question_n_answer .question .left-button p.title-question {
+    text-align: center;
+  }
+}
 body #wrapper.first-page main section#frequently-asked-questions .question_n_answer .question .answer {
   /*ANSWER TEXT*/
 }
@@ -12059,6 +12112,12 @@ body #wrapper.first-page main section#frequently-asked-questions .question_n_ans
   background: white;
   padding: 0.5em;
   margin-bottom: 0.5em;
+}
+@media (max-width: 480px) {
+  body #wrapper.first-page main section#frequently-asked-questions .question_n_answer .question .answer .answer-text {
+    padding: 0.5em;
+    text-align: justify;
+  }
 }
 body #wrapper.first-page main section#live-third-party {
   max-width: 928px;
@@ -12095,7 +12154,8 @@ body #wrapper.first-page main section#live-third-party .table-trader ul li {
 }
 @media (max-width: 500px) {
   body #wrapper.first-page main section#live-third-party .table-trader ul li {
-    font-size: 1em;
+    font-size: 0.9em;
+    direction: rtl;
   }
 }
 body #wrapper.first-page main section#live-third-party .table-trader #trades .line-trades {
@@ -12122,6 +12182,16 @@ body #wrapper.first-page main section#live-third-party .table-trader #trades .li
 @media (max-width: 1347px) {
   body #wrapper.first-page main section#live-third-party .table-trader #trades .line-trades .trades {
     min-height: 50px;
+  }
+}
+@media (max-width: 480px) {
+  body #wrapper.first-page main section#live-third-party .table-trader #trades .line-trades .trades {
+    min-height: 10vh;
+  }
+}
+@media (max-width: 480px) {
+  body #wrapper.first-page main section#live-third-party .table-trader #trades {
+    font-size: 0.8em;
   }
 }
 body #wrapper.first-page main section#live-result-pic {
@@ -12280,6 +12350,16 @@ body #wrapper.second-page h2 {
   font-weight: bold;
   max-width: 76%;
   margin: 1.5em auto;
+}
+@media (max-width: 990px) {
+  body #wrapper.second-page h2 {
+    max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  body #wrapper.second-page h2 {
+    font-size: 2.3em;
+  }
 }
 body #wrapper.second-page main section {
   margin: 1.5em auto;
@@ -12448,7 +12528,7 @@ body #wrapper.second-page main section#video-how-method-works .video-n-images .v
 @media (min-width: 640px) and (max-width: 759px) {
   body #wrapper.second-page main section#video-how-method-works .video-n-images .video-tag {
     position: absolute;
-    top: 16.2em;
+    top: 13.7em;
     left: 105.3px;
     width: 69.5%;
     height: auto;
@@ -12457,7 +12537,7 @@ body #wrapper.second-page main section#video-how-method-works .video-n-images .v
 @media (min-width: 600px) and (max-width: 639px) {
   body #wrapper.second-page main section#video-how-method-works .video-n-images .video-tag {
     position: absolute;
-    top: 16.2em;
+    top: 13.2em;
     left: 92.3px;
     width: 69.5%;
     height: auto;
@@ -12472,11 +12552,20 @@ body #wrapper.second-page main section#video-how-method-works .video-n-images .v
     height: auto;
   }
 }
-@media (min-width: 300px) and (max-width: 500px) {
+@media (min-width: 388px) and (max-width: 500px) {
   body #wrapper.second-page main section#video-how-method-works .video-n-images .video-tag {
     position: absolute;
-    top: 15.1em;
-    left: 74.3px;
+    top: 7.7em;
+    left: 64.3px;
+    width: 66.5%;
+    height: auto;
+  }
+}
+@media (min-width: 320px) and (max-width: 387px) {
+  body #wrapper.second-page main section#video-how-method-works .video-n-images .video-tag {
+    position: absolute;
+    top: 8.6em;
+    left: 54.2px;
     width: 66.5%;
     height: auto;
   }
@@ -12534,23 +12623,14 @@ body #wrapper.second-page main section#frequently-asked-questions header h2 {
   margin: 0 auto 0.5em;
 }
 body #wrapper.second-page main section#frequently-asked-questions .question_n_answer {
-  max-width: 100%;
+  max-width: 78%;
   margin: 1.5em auto;
+  left: 11.3%;
 }
 @media (max-width: 990px) {
   body #wrapper.second-page main section#frequently-asked-questions .question_n_answer {
     max-width: 100%;
     left: 0;
-  }
-}
-body #wrapper.second-page main section#frequently-asked-questions .question_n_answer .question {
-  width: 76%;
-  margin: 0 auto;
-}
-@media (max-width: 1200px) {
-  body #wrapper.second-page main section#frequently-asked-questions .question_n_answer .question {
-    margin: 1.5em 0;
-    width: 100%;
   }
 }
 body #wrapper.second-page main section#frequently-asked-questions .question_n_answer .question .left-button {
@@ -12576,6 +12656,11 @@ body #wrapper.second-page main section#frequently-asked-questions .question_n_an
   -ms-user-select: none;
   user-select: none;
 }
+@media (max-width: 480px) {
+  body #wrapper.second-page main section#frequently-asked-questions .question_n_answer .question .left-button p.title-question {
+    text-align: center;
+  }
+}
 body #wrapper.second-page main section#frequently-asked-questions .question_n_answer .question .answer {
   /*ANSWER TEXT*/
 }
@@ -12585,22 +12670,33 @@ body #wrapper.second-page main section#frequently-asked-questions .question_n_an
   padding: 0.5em;
   margin-bottom: 0.5em;
 }
+@media (max-width: 480px) {
+  body #wrapper.second-page main section#frequently-asked-questions .question_n_answer .question .answer .answer-text {
+    padding: 0.5em;
+    text-align: justify;
+  }
+}
 body #wrapper.second-page main section#live-third-party {
   max-width: 928px;
 }
-body #wrapper.second-page main section#live-third-party .row {
-  margin: 0 auto;
-}
-@media (max-width: 797px) {
+@media (max-width: 600px) {
   body #wrapper.second-page main section#live-third-party {
     width: 100%;
   }
+}
+body #wrapper.second-page main section#live-third-party .row {
+  margin: 0 auto;
 }
 body #wrapper.second-page main section#live-third-party .table-trader {
   background: white;
   padding: 2em;
   box-shadow: 1px 1px 6px 1px #B5B5B5;
   margin: 1.5em 0;
+}
+@media (max-width: 500px) {
+  body #wrapper.second-page main section#live-third-party .table-trader {
+    padding: 0.5em;
+  }
 }
 body #wrapper.second-page main section#live-third-party .table-trader ul {
   list-style: none;
@@ -12610,10 +12706,14 @@ body #wrapper.second-page main section#live-third-party .table-trader ul li {
   color: black;
   font-weight: bold;
   font-size: 1.1em;
-  border-top: 4px solid #0086C6;
-  border-bottom: 1px solid white;
-  border-right: 1px solid white;
-  border-left: 1px solid white;
+  border: 1px solid white;
+  border-top: 4px #0086C6;
+}
+@media (max-width: 500px) {
+  body #wrapper.second-page main section#live-third-party .table-trader ul li {
+    font-size: 0.9em;
+    direction: rtl;
+  }
 }
 body #wrapper.second-page main section#live-third-party .table-trader #trades .line-trades {
   background: white;
@@ -12638,7 +12738,17 @@ body #wrapper.second-page main section#live-third-party .table-trader #trades .l
 }
 @media (max-width: 1347px) {
   body #wrapper.second-page main section#live-third-party .table-trader #trades .line-trades .trades {
-    min-height: 73px;
+    min-height: 50px;
+  }
+}
+@media (max-width: 480px) {
+  body #wrapper.second-page main section#live-third-party .table-trader #trades .line-trades .trades {
+    min-height: 10vh;
+  }
+}
+@media (max-width: 480px) {
+  body #wrapper.second-page main section#live-third-party .table-trader #trades {
+    font-size: 0.7em;
   }
 }
 body #wrapper.second-page main section#live-result-pic {
@@ -12800,12 +12910,15 @@ body #wrapper footer.row {
     min-height: 225px;
   }
 }
+@media (max-width: 480px) {
+  .tweets-message,
+  .facebook-message {
+    min-height: 74vw;
+  }
+}
 /*EXECUTED STYLES ,DIDNT WORK INSIDE THE INHERITANCE WAY*/
 h4.fb-name {
   color: #39588F;
-  padding: 0;
-}
-h4.twt-name {
   padding: 0;
 }
 .twt-name-n-time {
@@ -12826,6 +12939,11 @@ h5.time-min.pull-right {
 .fb-tab.col-md-12.col-sm-12.col-xs-12.pull-left.text-left {
   color: #39588F;
 }
+@media (max-width: 480px) {
+  .fb-tab.col-md-12.col-sm-12.col-xs-12.pull-left.text-left {
+    font-size: 0.9em;
+  }
+}
 .fb-img,
 .twt-img {
   margin-top: 0.5em;
@@ -12841,6 +12959,21 @@ section div img.col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2.col-xs-10.col-
 }
 p.content.text-left.col-md-12.col-sm-12.col-xs-12 {
   font-size: 0.9em;
+}
+@media (max-width: 480px) {
+  body #wrapper.first-page main section#live-result-pic {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .first-page label.error {
+    top: 115px !important;
+  }
+}
+@media (max-width: 640px) {
+  .first-page label.error {
+    top: 299px !important;
+  }
 }
 /* Generated by Font Squirrel (http://www.fontsquirrel.com) on March 25, 2016 */
 @font-face {
@@ -13276,11 +13409,6 @@ body .popup h4 {
   .other-humans {
     margin: 4.5em 0 0;
   }
-  /* div.feed_name2, div.feed_name1 {
-    min-height: 235px !important;
-    font-size: 1.3em;
-  }
-*/
   .first-human {
     margin-top: 2em;
   }
