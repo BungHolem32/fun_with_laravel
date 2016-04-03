@@ -27,15 +27,21 @@ html,body {
 #boost-form .btn {
     width: 100%;
 }
-input[type=text],input[type=password] {
+
+#prefix { width: 25%; float: left; }
+#phone { width: 70%; float: right; }
+
+input[type=text],input[type=password], input[type=email] {
+    width: calc(100% - 4px);
+}
+
+input[type=text],input[type=password], input[type=email], input[type=phone] {
     position: relative;
     margin-bottom:15px;
-    width: calc(100% - 4px);
     background-repeat: no-repeat;
     background-position: 5px;
     text-indent: 45px;
     min-height: 50px;
-
     padding: 6px 0;
     font-size: 14px;
     line-height: 1.42857143;
@@ -192,11 +198,11 @@ input.error { border:1px solid #a53533; }
                                                 Custom
    --------------------------------------------------------------------------------------------------- */
 
-#FirstName { background: url('../img/user.png') no-repeat center left 12px #fff; }
-#LastName { background: url('../img/user.png') no-repeat center left 12px #fff; }
-#email { background: url('../img/email.png') no-repeat center left 12px #fff; }
-#login_email { background: url('../img/email.png') no-repeat center left 12px #fff; }
-#forgot_email { background: url('../img/email.png') no-repeat center left 12px #fff; }
-#password { background: url('../img/pass.png') no-repeat center left 12px #fff; }
-#login_password { background: url('../img/pass.png') no-repeat center left 12px #fff; }
-#phone { background: url('../img/phone.png') no-repeat center left 12px #fff; }
+#FirstName { background: url('/img/virtnext/user.png') no-repeat center left 12px #fff; }
+#LastName { background: url('/img/virtnext/user.png') no-repeat center left 12px #fff; }
+#email { background: url('/img/virtnext/email.png') no-repeat center left 12px #fff; }
+#login_email { background: url('/img/virtnext/email.png') no-repeat center left 12px #fff; }
+#forgot_email { background: url('/img/virtnext/email.png') no-repeat center left 12px #fff; }
+#password { background: url('/img/virtnext/pass.png') no-repeat center left 12px #fff; }
+#login_password { background: url('/img/virtnext/pass.png') no-repeat center left 12px #fff; }
+#phone { background: url('/img/virtnext/phone.png') no-repeat center left 12px #fff; }

@@ -25,7 +25,7 @@ $(document).ready(function(){
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    infinite: true,
+                    infinite: true
 
                 }
             },
@@ -34,7 +34,7 @@ $(document).ready(function(){
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    infinite: true,
+                    infinite: true
 
                 }
             }
@@ -42,10 +42,10 @@ $(document).ready(function(){
     });
 
     $('form').attr('id','regForm');
-    $('#FirstName,#LastName').parent().removeClass().addClass('holder left box box-6');
+    $('#FirstName,#LastName').parent().removeClass().addClass('holder left box box-6').parent().removeClass('row');
     $('#email,#password').parent().removeClass().addClass('holder left box box-12');
     $('#phone').parent().removeClass().addClass('holder left box box-12');
-    $('#submit').removeClass().addClass('btn').parent().removeClass().addClass('left box box-12');
+    $('#submit').val('CREATE PROFIT ACCOUNT').css('font-weight','bold').removeClass().addClass('btn').parent().removeClass().addClass('left box box-12');
 
 });
 

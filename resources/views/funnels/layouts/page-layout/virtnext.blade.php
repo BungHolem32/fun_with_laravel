@@ -308,7 +308,7 @@
                     <div class="col-md-12 col-lg-12 col-center">
                         <div class="col-md-12">
                             <p style="font-size:34px;font-weight:bold;">100%<span style="font-size:34px;color:#f6f300;font-weight:bold;"> FREE</span><span style="font-size:34px;font-weight:100;"> Access</span></p>
-                            <a href="#main-form-first-page" class="btn btn-warning button-black" style="width: 300px; max-width: 100%; padding: 10px; font-weight: bold;">JOIN NOW</a>
+                            <a id="goToLogin" href="#main-form-first-page" class="btn btn-warning button-black">JOIN NOW</a>
                         </div>
                     </div>
                 </div>

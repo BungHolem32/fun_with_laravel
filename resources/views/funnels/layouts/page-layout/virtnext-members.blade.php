@@ -60,7 +60,7 @@
 
 
                         <style>
-                            @media screen and (max-width:768px){
+                            @media screen and (max-width:768px) {
                                 #frameVid{
                                     margin-top:-115px;
                                     height: 420px;
@@ -71,7 +71,7 @@
                                 }
                             }
                             
-                            @media screen and (max-width:500px){
+                            @media screen and (max-width:500px) {
                                 #frameVid{
                                     height: 300px !important;
                                 }
@@ -82,42 +82,10 @@
                         <div class="top-header-form-warpper">
                             <form class="form-horizontal" role="form">
                                 <header class="forms-header top-members-form-header">
-                                    <!-- <h2 class="white uppercase text-center bold">Register for <span class="uppercase bold yellow"> Free </span>now</h2> -->
                                     <h2 class="uppercase white text-center">Fill your details to get your free license</h2>
                                 </header>
-
                                 <div id="boost-form" style="display: block;">
                                     @include('funnels.layouts._partials._form-mobile', ['funnelId' => $page->getParent()->id]);
-
-                                    {{--<form method="post" id="regForm" autocomplete="off" novalidate="novalidate">--}}
-                                        {{--<div class="row">--}}
-                                            {{--<div class="holder left box box-6">--}}
-                                                {{--<input type="text" id="FirstName" name="FirstName" placeholder="First Name" maxlength="45" data-rule-lettersonly="true" data-rule-required="true" data-msg-required="Enter Valid First Name" data-rule-minlength="2" value="">--}}
-                                            {{--</div>--}}
-                                            {{--<div class="holder left box box-6">--}}
-                                                {{--<input type="text" id="LastName" name="LastName" class="" placeholder="Last Name" maxlength="45" data-rule-allletters="true" data-rule-required="true" data-msg-required="Enter Valid Last Name" data-rule-minlength="2" value="">--}}
-                                            {{--</div>--}}
-                                            {{--<div class="holder left box box-12">--}}
-                                                {{--<input type="text" id="email" name="email" placeholder="E-mail" maxlength="255" data-rule-email="true" data-rule-required="true" data-msg-required="Enter Valid Email" value="">--}}
-                                            {{--</div>--}}
-                                            {{--<div class="holder left box box-12">--}}
-                                                {{--<input type="password" name="password" id="password" placeholder="Choose a Password" maxlength="32" data-rule-password="true" data-rule-required="true" data-rule-minlength="6" data-rule-maxlength="15" data-msg-required="Must contain letters or digits" value="">--}}
-                                            {{--</div>--}}
-                                            {{--<div class="holder left box box-4">--}}
-                                                {{--<input type="text" id="kid" name="kid" class="" placeholder="972" value="972" maxlength="4" data-rule-digits="true" data-rule-required="true" data-msg-required="Enter Valid Prefix">--}}
-                                            {{--</div>--}}
-                                            {{--<div class="holder left box box-8">--}}
-                                                {{--<input type="text" id="phone" name="phone" class="" placeholder="Phone" maxlength="16" data-rule-digits="true" data-rule-required="true" data-msg-required="Enter Valid Phone Number" value="">--}}
-                                            {{--</div>--}}
-                                            {{--<div class="left box box-12">--}}
-                                                {{--<button class="btn" id="regBtn" type="submit">CREATE PROFIT ACCOUNT</button>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                    {{--</form>--}}
-
-
-
-
                                 </div>
                             </form>
                         </div>
@@ -324,7 +292,7 @@
                             <h2 class="white uppercase bold">Register <span class="uppercase bold yellow">for Free </span>now</h2>
                             <h3 class="uppercase white">SIGN UP BELOW FOR INSTANT PROFITS!</h3>
                         </header>
-                        <iframe style="border:0;margin-top:10px;width:100%;min-height: 380px;" src="http://trade.virtnextapp.com/form.php?FirstName=&amp;LastName=&amp;email="></iframe>
+                        <a id="goToLogin" href="#regForm" class="btn btn-warning button-black">JOIN NOW</a>
                         <div class="clearfix"></div>
                     </form>
                 </div>
