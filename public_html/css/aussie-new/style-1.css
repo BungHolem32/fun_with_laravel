@@ -12145,11 +12145,6 @@ body #wrapper.first-page main section#frequently-asked-questions .question_n_ans
   -ms-user-select: none;
   user-select: none;
 }
-@media (max-width: 480px) {
-  body #wrapper.first-page main section#frequently-asked-questions .question_n_answer .question .left-button p.title-question {
-    text-align: center;
-  }
-}
 body #wrapper.first-page main section#frequently-asked-questions .question_n_answer .question .answer {
   /*ANSWER TEXT*/
 }
@@ -12534,6 +12529,11 @@ body #wrapper.second-page main section#video_n_form #form_part.form-first input[
     background-size: contain;
   }
 }
+@media (max-width: 420px) {
+  body #wrapper.second-page main section#video_n_form #form_part.form-first input[type="submit"] {
+    height: 105px;
+  }
+}
 body #wrapper.second-page main section#video_n_form #form_part.form-first input#firstPageSignUpMail {
   border: 4.0px solid #1F3A79;
   height: 63px;
@@ -12716,11 +12716,6 @@ body #wrapper.second-page main section#frequently-asked-questions .question_n_an
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-@media (max-width: 480px) {
-  body #wrapper.second-page main section#frequently-asked-questions .question_n_answer .question .left-button p.title-question {
-    text-align: center;
-  }
 }
 body #wrapper.second-page main section#frequently-asked-questions .question_n_answer .question .answer {
   /*ANSWER TEXT*/
