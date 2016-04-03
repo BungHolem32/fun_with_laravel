@@ -98,7 +98,7 @@ function getUserContent() {
 			$('#month-days').html(moment().format('1 MMM YYYY') + " - " + moment().format('D MMM YYYY') + ":");
 			$('#licenses-count').html(locationContent.content.licenses.count);
 
-			setInterval(updateLicensesCounter,locationContent.content.licenses.timer.interval);
+			// setInterval(updateLicensesCounter,locationContent.content.licenses.timer.interval);
 			updateLicensesCounter();
 			updateLiveResultCounter();
 			updateVideoViewers();
@@ -153,10 +153,10 @@ function getCookies() {
 }
 
 function updateLicensesCounter() {
+	var rand				= Math.round(Math.random() * (40000 - 10000)) + 10000;
 	var animationElement	= $('.progress-radial');
 	var animationState		= 100;
 	var licenses			= parseInt(getCookies().licenses) || locationContent.content.licenses.count;
-
 
 	if(licenses != locationContent.content.licenses.count) {
 		animationState = parseInt((licenses / locationContent.content.licenses.count) * 10) * 10;
@@ -168,6 +168,7 @@ function updateLicensesCounter() {
 	$('.overlay strong').html(licenses);
 	$('.count').html(licenses);
 	document.cookie="licenses="+licenses+"; expires="+nextYearUnix;
+	setTimeout(updateVideoViewers,rand);
 }
 
 function updateVideoViewers() {

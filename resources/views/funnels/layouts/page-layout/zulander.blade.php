@@ -24,7 +24,7 @@
                         <img class="country-logo" src="/img/zulander/loader.gif" alt=""/>
                         <span>
                             <strong>CONFIRMED:</strong>
-                            <span>You’ve been Invited to watch this Weird Presentation because you’re in</span>
+                            <span>You’ve been Invited to watch this Exciting Presentation because you’re in</span>
                             <span class="country-name">...</span>
                         </span>
                     </div>
@@ -52,8 +52,7 @@
                     </div>
                 </div>
                 <div class="avideo text-center">Claim One Of <span class="st1"><strike id="licenses-count">0</strike> <strong class="count">10</strong> FREE LICENSES In <span class="country-name">...</span></span> To Make <span class="st2">$1,008</span> <strong>Every 5 MINUTES >></strong></div>
-                <div class="free">
-
+                <div class="free first-page-form">
                     {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post']) !!}
                     <input type="hidden" name="pageId" value="{{ $page->id }}">
                     <div class="f1  hidden-sm hidden-xs text-center">
@@ -119,7 +118,7 @@
                 </div>
             </div>
             <div class="footer text-center">
-                <div class="links"><a href="/zulander/agreement">Site Agreement</a> | <a href="/zulander/disclosure">Risk Disclaimer</a> | <a href="/zulander/policy">Privacy Policy</a></div>
+                <div class="links"><a href="/zulander/agreement" target="_blank">Site Agreement</a> | <a href="/zulander/disclosure" target="_blank">Risk Disclaimer</a> | <a href="/zulander/policy" target="_blank">Privacy Policy</a></div>
                 <div class="copyright">Copyright © 2016 zulanderhack.co</div>
                 <div class="right">
                     <p>RISK Disclaimer: http://zulanderhack.co makes no representations regarding the legality of access to or use of this website or its content in any jurisdiction. Not all services offered through this website are permitted for use in al countries. Investing in financial instruments involves a high degree of risk and may bot be suitable for all investors. We strongly advise that you read our Website Terms of Service and Risk Disclosure Statement before accessing this website. http://zulanderhack.co and its officials are not responsible for any losses related to use of its services or software. If necessary seek independent advice prior to accessing this website. Users must be aware of their individual tax liability in their country of residence.</p>

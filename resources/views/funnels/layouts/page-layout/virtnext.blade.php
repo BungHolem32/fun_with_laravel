@@ -118,6 +118,7 @@
                     </div>
 
                     {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post']) !!}
+                    <input type="hidden" name="pageId" value="{{ $page->id }}">
                     @if($page->switches->showEmailField)
                         <div class="form-group col-sm-12 col-md-12 col-lg-6">
                             <input type="email" class="form-control emails all-forms-style" id="email" name="email" placeholder="Your Email" data-rule-email="true" data-rule-required="true" data-msg-required="Please Enter Valid Email">

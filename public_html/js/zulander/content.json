@@ -202,7 +202,7 @@
   "ae": {
     "flag": "small-ae.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500
@@ -238,7 +238,7 @@
   "au": {
     "flag": "small-au.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500
@@ -274,7 +274,7 @@
   "be": {
     "flag": "small-be.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500
@@ -310,7 +310,7 @@
   "gb": {
     "flag": "small-bg.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500
@@ -346,7 +346,7 @@
   "bh": {
     "flag": "small-bh.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500
@@ -382,7 +382,7 @@
   "ca": {
     "flag": "small-ca.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500
@@ -418,7 +418,7 @@
   "cz": {
     "flag": "small-cz.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500
@@ -454,7 +454,7 @@
   "de": {
     "flag": "small-de.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500
@@ -490,7 +490,7 @@
   "es": {
     "flag": "small-es.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500
@@ -526,7 +526,7 @@
   "fr": {
     "flag": "small-fr.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500
@@ -562,7 +562,7 @@
   "it": {
     "flag": "small-it.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500
@@ -598,7 +598,7 @@
   "kw": {
     "flag": "small-kw.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500
@@ -634,7 +634,7 @@
   "my": {
     "flag": "small-my.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500
@@ -670,7 +670,7 @@
   "nl": {
     "flag": "small-nl.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500
@@ -706,7 +706,7 @@
   "no": {
     "flag": "small-no.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500
@@ -742,7 +742,7 @@
   "nz": {
     "flag": "small-nz.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500
@@ -778,7 +778,7 @@
   "pl": {
     "flag": "small-pl.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500
@@ -814,7 +814,7 @@
   "qa": {
     "flag": "small-qa.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500
@@ -850,7 +850,7 @@
   "sa": {
     "flag": "small-sa.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500
@@ -886,7 +886,7 @@
   "se": {
     "flag": "small-se.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500
@@ -922,7 +922,7 @@
   "sg": {
     "flag": "small-sg.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500
@@ -958,7 +958,7 @@
   "sz": {
     "flag": "small-sz.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500
@@ -994,7 +994,7 @@
   "za": {
     "flag": "small-za.jpg",
     "licenses": {
-      "count": 10,
+      "count": 20,
       "timer": {
         "start": 40,
         "interval": 2500

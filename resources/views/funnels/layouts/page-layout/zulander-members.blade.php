@@ -11,6 +11,7 @@
     {!! $page->appendAsset(url('/js/firstPage.js')) !!}
     {!! $page->appendAsset(url('/js/zulander/moment.min.js')) !!}
     {!! $page->appendAsset(url('/js/zulander/bootstrap.min.js')) !!}
+    {!! $page->appendAsset(url('/js/zulander/flipclock.min.js')) !!}
     {!! $page->appendAsset(url('/js/zulander/script.js')) !!}
 @append
 

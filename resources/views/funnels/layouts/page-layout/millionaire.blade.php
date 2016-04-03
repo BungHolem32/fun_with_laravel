@@ -29,6 +29,7 @@
                             @include('funnels.layouts._partials._video')
                         </div>
                         {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post']) !!}
+                            <input type="hidden" name="pageId" value="{{ $page->id }}">
                             <fieldset>
                                 <h2>Fill in your Email below to <br> get FREE INSTANT ACCESS to The <mark><b>OnlineMillionaireSystem</b></mark></h2>
                                 @if($page->switches->showEmailField)
