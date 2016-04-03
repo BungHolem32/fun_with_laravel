@@ -12030,7 +12030,16 @@ body #wrapper.first-page main section#video-how-method-works .video-n-images .vi
     height: auto;
   }
 }
-@media (min-width: 320px) and (max-width: 378px) {
+@media (min-width: 370px) and (max-width: 378px) {
+  body #wrapper.first-page main section#video-how-method-works .video-n-images .video-tag {
+    position: absolute;
+    top: 7.4em;
+    left: 56.2px;
+    width: 66.5%;
+    height: auto;
+  }
+}
+@media (min-width: 320px) and (max-width: 369px) {
   body #wrapper.first-page main section#video-how-method-works .video-n-images .video-tag {
     position: absolute;
     top: 11.9em;
