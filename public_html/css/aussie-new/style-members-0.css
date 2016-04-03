@@ -562,5 +562,8 @@ ol {
     height: 100px;
   }
 }
+li.col-md-5.col-sm-12.col-xs-12.live-m {
+  border-bottom: none !important;
+}
 
 /*# sourceMappingURL=style-members-0.css.map */
