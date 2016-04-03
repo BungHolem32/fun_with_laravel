@@ -56,13 +56,13 @@
             <main class="container-fluid">
                 <!--VIDEO AND FORM TAGS-->
 
+                @include('funnels.layouts._partials._video',  ['w'=>'100%','h'=>'100%'])
                 <section id="video_n_form" class="container">
 
                     <div class="row">
 
-                        <!--Video Tag-->
+                                <!--Video Tag-->
                         <div id="video_part" class='col-md-7  {{--col-sm-12--}} pull-left'>
-                            @include('funnels.layouts._partials._video')
                         </div>
 
                         <!--Form Tag-->
