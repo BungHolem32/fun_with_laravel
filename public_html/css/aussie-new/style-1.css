@@ -11799,8 +11799,7 @@ body #wrapper.first-page section#top_strip {
 }
 @media (max-width: 768px) {
   body #wrapper.first-page section#top_strip {
-    height: 24vw;
-    /*height: 15vw;*/
+    height: 15vw;
   }
 }
 @media (max-width: 480px) {
@@ -12012,16 +12011,7 @@ body #wrapper.first-page main section#video-how-method-works .video-n-images .vi
     height: auto;
   }
 }
-@media (min-width: 350px) and (max-width: 469px) {
-  body #wrapper.first-page main section#video-how-method-works .video-n-images .video-tag {
-    position: absolute;
-    top: 12.1em;
-    left: 69.6px;
-    width: 66.5%;
-    height: auto;
-  }
-}
-@media (min-width: 379px) and (max-width: 470px) {
+@media (min-width: 379px) and (max-width: 469px) {
   body #wrapper.first-page main section#video-how-method-works .video-n-images .video-tag {
     position: absolute;
     top: 12.1em;
