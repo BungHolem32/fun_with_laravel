@@ -9,10 +9,8 @@
     if(!isset($poster)) $poster = '';
 
 
-    if(!isset($page->video) && isset($video_url)) $videoUrl = $video_url;
-    else $videoUrl = $page->video->get();
-
-    //dd($videoUrl);
+    if(isset($video_url))   $videoUrl = $video_url;
+    else                    $videoUrl = $page->video->get();
 
 if(!isset($_GET['dev_video'])):
 ?>

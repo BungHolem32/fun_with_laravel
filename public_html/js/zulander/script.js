@@ -134,7 +134,7 @@ function updateLiveResultCounter() {
 	tempNumber[1]	= tempNumber[1].substring(0,2);
 	htmlNumber 		= tempNumber.join('.');
 
-    $('#result').html(htmlNumber);
+    $('#result').html('$'+htmlNumber);
 	document.cookie="live_result="+newAmount+"; expires="+nextYearUnix;
 	setTimeout(updateLiveResultCounter,rand);
 }
