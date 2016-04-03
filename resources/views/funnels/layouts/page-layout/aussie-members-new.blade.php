@@ -30,19 +30,20 @@
         </section>
 
         <!--==============================================HEADER TAG=================================================-->
+        <!--HEADER TAG-->
         <header class="container">
 
             <!--LOGOS PART-->
             <div class="logos row">
 
                 <!--COMPANY LOGO-->
-                <div id="company" class="pull-left col-md-2 col-sm-2 col-xs-2  ">
-                    <img src="/img/aussie-new/aussieLogo.jpg" alt="company logo">
+                <div id="company" class="pull-left col-md-3 col-sm-4 col-xs-5  ">
+                    <img src="/img/aussie-new/aussieLogo.jpg" alt="company logo" class="img-responsive">
                 </div>
 
                 <!--MAN LOGO-->
-                <div class="man col-md-5 pull-right col-sm-4 col-xs-5 text-right">
-                    <img src="/img/aussie-new/jake-petro.jpg" alt="man pic">
+                <div class="man col-md-4 pull-right col-sm-4 col-xs-5 text-center">
+                    <img src="/img/aussie-new/jake-petro.jpg" alt="man pic" class="img-responsive pull-right">
                 </div>
 
             </div>

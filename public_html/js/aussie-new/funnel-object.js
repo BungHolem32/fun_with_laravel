@@ -216,6 +216,7 @@
                     $ ( '.facebook-pic' ).attr ( 'src', mobile[ 1 ] );
                     $ ( '.mobile-steps' ).find ( '.hidden' ).removeClass ( 'hidden' );
                     $ ( '#3-steps' ).find ( '.desktop-steps' ).addClass ( 'hidden' );
+                    $('')
                     
                     /*REMOVE FANCYBOX*/
                     $ ( '#jake-pertu' ).find ( '.fancybox' ).removeClass ().removeAttr ( 'href' );

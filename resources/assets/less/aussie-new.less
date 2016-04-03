@@ -54,6 +54,7 @@ body {
 
   /*WRAPPER FOR ALL CONTENT*/
   #wrapper {
+    overflow: hidden;
     //min-width: 400px;
     background: url('/img/aussie-new/mainbg.jpg') repeat-y top center;
     min-width: 320px;
@@ -96,14 +97,15 @@ body {
           left: 0;
           right: 0;
           @media (max-width: 990px) {
-            height: 10.6%;
+            height: 94px;
+            border-bottom: 1px solid lightgray;
           }
           @media (max-width: 768px) {
             height: 24vw;
             /*height: 15vw;*/
           }
           @media (max-width:480px) {
-            height: 13vw;
+            height: 15.8vw;
           }
         }
       }
@@ -115,13 +117,13 @@ body {
         font-family: 'Cabin', sans-serif;
         font-weight: bold;
         max-width: 76%;
-        margin: 1.5em auto;
+        margin: 1em auto;
 
         @media (max-width: 990px) {
           max-width: 100%;
         }
         @media(max-width: 480px){
-          font-size: 1.4em;
+          font-size: 2.4em;
         }
 
       }
@@ -285,10 +287,10 @@ body {
                   width: 66.5%;
                   height: auto;
                 }
-                @media (min-width: 320px) and (max-width: 378px) {
+                @media (min-width: 300px) and (max-width: 378px) {
                   position: absolute;
-                  top: 8.7em;
-                  left: 56.2px;
+                  top: 7.7em;
+                  left: 54.4px;
                   width: 66.5%;
                   height: auto;
                 }
@@ -653,6 +655,15 @@ body {
           top: -5px;
           left: 0;
           right: 0;
+          @media (max-width: 990px) {
+            height: 10.6%;
+          }
+          @media (max-width: 768px) {
+            height: 24vw;
+          }
+          @media (max-width:480px) {
+            height: 14.9vw;
+          }
         }
       }
 
@@ -1313,6 +1324,10 @@ p.content.text-left.col-md-12.col-sm-12.col-xs-12 {
       top: 115px !important;
   }
   @media (max-width:640px) {
-    top: 299px !important;
+    top: 296.8px !important;
   }
+}
+
+.logotag.tweet-2 {
+  margin: 1em 0;
 }
