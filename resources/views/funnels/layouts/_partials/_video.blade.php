@@ -17,8 +17,16 @@
 if(!isset($_GET['dev_video'])):
 ?>
 
+@section('head')
+    <link href="/js/vendor/videojs/video-js.min.css" rel="stylesheet">
+@append
+
 @section('bottom-scripts')
     {!! $page->appendAsset(url('/js/video.js')) !!}
+
+    <!-- If you'd like to support IE8 -->
+    {{--<script src="http://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>--}}
+    <script src="/js/vendor/videojs/video.min.js"></script>
 @append
 
 @if(str_contains($videoUrl, 'youtube.com'))
@@ -79,11 +87,19 @@ if(!isset($_GET['dev_video'])):
         $videoFinaleLink = $videoUrl.$video_file."?st=".$video_hash."&e=".$video_expire;
         //$videoFinaleLink = 'http://p.media.chaki.netdna-cdn.com/vod/media.chaki/aussie/fs100.mp4';
     ?>
-    <video class="video" preload="none" width="{{ $w }}" height="{{ $h }}" {{ $autoplay }}  {{ $controls }}
+    <video class="video" preload="none" width="{{ $w }}" height="{{ $h }}" {{ $autoplay }}  controls {{--{{ $controls }}--}}
            poster="{{ $poster }}">
         <source src="{!! $videoFinaleLink !!}" type='video/mp4' />
         <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
     </video>
+    {{--<video id="my-video" class="video-js video"  preload="auto" width="{{ $w }}" height="{{ $h }}" controls--}}
+           {{--poster="{{ $poster }}" data-setup="{}">--}}
+        {{--<source src="{!! $videoFinaleLink !!}" type='video/mp4'>--}}
+        {{--<p class="vjs-no-js">--}}
+            {{--To view this video please enable JavaScript, and consider upgrading to a web browser that--}}
+            {{--<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>--}}
+        {{--</p>--}}
+    {{--</video>--}}
 @else
     <video class="video" preload="none" width="{{ $w }}" height="{{ $h }}" {{ $autoplay }} {{ $controls }}>
         {{--http://cdnmediahosting.com/user29339cdn3/newproducts2014/fmsshortnewnov.mp4--}}

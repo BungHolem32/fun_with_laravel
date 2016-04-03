@@ -8,6 +8,7 @@
     <script src="/js/vendor/respond.min.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen"/>
+
 @append
 @section('bottom-scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
