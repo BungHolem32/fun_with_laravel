@@ -82,7 +82,7 @@
                             <input type="submit" class="align-center col-md-12 col-sm-12 submit-aussie" value=""/>
                             {!! Form::close() !!}
                             <div class="col-md-12 col-sm-12">
-                                <img src="/img/aussie-new/certs.png" class="trust-pic img-responsive">
+                                <img src="/img/aussie-new/certs.png" class="trust-pic img-responsive center-block">
                             </div>
                         </div>
 

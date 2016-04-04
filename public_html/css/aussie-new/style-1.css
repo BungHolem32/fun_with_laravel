@@ -13030,14 +13030,19 @@ p.content.text-left.col-md-12.col-sm-12.col-xs-12 {
     width: 100%;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1201px) {
   .first-page label.error {
-    top: 115px !important;
+    top: 113px !important;
   }
 }
-@media (max-width: 640px) {
+@media (min-width: 998px) and (max-width: 1200px) {
   .first-page label.error {
-    top: 296.8px !important;
+    top: 189px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 997px) {
+  .first-page label.error {
+    top: 249px !important;
   }
 }
 .logotag.tweet-2 {

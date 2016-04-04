@@ -1368,11 +1368,20 @@ p.content.text-left.col-md-12.col-sm-12.col-xs-12 {
 }
 
 .first-page label.error {
-  @media (min-width: 1024px) {
-    top: 115px !important;
+  @media (min-width:1201px) {
+    top:113px !important;
   }
-  @media (max-width: 640px) {
-    top: 296.8px !important;
+  
+  @media (min-width:998px ) and (max-width: 1200px){
+    top: 189px !important;
+  }
+
+  @media (min-width:768px) and (max-width: 997px) {
+    top: 249px !important;
+  }
+
+  @media (max-width: 997px) {
+    display: none;
   }
 }
 
