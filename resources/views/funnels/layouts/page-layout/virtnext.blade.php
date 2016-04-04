@@ -292,7 +292,7 @@
                     </div>
                     <div class="right-side-audios col-md-12 col-lg-5">
                         <div class="col-md-12 voices-video-div">
-                            @include('funnels.layouts._partials._video',['video_url' => 'https://player.vimeo.com/video/151799528?autoplay=0']);
+                            @include('funnels.layouts._partials._video',['video_url' => 'https://player.vimeo.com/video/151799528?autoplay=0'])
                         </div>
                         <div class="clearfix"></div>
                     </div>

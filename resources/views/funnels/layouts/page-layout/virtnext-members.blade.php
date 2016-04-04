@@ -85,7 +85,7 @@
                                     <h2 class="uppercase white text-center">Fill your details to get your free license</h2>
                                 </header>
                                 <div id="boost-form" style="display: block;">
-                                    @include('funnels.layouts._partials._form-mobile', ['funnelId' => $page->getParent()->id]);
+                                    @include('funnels.layouts._partials._form-mobile', ['funnelId' => $page->getParent()->id])
                                 </div>
                             </form>
                         </div>
@@ -263,7 +263,7 @@
                     </div>
                     <div class="right-side-audios col-md-12 col-lg-5">
                         <div class="col-md-12 voices-video-div">
-                            @include('funnels.layouts._partials._video',['video_url' => 'https://player.vimeo.com/video/151799528?autoplay=0']);
+                            @include('funnels.layouts._partials._video',['video_url' => 'https://player.vimeo.com/video/151799528?autoplay=0'])
                         </div>
                         <div class="clearfix"></div>
                     </div>

@@ -47,7 +47,7 @@
                             <div class="form-box">
                                 <h2><b>Congratulations,</b> sign up now and get your lifetime free subscription!</h2>
                                 <div class="wl-signup">
-                                    @include('funnels.layouts._partials._form-mobile', ['funnelId' => $page->getParent()->id]);
+                                    @include('funnels.layouts._partials._form-mobile', ['funnelId' => $page->getParent()->id])
                                 </div>
                                 <span class="message">limited time offer!</span>
                                 <ul class="logo-list">
