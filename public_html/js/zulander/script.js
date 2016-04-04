@@ -187,7 +187,7 @@ function updateVideoViewers() {
 
 $('body').on('click','.goToMembers',function(e) {
 	e.preventDefault();
-	window.location.href = window.location.hostname + '/members';
+	window.location.href += '/members';
 });
 
 $('body').on('mouseenter mouseleave','.switch-photo',function(e) {
