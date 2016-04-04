@@ -17,7 +17,7 @@
 
 @section('bottom-scripts')
     @com('funnel_scripts')
-    {!! $page->appendAsset(url('/js/virtnext/jquery-2.2.2.min.js')) !!}
+{{--    {!! $page->appendAsset(url('/js/virtnext/jquery-2.2.2.min.js')) !!}--}}
     {!! $page->appendAsset(url('/js/virtnext/bootstrap.min.js')) !!}
     {!! $page->appendAsset(url('/js/virtnext/audioplayer.min.js')) !!}
     {!! $page->appendAsset(url('/js/virtnext/flipclock.min.js')) !!}
@@ -271,14 +271,14 @@
         <div class="footer-desgin">
             <div class="col-md-10 col-center ssl-main-div">
                 <div class="col-lg-7 col-lg-push-4 no-gutter">
-                    <form class="form-horizontal" role="form">
+                    <div class="form-horizontal" role="form">
                         <header class="bottom-members-form-header">
                             <h2 class="white uppercase bold">Register <span class="uppercase bold yellow">for Free </span>now</h2>
                             <h3 class="uppercase white">SIGN UP BELOW FOR INSTANT PROFITS!</h3>
                         </header>
                         <a id="goToLogin" href="#regForm" class="btn btn-warning button-black">JOIN NOW</a>
                         <div class="clearfix"></div>
-                    </form>
+                    </div>
                 </div>
                 <div class="col-lg-4 col-lg-pull-7">
                     <img class="img-responsive ssl-img" src="/img/virtnext/ssl.png" />
@@ -286,7 +286,6 @@
                 <div class="clearfix"></div>
             </div>
         </div>
-
         <div class="companys-row">
             <div class="companys-div col-md-12 col-center">
                 <div class="col-md-12">
