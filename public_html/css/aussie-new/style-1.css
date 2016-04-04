@@ -13045,6 +13045,11 @@ p.content.text-left.col-md-12.col-sm-12.col-xs-12 {
     top: 249px !important;
   }
 }
+@media (max-width: 767px) {
+  .first-page label.error {
+    display: none !important;
+  }
+}
 .logotag.tweet-2 {
   margin: 1em 0;
 }

@@ -60,7 +60,7 @@
 
                     <div class="row">
 
-                                <!--Video Tag-->
+                        <!--Video Tag-->
                         <div id="video_part" class='col-md-7  {{--col-sm-12--}} pull-left'>
                             @include('funnels.layouts._partials._video',  ['w'=>'100%','h'=>'100%'])
                         </div>
@@ -256,16 +256,18 @@
             </main>
         </div>
         <footer class="row col-md-12">
-
-            <div id="left-footer" class="col-md-10 col-sm-10 col-xs-9 push-left"> Copyright 2016 Aussie Method. All
-                Right Reserved.
-            </div>
-            <div id="right-footer" class="col-md-2 col-sm-2 col-xs-3 push-right">
-                @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/policy", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Privacy'])
-                |
-                @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/terms", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Terms'])
+            <div class="container footer-content">
+                <div id="left-footer" class="col-md-10 col-sm-10 col-xs-9 push-left"> Copyright 2016 Aussie Method. All
+                    Right Reserved.
+                </div>
+                <div id="right-footer" class="col-md-2 col-sm-2 col-xs-3 push-right">
+                    @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/policy", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Privacy'])
+                    |
+                    @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/terms", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Terms'])
+                </div>
             </div>
         </footer>
+
     </div>
     <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
 @endsection

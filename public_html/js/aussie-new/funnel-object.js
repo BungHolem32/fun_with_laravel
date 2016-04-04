@@ -418,7 +418,6 @@
                     }
 
                     this.counter  = funnelControll.live_trade.get_random_number ( 0, images.length - 2 ) == 95 ? 2 : funnelControll.live_trade.get_random_number ( 0, images.length - 2 );
-
                     this.dc       = funnelControll.live_trade.get_random_number ( 0, this.data.length - 2 );
                     this.oldtime  = new Date ();
                     this.old_time = this.oldtime.getSeconds ();
