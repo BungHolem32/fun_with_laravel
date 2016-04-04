@@ -55,9 +55,9 @@
                 <div class="free first-page-form">
                     {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post']) !!}
                     <input type="hidden" name="pageId" value="{{ $page->id }}">
-                    <div class="f1  hidden-sm hidden-xs text-center">
+                    <div class="f1 text-center">
                             <img class="country-logo" src="/img/zulander/loader.gif" alt="" />
-                            <span></span>
+                            <span class="hidden-sm hidden-xs"></span>
                             @if($page->switches->showEmailField)
                                 <input id="firstPageSignUpMail" type="email" value="" placeholder="Please enter your email here" required="required" name="email"/>
                             @endif
