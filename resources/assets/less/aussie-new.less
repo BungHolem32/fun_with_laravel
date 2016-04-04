@@ -228,9 +228,13 @@ body {
             }
 
             /*VIDEO PART*/
-            #video_part video {
+            video#video_part  {
               border: 5px solid #1F3A79 !important;
               z-index: 1000;
+              @media (max-width:1200px) {
+                width:100%;
+              }
+
             }
           }
 
@@ -732,6 +736,7 @@ body {
           margin: 1.5em auto;
           /*VIDEO AND FORM*/
           &#video_n_form {
+            margin-top: 0.8%;
             @media (max-width: 1200px) and (min-width: 990px) {
               width: 64.7%;
             }
@@ -856,9 +861,12 @@ body {
             }
 
             /*VIDEO PART*/
-            #video_part video {
+            video#video_part {
               border: 5px solid #1F3A79 !important;
               z-index: 1000;
+              @media (max-width:1200px) {
+                width:100%;
+              }
             }
           }
 
@@ -1388,4 +1396,3 @@ p.content.text-left.col-md-12.col-sm-12.col-xs-12 {
 .logotag.tweet-2 {
   margin: 1em 0;
 }
-

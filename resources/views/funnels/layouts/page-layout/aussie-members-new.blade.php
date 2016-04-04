@@ -61,9 +61,7 @@
                 <div class="row">
 
                     <!--Video Tag-->
-                    <div id="video_part" class='col-lg-8 col-md-8  {{--col-sm-12--}} pull-left'>
                         @include('funnels.layouts._partials._video',  ['w'=>'100%','h'=>'100%'])
-                    </div>
 
                     <!--CONTENT AND FORM  Tag-->
                     <div id="form_part" class='col-lg-4 col-md-4 col-sm-12 form-second'>

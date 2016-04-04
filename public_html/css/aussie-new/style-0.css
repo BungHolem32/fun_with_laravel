@@ -11451,12 +11451,6 @@ body {
   }
 }
 @media (max-width: 1200px) {
-  div#video_part {
-    z-index: 1000;
-    width: 100%;
-  }
-}
-@media (max-width: 1200px) {
   body #wrapper main section .form-first input.submit-aussie {
     background: url('/img/aussie-new/buttonfree_mobile.png') no-repeat top center;
     background-size: contain;
@@ -11933,9 +11927,14 @@ body #wrapper.first-page main section#video_n_form #form_part.form-first input#f
     margin: 1em 0;
   }
 }
-body #wrapper.first-page main section#video_n_form #video_part video {
+body #wrapper.first-page main section#video_n_form video#video_part {
   border: 5px solid #1F3A79 !important;
   z-index: 1000;
+}
+@media (max-width: 1200px) {
+  body #wrapper.first-page main section#video_n_form video#video_part {
+    width: 100%;
+  }
 }
 body #wrapper.first-page main section#video-how-method-works {
   margin: 1.5em auto;
@@ -12554,9 +12553,14 @@ body #wrapper.second-page main section#video_n_form #form_part.form-first input#
     margin: 1em 0;
   }
 }
-body #wrapper.second-page main section#video_n_form #video_part video {
+body #wrapper.second-page main section#video_n_form video#video_part {
   border: 5px solid #1F3A79 !important;
   z-index: 1000;
+}
+@media (max-width: 1200px) {
+  body #wrapper.second-page main section#video_n_form video#video_part {
+    width: 100%;
+  }
 }
 body #wrapper.second-page main section#video-how-method-works {
   margin: 1.5em auto;
