@@ -15,13 +15,12 @@
 @section('bottom-scripts')
     @com('funnel_scripts')
     {!! $page->appendAsset(url('/js/firstPage.js')) !!}
-    {!! $page->appendAsset(url('/js/virtnext/jquery-2.2.2.min.js')) !!}
     {!! $page->appendAsset(url('/js/virtnext/bootstrap.min.js')) !!}
     {!! $page->appendAsset(url('/js/virtnext/audioplayer.min.js')) !!}
     {!! $page->appendAsset(url('/js/virtnext/flipclock.min.js')) !!}
-    {!! $page->appendAsset(url('/js/virtnext/jquery.fancybox-buttons.min.js')) !!}
-    {!! $page->appendAsset(url('/js/virtnext/jquery.fancybox.pack.min.js')) !!}
-    {!! $page->appendAsset(url('/js/virtnext/jquery.validate.min.js')) !!}
+{{--    {!! $page->appendAsset(url('/js/virtnext/jquery.fancybox-buttons.min.js')) !!}--}}
+{{--    {!! $page->appendAsset(url('/js/virtnext/jquery.fancybox.pack.min.js')) !!}--}}
+{{--    {!! $page->appendAsset(url('/js/virtnext/jquery.validate.min.js')) !!}--}}
     {!! $page->appendAsset(url('/js/virtnext/main.js')) !!}
     {!! $page->appendAsset(url('/js/virtnext/FIFO-plugin.min.js')) !!}
     {!! $page->appendAsset(url('/js/virtnext/funnelOnLoad.js')) !!}
@@ -57,7 +56,7 @@
                     <label for="email-popup" style="text-align: center; color: rgb(255, 0, 0); font-size: 17px; margin-top: 8px; display: none;"></label>
                 </div>
                 <div class="form-group">
-                    <input class="btn btn-lg btn-block button-white" id="sign-me-up-btn" value="sign me up" type="submit">
+                    <input class="btn btn-lg btn-block button-white" id="sign-me-up-btn" value="sign me up">
                 </div>
             </div>
         </section>
@@ -119,15 +118,15 @@
 
                     {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post']) !!}
                     <input type="hidden" name="pageId" value="{{ $page->id }}">
-                    @if($page->switches->showEmailField)
                         <div class="form-group col-sm-12 col-md-12 col-lg-6">
-                            <input type="email" class="form-control emails all-forms-style" id="email" name="email" placeholder="Your Email" data-rule-email="true" data-rule-required="true" data-msg-required="Please Enter Valid Email">
+                            @if($page->switches->showEmailField)
+                                <input class="form-control emails all-forms-style" id="email" type="email" name="email" value="" placeholder="Please enter your email" required="required">
+                            @endif
                         </div>
                         <div class="form-group col-sm-12 col-md-12 col-lg-6">
                             <input type="submit" class="btn btn-warning btn-block button-black" value="JOIN NOW" style="font-weight: bold;">
                         </div>
                         <div class="clearfix"></div>
-                    @endif
                     {!! Form::close() !!}
 
                 </div>
@@ -143,7 +142,7 @@
                     </div>
                     <div class="clearfix"></div>
                     <div class="col-md-12 col-lg-8 pull-right flip-button-div">
-                        <button type="submit" class="btn btn-warning btn-block button-white buttons" id="registerFree">REGISTER TODAY FOR FREE</button>
+                        <button class="btn btn-warning btn-block button-white buttons" id="registerFree">REGISTER TODAY FOR FREE</button>
                     </div>
                     <div class="clearfix"></div>
                 </div>
