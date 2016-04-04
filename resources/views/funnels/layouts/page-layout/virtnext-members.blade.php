@@ -48,17 +48,9 @@
                 </header>
                 <div class="members-first-part-video-div col-md-12 col-lg-10 center-block col-center no-gutter">
                     <div class="members-video-container col-md-8">
-
-
-
-
-                        <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
                         <div class='embed-container'>
-                            {{--<iframe id="frameVid" src='https://player.vimeo.com/video/154964605?autoplay=0&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>--}}
-                            @include('funnels.layouts._partials._video')
+                            @include('funnels.layouts._partials._video',  ['w'=>'100%', 'h'=>'100%'])
                         </div>
-
-
                         <style>
                             @media screen and (max-width:768px) {
                                 #frameVid{
@@ -70,7 +62,7 @@
                                     padding-bottom: 3px;
                                 }
                             }
-                            
+
                             @media screen and (max-width:500px) {
                                 #frameVid{
                                     height: 300px !important;
@@ -85,7 +77,7 @@
                                     <h2 class="uppercase white text-center">Fill your details to get your free license</h2>
                                 </header>
                                 <div id="boost-form" style="display: block;">
-                                    @include('funnels.layouts._partials._form-mobile', ['funnelId' => $page->getParent()->id])
+                                    @include('funnels.layouts._partials._form-mobile', ['funnelId' => $page->getParent()->id]);
                                 </div>
                             </form>
                         </div>
@@ -263,7 +255,7 @@
                     </div>
                     <div class="right-side-audios col-md-12 col-lg-5">
                         <div class="col-md-12 voices-video-div">
-                            @include('funnels.layouts._partials._video',['video_url' => 'https://player.vimeo.com/video/151799528?autoplay=0'])
+                            @include('funnels.layouts._partials._video',['video_url' => 'https://player.vimeo.com/video/151799528?autoplay=0']);
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -292,7 +284,7 @@
                             <h2 class="white uppercase bold">Register <span class="uppercase bold yellow">for Free </span>now</h2>
                             <h3 class="uppercase white">SIGN UP BELOW FOR INSTANT PROFITS!</h3>
                         </header>
-                        <a id="goToLogin" href="#regForm" class="btn btn-warning button-black">JOIN NOW</a>
+
                         <div class="clearfix"></div>
                     </form>
                 </div>

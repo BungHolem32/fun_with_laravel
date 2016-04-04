@@ -1452,5 +1452,7 @@ footer p {
     #goToLogin { width: 100% !important; margin: 35px 0 0 0; }
 }
 
+.voices-video-div .video { background-color: black; }
+
 iframe { max-width: 100% !important; }
 #goToLogin { width: 300px; max-width: 100%; padding: 10px; font-weight: bold; font-size: 2em; }

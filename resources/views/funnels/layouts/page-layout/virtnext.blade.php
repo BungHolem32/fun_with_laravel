@@ -81,9 +81,7 @@
                 <div class="first-part-video-div col-md-9 center-block col-center no-gutter">
                     <div class="video-container">
                         @include('funnels.layouts._partials._video',  ['w'=>'100%', 'h'=>'100%'])
-                        {{--<iframe style="border:0!important;" id="frameVid" class="col-md-9 first-part-video-iframe" src='https://player.vimeo.com/video/151792606?autoplay=0&amp;loop=1&amp;title=1&amp;byline=0&amp;portrait=1' frameborder='0'></iframe>--}}
                         <style>
-
                             @media screen and (max-width:768px){
                                 #frameVid{
                                     margin-top:-65px;
@@ -289,9 +287,9 @@
                         </div>
                         <div class="clearfix"></div>
                     </div>
-                    <div class="right-side-audios col-md-12 col-lg-5">
+                    <div class="right-side-audios col-md-12 col-lg-6">
                         <div class="col-md-12 voices-video-div">
-                            @include('funnels.layouts._partials._video',['video_url' => 'https://player.vimeo.com/video/151799528?autoplay=0','w'=>'100%', 'h'=>'100%'])
+                            @include('funnels.layouts._partials._video',['video_url' => 'http://video.chaki.netdna-cdn.com/Virtnext - testimonials.mp4','w'=>'100%', 'h'=>'100%', 'autoplay' => false, 'controls' => true, ])
                         </div>
                         <div class="clearfix"></div>
                     </div>
