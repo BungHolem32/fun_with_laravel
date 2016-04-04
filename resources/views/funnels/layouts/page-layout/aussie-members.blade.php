@@ -1,6 +1,6 @@
 @section('head')
     {{-- maybe put it elsewere--}}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=480px;initial-scale=1">
     <!-- Startup CSS -->
     {!! $page->appendAsset(url('/css/aussie/style.css')) !!}
             <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->

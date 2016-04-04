@@ -54,9 +54,10 @@ body {
 
   /*WRAPPER FOR ALL CONTENT*/
   #wrapper {
+    overflow: hidden;
     //min-width: 400px;
     background: url('/img/aussie-new/mainbg.jpg') repeat-y top center;
-    min-width: 480px;
+    min-width: 320px;
 
     &.first-page {
 
@@ -95,20 +96,35 @@ body {
           top: -5px;
           left: 0;
           right: 0;
+          @media (max-width: 990px) {
+            height: 94px;
+            border-bottom: 1px solid lightgray;
+          }
+          @media (max-width: 768px) {
+
+            height: 15vw;
+          }
+          @media (max-width: 480px) {
+            height: 17vw;
+          }
         }
       }
 
       /*H2 HEADER*/
       h2 {
+
         color: #1F3A79;
         font-size: 2.5em;
         font-family: 'Cabin', sans-serif;
         font-weight: bold;
         max-width: 76%;
-        margin: 1.5em auto;
+        margin: 1em auto;
 
         @media (max-width: 990px) {
           max-width: 100%;
+        }
+        @media (max-width: 480px) {
+          font-size: 2.4em;
         }
 
       }
@@ -136,6 +152,10 @@ body {
                   margin-top: 0.1em;
                 }
 
+                @media (max-width: 600px) {
+                  margin-left: 0;
+                }
+
                 /*PARAGRAPH*/
                 p {
                   font-family: 'Cabin', sans-serif;
@@ -153,6 +173,9 @@ body {
                       margin-top: 0.4em;
                       font-family: 'Cabin', sans-serif;
                     }
+                    @media (max-width: 640px) {
+                      font-size: 2em;
+                    }
                   }
                 }
 
@@ -166,8 +189,9 @@ body {
 
                   /*SUBMIT BUTTON*/
                   &.submit-aussie {
+                    cursor: pointer;
                     @media (max-width: 599px) {
-                      height: 144px !important;
+                      height: 25.4vw !important;
 
                     }
                     background: url('/img/aussie-new/buttonfree.png') no-repeat top center;
@@ -206,6 +230,7 @@ body {
             /*VIDEO PART*/
             #video_part video {
               border: 5px solid #1F3A79 !important;
+              z-index: 1000;
             }
           }
 
@@ -230,7 +255,7 @@ body {
                 }
                 @media (min-width: 760px) and (max-width: 989px) {
                   position: absolute;
-                  top: 14.6em;
+                  top: 11.8em;
                   left: 126.1px;
                   width: 67.8%;
                   height: auto;
@@ -238,29 +263,76 @@ body {
 
                 @media (min-width: 640px) and (max-width: 759px) {
                   position: absolute;
-                  top: 9.2em;
+                  top: 11.1em;
                   left: 105.3px;
                   width: 69.5%;
                   height: auto;
                 }
                 @media (min-width: 600px) and (max-width: 639px) {
                   position: absolute;
-                  top: 8.2em;
-                  left: 92.3px;
+                  top: 10.6em;
+                  left: 86.3px;
                   width: 69.5%;
                   height: auto;
                 }
-                @media (min-width: 500px) and (max-width: 599px) {
+                @media (min-width: 570px) and (max-width: 599px) {
                   position: absolute;
-                  top: 8.6em;
+                  top: 10.6em;
                   left: 94.3px;
                   width: 66.5%;
                   height: auto;
                 }
-                @media (min-width: 300px) and (max-width: 500px) {
+                @media (min-width: 500px) and (max-width: 569px) {
                   position: absolute;
-                  top: 7.3em;
-                  left: 74.3px;
+                  top: 13.6em;
+                  left: 94.3px;
+                  width: 66.5%;
+                  height: auto;
+
+                }
+                @media (min-width: 470px) and (max-width: 500px) {
+                  position: absolute;
+                  top: 12.8em;
+                  left: 80.6px;
+                  width: 66.5%;
+                  height: auto
+                }
+
+                @media (min-width: 379px) and (max-width: 469px) {
+                  position: absolute;
+                  top: 12.1em;
+                  left: 80.6px;
+                  width: 66.5%;
+                  height: auto
+                }
+                @media (min-width: 370px) and (max-width: 378px) {
+                  position: absolute;
+                  top: 11.8em;
+                  left: 60.9px;
+                  width: 66.5%;
+                  height: auto;
+                }
+
+                @media (min-width: 320px) and (max-width: 369px) {
+                  position: absolute;
+                  top: 11.9em;
+                  left: 63.2px;
+                  width: 66.5%;
+                  height: auto;
+                }
+
+                @media (min-width: 300px) and (max-width: 319px) {
+                  position: absolute;
+                  top: 14em;
+                  left: 54.2px;
+                  width: 66.5%;
+                  height: auto;
+                }
+
+                @media (min-width: 0px) and (max-width: 346px) {
+                  position: absolute;
+                  top: 14.1em;
+                  left: 54.2px;
                   width: 66.5%;
                   height: auto;
                 }
@@ -326,7 +398,6 @@ body {
 
             /*ANSWER QUESTION TEXT*/
             .question_n_answer {
-
               max-width: 78%;
               margin: 1.5em auto;
               left: 11.3%;
@@ -357,6 +428,9 @@ body {
                     font-weight: bold;
                     .margin(0, 0, 10px, 10px);
                     user-select: none;
+                    @media (max-width: 480px) {
+
+                    }
                   }
                 }
                 .answer {
@@ -367,6 +441,10 @@ body {
                     background: white;
                     padding: 0.5em;
                     margin-bottom: 0.5em;
+                    @media (max-width: 480px) {
+                      padding: 0.5em;
+                      text-align: justify;
+                    }
                   }
                 }
               }
@@ -404,7 +482,9 @@ body {
                   border-top: 4px #0086C6;
 
                   @media (max-width: 500px) {
-                    font-size: 1em;
+                    font-size: 0.9em;
+                    direction: rtl;
+
                   }
                 }
               }
@@ -432,9 +512,15 @@ body {
                     @media (max-width: 1347px) {
                       min-height: 50px;
                     }
+                    @media (max-width: 480px) {
+                      min-height: 10vh;
+                    }
                     padding: 0.2em;
                     border: 1px solid white;
                   }
+                }
+                @media (max-width: 480px) {
+                  font-size: 0.8em;
                 }
               }
             }
@@ -611,7 +697,15 @@ body {
           top: -5px;
           left: 0;
           right: 0;
-
+          @media (max-width: 990px) {
+            height: 10.6%;
+          }
+          @media (max-width: 768px) {
+            height: 24vw;
+          }
+          @media (max-width: 480px) {
+            height: 16.2vw;
+          }
         }
       }
 
@@ -624,6 +718,12 @@ body {
         max-width: 76%;
         margin: 1.5em auto;
 
+        @media (max-width: 990px) {
+          max-width: 100%;
+        }
+        @media (max-width: 480px) {
+          font-size: 2.3em;
+        }
       }
 
       /*MAIN LAYOUT*/
@@ -650,12 +750,13 @@ body {
 
                 #submit {
 
-                  @media  (min-width: 990px) and (max-width: 1200px){
+                  cursor: pointer;
+                  @media (min-width: 990px) and (max-width: 1200px) {
                     background: url('/img/aussie-new/buttonfree_mobile.png') no-repeat center;
                     max-width: 100%;
                     margin: 1em auto;
                     height: 221px !important;
-                    background-size:contain;
+                    background-size: contain;
                   }
                 }
               }
@@ -704,6 +805,7 @@ body {
                   /*FIRST FORM */
                   /*SUBMIT BUTTON*/
                   &.submit-aussie {
+                    cursor: pointer;
                     @media (max-width: 599px) {
                       height: 144px !important;
 
@@ -724,15 +826,19 @@ body {
 
                   /*SECOND FORM*/
                   &[type="submit"] {
-                    @media  (min-width: 990px) and (max-width: 1200px) {
+                    cursor: pointer;
+                    @media (min-width: 990px) and (max-width: 1200px) {
                       height: 266.8px !important;
                       background-size: contain;
+                    }
+                    @media (max-width: 420px) {
+                      height: 105px;
                     }
                   }
 
                   /*MAIL TEXT INPUT*/
                   &#firstPageSignUpMail {
-                    @media (min-width: 990px) and (max-width: 1200px)  {
+                    @media (min-width: 990px) and (max-width: 1200px) {
                       margin: 1em 0;
                       @media (max-width: 640px) {
                         height: 100px;
@@ -752,6 +858,7 @@ body {
             /*VIDEO PART*/
             #video_part video {
               border: 5px solid #1F3A79 !important;
+              z-index: 1000;
             }
           }
 
@@ -784,29 +891,37 @@ body {
 
                 @media (min-width: 640px) and (max-width: 759px) {
                   position: absolute;
-                  top: 16.2em;
+                  top: 13.7em;
                   left: 105.3px;
                   width: 69.5%;
                   height: auto;
                 }
                 @media (min-width: 600px) and (max-width: 639px) {
                   position: absolute;
-                  top: 8.2em;
+                  top: 13.2em;
                   left: 92.3px;
                   width: 69.5%;
                   height: auto;
                 }
-                @media (min-width: 500px) and (max-width: 599px) {
+                @media (min-width: 481px) and (max-width: 599px) {
                   position: absolute;
-                  top: 8.6em;
+                  top: 16em;
                   left: 94.3px;
                   width: 66.5%;
                   height: auto;
                 }
-                @media (min-width: 300px) and (max-width: 500px) {
+
+                @media (min-width: 415px) and (max-width: 479px) {
                   position: absolute;
-                  top: 7.3em;
-                  left: 74.3px;
+                  top: 14.2em;
+                  left: 77.3px;
+                  width: 66.5%;
+                  height: auto;
+                }
+                @media (min-width: 320px) and (max-width: 387px) {
+                  position: absolute;
+                  top: 13.6em;
+                  left: 59.2px;
                   width: 66.5%;
                   height: auto;
                 }
@@ -871,9 +986,9 @@ body {
 
             /*ANSWER QUESTION TEXT*/
             .question_n_answer {
-
-              max-width: 100%;
+              max-width: 78%;
               margin: 1.5em auto;
+              left: 11.3%;
 
               @media (max-width: 990px) {
                 max-width: 100%;
@@ -881,12 +996,6 @@ body {
               }
 
               .question {
-                width: 76%;
-                margin: 0 auto;
-                @media (max-width: 1200px) {
-                  margin: 1.5em 0;
-                  width: 100%
-                }
 
                 .left-button {
                   margin-top: 0em;
@@ -907,6 +1016,8 @@ body {
                     font-weight: bold;
                     .margin(0, 0, 10px, 10px);
                     user-select: none;
+                    @media (max-width: 480px) {
+                    }
                   }
                 }
                 .answer {
@@ -917,6 +1028,10 @@ body {
                     background: white;
                     padding: 0.5em;
                     margin-bottom: 0.5em;
+                    @media (max-width: 480px) {
+                      padding: 0.5em;
+                      text-align: justify;
+                    }
                   }
                 }
               }
@@ -925,20 +1040,24 @@ body {
 
           /*LIVE THIRD PARTY*/
           &#live-third-party {
-            max-width: 928px;
 
+            @media (max-width: 600px) {
+              width: 100%;
+            }
             .row {
               margin: 0 auto;
             }
-            @media (max-width: 797px) {
-              width: 100%;
-            }
+
+            max-width: 928px;
 
             .table-trader {
               background: white;
               padding: 2em;
               box-shadow: 1px 1px 6px 1px #B5B5B5;
               margin: 1.5em 0;
+              @media (max-width: 500px) {
+                padding: 0.5em;
+              }
               ul {
                 list-style: none;
                 padding: 0;
@@ -946,10 +1065,14 @@ body {
                   color: black;
                   font-weight: bold;
                   font-size: 1.1em;
-                  border-top: 4px solid #0086C6;
-                  border-bottom: 1px solid white;
-                  border-right: 1px solid white;
-                  border-left: 1px solid white;
+                  border: 1px solid white;
+                  border-top: 4px #0086C6;
+
+                  @media (max-width: 500px) {
+                    font-size: 0.9em;
+                    direction: rtl;
+
+                  }
                 }
               }
 
@@ -974,11 +1097,17 @@ body {
                     }
 
                     @media (max-width: 1347px) {
-                      min-height: 73px;
+                      min-height: 50px;
+                    }
+                    @media (max-width: 480px) {
+                      min-height: 10vh;
                     }
                     padding: 0.2em;
                     border: 1px solid white;
                   }
+                }
+                @media (max-width: 480px) {
+                  font-size: 0.7em;
                 }
               }
             }
@@ -1063,7 +1192,7 @@ body {
                 /*TWEETS TAB CONTENT*/
                 #tweets-tab {
 
-                  .twt-message {
+                  .tweet-message {
                     /*DIV OF THE FACEBOOK MESSAGE*/
 
                     .twt-img-name-time {
@@ -1169,6 +1298,12 @@ body {
   @media (max-width: 600px) {
     min-height: 225px;
   }
+  @media (min-width: 370px) and (max-width: 480px) {
+    min-height: 60vw;
+  }
+  @media (min-width: 300px) and (max-width: 369px) {
+    min-height: 77vw
+  }
 
 }
 
@@ -1178,12 +1313,17 @@ h4.fb-name {
   padding: 0;
 }
 
-h4.twt-name {
-  padding: 0;
-}
+//h4.twt-name {
+//  padding: 0;
+//}
 
 .twt-name-n-time {
   padding-left: 0;
+  padding-right: 0;
+}
+
+h5.time-min.pull-right {
+  text-align: right;
 }
 
 .fb-title, .tweets-title, .tweets-title-2 {
@@ -1195,10 +1335,14 @@ h4.twt-name {
 
 .fb-tab.col-md-12.col-sm-12.col-xs-12.pull-left.text-left {
   color: #39588F;
+  @media (max-width: 480px) {
+    font-size: 0.9em;
+  }
 }
 
 .fb-img, .twt-img {
   margin-top: 0.5em;
+  min-width: 107px;
 }
 
 .fb-name-n-time {
@@ -1215,5 +1359,33 @@ section div img.col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2.col-xs-10.col-
 
 p.content.text-left.col-md-12.col-sm-12.col-xs-12 {
   font-size: 0.9em;
+}
+
+@media (max-width: 480px) {
+  body #wrapper.first-page main section#live-result-pic {
+    width: 100%;
+  }
+}
+
+.first-page label.error {
+  @media (min-width:1201px) {
+    top:113px !important;
+  }
+  
+  @media (min-width:998px ) and (max-width: 1200px){
+    top: 189px !important;
+  }
+
+  @media (min-width:768px) and (max-width: 997px) {
+    top: 249px !important;
+  }
+
+  @media (max-width: 767px) {
+    display: none !important;
+  }
+}
+
+.logotag.tweet-2 {
+  margin: 1em 0;
 }
 
