@@ -24,7 +24,6 @@
     {!! $page->appendAsset(url('/js/virtnext/slick.min.js')) !!}
     {!! $page->appendAsset(url('/js/virtnext/jquery.fancybox-buttons.min.js')) !!}
     {!! $page->appendAsset(url('/js/virtnext/jquery.fancybox.pack.min.js')) !!}
-    {!! $page->appendAsset(url('/js/virtnext/jquery.validate.min.js')) !!}
     {!! $page->appendAsset(url('/js/virtnext/main.js')) !!}
     {!! $page->appendAsset(url('/js/virtnext/membersOnLoad.js')) !!}
 @append
@@ -138,7 +137,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <progress style="display: none" class="progress_bar" value="82" max="82"></progress>
                         </div>
                         <div class="circel-discription col-md-12">
@@ -284,7 +282,7 @@
                             <h2 class="white uppercase bold">Register <span class="uppercase bold yellow">for Free </span>now</h2>
                             <h3 class="uppercase white">SIGN UP BELOW FOR INSTANT PROFITS!</h3>
                         </header>
-
+                        <a id="goToLogin" href="#regForm" class="btn btn-warning button-black">JOIN NOW</a>
                         <div class="clearfix"></div>
                     </form>
                 </div>

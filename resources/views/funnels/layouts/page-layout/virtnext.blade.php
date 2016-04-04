@@ -20,7 +20,6 @@
     {!! $page->appendAsset(url('/js/virtnext/flipclock.min.js')) !!}
 {{--    {!! $page->appendAsset(url('/js/virtnext/jquery.fancybox-buttons.min.js')) !!}--}}
 {{--    {!! $page->appendAsset(url('/js/virtnext/jquery.fancybox.pack.min.js')) !!}--}}
-{{--    {!! $page->appendAsset(url('/js/virtnext/jquery.validate.min.js')) !!}--}}
     {!! $page->appendAsset(url('/js/virtnext/main.js')) !!}
     {!! $page->appendAsset(url('/js/virtnext/FIFO-plugin.min.js')) !!}
     {!! $page->appendAsset(url('/js/virtnext/funnelOnLoad.js')) !!}
