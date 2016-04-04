@@ -185,8 +185,9 @@ function updateVideoViewers() {
 	setTimeout(updateVideoViewers,rand);
 }
 
-$('body').on('click','.goToMembers',function() {
-	$('#getLicenseBtn').click();
+$('body').on('click','.goToMembers',function(e) {
+	e.preventDefault();
+	window.location.href = window.location.hostname + '/members';
 });
 
 $('body').on('mouseenter mouseleave','.switch-photo',function(e) {

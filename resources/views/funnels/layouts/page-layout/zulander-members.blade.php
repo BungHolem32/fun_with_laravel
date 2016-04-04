@@ -156,7 +156,7 @@
         </div>\
         <div class="footer text-center">
             <div class="links"><a href="#">Site Agreement</a> | <a href="#">Risk Disclaimer</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a> | <a href="#">Affiliates</a></div>
-            <div class="copyright">Copyright © 2016 zulanderhack.co</div>
+            <div class="copyright">Copyright © 2016 zulanderwaytosuccuess.com</div>
             <div class="right">
                 <p>RISK Disclaimer: http://zulanderwaytosuccuess.com makes no representations regarding the legality of access to or use of this website or its content in any jurisdiction. Not all services offered through this website are permitted for use in al countries. Investing in financial instruments involves a high degree of risk and may bot be suitable for all investors. We strongly advise that you read our Website Terms of Service and Risk Disclosure Statement before accessing this website. http://zulanderwaytosuccuess.com and its officials are not responsible for any losses related to use of its services or software. If necessary seek independent advice prior to accessing this website. Users must be aware of their individual tax liability in their country of residence.</p>
                 <p>It is against the law to solicit U.S. persons to buy and sell commodity options, even if they are called prediction contracts, unless they are listed for trading and traded on a CFTC-registered exchange or unless legally exempt.</p>

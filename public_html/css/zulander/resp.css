@@ -17,7 +17,7 @@
 	.time { display:none;}
 	.live { display:none;}
 	.online { display:none;}
-	#timer2 { display:block!important; margin:20px 0;}
+	#timer2 { display:block!important; margin:-12px 0;}
 	#timer2 .title { margin:28px 0 0 0; text-align:left;}
 	/*.content .lenta-l:after { display:none;}*/
 	#timer2 .title2 { font-size:26px; text-transform:uppercase; margin:5px 0 0 0;}
@@ -63,7 +63,7 @@
 	.content .bvideo { font-size:20px;}
 	.mvideo { width:98%; margin:0 auto;}
 	.content .free { width:98%; margin:0 auto;}
-	.content .free form { background-image:none;}
+	.content .free form { background-image:none; height: 280px; }
 	.content .free .go1 {
 		width: 98%;
 		height: 63px;
@@ -72,6 +72,7 @@
 		background-size:contain;
 		text-indent: -9999px;
 		position: relative;
+		margin-top: 12px;
 	}
 	.content .free .go1:hover {
 		background: #f4f4f5 url(/img/zulander/btn1-Over.png) no-repeat center center;

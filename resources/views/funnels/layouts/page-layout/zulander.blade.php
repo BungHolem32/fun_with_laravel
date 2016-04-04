@@ -6,8 +6,8 @@
 @append
 
 @section('bottom-scripts')
-    @com('funnel_scripts')
-    {!! $page->appendAsset(url('/js/firstPage.js')) !!}
+    {{--@com('funnel_scripts')--}}
+{{--    {!! $page->appendAsset(url('/js/firstPage.js')) !!}--}}
     {!! $page->appendAsset(url('/js/zulander/moment.min.js')) !!}
     {!! $page->appendAsset(url('/js/zulander/bootstrap.min.js')) !!}
     {!! $page->appendAsset(url('/js/zulander/script.js')) !!}
@@ -53,18 +53,39 @@
                 </div>
                 <div class="avideo text-center">Claim One Of <span class="st1"><strike id="licenses-count">0</strike> <strong class="count">10</strong> FREE LICENSES In <span class="country-name">...</span></span> To Make <span class="st2">$1,008</span> <strong>Every 5 MINUTES >></strong></div>
                 <div class="free first-page-form">
-                    {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post']) !!}
-                    <input type="hidden" name="pageId" value="{{ $page->id }}">
-                    <div class="f1 text-center">
-                            <img class="country-logo" src="/img/zulander/loader.gif" alt="" />
-                            <span class="hidden-sm hidden-xs"></span>
-                            @if($page->switches->showEmailField)
-                                <input id="firstPageSignUpMail" type="email" value="" placeholder="Please enter your email here" required="required" name="email"/>
-                            @endif
-                        </div>
+{{--                    {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post']) !!}--}}
+                    {{--<input type="hidden" name="pageId" value="{{ $page->id }}">--}}
+                    {{--<div class="f1 text-center">--}}
+                            {{--<img class="country-logo" src="/img/zulander/loader.gif" alt="" />--}}
+                            {{--<span class="hidden-sm hidden-xs"></span>--}}
+                            {{--@if($page->switches->showEmailField)--}}
+                                {{--<input id="firstPageSignUpMail" type="email" value="" placeholder="Please enter your email here" required="required" name="email"/>--}}
+                            {{--@endif--}}
+                        {{--</div>--}}
+                        {{--<div class="f2 text-center" id="formSection">--}}
+                            {{--<input id="getLicenseBtn" type="submit" value="GIVE ME A FREE LICENSE!" class="go1"/>--}}
+                            {{--<div class="strelka visible-xs"><img src="/img/zulander/hurry2.png" class="img-responsive"  alt=""/></div>--}}
+                            {{--<div id="timer2" class="visible-sm visible-xs">--}}
+                                {{--<div class="col-sm-4 col-xs-4">--}}
+                                    {{--<div class="progress-radial progress-100">--}}
+                                        {{--<div class="overlay"><strong></strong><br><span>LEFT</span></div>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-sm-8 col-xs-8">--}}
+                                    {{--<div class="title"><span><strong class="count"></strong> FREE LICENSES</span> LEFT</div>--}}
+                                {{--</div>--}}
+                                {{--<div class="clear clearfix"></div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+{{--                    {!! Form::close() !!}--}}
+
+
+                    <form>
                         <div class="f2 text-center" id="formSection">
-                            <input id="getLicenseBtn" type="submit" value="GIVE ME A FREE LICENSE!" class="go1"/>
-                            <div class="strelka visible-xs"><img src="/img/zulander/hurry2.png" class="img-responsive"  alt=""/></div>
+                            <input type="submit" value="GIVE ME A FREE LICENSE!" class="go1 goToMembers"/>
+                            <div class="strelka visible-xs">
+                                <img src="/img/zulander/hurry2.png" class="img-responsive"  alt=""/>
+                            </div>
                             <div id="timer2" class="visible-sm visible-xs">
                                 <div class="col-sm-4 col-xs-4">
                                     <div class="progress-radial progress-100">
@@ -77,7 +98,10 @@
                                 <div class="clear clearfix"></div>
                             </div>
                         </div>
-                    {!! Form::close() !!}
+                    </form>
+
+
+
                     <div class="f3 text-center">
                         <div class="fieldset">
                             <div class="legend">100% Secured By</div>
@@ -119,7 +143,7 @@
             </div>
             <div class="footer text-center">
                 <div class="links"><a href="/zulander/agreement" target="_blank">Site Agreement</a> | <a href="/zulander/disclosure" target="_blank">Risk Disclaimer</a> | <a href="/zulander/policy" target="_blank">Privacy Policy</a></div>
-                <div class="copyright">Copyright © 2016 zulanderhack.co</div>
+                <div class="copyright">Copyright © 2016 zulanderwaytosuccuess.com</div>
                 <div class="right">
                     <p>RISK Disclaimer: http://zulanderwaytosuccuess.com makes no representations regarding the legality of access to or use of this website or its content in any jurisdiction. Not all services offered through this website are permitted for use in al countries. Investing in financial instruments involves a high degree of risk and may bot be suitable for all investors. We strongly advise that you read our Website Terms of Service and Risk Disclosure Statement before accessing this website. http://zulanderwaytosuccuess.com and its officials are not responsible for any losses related to use of its services or software. If necessary seek independent advice prior to accessing this website. Users must be aware of their individual tax liability in their country of residence.</p>
                     <p>It is against the law to solicit U.S. persons to buy and sell commodity options, even if they are called prediction contracts, unless they are listed for trading and traded on a CFTC-registered exchange or unless legally exempt.</p>

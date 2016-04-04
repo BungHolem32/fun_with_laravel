@@ -51,12 +51,12 @@ a { color:#0072ff;}
 .content .avideo span.st2 { color:#09cc00;}
 
 .content .free { position:relative;  width:879px; margin:0 auto;}
-.content .free form{ background:#f4f4f5 url(/img/zulander/hurry.png) no-repeat top right;}
+.content .free form{ background:#f4f4f5 url(/img/zulander/hurry.png) no-repeat top right; height: 200px; }
 .content .free:after { width:870px; height:62px; content: " "; background-image: url(/img/zulander/bigShadow.png); position: absolute; left:0; bottom:-62px;}
 .content .free .f1 input { width:384px; max-width: 72%; font-size:19px; padding:8px 0 8px 10px; margin:3px 0 0 10px; border:1px #d7d7d7 solid; -webkit-box-shadow: inset 3px 3px 9px 0px rgba(0,0,0,0.35);  -moz-box-shadow: inset 3px 3px 9px 0px rgba(0,0,0,0.35); box-shadow: inset 3px 3px 9px 0px rgba(0,0,0,0.35);}
 .content .free .f1 span { width:49px; height:54px; display:block; position:absolute; top:5px; left:65px; background-image: url(/img/zulander/mail.png); }
 .content .free .f1 img { margin:-5px 0 0 0;}
-.content .free .go1 { width:453px; height:93px; border:none; background:#f4f4f5 url(/img/zulander/btn1.png); text-indent:-9999px; position:relative;}
+.content .free .go1 { width:453px; height:93px; border:none; background:#f4f4f5 url(/img/zulander/btn1.png); text-indent:-9999px; position:relative; margin-top: 40px; }
 .content .free .go1:hover { background:#f4f4f5 url(/img/zulander/btn1-Over.png); }
 .content .free .fieldset { border:1px solid #bebebf; width:453px; margin:0 auto; position:relative; padding:7px 0;}
 .content .free .legend { font-family: RobotoCondensed-BoldItalic; font-size:17px; background:#f4f4f5; position:absolute; top:-17px; left:10px; padding:0 3px;}
