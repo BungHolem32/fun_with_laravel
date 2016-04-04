@@ -92,3 +92,23 @@ ul {
 footer#footer {
     margin-bottom: 20px !important;
 }
+
+@media (max-width:980px ){
+    .fa-spin{
+        animation: none;
+    }
+    i{
+        margin-top:1em;
+        display: none;
+    }
+
+    .boa-deposit-form-container p{
+        margin: 63px 0 10px
+    }
+    i.fa{
+        padding: 1px 0;
+    }
+}
+
+
+
