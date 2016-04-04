@@ -42,16 +42,19 @@ ul {
     max-height: 110px;
     margin: 0 auto;
     width: auto;
-    min-width: 160px;
+    min-width: 110px;
 }
 
 @media (max-width: 1200px ) {
-    i.fa {
+    .slide-menu i.fa {
         display: block;
     }
 
     li.col-xm-12.col-md-2.col-lg-2 {
         padding: 2em 3px;
+    }
+    label i {
+        display: inline-block;
     }
 }
 
@@ -155,6 +158,15 @@ footer#footer {
     .row{
         padding:0 !important;
     }
+
+    .fa-check, .fa-wrench, .fa-briefcase {
+        display: block;
+    }
+
+    .boa-deposit-form-container .boaforms-deposit #left_form {
+        padding: 0;
+    }
+
 
 }
 

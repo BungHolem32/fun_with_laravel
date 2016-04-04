@@ -63,7 +63,7 @@
                     <li class="col-xm-12 col-md-2 col-lg-2 ">
                         <?php $c = \Session::get('spotCustomer'); ?>
                         <a target="_blank" href="{{ $c->getAutologinLink() }}" id="manualTrading" class="capitalize">
-                            <i class="fa fa-wrench "></i>@ln(broker trading area)
+                            <i class="fa fa-wrench fa- "></i>@ln(broker trading area)
                         </a>
                     </li>
 
