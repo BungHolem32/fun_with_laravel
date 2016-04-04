@@ -82,7 +82,7 @@ if(!isset($_GET['dev_video'])):
         $videoFinaleLink = $videoUrl.$video_file."?st=".$video_hash."&e=".$video_expire;
         //$videoFinaleLink = 'http://p.media.chaki.netdna-cdn.com/vod/media.chaki/aussie/fs100.mp4';
     ?>
-    <video class="video" preload="none" width="{{ $w }}" height="{{ $h }}" {{ $autoplay }}  controls {{--{{ $controls }}--}}
+    <video class="video" preload="none" width="{{ $w }}" height="{{ $h }}" {{ $autoplay }}  controls="true" {{--{{ $controls }}--}}
            poster="{{ $poster }}">
         <source src="{!! $videoFinaleLink !!}" type='video/mp4' />
         <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>

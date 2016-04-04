@@ -267,5 +267,5 @@
         </footer>
 
     </div>
-    <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+    <a href="#" id="back-to-top" class="backtop" title="Back to top">&uarr;</a>
 @endsection
