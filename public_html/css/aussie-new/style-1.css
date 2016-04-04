@@ -11794,12 +11794,12 @@ body #wrapper.first-page section#top_strip {
 }
 @media (max-width: 768px) {
   body #wrapper.first-page section#top_strip {
-    height: 15vw;
+    height: 24vw;
   }
 }
 @media (max-width: 480px) {
   body #wrapper.first-page section#top_strip {
-    height: 17vw;
+    height: 18vw;
   }
 }
 body #wrapper.first-page h2 {
