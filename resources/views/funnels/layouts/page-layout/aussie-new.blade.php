@@ -80,7 +80,7 @@
                             <input type="submit" class="align-center col-md-12 col-sm-12 submit-aussie" value=""/>
                             {!! Form::close() !!}
                             <div class="col-md-12 col-sm-12">
-                                <img src="/img/aussie-new/certs.png" class="trust-pic img-responsive center-block">
+                                <img src="/img/aussie-new/trust-285.png" mobile-src="/img/aussie-new/trust-mobile-500.png" desktop-src="/img/aussie-new/trust-285.png" class="dynamic-width-change-1200 trust-pic img-responsive center-block">
                             </div>
                         </div>
 
@@ -113,7 +113,7 @@
                     <div class="row">
                         <div>
                             <a class="fancybox" rel="group" href="/img/aussie-new/guarantee.png">
-                                <img src="/img/aussie-new/hey.png" alt="first_pic-jake-pertu pic"
+                                <img src="/img/aussie-new/jake-921.png" alt="first_pic-jake-pertu pic"
                                      class="jake-pertu img-responsive center-block">
                             </a>
                         </div>
@@ -129,12 +129,13 @@
                         </header>
 
                         <div class="pic-iphone">
-                            <img src="/img/aussie-new/iphone.png" alt="iphone-massage-pic"
-                                 class="img-responsive center-block iphone-pic">
+                            <img  src="/img/aussie-new/iphone-921.png" mobile-src="/img/aussie-new/iphone-mobile-666.png"  desktop-src="/img/aussie-new/iphone-921.png" alt="iphone-massage-pic"
+                                 class="img-responsive center-block iphone-pic dynamic-width-change">
                         </div>
                         <div class="pic-facebook">
-                            <img src="/img/aussie-new/face.png" alt="facebook-pic"
-                                 class="img-responsive center-block facebook-pic">
+                        <div class="pic-facebook">
+                            <img src="/img/aussie-new/face-921.png" mobile-src="/img/aussie-new/face-mobile-666.png" desktop-src="/img/aussie-new/face-921.png" alt="facebook-pic"
+                                 class="img-responsive center-block facebook-pic dynamic-width-change">
                         </div>
                     </div>
                 </section>
@@ -260,7 +261,7 @@
                 </div>
                 <div id="right-footer" class="col-md-2 col-sm-2 col-xs-3 push-right">
                     @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/policy", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Privacy'])
-                    |
+
                     @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/terms", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Terms'])
                 </div>
             </div>

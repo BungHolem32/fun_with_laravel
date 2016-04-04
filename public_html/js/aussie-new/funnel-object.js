@@ -208,37 +208,35 @@
         ,
         /*CHANGE PIC BY WIDTH */
         change_pic_by_width: {
-            value       : function ( mobile, desktop ) {
-                var width = $ ( window ).width ();
-                if ( width < 990 ) {
+            value       : function () {
+                var width    = $ ( window ).width ();
+                var elements = $ ( '.dynamic-width-change' );
+                var image    = null;
+                if ( width < 900 ) {
+                    $ ( elements ).each ( function ( i, el ) {
+                        var img = $ ( el ).attr ( 'mobile-src' );
+                        $ ( el ).attr ( 'src', img );
 
-                    $ ( '.iphone-pic' ).attr ( 'src', mobile[ 0 ] );
-                    $ ( '.facebook-pic' ).attr ( 'src', mobile[ 1 ] );
-                    $ ( '.mobile-steps' ).find ( '.hidden' ).removeClass ( 'hidden' );
-                    $ ( '#3-steps' ).find ( '.desktop-steps' ).addClass ( 'hidden' );
-                    $('.success-button').find('a').hide();
-                    
-                    /*REMOVE FANCYBOX*/
-                    $ ( '#jake-pertu' ).find ( '.fancybox' ).removeClass ().removeAttr ( 'href' );
+                        $ ( '#jake-pertu' ).find ( '.fancybox' ).removeClass ().removeAttr ( 'href' );
+                    } );
+
+                }else{
+                    $ ( elements ).each ( function ( i, el ) {
+                        img = $ ( el ).attr ( 'desktop-src' );
+                        $ ( el ).attr ( 'src', img );
+                    } );
                 }
-                if ( width > 990 ) {
-                    $ ( '.iphone-pic' ).attr ( 'src', desktop[ 0 ] );
-                    $ ( '.facebook-pic' ).attr ( 'src', desktop[ 1 ] );
-                    $ ( '.mobile-steps' ).find ( '.mobile-steps' ).addClass ( 'hidden' );
-                    $ ( '#3-steps' ).find ( '.desktop-steps' ).removeClass ( 'hidden' );
-                    $('.success-button').find('a').show();
-                    
-                    /*ADD FANCYBOX*/
-                    $ ( '#jake-pertu' ).find ( 'a' ).addClass ( 'fancybox' ).attr ( 'href', '/img/aussie-new/guarantee.png' );
-                }
-                if ( width < 1200 ) {
-                    $ ( 'img.trust-pic' ).attr ( 'src', mobile[ 2 ] );
-                    $ ( '' )
-                }
-                if ( width > 1200 ) {
-                    $ ( 'img.trust-pic' ).attr ( 'src', desktop[ 2 ] );
+
+                var element = $('.dynamic-width-change-1200');
+                if(width<1200){
+                    var img = $ ( element ).attr ( 'mobile-src' );
+                    $ ( element ).attr ( 'src', img );
+                }else{
+                    var img = $ ( element ).attr ( 'desktop-src' );
+                    $ ( element ).attr ( 'src', img );
                 }
             }
+
             ,
             enumerable  : true,
             configurable: true,
@@ -430,15 +428,15 @@
 
                     if ( element_name == 'tweets' ) {
                         // time = this.time_twt +=30;
-                        images = this.images2;
+                        images  = this.images2;
                         display = 'none';
-                        cls    = [ "col-md-8 col-sm-8 col-xs-12", 'col-md-8', 'pull-right', "col-md-6 col-sm-5  col-xs-4", "col-md-5 col-sm-4 col-xs-5" ]
+                        cls     = [ "col-md-8 col-sm-8 col-xs-12", 'col-md-8', 'pull-right', "col-md-6 col-sm-5  col-xs-4", "col-md-5 col-sm-4 col-xs-5" ]
 
                     } else {
                         // time = this.time_facebook +=30;
                         images = this.images1;
                         display:'block';
-                        cls    = [ "col-md-3 col-sm-3 col-xs-3", '', '' ];
+                        cls = [ "col-md-3 col-sm-3 col-xs-3", '', '' ];
 
                     }
                     var ht = "<div class=\'" + element_name + "-message\'>\n    <div " +
@@ -515,17 +513,13 @@
 
     /*==================================================LAUNCH ALL FUNCTIONS========================================= */
 
-    /*MOBILE AND DESKTOP PICS*/
-    var desktop = [ '/img/aussie-new/iphone.png', '/img/aussie-new/face.png', '/img/aussie-new/certs.png', 'url("/img/aussie-new/buttonfree.png") no-repeat center' ],
-        mobile  = [ '/img/aussie-new/iphone-mobile.png', '/img/aussie-new/face-mobile.png', '/img/aussie-new/trust-mobile.png', 'url("/img/aussie-new/buttonfree_mobile.png") no-repeat center' ];
-
     /*1-CHANGE PIC ON RESIZE*/
     $ ( window ).resize ( function () {
-        funnelControll.change_pic_by_width ( mobile, desktop );
+        funnelControll.change_pic_by_width ( );
     } );
 
     /*INIT THE RESIZE FUNCTION ON LOAD*/
-    funnelControll.change_pic_by_width ( mobile, desktop );
+    funnelControll.change_pic_by_width ( );
 
     /*2-CREATE TEMPLATE ANSWER QUESTION*/
     funnelControll.add_question_answer ();
@@ -568,9 +562,15 @@
     /*11 = CHANGE THE VALUE OF THE PREFIX INPUT IN MEMBER PAGE*/
     funnelControll.update_input_prefix ();
 
-   
-    $('.first-page #video_n_form').find('video.video').addClass('col-md-7 pull-left').attr('id','video_part').css({"border": "9px solid #1E387B", "padding": "0"});
-    $('.second-page #video_n_form').find('video.video').addClass('col-lg-8 col-md-8').attr('id','video_part').css({"border": "9px solid #1E387B", "padding": "0"});
+
+    $ ( '.first-page #video_n_form' ).find ( 'video.video' ).addClass ( 'col-md-7 pull-left' ).attr ( 'id', 'video_part' ).css ( {
+        "border" : "9px solid #1E387B",
+        "padding": "0"
+    } );
+    $ ( '.second-page #video_n_form' ).find ( 'video.video' ).addClass ( 'col-lg-8 col-md-8' ).attr ( 'id', 'video_part' ).css ( {
+        "border" : "9px solid #1E387B",
+        "padding": "0"
+    } );
 }) ( $ );
 
 
