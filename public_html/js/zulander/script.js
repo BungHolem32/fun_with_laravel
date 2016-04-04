@@ -184,7 +184,6 @@ function updateVideoViewers() {
 	setTimeout(updateVideoViewers,rand);
 }
 
-/**/
 // if (screen.width < 768) {
 //     $('#carousel-example-generic').attr('data-ride', 'carousel');
 //     $('#carousel-example-generic .col-md-4').addClass('item');
