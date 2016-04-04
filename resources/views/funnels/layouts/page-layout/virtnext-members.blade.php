@@ -29,10 +29,6 @@
 @append
 
 @section('page-layout')
-<!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
-
 <div class="container-fluid">
     <div class="row">
         <!-- Main Site content -->
@@ -41,7 +37,7 @@
                 <header class="members-header">
                     <img class="img-responsive col-center logo-img" src="/img/virtnext/logo.png" />
                     <h1 class="text-center">
-                        <span class="bold">ACT NOW</span> and change your life<span class="bold"> FOREVER</span><br />
+                        <span class="bold">ACT NOW</span> and change your life<span class="bold"> FOREVER</span><br/>
                         $2,500 Daily to $18,000 Weekly profits <span class="uppercase bold"> GUARANTEED</span>
                     </h1>
                 </header>
@@ -71,14 +67,12 @@
                     </div>
                     <div class="col-md-4 col-lg-4 no-gutter">
                         <div class="top-header-form-warpper">
-                            <form class="form-horizontal" role="form">
-                                <header class="forms-header top-members-form-header">
-                                    <h2 class="uppercase white text-center">Fill your details to get your free license</h2>
-                                </header>
-                                <div id="boost-form" style="display: block;">
-                                    @include('funnels.layouts._partials._form-mobile', ['funnelId' => $page->getParent()->id]);
-                                </div>
-                            </form>
+                            <header class="forms-header top-members-form-header">
+                                <h2 class="uppercase white text-center">Fill your details to get your free license</h2>
+                            </header>
+                            <div id="boost-form" style="display: block;">
+                                @include('funnels.layouts._partials._form-mobile', ['funnelId' => $page->getParent()->id]);
+                            </div>
                         </div>
                     </div>
                     <div class="clearfix"></div>

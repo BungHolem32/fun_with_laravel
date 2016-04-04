@@ -46,6 +46,5 @@ $(document).ready(function(){
     $('#email,#password').parent().removeClass().addClass('holder left box box-12');
     $('#phone').parent().removeClass().addClass('holder left box box-12');
     $('#submit').val('CREATE PROFIT ACCOUNT').css('font-weight','bold').removeClass().addClass('btn').parent().removeClass().addClass('left box box-12');
-
 });
 
