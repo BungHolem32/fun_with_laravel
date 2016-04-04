@@ -11452,6 +11452,7 @@ body {
 }
 @media (max-width: 1200px) {
   div#video_part {
+    z-index: 1000;
     width: 100%;
   }
 }
@@ -12555,6 +12556,7 @@ body #wrapper.second-page main section#video_n_form #form_part.form-first input#
 }
 body #wrapper.second-page main section#video_n_form #video_part video {
   border: 5px solid #1F3A79 !important;
+  z-index: 1000;
 }
 body #wrapper.second-page main section#video-how-method-works {
   margin: 1.5em auto;
