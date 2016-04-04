@@ -1,8 +1,8 @@
 @section('head')
 
     <link rel="stylesheet" href="/css/aussie/panel/style.css" />
-    <link rel="stylesheet" href="/css/aussie-new/panel/style-new.css" />
     <link rel="stylesheet" href="/css/aussie/panel/custom.css" />
+    <link rel="stylesheet" href="/css/aussie-new/panel/style-new.css" />
 @append
 
 @section('bottom-scripts')
