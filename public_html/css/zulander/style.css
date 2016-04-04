@@ -23,7 +23,7 @@ a { color:#0072ff;}
 .img-responsive { max-width: 100%; }
 .img-circle { border-radius: 50%; }
 .first-page-form { background-color: #f4f4f5 !important; }
-#eye-video-watchers { 
+#eye-video-watchers {
     position: relative; bottom: 2px;
 }
 
@@ -57,6 +57,7 @@ a { color:#0072ff;}
 .content .free .f1 span { width:49px; height:54px; display:block; position:absolute; top:5px; left:65px; background-image: url(/img/zulander/mail.png); }
 .content .free .f1 img { margin:-5px 0 0 0;}
 .content .free .go1 { width:453px; height:93px; border:none; background:#f4f4f5 url(/img/zulander/btn1.png); text-indent:-9999px; position:relative;}
+.content .free .go1:hover { background:#f4f4f5 url(/img/zulander/btn1-Over.png); }
 .content .free .fieldset { border:1px solid #bebebf; width:453px; margin:0 auto; position:relative; padding:7px 0;}
 .content .free .legend { font-family: RobotoCondensed-BoldItalic; font-size:17px; background:#f4f4f5; position:absolute; top:-17px; left:10px; padding:0 3px;}
 .content .free .f1 { padding:15px 0 15px; max-width:453px; margin:0 auto; position:relative;}
@@ -127,6 +128,7 @@ div#second .row input {  font-size:19px; padding:8px; margin:3px 0 0 0; border:1
 div#second select {  width:100%; font-size:19px; padding:8px; margin:3px 0 0 0; border:1px #d7d7d7 solid; -webkit-box-shadow: inset 3px 3px 9px 0px rgba(0,0,0,0.35);  -moz-box-shadow: inset 3px 3px 9px 0px rgba(0,0,0,0.35); box-shadow: inset 3px 3px 9px 0px rgba(0,0,0,0.35);}
 div#second .fild { margin:0 0 15px;}
 div#second .go2 { width:603px; height:95px; border:none; background:#f4f4f5 url(/img/zulander/btn3.png); text-indent:-9999px; position:relative; margin:15px 0 0 0;}
+div#second .go2:hover { background:#f4f4f5 url(/img/zulander/btn3-Over.png); }
 div#second .go3 { width:561px; height:89px; border:none; background:#f4f4f5 url(/img/zulander/btn4.png); text-indent:-9999px; position:relative;}
 .yes, .no { text-align:left; color:#555555; font-size:18px; line-height:22px; padding:14px 0 0 0; text-indent: 40px;}
 .yes { background:url(/img/zulander/yes.jpg) no-repeat 0 0;}

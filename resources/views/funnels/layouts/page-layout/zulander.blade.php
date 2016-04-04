@@ -114,7 +114,7 @@
                     </div>
                 </div>
                 <div class="lasBtn text-center">
-                    <a href="#firstPageSignUpMail" class="goToMembers"><img src="/img/zulander/btn1.png" alt=""/></a>
+                    <a href="#firstPageSignUpMail" class="goToMembers"><img data-switch="/img/zulander/btn1-Over.png" data-original="/img/zulander/btn1.png" class="switch-photo" src="/img/zulander/btn1.png" alt=""/></a>
                 </div>
             </div>
             <div class="footer text-center">
@@ -161,7 +161,7 @@
                 </div>
             </div>
             <div class="minigo">
-                <a href="#firstPageSignUpMail" class="goToMembers"><img src="/img/zulander/btn1.png" alt="" width="230"/></a>
+                <a href="#firstPageSignUpMail" class="goToMembers"><img data-switch="/img/zulander/btn1-Over.png" data-original="/img/zulander/btn1.png" class="switch-photo" src="/img/zulander/btn1.png" alt="" width="230"/></a>
             </div>
         </div>
 @endsection

@@ -149,7 +149,9 @@
                 <p><strong>Mike Wright and the Zulander Hack Support Team</strong></p>
             </div>
             <div class="lasBtn text-center">
-                <a href="#"><img src="/img/zulander/btn2.png" alt=""/></a>
+                <a href="#">
+                    <img data-switch="/img/zulander/btn2-Over.png" data-original="/img/zulander/btn2.png" class="switch-photo" src="/img/zulander/btn2.png" alt=""/>
+                </a>
             </div>
         </div>\
         <div class="footer text-center">
@@ -174,7 +176,7 @@
             </div>
         </div>
         <div class="minigo">
-            <a href="#"><img src="/img/zulander/btn1.png" alt="" width="230"/></a>
+            <a href="#"><img data-switch="/img/zulander/btn1-Over.png" data-original="/img/zulander/btn1.png" class="switch-photo" src="/img/zulander/btn1.png" alt="" width="230"/></a>
         </div>
     </div>
 
