@@ -8,6 +8,7 @@
     //if(!isset($poster)) $poster = '/images/LoadingAnim2.gif';
     if(!isset($poster)) $poster = '';
 
+
     if(!isset($page->video) && isset($video_url)) $videoUrl = $video_url;
     else $videoUrl = $page->video->get();
 
