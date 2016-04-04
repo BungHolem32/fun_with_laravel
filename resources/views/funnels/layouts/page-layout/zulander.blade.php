@@ -38,7 +38,7 @@
                 <div class="bvideo text-center">Don’t Miss The Surprise At The End Of This Short Video...</div>
                 <div class="mvideo">
                     <div class="video-player">
-                        @include('funnels.layouts._partials._video',  ['w'=>'100%', 'hd'=>360])
+                        @include('funnels.layouts._partials._video',  ['w'=>'100%', 'h'=>'100%'])
                         <div class="video-progress">
                             <div class="video-progress-viewers">
                                 <img src={{ url("/img/zulander/eye.png") }}>

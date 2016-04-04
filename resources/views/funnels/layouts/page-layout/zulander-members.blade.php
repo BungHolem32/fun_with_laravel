@@ -32,7 +32,7 @@
             </div>
             <div class="mvideo">
                 <div class="video-player">
-                    @include('funnels.layouts._partials._video',  ['w'=>'100%', 'hd'=>360])
+                    @include('funnels.layouts._partials._video',  ['w'=>'100%', 'h'=>'100%'])
                     <div class="video-progress">
                         <div class="video-progress-viewers">
                             <img src="/img/zulander/eye.png">
