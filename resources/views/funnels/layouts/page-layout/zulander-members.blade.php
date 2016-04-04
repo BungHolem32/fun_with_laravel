@@ -35,7 +35,7 @@
                     @include('funnels.layouts._partials._video',  ['w'=>'100%', 'h'=>'100%'])
                     <div class="video-progress">
                         <div class="video-progress-viewers">
-                            <img src="/img/zulander/eye.png">
+                            <img id="eye-video-watchers" src="/img/zulander/eye.gif">
                             <span class="video-progress-viewers-count"></span> VIEWERS
                         </div>
                         <div class="video-progress-stream"><img src="/img/zulander/streaming.gif"></div>
