@@ -122,6 +122,11 @@ $(window).on('ajax-refresh', function () {
 
             asset_list = load_positions(res.positions);
             socketRefresh(asset_list);
+        }else{
+            if(res.refresh)
+                window.location.reload(true);
+            else
+                alert(res.errs.errors[0]);
         }
     },function(){
         // before send
