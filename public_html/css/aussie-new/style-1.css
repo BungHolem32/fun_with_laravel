@@ -11794,12 +11794,12 @@ body #wrapper.first-page section#top_strip {
 }
 @media (max-width: 768px) {
   body #wrapper.first-page section#top_strip {
-    height: 15vw;
+    height: 24vw;
   }
 }
 @media (max-width: 480px) {
   body #wrapper.first-page section#top_strip {
-    height: 17vw;
+    height: 18vw;
   }
 }
 body #wrapper.first-page h2 {
@@ -12962,6 +12962,16 @@ body #wrapper footer.row {
   margin: 0;
   padding: 1em;
 }
+body .loading {
+  width: 100%;
+  background: white;
+  z-index: 19999;
+  position: absolute;
+  top: 0px;
+  height: 387px;
+  padding-top: 9em;
+  border: 4px solid #1F3A79;
+}
 .tweets-message,
 .facebook-message {
   height: 167.2px;
@@ -13035,25 +13045,10 @@ p.content.text-left.col-md-12.col-sm-12.col-xs-12 {
     width: 100%;
   }
 }
-@media (min-width: 1201px) {
-  .first-page label.error {
-    top: 113px !important;
-  }
-}
-@media (min-width: 998px) and (max-width: 1200px) {
-  .first-page label.error {
-    top: 189px !important;
-  }
-}
-@media (min-width: 768px) and (max-width: 997px) {
-  .first-page label.error {
-    top: 249px !important;
-  }
-}
-@media (max-width: 767px) {
-  .first-page label.error {
-    display: none !important;
-  }
+.first-page label.error {
+  position: relative;
+  top: 14px;
+  font-size: 1.2em;
 }
 .logotag.tweet-2 {
   margin: 1em 0;

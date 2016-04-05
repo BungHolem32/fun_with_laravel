@@ -1,8 +1,8 @@
 @section('head')
 
     <link rel="stylesheet" href="/css/aussie/panel/style.css" />
-    <link rel="stylesheet" href="/css/aussie-new/panel/style-new.css" />
     <link rel="stylesheet" href="/css/aussie/panel/custom.css" />
+    <link rel="stylesheet" href="/css/aussie-new/panel/style-new.css" />
 @append
 
 @section('bottom-scripts')
@@ -63,7 +63,7 @@
                     <li class="col-xm-12 col-md-2 col-lg-2 ">
                         <?php $c = \Session::get('spotCustomer'); ?>
                         <a target="_blank" href="{{ $c->getAutologinLink() }}" id="manualTrading" class="capitalize">
-                            <i class="fa fa-wrench "></i>@ln(broker trading area)
+                            <i class="fa fa-wrench fa- "></i>@ln(broker trading area)
                         </a>
                     </li>
 
