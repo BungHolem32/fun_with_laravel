@@ -17,7 +17,7 @@ class LoggedIn
     public function handle($request, $next){
         if(Customer::isLogged())
             return $next($request);
-        return ['err'=>1, 'errs'=>['errors'=>['Your session has expired, please log in again.']]];
+        return ['err'=>1, 'errs'=>['errors'=>['Your session has expired, please log in again.']], 'refresh'=>true];
     }
 
 }
