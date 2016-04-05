@@ -1,0 +1,4 @@
+#about .error   { text-align: center; }
+.center         { margin: 0 auto; }
+.removeFloat    { float: none !important; }
+#other-error, #prefix-error { display: none !important; }
