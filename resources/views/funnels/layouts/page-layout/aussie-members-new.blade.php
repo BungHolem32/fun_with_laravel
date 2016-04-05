@@ -38,7 +38,7 @@
 
                 <!--COMPANY LOGO-->
                 <div id="company" class="pull-left col-md-3 col-sm-4 col-xs-5  ">
-                    <img src="/img/aussie-new/aussieLogo.jpg" alt="company logo" class="img-responsive">
+                    <img src="/img/aussie-new/aussieLogo.jpg"  alt="company logo" class="img-responsive">
                 </div>
 
                 <!--MAN LOGO-->
@@ -61,9 +61,7 @@
                 <div class="row">
 
                     <!--Video Tag-->
-                    <div id="video_part" class='col-lg-8 col-md-8  {{--col-sm-12--}} pull-left'>
                         @include('funnels.layouts._partials._video',  ['w'=>'100%','h'=>'100%'])
-                    </div>
 
                     <!--CONTENT AND FORM  Tag-->
                     <div id="form_part" class='col-lg-4 col-md-4 col-sm-12 form-second'>
@@ -100,29 +98,29 @@
             {{--DESKTOP VIEW--}}
             <section id="3-steps" class="container">
                 <div class="row">
-                    <div class="col-md-12 desktop-steps">
+                    <div class="col-md-12 desktop-steps visible-lg-block">
                         {{--<a class="fancybox" rel="group" href="/img/aussie/guarantee.png">--}}
-                        <img src="/img/aussie-new/3step.png" alt="3 steps proccess pic"
+                        <img src="/img/aussie-new/3step.png"  alt="3 steps proccess pic"
                              class="3-step-proccess">
                         {{--</a>--}}
                     </div>
                 </div>
 
                 {{--MOBILE VIEW--}}
-                <div class="row mobile-steps">
-                    <div class="col-md-12 hidden mobile-steps">
+                <div class="row mobile-steps hidden-lg">
+                    <div class="col-md-12  mobile-steps">
                         {{--<a class="fancybox" rel="group" href="/img/aussie/guarantee.png">--}}
                         <img src="/img/aussie-new/step-1.png" alt="3 steps proccess pic"
                              class=" col-md-12 col-sm-12  col-xs-12 3-step-proccess">
                         {{--</a>--}}
                     </div>
-                    <div class="col-md-12 hidden mobile-steps">
+                    <div class="col-md-12  mobile-steps">
                         {{--<a class="fancybox" rel="group" href="/img/aussie/guarantee.png">--}}
                         <img src="/img/aussie-new/step-2.png" alt="3 steps proccess pic"
                              class=" col-md-12 col-sm-12  col-xs-12 3-step-proccess">
                         {{--</a>--}}
                     </div>
-                    <div class="col-md-12 hidden mobile-steps">
+                    <div class="col-md-12  mobile-steps">
                         {{--<a class="fancybox" rel="group" href="/img/aussie/guarantee.png">--}}
                         <img src="/img/aussie-new/step-3.png" alt="3 steps proccess pic"
                              class=" col-md-12 col-sm-12  col-xs-12 3-step-proccess">
@@ -162,7 +160,7 @@
                             </p>
 
                             {{--click here To view Live Account--}}
-                            <p class="success-button">
+                            <p class="success-button visible-md-block visible-lg-block  ">
                                 <a href="#customers" onclick="_funnel.popup_trade.init('tb0')" class="bold">Click Here
                                     To View <br> My Live
                                     Account</a>
@@ -211,7 +209,7 @@
                             </p>
 
                             {{--click here To view Live Account--}}
-                            <p class="success-button">
+                            <p class="success-button visible-md-block visible-lg-block ">
                                 <a href="#customers" onclick="_funnel.popup_trade.init('tb1');" class="bold">Click Here
                                     To View <br> My Live
                                     Statement</a>
@@ -255,7 +253,7 @@
                             </p>
 
                             {{--click here To view Live Account--}}
-                            <p class="success-button">
+                            <p class="success-button visible-md-block visible-lg-block ">
                                 <a href="#customers" onclick="_funnel.popup_trade.init('tb2');" class="bold">Click Here
                                     To View <br> My Live
                                     Statement</a>
@@ -296,7 +294,7 @@
                             </p>
 
                             {{--click here To view Live Account--}}
-                            <p class="success-button">
+                            <p class="success-button visible-md-block visible-lg-block ">
                                 <a href="#customers" onclick="_funnel.popup_trade.init('tb3');" class="bold">Click Here
                                     To View <br> My Live
                                     Statement</a>
@@ -440,7 +438,7 @@
                 Right Reserved.
             </div>
             <div id="right-footer" class="col-md-2 col-sm-2 col-xs-3 push-right">
-                <a class="fancybox_iframe" href="/EN/aussie-new/policy" target="&quot;_blank&quot;">Privacy |</a>
+                <a class="fancybox_iframe" href="/EN/aussie-new/policy" target="&quot;_blank&quot;">Privacy </a>
                 <a class="fancybox_iframe" href="/EN/aussie/members/../terms" target="&quot;_blank&quot;">Terms </a>
             </div>
         </footer>

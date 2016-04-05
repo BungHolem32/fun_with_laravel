@@ -17,23 +17,18 @@
 
 @section('bottom-scripts')
     @com('funnel_scripts')
-    {!! $page->appendAsset(url('/js/virtnext/jquery-2.2.2.min.js')) !!}
+{{--    {!! $page->appendAsset(url('/js/virtnext/jquery-2.2.2.min.js')) !!}--}}
     {!! $page->appendAsset(url('/js/virtnext/bootstrap.min.js')) !!}
     {!! $page->appendAsset(url('/js/virtnext/audioplayer.min.js')) !!}
     {!! $page->appendAsset(url('/js/virtnext/flipclock.min.js')) !!}
     {!! $page->appendAsset(url('/js/virtnext/slick.min.js')) !!}
     {!! $page->appendAsset(url('/js/virtnext/jquery.fancybox-buttons.min.js')) !!}
     {!! $page->appendAsset(url('/js/virtnext/jquery.fancybox.pack.min.js')) !!}
-    {!! $page->appendAsset(url('/js/virtnext/jquery.validate.min.js')) !!}
     {!! $page->appendAsset(url('/js/virtnext/main.js')) !!}
     {!! $page->appendAsset(url('/js/virtnext/membersOnLoad.js')) !!}
 @append
 
 @section('page-layout')
-<!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
-
 <div class="container-fluid">
     <div class="row">
         <!-- Main Site content -->
@@ -42,23 +37,15 @@
                 <header class="members-header">
                     <img class="img-responsive col-center logo-img" src="/img/virtnext/logo.png" />
                     <h1 class="text-center">
-                        <span class="bold">ACT NOW</span> and change your life<span class="bold"> FOREVER</span><br />
+                        <span class="bold">ACT NOW</span> and change your life<span class="bold"> FOREVER</span><br/>
                         $2,500 Daily to $18,000 Weekly profits <span class="uppercase bold"> GUARANTEED</span>
                     </h1>
                 </header>
                 <div class="members-first-part-video-div col-md-12 col-lg-10 center-block col-center no-gutter">
                     <div class="members-video-container col-md-8">
-
-
-
-
-                        <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
                         <div class='embed-container'>
-                            {{--<iframe id="frameVid" src='https://player.vimeo.com/video/154964605?autoplay=0&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>--}}
-                            @include('funnels.layouts._partials._video')
+                            @include('funnels.layouts._partials._video',  ['w'=>'100%', 'h'=>'100%'])
                         </div>
-
-
                         <style>
                             @media screen and (max-width:768px) {
                                 #frameVid{
@@ -70,7 +57,7 @@
                                     padding-bottom: 3px;
                                 }
                             }
-                            
+
                             @media screen and (max-width:500px) {
                                 #frameVid{
                                     height: 300px !important;
@@ -80,14 +67,12 @@
                     </div>
                     <div class="col-md-4 col-lg-4 no-gutter">
                         <div class="top-header-form-warpper">
-                            <form class="form-horizontal" role="form">
-                                <header class="forms-header top-members-form-header">
-                                    <h2 class="uppercase white text-center">Fill your details to get your free license</h2>
-                                </header>
-                                <div id="boost-form" style="display: block;">
-                                    @include('funnels.layouts._partials._form-mobile', ['funnelId' => $page->getParent()->id])
-                                </div>
-                            </form>
+                            <header class="forms-header top-members-form-header">
+                                <h2 class="uppercase white text-center">Fill your details to get your free license</h2>
+                            </header>
+                            <div id="boost-form" style="display: block;">
+                                @include('funnels.layouts._partials._form-mobile', ['funnelId' => $page->getParent()->id]);
+                            </div>
                         </div>
                     </div>
                     <div class="clearfix"></div>
@@ -146,7 +131,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <progress style="display: none" class="progress_bar" value="82" max="82"></progress>
                         </div>
                         <div class="circel-discription col-md-12">
@@ -263,7 +247,7 @@
                     </div>
                     <div class="right-side-audios col-md-12 col-lg-5">
                         <div class="col-md-12 voices-video-div">
-                            @include('funnels.layouts._partials._video',['video_url' => 'https://player.vimeo.com/video/151799528?autoplay=0'])
+                            @include('funnels.layouts._partials._video',['video_url' => 'https://player.vimeo.com/video/151799528?autoplay=0']);
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -287,14 +271,14 @@
         <div class="footer-desgin">
             <div class="col-md-10 col-center ssl-main-div">
                 <div class="col-lg-7 col-lg-push-4 no-gutter">
-                    <form class="form-horizontal" role="form">
+                    <div class="form-horizontal" role="form">
                         <header class="bottom-members-form-header">
                             <h2 class="white uppercase bold">Register <span class="uppercase bold yellow">for Free </span>now</h2>
                             <h3 class="uppercase white">SIGN UP BELOW FOR INSTANT PROFITS!</h3>
                         </header>
                         <a id="goToLogin" href="#regForm" class="btn btn-warning button-black">JOIN NOW</a>
                         <div class="clearfix"></div>
-                    </form>
+                    </div>
                 </div>
                 <div class="col-lg-4 col-lg-pull-7">
                     <img class="img-responsive ssl-img" src="/img/virtnext/ssl.png" />
@@ -302,7 +286,6 @@
                 <div class="clearfix"></div>
             </div>
         </div>
-
         <div class="companys-row">
             <div class="companys-div col-md-12 col-center">
                 <div class="col-md-12">

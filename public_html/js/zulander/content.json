@@ -14,8 +14,8 @@
         ]
       },
       {
-        "startDate": "March 12, 2016",
-        "balance": 250,
+        "startDate": "January 12, 2016",
+        "balance": 750,
         "earned": "97,311",
         "medal": "trader",
         "story": [
@@ -26,7 +26,7 @@
       },
       {
         "startDate": "March 8, 2016",
-        "balance": 250,
+        "balance": 1000,
         "earned": "110,552",
         "medal": "trader2",
         "story": [
@@ -36,8 +36,8 @@
         ]
       },
       {
-        "startDate": "March 3, 2016",
-        "balance": 250,
+        "startDate": "February 3, 2016",
+        "balance": 2500,
         "earned": "101,997",
         "medal": "trader",
         "story": [
@@ -48,7 +48,7 @@
       },
       {
         "startDate": "March 15, 2016",
-        "balance": 250,
+        "balance": 1500,
         "earned": "95,784",
         "medal": "trader3",
         "story": [
@@ -59,8 +59,8 @@
         ]
       },
       {
-        "startDate": "March 12, 2016",
-        "balance": 250,
+        "startDate": "January 12, 2016",
+        "balance": 5000,
         "earned": "106,224",
         "medal": "trader2",
         "story": [

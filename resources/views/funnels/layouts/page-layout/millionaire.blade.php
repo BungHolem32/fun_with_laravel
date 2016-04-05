@@ -26,7 +26,7 @@
                     <div class="form-block">
                         <div class="video-holder">
                             {{--<iframe width="560" height="315" src="https://www.youtube.com/embed/z9x2755eKIE?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=0" allowfullscreen></iframe>--}}
-                            @include('funnels.layouts._partials._video')
+                            @include('funnels.layouts._partials._video',  ['w'=>'100%', 'h'=>'100%'])
                         </div>
                         {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post']) !!}
                             <input type="hidden" name="pageId" value="{{ $page->id }}">

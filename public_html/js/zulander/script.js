@@ -185,8 +185,16 @@ function updateVideoViewers() {
 	setTimeout(updateVideoViewers,rand);
 }
 
-$('body').on('click','.goToMembers',function() {
-	$('#getLicenseBtn').click();
+$('body').on('click','.goToMembers',function(e) {
+	e.preventDefault();
+	$('#submitForm').click();
+});
+
+$('body').on('mouseenter mouseleave','.switch-photo',function(e) {
+	var originalPhoto	= $(this).attr('data-original');
+	var secondPhoto		= $(this).attr('data-switch');
+	if(e.type == 'mouseenter')	$(this).attr('src',secondPhoto);
+	else						$(this).attr('src',originalPhoto);
 });
 
 $('body').on('click','.slide-stories',function() {
