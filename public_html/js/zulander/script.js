@@ -187,7 +187,7 @@ function updateVideoViewers() {
 
 $('body').on('click','.goToMembers',function(e) {
 	e.preventDefault();
-	$('#goToMembers').click();
+	$('#submitForm').click();
 });
 
 $('body').on('mouseenter mouseleave','.switch-photo',function(e) {
