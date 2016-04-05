@@ -111,6 +111,7 @@
 
 
 @section('page-layout')
+
 <img src="/img/aussie/callout.png" style="position:fixed; top:0; right:0">
 <div class="staticsignup" id="staticsignup">
     <center>
