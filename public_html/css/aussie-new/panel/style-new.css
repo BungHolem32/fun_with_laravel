@@ -167,7 +167,9 @@ footer#footer {
         padding: 0;
     }
 
-
+    #welcomeModal .modal-dialog{
+        max-width: 5000px;
+    }
 }
 
 

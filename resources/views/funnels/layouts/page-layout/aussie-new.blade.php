@@ -14,8 +14,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
     @com('funnel_scripts')
     <script src="/js/fancybox/jquery.fancybox.js"></script>
-    <script type="text/javascript" src="/js/aussie-new/funnel-object.js"></script>
     {!! $page->appendAsset(url('/js/firstPage.js')) !!}
+    <script type="text/javascript" src="/js/aussie-new/funnel-object.js"></script>
+    <script>
+        var loading        = 1;
+        var loadingTimeOut = 1000;
+        var loadingMsg     = '<div class="loading"><img src="/img/aussie-new/loadingBL2.gif" alt=""><div class="loading-text"> Registration is in progress.. </div></div>';
+    </script>
 @append
 
 @section('page-layout')
@@ -82,8 +87,6 @@
                             <div class="col-md-12 col-sm-12">
                                 <img src="/img/aussie-new/trust-285.png" mobile-src="/img/aussie-new/trust-mobile-500.png" desktop-src="/img/aussie-new/trust-285.png" class="dynamic-width-change-1200 trust-pic img-responsive center-block">
                             </div>
-                        </div>
-
                     </div>
                 </section>
 

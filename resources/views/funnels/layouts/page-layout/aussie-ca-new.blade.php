@@ -263,7 +263,7 @@
             </div>
             <div id="right-footer" class="col-md-2 col-sm-2 col-xs-3 push-right">
                 @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/policy", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Privacy'])
-                |
+                &nbsp;&nbsp;
                 @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/terms", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Terms'])
             </div>
         </div>
