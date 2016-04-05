@@ -5,7 +5,11 @@
     <meta name="description" content="">
     <title>Carousel Template for Bootstrap</title>
     <!-- Bootstrap core CSS -->
-    <link href="/css/bootstrap/rboptions-org-{{ Request::local()->dir }}.css" rel="stylesheet">
+    @if($page->customCss->get())
+        <link rel="stylesheet" href="{{ $page->customCss }}" />
+    @else
+        <link href="/css/bootstrap/rboptions-org-{{ Request::local()->dir }}.css" rel="stylesheet">
+    @endif
     <link rel="stylesheet" href="/js/vendor/flickity/flickity.css" />
     <script src="/js/vendor/flickity/flickity.pkgd.js"></script>
 @append
@@ -33,13 +37,13 @@
         </div>
 
     </div>
-    <div class="wrapper body">
+    <div class="wrapper body articlePage">
         <div class="container marketing body center padd-b">
             <!-- START THE FEATURETTES -->
             <br>
             {!! $page->body !!}
             <br>
-            <div class="row center">
+            <div class="row center underBodyLinks">
                 <a class="capitalize btn btn-brand center" style="margin-top: 2em;" href="{{ $page->openAccountLink }}">@ln(open account) &nbsp; <i class="fa fa-angle-double-right"></i></a>
             </div>
             <!-- /END THE FEATURETTES -->
