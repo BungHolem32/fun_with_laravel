@@ -8,6 +8,16 @@
  */
 $uri = explode("?", $_SERVER['REQUEST_URI']);
 $url = $_SERVER['HTTP_HOST'].$uri[0];
+$cache_params = ['epass'];
+$params = [];
+foreach($cache_params as $p){
+	if(array_key_exists($p, $_GET)){
+		$params[] = $p.'='.$_GET[$p];
+	}
+}
+if(!empty($params)){
+	$url .= '-'.implode('_', $params);
+}
 $cacheable = ($_SERVER['REQUEST_METHOD'] == 'GET'
 				&& strpos($url, $_SERVER['HTTP_HOST'].'/admin') !== 0
 				&& strpos($url, $_SERVER['HTTP_HOST'].'/getLocation') !== 0
