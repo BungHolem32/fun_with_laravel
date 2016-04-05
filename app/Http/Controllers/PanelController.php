@@ -92,7 +92,6 @@ class PanelController extends Controller {
             // do we need those?
             //$data['State'] = 'NY';
 
-
             //dd(\Request::all());
             $ans = SpotApi::sendRequest('CustomerDeposits', 'add', $data);
             echo json_encode($ans);

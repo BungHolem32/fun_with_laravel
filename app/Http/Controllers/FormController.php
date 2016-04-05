@@ -7,8 +7,8 @@ use App\Languages;
 use App\mongo;
 use App\Services\SpotApi;
 use App\Services\MailVerify;
+use App\Services\Location;
 use Request;
-
 
 //use App\Lib\Mixpanel\Mixpanel;
 
@@ -22,12 +22,13 @@ class FormController extends Controller {
         return array('text','textarea','email','phone','country','password','submit','hidden');
     }
 
-    public function location(){
-        //$ip = '213.136.90.209';
-        $ip = Request::ip();
-        //$location = file_get_contents('http://api-v2.rboptions.com/locator/'.$ip);
-        $location = file_get_contents('http://locator.rboptions.com/locator/'.$ip);
-        echo $location;
+    public function location() {
+//        $ip = '213.136.90.209';
+//        $ip = Request::ip();
+//        $location = file_get_contents('http://api-v2.rboptions.com/locator/'.$ip);
+//        $location = file_get_contents('http://locator.rboptions.com/locator/'.$ip);
+//        echo $location;
+        echo json_encode(Location::getByUserIp());
     }
 
     public function postForm(){

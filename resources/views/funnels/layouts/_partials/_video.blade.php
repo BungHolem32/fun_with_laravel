@@ -17,14 +17,30 @@
 if(!isset($_GET['dev_video'])):
 ?>
 
+
+
 @section('bottom-scripts')
     {!! $page->appendAsset(url('/js/video.js')) !!}
+
 @append
 
 @if(str_contains($videoUrl, 'youtube.com'))
+    <?php
+        $search = "/\s*[a-zA-Z\/\/:\.]*youtube.com\/watch\?v=([a-zA-Z0-9\-_]+)([a-zA-Z0-9\/\*\-\_\?\&\;\%\=\.]*)/i";
+        $replace= "//www.youtube.com/embed/$1";
+        $videoUrl = preg_replace($search, $replace, $videoUrl);
+    ?>
     <div class="video">
         <iframe id="ytplayer" type="text/html" width="{{ $w }}" height="{{ $h }}"
-            src="{!! $videoUrl !!}?autoplay=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;autohide=1" frameborder="0">
+            src="{!! $videoUrl !!}?autoplay=1&showinfo=0&rel=0&modestbranding=1&autohide=1&controls=0" frameborder="0">
+        </iframe>
+    </div>
+
+@elseif(str_contains($videoUrl, 'vimeo.com'))
+    <div class="video">
+        <iframe src="{!! $videoUrl !!}?autoplay=1&badge=0&byline=0"
+                width="{{ $w }}" height="{{ $h }}"
+                frameborder="0">
         </iframe>
     </div>
 
@@ -66,11 +82,19 @@ if(!isset($_GET['dev_video'])):
         $videoFinaleLink = $videoUrl.$video_file."?st=".$video_hash."&e=".$video_expire;
         //$videoFinaleLink = 'http://p.media.chaki.netdna-cdn.com/vod/media.chaki/aussie/fs100.mp4';
     ?>
-    <video class="video" preload="none" width="{{ $w }}" height="{{ $h }}" {{ $autoplay }}  {{ $controls }}
-           poster="{{ $poster }}">
+    <video class="video" preload="none" width="{{ $w }}" height="{{ $h }}" {{ $autoplay }}  controls="true" {{--{{ $controls }}--}}
+           {{--poster="{{ $poster }}"--}}>
         <source src="{!! $videoFinaleLink !!}" type='video/mp4' />
         <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
     </video>
+    {{--<video id="my-video" class="video-js video"  preload="auto" width="{{ $w }}" height="{{ $h }}" controls--}}
+           {{--poster="{{ $poster }}" data-setup="{}">--}}
+        {{--<source src="{!! $videoFinaleLink !!}" type='video/mp4'>--}}
+        {{--<p class="vjs-no-js">--}}
+            {{--To view this video please enable JavaScript, and consider upgrading to a web browser that--}}
+            {{--<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>--}}
+        {{--</p>--}}
+    {{--</video>--}}
 @else
     <video class="video" preload="none" width="{{ $w }}" height="{{ $h }}" {{ $autoplay }} {{ $controls }}>
         {{--http://cdnmediahosting.com/user29339cdn3/newproducts2014/fmsshortnewnov.mp4--}}

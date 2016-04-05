@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     setInterval(function(){
         $(window).trigger('ajax-refresh')
-    }, 10000);
+    }, 30000);
 
 
     $('.startTrade').on('click', function(){
