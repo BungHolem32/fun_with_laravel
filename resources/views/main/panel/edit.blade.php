@@ -18,14 +18,22 @@
     </div>
 
     <div class="form-group">
-        <h3><i class="fa fa-gg"></i> {!! Form::label('panel_logo', 'Panel Logo:') !!}</h3>
+        <h3><i class="fa fa-picture-o"></i> {!! Form::label('panel_logo', 'Panel Logo:') !!}</h3>
         {!! Form::text('panel_logo', $page['panel_logo'], ['name'=>'mongo[panel_logo]', 'class'=>'form-control']) !!}
     </div>
-
+    <div class="form-group">
+        <h3><i class="fa fa-picture-o"></i> {!! Form::label('panel_background', 'Panel Background:') !!}</h3>
+        {!! Form::text('panel_background', $page['panel_background'], ['name'=>'mongo[panel_background]', 'class'=>'form-control']) !!}
+    </div>
 
     <div class="form-group">
-        <h3><i class="fa fa-gg"></i> {!! Form::label('panel_logo', 'Panel Logo:') !!}</h3>
-        {!! Form::text('panel_logo', $page['panel_logo'], ['name'=>'mongo[panel_logo]', 'class'=>'form-control']) !!}
+        <h3><i class="fa fa-eyedropper"></i> {!! Form::label('mainBgColor', 'Main Color:') !!}</h3>
+        <input name="mongo[mainBgColor]" class="form-control" type="color" value="{{$page['mainBgColor']}}" id="mainBgColor" data-cip-id="mainBgColor">
+    </div>
+
+    <div class="form-group">
+        <h3><i class="fa fa-eyedropper"></i> {!! Form::label('secBgColor', 'Second Color:') !!}</h3>
+        <input name="mongo[secBgColor]" class="form-control" type="color" value="{{$page['secBgColor']}}" id="secBgColor" data-cip-id="secBgColor">
     </div>
 
     <div class="form-group">

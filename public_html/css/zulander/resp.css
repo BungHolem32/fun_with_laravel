@@ -1,0 +1,355 @@
+@media (max-width: 1777px){
+	.time { right: 15px;}
+	#second .time { right: 15px;}
+}
+@media (max-width: 1586px){
+	.time { width: 230px;}
+	#second .time { width: 230px;}
+	.time .title { font-size:20px;}
+	.time .title span { font-size:20px;}
+}
+@media (max-width: 1462px){
+	.wrapper { margin:0 0 0 30px;}
+	.live { display:none;}
+}
+@media (max-width: 1246px){
+	.wrapper { margin:0 auto;}
+	.time { display:none;}
+	.live { display:none;}
+	.online { display:none;}
+	#timer2 { display:block!important; margin:-12px 0;}
+	#timer2 .title { margin:28px 0 0 0; text-align:left;}
+	/*.content .lenta-l:after { display:none;}*/
+	#timer2 .title2 { font-size:26px; text-transform:uppercase; margin:5px 0 0 0;}
+	#timer2 .title2 span { font-size:26px; text-transform:uppercase; color:#00ccff; font-family: RobotoCondensed-Bold;}
+}
+@media (max-width: 974px) {
+	.wrapper { width: 100%; margin: 0 auto;}
+	.logo img { width: auto; width: 100% !important;}
+	.content { width:90%; margin:0 auto;}
+
+	.content .lenta-l img {
+		float: left;
+		margin-left: 19px;
+		position: relative;
+		bottom: -4px;
+		width: 40px;
+	}
+
+	.content .lenta-l span, .content .lenta-l strong {
+		font-size: 1.1em !important;
+		line-height: 1.2em !important;
+		font-weight: bold !important;
+	}
+
+	.content .lenta-l > span {
+		position: relative;
+		bottom: 16px;
+	}
+
+	#stories { height: 770px; }
+	.story-section:not(:first-child) { display: none }
+	.story-section { position: absolute; }
+
+
+	/*.content .lenta-l { padding:31px 0 0 74px;}*/
+	/*.content .lenta-l img { display:none; }*/
+	/*.content .lenta span strong { font-size:19px; line-height:12px;}*/
+	/*.content .lenta span { font-size:19px; line-height:12px; position:relative;}*/
+	/*.content .lenta span:before{ width:50px; height:50px; content: " "; position: absolute; left:-50px; top:5px;}*/
+
+	.content .title { font-size:24px;}
+	.content .title span { color: #ff9000; font-size: 32px;}
+	.content .bvideo { font-size:20px;}
+	.mvideo { width:98%; margin:0 auto;}
+	.content .free { width:98%; margin:0 auto;}
+	.content .free form { background-image:none; height: 280px; }
+	.content .free .go1 {
+		width: 98%;
+		height: 63px;
+		border: none;
+		background: #f4f4f5 url(/img/zulander/btn1.png) no-repeat center center;
+		background-size:contain;
+		text-indent: -9999px;
+		position: relative;
+		margin-top: 12px;
+	}
+	.content .free .go1:hover {
+		background: #f4f4f5 url(/img/zulander/btn1-Over.png) no-repeat center center;
+		background-size: contain;
+	}
+
+	.content .free .fieldset { width:100%;}
+	.strelka { width:70%; margin:20px auto;}
+	.content .free:after {
+		width: 100%;
+		height: 62px;
+		content: " ";
+		background-image: url(/img/zulander/bigShadow.png);
+		background-size:contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		left: 0;
+		bottom: -62px;
+	}
+	.content .review { width: 100%;}
+	.content .review .line-l { width: 100%;}
+	.content .review .line-r { width: 100%;}
+	.content .review .title span { font-size:24px; background:#fff;}
+	.lasBtn img { width:100%;}
+	.content .review .block { width:80%; margin:0 auto; position:relative;}
+	.content .review .block:after {    left: 12px;}
+	.carousel-inner { overflow:visible ;}
+	
+	
+	#second .content .lenta-l { padding:50px 0 0 40px;}
+	#second .content .lenta-l img { display:none;}
+	#second .content .lenta strong {font-size: 22px; line-height:16px;}
+	#second .content .lenta span {font-size: 22px; line-height:16px;}
+	#second .content .lenta span:before{ width:50px; height:50px; content: " "; position: absolute; left:-50px; top:5px;}
+	#second .content .title span { color: #ff9000; font-size: 24px;}
+	#second .content .title {font-size: 22px;}
+	.content .timer { width:98%;}
+	.content .simletext { width:98%;}
+	.content .step { width:98%; padding:0px; margin:50px auto 30px; position:relative;}
+	.content .step .title { line-height: 23px; padding:15px;}
+	.content .step:after {
+		width: 100%;
+		height: 62px;
+		content: " ";
+		background-image: url(/img/zulander/bigShadow.png);
+		background-size:contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		left: 0;
+		bottom: -62px;
+	}
+	#second .content .step .title span { color:#00ccff;}
+	#second .content .green .title { padding: 23px 0 23px; margin-bottom:20px;}
+	div#second .fild {margin: 0 15px 15px;}
+	.content .green { margin:0 15px;}
+	.content .green .title:after {
+    width: 100%;
+    height: 42px;
+    content: " ";
+    background-image: url(/img/zulander/down.jpg);
+	background-size:contain;
+	background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    bottom: -27px;
+	}
+	div#second { width:100%;}
+	div#second .go2 { 
+	width:100%;
+	height: 95px;
+    border: none;
+    background: #f4f4f5 url(/img/zulander/btn3.png) no-repeat center center;
+	background-size:contain;
+    text-indent: -9999px;
+    position: relative;
+    margin: 15px 0 0 0;
+	}
+	div#second .go2:hover { background: #f4f4f5 url(/img/zulander/btn3-Over.png) no-repeat center center; background-size:contain; }
+	div#second .go3 { 
+	width:100%;
+	height: 89px;
+    border: none;
+    background: #f4f4f5 url(/img/zulander/btn4.png) no-repeat center center;
+	background-size:contain;
+    text-indent: -9999px;
+    position: relative;
+	}
+	.yes, .no { margin:15px;}
+	#timer2 .title2 { font-size:26px; text-transform:uppercase; margin:25px 0 0 0!important;}
+	#timer2 .title2 span { font-size:26px; text-transform:uppercase; color:#00ccff; font-family: RobotoCondensed-Bold;}
+	.sert { 
+	width:100%;
+	background-size:contain;
+	background-repeat: no-repeat;
+	}
+	.sert .title span {color: #00ccff!important;}
+	.box  img {width:100%;}
+	.stext {width:98%;}
+	.stext .signature {width:auto; margin:0;}
+	.content .timer:after {
+    width: 100%;
+    height: 62px;
+    content: " ";
+    background-image: url(/img/zulander/bigShadow.png);
+	background-size:contain;
+	background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    bottom: -62px;
+	}
+	.content .review .block:after {
+    width: 100%;
+    height: 43px;
+    content: " ";
+    background-image: url(/img/zulander/miniShadow.png);
+	background-size:contain;
+	background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    bottom: -43px;
+	}
+	.foot { display:none;}
+	#clock1, #clock2 { padding:0 0 20px 0;}
+	.clock-1 { display: inline-block;}
+	.footer {padding:0 15px;}
+	
+	.content .green .title strong:after { width:45px; height:45px; content: " "; background-image: url(/img/zulander/znak.jpg); position: absolute; right:-51px; bottom:-7px;}
+	.content .green .title strong:before { width:45px; height:45px; content: " "; background-image: url(/img/zulander/znak.jpg); position: absolute; left:-51px; bottom:-7px;}
+}
+@media (max-width:768px) {
+	.sert .title { font-size: 47px!important; line-height:42px; padding: 40px 0 0 0!important;}
+	.sert .title span{ font-size: 47px!important; line-height:42px;}
+	.sert .code { font-size: 23px;  padding: 55px 0 0 0;}
+	.sert .status { margin:40px 0 40px 0;}
+	.sert {height:100%;}
+	.content .green img { width:auto; width:100%!important;}
+	#timer2 .title { font-size:20px; margin: 13px 0 0 0;}
+	#timer2 .title span { font-size:20px;}
+	#timer2 .title2 { font-size:15px!important; text-align:left;}
+	#timer2 .title2 span { font-size:15px!important;}
+	.content .green {margin: 0!important;}
+	.timerhide { display:none;}
+	.progress-radial { width: 66px; height: 66px;}
+	.progress-radial .overlay {width: 40px; height: 40px; margin-left: 12px; margin-top: 11px;     font-size: 17px;    line-height: 13px;}
+	.progress-radial .overlay span { font-size: 11px;}
+	
+}
+@media (max-width:528px) {
+	#second .green .title { font-size:16px;}	
+	#second .content .green .title strong:after { width:25px; height:25px; content: " "; background-image: url(/img/zulander/znak.jpg); background-size:contain; background-repeat: no-repeat; position: absolute; right:-30px; bottom:-2px;}
+	#second .content .green .title strong:before { width:25px; height:25px; content: " "; background-image: url(/img/zulander/znak.jpg); background-size:contain; background-repeat: no-repeat; position: absolute; left:-30px; bottom:-2px;}
+}
+@media (max-width:414px) {
+	/*.content .review { width:372px; overflow:hidden; padding:0 0 50px 0;}*/
+	.content .review { width:100%; overflow:hidden; }
+}
+@media (max-width:375px) {
+	.sert .code { font-size: 10px!important;  padding: 20px 0 0 0;}
+	.sert .status { margin:15px 0 40px 0;}
+	.sert .title {
+		font-size: 24px!important;
+		line-height: 22px;
+		padding: 18px 0 0 0!important;
+	}
+	.sert .title span{
+		font-size: 24px!important;
+		line-height: 22px;
+		padding: 18px 0 0 0!important;
+	}
+	.sert .status {
+    font-family: RobotoCondensed-Bold;
+    font-size: 20px;
+	}
+	.box {
+		position: relative;
+		margin: -30px 0 0 0;
+	}
+	.stext .signature {width:100%!important; margin:0;}
+	.clock-hours {  display:inline-block; width:54px; height:62px; background:url(/img/zulander/h.png) no-repeat center center; background-size:contain; background-repeat: no-repeat; text-align:center; color:#e7e8ea; font-size:33px; padding:15px 0; overflow:hidden;}
+	.clock-minutes {  display:inline-block; width:54px; height:62px; background:url(/img/zulander/m.png) no-repeat center center; background-size:contain; background-repeat: no-repeat; text-align:center; color:#e7e8ea; font-size:33px; padding:15px 0; overflow:hidden;}
+	.clock-seconds {  display:inline-block; width:54px; height:62px; background:url(/img/zulander/s.png) no-repeat center center; background-size:contain; background-repeat: no-repeat; text-align:center; color:#e7e8ea; font-size:33px; padding:15px 0; overflow:hidden;}
+	.clock-1 {  display:inline-block!important; width:130px; height:76px; background:#37b246; color:#fff; padding:5px; overflow:hidden; font-size:10px; font-family: RobotoCondensed-Regular; text-align:left; margin:0 0 0 10px; display:none;}
+	#second .content .title { font-size:18px; line-height:22px;}
+	#second .content .title span{ font-size:18px!important;}
+	#second .content .timer .title { font-size:13px; line-height:22px;}
+	#second .content .timer .title span{ font-size:13px!important;}
+	.content .green .stepdesc { font-size:14px;}
+	.yes, .no {font-size:11px;}
+	.step4 { font-size:18px; line-height:20px;}
+	.step4 span { font-size:18px; line-height:20px;}
+	.simletext p{ font-size:12px;}
+	.simletext h2 { font-size:14px; margin:15px 0;}
+	.stext h3 { font-size:21px;}
+	.stext p { font-size:12px; padding-left:15px;}
+	.timerhide { display:none;}
+	.progress-radial { width: 66px; height: 66px;}
+	.progress-radial .overlay {width: 40px; height: 40px; margin-left: 12px; margin-top: 11px;     font-size: 17px;    line-height: 13px;}
+	.progress-radial .overlay span { font-size: 11px;}
+	#timer2 .title span, #timer2 .title {
+		margin: 11px 0 0 0;
+		text-align: left;
+		font-size:23px;
+	}
+	#timer2 .title2 span, #timer2 .title2 {
+		margin: 11px 0 0 0;
+		text-align: left;
+		font-size:23px;
+	}
+	#second .green .title { font-size:14px;}	
+}
+@media (max-width:320px) {
+	.logo img { width:auto; width:100%!important;}
+	/*.content .lenta span {*/
+    /*font-size: 16px!important;*/
+    /*line-height: 12px;*/
+    /*position: relative;*/
+    /*}*/
+    /*.content .lenta span strong {*/
+    /*font-size: 16px!important;*/
+    /*line-height: 12px;*/
+    /*}*/
+
+	.video-progress-buttons { display:none;}
+	.video-progress-viewers { width:120px; overflow:hidden; height:30px;}
+
+	.content .review .title span {
+		font-size: 18px!important;
+		background: #fff;
+	}
+	.content .review .title span:after { top:-32px!important;}
+	.block { padding:50px 0 0 0;}
+	.content .green img { width:auto; width:100%!important;}
+	.clock-hours {  display:inline-block; width:40px!important; height:62px; background:url(/img/zulander/h.png) no-repeat center center; background-size:contain; background-repeat: no-repeat; text-align:center; color:#e7e8ea; font-size:29px!important; padding:15px 0; overflow:hidden;}
+	.clock-minutes {  display:inline-block; width:40px!important; height:62px; background:url(/img/zulander/m.png) no-repeat center center; background-size:contain; background-repeat: no-repeat; text-align:center; color:#e7e8ea; font-size:29px!important; padding:15px 0; overflow:hidden;}
+	.clock-seconds {  display:inline-block; width:40px!important; height:62px; background:url(/img/zulander/s.png) no-repeat center center; background-size:contain; background-repeat: no-repeat; text-align:center; color:#e7e8ea; font-size:29px!important; padding:15px 0; overflow:hidden;}
+	.clock-1 {  display:inline-block!important; width:130px; height:76px; background:#37b246; color:#fff; padding:5px; overflow:hidden; font-size:10px; font-family: RobotoCondensed-Regular; text-align:left; margin:0 0 0 10px; display:none;}
+	.title2 { margin:0 0 0 -20px;}
+	#second .content .title { font-size:18px; line-height:22px;}
+	#second .content .title span{ font-size:18px!important;}
+	#second .content .timer .title { font-size:13px; line-height:22px;}
+	#second .content .timer .title span{ font-size:13px!important;}
+	.content .green .stepdesc { font-size:14px;}
+	.yes, .no {font-size:11px;}
+	.step4 { font-size:18px; line-height:20px;}
+	.step4 span { font-size:18px; line-height:20px;}
+	.simletext p{ font-size:12px;}
+	.simletext h2 { font-size:14px; margin:15px 0;}
+	.stext h3 { font-size:21px;}
+	.stext p { font-size:12px; padding-left:15px;}
+	#second .content .sert .title {
+		font-size: 17px!important;
+		line-height: 20px;
+		padding: 15px 0 0 0!important;
+	}
+	#second .content .sert .title span {
+		font-size: 17px!important;
+		line-height: 20px;
+	}
+	.sert .code { padding: 15px 0 0 0;}
+	/*.content .lenta-l { padding: 31px 0 0 60px; }*/
+	.content .title, .content .title span {
+		font-size: 18px; line-height:20px;
+	}	
+	.timerhide { display:none;}
+	
+	.progress-radial { width: 66px; height: 66px;}
+	.progress-radial .overlay {width: 40px; height: 40px; margin-left: 12px; margin-top: 11px;     font-size: 17px;    line-height: 13px;}
+	.progress-radial .overlay span { font-size: 11px;}
+	#timer2 .title span, #timer2 .title {
+		margin: 20px 0 0 0;
+		text-align: left;
+		font-size:19px;
+	}
+	#timer2 .title2 span, #timer2 .title2 {
+		margin: 18px 0 0 0!important;
+		text-align: left;
+		font-size:19px!important;
+	}
+	#second .green .title { font-size:12px;}	
+}

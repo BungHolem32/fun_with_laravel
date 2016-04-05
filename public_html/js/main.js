@@ -3,11 +3,6 @@
    $('div.loginForm').show();
 });*/
 
-
-
-
-
-
 $(window).scroll(function () {
     if($(window).scrollTop() > 100)
         $('header.navbar').addClass('minimal');

@@ -1,0 +1,1401 @@
+@import "direction.less";
+@import "font-awesome/min";
+@import "bootstrap/variables";
+@import "bootstrap/bootstrap";
+@import "_helpers";
+@import "_media-queries.less";
+
+@directory: "/img/";
+// ======= aussie-new:
+
+/*=================================MIXING CLASSES================================ */
+/*DISPLAY NONE*/
+.none {
+  display: none;
+}
+
+/*DISPLAY BLOCK*/
+.block {
+  display: block;
+}
+
+/*BACKGROUND SIZE 100%*/
+.bs {
+  background: 100%;
+}
+
+/*LIVE SECTION*/
+.section-live {
+  width: 85.8%;
+}
+
+//MOBILE-PIC
+.backPic_mobile {
+  background: url('@{directory}aussie-new/buttonfree_mobile.png') no-repeat center;
+  .bs;
+  margin: 1.5em 0;
+}
+
+/*funncy BOX IFRAME */
+a.fancybox_iframe {
+  color: white;
+  font-size: 11px;
+}
+
+.cpaitalize {
+  text-transform: capitalize !important;
+}
+
+/*=================================MIXING CLASSES================================ */
+
+/*==================================LAYOUT PAGE=================================== */
+
+body {
+
+  /*WRAPPER FOR ALL CONTENT*/
+  #wrapper {
+    overflow: hidden;
+    //min-width: 400px;
+    background: url('/img/aussie-new/mainbg.jpg') repeat-y top center;
+    min-width: 320px;
+
+    &.first-page {
+
+      /*TOP HEADER*/
+      > header {
+
+        h2 {
+          color: #1F3A79;
+          font-size: 42px;
+          font-family: 'Cabin', sans-serif;
+        }
+
+      }
+
+      /*GENERAL SECTION*/
+      section {
+        text-align: center;
+
+        /*FIXED LOGO "WORKS ANYWHERE"*/
+        &#works-fixed {
+          position: fixed;
+          margin: 0;
+          right: 0;
+          z-index: 1;
+          @media (max-width: 1300px) {
+            display: none;
+          }
+        }
+
+        /*NAV BAR STRIP*/
+        &#top_strip {
+          background: url('@{directory}aussie-new/top_strip_bg.png');
+          height: 110px;
+          position: absolute;
+          margin: 0;
+          top: -5px;
+          left: 0;
+          right: 0;
+          @media (max-width: 990px) {
+            height: 94px;
+            border-bottom: 1px solid lightgray;
+          }
+          @media (max-width: 768px) {
+            height: 24vw;
+          }
+          @media (max-width: 480px) {
+            height: 18vw;
+          }
+        }
+      }
+
+      /*H2 HEADER*/
+      h2 {
+
+        color: #1F3A79;
+        font-size: 2.5em;
+        font-family: 'Cabin', sans-serif;
+        font-weight: bold;
+        max-width: 76%;
+        margin: 1em auto;
+
+        @media (max-width: 990px) {
+          max-width: 100%;
+        }
+        @media (max-width: 480px) {
+          font-size: 2.4em;
+        }
+
+      }
+
+      /*MAIN LAYOUT*/
+      main {
+        section {
+          margin: 1.5em auto;
+          /*VIDEO AND FORM*/
+          &#video_n_form {
+
+            #form_part {
+
+              /*FIRST FORM - LANDING PAGE*/
+              &.form-first {
+                width: 29.3%;
+                margin-left: 1em;
+
+                @media (max-width: 1300px) and (min-width: 990px) {
+                  margin-top: 1em;
+
+                }
+
+                @media (max-width: 1200px) and (min-width: 990px ) {
+                  margin-top: 0.1em;
+                }
+
+                @media (max-width: 600px) {
+                  margin-left: 0;
+                }
+
+                /*PARAGRAPH*/
+                p {
+                  font-family: 'Cabin', sans-serif;
+
+                  /*FIRST ELEMENT IN PARAGRPAH*/
+                  &:nth-of-type(1) {
+                    font-size: 49.8px;
+                    color: #1e387b;
+                    margin-top: -0.1em !important;
+                    font-family: 'Cabin', sans-serif;
+
+                    @media (max-width: 1300px) and (min-width: 990px) {
+                      font-size: 49.8px;
+                      color: #1e387b;
+                      margin-top: 0.4em;
+                      font-family: 'Cabin', sans-serif;
+                    }
+                    @media (max-width: 640px) {
+                      font-size: 2em;
+                    }
+                  }
+                }
+
+                /*INPUTS*/
+                input {
+                  outline: none;
+                  width: 100%;
+                  background-size: 100%;
+                  border: none;
+                  height: 142px;
+
+                  /*SUBMIT BUTTON*/
+                  &.submit-aussie {
+                    cursor: pointer;
+                    @media (max-width: 599px) {
+                      height: 25.4vw !important;
+
+                    }
+                    background: url('/img/aussie-new/buttonfree.png') no-repeat top center;
+                    background-size: contain;
+                    height: 82px;
+                    margin: 1em 0;
+
+                    /*MOBILE VIEW*/
+                    @media (max-width: 1200px) {
+                      background: url('@{directory}aussie-new/buttonfree_mobile.png') no-repeat top center;
+                      background-size: 100%;
+                      margin: 1em 0;
+                      height: 188px;
+                    }
+                  }
+
+                  /*MAIL TEXT INPUT*/
+                  &#firstPageSignUpMail {
+                    @media (max-width: 1200px) and (min-width: 990px) {
+                      margin: 1em 0;
+                      @media (max-width: 640px) {
+                        height: 100px;
+                        margin: 1em 0;
+                      }
+                    }
+                    border: 4.0px solid #1F3A79;
+                    height: 63px;
+                    border-radius: 6px;
+                    margin: 1em 0 -0.5em;
+                    text-align: center;
+                  }
+                }
+              }
+            }
+
+            /*VIDEO PART*/
+            video#video_part {
+              border: 5px solid #1F3A79 !important;
+              z-index: 1000;
+              @media (max-width: 1200px) {
+                width: 100%;
+              }
+
+            }
+          }
+
+          /*HOW METHOD WORKS PART*/
+          &#video-how-method-works {
+            margin: 1.5em auto;
+
+            .video-n-images {
+              /*VIDEO TAG*/
+              .video-tag {
+                position: absolute;
+                top: 5.2em;
+                left: 246.3px;
+                width: 58%;
+                height: auto;
+                @media (min-width: 990px) and (max-width: 1200px ) {
+                  position: absolute;
+                  top: 5.2em;
+                  left: 159.3px;
+                  width: 67.7%;
+                  height: auto;
+                }
+                @media (min-width: 760px) and (max-width: 989px) {
+                  position: absolute;
+                  top: 11.8em;
+                  left: 126.1px;
+                  width: 67.8%;
+                  height: auto;
+                }
+
+                @media (min-width: 640px) and (max-width: 759px) {
+                  position: absolute;
+                  top: 11.1em;
+                  left: 105.3px;
+                  width: 69.5%;
+                  height: auto;
+                }
+                @media (min-width: 600px) and (max-width: 639px) {
+                  position: absolute;
+                  top: 10.6em;
+                  left: 86.3px;
+                  width: 69.5%;
+                  height: auto;
+                }
+                @media (min-width: 570px) and (max-width: 599px) {
+                  position: absolute;
+                  top: 10.6em;
+                  left: 94.3px;
+                  width: 66.5%;
+                  height: auto;
+                }
+                @media (min-width: 500px) and (max-width: 569px) {
+                  position: absolute;
+                  top: 13.6em;
+                  left: 94.3px;
+                  width: 66.5%;
+                  height: auto;
+
+                }
+                @media (min-width: 470px) and (max-width: 500px) {
+                  position: absolute;
+                  top: 12.8em;
+                  left: 80.6px;
+                  width: 66.5%;
+                  height: auto
+                }
+
+                @media (min-width: 379px) and (max-width: 469px) {
+                  position: absolute;
+                  top: 12.1em;
+                  left: 80.6px;
+                  width: 66.5%;
+                  height: auto
+                }
+                @media (min-width: 370px) and (max-width: 378px) {
+                  position: absolute;
+                  top: 11.8em;
+                  left: 60.9px;
+                  width: 66.5%;
+                  height: auto;
+                }
+
+                @media (min-width: 320px) and (max-width: 369px) {
+                  position: absolute;
+                  top: 11.9em;
+                  left: 63.2px;
+                  width: 66.5%;
+                  height: auto;
+                }
+
+                @media (min-width: 300px) and (max-width: 319px) {
+                  position: absolute;
+                  top: 14em;
+                  left: 54.2px;
+                  width: 66.5%;
+                  height: auto;
+                }
+
+                @media (min-width: 0px) and (max-width: 346px) {
+                  position: absolute;
+                  top: 14.1em;
+                  left: 54.2px;
+                  width: 66.5%;
+                  height: auto;
+                }
+              }
+            }
+          }
+          /*SECTION STRIP HREF*/
+          &#strip_href {
+            background-color: #1F3978;
+
+            /*UL TAG*/
+            ul {
+              @media (max-width: 640px) {
+                padding: 0;
+              }
+              /*HREF TAG IN STRIP*/
+              li {
+
+                &.who {
+                  @media (min-width: 1000px) and (max-width: 1200px) {
+                    width: 15%;
+                  }
+                }
+                &.success {
+                  @media (min-width: 1000px) and (max-width: 1200px) {
+                    width: 20%;
+                  }
+                }
+
+                @media (max-width: 600px) {
+                  border-bottom: 1px solid white;
+                }
+                font-size: 1.4em;
+
+                /*HREF TAG*/
+                a {
+                  color: white;
+                  font-family: 'Cabin', sans-serif;
+                }
+              }
+              list-style: none;
+              line-height: 60px;
+            }
+          }
+
+          /*FAQ*/
+          &#frequently-asked-questions {
+            direction: ltr;
+            /*HEADER */
+            header {
+
+              /*H2 TAG*/
+              h2 {
+                color: #1F3A79;
+                font-size: 42px;
+                font-family: 'Cabin', sans-serif;
+
+                @media (max-width: 990px) {
+                  margin-bottom: 1.5em;
+                }
+              }
+            }
+
+            /*ANSWER QUESTION TEXT*/
+            .question_n_answer {
+              max-width: 78%;
+              margin: 1.5em auto;
+              left: 11.3%;
+
+              @media (max-width: 990px) {
+                max-width: 100%;
+                left: 0;
+              }
+
+              .question {
+
+                .left-button {
+                  margin-top: 0em;
+                  img {
+                    &.plus-icon {
+                      position: relative;
+                      top: 3px;
+                      width: 23px;
+                    }
+                  }
+
+                  @media (max-width: 1200px) {
+                    margin-top: 0;
+                  }
+                  /*QUESTION P STYLE*/
+                  p.title-question {
+                    color: #1E3977;
+                    font-weight: bold;
+                    .margin(0, 0, 10px, 10px);
+                    user-select: none;
+                    @media (max-width: 480px) {
+
+                    }
+                  }
+                }
+                .answer {
+
+                  /*ANSWER TEXT*/
+                  .answer-text {
+                    border: 1px dotted gray;
+                    background: white;
+                    padding: 0.5em;
+                    margin-bottom: 0.5em;
+                    @media (max-width: 480px) {
+                      padding: 0.5em;
+                      text-align: justify;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          /*LIVE THIRD PARTY*/
+          &#live-third-party {
+
+            @media (max-width: 600px) {
+              width: 100%;
+            }
+            .row {
+              margin: 0 auto;
+            }
+
+            max-width: 928px;
+
+            .table-trader {
+              background: white;
+              padding: 2em;
+              box-shadow: 1px 1px 6px 1px #B5B5B5;
+              margin: 1.5em 0;
+              @media (max-width: 500px) {
+                padding: 0.5em;
+              }
+              ul {
+                list-style: none;
+                padding: 0;
+                li {
+                  color: black;
+                  font-weight: bold;
+                  font-size: 1.1em;
+                  border: 1px solid white;
+                  border-top: 4px #0086C6;
+
+                  @media (max-width: 500px) {
+                    font-size: 0.9em;
+                    direction: rtl;
+
+                  }
+                }
+              }
+
+              #trades {
+                .line-trades {
+                  background: white;
+                  padding-left: 0;
+                  padding-right: 0;
+                  &:nth-of-type(odd) {
+                    background: #D8D8D8;
+                    &:hover {
+                      background: gray;
+                    }
+                  }
+
+                  .trades {
+                    &.trade-profit {
+                      font-weight: 600;
+                    }
+                    .first-word {
+                      font-weight: bold;
+                    }
+
+                    @media (max-width: 1347px) {
+                      min-height: 50px;
+                    }
+                    @media (max-width: 480px) {
+                      min-height: 10vh;
+                    }
+                    padding: 0.2em;
+                    border: 1px solid white;
+                  }
+                }
+                @media (max-width: 480px) {
+                  font-size: 0.8em;
+                }
+              }
+            }
+          }
+          /*LIVE FACEBOOK FEEDS*/
+          &#live-result-pic {
+            @media (max-width: 560px) {
+              width: 85.8%;
+            }
+
+            .social {
+              box-shadow: -1px 3px 25px 8px #D3D3D1;
+              background: #F0F0F0;
+              padding-bottom: 2em;
+              display: block;
+              margin: 0 10em;
+              width: 76%;
+
+              @media (max-width: 1199px) {
+                margin: 0px auto;
+                width: 100%;
+              }
+              @media (max-width: 1010px) {
+                margin: 0px auto;
+                width: 100%;
+              }
+
+              #content-social {
+
+                header {
+                  border: 1px solid lightgray;
+                }
+                /*FACEBOOK TAB CONTENT*/
+                #facebook-tab {
+                  background: white;
+                  border: 1px solid lightgray;
+                  padding: 0;
+                  min-height: 15em;
+
+                  .facebook-message {
+                    height: 167.2px;
+                    background: white;
+                    border: 1px solid gray;
+
+                    /*FACEBOOK IMAGE NAME AND TIME*/
+                    .fb-img-name-time {
+                      .fb-img {
+                        padding: 0.5em;
+
+                        /*IMAGE TIME*/
+                        .fb-human-image {
+                          border-radius: 11px;
+                        }
+                      }
+
+                      /*NAME AND TIME IN FACEBOOK*/
+                      .fb-name-n-time {
+                        color: #3B5997;
+                        font-size: 1.4em;
+                        /*TIME*/
+                        .ctime {
+                          color: #8B9396;
+                        }
+                        /*NAME*/
+                        .fb-name {
+                          color: inherit;
+                        }
+                      }
+
+                      /*BOTTOM CONTENT (MESSAGE)*/
+                      .bottom {
+                        .fb-tab {
+                          color: #3B5997;
+                        }
+                      }
+                    }
+                    /*PLACE FOR CHAT (COMMENT IN THE BOTTOM*/
+                  }
+                }
+
+                /*TWEETS TAB CONTENT*/
+                #tweets-tab {
+
+                  .tweets-message {
+                    /*DIV OF THE FACEBOOK MESSAGE*/
+
+                    .twt-img-name-time {
+                      .twt-image {
+                        border-radius: 0.3em;
+                        vertical-align: top;
+                        img {
+                          /*TWEET IMAGE*/
+                        }
+                        .twt-name-n-time {
+                          &.twtname {
+                            color: black;
+                            padding-left: 0.2em;
+                          }
+                        }
+                      }
+                      .feed_name2 {
+                        //min-height: 14.3em;
+                      }
+                      .ctime2 {
+                        float: right;
+                      }
+                      /*TWEET DATA*/
+                      .twt-data {
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 100%;
+                        padding: 0 0.6em;
+                        height: 7.9em;
+                        text-align: justify;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            /*TWEETER AND FACEBOOK TAG (DIVS)*/
+            div.feed_name2, div.feed_name1 {
+              border: 1px solid gray;
+              padding: 4px;
+              margin-bottom: 0em;
+              text-align: left;
+              background: white;
+            }
+            .images {
+              .logotag {
+                padding: 1.4em 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /*MEMBER PAGE END */
+    &.second-page {
+
+      /*TOP HEADER*/
+      > header {
+
+        h2 {
+          color: #1F3A79;
+          font-size: 42px;
+          font-family: 'Cabin', sans-serif;
+        }
+
+      }
+
+      /*GENERAL SECTION*/
+      section {
+        text-align: center;
+
+        /*FIXED LOGO "WORKS ANYWHERE"*/
+        &#works-fixed {
+          position: fixed;
+          margin: 0;
+          right: 0;
+          z-index: 1;
+          @media (max-width: 1300px) {
+            display: none;
+          }
+        }
+
+        /*NAV BAR STRIP*/
+        &#top_strip {
+          background: url('@{directory}aussie-new/top_strip_bg.png');
+          height: 110px;
+          position: absolute;
+          margin: 0;
+          top: -5px;
+          left: 0;
+          right: 0;
+          @media (max-width: 990px) {
+            height: 10.6%;
+          }
+          @media (max-width: 768px) {
+            height: 24vw;
+          }
+          @media (max-width: 480px) {
+            height: 16.2vw;
+          }
+        }
+      }
+
+      /*H2 HEADER*/
+      h2 {
+        color: #1F3A79;
+        font-size: 2.5em;
+        font-family: 'Cabin', sans-serif;
+        font-weight: bold;
+        max-width: 76%;
+        margin: 1.5em auto;
+
+        @media (max-width: 990px) {
+          max-width: 100%;
+        }
+        @media (max-width: 480px) {
+          font-size: 2.3em;
+        }
+      }
+
+      /*MAIN LAYOUT*/
+      main {
+        section {
+          margin: 1.5em auto;
+          /*VIDEO AND FORM*/
+          &#video_n_form {
+            margin-top: 0.8%;
+            @media (max-width: 1200px) and (min-width: 990px) {
+              width: 64.7%;
+            }
+
+            #form_part {
+
+              @media (max-width: 1200px) and (min-width: 990px ) {
+
+                width: 100% !important;
+              }
+
+              #form {
+
+                .form-control {
+                }
+
+                #submit {
+
+                  cursor: pointer;
+                  @media (min-width: 990px) and (max-width: 1200px) {
+                    background: url('/img/aussie-new/buttonfree_mobile.png') no-repeat center;
+                    max-width: 100%;
+                    margin: 1em auto;
+                    height: 221px !important;
+                    background-size: contain;
+                  }
+                }
+              }
+
+              /*FIRST FORM - LANDING PAGE*/
+              &.form-first {
+                width: 29.3%;
+                margin-left: 1em;
+
+                @media (max-width: 1300px) and (min-width: 990px) {
+                  margin-top: 1em;
+                }
+
+                @media (max-width: 1200px) and (min-width: 990px ) {
+                  margin-top: 0.1em;
+                }
+
+                /*PARAGRAPH*/
+                p {
+                  font-family: 'Cabin', sans-serif;
+
+                  /*FIRST ELEMENT IN PARAGRPAH*/
+                  &:nth-of-type(1) {
+                    font-size: 49.8px;
+                    color: #1e387b;
+                    margin-top: -0.1em !important;
+                    font-family: 'Cabin', sans-serif;
+
+                    @media (max-width: 1300px) and (min-width: 990px) {
+                      font-size: 49.8px;
+                      color: #1e387b;
+                      margin-top: 0.4em;
+                      font-family: 'Cabin', sans-serif;
+                    }
+                  }
+                }
+
+                /*INPUTS*/
+                input {
+                  outline: none;
+                  width: 100%;
+                  background-size: 100%;
+                  border: none;
+                  height: 142px;
+
+                  /*FIRST FORM */
+                  /*SUBMIT BUTTON*/
+                  &.submit-aussie {
+                    cursor: pointer;
+                    @media (max-width: 599px) {
+                      height: 144px !important;
+
+                    }
+                    background: url('/img/aussie-new/buttonfree.png') no-repeat top center;
+                    background-size: contain;
+                    height: 82px;
+                    margin: 1em 0;
+
+                    /*MOBILE VIEW CHANGE PICTURE */
+                    @media (max-width: 1200px) {
+                      background: url('@{directory}aussie-new/buttonfree_mobile.png') no-repeat top center;
+                      background-size: 100%;
+                      margin: 1em 0;
+                      height: 188px;
+                    }
+                  }
+
+                  /*SECOND FORM*/
+                  &[type="submit"] {
+                    cursor: pointer;
+                    @media (min-width: 990px) and (max-width: 1200px) {
+                      height: 266.8px !important;
+                      background-size: contain;
+                    }
+                    @media (max-width: 420px) {
+                      height: 105px;
+                    }
+                  }
+
+                  /*MAIL TEXT INPUT*/
+                  &#firstPageSignUpMail {
+                    @media (min-width: 990px) and (max-width: 1200px) {
+                      margin: 1em 0;
+                      @media (max-width: 640px) {
+                        height: 100px;
+                        margin: 1em 0;
+                      }
+                    }
+                    border: 4.0px solid #1F3A79;
+                    height: 63px;
+                    border-radius: 6px;
+                    margin: 1em 0 -0.5em;
+                    text-align: center;
+                  }
+                }
+              }
+            }
+
+            /*VIDEO PART*/
+            video#video_part {
+              border: 5px solid #1F3A79 !important;
+              z-index: 1000;
+              @media (max-width: 1200px) {
+                width: 100%;
+              }
+            }
+          }
+
+          /*HOW METHOD WORKS PART*/
+          &#video-how-method-works {
+            margin: 1.5em auto;
+
+            .video-n-images {
+              /*VIDEO TAG*/
+              .video-tag {
+                position: absolute;
+                top: 5.2em;
+                left: 246.3px;
+                width: 58%;
+                height: auto;
+                @media (min-width: 990px) and (max-width: 1200px ) {
+                  position: absolute;
+                  top: 5.2em;
+                  left: 159.3px;
+                  width: 67.7%;
+                  height: auto;
+                }
+                @media (min-width: 760px) and (max-width: 989px) {
+                  position: absolute;
+                  top: 14.9em;
+                  left: 126.1px;
+                  width: 67.8%;
+                  height: auto;
+                }
+
+                @media (min-width: 640px) and (max-width: 759px) {
+                  position: absolute;
+                  top: 13.7em;
+                  left: 105.3px;
+                  width: 69.5%;
+                  height: auto;
+                }
+                @media (min-width: 600px) and (max-width: 639px) {
+                  position: absolute;
+                  top: 13.2em;
+                  left: 92.3px;
+                  width: 69.5%;
+                  height: auto;
+                }
+                @media (min-width: 481px) and (max-width: 599px) {
+                  position: absolute;
+                  top: 16em;
+                  left: 94.3px;
+                  width: 66.5%;
+                  height: auto;
+                }
+
+                @media (min-width: 415px) and (max-width: 479px) {
+                  position: absolute;
+                  top: 14.2em;
+                  left: 77.3px;
+                  width: 66.5%;
+                  height: auto;
+                }
+                @media (min-width: 320px) and (max-width: 387px) {
+                  position: absolute;
+                  top: 13.6em;
+                  left: 59.2px;
+                  width: 66.5%;
+                  height: auto;
+                }
+              }
+            }
+          }
+          /*SECTION STRIP HREF*/
+          &#strip_href {
+            background-color: #1F3978;
+
+            /*UL TAG*/
+            ul {
+              /*HREF TAG IN STRIP*/
+              @media (max-width: 640px) {
+                padding: 0;
+              }
+              li {
+                font-size: 1.4em;
+
+                @media (max-width: 1200px) and (min-width: 990px) {
+                  &.steps-m {
+                    width: 20%;
+                  }
+
+                  &.success-m {
+                    width: 37.8%;
+                  }
+
+                  &.live-m {
+                    width: 42.2%;
+                  }
+                }
+                @media (max-width: 640px) {
+                  border-bottom: 1px solid white;
+                }
+
+                /*HREF TAG*/
+                a {
+                  color: white;
+                  font-family: 'Cabin', sans-serif;
+                }
+              }
+              list-style: none;
+              line-height: 60px;
+            }
+          }
+
+          /*FAQ*/
+          &#frequently-asked-questions {
+            direction: ltr;
+            /*HEADER */
+            header {
+
+              /*H2 TAG*/
+              h2 {
+                color: #1F3A79;
+                font-size: 42px;
+                font-family: 'Cabin', sans-serif;
+                margin: 0 auto 0.5em;
+              }
+            }
+
+            /*ANSWER QUESTION TEXT*/
+            .question_n_answer {
+              max-width: 78%;
+              margin: 1.5em auto;
+              left: 11.3%;
+
+              @media (max-width: 990px) {
+                max-width: 100%;
+                left: 0;
+              }
+
+              .question {
+
+                .left-button {
+                  margin-top: 0em;
+                  img {
+                    &.plus-icon {
+                      position: relative;
+                      top: 3px;
+                      width: 23px;
+                    }
+                  }
+
+                  @media (max-width: 1200px) {
+                    margin-top: 0;
+                  }
+                  /*QUESTION P STYLE*/
+                  p.title-question {
+                    color: #1E3977;
+                    font-weight: bold;
+                    .margin(0, 0, 10px, 10px);
+                    user-select: none;
+                    @media (max-width: 480px) {
+                    }
+                  }
+                }
+                .answer {
+
+                  /*ANSWER TEXT*/
+                  .answer-text {
+                    border: 1px dotted gray;
+                    background: white;
+                    padding: 0.5em;
+                    margin-bottom: 0.5em;
+                    @media (max-width: 480px) {
+                      padding: 0.5em;
+                      text-align: justify;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          /*LIVE THIRD PARTY*/
+          &#live-third-party {
+
+            @media (max-width: 600px) {
+              width: 100%;
+            }
+            .row {
+              margin: 0 auto;
+            }
+
+            max-width: 928px;
+
+            .table-trader {
+              background: white;
+              padding: 2em;
+              box-shadow: 1px 1px 6px 1px #B5B5B5;
+              margin: 1.5em 0;
+              @media (max-width: 500px) {
+                padding: 0.5em;
+              }
+              ul {
+                list-style: none;
+                padding: 0;
+                li {
+                  color: black;
+                  font-weight: bold;
+                  font-size: 1.1em;
+                  border: 1px solid white;
+                  border-top: 4px #0086C6;
+
+                  @media (max-width: 500px) {
+                    font-size: 0.9em;
+                    direction: rtl;
+
+                  }
+                }
+              }
+
+              #trades {
+                .line-trades {
+                  background: white;
+                  padding-left: 0;
+                  padding-right: 0;
+                  &:nth-of-type(odd) {
+                    background: #D8D8D8;
+                    &:hover {
+                      background: gray;
+                    }
+                  }
+
+                  .trades {
+                    &.trade-profit {
+                      font-weight: 600;
+                    }
+                    .first-word {
+                      font-weight: bold;
+                    }
+
+                    @media (max-width: 1347px) {
+                      min-height: 50px;
+                    }
+                    @media (max-width: 480px) {
+                      min-height: 10vh;
+                    }
+                    padding: 0.2em;
+                    border: 1px solid white;
+                  }
+                }
+                @media (max-width: 480px) {
+                  font-size: 0.7em;
+                }
+              }
+            }
+          }
+          /*LIVE FACEBOOK FEEDS*/
+          &#live-result-pic {
+            @media (max-width: 560px) {
+              box-shadow: 1px 1px 31px 11.4px lightgray;
+              width: 100%;
+            }
+
+            .social {
+              box-shadow: -1px 3px 25px 8px #D3D3D1;
+              background: #F0F0F0;
+              padding-bottom: 2em;
+              display: block;
+              margin: 0 10em;
+              width: 76%;
+
+              @media (max-width: 1199px) {
+                margin: 0 auto;
+                width: 100%;
+              }
+              @media (max-width: 1010px) {
+                margin: 0 auto;
+                width: 100%;
+              }
+
+              #content-social {
+
+                header {
+                  border: 1px solid lightgray;
+                }
+                /*FACEBOOK TAB CONTENT*/
+                #facebook-tab {
+                  background: white;
+                  border: 1px solid lightgray;
+                  padding: 0;
+                  min-height: 15em;
+
+                  .facebook-message {
+                    height: 167.2px;
+                    background: white;
+                    border: 1px solid gray;
+
+                    /*FACEBOOK IMAGE NAME AND TIME*/
+                    .fb-img-name-time {
+                      .fb-img {
+                        padding: 0.5em;
+
+                        /*IMAGE TIME*/
+                        .fb-human-image {
+                          border-radius: 11px;
+                        }
+                      }
+
+                      /*NAME AND TIME IN FACEBOOK*/
+                      .fb-name-n-time {
+                        color: #3B5997;
+                        font-size: 1.4em;
+                        /*TIME*/
+                        .ctime {
+                          color: #8B9396;
+                        }
+                        /*NAME*/
+                        .fb-name {
+                          color: inherit;
+                        }
+                      }
+
+                      /*BOTTOM CONTENT (MESSAGE)*/
+                      .bottom {
+                        .fb-tab {
+                          color: #3B5997;
+                        }
+                      }
+                    }
+                    /*PLACE FOR CHAT (COMMENT IN THE BOTTOM*/
+                  }
+                }
+
+                /*TWEETS TAB CONTENT*/
+                #tweets-tab {
+
+                  .tweet-message {
+                    /*DIV OF THE FACEBOOK MESSAGE*/
+
+                    .twt-img-name-time {
+                      .twt-image {
+                        border-radius: 0.3em;
+                        vertical-align: top;
+                        img {
+                          /*TWEET IMAGE*/
+                        }
+                        .twt-name-n-time {
+                          &.twtname {
+                            color: black;
+                            padding-left: 0.2em;
+                          }
+                        }
+                      }
+                      .feed_name2 {
+                        //min-height: 14.3em;
+                      }
+                      .ctime2 {
+                        float: right;
+                      }
+                      /*TWEET DATA*/
+                      .twt-data {
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 100%;
+                        padding: 0 0.6em;
+                        height: 7.9em;
+                        text-align: justify;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            /*TWEETER AND FACEBOOK TAG (DIVS)*/
+            div.feed_name2, div.feed_name1 {
+              border: 1px solid gray;
+              padding: 4px;
+              margin-bottom: 0em;
+              text-align: left;
+              background: white;
+            }
+            .images {
+              .logotag {
+                padding: 1.4em 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /*BACK TO TOP ICON*/
+    a#back-to-top {
+      position: fixed;
+      bottom: 98px;
+      right: 40px;
+      z-index: 9999;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      line-height: 30px;
+      background: #f5f5f5;
+      color: #444;
+      cursor: pointer;
+      border: 0;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: opacity 0.2s ease-out;
+      opacity: 0;
+      font-size: 50px;
+      padding-top: 10px;
+      font-weight: bolder;
+    }
+
+    /*BACK TO TOP SHOW */
+    #back-to-top {
+      &.show {
+        opacity: 1;
+      }
+      &:hover {
+        background: #e9ebec;
+      }
+    }
+
+    /*FOOTER ROW*/
+    footer.row {
+      background-color: #1F3A79;
+      color: white;
+      margin: 0;
+      padding: 1em;
+    }
+  }
+  .loading {
+    width: 100%;
+    background: white;
+    z-index: 19999;
+    position: absolute;
+    top: 0px;
+    height: 387px;
+    padding-top: 9em;
+    border: 4px solid #1F3A79;
+  }
+
+}
+
+.tweets-message, .facebook-message {
+  height: 167.2px;
+  background: white;
+  border: 1px solid lightgrey;
+
+  @media (max-width: 600px) {
+    min-height: 225px;
+  }
+  @media (min-width: 370px) and (max-width: 480px) {
+    min-height: 60vw;
+  }
+  @media (min-width: 300px) and (max-width: 369px) {
+    min-height: 77vw
+  }
+
+}
+
+/*EXECUTED STYLES ,DIDNT WORK INSIDE THE INHERITANCE WAY*/
+h4.fb-name {
+  color: #39588F;
+  padding: 0;
+}
+
+//h4.twt-name {
+//  padding: 0;
+//}
+
+.twt-name-n-time {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+h5.time-min.pull-right {
+  text-align: right;
+}
+
+.fb-title, .tweets-title, .tweets-title-2 {
+  text-align: left;
+  color: #33CCFF;
+  font-size: 1.7em;
+  font-weight: bold;
+}
+
+.fb-tab.col-md-12.col-sm-12.col-xs-12.pull-left.text-left {
+  color: #39588F;
+  @media (max-width: 480px) {
+    font-size: 0.9em;
+  }
+}
+
+.fb-img, .twt-img {
+  margin-top: 0.5em;
+  min-width: 107px;
+}
+
+.fb-name-n-time {
+  padding: 0;
+}
+
+/*ROW INSIDE LIVE RESULT */
+
+/*======================================ARANGGED=========================================*/
+
+section div img.col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2.col-xs-10.col-xs-offset-1 {
+  left: 6% !important;
+}
+
+p.content.text-left.col-md-12.col-sm-12.col-xs-12 {
+  font-size: 0.9em;
+}
+
+@media (max-width: 480px) {
+  body #wrapper.first-page main section#live-result-pic {
+    width: 100%;
+  }
+}
+
+.first-page label.error {
+  position: relative;
+  top: 14px;
+  font-size: 1.2em;
+}
+
+.logotag.tweet-2 {
+  margin: 1em 0;
+}
+
+a#back-to-top.backtop {
+  bottom: 98px !important;
+}
+
