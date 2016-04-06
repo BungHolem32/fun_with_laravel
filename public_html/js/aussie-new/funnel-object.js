@@ -208,7 +208,7 @@
         ,
         /*CHANGE PIC BY WIDTH */
         change_pic_by_width: {
-            value       : function () {
+            value: function () {
                 var width    = $ ( window ).width ();
                 var elements = $ ( '.dynamic-width-change' );
                 var image    = null;
@@ -220,18 +220,18 @@
                         $ ( '#jake-pertu' ).find ( '.fancybox' ).removeClass ().removeAttr ( 'href' );
                     } );
 
-                }else{
+                } else {
                     $ ( elements ).each ( function ( i, el ) {
                         img = $ ( el ).attr ( 'desktop-src' );
                         $ ( el ).attr ( 'src', img );
                     } );
                 }
 
-                var element = $('.dynamic-width-change-1200');
-                if(width<1200){
+                var element = $ ( '.dynamic-width-change-1200' );
+                if ( width < 1200 ) {
                     var img = $ ( element ).attr ( 'mobile-src' );
                     $ ( element ).attr ( 'src', img );
-                }else{
+                } else {
                     var img = $ ( element ).attr ( 'desktop-src' );
                     $ ( element ).attr ( 'src', img );
                 }
@@ -415,7 +415,7 @@
                         images = this.images1;
                     }
 
-                    this.counter  = funnelControll.live_trade.get_random_number ( 0, images.length - 2 ) == 95 ? 2 : funnelControll.live_trade.get_random_number ( 0, images.length - 2 );
+                    this.counter  = funnelControll.live_trade.get_random_number ( 0, images.length - 2 ) != 95 ? funnelControll.live_trade.get_random_number ( 0, images.length - 2 ) : 2;
                     this.dc       = funnelControll.live_trade.get_random_number ( 0, this.data.length - 2 );
                     this.oldtime  = new Date ();
                     this.old_time = this.oldtime.getSeconds ();
@@ -515,11 +515,11 @@
 
     /*1-CHANGE PIC ON RESIZE*/
     $ ( window ).resize ( function () {
-        funnelControll.change_pic_by_width ( );
+        funnelControll.change_pic_by_width ();
     } );
 
     /*INIT THE RESIZE FUNCTION ON LOAD*/
-    funnelControll.change_pic_by_width ( );
+    funnelControll.change_pic_by_width ();
 
     /*2-CREATE TEMPLATE ANSWER QUESTION*/
     funnelControll.add_question_answer ();

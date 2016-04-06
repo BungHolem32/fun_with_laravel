@@ -3,6 +3,7 @@
     <!-- Startup CSS -->
     {!! $page->appendAsset(url('css/aussie-new/style-0.css')) !!}
     {!! $page->appendAsset(url('css/aussie-new/style-members-0.css')) !!}
+
     <!--[if lt IE 9]>
     <!--[if lt IE 9]>
     <script src="/js/vendor/html5shiv.min.js"></script>
