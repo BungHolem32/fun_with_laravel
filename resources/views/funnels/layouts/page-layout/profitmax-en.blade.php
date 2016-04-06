@@ -25,10 +25,11 @@
             <div class="popup_content">
                 <div class="popup_content_inner">
                     <div class="title">
-                        ACHTUNG!
+                        warning!
+                        <span>don’t miss out...</span>
                     </div>
                     <div class="description">
-                        <span>DOWNLOADEN SIE</span>  Geld-Lawinen System welches unsere User benutzt haben um  <span>€2.1 Millionen einkommen in den letzten 90 Tagen zu genieren!</span>
+                        <span>download</span> The same Cash Avalanche System Our Users Have Used To Rake In Over <span>$2.1 Million In The Past 90 Days!</span>
                     </div>
 
                     <div class="popup_form" id="popform">
@@ -37,12 +38,12 @@
                             <input type="text" name="email" placeholder="Geben Sie Ihre Email-Adresse ein" id="email-pop" class="form-control" value=""/>
                         </div>
                         <div class="buttons">
-                            <button type="submit" class="button" id="submit-pop">SOFORTIGEN ZUGRIFF</button>
+                            <button type="submit" class="button" id="exitsubmit">get instant access now</button>
                         </div>
                     </div>
 
                     <div class="for_free">
-                        <span>Kein Kreditkarte. Kein PayPal. 100% kostenlos!</span>
+                        <span>No credit card. No PayPal. 100% FREE!</span>
                     </div>
                     <a class="close_button" style="" onclick="$('#popup').css('display','none');mousebottom = 0;setTimeout(function(){pu=1;},5000);"></a>
                 </div>
@@ -53,7 +54,7 @@
     <div class="count left copies" style="width:290px;right:150px;">
         <div class="value" id="copies">38</div>
         <div class="desc">
-            Gratis Exemplare erhältlich
+            Free Copies Available
         </div>
     </div>
 
@@ -61,7 +62,7 @@
         <img src="/img/profitmax/people1.png" alt="" id="member_img"/>
 
         <div class="desc">
-            <div class="name"><span id="name">Levi G.</span> Gerade gemacht:</div>
+            <div class="name"><span id="name">Levi G.</span> just made</div>
             <div class="value">
                 $<span id="money">253.89</span>
             </div>
@@ -78,8 +79,8 @@
                         <div class="trim_spaces">
                             <div class="scalable">
                                 <div class="header_slogan_inner">
-                                    <div>Verdienen Sie <span >$1,161</span> zusätzlich pro Tag</div>
-                                    <div>durch "My Cash Avalanche System" - <span>kostenlos</span></div>
+                                    <div>Make an extra <span >$1,193 Per Day</span> </div>
+                                    <div>Using My Cash Avalanche System - <span>For FREE</span></div>
                                 </div>
                             </div>
                         </div>
@@ -97,7 +98,7 @@
                             <div class="trim_spaces">
                                 <div class="scalable">
                                     <div class="scalable">
-                                        <span id="watchers">1,693</span> Menschen in <b>Germany</b> schauen sich genau jetzt dieses video an
+                                        <span id="watchers">1,693</span> people are watching this video right now
                                     </div>
                                 </div>
                             </div>
@@ -113,7 +114,7 @@
             <div class="section section_lp_reg_form">
                 <div class="section_container">
                     <div class="section_title">
-                        Verdienen Sie noch heute! <span>100%-ig  kostenlos!</span>
+                        START EARNING TODAY! <span>ALL 100% FREE!</span>
                     </div>
 
 
@@ -126,7 +127,7 @@
                                 @endif
                             </div>
                             <div class="buttons">
-                                <button type="submit" class="button">SOFORTIGEN ZUGRIFF</button>
+                                <button type="submit" class="button">get instant access</button>
                             </div>
                     {!! Form::close() !!}
                     </div>
@@ -143,18 +144,18 @@
     <div id="footer">
         <div class="footer_content">
             <div class="footer_note">
-                <p>Wichtiger Risiko Hinweis: Das Handeln von Binären Optionen kann neben hohen Gewinnen auch ein Risiko darstellen, sowie den teilweisen oder vollständigen Verlust Ihres monetären Einsatzes. Dies sollte unerfahren Anleger wissen. Wir empfehlen daher dringend, dass Sie unsere Allgemeinen Geschäftsbedingungen und unseren Haftungsausschluss vor jeder Geldanlage lesen. Kunden müssen in ihrem Wohnsitzland prüfen ob eine Kapitalertragssteuer anfällt.</p>
+                <p>Important Risk Note: Trading binary options can generate significant benefits but also involves a risk of partial or full funds loss and should be considered by initial investors. we strongly advise that you read our terms & conditions and disclaimer page before making any investment. customers must be aware of their individual capital gain tax liability in their country of residence.</p>
 
-                <p>Es ist illegal, U.S. Amerikanischen Staatsbürgern dabei zu helfen mit Rohstoffen zu handeln, auch wenn es sich nur um die Vorhersage von Optionen handelt, sofern sie kein CFTC registrierter Händler sind oder gesetzlich befugt sind. </p>
+                <p>It is against the law to solicit U.S. persons to buy and sell commodity options, even if they are called \prediction' contracts, unless they are listed for trading and traded on a CFTC-registered exchange or unless legally exempt.</p>
             </div>
         </div>
     </div>
     <div id="footer_nav">
         <ul class="footer_nav">
-            <li><a class="outyes" href="#">Haftungsausschluss</a></li>
-            <li><a class="outyes" href="#">Allgemeine Geschäftsbedingungen</a></li>
-            <li><a class="outyes" href="#">Datenschutzbestimmungen</a></li>
-            <li><a class="outyes" href="#">Partnerprogramm</a></li>
+            <li><a class="outyes" href="#">DISCLAIMER</a></li>
+            <li><a class="outyes" href="#">TERMS</a></li>
+            <li><a class="outyes" href="#">PRIVACY</a></li>
+            <li><a class="outyes" href="#">AFFILIATE</a></li>
             <li><a class="outyes" href="#">Support</a></li>
         </ul>
     </div>

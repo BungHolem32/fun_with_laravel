@@ -9,16 +9,16 @@
     {!! $page->appendAsset(url('/css/profitmax/form.css')) !!}
     {!! $page->appendAsset(url('/css/profitmax/style.css')) !!}
 @append
-
 @section('bottom-scripts')
     @com('funnel_scripts')
     {!! $page->appendAsset(url('/js/profitmax/bootstrap.min.js')) !!}
     {!! $page->appendAsset(url('/js/profitmax/jquery.plugin.min.js')) !!}
     {!! $page->appendAsset(url('/js/profitmax/jquery.countdown.min.js')) !!}
     {!! $page->appendAsset(url('/js/profitmax/lightbox.min.js')) !!}
-    {!! $page->appendAsset(url('/js/profitmax/form-de.js')) !!}
+    {!! $page->appendAsset(url('/js/profitmax/form-en.js')) !!}
     {!! $page->appendAsset(url('/js/profitmax/script.js')) !!}
 @append
+
 @section('page-layout')
     <div class="members_page">
     <div id="wrapper">
@@ -30,8 +30,8 @@
                         <div class="trim_spaces">
                             <div class="scalable">
                                 <div class="header_slogan_inner">
-                                    <div><span>Herzlichen Glückwunsch!</span> Sie nur einen Schritt davon entfernt pro Tag</div>
-                                    <div><span>$<span>1,671.32</span> Zu Verdienen...</span> mit nur ein paar Mausklicks</div>
+                                    <div><span>Congratulations!</span> You Are One Step Closer To Earning</div>
+                                    <div><span>$<span>1,671.32</span> Per Day...</span> With Just A Couple Clicks</div>
                                 </div>
                             </div>
                         </div>
@@ -69,8 +69,8 @@
                     <div class="secure_countdown_wrapper">
                         <div class="secure_countdown_container">
                             <div class="secure_countdown_inner" id="countdownText">
-                                <div class="title">Ihr Gewinn Maximizer Mitgliedsantrag erlischt</div>
-                                <div class="description">In nur wenigen Minuten:</div>
+                                <div class="title">Your Profit Maximizer Membership Application</div>
+                                <div class="description">Will Expire In Just A Few Minutes:</div>
                             </div>
                         </div>
                         <div class="countdown" id="secure_countdown">06:53:00</div>
@@ -80,7 +80,7 @@
 
             <div class="section section_testimonials">
                 <div class="section_container">
-                    <div class="section_title">"An nur einem Tag, habe ich $1022.13 verdient"</div>
+                    <div class="section_title">"In Just One Day, I Made $1022.13"</div>
 
                     <ul class="testimonials_list">
                         <li><img src="/img/profitmax/testimonial1.png" alt="">
@@ -90,7 +90,7 @@
                                     <div class="name">Maria S.</div>
                                     <img src="/img/profitmax/stars4.png" alt=""></div>
                                 <div class="desc">
-                                    Ich kann immer noch nicht glauben, dass ich das Glück hatte die Software zu testen. Ich verdiene mehr in einem Monat, als ich im gesamten letzten Jahr verdient habe. Hätte man mir nur früher gesagt, dass ich in nur einem einzigen Monat € 41.581 verdienen kann! Ich bin überglücklich und sprachlos"
+                                    I still can’t believe that I was lucky enough to try your software. I have made more in one month than I did last year. If you had told me that I can earn $41,581 in one month alone! I am overjoyed and lost for words"
                                 </div>
                             </div>
                         </li>
@@ -101,7 +101,7 @@
                                     <div class="name">Christian W.</div>
                                     <img src="/img/profitmax/stars45.png" alt=""></div>
                                 <div class="desc">
-                                    Unglaublich, ich weiß gar nicht wie ich meine Gefühle beschrieben soll! Deine Software ist fantastisch, sie vollbringt wahre Wunder! Ich habe im Traum nicht daran gedacht, dass ich durch einen Beta Software Test meine finanzielle Unabhängigkeit erreichen werde. Ich habe mit Deiner Software soviel Geld verdient, dass ich mein Studienkredit auf einmal und sofort zurückzahlen konnte! Ich werde Dir ewig dankbar sein!"
+                                    Wow, I don’t even know how to describe how I feel right now James! Your software is great, it works miracles! I had no idea beta-testing could actually set me financially free. I have made so much money with your software that I have paid off my student loans already! I am forever thankful to you!"
                                 </div>
                             </div>
                         </li>
@@ -112,7 +112,7 @@
                                     <div class="name">Wolfgang S.</div>
                                     <img src="/img/profitmax/stars5.png" alt=""></div>
                                 <div class="desc">
-                                    Krass! Ich habe schon früher online getradet, aber leider nie wirklich erfolgreich, es war eher eine Geldverschwendung. Nach nur 10 Minuten mit Deiner Software, habe ich sofort gemerkt, dass ich konstante Gewinne einfahren kann. Nach meiner ersten Auszahlung wollte ich zunächst aufhören, das System hat aber einfach weiter Gewinne eingefahren und ich verdiene jetzt jede Woche mindesten stolze €11.862!"
+                                    Yo! I tried online trading before and just seemed to be wasting money, however, after just 10 minutes with your software, I realized that this way I can make consistent profits. After my first withdrawal I thought it would stop but it has just kept on earning me a solid $11,862 at least every week!"
                                 </div>
                             </div>
                         </li>
@@ -123,7 +123,7 @@
                                     <div class="name">Monika H.</div>
                                     <img src="/img/profitmax/stars4.png" alt=""></div>
                                 <div class="desc">
-                                    Vielen Dank dafür, dass Du meiner Schwester meinem Vater und mir fast einen Herzinfarkt beschert hast. Wir sind fast gestorben, als wir die Gewinne nach dem ersten Monat gesehen haben. Gestaffelt - also von uns allen zusammen - mehr als wir uns jemals erträumt hätten, um genau zu sein: €40.012! Wir können den nächsten Monat gar nicht abwarten."
+                                    Dear James, Congratulations on giving me, my father and my sister a heart-attack. We all nearly dropped dead when we say my earning after a month. A staggering 40 grand! In fact it was $42.012. We are already counting the days until the next month."
                                 </div>
                             </div>
                         </li>
@@ -139,15 +139,14 @@
 
                         <div class="col-md-8">
                             <div class="steps_wrapper">
-
                                 <ul class="steps">
-                                    <li>Füllen Sie das Anmeldeformular aus um Ihr KOSTENLOSES <span>Profit Maximizer Konto zu eröffnen.</span>.</li>
-                                    <li>Zahlen Sie auf Ihr <span>Profit Maximizer Konto</span> den vom Broker geforderten Mindestbetrag ein um das System sofort zu aktivieren. </li>
+                                    <li>Fill in the registration form below to open your <span>FREE Profit Maximizer Account</span>.</li>
+                                    <li>Fund your <span>Profit Maximizer Account</span> with the minimum brokers’ requirement to instantly activate the system. </li>
                                     <li>
-                                        Sobald Sie in Ihr Konto einzahlen, steigen Ihre Gewinne mit dem <span>Profit Maximizer System</span>.
-                                        <br>Heben Sie Ihren Gewinn ab zu jeder Zeit, an jedem Tag.
-                                        <p><span>Keine Gebühren!
-                                    <br>Keine Kommission! Keine Überraschungen!</span></p>
+                                        Once you fund your account, watch your profits grow with the <span>Profit Maximizer System</span>.
+                                        <br/>Withdraw your funds any time, any day.
+                                        <p><span>Zero Fees!
+                                    <br/>Zero Commission! No Surprises!</span></p>
                                     </li>
                                 </ul>
                             </div>
@@ -159,89 +158,82 @@
 
             <div class="section section_live">
                 <div class="section_container">
-                    <div class="section_title">Aktuelle Live-Trades von Profit Maximizer</div>
-
+                    <div class="section_title">Current Live Trades of Profit Maximizer</div>
                 </div>
             </div>
 
 
             <div class="section section_map">
-
                 <div class="section_container">
                     <div class="map_item">
-                        <div class="meta"><img src="/img/profitmax/map1.png" alt="">
+                        <div class="meta"><img src="/img/profitmax/map1.png" alt=""/>
 
-                            <div class="name">Felix Wirtz</div>
+                            <div class="name">Robert Syverson</div>
                             <div class="flag">
-                                <img src="/img/profitmax/flag_austria_mini.gif" alt=""> Österreich
+                                <img src="/img/profitmax/flag_uk.png" alt=""/> UK
                             </div>
                         </div>
                         <div class="description">
-                            <div class="start">Startguthaben: <span>€750</span></div>
-                            <div class="profit">Gewinn: <span>€221,807,53</span></div>
+                            <div class="start">Starting Ballance: $<span>750</span></div>
+                            <div class="profit">Profit to date: $<span>221,807,53</span></div>
 
                         </div>
-                        <div class="buttons"><a href="/img/profitmax/FelixWirtz-men.png" class="button_view" data-lightbox="image-1" data-title="Robert Syverson Results">SCHAUEN ÜBERPRÜFT KONTO</a></div>
+                        <div class="buttons"><a href="/img/profitmax/Robot_4_Member_1.png" class="button_view" data-lightbox="image-1" data-title="Robert Syverson Results">view verifed account</a></div>
                     </div>
                     <div class="map_item">
-                        <div class="meta"><img src="/img/profitmax/map2.png" alt="">
+                        <div class="meta"><img src="/img/profitmax/map2.png" alt=""/>
 
-                            <div class="name">Kerstin Baader</div>
+                            <div class="name">Michael Lyons</div>
                             <div class="flag">
-                                <img src="/img/profitmax/flag_germany_mini-50x33.gif" alt=""> Deutschland
+                                <img src="/img/profitmax/flag_usa.png" alt=""/> USA
                             </div>
                         </div>
                         <div class="description">
-                            <div class="start">Startguthaben: <span>€500</span></div>
-                            <div class="profit">Gewinn: <span>€50,335.12</span></div>
+                            <div class="start">Starting Ballance: <span>$500</span></div>
+                            <div class="profit">Profit to date: $<span>50,335.12</span></div>
                         </div>
-                        <div class="buttons"><a href="/img/profitmax/KerstinBaader-Female.png" class="button_view" data-lightbox="image-1" data-title="Michael  Results">SCHAUEN ÜBERPRÜFT KONTO</a></div>
+                        <div class="buttons"><a href="/img/profitmax/Robot_4_Member_2.png" class="button_view" data-lightbox="image-1" data-title="Michael  Results">view verifed account</a></div>
                     </div>
                     <div class="map_item">
-                        <div class="meta"><img src="/img/profitmax/map3.png" alt="">
+                        <div class="meta"><img src="/img/profitmax/map3.png" alt=""/>
 
-                            <div class="name">Jonas Freitag</div>
+                            <div class="name">Jack Morris</div>
                             <div class="flag">
-                                <img src="/img/profitmax/flag_switzerland_mini-50x33.gif" alt=""> Schweiz
+                                <img src="/img/profitmax/flag_austr.png" alt=""/> Australia
                             </div>
                         </div>
                         <div class="description">
-                            <div class="start">Startguthaben: <span>€300</span></div>
-                            <div class="profit">Gewinn:<span>€35,174.22</span></div>
+                            <div class="start">Starting Ballance: <span>$300</span></div>
+                            <div class="profit">Profit to date: $<span>35,174.22</span></div>
                         </div>
-                        <div class="buttons"><a href="/img/profitmax/JonasFreitag-men.png" class="button_view" data-lightbox="image-1" data-title="Jack  Results">SCHAUEN ÜBERPRÜFT KONTO</a></div>
+                        <div class="buttons"><a href="/img/profitmax/Robot_4_Member_3.png" class="button_view" data-lightbox="image-1" data-title="Jack  Results">view verifed account</a></div>
                     </div>
                     <div class="map_item">
-                        <div class="meta"><img src="/img/profitmax/map4.png" alt="">
+                        <div class="meta"><img src="/img/profitmax/map4.png" alt=""/>
 
-                            <div class="name">Antje Koehler</div>
+                            <div class="name">Amelie Palmer</div>
                             <div class="flag">
-                                <img src="/img/profitmax/flag_germany_mini-50x33.gif" alt=""> Deutschland
+                                <img src="/img/profitmax/flag_nz.png" alt=""/> New Zealand
                             </div>
                         </div>
                         <div class="description">
-                            <div class="start">Startguthaben:<span>€10,0000</span></div>
-                            <div class="profit">Gewinn: <span>€16,593,25</span></div>
+                            <div class="start">Starting Ballance: $<span>10,0000</span></div>
+                            <div class="profit">Profit to date: $<span>16,593,25</span></div>
                         </div>
-                        <div class="buttons"><a href="/img/profitmax/AntjeKoehler-female.png" class="button_view" data-lightbox="image-1" data-title="Amelie Results">SCHAUEN ÜBERPRÜFT KONTO</a></div>
+                        <div class="buttons"><a href="/img/profitmax/Robot_4_Member_4.png" class="button_view" data-lightbox="image-1" data-title="Amelie Results">view verifed account</a></div>
                     </div>
                 </div>
-
             </div>
 
             <div class="section section_support">
                 <div class="section_container">
                     <div class="support_wrapper">
-                        <div class="section_title">24/7 Kundendienst</div>
-
+                        <div class="section_title">Get 24/7 Support</div>
                         <div class="description">
-                            Als Mitglied von <span>Profit Maximizer</span>, haben Sie Zugang zu unserer <span>24/7 support line</span>.
+                            As a member of <span>Profit Maximizer</span>, you get access to our <span>24/7 support line</span>.
                         </div>
-
                         <div class="contact">
-                            <span>Haben Sie noch Fragen? Kontaktieren Sie uns einfach:</span>
-                            support@derprofitmaximizer.co
-
+                            <span>Have a question? Do not hesitate to contact us at</span>
                         </div>
                     </div>
 
@@ -252,18 +244,20 @@
     </div>
     <div id="footer">
         <div class="footer_content">
-            <div class="footer_note">
-                <p>Wichtiger Risiko Hinweis: Das Handeln von Binären Optionen kann neben hohen Gewinnen auch ein Risiko darstellen, sowie den teilweisen oder vollständigen Verlust Ihres monetären Einsatzes. Dies sollte unerfahren Anleger wissen. Wir empfehlen daher dringend, dass Sie unsere Allgemeinen Geschäftsbedingungen und unseren Haftungsausschluss vor jeder Geldanlage lesen. Kunden müssen in ihrem Wohnsitzland prüfen ob eine Kapitalertragssteuer anfällt.</p>
-                <p>Es ist illegal, U.S. Amerikanischen Staatsbürgern dabei zu helfen mit Rohstoffen zu handeln, auch wenn es sich nur um die Vorhersage von Optionen handelt, sofern sie kein CFTC registrierter Händler sind oder gesetzlich befugt sind.</p>
+            <div class="footer_content">
+                <div class="footer_note">
+                    <p>Important Risk Note: Trading binary options can generate significant benefits but also involves a risk of partial or full funds loss and should be considered by initial investors. we strongly advise that you read our terms & conditions and disclaimer page before making any investment. customers must be aware of their individual capital gain tax liability in their country of residence.</p>
+                    <p>It is against the law to solicit U.S. persons to buy and sell commodity options, even if they are called 'prediction' contracts, unless they are listed for trading and traded on a CFTC-registered exchange or unless legally exempt.</p>
+                </div>
             </div>
         </div>
     </div>
     <div id="footer_nav">
         <ul class="footer_nav">
-            <li><a href="">Haftungsausschluss</a></li>
-            <li><a href="">Allgemeine Geschäftsbedingungen</a></li>
-            <li><a href="">Datenschutzbestimmungen</a></li>
-            <li><a href="">Partnerprogramm</a></li>
+            <li><a href="">Disclaimer</a></li>
+            <li><a href="">Terms</a></li>
+            <li><a href="">Privacy</a></li>
+            <li><a href="">Affiliate</a></li>
             <li><a href="">Support</a></li>
         </ul>
     </div>
