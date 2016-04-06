@@ -22,7 +22,7 @@ class PanelController extends Controller {
 
     public function getPageLayouts(){
         $temp = [];
-        foreach(\File::files(base_path().'/resources/views/panels/panel-layout') as $pageLayout){
+        foreach(\File::files(base_path().'/resources/views/panel/panel-layout') as $pageLayout){
             $exo = explode('/', $pageLayout);
             $cont = str_replace('.blade.php', '', end($exo));
             //if($cont != 'Controller')
