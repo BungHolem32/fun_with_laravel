@@ -80,7 +80,7 @@
                             <input type="submit" class="align-center col-md-12 col-sm-12 submit-aussie" value=""/>
                             {!! Form::close() !!}
                             <div class="col-md-12 col-sm-12">
-                                <img src="/img/aussie-new/de/certs.png" mobile-src="/img/aussie-new/trust-mobile-500.png" desktop-src="/img/aussie-new/trust-285.png" class="dynamic-width-change-1200 trust-pic img-responsive center-block dynamic-width-change-1200">
+                                <img src="/img/aussie-new/de/trust-285.png" mobile-src="/img/aussie-new/de/trust-mobile-500.png" desktop-src="/img/aussie-new/de/trust-285.png" class="dynamic-width-change-1200 trust-pic img-responsive center-block dynamic-width-change-1200">
                             </div>
                         </div>
 
