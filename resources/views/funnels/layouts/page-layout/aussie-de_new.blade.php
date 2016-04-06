@@ -61,14 +61,14 @@
                     <div class="row">
 
                         <!--Video Tag-->
-                            @include('funnels.layouts._partials._video',  ['w'=>'100%','h'=>'100%'])
+                        @include('funnels.layouts._partials._video',  ['w'=>'100%','h'=>'100%'])
 
-                        <!--Form Tag-->
+                                <!--Form Tag-->
                         <div id="form_part" class='col-md-4  col-sm-12 form-first'>
                             {{--TEXT--}}
-                            <p>START <strong>NOW</strong></p>
-                            <p>Enter your email below to gain instant
-                                free access to the Aussie Method system
+                            <p>JETZT<strong>ANFANGEN</strong></p>
+                            <p>Geben Sie unten Ihre E-Mailadresse an, um sofort kostenlosen Zugang zum System die Swiss
+                                Methode zu haben.
                             </p>
                             {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post','align'=>'center']) !!}
                             <input type="hidden" name="pageId" value="{{ $page->id }}">
@@ -80,7 +80,10 @@
                             <input type="submit" class="align-center col-md-12 col-sm-12 submit-aussie" value=""/>
                             {!! Form::close() !!}
                             <div class="col-md-12 col-sm-12">
-                                <img src="/img/aussie-new/de/trust-285.png" mobile-src="/img/aussie-new/de/trust-mobile-500.png" desktop-src="/img/aussie-new/de/trust-285.png" class="dynamic-width-change-1200 trust-pic img-responsive center-block dynamic-width-change-1200">
+                                <img src="/img/aussie-new/de/trust-285.png"
+                                     mobile-src="/img/aussie-new/de/trust-mobile-500.png"
+                                     desktop-src="/img/aussie-new/de/trust-285.png"
+                                     class="dynamic-width-change-1200 trust-pic img-responsive center-block dynamic-width-change-1200">
                             </div>
                         </div>
 
@@ -91,15 +94,12 @@
                 <section id="strip_href">
                     <div class="container">
                         <ul class="row">
-                            <li class="col-md-offset-1 col-md-2 col-sm-12 col-xs-12 who"><a href="#jake-pertu">Who am
-                                    I?</a>
+                            <li class="col-md-offset-1 col-md-2 col-sm-12 col-xs-12 who"><a href="#jake-pertu">Wer ich bin?</a>
                             </li>
-                            <li class="col-md-2 col-sm-12 col-xs-12 success"><a href="#success-pic">Success Stories</a>
+                            <li class="col-md-2 col-sm-12 col-xs-12 success"><a href="#success-pic">Erfolgsgeschichten</a>
                             </li>
-                            <li class="col-md-2 col-sm-12 col-xs-12 video"><a href="#video-how-method-works">How It
-                                    Works</a></li>
-                            <li class="col-md-2 col-sm-12 col-xs-12 live-result"><a href="#live-third-party">Live
-                                    Results</a></li>
+                            <li class="col-md-2 col-sm-12 col-xs-12 video"><a href="#video-how-method-works">Wie es funktioniert</a></li>
+                            <li class="col-md-2 col-sm-12 col-xs-12 live-result"><a href="#live-third-party">Live Ergebnisse</a></li>
                             <li class="col-md-2 col-sm-12 col-xs-12 faq"><a href="#frequently-asked-questions">FAQs</a>
                             </li>
                         </ul>
@@ -125,15 +125,19 @@
                 <section id="success-pic" class="container">
                     <div class="row">
                         <header class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-offset-1 col-xs-10">
-                            <h2 class="title-question">Success Stories</h2>
+                            <h2 class="title-question">Erfolgsgeschichten</h2>
                         </header>
 
                         <div class="pic-iphone">
-                            <img  src="/img/aussie-new/de/iphone-921.png" mobile-src="/img/aussie-new/de/mobile/iphone-mobile-666.png" desktop-src="/img/aussie-new/de/iphone-921.png" alt="iphone-massage-pic"
-                                  class="img-responsive center-block iphone-pic dynamic-width-change">
+                            <img src="/img/aussie-new/de/iphone-921.png"
+                                 mobile-src="/img/aussie-new/de/mobile/iphone-mobile-666.png"
+                                 desktop-src="/img/aussie-new/de/iphone-921.png" alt="iphone-massage-pic"
+                                 class="img-responsive center-block iphone-pic dynamic-width-change">
                         </div>
                         <div class="pic-facebook">
-                            <img src="/img/aussie-new/de/face-921.png" mobile-src="/img/aussie-new/de/mobile/face-mobile-666.png" desktop-src="/img/aussie-new/de/face-921.png" alt="facebook-pic"
+                            <img src="/img/aussie-new/de/face-921.png"
+                                 mobile-src="/img/aussie-new/de/mobile/face-mobile-666.png"
+                                 desktop-src="/img/aussie-new/de/face-921.png" alt="facebook-pic"
                                  class="img-responsive center-block facebook-pic dynamic-width-change">
                         </div>
                     </div>
@@ -148,7 +152,7 @@
 
                         <!--TITLE TWEETED + FACEBOOK PICS-->
                         <header class="col-md-12 col-sm-12 col-xs-12">
-                            <h2 class="title-question">LIVE MINUTE BY MINUTE UPDATING TWITTER AND FACEBOOK FEEDS</h2>
+                            <h2 class="title-question">LIVE TWITTER UND FACEBOOK FEEDS , DIE MINUTE FÜR MINUTE AKTUALISIEREN</h2>
                         </header>
 
                         {{--CONTENT PART--}}
@@ -197,21 +201,6 @@
                                 {{--TWEETER TAB--}}
                                 <div id="tweets-tab" class="col-md-6 "></div>
 
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!--Video How_it_work PIC-->
-                <section id="video-how-method-works" class="container">
-                    <div class="row">
-                        <header class="col-md-12 col-sm-12 col-xs-12">
-                            <h2 class="title-question">How The Aussie Method Works</h2>
-                        </header>
-
-                        <div class="video-n-images col-md-12">
-                            <img src="/img/aussie-new/de/ipad.png" alt="ipad image" class="img-responsive center-block">
-                            <div class="video-tag">
-                                @include('funnels.layouts._partials._video', ['video_url'=>'http://video.chaki.netdna-cdn.com/guide4f.mp4','w'=>'100%', 'h'=>'100%','autoplay'=>'false'])
                             </div>
                         </div>
                     </div>
