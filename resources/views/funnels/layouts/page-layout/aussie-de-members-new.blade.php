@@ -152,7 +152,7 @@
                                     {{--title--}}
                                     <span class="success-title">Max Fischer - Gründer der German </span>
                                     {{--profit text--}}
-                                    <span class="success-profit bold">Method Profit bis jetzt:</span>
+                                    <span class="success-profit boldThe Bavarian>Methode Profit bis jetzt:</span>
                                     {{--price--}}
                                     <span class="success-money bold underline">2.187.612,00 €</span>
                                 </p>
@@ -371,7 +371,7 @@
                 <section id="video-how-method-works" class="container">
                     <div class="row">
                         <header class="col-md-12 col-sm-12 col-xs-12">
-                            <h2 class="title-question">How The Aussie Method Works</h2>
+                            <h2 class="title-question">How The The Bavarian Methode Works</h2>
                         </header>
 
                         <div class="video-n-images col-md-12">
@@ -394,7 +394,7 @@
                             {{--table layout--}}
                             <div class="table-trader col-md-12 col-sm-12 col-xs-12 align-center">
                                 <ul class="col-md-12 col-sm-12 col-xs-12 align-center">
-                                    <li class="col-lg-6 col-md-4 col-sm-4 col-xs-4">Aussie Method Member</li>
+                                    <li class="col-lg-6 col-md-4 col-sm-4 col-xs-4">The Bavarian Methode Member</li>
                                     <li class="col-lg-1 col-md-2 col-sm-2 col-xs-2">Profit</li>
                                     <li class="col-lg-3 col-md-3 col-sm-3 col-xs-3">Trade Time</li>
                                     <li class="col-lg-2 col-md-3 col-sm-3 col-xs-3">Currency</li>
@@ -430,7 +430,7 @@
 
         <footer class="row col-md-12">
 
-            <div id="left-footer" class="col-md-10 col-sm-10 col-xs-9 push-left"> Copyright 2016 Aussie Method. All
+            <div id="left-footer" class="col-md-10 col-sm-10 col-xs-9 push-left"> Copyright 2016 The Bavarian Methodee. All
                 Right Reserved.
             </div>
             <div id="right-footer" class="col-md-2 col-sm-2 col-xs-3 push-right">
