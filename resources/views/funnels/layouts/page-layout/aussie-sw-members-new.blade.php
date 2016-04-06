@@ -1,8 +1,8 @@
 @section('head')
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Startup CSS -->
-    {!! $page->appendAsset(url('css/aussie-new/de/style-0.css')) !!}
-    {!! $page->appendAsset(url('css/aussie-new/de/style-members-0.css')) !!}
+    {!! $page->appendAsset(url('css/aussie-new/sw/style-0.css')) !!}
+    {!! $page->appendAsset(url('css/aussie-new/sw/style-members-0.css')) !!}
     <!--[if lt IE 9]>
     <!--[if lt IE 9]>
     <script src="/js/vendor/html5shiv.min.js"></script>
@@ -13,9 +13,9 @@
 @append
 @section('bottom-scripts')
     @com('funnel_scripts')
-    <script src="/js/aussie-new/de/bootstrap.min.js"></script>
+    <script src="/js/aussie-new/sw/bootstrap.min.js"></script>
     <script src="/js/fancybox/jquery.fancybox.js"></script>
-    <script src="/js/aussie-new/de/funnel-object.js"></script>
+    <script src="/js/aussie-new/sw/funnel-object.js"></script>
     {!! $page->appendAsset(url('/js/firstPage.js')) !!}
 
 @append
@@ -38,12 +38,12 @@
 
                 <!--COMPANY LOGO-->
                 <div id="company" class="pull-left col-md-3 col-sm-4 col-xs-5  ">
-                    <img src="/img/aussie-new/de/maple-logo.jpg" alt="company logo" class="img-responsive">
+                    <img src="/img/aussie-new/sw/maple-logo.jpg" alt="company logo" class="img-responsive">
                 </div>
 
                 <!--MAN LOGO-->
                 <div class="man col-md-4 pull-right col-sm-4 col-xs-6 text-center">
-                    <img src="/img/aussie-new/de/evan-right.jpg" alt="man pic" class="img-responsive pull-right">
+                    <img src="/img/aussie-new/sw/evan-right.jpg" alt="man pic" class="img-responsive pull-right">
                 </div>
 
             </div>
@@ -98,7 +98,7 @@
                     <div class="row">
                         <div class="col-md-12 desktop-steps visible-lg-block">
                             {{--<a class="fancybox" rel="group" href="/img/aussie/guarantee.png">--}}
-                            <img src="/img/aussie-new/de/3step.png" alt="3 steps proccess pic"
+                            <img src="/img/aussie-new/sw/3step.png" alt="3 steps proccess pic"
                                  class="3-step-proccess">
                             {{--</a>--}}
                         </div>
@@ -108,19 +108,19 @@
                     <div class="row mobile-steps hidden-lg">
                         <div class="col-md-12  mobile-steps">
                             {{--<a class="fancybox" rel="group" href="/img/aussie/guarantee.png">--}}
-                            <img src="/img/aussie-new/de/mobile/step-1.png" alt="3 steps proccess pic"
+                            <img src="/img/aussie-new/sw/mobile/step-1.png" alt="3 steps proccess pic"
                                  class=" col-md-12 col-sm-12  col-xs-12 3-step-proccess">
                             {{--</a>--}}
                         </div>
                         <div class="col-md-12  mobile-steps">
                             {{--<a class="fancybox" rel="group" href="/img/aussie/guarantee.png">--}}
-                            <img src="/img/aussie-new/de/mobile/step-2.png" alt="3 steps proccess pic"
+                            <img src="/img/aussie-new/sw/mobile/step-2.png" alt="3 steps proccess pic"
                                  class=" col-md-12 col-sm-12  col-xs-12 3-step-proccess">
                             {{--</a>--}}
                         </div>
                         <div class="col-md-12  mobile-steps">
                             {{--<a class="fancybox" rel="group" href="/img/aussie/guarantee.png">--}}
-                            <img src="/img/aussie-new/de/mobile/step-3.png" alt="3 steps proccess pic"
+                            <img src="/img/aussie-new/sw/mobile/step-3.png" alt="3 steps proccess pic"
                                  class=" col-md-12 col-sm-12  col-xs-12 3-step-proccess">
                             {{--</a>--}}
                         </div>
@@ -142,7 +142,7 @@
 
                             {{--FIRST PART PIC HUMAN--}}
                             <div class="success-human-pic col-md-4 col-sm-12 col-xs-12 first-human">
-                                <img src="/img/aussie-new/de/man.png" alt="man-that-successed-pic"
+                                <img src="/img/aussie-new/sw/man.png" alt="man-that-successed-pic"
                                      class="col-md-10 col-sm-10 col-sm-offset-1  col-xs-12 man-that-successed-pic">
                             </div>
 
@@ -152,9 +152,9 @@
                                     {{--title--}}
                                     <span class="success-title">Max Fischer - Gründer der German </span>
                                     {{--profit text--}}
-                                    <span class="success-profit bold"> The Alpine Methode Profit bis jetzt:</span>
+                                    <span class="success-profit bold" >The Alpine Methode Profit bis jetzt:</span>
                                     {{--price--}}
-                                    <span class="success-money bold underline">2.187.612,00 €</span>
+                                            <span class="success-money bold underline">2.187.612,00 €</span>
                                 </p>
 
                                 {{--click here To view Live Account--}}
@@ -168,7 +168,7 @@
 
                             {{--THIRD PART VERIFIED PIC--}}
                             <div class="success-verified-pic col-md-4 col-sm-12 col-xs-12 center-block">
-                                <img src="/img/aussie-new/de/vta.png" alt="verified-pic">
+                                <img src="/img/aussie-new/sw/vta.png" alt="verified-pic">
                             </div>
                         </div>
 
@@ -190,7 +190,7 @@
 
                             {{--FIRST PART PIC HUMAN--}}
                             <div class="success-human-pic col-md-4 col-sm-12 col-xs-12 other-humans">
-                                <img src="/img/aussie-new/de/p1.png" alt="man-that-successed-pic"
+                                <img src="/img/aussie-new/sw/p1.png" alt="man-that-successed-pic"
                                      class="col-md-10 col-sm-10 col-sm-offset-1  col-xs-12 man-that-successed-pic">
                             </div>
 
@@ -216,7 +216,7 @@
                             </div>
                             {{--THIRD PART VERIFIED PIC--}}
                             <div class="success-verified-pic col-md-4 col-sm-12 col-xs-12">
-                                <img src="/img/aussie-new/de/vta.png" alt="verified-pic">
+                                <img src="/img/aussie-new/sw/vta.png" alt="verified-pic">
                             </div>
                         </div>
                     </div>
@@ -232,7 +232,7 @@
 
                             {{--FIRST PART PIC HUMAN--}}
                             <div class="success-human-pic col-md-4 col-sm-12 col-xs-12 other-humans">
-                                <img src="/img/aussie-new/de/p2.png" alt="man-that-successed-pic"
+                                <img src="/img/aussie-new/sw/p2.png" alt="man-that-successed-pic"
                                      class="col-md-10 col-sm-10 col-sm-offset-1  col-xs-12 man-that-successed-pic">
                             </div>
 
@@ -258,7 +258,7 @@
                             </div>
                             {{--THIRD PART VERIFIED PIC--}}
                             <div class="success-verified-pic col-md-4 col-sm-12 col-xs-12">
-                                <img src="/img/aussie-new/de/vta.png" alt="verified-pic">
+                                <img src="/img/aussie-new/sw/vta.png" alt="verified-pic">
                             </div>
                         </div>
                     </div>
@@ -273,7 +273,7 @@
 
                             {{--FIRST PART PIC HUMAN--}}
                             <div class="success-human-pic col-md-4 col-sm-12 col-xs-12 other-humans">
-                                <img src="/img/aussie-new/de/p3.png" alt="man-that-successed-pic"
+                                <img src="/img/aussie-new/sw/p3.png" alt="man-that-successed-pic"
                                      class="col-md-10 col-sm-10 col-sm-offset-1  col-xs-12 man-that-successed-pic">
                             </div>
 
@@ -299,7 +299,7 @@
 
                             {{--THIRD PART VERIFIED PIC--}}
                             <div class="success-verified-pic col-md-4 col-sm-12 col-xs-12">
-                                <img src="/img/aussie-new/de/vta.png" alt="verified-pic">
+                                <img src="/img/aussie-new/sw/vta.png" alt="verified-pic">
                             </div>
                         </div>
                     </div>
@@ -322,11 +322,11 @@
                             {{--TWEET AND FACEBOOK TITLES--}}
                             <div class="images col-md-12 col-xs-12">
                                 <div class="logotag facebook  col-md-6  col-sm-11 col-xs-12">
-                                    <img src="/img/aussie-new/de/fb.png" alt="facebook logo"
+                                    <img src="/img/aussie-new/sw/fb.png" alt="facebook logo"
                                          class='img-responsive center-block'>
                                 </div>
                                 <div class="logotag tweeter col-md-6  col-sm-5  col-xm-6">
-                                    <img src="/img/aussie-new/de/twt.png" alt="tweeter logo"
+                                    <img src="/img/aussie-new/sw/twt.png" alt="tweeter logo"
                                          class='img-responsive center-block'>
                                 </div>
                             </div>
@@ -350,7 +350,7 @@
 
                                 {{--LOGOTAG TWEET PICTURE MOBILE--}}
                                 <div class="logotag tweet-2 col-md-6 col-sm-12  col-xm-6 logotag-desktop">
-                                    <img src="/img/aussie-new/de/twt.png" alt="tweets logo"
+                                    <img src="/img/aussie-new/sw/twt.png" alt="tweets logo"
                                          class="img-responsive center-block">
                                 </div>
 
@@ -375,7 +375,7 @@
                         </header>
 
                         <div class="video-n-images col-md-12">
-                            <img src="/img/aussie-new/de/ipad.png" alt="ipad image" class="img-responsive center-block">
+                            <img src="/img/aussie-new/sw/ipad.png" alt="ipad image" class="img-responsive center-block">
                             <div class="video-tag">
                                 @include('funnels.layouts._partials._video', ['video_url'=>'http://video.chaki.netdna-cdn.com/guide4f.mp4','w'=>'100%', 'h'=>'100%','autoplay'=>'false'])
                             </div>
@@ -434,7 +434,7 @@
                 Right Reserved.
             </div>
             <div id="right-footer" class="col-md-2 col-sm-2 col-xs-3 push-right">
-                <a class="fancybox_iframe" href="/EN/aussie-new/de/policy" target="&quot;_blank&quot;">Privacy </a>
+                <a class="fancybox_iframe" href="/EN/aussie-new/sw/policy" target="&quot;_blank&quot;">Privacy </a>
                 <a class="fancybox_iframe" href="/EN/aussie/members/../terms" target="&quot;_blank&quot;">Terms </a>
             </div>
         </footer>

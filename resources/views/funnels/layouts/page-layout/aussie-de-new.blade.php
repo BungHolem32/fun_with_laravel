@@ -66,7 +66,7 @@
                                 <!--Form Tag-->
                         <div id="form_part" class='col-md-5  col-sm-12 form-first'>
                             {{--TEXT--}}
-                            <p>JETZT<strong>ANFANGEN</strong></p>
+                            <p>JETZT <strong>ANFANGEN</strong></p>
                             <p>Geben Sie unten Ihre E-Mailadresse an, um sofort kostenlosen Zugang zum System die Bavarian
                                 Methode zu haben.
                             </p>
