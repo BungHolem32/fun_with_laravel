@@ -160,7 +160,7 @@
             <div class="section section_live">
                 <div class="section_container">
                     <div class="section_title">Aktuelle Live-Trades von Profit Maximizer</div>
-
+                    <div id="table-img"></div>
                 </div>
             </div>
 

@@ -2148,3 +2148,19 @@ p:last-child {
 .custom-radio label input {
   display: none;
 }
+
+#table-img {
+  background: url("/img/profitmax/Table.jpg") no-repeat center;
+  background-size: contain;
+  max-width: 100%;
+  height: 462px;
+}
+
+@media screen and (max-width: 767px) {
+  #table-img {
+    background: url("/img/profitmax/TableMobile.jpg") no-repeat center;
+    background-size: contain;
+    max-width: 100%;
+    height: 230px;
+  }
+}

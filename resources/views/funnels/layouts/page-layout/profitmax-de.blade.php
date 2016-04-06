@@ -40,7 +40,6 @@
                             <button type="submit" class="button" id="submit-pop">SOFORTIGEN ZUGRIFF</button>
                         </div>
                     </div>
-
                     <div class="for_free">
                         <span>Kein Kreditkarte. Kein PayPal. 100% kostenlos!</span>
                     </div>
