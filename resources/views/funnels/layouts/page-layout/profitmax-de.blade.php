@@ -1,21 +1,21 @@
 @section('head')
-    {!! $page->appendAsset(url('/css/profitmax/reset.css')) !!}
-    {!! $page->appendAsset(url('/css/profitmax/font-awesome.min.css')) !!}
-    {!! $page->appendAsset(url('/css/profitmax/bootstrap.min.css')) !!}
+    {!! $page->appendAsset(url('/css/profitmax-de/reset.css')) !!}
+    {!! $page->appendAsset(url('/css/profitmax-de/font-awesome.min.css')) !!}
+    {!! $page->appendAsset(url('/css/profitmax-de/bootstrap.min.css')) !!}
     {!! "<link href='http://fonts.googleapis.com/css?family=Exo:500italic' rel='stylesheet' type='text/css'>" !!}
     {!! "<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900,300italic,700italic,900italic,300italic' rel='stylesheet' type='text/css'>" !!}
     {!! "<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700,400italic' rel='stylesheet' type='text/css'>" !!}
-    {!! $page->appendAsset(url('/css/profitmax/style.css')) !!}
-    {!! $page->appendAsset(url('/css/profitmax/custom.css')) !!}
-    {!! $page->appendAsset(url('/css/profitmax/custom1.css')) !!}
+    {!! $page->appendAsset(url('/css/profitmax-de/style.css')) !!}
+    {!! $page->appendAsset(url('/css/profitmax-de/custom.css')) !!}
+    {!! $page->appendAsset(url('/css/profitmax-de/custom1.css')) !!}
 @append
 
 @section('bottom-scripts')
     @com('funnel_scripts')
     {!! $page->appendAsset(url('/js/firstPage.js')) !!}
-    {!! $page->appendAsset(url('/js/profitmax/bootstrap.min.js')) !!}
-    {!! $page->appendAsset(url('/js/profitmax/scripts-11.js')) !!}
-    {!! $page->appendAsset(url('/js/profitmax/script.js')) !!}
+    {!! $page->appendAsset(url('/js/profitmax-de/bootstrap.min.js')) !!}
+    {!! $page->appendAsset(url('/js/profitmax-de/scripts-11.js')) !!}
+    {!! $page->appendAsset(url('/js/profitmax-de/script.js')) !!}
 @append
 
 @section('page-layout')
@@ -58,7 +58,7 @@
     </div>
 
     <div class="count right member_earn" style="width:290px;right:150px;">
-        <img src="/img/profitmax/people1.png" alt="" id="member_img"/>
+        <img src="/img/profitmax-de/people1.png" alt="" id="member_img"/>
 
         <div class="desc">
             <div class="name"><span id="name">Levi G.</span> Gerade gemacht:</div>
@@ -131,9 +131,9 @@
                     {!! Form::close() !!}
                     </div>
                     <div class="images">
-                        <img src="/img/profitmax/payment.png" alt=""/>
-                        <img src="/img/profitmax/verified.png" alt=""/>
-                        <img src="/img/profitmax/safe.png" alt=""/>
+                        <img src="/img/profitmax-de/payment.png" alt=""/>
+                        <img src="/img/profitmax-de/verified.png" alt=""/>
+                        <img src="/img/profitmax-de/safe.png" alt=""/>
                     </div>
                 </div>
             </div>

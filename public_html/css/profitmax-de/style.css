@@ -115,7 +115,7 @@ p:last-child {
   min-width: 320px;
   margin: 0 auto;
   overflow: hidden;
-  background: url(/img/profitmax/bg.jpg) 50% 0 no-repeat;
+  background: url(/img/profitmax-de/bg.jpg) 50% 0 no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
@@ -138,7 +138,7 @@ p:last-child {
   height: auto;
 }
 .jv-page #header .header_content #logo a {
-  background: url(/img/profitmax/logo-jv.png) 0 0 no-repeat;
+  background: url(/img/profitmax-de/logo-jv.png) 0 0 no-repeat;
   width: 172px;
   height: 29px;
 }
@@ -205,7 +205,7 @@ p:last-child {
   left: 0;
   top: 50%;
   margin-top: -19px;
-  background: url(/img/profitmax/logo.old.png) 0 0 no-repeat;
+  background: url(/img/profitmax-de/logo.old.png) 0 0 no-repeat;
 }
 @media screen and (max-width: 767px) {
   #header .header_content #logo a {
@@ -523,13 +523,13 @@ p:last-child {
   zoom: 1;
 }
 .section.section-jv.section-jv-intro {
-  background: #32414e url(/img/profitmax/big-money.jpg) 50% 0 no-repeat;
+  background: #32414e url(/img/profitmax-de/big-money.jpg) 50% 0 no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   padding: 0;
 }
 .section.section-jv.section-jv-intro .section_container {
-  background: url(/img/profitmax/notebook-bg.png) 42% 0 no-repeat;
+  background: url(/img/profitmax-de/notebook-bg.png) 42% 0 no-repeat;
   padding-top: 80px;
   padding-bottom: 40px;
   max-width: 1120px;
@@ -603,7 +603,7 @@ p:last-child {
   font-weight: bold;
 }
 .section.section-jv.section_jv_form {
-  background: #32414e url(/img/profitmax/big-money.jpg) 50% 0 no-repeat;
+  background: #32414e url(/img/profitmax-de/big-money.jpg) 50% 0 no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
 }
@@ -643,7 +643,7 @@ p:last-child {
 }
 .section.section-jv.section_jv_form .jv_form .form-group.skype .form-control {
   padding-left: 40px;
-  background: #FFF url(/img/profitmax/icon_skype.png) no-repeat scroll 5px 50%;
+  background: #FFF url(/img/profitmax-de/icon_skype.png) no-repeat scroll 5px 50%;
 }
 .section.section-jv.section_jv_form .jv_form .form-control {
   height: 44px;
@@ -691,7 +691,7 @@ p:last-child {
   text-align: left;
 }
 .section.section_map {
-  background: #e8e9eb url(/img/profitmax/map.png) 50% 0 no-repeat;
+  background: #e8e9eb url(/img/profitmax-de/map.png) 50% 0 no-repeat;
   min-height: 490px;
 }
 .section.section_map .section_container {
@@ -770,7 +770,7 @@ p:last-child {
 .section.section_map .map_item:after {
   content: '';
   display: block;
-  background: url(/img/profitmax/map_item_bg.png) 0 0 no-repeat;
+  background: url(/img/profitmax-de/map_item_bg.png) 0 0 no-repeat;
   width: 29px;
   height: 20px;
   bottom: -20px;
@@ -870,7 +870,7 @@ p:last-child {
   min-height: 500px;
 }
 .section.section_lp_reg_form .section_container {
-  background: url(/img/profitmax/gradient_bg.png) 0 0 repeat-x;
+  background: url(/img/profitmax-de/gradient_bg.png) 0 0 repeat-x;
   -webkit-border-radius: 7px 7px 0 0;
   -moz-border-radius: 7px 7px 0 0;
   border-radius: 7px 7px 0 0;
@@ -932,7 +932,7 @@ p:last-child {
   text-align: left;
 }
 .section.section_video_members {
-  background: url(/img/profitmax/bg.jpg) 50% 0 no-repeat;
+  background: url(/img/profitmax-de/bg.jpg) 50% 0 no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
@@ -972,7 +972,7 @@ p:last-child {
   bottom: 3px;
   left: 50%;
   margin-left: -45px;
-  background: url(/img/profitmax/down_arrow.png) 0 0 no-repeat;
+  background: url(/img/profitmax-de/down_arrow.png) 0 0 no-repeat;
   width: 90px;
   height: 81px;
 }
@@ -1176,7 +1176,7 @@ p:last-child {
 }
 .exit_popup .popup_inner .popup_content {
   margin: 70px auto;
-  background: #fff url(/img/profitmax/exit_bg.jpg) 0 0 no-repeat;
+  background: #fff url(/img/profitmax-de/exit_bg.jpg) 0 0 no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   border: 8px dashed #e50000;
@@ -1236,7 +1236,7 @@ p:last-child {
 .exit_popup .popup_inner .popup_content .popup_content_inner .for_free:before {
   content: '';
   display: inline-block;
-  background: url(/img/profitmax/icon_for_free.png) 0 0 no-repeat;
+  background: url(/img/profitmax-de/icon_for_free.png) 0 0 no-repeat;
   width: 30px;
   height: 29px;
   vertical-align: middle;
@@ -1316,7 +1316,7 @@ p:last-child {
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  background: url(/img/profitmax/close_button.png) 0 0 no-repeat;
+  background: url(/img/profitmax-de/close_button.png) 0 0 no-repeat;
   width: 18px;
   height: 17px;
 }
@@ -1449,7 +1449,7 @@ p:last-child {
 .button:after {
   content: '';
   display: inline-block;
-  background: url(/img/profitmax/button_arrow.png) 0 0 no-repeat;
+  background: url(/img/profitmax-de/button_arrow.png) 0 0 no-repeat;
   width: 41px;
   height: 38px;
   margin-left: 5px;
@@ -1535,7 +1535,7 @@ p:last-child {
   font-family: 'Exo', sans-serif;
   font-size: 52px;
   padding-left: 50px;
-  background: url(/img/profitmax/icon_countdown.png) 0 50% no-repeat;
+  background: url(/img/profitmax-de/icon_countdown.png) 0 50% no-repeat;
   text-align: left;
 }
 @media screen and (max-width: 991px) {
@@ -1598,7 +1598,7 @@ p:last-child {
 .testimonials_list li .description .desc:before {
   content: '';
   display: inline-block;
-  background: url(/img/profitmax/testimonial_prefix.png) 0 0 no-repeat;
+  background: url(/img/profitmax-de/testimonial_prefix.png) 0 0 no-repeat;
   vertical-align: middle;
   width: 20px;
   height: 14px;
@@ -1644,13 +1644,13 @@ p:last-child {
   color: #10a900;
 }
 .steps li:nth-child(1) {
-  background: url(/img/profitmax/step1.png) 0 0 no-repeat;
+  background: url(/img/profitmax-de/step1.png) 0 0 no-repeat;
 }
 .steps li:nth-child(2) {
-  background: url(/img/profitmax/step2.png) 0 0 no-repeat;
+  background: url(/img/profitmax-de/step2.png) 0 0 no-repeat;
 }
 .steps li:nth-child(3) {
-  background: url(/img/profitmax/step3.png) 0 0 no-repeat;
+  background: url(/img/profitmax-de/step3.png) 0 0 no-repeat;
 }
 .button_view {
   display: inline-block;
@@ -1676,7 +1676,7 @@ p:last-child {
 .button_view:before {
   content: '';
   display: inline-block;
-  background: url(/img/profitmax/icon_chart.png) 0 0 no-repeat;
+  background: url(/img/profitmax-de/icon_chart.png) 0 0 no-repeat;
   width: 29px;
   height: 26px;
   vertical-align: middle;
@@ -1706,7 +1706,7 @@ p:last-child {
 }
 .support_wrapper .section_title {
   padding-top: 200px;
-  background: url(/img/profitmax/clock.png) 0 0 no-repeat;
+  background: url(/img/profitmax-de/clock.png) 0 0 no-repeat;
   font-size: 60px;
   font-weight: bold;
   font-style: italic;
@@ -1746,7 +1746,7 @@ p:last-child {
 .support_wrapper:before {
   content: '';
   display: block;
-  background: url(/img/profitmax/woman.png) 0 0 no-repeat;
+  background: url(/img/profitmax-de/woman.png) 0 0 no-repeat;
   width: 216px;
   height: 387px;
   position: absolute;
@@ -1923,7 +1923,7 @@ p:last-child {
   bottom: 20px;
   right: 20px;
   cursor: pointer;
-  background: url(/img/profitmax/upbutton.png) 0 0 no-repeat;
+  background: url(/img/profitmax-de/upbutton.png) 0 0 no-repeat;
   width: 67px;
   height: 61px;
 }
@@ -2055,16 +2055,16 @@ p:last-child {
   margin-right: 0;
 }
 .reasons_list li:nth-child(1) .title_wrapper {
-  background: url(/img/profitmax/jv-reason1.png) 0 50% no-repeat;
+  background: url(/img/profitmax-de/jv-reason1.png) 0 50% no-repeat;
 }
 .reasons_list li:nth-child(2) .title_wrapper {
-  background: url(/img/profitmax/jv-reason2.png) 0 50% no-repeat;
+  background: url(/img/profitmax-de/jv-reason2.png) 0 50% no-repeat;
 }
 .reasons_list li:nth-child(3) .title_wrapper {
-  background: url(/img/profitmax/jv-reason3.png) 0 50% no-repeat;
+  background: url(/img/profitmax-de/jv-reason3.png) 0 50% no-repeat;
 }
 .reasons_list li:nth-child(4) .title_wrapper {
-  background: url(/img/profitmax/jv-reason4.png) 0 50% no-repeat;
+  background: url(/img/profitmax-de/jv-reason4.png) 0 50% no-repeat;
 }
 .reasons_list li .title_wrapper {
   margin-bottom: 10px;
@@ -2139,7 +2139,7 @@ p:last-child {
   content: '';
   display: inline-block;
   vertical-align: middle;
-  background: url(/img/profitmax/custom-radio.png) 0 -30px no-repeat;
+  background: url(/img/profitmax-de/custom-radio.png) 0 -30px no-repeat;
   width: 30px;
   height: 30px;
   margin-right: 5px;

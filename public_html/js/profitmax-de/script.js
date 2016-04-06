@@ -41,7 +41,7 @@ function winners() {
     }
     $(name).html(names[n]+' '+"ABCDEFGHIJKLMNOPQRSTUVWXYZ".substr(rand(0,25),1)+'.');
     //cf = 
-    face.attr('src', '/img/profitmax/people'+n+'.png');
+    face.attr('src', '/img/profitmax-de/people'+n+'.png');
     setTimeout('winners()', rand(7000,10000));
 }
 

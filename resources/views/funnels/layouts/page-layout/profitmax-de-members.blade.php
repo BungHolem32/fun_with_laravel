@@ -1,23 +1,23 @@
 @section('head')
-    {!! $page->appendAsset(url('/css/profitmax/reset.css')) !!}
-    {!! $page->appendAsset(url('/css/profitmax/font-awesome.min.css')) !!}
-    {!! $page->appendAsset(url('/css/profitmax/bootstrap.min.css')) !!}
+    {!! $page->appendAsset(url('/css/profitmax-de/reset.css')) !!}
+    {!! $page->appendAsset(url('/css/profitmax-de/font-awesome.min.css')) !!}
+    {!! $page->appendAsset(url('/css/profitmax-de/bootstrap.min.css')) !!}
     {!! "<link href='http://fonts.googleapis.com/css?family=Exo:500italic' rel='stylesheet' type='text/css'>" !!}
     {!! "<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900,300italic,700italic,900italic,300italic' rel='stylesheet' type='text/css'>" !!}
     {!! "<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700,400italic' rel='stylesheet' type='text/css'>" !!}
-    {!! $page->appendAsset(url('/css/profitmax/lightbox.min.css')) !!}
-    {!! $page->appendAsset(url('/css/profitmax/form.css')) !!}
-    {!! $page->appendAsset(url('/css/profitmax/style.css')) !!}
+    {!! $page->appendAsset(url('/css/profitmax-de/lightbox.min.css')) !!}
+    {!! $page->appendAsset(url('/css/profitmax-de/form.css')) !!}
+    {!! $page->appendAsset(url('/css/profitmax-de/style.css')) !!}
 @append
 
 @section('bottom-scripts')
     @com('funnel_scripts')
-    {!! $page->appendAsset(url('/js/profitmax/bootstrap.min.js')) !!}
-    {!! $page->appendAsset(url('/js/profitmax/jquery.plugin.min.js')) !!}
-    {!! $page->appendAsset(url('/js/profitmax/jquery.countdown.min.js')) !!}
-    {!! $page->appendAsset(url('/js/profitmax/lightbox.min.js')) !!}
-    {!! $page->appendAsset(url('/js/profitmax/form.js')) !!}
-    {!! $page->appendAsset(url('/js/profitmax/script.js')) !!}
+    {!! $page->appendAsset(url('/js/profitmax-de/bootstrap.min.js')) !!}
+    {!! $page->appendAsset(url('/js/profitmax-de/jquery.plugin.min.js')) !!}
+    {!! $page->appendAsset(url('/js/profitmax-de/jquery.countdown.min.js')) !!}
+    {!! $page->appendAsset(url('/js/profitmax-de/lightbox.min.js')) !!}
+    {!! $page->appendAsset(url('/js/profitmax-de/form.js')) !!}
+    {!! $page->appendAsset(url('/js/profitmax-de/script.js')) !!}
 @append
 @section('page-layout')
     <div class="members_page">
@@ -46,7 +46,7 @@
                         <div class="col-md-8">
                             <div class="video">
                                 <div class="embed-responsive embed-responsive-16by9">
-{{--                                    @include('funnels.layouts._partials._video',  ['w'=>'100%', 'h'=>'100%'])--}}
+                                    @include('funnels.layouts._partials._video',  ['w'=>'100%', 'h'=>'100%'])
                                 </div>
                             </div>
                         </div>
@@ -59,7 +59,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="safe"><img src="/img/profitmax/safe.png" alt=""></div>
+                            <div class="safe"><img src="/img/profitmax-de/safe.png" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -83,45 +83,45 @@
                     <div class="section_title">"An nur einem Tag, habe ich $1022.13 verdient"</div>
 
                     <ul class="testimonials_list">
-                        <li><img src="/img/profitmax/testimonial1.png" alt="">
+                        <li><img src="/img/profitmax-de/testimonial1.png" alt="">
 
                             <div class="description">
                                 <div class="meta">
                                     <div class="name">Maria S.</div>
-                                    <img src="/img/profitmax/stars4.png" alt=""></div>
+                                    <img src="/img/profitmax-de/stars4.png" alt=""></div>
                                 <div class="desc">
                                     Ich kann immer noch nicht glauben, dass ich das Glück hatte die Software zu testen. Ich verdiene mehr in einem Monat, als ich im gesamten letzten Jahr verdient habe. Hätte man mir nur früher gesagt, dass ich in nur einem einzigen Monat € 41.581 verdienen kann! Ich bin überglücklich und sprachlos"
                                 </div>
                             </div>
                         </li>
-                        <li><img src="/img/profitmax/testimonial2.png" alt="">
+                        <li><img src="/img/profitmax-de/testimonial2.png" alt="">
 
                             <div class="description">
                                 <div class="meta">
                                     <div class="name">Christian W.</div>
-                                    <img src="/img/profitmax/stars45.png" alt=""></div>
+                                    <img src="/img/profitmax-de/stars45.png" alt=""></div>
                                 <div class="desc">
                                     Unglaublich, ich weiß gar nicht wie ich meine Gefühle beschrieben soll! Deine Software ist fantastisch, sie vollbringt wahre Wunder! Ich habe im Traum nicht daran gedacht, dass ich durch einen Beta Software Test meine finanzielle Unabhängigkeit erreichen werde. Ich habe mit Deiner Software soviel Geld verdient, dass ich mein Studienkredit auf einmal und sofort zurückzahlen konnte! Ich werde Dir ewig dankbar sein!"
                                 </div>
                             </div>
                         </li>
-                        <li><img src="/img/profitmax/testimonial3.png" alt="">
+                        <li><img src="/img/profitmax-de/testimonial3.png" alt="">
 
                             <div class="description">
                                 <div class="meta">
                                     <div class="name">Wolfgang S.</div>
-                                    <img src="/img/profitmax/stars5.png" alt=""></div>
+                                    <img src="/img/profitmax-de/stars5.png" alt=""></div>
                                 <div class="desc">
                                     Krass! Ich habe schon früher online getradet, aber leider nie wirklich erfolgreich, es war eher eine Geldverschwendung. Nach nur 10 Minuten mit Deiner Software, habe ich sofort gemerkt, dass ich konstante Gewinne einfahren kann. Nach meiner ersten Auszahlung wollte ich zunächst aufhören, das System hat aber einfach weiter Gewinne eingefahren und ich verdiene jetzt jede Woche mindesten stolze €11.862!"
                                 </div>
                             </div>
                         </li>
-                        <li><img src="/img/profitmax/testimonial4.png" alt="">
+                        <li><img src="/img/profitmax-de/testimonial4.png" alt="">
 
                             <div class="description">
                                 <div class="meta">
                                     <div class="name">Monika H.</div>
-                                    <img src="/img/profitmax/stars4.png" alt=""></div>
+                                    <img src="/img/profitmax-de/stars4.png" alt=""></div>
                                 <div class="desc">
                                     Vielen Dank dafür, dass Du meiner Schwester meinem Vater und mir fast einen Herzinfarkt beschert hast. Wir sind fast gestorben, als wir die Gewinne nach dem ersten Monat gesehen haben. Gestaffelt - also von uns allen zusammen - mehr als wir uns jemals erträumt hätten, um genau zu sein: €40.012! Wir können den nächsten Monat gar nicht abwarten."
                                 </div>
@@ -169,11 +169,11 @@
 
                 <div class="section_container">
                     <div class="map_item">
-                        <div class="meta"><img src="/img/profitmax/map1.png" alt="">
+                        <div class="meta"><img src="/img/profitmax-de/map1.png" alt="">
 
                             <div class="name">Felix Wirtz</div>
                             <div class="flag">
-                                <img src="/img/profitmax/flag_austria_mini.gif" alt=""> Österreich
+                                <img src="/img/profitmax-de/flag_austria_mini.gif" alt=""> Österreich
                             </div>
                         </div>
                         <div class="description">
@@ -181,49 +181,49 @@
                             <div class="profit">Gewinn: <span>€221,807,53</span></div>
 
                         </div>
-                        <div class="buttons"><a href="../images/FelixWirtz-men.png" class="button_view" data-lightbox="image-1" data-title="Robert Syverson Results">SCHAUEN ÜBERPRÜFT KONTO</a></div>
+                        <div class="buttons"><a href="/img/profitmax-de/FelixWirtz-men.png" class="button_view" data-lightbox="image-1" data-title="Robert Syverson Results">SCHAUEN ÜBERPRÜFT KONTO</a></div>
                     </div>
                     <div class="map_item">
-                        <div class="meta"><img src="/img/profitmax/map2.png" alt="">
+                        <div class="meta"><img src="/img/profitmax-de/map2.png" alt="">
 
                             <div class="name">Kerstin Baader</div>
                             <div class="flag">
-                                <img src="/img/profitmax/flag_germany_mini-50x33.gif" alt=""> Deutschland
+                                <img src="/img/profitmax-de/flag_germany_mini-50x33.gif" alt=""> Deutschland
                             </div>
                         </div>
                         <div class="description">
                             <div class="start">Startguthaben: <span>€500</span></div>
                             <div class="profit">Gewinn: <span>€50,335.12</span></div>
                         </div>
-                        <div class="buttons"><a href="../images/KerstinBaader-Female.png" class="button_view" data-lightbox="image-1" data-title="Michael  Results">SCHAUEN ÜBERPRÜFT KONTO</a></div>
+                        <div class="buttons"><a href="/img/profitmax-de/KerstinBaader-Female.png" class="button_view" data-lightbox="image-1" data-title="Michael  Results">SCHAUEN ÜBERPRÜFT KONTO</a></div>
                     </div>
                     <div class="map_item">
-                        <div class="meta"><img src="/img/profitmax/map3.png" alt="">
+                        <div class="meta"><img src="/img/profitmax-de/map3.png" alt="">
 
                             <div class="name">Jonas Freitag</div>
                             <div class="flag">
-                                <img src="/img/profitmax/flag_switzerland_mini-50x33.gif" alt=""> Schweiz
+                                <img src="/img/profitmax-de/flag_switzerland_mini-50x33.gif" alt=""> Schweiz
                             </div>
                         </div>
                         <div class="description">
                             <div class="start">Startguthaben: <span>€300</span></div>
                             <div class="profit">Gewinn:<span>€35,174.22</span></div>
                         </div>
-                        <div class="buttons"><a href="../images/JonasFreitag-men.png" class="button_view" data-lightbox="image-1" data-title="Jack  Results">SCHAUEN ÜBERPRÜFT KONTO</a></div>
+                        <div class="buttons"><a href="/img/profitmax-de/JonasFreitag-men.png" class="button_view" data-lightbox="image-1" data-title="Jack  Results">SCHAUEN ÜBERPRÜFT KONTO</a></div>
                     </div>
                     <div class="map_item">
-                        <div class="meta"><img src="/img/profitmax/map4.png" alt="">
+                        <div class="meta"><img src="/img/profitmax-de/map4.png" alt="">
 
                             <div class="name">Antje Koehler</div>
                             <div class="flag">
-                                <img src="/img/profitmax/flag_germany_mini-50x33.gif" alt=""> Deutschland
+                                <img src="/img/profitmax-de/flag_germany_mini-50x33.gif" alt=""> Deutschland
                             </div>
                         </div>
                         <div class="description">
                             <div class="start">Startguthaben:<span>€10,0000</span></div>
                             <div class="profit">Gewinn: <span>€16,593,25</span></div>
                         </div>
-                        <div class="buttons"><a href="../images/AntjeKoehler-female.png" class="button_view" data-lightbox="image-1" data-title="Amelie Results">SCHAUEN ÜBERPRÜFT KONTO</a></div>
+                        <div class="buttons"><a href="/img/profitmax-de/AntjeKoehler-female.png" class="button_view" data-lightbox="image-1" data-title="Amelie Results">SCHAUEN ÜBERPRÜFT KONTO</a></div>
                     </div>
                 </div>
 
