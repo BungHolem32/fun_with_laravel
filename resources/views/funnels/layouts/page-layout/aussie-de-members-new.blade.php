@@ -1,9 +1,8 @@
 @section('head')
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Startup CSS -->
-    {!! $page->appendAsset(url('css/aussie-new/ca/style-0.css')) !!}
-    {!! $page->appendAsset(url('css/aussie-new/ca/style-members-0.css')) !!}
-    <link rel="stylesheet" href="/css/aussie-new/ca/style-new.css">
+    {!! $page->appendAsset(url('css/aussie-new/de/style-0.css')) !!}
+    {!! $page->appendAsset(url('css/aussie-new/de/style-members-0.css')) !!}
     <!--[if lt IE 9]>
     <!--[if lt IE 9]>
     <script src="/js/vendor/html5shiv.min.js"></script>
@@ -14,9 +13,9 @@
 @append
 @section('bottom-scripts')
     @com('funnel_scripts')
-    <script src="/js/aussie-new/ca/bootstrap.min.js"></script>
+    <script src="/js/aussie-new/de/bootstrap.min.js"></script>
     <script src="/js/fancybox/jquery.fancybox.js"></script>
-    <script src="/js/aussie-new/ca/funnel-object.js"></script>
+    <script src="/js/aussie-new/de/funnel-object.js"></script>
     {!! $page->appendAsset(url('/js/firstPage.js')) !!}
 
 @append
@@ -39,12 +38,12 @@
 
                 <!--COMPANY LOGO-->
                 <div id="company" class="pull-left col-md-3 col-sm-4 col-xs-5  ">
-                    <img src="/img/aussie-new/ca/maple-logo.jpg"  alt="company logo" class="img-responsive">
+                    <img src="/img/aussie-new/de/maple-logo.jpg"  alt="company logo" class="img-responsive">
                 </div>
 
                 <!--MAN LOGO-->
                 <div class="man col-md-4 pull-right col-sm-4 col-xs-6 text-center">
-                    <img src="/img/aussie-new/ca/ryan-wolfe.jpg" alt="man pic" class="img-responsive pull-right">
+                    <img src="/img/aussie-new/de/evan-right.jpg" alt="man pic" class="img-responsive pull-right">
                 </div>
 
             </div>
@@ -101,7 +100,7 @@
                     <div class="row">
                         <div class="col-md-12 desktop-steps visible-lg-block">
                             {{--<a class="fancybox" rel="group" href="/img/aussie/guarantee.png">--}}
-                            <img src="/img/aussie-new/ca/3step.png"  alt="3 steps proccess pic"
+                            <img src="/img/aussie-new/de/3step.png"  alt="3 steps proccess pic"
                                  class="3-step-proccess">
                             {{--</a>--}}
                         </div>
@@ -111,19 +110,19 @@
                     <div class="row mobile-steps hidden-lg">
                         <div class="col-md-12  mobile-steps">
                             {{--<a class="fancybox" rel="group" href="/img/aussie/guarantee.png">--}}
-                            <img src="/img/aussie-new/ca/mobile/step-1.png" alt="3 steps proccess pic"
+                            <img src="/img/aussie-new/de/mobile/step-1.png" alt="3 steps proccess pic"
                                  class=" col-md-12 col-sm-12  col-xs-12 3-step-proccess">
                             {{--</a>--}}
                         </div>
                         <div class="col-md-12  mobile-steps">
                             {{--<a class="fancybox" rel="group" href="/img/aussie/guarantee.png">--}}
-                            <img src="/img/aussie-new/ca/mobile/step-2.png" alt="3 steps proccess pic"
+                            <img src="/img/aussie-new/de/mobile/step-2.png" alt="3 steps proccess pic"
                                  class=" col-md-12 col-sm-12  col-xs-12 3-step-proccess">
                             {{--</a>--}}
                         </div>
                         <div class="col-md-12  mobile-steps">
                             {{--<a class="fancybox" rel="group" href="/img/aussie/guarantee.png">--}}
-                            <img src="/img/aussie-new/ca/mobile/step-3.png" alt="3 steps proccess pic"
+                            <img src="/img/aussie-new/de/mobile/step-3.png" alt="3 steps proccess pic"
                                  class=" col-md-12 col-sm-12  col-xs-12 3-step-proccess">
                             {{--</a>--}}
                         </div>
@@ -145,7 +144,7 @@
 
                             {{--FIRST PART PIC HUMAN--}}
                             <div class="success-human-pic col-md-4 col-sm-12 col-xs-12 first-human">
-                                <img src="/img/aussie-new/ca/man.png" alt="man-that-successed-pic"
+                                <img src="/img/aussie-new/de/man.png" alt="man-that-successed-pic"
                                      class="col-md-10 col-sm-10 col-sm-offset-1  col-xs-12 man-that-successed-pic">
                             </div>
 
@@ -153,7 +152,7 @@
                             <div class="success-text col-md-4 col-sm-12 col-xs-12 ">
                                 <p>
                                     {{--title--}}
-                                    <span class="success-title">Ryan Wolfe - Maple Method Founder</span>
+                                    <span class="success-title">Evan Wright - Oxford Method Founder</span>
                                     {{--profit text--}}
                                     <span class="success-profit bold">Profit To Date:</span>
                                     {{--price--}}
@@ -170,7 +169,7 @@
 
                             {{--THIRD PART VERIFIED PIC--}}
                             <div class="success-verified-pic col-md-4 col-sm-12 col-xs-12 center-block">
-                                <img src="/img/aussie-new/ca/vta.png" alt="verified-pic">
+                                <img src="/img/aussie-new/de/vta.png" alt="verified-pic">
                             </div>
                         </div>
 
@@ -192,7 +191,7 @@
 
                             {{--FIRST PART PIC HUMAN--}}
                             <div class="success-human-pic col-md-4 col-sm-12 col-xs-12 other-humans">
-                                <img src="/img/aussie-new/ca/p1.png" alt="man-that-successed-pic"
+                                <img src="/img/aussie-new/de/p1.png" alt="man-that-successed-pic"
                                      class="col-md-10 col-sm-10 col-sm-offset-1  col-xs-12 man-that-successed-pic">
                             </div>
 
@@ -200,9 +199,9 @@
                             <div class="success-text other-success col-md-4 col-sm-12 col-xs-12">
                                 <p>
                                     {{--title--}}
-                                    <span class="success-title">FIONNA MAGUIRE</span>
+                                    <span class="success-title">EMILY MICHAELS</span>
                                     {{--date--}}
-                                    <span class="success-date">Start Date: 19th May 2015</span>
+                                    <span class="success-date">Start Date: 19th May 2016</span>
                                     {{--profit text--}}
                                     <span class="success-profit bold">Profit To Date:</span>
                                     {{--price--}}
@@ -219,7 +218,7 @@
                             </div>
                             {{--THIRD PART VERIFIED PIC--}}
                             <div class="success-verified-pic col-md-4 col-sm-12 col-xs-12">
-                                <img src="/img/aussie-new/ca/vta.png" alt="verified-pic">
+                                <img src="/img/aussie-new/de/vta.png" alt="verified-pic">
                             </div>
                         </div>
                     </div>
@@ -235,7 +234,7 @@
 
                             {{--FIRST PART PIC HUMAN--}}
                             <div class="success-human-pic col-md-4 col-sm-12 col-xs-12 other-humans">
-                                <img src="/img/aussie-new/ca/p2.png" alt="man-that-successed-pic"
+                                <img src="/img/aussie-new/de/p2.png" alt="man-that-successed-pic"
                                      class="col-md-10 col-sm-10 col-sm-offset-1  col-xs-12 man-that-successed-pic">
                             </div>
 
@@ -244,7 +243,7 @@
 
                                 <p>
                                     {{--title--}}
-                                    <span class="success-title">JESSE BROWNE</span>
+                                    <span class="success-title">ROSS ROBERTSON</span>
                                     {{--date--}}
                                     <span class="success-date">Start Date: 28th May 2015</span>
                                     {{--profit text--}}
@@ -262,7 +261,7 @@
                             </div>
                             {{--THIRD PART VERIFIED PIC--}}
                             <div class="success-verified-pic col-md-4 col-sm-12 col-xs-12">
-                                <img src="/img/aussie-new/ca/vta.png" alt="verified-pic">
+                                <img src="/img/aussie-new/de/vta.png" alt="verified-pic">
                             </div>
                         </div>
                     </div>
@@ -277,7 +276,7 @@
 
                             {{--FIRST PART PIC HUMAN--}}
                             <div class="success-human-pic col-md-4 col-sm-12 col-xs-12 other-humans">
-                                <img src="/img/aussie-new/ca/p3.png" alt="man-that-successed-pic"
+                                <img src="/img/aussie-new/de/p3.png" alt="man-that-successed-pic"
                                      class="col-md-10 col-sm-10 col-sm-offset-1  col-xs-12 man-that-successed-pic">
                             </div>
 
@@ -285,7 +284,7 @@
                             <div class="success-text col-md-4 col-sm-12 col-xs-12 other-success">
                                 <p>
                                     {{--title--}}
-                                    <span class="success-title">DIONN PHILLIPS</span>
+                                    <span class="success-title">MARCUS ANDREWS</span>
                                     {{--date--}}
                                     <span class="success-date">Start Date: 2nd June 2015</span>
                                     {{--profit text--}}
@@ -304,7 +303,7 @@
 
                             {{--THIRD PART VERIFIED PIC--}}
                             <div class="success-verified-pic col-md-4 col-sm-12 col-xs-12">
-                                <img src="/img/aussie-new/ca/vta.png" alt="verified-pic">
+                                <img src="/img/aussie-new/de/vta.png" alt="verified-pic">
                             </div>
                         </div>
                     </div>
@@ -327,11 +326,11 @@
                             {{--TWEET AND FACEBOOK TITLES--}}
                             <div class="images col-md-12 col-xs-12">
                                 <div class="logotag facebook  col-md-6  col-sm-11 col-xs-12">
-                                    <img src="/img/aussie-new/ca/fb.png" alt="facebook logo"
+                                    <img src="/img/aussie-new/de/fb.png" alt="facebook logo"
                                          class='img-responsive center-block'>
                                 </div>
                                 <div class="logotag tweeter col-md-6  col-sm-5  col-xm-6">
-                                    <img src="/img/aussie-new/ca/twt.png" alt="tweeter logo"
+                                    <img src="/img/aussie-new/de/twt.png" alt="tweeter logo"
                                          class='img-responsive center-block'>
                                 </div>
                             </div>
@@ -355,7 +354,7 @@
 
                                 {{--LOGOTAG TWEET PICTURE MOBILE--}}
                                 <div class="logotag tweet-2 col-md-6 col-sm-12  col-xm-6 logotag-desktop">
-                                    <img src="/img/aussie-new/ca/twt.png" alt="tweets logo"
+                                    <img src="/img/aussie-new/de/twt.png" alt="tweets logo"
                                          class="img-responsive center-block">
                                 </div>
 
@@ -380,7 +379,7 @@
                         </header>
 
                         <div class="video-n-images col-md-12">
-                            <img src="/img/aussie-new/ca/ipad.png" alt="ipad image" class="img-responsive center-block">
+                            <img src="/img/aussie-new/de/ipad.png" alt="ipad image" class="img-responsive center-block">
                             <div class="video-tag">
                                 @include('funnels.layouts._partials._video', ['video_url'=>'http://video.chaki.netdna-cdn.com/guide4f.mp4','w'=>'100%', 'h'=>'100%','autoplay'=>'false'])
                             </div>
@@ -439,8 +438,8 @@
                 Right Reserved.
             </div>
             <div id="right-footer" class="col-md-2 col-sm-2 col-xs-3 push-right">
-                <a class="fancybox_iframe" href="/maple/policy" target="&quot;_blank&quot;">Privacy </a>
-                <a class="fancybox_iframe" href="/maple/terms" target="&quot;_blank&quot;">Terms </a>
+                <a class="fancybox_iframe" href="/EN/aussie-new/de/policy" target="&quot;_blank&quot;">Privacy </a>
+                <a class="fancybox_iframe" href="/EN/aussie/members/../terms" target="&quot;_blank&quot;">Terms </a>
             </div>
         </footer>
 

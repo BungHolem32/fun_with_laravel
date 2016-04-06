@@ -1,9 +1,7 @@
 @section('head')
     <meta name="viewport" content="initial-scale=1.0">
     <!-- Startup CSS -->
-    {!! $page->appendAsset(url('css/aussie-new/uk/style-0.css')) !!}
-    <link rel="stylesheet" href="/css/aussie-new/uk/style-new.css">
-
+    {!! $page->appendAsset(url('css/aussie-new/de/style-0.css')) !!}
 <!--[if lt IE 9]>
     <!--[if lt IE 9]>
     <script src="/js/vendor/html5shiv.min.js"></script>
@@ -16,7 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
     @com('funnel_scripts')
     <script src="/js/fancybox/jquery.fancybox.js"></script>
-    <script type="text/javascript" src="/js/aussie-new/uk/funnel-object.js"></script>
+    <script type="text/javascript" src="/js/aussie-new/de/funnel-object.js"></script>
     {!! $page->appendAsset(url('/js/firstPage.js')) !!}
 @append
 
@@ -26,7 +24,7 @@
 
         <!--WORK LOGO FIXED AT TOP LEFT IN  THE SCREEN-->
         <section id="works-fixed">
-            <img src="/img/aussie-new/uk/callout.png" alt="">
+            <img src="/img/aussie-new/de/callout.png" alt="">
         </section>
 
         {{--TOP STRIP POSITION ABSOLUTE--}}
@@ -42,12 +40,12 @@
 
                 <!--COMPANY LOGO-->
                 <div id="company" class="pull-left col-md-3 col-sm-4 col-xs-5">
-                    <img src="/img/aussie-new/uk/maple-logo.jpg" alt="company logo" class="img-responsive">
+                    <img src="/img/aussie-new/de/maple-logo.jpg" alt="company logo" class="img-responsive">
                 </div>
 
                 <!--MAN LOGO-->
                 <div class="man col-md-5 pull-right col-sm-4 col-xs-6 text-center">
-                    <img src="/img/aussie-new/uk/evan-right.jpg" alt="man pic" class="img-responsive">
+                    <img src="/img/aussie-new/de/evan-right.jpg" alt="man pic" class="img-responsive">
                 </div>
 
             </div>
@@ -63,7 +61,9 @@
                     <div class="row">
 
                         <!--Video Tag-->
+                        <div id="video_part" class='col-md-7  {{--col-sm-12--}} pull-left'>
                             @include('funnels.layouts._partials._video',  ['w'=>'100%','h'=>'100%'])
+                        </div>
 
                         <!--Form Tag-->
                         <div id="form_part" class='col-md-4  col-sm-12 form-first'>
@@ -82,7 +82,7 @@
                             <input type="submit" class="align-center col-md-12 col-sm-12 submit-aussie" value=""/>
                             {!! Form::close() !!}
                             <div class="col-md-12 col-sm-12">
-                                <img src="/img/aussie-new/uk/certs.png" class="trust-pic img-responsive center-block dynamic-width-change-1200">
+                                <img src="/img/aussie-new/de/certs.png" mobile-src="/img/aussie-new/trust-mobile-500.png" desktop-src="/img/aussie-new/trust-285.png" class="dynamic-width-change-1200 trust-pic img-responsive center-block dynamic-width-change-1200">
                             </div>
                         </div>
 
@@ -114,8 +114,8 @@
                 <section id="jake-pertu" class="container">
                     <div class="row">
                         <div>
-                            <a class="fancybox" rel="group" href="/img/aussie-new/uk/guarantee.png">
-                                <img src="/img/aussie-new/uk/hey.png" alt="first_pic-jake-pertu pic"
+                            <a class="fancybox" rel="group" href="/img/aussie-new/de/guarantee.png">
+                                <img src="/img/aussie-new/de/hey.png" alt="first_pic-jake-pertu pic"
                                      class="jake-pertu img-responsive center-block">
                             </a>
                         </div>
@@ -131,11 +131,11 @@
                         </header>
 
                         <div class="pic-iphone">
-                            <img  src="/img/aussie-new/uk/iphone-921.png" mobile-src="/img/aussie-new/uk/mobile/iphone-mobile-666.png" desktop-src="/img/aussie-new/uk/iphone-921.png" alt="iphone-massage-pic"
+                            <img  src="/img/aussie-new/de/iphone-921.png" mobile-src="/img/aussie-new/de/mobile/iphone-mobile-666.png" desktop-src="/img/aussie-new/de/iphone-921.png" alt="iphone-massage-pic"
                                   class="img-responsive center-block iphone-pic dynamic-width-change">
                         </div>
                         <div class="pic-facebook">
-                            <img src="/img/aussie-new/uk/face-921.png" mobile-src="/img/aussie-new/uk/mobile/face-mobile-666.png" desktop-src="/img/aussie-new/uk/face-921.png" alt="facebook-pic"
+                            <img src="/img/aussie-new/de/face-921.png" mobile-src="/img/aussie-new/de/mobile/face-mobile-666.png" desktop-src="/img/aussie-new/de/face-921.png" alt="facebook-pic"
                                  class="img-responsive center-block facebook-pic dynamic-width-change">
                         </div>
                     </div>
@@ -159,11 +159,11 @@
                             {{--TWEET AND FACEBOOK TITLES--}}
                             <div class="images col-md-12 col-xs-12">
                                 <div class="logotag facebook  col-md-6  col-sm-11 col-xs-12">
-                                    <img src="/img/aussie-new/uk/fb.png" alt="facebook logo"
+                                    <img src="/img/aussie-new/de/fb.png" alt="facebook logo"
                                          class='img-responsive center-block'>
                                 </div>
                                 <div class="logotag tweeter col-md-6  col-sm-5  col-xm-6">
-                                    <img src="/img/aussie-new/uk/twt.png" alt="tweeter logo"
+                                    <img src="/img/aussie-new/de/twt.png" alt="tweeter logo"
                                          class='img-responsive center-block'>
                                 </div>
                             </div>
@@ -187,7 +187,7 @@
 
                                 {{--LOGOTAG TWEET PICTURE MOBILE--}}
                                 <div class="logotag tweet-2 col-md-6 col-sm-12  col-xm-6 logotag-desktop">
-                                    <img src="/img/aussie-new/uk/twt.png" alt="tweets logo"
+                                    <img src="/img/aussie-new/de/twt.png" alt="tweets logo"
                                          class="img-responsive center-block">
                                 </div>
 
@@ -211,7 +211,7 @@
                         </header>
 
                         <div class="video-n-images col-md-12">
-                            <img src="/img/aussie-new/uk/ipad.png" alt="ipad image" class="img-responsive center-block">
+                            <img src="/img/aussie-new/de/ipad.png" alt="ipad image" class="img-responsive center-block">
                             <div class="video-tag">
                                 @include('funnels.layouts._partials._video', ['video_url'=>'http://video.chaki.netdna-cdn.com/guide4f.mp4','w'=>'100%', 'h'=>'100%','autoplay'=>'false'])
                             </div>
@@ -263,7 +263,7 @@
                 </div>
                 <div id="right-footer" class="col-md-2 col-sm-2 col-xs-3 push-right">
                     @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/policy", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Privacy'])
-                    &nbsp;
+                    |
                     @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/terms", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Terms'])
                 </div>
             </div>

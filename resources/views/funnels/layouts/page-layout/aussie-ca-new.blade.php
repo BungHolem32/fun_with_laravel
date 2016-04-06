@@ -2,6 +2,7 @@
 <meta name="viewport" content="initial-scale=1.0">
 <!-- Startup CSS -->
 {!! $page->appendAsset(url('css/aussie-new/ca/style-0.css')) !!}
+<link rel="stylesheet" href="/css/aussie-new/ca/style-new.css">
 <!--[if lt IE 9]>
 <!--[if lt IE 9]>
 <script src="/js/vendor/html5shiv.min.js"></script>
@@ -61,10 +62,7 @@
                 <div class="row">
 
                     <!--Video Tag-->
-                    <div id="video_part" class='col-md-7  {{--col-sm-12--}} pull-left'>
                         @include('funnels.layouts._partials._video',  ['w'=>'100%','h'=>'100%'])
-                    </div>
-
                     <!--Form Tag-->
                     <div id="form_part" class='col-md-4  col-sm-12 form-first'>
                         {{--TEXT--}}
@@ -263,7 +261,7 @@
             </div>
             <div id="right-footer" class="col-md-2 col-sm-2 col-xs-3 push-right">
                 @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/policy", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Privacy'])
-                &nbsp;&nbsp;
+                &nbsp;
                 @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/terms", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Terms'])
             </div>
         </div>
