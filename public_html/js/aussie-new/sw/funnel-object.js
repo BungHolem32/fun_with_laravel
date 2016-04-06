@@ -451,7 +451,7 @@
                     var ht = "<div class=\'" + element_name + "-message\'>\n    <div " +
                         "class=\"" + sort_name + "-img-name-time head\">\n    " +
                         "<div class=\'" + sort_name + "-img col-md-3 col-sm-2 col-xs-2 pull-left\'>\n        " +
-                        "<img class=\'" + sort_name + "-human-image img-responsive\' id='" + this.counter + "' src=\"/img/aussie-new/fw/" + images[ this.counter ] + "\" alt=\"\">\n    " +
+                        "<img class=\'" + sort_name + "-human-image img-responsive\' id='" + this.counter + "' src=\"/img/aussie-new/social/fw/" + images[ this.counter ] + "\" alt=\"\">\n    " +
                         "</div>\n        <div class=\'" + sort_name + "-name-n-time " + cls[ 0 ] + " text-left pull-left\'>\n        " +
                         "<h4 class=\'" + sort_name + "-name " + cls[ 1 ] + " " + cls[ 3 ] + " bold\'>" + this.nm[ this.counter ] + "</h4>\n        " +
                         "<h5 class='time-min " + cls[ 4 ] + " " + cls[ 2 ] + "' ></h5> " +

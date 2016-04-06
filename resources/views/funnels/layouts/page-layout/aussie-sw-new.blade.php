@@ -1,7 +1,7 @@
 @section('head')
     <meta name="viewport" content="initial-scale=1.0">
     <!-- Startup CSS -->
-    {!! $page->appendAsset(url('css/aussie-new/de/style-0.css')) !!}
+    {!! $page->appendAsset(url('css/aussie-new/sw/style-0.css')) !!}
 <!--[if lt IE 9]>
     <!--[if lt IE 9]>
     <script src="/js/vendor/html5shiv.min.js"></script>
@@ -14,7 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
     @com('funnel_scripts')
     <script src="/js/fancybox/jquery.fancybox.js"></script>
-    <script type="text/javascript" src="/js/aussie-new/de/funnel-object.js"></script>
+    <script type="text/javascript" src="/js/aussie-new/sw/funnel-object.js"></script>
     {!! $page->appendAsset(url('/js/firstPage.js')) !!}
 @append
 
@@ -24,7 +24,7 @@
 
         <!--WORK LOGO FIXED AT TOP LEFT IN  THE SCREEN-->
         <section id="works-fixed">
-            <img src="/img/aussie-new/de/callout.png" alt="">
+            <img src="/img/aussie-new/sw/callout.png" alt="">
         </section>
 
         {{--TOP STRIP POSITION ABSOLUTE--}}
@@ -40,12 +40,12 @@
 
                 <!--COMPANY LOGO-->
                 <div id="company" class="pull-left col-md-3 col-sm-4 col-xs-5">
-                    <img src="/img/aussie-new/de/maple-logo.jpg" alt="company logo" class="img-responsive">
+                    <img src="/img/aussie-new/sw/maple-logo.jpg" alt="company logo" class="img-responsive">
                 </div>
 
                 <!--MAN LOGO-->
                 <div class="man col-md-5 pull-right col-sm-4 col-xs-6 text-center">
-                    <img src="/img/aussie-new/de/evan-right.jpg" alt="man pic" class="img-responsive">
+                    <img src="/img/aussie-new/sw/evan-right.jpg" alt="man pic" class="img-responsive">
                 </div>
 
             </div>
@@ -67,7 +67,7 @@
                         <div id="form_part" class='col-md-5  col-sm-12 form-first'>
                             {{--TEXT--}}
                             <p>JETZT<strong>ANFANGEN</strong></p>
-                            <p>Geben Sie unten Ihre E-Mailadresse an, um sofort kostenlosen Zugang zum System die Bavarian
+                            <p>Geben Sie unten Ihre E-Mailadresse an, um sofort kostenlosen Zugang zum System die Alpine
                                 Methode zu haben.
                             </p>
                             {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post','align'=>'center']) !!}
@@ -80,9 +80,9 @@
                             <input type="submit" class="align-center col-md-12 col-sm-12 submit-aussie" value=""/>
                             {!! Form::close() !!}
                             <div class="col-md-12 col-sm-12">
-                                <img src="/img/aussie-new/de/trust-285.png"
-                                     mobile-src="/img/aussie-new/de/mobile/trust-mobile-500.png"
-                                     desktop-src="/img/aussie-new/de/trust-285.png"
+                                <img src="/img/aussie-new/sw/trust-285.png"
+                                     mobile-src="/img/aussie-new/sw/mobile/trust-mobile-500.png"
+                                     desktop-src="/img/aussie-new/sw/trust-285.png"
                                      class="dynamic-width-change-1200 trust-pic img-responsive center-block dynamic-width-change-1200">
                             </div>
                         </div>
@@ -112,8 +112,8 @@
                 <section id="jake-pertu" class="container">
                     <div class="row">
                         <div>
-                            <a class="fancybox" rel="group" href="/img/aussie-new/de/guarantee.png">
-                                <img src="/img/aussie-new/de/hey.png" alt="first_pic-jake-pertu pic"
+                            <a class="fancybox" rel="group" href="/img/aussie-new/sw/guarantee.png">
+                                <img src="/img/aussie-new/sw/hey.png" alt="first_pic-jake-pertu pic"
                                      class="jake-pertu img-responsive center-block">
                             </a>
                         </div>
@@ -129,15 +129,15 @@
                         </header>
 
                         <div class="pic-iphone">
-                            <img src="/img/aussie-new/de/iphone-921.png"
-                                 mobile-src="/img/aussie-new/de/mobile/iphone-mobile-666.png"
-                                 desktop-src="/img/aussie-new/de/iphone-921.png" alt="iphone-massage-pic"
+                            <img src="/img/aussie-new/sw/iphone-921.png"
+                                 mobile-src="/img/aussie-new/sw/mobile/iphone-mobile-666.png"
+                                 desktop-src="/img/aussie-new/sw/iphone-921.png" alt="iphone-massage-pic"
                                  class="img-responsive center-block iphone-pic dynamic-width-change">
                         </div>
                         <div class="pic-facebook">
-                            <img src="/img/aussie-new/de/face-921.png"
-                                 mobile-src="/img/aussie-new/de/mobile/face-mobile-666.png"
-                                 desktop-src="/img/aussie-new/de/face-921.png" alt="facebook-pic"
+                            <img src="/img/aussie-new/sw/face-921.png"
+                                 mobile-src="/img/aussie-new/sw/mobile/face-mobile-666.png"
+                                 desktop-src="/img/aussie-new/sw/face-921.png" alt="facebook-pic"
                                  class="img-responsive center-block facebook-pic dynamic-width-change">
                         </div>
                     </div>
@@ -161,11 +161,11 @@
                             {{--TWEET AND FACEBOOK TITLES--}}
                             <div class="images col-md-12 col-xs-12">
                                 <div class="logotag facebook  col-md-6  col-sm-11 col-xs-12">
-                                    <img src="/img/aussie-new/de/fb.png" alt="facebook logo"
+                                    <img src="/img/aussie-new/sw/fb.png" alt="facebook logo"
                                          class='img-responsive center-block'>
                                 </div>
                                 <div class="logotag tweeter col-md-6  col-sm-5  col-xm-6">
-                                    <img src="/img/aussie-new/de/twt.png" alt="tweeter logo"
+                                    <img src="/img/aussie-new/sw/twt.png" alt="tweeter logo"
                                          class='img-responsive center-block'>
                                 </div>
                             </div>
@@ -189,7 +189,7 @@
 
                                 {{--LOGOTAG TWEET PICTURE MOBILE--}}
                                 <div class="logotag tweet-2 col-md-6 col-sm-12  col-xm-6 logotag-desktop">
-                                    <img src="/img/aussie-new/de/twt.png" alt="tweets logo"
+                                    <img src="/img/aussie-new/sw/twt.png" alt="tweets logo"
                                          class="img-responsive center-block">
                                 </div>
 
@@ -217,7 +217,7 @@
                             {{--table layout--}}
                             <div class="table-trader col-md-12 col-sm-12 col-xs-12 align-center">
                                 <ul class="col-md-12 col-sm-12 col-xs-12 align-center">
-                                    <li class="col-lg-6 col-md-4 col-sm-4 col-xs-4">The Bavarian Method Member</li>
+                                    <li class="col-lg-6 col-md-4 col-sm-4 col-xs-4">The Alpine Method Member</li>
                                     <li class="col-lg-1 col-md-2 col-sm-2 col-xs-2">Profit</li>
                                     <li class="col-lg-3 col-md-3 col-sm-3 col-xs-3">Trade Time</li>
                                     <li class="col-lg-2 col-md-3 col-sm-3 col-xs-3">Currency</li>
@@ -245,7 +245,7 @@
         </div>
         <footer class="row col-md-12">
             <div class="container footer-content">
-                <div id="left-footer" class="col-md-10 col-sm-10 col-xs-9 push-left"> Copyright 2016 The Bavarian Methode. All
+                <div id="left-footer" class="col-md-10 col-sm-10 col-xs-9 push-left"> Copyright 2016 The Alpine Methode. All
                     Right Reserved.
                 </div>
                 <div id="right-footer" class="col-md-2 col-sm-2 col-xs-3 push-right">
