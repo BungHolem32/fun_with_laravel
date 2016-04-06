@@ -58,11 +58,45 @@ $('body').on('click','#submit-pop', function () {
     $('form').submit();
 });
 
+function countDown() {
+    if(!$("#secure_countdown").length) return;
+
+    var minutes         = 10;
+    var seconds         = 0;
+    var centiseconds    = 0;
+
+    var timer = setInterval(function() {
+        if(minutes == 0 && seconds == 0 && centiseconds == 0) $('#countdownText').html('<div class="title">Timeout please try again, your spot is not secured anymore.</div>');
+        centiseconds -= 9;
+
+        if (centiseconds < 0) {
+            centiseconds = 99;
+            seconds--;
+        }
+
+        if (seconds < 0) {
+            seconds = 59;
+            minutes--;
+        }
+
+        if (minutes < 0) {
+            minutes = 0;
+            seconds = 0;
+            centiseconds = 0;
+            clearInterval(timer);
+        }
+
+        if ((minutes + "").length < 2) minutes = "0" + minutes;
+        if ((seconds + "").length < 2) seconds = "0" + seconds;
+        if ((centiseconds + "").length < 2) centiseconds = "0" + centiseconds;
+        $("#secure_countdown").html(minutes+':'+seconds+':'+centiseconds);
+    }, 90);
+}
+
 $(document).ready(function () {
     $('#main-page-form').find('form').addClass('lp_reg_form');
-    $(function(){
-        copies();
-        winners();
-    });
+    copies();
+    winners();
+    countDown();
 });
 
