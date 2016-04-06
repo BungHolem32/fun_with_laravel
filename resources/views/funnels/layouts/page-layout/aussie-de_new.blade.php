@@ -64,10 +64,10 @@
                         @include('funnels.layouts._partials._video',  ['w'=>'100%','h'=>'100%'])
 
                                 <!--Form Tag-->
-                        <div id="form_part" class='col-md-4  col-sm-12 form-first'>
+                        <div id="form_part" class='col-md-5  col-sm-12 form-first'>
                             {{--TEXT--}}
                             <p>JETZT<strong>ANFANGEN</strong></p>
-                            <p>Geben Sie unten Ihre E-Mailadresse an, um sofort kostenlosen Zugang zum System die Swiss
+                            <p>Geben Sie unten Ihre E-Mailadresse an, um sofort kostenlosen Zugang zum System die Bavarian
                                 Methode zu haben.
                             </p>
                             {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post','align'=>'center']) !!}
@@ -81,7 +81,7 @@
                             {!! Form::close() !!}
                             <div class="col-md-12 col-sm-12">
                                 <img src="/img/aussie-new/de/trust-285.png"
-                                     mobile-src="/img/aussie-new/de/trust-mobile-500.png"
+                                     mobile-src="/img/aussie-new/de/mobile/trust-mobile-500.png"
                                      desktop-src="/img/aussie-new/de/trust-285.png"
                                      class="dynamic-width-change-1200 trust-pic img-responsive center-block dynamic-width-change-1200">
                             </div>
@@ -211,7 +211,7 @@
                     <div class="row">
                         <div class="align-center">
                             <header>
-                                <h2>Live Third Party Verified Results!</h2>
+                                <h2>Verifizierte Live Ergebnisse Von Dritten</h2>
                             </header>
 
                             {{--table layout--}}
@@ -236,7 +236,7 @@
 
                     <div class="container">
                         <div class="row">
-                            <header class="col-md-12 col-sm-12 col-xs-12"><h2>Frequently Asked Questions</h2></header>
+                            <header class="col-md-12 col-sm-12 col-xs-12"><h2>Häufig Gestellte Fragen</h2></header>
                             <div class="col-md-12 question_n_answer"></div>
                         </div>
                     </div>

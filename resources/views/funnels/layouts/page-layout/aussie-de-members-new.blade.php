@@ -38,7 +38,7 @@
 
                 <!--COMPANY LOGO-->
                 <div id="company" class="pull-left col-md-3 col-sm-4 col-xs-5  ">
-                    <img src="/img/aussie-new/de/maple-logo.jpg"  alt="company logo" class="img-responsive">
+                    <img src="/img/aussie-new/de/maple-logo.jpg" alt="company logo" class="img-responsive">
                 </div>
 
                 <!--MAN LOGO-->
@@ -79,13 +79,11 @@
                     <div class="container">
                         <ul class="row">
                             <div class="col-md-12">
-                                <li class="col-md-3 col-sm-12 col-xs-12 steps-m"><a href="#3-steps">Getting Started</a></li>
-                                <li class="col-md-4 col-sm-12 col-xs-12 success-m"><a href="#success">Current Members
-                                        Trading
-                                        Accounts</a></li>
-                                <li class="col-md-5 col-sm-12 col-xs-12 live-m"><a href="#live-result-pic">See Live Facebook
-                                        &amp;
-                                        Twitter Feedback</a></li>
+                                <li class="col-md-3 col-sm-12 col-xs-12 steps-m"><a href="#3-steps">Anfangen</a></li>
+                                <li class="col-md-4 col-sm-12 col-xs-12 success-m"><a href="#success">Aktuelle
+                                        Mitglieder Handelskontos</a></li>
+                                <li class="col-md-5 col-sm-12 col-xs-12 live-m"><a href="#live-result-pic">Live Facebook
+                                        und Twitter Feeds sehen</a></li>
                             </div>
                         </ul>
                     </div>
@@ -100,7 +98,7 @@
                     <div class="row">
                         <div class="col-md-12 desktop-steps visible-lg-block">
                             {{--<a class="fancybox" rel="group" href="/img/aussie/guarantee.png">--}}
-                            <img src="/img/aussie-new/de/3step.png"  alt="3 steps proccess pic"
+                            <img src="/img/aussie-new/de/3step.png" alt="3 steps proccess pic"
                                  class="3-step-proccess">
                             {{--</a>--}}
                         </div>
@@ -136,7 +134,7 @@
 
                         {{--TITLE SECTION--}}
                         <header class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-offset-1 col-xs-10">
-                            <h2 class="title-question">Check Out My LIVE Personal Trading Account</h2>
+                            <h2 class="title-question">Schauen Sie Sich Mein Live Handelskonto An</h2>
                         </header>
 
                         {{--SUCCESS STORIES INNER WRAPPER--}}
@@ -152,16 +150,17 @@
                             <div class="success-text col-md-4 col-sm-12 col-xs-12 ">
                                 <p>
                                     {{--title--}}
-                                    <span class="success-title">Evan Wright - Oxford Method Founder</span>
+                                    <span class="success-title">Max Fischer - Gründer der German </span>
                                     {{--profit text--}}
-                                    <span class="success-profit bold">Profit To Date:</span>
+                                    <span class="success-profit bold">Method Profit bis jetzt:</span>
                                     {{--price--}}
-                                    <span class="success-money bold underline">$2,187,612.00</span>
+                                    <span class="success-money bold underline">2.187.612,00 €</span>
                                 </p>
 
                                 {{--click here To view Live Account--}}
                                 <p class="success-button visible-md-block visible-lg-block  ">
-                                    <a href="#customers" onclick="_funnel.popup_trade.init('tb0')" class="bold">Click Here
+                                    <a href="#customers" onclick="_funnel.popup_trade.init('tb0')" class="bold">Click
+                                        Here
                                         To View <br> My Live
                                         Account</a>
                                 </p>
@@ -183,7 +182,7 @@
 
                         {{--TITLE SECTION--}}
                         <header class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-offset-1 col-xs-10">
-                            <h2 class="title-question">More Accounts From Our Customers</h2>
+                            <h2 class="title-question">Weitere Konten Unserer Kunden</h2>
                         </header>
 
                         {{--SUCCESS STORIES INNER WRAPPER--}}
@@ -199,20 +198,19 @@
                             <div class="success-text other-success col-md-4 col-sm-12 col-xs-12">
                                 <p>
                                     {{--title--}}
-                                    <span class="success-title">EMILY MICHAELS</span>
+                                    <span class="success-title">Lisa Hagner</span>
                                     {{--date--}}
-                                    <span class="success-date">Start Date: 19th May 2016</span>
+                                    <span class="success-date">Anfangsdatum: 19th May 2015 </span>
                                     {{--profit text--}}
-                                    <span class="success-profit bold">Profit To Date:</span>
+                                    <span class="success-profit bold">Profit bis jetzt:</span>
                                     {{--price--}}
-                                    <span class="success-money bold underline">$212,450.00</span>
+                                    <span class="success-money bold underline">212,450.00 €</span>
                                 </p>
 
                                 {{--click here To view Live Account--}}
                                 <p class="success-button visible-md-block visible-lg-block ">
-                                    <a href="#customers" onclick="_funnel.popup_trade.init('tb1');" class="bold">Click Here
-                                        To View <br> My Live
-                                        Statement</a>
+                                    <a href="#customers" onclick="_funnel.popup_trade.init('tb1');" class="bold">Klicken
+                                        Sie hier um<br> mein Live Konto zu sehen</a>
                                 </p>
 
                             </div>
@@ -243,20 +241,19 @@
 
                                 <p>
                                     {{--title--}}
-                                    <span class="success-title">ROSS ROBERTSON</span>
+                                    <span class="success-title">Florian Determan</span>
                                     {{--date--}}
-                                    <span class="success-date">Start Date: 28th May 2015</span>
+                                    <span class="success-date">Anfangsdatum: 28th May 2015 </span>
                                     {{--profit text--}}
-                                    <span class="success-profit bold">Profit To Date:</span>
+                                    <span class="success-profit bold">Profit bis jetzt:</span>
                                     {{--price--}}
-                                    <span class="success-money bold underline">$196,201.00</span>
+                                    <span class="success-money bold underline">196,201.00 €</span>
                                 </p>
 
                                 {{--click here To view Live Account--}}
                                 <p class="success-button visible-md-block visible-lg-block ">
-                                    <a href="#customers" onclick="_funnel.popup_trade.init('tb2');" class="bold">Click Here
-                                        To View <br> My Live
-                                        Statement</a>
+                                    <a href="#customers" onclick="_funnel.popup_trade.init('tb2');" class="bold">Klicken
+                                        Sie hier um<br> mein Live Konto zu sehen</a>
                                 </p>
                             </div>
                             {{--THIRD PART VERIFIED PIC--}}
@@ -284,20 +281,19 @@
                             <div class="success-text col-md-4 col-sm-12 col-xs-12 other-success">
                                 <p>
                                     {{--title--}}
-                                    <span class="success-title">MARCUS ANDREWS</span>
+                                    <span class="success-title">Philipp Stahlman</span>
                                     {{--date--}}
-                                    <span class="success-date">Start Date: 2nd June 2015</span>
+                                    <span class="success-date">Anfangsdatum: 2nd June 2015</span>
                                     {{--profit text--}}
-                                    <span class="success-profit bold">Profit To Date:</span>
+                                    <span class="success-profit bold">Profit bis jetzt:</span>
                                     {{--price--}}
-                                    <span class="success-money bold underline">$103,870.00</span>
+                                    <span class="success-money bold underline">103,870.00 €</span>
                                 </p>
 
                                 {{--click here To view Live Account--}}
                                 <p class="success-button visible-md-block visible-lg-block ">
-                                    <a href="#customers" onclick="_funnel.popup_trade.init('tb3');" class="bold">Click Here
-                                        To View <br> My Live
-                                        Statement</a>
+                                    <a href="#customers" onclick="_funnel.popup_trade.init('tb3');" class="bold">Klicken
+                                        Sie hier um<br> mein Live Konto zu sehen</a>
                                 </p>
                             </div>
 
@@ -317,7 +313,7 @@
 
                         <!--TITLE TWEETED + FACEBOOK PICS-->
                         <header class="col-md-12 col-sm-12 col-xs-12">
-                            <h2 class="title-question">LIVE MINUTE BY MINUTE UPDATING TWITTER AND FACEBOOK FEEDS</h2>
+                            <h2 class="title-question">LIVE TWITTER UND FACEBOOK FEEDS , DIE MINUTE FÜR MINUTE AKTUALISIEREN</h2>
                         </header>
 
                         {{--CONTENT PART--}}

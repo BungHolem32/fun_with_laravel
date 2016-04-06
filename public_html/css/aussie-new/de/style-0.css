@@ -11836,7 +11836,7 @@ body #wrapper.first-page main section#video_n_form #form_part {
   /*FIRST FORM - LANDING PAGE*/
 }
 body #wrapper.first-page main section#video_n_form #form_part.form-first {
-  width: 29.3%;
+  width: 39.3%;
   margin-left: 1em;
   /*PARAGRAPH*/
   /*INPUTS*/
@@ -11910,7 +11910,7 @@ body #wrapper.first-page main section#video_n_form #form_part.form-first input.s
   }
 }
 body #wrapper.first-page main section#video_n_form #form_part.form-first input#firstPageSignUpMail {
-  border: 4.0px solid #1F3A79;
+  border: 4.0px solid #CC1E21;
   height: 63px;
   border-radius: 6px;
   margin: 1em 0 -0.5em;
@@ -11928,7 +11928,7 @@ body #wrapper.first-page main section#video_n_form #form_part.form-first input#f
   }
 }
 body #wrapper.first-page main section#video_n_form video#video_part {
-  border: 5px solid #1F3A79 !important;
+  border: 5px solid #CC1E21 !important;
   z-index: 1000;
 }
 @media (max-width: 1200px) {
@@ -12058,7 +12058,7 @@ body #wrapper.first-page main section#video-how-method-works .video-n-images .vi
   }
 }
 body #wrapper.first-page main section#strip_href {
-  background-color: #1F3978;
+  background-color: #CC1E21;
   /*UL TAG*/
 }
 body #wrapper.first-page main section#strip_href ul {
@@ -12072,7 +12072,7 @@ body #wrapper.first-page main section#strip_href ul {
   }
 }
 body #wrapper.first-page main section#strip_href ul li {
-  font-size: 1.4em;
+  font-size: 1.1em;
   /*HREF TAG*/
 }
 @media (min-width: 1000px) and (max-width: 1200px) {
@@ -12640,7 +12640,7 @@ body #wrapper.second-page main section#video-how-method-works .video-n-images .v
   }
 }
 body #wrapper.second-page main section#strip_href {
-  background-color: #1F3978;
+  background-color: #CC1E21;
   /*UL TAG*/
 }
 body #wrapper.second-page main section#strip_href ul {
@@ -12957,7 +12957,7 @@ body #wrapper #back-to-top:hover {
   background: #e9ebec;
 }
 body #wrapper footer.row {
-  background-color: #1F3A79;
+  background-color: #CC1E21;
   color: white;
   margin: 0;
   padding: 1em;
@@ -13627,3 +13627,6 @@ li.col-md-5.col-sm-12.col-xs-12.live-m {
 }
 
 /*# sourceMappingURL=style-0.css.map */
+p.title-question.text-left.pull-left.col-md-11 {
+  padding: 0;
+}
