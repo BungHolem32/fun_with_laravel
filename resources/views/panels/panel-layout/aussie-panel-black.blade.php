@@ -1,5 +1,5 @@
 @section('head')
-    <link rel="stylesheet" href="/css/panels/black/style.css" />
+    <link rel="stylesheet" href="/css/panels/black/style.css"/>
 @append
 
 @section('bottom-scripts')
@@ -9,14 +9,27 @@
 @append
 
 @section('page-layout')
-    <div class="container-fluid content-wrapper">
-        <aside class="container account-de-">
 
+    <div class="content-wrapper">
+
+        {{--Account Details--}}
+        <aside class="account-details container">
+
+            <div class="row">
+                {{--title Part--}}
+                <header class="account-details-title">
+                    {{--human avatar--}}
+                    <div class="img-human col-lg-1">
+                        <img src="" alt="img-responsive" class="img-responsive block-center">
+                    </div>
+                    {{--title place--}}
+                    <div class="title text-uppercase col-lg-11">
+                        account details
+                    </div>
+                </header>
+            </div>
         </aside>
 
-        <header>
-
-        </header>
 
     </div>
 
