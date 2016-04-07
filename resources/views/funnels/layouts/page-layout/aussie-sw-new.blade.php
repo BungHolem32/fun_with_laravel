@@ -113,10 +113,10 @@
                 <section id="jake-pertu" class="container">
                     <div class="row">
                         <div>
-                            <a class="fancybox" rel="group" href="/img/aussie-new/sw/guarantee.png">
-                                <img src="/img/aussie-new/sw/hey.png" alt="first_pic-jake-pertu pic"
-                                     class="jake-pertu img-responsive center-block">
-                            </a>
+                            <img src="/img/aussie-new/sw/hey.png" alt="first_pic-jake-pertu pic"
+                                 class="jake-pertu img-responsive center-block">
+                          {{--  <a --}}{{--class="fancybox"--}}{{-- rel="group" --}}{{--href="/img/aussie-new/sw/guarantee.png"--}}{{-->
+                            </a>--}}
                         </div>
                     </div>
                 </section>
