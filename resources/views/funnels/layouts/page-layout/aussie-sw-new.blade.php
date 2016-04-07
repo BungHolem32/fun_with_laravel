@@ -2,6 +2,7 @@
     <meta name="viewport" content="initial-scale=1.0">
     <!-- Startup CSS -->
     {!! $page->appendAsset(url('css/aussie-new/sw/style-0.css')) !!}
+    <link rel="stylesheet" href="/css/aussie-new/sw/style-new.css">
 <!--[if lt IE 9]>
     <!--[if lt IE 9]>
     <script src="/js/vendor/html5shiv.min.js"></script>
@@ -40,12 +41,12 @@
 
                 <!--COMPANY LOGO-->
                 <div id="company" class="pull-left col-md-3 col-sm-4 col-xs-5">
-                    <img src="/img/aussie-new/sw/maple-logo.jpg" alt="company logo" class="img-responsive">
+                    <img src="/img/aussie-new/sw/alpine-logo.jpg" alt="company logo" class="img-responsive">
                 </div>
 
                 <!--MAN LOGO-->
                 <div class="man col-md-5 pull-right col-sm-4 col-xs-6 text-center">
-                    <img src="/img/aussie-new/sw/evan-right.jpg" alt="man pic" class="img-responsive">
+                    <img src="/img/aussie-new/sw/anton.jpg" alt="man pic" class="img-responsive">
                 </div>
 
             </div>
@@ -66,7 +67,7 @@
                                 <!--Form Tag-->
                         <div id="form_part" class='col-md-5  col-sm-12 form-first'>
                             {{--TEXT--}}
-                            <p>JETZT<strong>ANFANGEN</strong></p>
+                            <p><strong>JETZT ANFANGEN</strong></p>
                             <p>Geben Sie unten Ihre E-Mailadresse an, um sofort kostenlosen Zugang zum System die Alpine
                                 Methode zu haben.
                             </p>
@@ -134,12 +135,12 @@
                                  desktop-src="/img/aussie-new/sw/iphone-921.png" alt="iphone-massage-pic"
                                  class="img-responsive center-block iphone-pic dynamic-width-change">
                         </div>
-                        <div class="pic-facebook">
-                            <img src="/img/aussie-new/sw/face-921.png"
-                                 mobile-src="/img/aussie-new/sw/mobile/face-mobile-666.png"
-                                 desktop-src="/img/aussie-new/sw/face-921.png" alt="facebook-pic"
-                                 class="img-responsive center-block facebook-pic dynamic-width-change">
-                        </div>
+                        {{--<div class="pic-facebook">--}}
+                            {{--<img src="/img/aussie-new/sw/face-921.png"--}}
+                                 {{--mobile-src="/img/aussie-new/sw/mobile/face-mobile-666.png"--}}
+                                 {{--desktop-src="/img/aussie-new/sw/face-921.png" alt="facebook-pic"--}}
+                                 {{--class="img-responsive center-block facebook-pic dynamic-width-change">--}}
+                        {{--</div>--}}
                     </div>
                 </section>
 
@@ -248,11 +249,11 @@
                 <div id="left-footer" class="col-md-10 col-sm-10 col-xs-9 push-left"> Copyright 2016 The Alpine Methode. All
                     Right Reserved.
                 </div>
-                <div id="right-footer" class="col-md-2 col-sm-2 col-xs-3 push-right">
-                    @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/policy", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Privacy'])
-                    &nbsp;
-                    @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/terms", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Terms'])
-                </div>
+                {{--<div id="right-footer" class="col-md-2 col-sm-2 col-xs-3 push-right">--}}
+                    {{--@include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/policy", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Privacy'])--}}
+                    {{--&nbsp;--}}
+                    {{--@include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/terms", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Terms'])--}}
+                {{--</div>--}}
             </div>
         </footer>
 

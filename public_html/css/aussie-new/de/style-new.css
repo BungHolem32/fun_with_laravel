@@ -1,3 +1,22 @@
 body #wrapper {
-    background: url('/img/aussie-new/uk/ausbg.jpg') repeat-y top center !important;
+    background: url('/img/aussie-new/de/ausbg.jpg') repeat-y top center !important;
+}
+body #wrapper.second-page section#top_strip{
+    top: -8px;
+}
+
+input[type="submit"]{
+    background: url('/img/aussie-new/de/buttonfree.png') no-repeat center;
+}
+
+.second-page input[type=submit] {
+    display: block;
+    color: transparent;
+    background: url('/img/aussie-new/de/buttonfree-second.png') no-repeat center;
+    width: 100%;
+    height: 83.8px;
+    border: 0;
+    outline: none;
+    background-size: contain;
+    margin: 0 auto;
 }

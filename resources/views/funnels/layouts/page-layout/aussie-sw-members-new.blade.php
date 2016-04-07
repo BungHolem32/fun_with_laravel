@@ -3,6 +3,7 @@
     <!-- Startup CSS -->
     {!! $page->appendAsset(url('css/aussie-new/sw/style-0.css')) !!}
     {!! $page->appendAsset(url('css/aussie-new/sw/style-members-0.css')) !!}
+    <link rel="stylesheet" href="/css/aussie-new/sw/style-new.css">
     <!--[if lt IE 9]>
     <!--[if lt IE 9]>
     <script src="/js/vendor/html5shiv.min.js"></script>
@@ -433,10 +434,10 @@
             <div id="left-footer" class="col-md-10 col-sm-10 col-xs-9 push-left"> Copyright 2016 The Alpine Methode. All
                 Right Reserved.
             </div>
-            <div id="right-footer" class="col-md-2 col-sm-2 col-xs-3 push-right">
-                <a class="fancybox_iframe" href="/EN/aussie-new/sw/policy" target="&quot;_blank&quot;">Privacy </a>
-                <a class="fancybox_iframe" href="/EN/aussie/members/../terms" target="&quot;_blank&quot;">Terms </a>
-            </div>
+            {{--<div id="right-footer" class="col-md-2 col-sm-2 col-xs-3 push-right">--}}
+                {{--<a class="fancybox_iframe" href="/EN/aussie-new/sw/policy" target="&quot;_blank&quot;">Privacy </a>--}}
+                {{--<a class="fancybox_iframe" href="/EN/aussie/members/../terms" target="&quot;_blank&quot;">Terms </a>--}}
+            {{--</div>--}}
         </footer>
 
         <!--===============================================FOOTER TAG====================================================-->

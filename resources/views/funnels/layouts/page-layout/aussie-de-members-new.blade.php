@@ -3,6 +3,7 @@
     <!-- Startup CSS -->
     {!! $page->appendAsset(url('css/aussie-new/de/style-0.css')) !!}
     {!! $page->appendAsset(url('css/aussie-new/de/style-members-0.css')) !!}
+    <link rel="stylesheet" href="/css/aussie-new/de/style-new.css">
     <!--[if lt IE 9]>
     <!--[if lt IE 9]>
     <script src="/js/vendor/html5shiv.min.js"></script>
@@ -38,12 +39,12 @@
 
                 <!--COMPANY LOGO-->
                 <div id="company" class="pull-left col-md-3 col-sm-4 col-xs-5  ">
-                    <img src="/img/aussie-new/de/maple-logo.jpg" alt="company logo" class="img-responsive">
+                    <img src="/img/aussie-new/de/bavarian-logo.jpg" alt="company logo" class="img-responsive">
                 </div>
 
                 <!--MAN LOGO-->
                 <div class="man col-md-4 pull-right col-sm-4 col-xs-6 text-center">
-                    <img src="/img/aussie-new/de/evan-right.jpg" alt="man pic" class="img-responsive pull-right">
+                    <img src="/img/aussie-new/de/lukas.jpg" alt="man pic" class="img-responsive pull-right">
                 </div>
 
             </div>
@@ -367,22 +368,6 @@
                     </div>
                 </section>
 
-                <!--Video How_it_work PIC-->
-                <section id="video-how-method-works" class="container">
-                    <div class="row">
-                        <header class="col-md-12 col-sm-12 col-xs-12">
-                            <h2 class="title-question">How The The Alpine Methode Works</h2>
-                        </header>
-
-                        <div class="video-n-images col-md-12">
-                            <img src="/img/aussie-new/de/ipad.png" alt="ipad image" class="img-responsive center-block">
-                            <div class="video-tag">
-                                @include('funnels.layouts._partials._video', ['video_url'=>'http://video.chaki.netdna-cdn.com/guide4f.mp4','w'=>'100%', 'h'=>'100%','autoplay'=>'false'])
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 {{--LIVE THIRD PARTY TRADE--}}
                 <section id="live-third-party" class="container">
                     <div class="row">
@@ -433,10 +418,10 @@
             <div id="left-footer" class="col-md-10 col-sm-10 col-xs-9 push-left"> Copyright 2016 The Alpine Methode. All
                 Right Reserved.
             </div>
-            <div id="right-footer" class="col-md-2 col-sm-2 col-xs-3 push-right">
-                <a class="fancybox_iframe" href="/EN/aussie-new/de/policy" target="&quot;_blank&quot;">Privacy </a>
-                <a class="fancybox_iframe" href="/EN/aussie/members/../terms" target="&quot;_blank&quot;">Terms </a>
-            </div>
+            {{--<div id="right-footer" class="col-md-2 col-sm-2 col-xs-3 push-right">--}}
+                {{--<a class="fancybox_iframe" href="/EN/aussie-new/de/policy" target="&quot;_blank&quot;">Privacy </a>--}}
+                {{--<a class="fancybox_iframe" href="/EN/aussie/members/../terms" target="&quot;_blank&quot;">Terms </a>--}}
+            {{--</div>--}}
         </footer>
 
         <!--===============================================FOOTER TAG====================================================-->

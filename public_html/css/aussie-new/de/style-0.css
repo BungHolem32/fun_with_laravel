@@ -11452,7 +11452,7 @@ body {
 }
 @media (max-width: 1200px) {
   body #wrapper main section .form-first input.submit-aussie {
-    background: url('/img/aussie-new/buttonfree_mobile.png') no-repeat top center;
+    background: url('/img/aussie-new/de/buttonfree.png') no-repeat top center;
     background-size: contain;
     height: 252px !important;
   }
@@ -11509,7 +11509,7 @@ body {
     height: 212px;
   }
   body #wrapper main section .g-first input[type=submit] {
-    background: url('/img/aussie-new/buttonfree_mobile.png') no-repeat center;
+    background: url('/img/aussie-new/de/buttonfree-second.png') no-repeat center;
     margin: 1em 0;
     background: 100%;
   }
@@ -11685,7 +11685,7 @@ section#live-third-party .row {
 /*MOBILE BUTTON PIC */
 @media (max-width: 920px) {
   body #wrapper main section .g-first input[type=submit] {
-    background: url('/img/aussie-new/buttonfree_mobile.png') no-repeat center;
+    background: url('/img/aussie-new/de/buttonfree-second.png') no-repeat center;
     background: 100%;
     margin: 1.5em 0;
   }
@@ -11724,7 +11724,7 @@ section#live-third-party .row {
   width: 85.8%;
 }
 .backPic_mobile {
-  background: url('/img/aussie-new/buttonfree_mobile.png') no-repeat center;
+  background: url('/img/aussie-new/de/buttonfree.png') no-repeat center;
   background: 100%;
   margin: 1.5em 0;
 }
@@ -11861,16 +11861,15 @@ body #wrapper.first-page main section#video_n_form #form_part.form-first p {
   /*FIRST ELEMENT IN PARAGRPAH*/
 }
 body #wrapper.first-page main section#video_n_form #form_part.form-first p:nth-of-type(1) {
-  font-size: 49.8px;
+  font-size: 47.8px;
   color: #1e387b;
-  margin-top: -0.1em !important;
+  margin: 0;
   font-family: 'Cabin', sans-serif;
 }
 @media (max-width: 1300px) and (min-width: 990px) {
   body #wrapper.first-page main section#video_n_form #form_part.form-first p:nth-of-type(1) {
-    font-size: 49.8px;
+    font-size: 45.8px;
     color: #1e387b;
-    margin-top: 0.4em;
     font-family: 'Cabin', sans-serif;
   }
 }
@@ -11890,9 +11889,9 @@ body #wrapper.first-page main section#video_n_form #form_part.form-first input {
 }
 body #wrapper.first-page main section#video_n_form #form_part.form-first input.submit-aussie {
   cursor: pointer;
-  background: url('/img/aussie-new/buttonfree.png') no-repeat top center;
+  background: url('/img/aussie-new/de/buttonfree.png') no-repeat top center;
   background-size: contain;
-  height: 82px;
+  height: 117px;
   margin: 1em 0;
   /*MOBILE VIEW*/
 }
@@ -11903,7 +11902,7 @@ body #wrapper.first-page main section#video_n_form #form_part.form-first input.s
 }
 @media (max-width: 1200px) {
   body #wrapper.first-page main section#video_n_form #form_part.form-first input.submit-aussie {
-    background: url('/img/aussie-new/buttonfree_mobile.png') no-repeat top center;
+    background: url('/img/aussie-new/de/buttonfree.png') no-repeat top center;
     background-size: 100%;
     margin: 1em 0;
     height: 188px;
@@ -11913,7 +11912,7 @@ body #wrapper.first-page main section#video_n_form #form_part.form-first input#f
   border: 4.0px solid #CC1E21;
   height: 63px;
   border-radius: 6px;
-  margin: 1em 0 -0.5em;
+  margin:0;
   text-align: center;
 }
 @media (max-width: 1200px) and (min-width: 990px) {
@@ -12437,6 +12436,7 @@ body #wrapper.second-page main section#video_n_form {
   }
 }
 body #wrapper.second-page main section#video_n_form #form_part {
+  margin-top:0.5%;
   /*FIRST FORM - LANDING PAGE*/
 }
 @media (max-width: 1200px) and (min-width: 990px) {
@@ -12449,10 +12449,10 @@ body #wrapper.second-page main section#video_n_form #form_part #form #submit {
 }
 @media (min-width: 990px) and (max-width: 1200px) {
   body #wrapper.second-page main section#video_n_form #form_part #form #submit {
-    background: url('/img/aussie-new/buttonfree_mobile.png') no-repeat center;
+    background: url('/img/aussie-new/de/buttonfree-second.png') no-repeat center;
     max-width: 100%;
     margin: 1em auto;
-    height: 221px !important;
+    height: 116px !important;
     background-size: contain;
   }
 }
@@ -12503,7 +12503,7 @@ body #wrapper.second-page main section#video_n_form #form_part.form-first input 
 }
 body #wrapper.second-page main section#video_n_form #form_part.form-first input.submit-aussie {
   cursor: pointer;
-  background: url('/img/aussie-new/buttonfree.png') no-repeat top center;
+  background: url('/img/aussie-new/de/buttonfree-second.png') no-repeat top center;
   background-size: contain;
   height: 82px;
   margin: 1em 0;
@@ -12516,7 +12516,7 @@ body #wrapper.second-page main section#video_n_form #form_part.form-first input.
 }
 @media (max-width: 1200px) {
   body #wrapper.second-page main section#video_n_form #form_part.form-first input.submit-aussie {
-    background: url('/img/aussie-new/buttonfree_mobile.png') no-repeat top center;
+    background: url('/img/aussie-new/de/buttonfree-second.png') no-repeat top center;
     background-size: 100%;
     margin: 1em 0;
     height: 188px;
@@ -13370,7 +13370,7 @@ a#back-to-top.backtop {
 .second-page input[type=submit] {
   display: block;
   color: transparent;
-  background: url('/img/aussie-new/buttonfree.png') no-repeat center;
+  background: url('/img/aussie-new/de/buttonfree-second.png') no-repeat center;
   width: 100%;
   height: 127.8px;
   border: 0;
@@ -13409,7 +13409,7 @@ a#back-to-top.backtop {
 .submit {
   display: block;
   color: transparent;
-  background: url('/img/aussie-new/buttonfree_mobile.png') no-repeat center;
+  background: url('/img/aussie-new/de/buttonfree.png') no-repeat center;
   width: 100%;
   border: 0;
   outline: none;
@@ -13511,7 +13511,7 @@ body .popup h4 {
   }
   input[type=submit] {
     display: block;
-    background: url('/img/aussie-new/buttonfree_mobile.png') no-repeat center;
+    background: url('/img/aussie-new/de/buttonfree-second.png') no-repeat center;
     width: 100%;
     height: 221px;
   }
@@ -13600,26 +13600,13 @@ ol {
   input[type=submit] {
     display: block;
     color: transparent;
-    background: url('/img/aussie-new/buttonfree_mobile.png') no-repeat center;
+    background: url('/img/aussie-new/de/buttonfree-second.png') no-repeat center;
     width: 100%;
     border: 0;
     outline: none;
     background-size: contain;
     margin: 16px auto;
     height: 197px;
-  }
-}
-@media (min-width: 320px) and (max-width: 599px) {
-  input[type=submit] {
-    display: block;
-    color: transparent;
-    background: url('/img/aussie-new/buttonfree_mobile.png') no-repeat center;
-    width: 100%;
-    border: 0;
-    outline: none;
-    background-size: contain;
-    margin: 16px auto;
-    height: 100px;
   }
 }
 li.col-md-5.col-sm-12.col-xs-12.live-m {
