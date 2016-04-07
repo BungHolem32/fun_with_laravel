@@ -3,9 +3,6 @@
     {!! "<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>" !!}
     {!! $page->appendAsset(url('/css/gtrader/style.min38943894.css')) !!}
     {!! $page->appendAsset(url('/css/gtrader/default.min38943894.css')) !!}
-    {!! $page->appendAsset(url('/js/gtrader/jquery4a804a80.js')) !!}
-    {!! $page->appendAsset(url('/js/gtrader/jquery-migrate.min15761576.js')) !!}
-    {!! $page->appendAsset(url('/js/gtrader/op-jquery-base-all.min38943894.js')) !!}
     {!! $page->appendAsset(url('/css/gtrader/prettyPhoto.min38943894.css')) !!}
     {!! $page->appendAsset(url('/css/gtrader/style.css')) !!}
 @append
@@ -13,11 +10,14 @@
 @section('bottom-scripts')
     @com('funnel_scripts')
     {!! $page->appendAsset(url('/js/firstPage.js')) !!}
-    {!! $page->appendAsset(url('/js/gtrader/popup.min38943894.js')) !!}
-    {!! $page->appendAsset(url('/js/gtrader/comment-reply.min9c929c92.js')) !!}
-    {!! $page->appendAsset(url('/js/gtrader/op-front-all.min38943894.js')) !!}
-    {!! $page->appendAsset(url('/js/gtrader/menus.min38943894.js')) !!}
-    {!! $page->appendAsset(url('/js/gtrader/jquery.prettyPhoto.min38943894.js')) !!}
+    {!! $page->appendAsset(url('/js/gtrader/jquery-migrate.min15761576.js')) !!}
+{{--    {!! $page->appendAsset(url('/js/gtrader/op-jquery-base-all.min38943894.js')) !!}--}}
+{{--    {!! $page->appendAsset(url('/js/gtrader/popup.min38943894.js')) !!}--}}
+{{--    {!! $page->appendAsset(url('/js/gtrader/comment-reply.min9c929c92.js')) !!}--}}
+{{--    {!! $page->appendAsset(url('/js/gtrader/op-front-all.min38943894.js')) !!}--}}
+    {{--{!! $page->appendAsset(url('/js/gtrader/menus.min38943894.js')) !!}--}}
+{{--    {!! $page->appendAsset(url('/js/gtrader/jquery.prettyPhoto.min38943894.js')) !!}--}}
+    {{--{!! $page->appendAsset(url('/js/gtrader/script.js')) !!}--}}
 @append
 
 @section('page-layout')
@@ -103,8 +103,7 @@
                     <div class="one-half column cols" id="le_body_row_3_col_1">
                         <div class="element-container cf roboto-500"
                              data-style="eyJhZHZhbmNlZENsYXNzIjoicm9ib3RvLTUwMCJ9" id="le_body_row_3_col_1_el_1">
-                            <div class="element"><h2
-                                        style='font-size:50px;font-family:"Lato", sans-serif !important;font-style:normal;font-weight:300;color:#fafafa;text-align:center;line-height:42px;margin-bottom:30px;'>
+                            <div class="element"><h2 style='font-size:50px;font-family:"Lato", sans-serif !important;font-style:normal;font-weight:300;color:#fafafa;text-align:center;line-height:42px;margin-bottom:30px;'>
                                     Total Members:</h2></div>
                         </div>
                         <div class="element-container cf roboto-500"
