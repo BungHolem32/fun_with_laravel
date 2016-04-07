@@ -3,26 +3,66 @@
 /*WRAPPER FOR ALL THE CONTENT*/
 .content-wrapper {
   background: url(/img/panel/black/black.jpg);
+  width: 1903px;
+  height: 100em;
+  opacity: 0.5;
+
   /*ACCOUNT DETAILS*/
   .account-details {
-    width: 10.8%;
+    width: 205.7px;
     border: 1px solid gray;
     height: 8.6em;
     position: fixed;
     direction: ltr;
-    right: 14.1%;
+    right: 14.5%;
     border-bottom-right-radius: 0.6em;
+    border-bottom-left-radius: 0.6em;
     background-color: white;
     opacity: 0.6;
-    /*IMG*/
-    .img-human {
-      display: inline-block;
-      width: 20%;
-    }
+    box-shadow: 0em 1.1px 1.4px 0.1px darkgray;
+
     /*TITLE */
     .account-details-title {
       height: 2.2em;
       background: #809CAF;
+
+      /*DIV WRAPPER HUMAN AVATAR*/
+      .img-human {
+        display: inline-block;
+        width: 15.3%;
+
+        /*IMG TAG*/
+        .icon-human-pic {
+          display: block;
+          max-width: 100%;
+          height: auto;
+          position: absolute;
+          left: 9px;
+          top: 5px;
+        }
+      }
+      /*TITLE TEXT */
+      .title {
+        display: inline-block;
+        color: white;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        line-height: 31px;
+        font-size: 1em;
+      }
+    }
+    /*PARAGRAPHS WITH THE INFO TITLE*/
+    .info-tab {
+      margin: 0 0 2.2px;
+      font-size: 0.9em;
+      position: relative;
+      top: 7px;
+      left: 11px;
+
+      /*SPAN INFO RESULTS*/
+      .info-result {
+        letter-spacing: 0.2px;
+      }
     }
   }
 
