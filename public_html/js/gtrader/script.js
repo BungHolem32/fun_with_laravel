@@ -186,4 +186,8 @@ $(document).ready(function () {
     tradersTable();
 });
 
+$('body').on('click','#btn_1_fe858d0f077104def637c2e97de7f84b',function (e) {
+    e.preventDefault();
+});
+
 

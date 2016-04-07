@@ -6,8 +6,6 @@
     {!! $page->appendAsset(url('/js/gtrader/jquery4a804a80.js')) !!}
     {!! $page->appendAsset(url('/js/gtrader/jquery-migrate.min15761576.js')) !!}
     {!! $page->appendAsset(url('/js/gtrader/op-jquery-base-all.min38943894.js')) !!}
-    {!! $page->appendAsset(url('/js/gtrader/flowplayer.min38943894.js')) !!}
-    {!! $page->appendAsset(url('/js/gtrader/op-video-all.min38943894.js')) !!}
     {!! $page->appendAsset(url('/css/gtrader/prettyPhoto.min38943894.css')) !!}
     {!! $page->appendAsset(url('/css/gtrader/style.css')) !!}
 @append
@@ -66,74 +64,26 @@
                                 <div class="video-plugin-new"
                                      style="max-width:100%; width:853px; height:auto; padding-top:0; padding-bottom:0; margin:0 auto;margin:0 auto; border: 0px solid #fff;margin-bottom: 25px;">
                                     <div style="width:853px;height:0;  padding-bottom: 56.271981242673%; padding-top:0;">
-                                        <embed width='850' height='480' id="my-video" style="" frameborder="0"
-                                               allowscriptaccess="always" quality="high" bgcolor="#000000"
-                                               name="my-video" style=""
-                                               src="http://www.youtube.com/v/xIS9eP7veWM?enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer&amp;rel=0&amp;showinfo=0&amp;autoplay=1&amp;controls=0"
-                                               type="application/x-shockwave-flash"/>
-                                        {{--@include('funnels.layouts._partials._video',  ['w'=>'100%', 'h'=>'100%'])--}}
+                                        <div id="my-video">
+{{--                                            @include('funnels.layouts._partials._video')--}}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="element-container cf" data-style="" id="le_body_row_2_col_1_el_4">
                             <div class="element">
-                                <div class="op-popup cf" data-width="700" data-open-effect="fade"
-                                     data-close-effect="fade" data-open-speed="normal" data-close-speed="normal"
-                                     data-border-color="#fff" data-border-size="16" data-padding-top="20"
-                                     data-padding-bottom="20" data-padding-left="30" data-padding-right="30"
-                                     data-exit-intent="N" data-trigger-time="0" data-trigger-dontshow="0"
-                                     data-dont-show-on-tablet="N" data-dont-show-on-mobile="N"
-                                     data-popup-id="op_popup_id_1428489946906">
-                                    <div class="op-popup-button ">
+                                <div class="my-button">
+                                    <div style="text-align:center">
+                                        {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post']) !!}
+                                        <input type="hidden" name="pageId" value="{{ $page->id }}">
                                         <div style="text-align:center">
-                                            {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post']) !!}
-                                            <input type="hidden" name="pageId" value="{{ $page->id }}">
-                                            <div style="text-align:center">
-                                                <button type="submit" id="btn_1_36c6e6f7a86f20ea6c6e9329153525d6" class="css-button style-1 location_optin_box_style_24">
-                                                    <a href="#" id="btn_1_fe858d0f077104def637c2e97de7f84b" class="css-button style-1"><span class="text">INSTANT ACCESS</span><span class="hover"></span><span class="active"></span></a>
-                                                    <span class="text">INSTANT ACCESS!</span>
-                                                    <span class="hover"></span>
-                                                    <span class="active"></span>
-                                                </button>
-                                            </div>
-                                            {!! Form::close() !!}
-
+                                            @if($page->switches->showEmailField)
+                                                {{--<button id="btn_1_fe858d0f077104def637c2e97de7f84b" class="css-button style-1" type="submit"><span class="text">INSTANT ACCESS</span><span class="hover"></span><span class="active"></span></button>--}}
+                                                <button id="btn_1_fe858d0f077104def637c2e97de7f84b" class="css-button style-1" type="submit"><span class="text">INSTANT ACCESS</span><span class="hover"></span><span class="active"></span></button>
+                                            @endif
                                         </div>
-                                    </div>
-                                    <div class="op-popup-content">
-                                        <div class="element-container op-popup-element-container ">
-
-                                            <div class="progressbar-style-1"
-                                                 id="progressbar-3f874d356700da655eda80d9e5e59a73">
-                                                <span>50% Complete</span>
-                                            </div>
-                                            <script type="text/javascript">
-                                                (function ($) {
-                                                    $(function () {
-                                                        $("#progressbar-3f874d356700da655eda80d9e5e59a73").progressbar({value: 1});
-                                                        $("#progressbar-3f874d356700da655eda80d9e5e59a73 > .ui-progressbar-value").animate({width: "50%"}, 500);
-                                                    });
-                                                }(opjq));
-                                            </script>
-                                        </div>
-                                        <div class="element-container op-popup-element-container ">
-                                            <div class="op-text-block"
-                                                 style="width:100%;margin: 0 auto;text-align:center;padding-top:5px;padding-bottom:5px;">
-                                                <p style='font-size:14px;color:#b3b3b3;'>Almost there: Please enter your
-                                                    valid email and click the button below to gain access</p>
-                                            </div>
-                                        </div>
-                                        <div class="element-container op-popup-element-container ">
-                                            <div style="height:35px"></div>
-                                        </div>
-                                        <div class="element-container op-popup-element-container "><h2
-                                                    style='text-align:center;'>Get Instant Access To The<br/>
-                                                <span style="text-decoration: underline; color: #f25565;"><strong>GoogleTrader</strong></span>
-                                                Software</h2></div>
-                                        <div class="element-container op-popup-element-container "><h2 style='font-size:20px;font-weight:bold;text-align:center;'><span style="background: yellow;">AND MAKE $1,800 to $4,300 PER DAY GUARANTEED!</span>
-                                        </h2>
-                                        </div>
+                                        {!! Form::close() !!}
                                     </div>
                                 </div>
                             </div>
@@ -545,168 +495,13 @@
                         </div>
                         <div class="element-container cf" data-style="" id="le_body_row_9_col_1_el_3">
                             <div class="element">
-                                <div class="op-popup cf" data-width="700" data-open-effect="fade"
-                                     data-close-effect="fade" data-open-speed="normal" data-close-speed="normal"
-                                     data-border-color="#fff" data-border-size="16" data-padding-top="20"
-                                     data-padding-bottom="20" data-padding-left="30" data-padding-right="30"
-                                     data-exit-intent="N" data-trigger-time="0" data-trigger-dontshow="0"
-                                     data-dont-show-on-tablet="N" data-dont-show-on-mobile="N"
-                                     data-popup-id="op_popup_id_1428489946906">
-                                    <div class="op-popup-button ">
-                                        <div style="text-align:center">
-                                            <style type="text/css">#btn_1_fe858d0f077104def637c2e97de7f84b .text {
-                                                    font-size: 32px;
-                                                    color: #ffffff;
-                                                    font-weight: bold;
-                                                }
-
-                                                #btn_1_fe858d0f077104def637c2e97de7f84b {
-                                                    width: 100%;
-                                                    padding: 25px 0;
-                                                    border-color: #000000;
-                                                    border-width: 0px;
-                                                    -moz-border-radius: 0px;
-                                                    -webkit-border-radius: 0px;
-                                                    border-radius: 0px;
-                                                    background: #f6a828;
-                                                    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6a828), color-stop(100%, #f69028));
-                                                    background: -webkit-linear-gradient(top, #f6a828 0%, #f69028 100%);
-                                                    background: -moz-linear-gradient(top, #f6a828 0%, #f69028 100%);
-                                                    background: -ms-linear-gradient(top, #f6a828 0%, #f69028 100%);
-                                                    background: -o-linear-gradient(top, #f6a828 0%, #f69028 100%);
-                                                    background: linear-gradient(to bottom, #f6a828 0%, #f69028 100%);
-                                                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f6a828, endColorstr=#f69028, GradientType=0);
-                                                    box-shadow: 0px 6px 0px 0px rgba(240, 111, 0, 1);
-                                                }
-
-                                                #btn_1_fe858d0f077104def637c2e97de7f84b .gradient {
-                                                    -moz-border-radius: 0px;
-                                                    -webkit-border-radius: 0px;
-                                                    border-radius: 0px;
-                                                }
-
-                                                #btn_1_fe858d0f077104def637c2e97de7f84b .shine {
-                                                    -moz-border-radius: 0px;
-                                                    -webkit-border-radius: 0px;
-                                                    border-radius: 0px;
-                                                }
-
-                                                #btn_1_fe858d0f077104def637c2e97de7f84b .active {
-                                                    -moz-border-radius: 0px;
-                                                    -webkit-border-radius: 0px;
-                                                    border-radius: 0px;
-                                                }
-
-                                                #btn_1_fe858d0f077104def637c2e97de7f84b .hover {
-                                                    -moz-border-radius: 0px;
-                                                    -webkit-border-radius: 0px;
-                                                    border-radius: 0px;
-                                                }</style>
-                                            <a href="#" id="btn_1_fe858d0f077104def637c2e97de7f84b"
-                                               class="css-button style-1"><span class="text">INSTANT ACCESS</span><span
-                                                        class="hover"></span><span class="active"></span></a></div>
-                                    </div>
-                                    <div class="op-popup-content">
-                                        <div class="element-container op-popup-element-container ">
-                                            <div class="progressbar-style-1"
-                                                 id="progressbar-969c4f8202edd3b39bf16410128d4f65">
-                                                <span>50% Complete</span>
-                                            </div>
-                                            <script type="text/javascript">
-                                                (function ($) {
-                                                    $(function () {
-                                                        $("#progressbar-969c4f8202edd3b39bf16410128d4f65").progressbar({value: 1});
-                                                        $("#progressbar-969c4f8202edd3b39bf16410128d4f65 > .ui-progressbar-value").animate({width: "50%"}, 500);
-                                                    });
-                                                }(opjq));
-                                            </script>
-                                        </div>
-                                        <div class="element-container op-popup-element-container ">
-                                            <div class="op-text-block"
-                                                 style="width:100%;margin: 0 auto;text-align:center;padding-top:5px;padding-bottom:5px;">
-                                                <p style='font-size:14px;color:#b3b3b3;'>Almost there: Please enter your
-                                                    valid email and click the button below to gain access</p>
-                                            </div>
-                                        </div>
-                                        <div class="element-container op-popup-element-container ">
-                                            <div style="height:35px"></div>
-                                        </div>
-                                        <div class="element-container op-popup-element-container "><h2
-                                                    style='text-align:center;'>Get Instant Access To The<br/>
-                                                <span style="text-decoration: underline; color: #f25565;"><strong>GoogleTrader</strong></span>
-                                                Software</h2></div>
-                                        <div class="element-container op-popup-element-container "><h2
-                                                    style='font-size:20px;font-weight:bold;text-align:center;'><span
-                                                        style="background: yellow;">AND MAKE $1,800 to $4,300 PER DAY GUARANTEED!</span>
-                                            </h2></div>
-                                        <div class="element-container op-popup-element-container ">
-                                            <div id="55be87052b5fe" class="optin-box optin-box-24"
-                                                 style="margin-right: auto;margin-left: auto;">
-                                                <form method="post" accept­charset="UTF­8"
-                                                      action="https://www.aweber.com/scripts/addlead.pl">
-                                                    <input type="text" required="required" name="name"
-                                                           placeholder="Enter your first name" value=""/>
-                                                    <input type="email" required="required" name="email"
-                                                           placeholder="Enter your email address" value=""/>
-                                                    <div style="text-align:center">
-                                                        <style type="text/css">#btn_1_36c6e6f7a86f20ea6c6e9329153525d6 .text {
-                                                                font-size: 25px;
-                                                                color: #ffffff;
-                                                                font-weight: bold;
-                                                            }
-
-                                                            #btn_1_36c6e6f7a86f20ea6c6e9329153525d6 {
-                                                                padding: 25px 60px;
-                                                                border-color: #000000;
-                                                                border-width: 0px;
-                                                                -moz-border-radius: 0px;
-                                                                -webkit-border-radius: 0px;
-                                                                border-radius: 0px;
-                                                                background: #f6a828;
-                                                                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6a828), color-stop(100%, #f69028));
-                                                                background: -webkit-linear-gradient(top, #f6a828 0%, #f69028 100%);
-                                                                background: -moz-linear-gradient(top, #f6a828 0%, #f69028 100%);
-                                                                background: -ms-linear-gradient(top, #f6a828 0%, #f69028 100%);
-                                                                background: -o-linear-gradient(top, #f6a828 0%, #f69028 100%);
-                                                                background: linear-gradient(to bottom, #f6a828 0%, #f69028 100%);
-                                                                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f6a828, endColorstr=#f69028, GradientType=0);
-                                                                box-shadow: 0px 4px 0px 0px rgba(240, 111, 0, 1);
-                                                            }
-
-                                                            #btn_1_36c6e6f7a86f20ea6c6e9329153525d6 .gradient {
-                                                                -moz-border-radius: 0px;
-                                                                -webkit-border-radius: 0px;
-                                                                border-radius: 0px;
-                                                            }
-
-                                                            #btn_1_36c6e6f7a86f20ea6c6e9329153525d6 .shine {
-                                                                -moz-border-radius: 0px;
-                                                                -webkit-border-radius: 0px;
-                                                                border-radius: 0px;
-                                                            }
-
-                                                            #btn_1_36c6e6f7a86f20ea6c6e9329153525d6 .active {
-                                                                -moz-border-radius: 0px;
-                                                                -webkit-border-radius: 0px;
-                                                                border-radius: 0px;
-                                                            }
-
-                                                            #btn_1_36c6e6f7a86f20ea6c6e9329153525d6 .hover {
-                                                                -moz-border-radius: 0px;
-                                                                -webkit-border-radius: 0px;
-                                                                border-radius: 0px;
-                                                            }</style>
-                                                        <button type="submit"
-                                                                id="btn_1_36c6e6f7a86f20ea6c6e9329153525d6"
-                                                                class="css-button style-1 location_optin_box_style_24">
-                                                            <span class="text">INSTANT ACCESS!</span>
-                                                            <span class="hover"></span>
-                                                            <span class="active"></span>
-                                                        </button>
-                                                    </div>
-                                                </form>
-                                                <p class="privacy">We respect your privacy and your information is 100% secure</p></div>
-                                        </div>
+                                <div class="cf">
+                                    <div class="my-button">
+                                        <a id="btn_1_fe858d0f077104def637c2e97de7f84b" class="css-button style-1">
+                                            <span class="text">INSTANT ACCESS</span>
+                                            <span class="hover"></span>
+                                            <span class="active"></span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
