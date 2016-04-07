@@ -3,6 +3,23 @@
     <link rel="stylesheet" href="/css/aussie/panel/style.css" />
     <link rel="stylesheet" href="/css/aussie/panel/custom.css" />
     <link rel="stylesheet" href="/css/aussie-new/panel/style-new.css" />
+    <style>
+        .panel-bg-image{
+            background-image: url('{{$page->panel_background}}');
+        }
+        .panel-main-bg-color{
+            background-color: {{$page->mainBgColor}} !important;
+        }
+        .panel-sec-bg-color{
+            background-color: {{$page->secBgColor}} !important;
+        }
+        .side-menu li{
+            background-color: {{$page->mainBgColor}} !important;
+        }
+        .table thead>tr>th, table.table thead .sorting, table.table thead .sorting_asc, table.table thead .sorting_desc {
+            background-color: {{$page->mainBgColor}} !important;
+        }
+    </style>
 @append
 
 @section('bottom-scripts')
@@ -15,12 +32,13 @@
 @append
 
 @section('page-layout')
-
     {{-- TOP BANNER --}}
     <div id="top-panel-cover">
         <div id="top-panel" class="row">
-
-            <div id="account-details" class="">
+            @if(isMongoNotEmpty($page->panel_logo))
+                <img src="{{ $page->panel_logo }}" alt="method_logo" id="logo">
+            @endif
+            <div id="account-details" class="panel-main-bg-color">
                 <div class="inside">
                     <h4 style="font-size: 15px; font-weight: bold;margin-top: 4px;margin-bottom: 3px;" id="toggleProfileDetailsLink" class="capitalize">
                         @ln(account details)
@@ -35,9 +53,6 @@
                 </div>
             </div>
 
-            <div id="aussiemethod_logo_img" class="logo-pic-pannel"  style="margin: 0 auto;">
-                <img src="{{ $page->panel_logo }}" alt="method_logo" id="logo">
-            </div>
         </div>
     </div>
 
@@ -63,7 +78,7 @@
                     <li class="col-xm-12 col-md-2 col-lg-2 ">
                         <?php $c = \Session::get('spotCustomer'); ?>
                         <a target="_blank" href="{{ $c->getAutologinLink() }}" id="manualTrading" class="capitalize">
-                            <i class="fa fa-wrench fa- "></i>@ln(broker trading area)
+                            <i class="fa fa-wrench"></i> @ln(broker trading area)
                         </a>
                     </li>
 
@@ -103,7 +118,7 @@
     </div>
 
     {{-- WRAPPER --}}
-    <div id="wrapper">
+    <div id="wrapper" class="panel-bg-image">
         <div class="all-wrapper"> <!-- /#bootstrap wrapper -->
             <!-- /#start of side-nav-bar -->
             <div class="row">
@@ -124,7 +139,7 @@
                                 </p>
                                 <div style="display: none;">
                                     <p class="alert alert-danger note" data-toggle="modal" data-target="#formDepositModal" data-backdrop="false">
-                                        Attention: Your {{ $page->title_h1 }} Method account is activated but your {{ $page->title_h1 }}
+                                        Attention: Your {{ $page->title_h1 }} account is activated but your {{ $page->title_h1 }}
                                         balance is running low, CLICK HERE to deposit.
                                     </p>
                                 </div>
@@ -198,7 +213,7 @@
                                     <div class="row">
 
                                         <div class="text-center">
-                                            <div class="subsectionheader capitalize" id="runningPositionsHeader">@ln({{ $page->title_h1 }} Method Open Trades) <i class="getLoading fa fa-refresh fa-spin"></i></div>
+                                            <div class="subsectionheader panel-sec-bg-color capitalize" id="runningPositionsHeader">@ln(open trades) <i class="getLoading fa fa-refresh fa-spin"></i></div>
 
                                             <table id="runningPositionsTable" class="table table-striped table-bordered shadowed table-hover">
                                                 <thead>
@@ -219,7 +234,7 @@
                                             </table>{{--<p class="alert alert-warning table_warn_msg">There are no open positions</p>--}}
                                         </div>
                                         <div class="table-margin text-center">
-                                            <div id="positionsHistoryTableTitle" class="subsectionheader capitalize">@ln({{ $page->title_h1 }} method trades history) <i class="getLoading fa fa-refresh fa-spin"></i></div>
+                                            <div id="positionsHistoryTableTitle" class="subsectionheader panel-sec-bg-color capitalize">@ln(trades history) <i class="getLoading fa fa-refresh fa-spin"></i></div>
                                             <div id="positionsHistoryTable_wrapper" class="dataTables_wrapper form-inline " role="grid"><div class="dt-top-row"></div><div class="dt-wrapper"><table id="positionsHistoryTable" class="table table-striped table-bordered shadowed table-hover dataTable" aria-describedby="positionsHistoryTable_info">
                                                         <thead>
                                                         <tr class="white" role="row"><th class="sorting" role="columnheader" tabindex="0" aria-controls="positionsHistoryTable" rowspan="1" colspan="1" aria-label="Asset: activate to sort column ascending" style="width: 117px;">Asset</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="positionsHistoryTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 160px;">Position</th><th class="sorting_disabled" role="columnheader" rowspan="1" colspan="1" aria-label="Amount" style="width: 153px;">Amount</th><th class="hidden-mobile sorting_disabled" role="columnheader" rowspan="1" colspan="1" aria-label="Entry Rate" style="width: 195px;">Entry Rate</th><th class="hidden-mobile sorting_disabled" role="columnheader" rowspan="1" colspan="1" aria-label="Closing Rate" style="width: 236px;">Closing Rate</th><th class="sorting_disabled" role="columnheader" rowspan="1" colspan="1" aria-label="Payout" style="width: 139px;">Payout</th><th class="hidden-mobile sorting_disabled" role="columnheader" rowspan="1" colspan="1" aria-label="Profit" style="width: 113px;">Profit</th><th class="sorting_desc" role="columnheader" tabindex="0" aria-controls="positionsHistoryTable" rowspan="1" colspan="1" aria-sort="descending" aria-label="Date: activate to sort column ascending" style="width: 98px;">Date</th><th class="hidden-mobile sorting" role="columnheader" tabindex="0" aria-controls="positionsHistoryTable" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 131px;">Status</th></tr>
