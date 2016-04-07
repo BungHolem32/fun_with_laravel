@@ -148,13 +148,4 @@
             </div>
         </div>
     </div>
-    <div id="footer_nav">
-        <ul class="footer_nav">
-            <li><a class="outyes" href="#">Haftungsausschluss</a></li>
-            <li><a class="outyes" href="#">Allgemeine Geschäftsbedingungen</a></li>
-            <li><a class="outyes" href="#">Datenschutzbestimmungen</a></li>
-            <li><a class="outyes" href="#">Partnerprogramm</a></li>
-            <li><a class="outyes" href="#">Support</a></li>
-        </ul>
-    </div>
 @endsection

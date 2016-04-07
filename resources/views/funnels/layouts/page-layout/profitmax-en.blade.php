@@ -35,7 +35,7 @@
                     <div class="popup_form" id="popform">
                         <div class="form-group">
                             <label for="" class="control-label"></label>
-                            <input type="text" name="email" placeholder="Geben Sie Ihre Email-Adresse ein" id="email-pop" class="form-control" value=""/>
+                            <input type="text" name="email" placeholder="Enter Your Email" id="email-pop" class="form-control" value=""/>
                         </div>
                         <div class="buttons">
                             <button type="submit" class="button" id="exitsubmit">get instant access now</button>
@@ -123,7 +123,7 @@
                         <input type="hidden" name="pageId" value="{{ $page->id }}">
                             <div class="form-group">
                                 @if($page->switches->showEmailField)
-                                    <input type="text" name="email" id="email" class="form-control" value="" placeholder="Geben Sie Ihre Email-Adresse ein"/>
+                                    <input type="text" name="email" id="email" class="form-control" value="" placeholder="Enter Your Email"/>
                                 @endif
                             </div>
                             <div class="buttons">
@@ -149,14 +149,5 @@
                 <p>It is against the law to solicit U.S. persons to buy and sell commodity options, even if they are called \prediction' contracts, unless they are listed for trading and traded on a CFTC-registered exchange or unless legally exempt.</p>
             </div>
         </div>
-    </div>
-    <div id="footer_nav">
-        <ul class="footer_nav">
-            <li><a class="outyes" href="#">DISCLAIMER</a></li>
-            <li><a class="outyes" href="#">TERMS</a></li>
-            <li><a class="outyes" href="#">PRIVACY</a></li>
-            <li><a class="outyes" href="#">AFFILIATE</a></li>
-            <li><a class="outyes" href="#">Support</a></li>
-        </ul>
     </div>
 @endsection

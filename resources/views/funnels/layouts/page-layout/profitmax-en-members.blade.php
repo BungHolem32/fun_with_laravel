@@ -253,13 +253,4 @@
             </div>
         </div>
     </div>
-    <div id="footer_nav">
-        <ul class="footer_nav">
-            <li><a href="">Disclaimer</a></li>
-            <li><a href="">Terms</a></li>
-            <li><a href="">Privacy</a></li>
-            <li><a href="">Affiliate</a></li>
-            <li><a href="">Support</a></li>
-        </ul>
-    </div>
 @endsection

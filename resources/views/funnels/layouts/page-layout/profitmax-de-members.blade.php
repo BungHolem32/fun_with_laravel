@@ -258,13 +258,4 @@
             </div>
         </div>
     </div>
-    <div id="footer_nav">
-        <ul class="footer_nav">
-            <li><a href="">Haftungsausschluss</a></li>
-            <li><a href="">Allgemeine Geschäftsbedingungen</a></li>
-            <li><a href="">Datenschutzbestimmungen</a></li>
-            <li><a href="">Partnerprogramm</a></li>
-            <li><a href="">Support</a></li>
-        </ul>
-    </div>
 @endsection
