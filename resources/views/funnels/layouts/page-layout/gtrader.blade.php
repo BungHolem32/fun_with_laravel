@@ -186,30 +186,12 @@
                             </div>
                         </div>
                         <div class="element-container cf" data-style="" id="le_body_row_4_col_1_el_6">
-                            <div class="element"><h2
-                                        style='font-size:110px;font-family:"Lato", sans-serif !important;font-style:normal;font-weight:normal;color:#a3d468;text-align:center;'>
-                                    LIVE TRADES</h2></div>
-                        </div>
-                        <div class="element-container cf" data-style="" id="le_body_row_4_col_1_el_7">
-                            <div class="element"><h2
-                                        style='font-size:20px;font-family:"Lato", sans-serif !important;font-style:normal;font-weight:300;color:#3b3b3b;text-align:center;'>
-                                    Watch some of the LIVE Trades of Our Members!</h2></div>
+                            <div class="element"><h2 style='font-size:110px;font-family:"Lato", sans-serif !important;font-style:normal;font-weight:normal;color:#a3d468;text-align:center;'>LIVE TRADES</h2></div>
                         </div>
                         <div class="element-container cf" data-style="" id="le_body_row_4_col_1_el_8">
                             <div class="element">
                                 <div class="op-custom-html-block">
-                                    <div id="live-trades">
-
-
-
-
-
-
-
-
-
-
-                                    </div>
+                                    <div id="live-trades"></div>
                                 </div>
                             </div>
                         </div>
