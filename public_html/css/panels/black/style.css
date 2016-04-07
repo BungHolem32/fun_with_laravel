@@ -6664,6 +6664,7 @@ button.close {
   opacity: 0.5;
   /*ACCOUNT DETAILS*/
   /*TOP NAVBAR*/
+  /*INCENTIVE GUIDE FOR NEW CUSTOMERS */
 }
 .content-wrapper .account-details {
   width: 205.7px;
@@ -6745,6 +6746,35 @@ button.close {
   color: inherit;
   font-weight: bold;
   letter-spacing: 0.1px;
+  margin: 0;
+}
+.content-wrapper .activate-method-system {
+  margin-top: 7.5em;
+  box-sizing: initial;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2.2px;
+  background-color: #01395E;
+  /*METHOD TITLE WRAPPER*/
+}
+.content-wrapper .activate-method-system .active-method-title {
+  /*H3 */
+}
+.content-wrapper .activate-method-system .active-method-title .method-title {
+  font-size: 1.42em;
+  letter-spacing: 0.1em;
+  padding: 0;
+  margin: 0.5em 0 0 1.3em;
+}
+.content-wrapper .activate-method-system .active-method-subtitle .active-method-text {
+  font-size: 1.2em;
+  position: relative;
+  line-height: 31.9px;
+  margin: 0px auto 0 -0.7em;
+  letter-spacing: 0.4px;
+  font-style: italic;
+  color: #FFDE00;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */

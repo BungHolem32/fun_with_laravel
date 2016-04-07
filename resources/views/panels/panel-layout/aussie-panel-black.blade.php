@@ -9,10 +9,10 @@
 
 @section('page-layout')
 
-    <div class="content-wrapper">
+    <div class="content-wrapper container-fluid">
 
         {{--Account Details--}}
-        <aside class="account-details">
+        <aside class="account-details visible-md-block visible-lg-block">
 
             {{--title Part--}}
             <header class="account-details-title">
@@ -54,21 +54,51 @@
             </div>
         </aside>
 
+        {{--TOP NAVBAR--}}
         <nav class="top-navbar navbar navbar-default">
             <div class="container">
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="text-uppercase navbar-part"><a href="#" class="navbar-text">view welcome message</a></li>
-                        <li class="text-uppercase navbar-part"><a href="#" class="navbar-text">guided tour</a></li>
-                        <li class="text-uppercase navbar-part"><a href="#" class="navbar-text" >home page</a></li>
-                        <li class="text-uppercase navbar-part"><a href="#" class="navbar-text">broker trading area</a></li>
-                        <li class="text-uppercase navbar-part"><a href="#" class="navbar-text">contact us</a></li>
-                        <li class="text-uppercase navbar-part"><a href="#" class="navbar-text">log out</a></li>
+                        <li class="text-uppercase  navbar-part"><a href="#" class="navbar-text">view welcome message</a>
+                        </li>
+                        <li class="text-uppercase  navbar-part"><a href="#" class="navbar-text">guided tour</a></li>
+                        <li class="text-uppercase  navbar-part"><a href="#" class="navbar-text">home page</a></li>
+                        <li class="text-uppercase  navbar-part"><a href="#" class="navbar-text">broker trading area</a>
+                        </li>
+                        <li class="text-uppercase  navbar-part"><a href="#" class="navbar-text">contact us</a></li>
+                        <li class="text-uppercase  navbar-part"><a href="#" class="navbar-text">log out</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
+        {{--ACTIVE METHOD SYSTEM--}}
+        <section class="activate-method-system container">
+            <div class="row">
+
+                {{--TITLE--}}
+                <header class="active-method-title col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h3 class="text-uppercase method-title">to activate method system, your rboptions broker account
+                        will need your
+                        deposit</h3>
+                </header>
+
+                {{--SUBTITLE--}}
+                <div class="active-method-subtitle  col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h4 class="text-capitalize method-subtitle text-center">
+                        <i></i>
+                        <span class="active-method-text ">start eraning money in 3 easy steps</span>
+                        <i></i>
+                    </h4>
+                </div>
+
+            </div>
+
+        </section>
+        {{--ARROW AT THE BOTTOM--}}
+        <div class="arrow col-md-3">
+            <img src="" alt="arrow pic">
+        </div>
 
     </div>
 @endsection
