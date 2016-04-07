@@ -12380,7 +12380,7 @@ body #wrapper.second-page section#top_strip {
   height: 110px;
   position: absolute;
   margin: 0;
-  top: -5px;
+  top: -15px;
   left: 0;
   right: 0;
 }
@@ -12391,7 +12391,7 @@ body #wrapper.second-page section#top_strip {
 }
 @media (max-width: 768px) {
   body #wrapper.second-page section#top_strip {
-    height: 24vw;
+    height:15vw;
   }
 }
 @media (max-width: 480px) {
@@ -12450,8 +12450,8 @@ body #wrapper.second-page main section#video_n_form #form_part #form #submit {
   body #wrapper.second-page main section#video_n_form #form_part #form #submit {
     background: url('/img/aussie-new/sw/buttonfree-second.png') no-repeat center;
     max-width: 100%;
-    margin: 1em auto;
-    height: 221px !important;
+    margin: 1em auto 0;
+    height: 120px !important;
     background-size: contain;
   }
 }
