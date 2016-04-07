@@ -136,7 +136,7 @@
                                     </p>
                                     <div style="display: none;">
                                         <p class="alert alert-danger note" data-toggle="modal" data-target="#formDepositModal" data-backdrop="false">
-                                            Attention: Your {{ $page->title_h1 }} Method account is activated but your {{ $page->title_h1 }}
+                                            Attention: Your {{ $page->title_h1 }} account is activated but your {{ $page->title_h1 }}
                                             balance is running low, CLICK HERE to deposit.
                                         </p>
                                     </div>

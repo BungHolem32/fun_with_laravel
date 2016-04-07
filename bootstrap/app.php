@@ -41,6 +41,17 @@ if(!function_exists('mb_strlen')){
     function mb_strlen($str){return strlen($str);}
 }
 
+if(!function_exists('isMongoNotEmpty')){
+	function isMongoNotEmpty($mixed){
+		if(is_object($mixed) && get_class($mixed) == 'App\mongo' && !empty($mixed->get()))
+			return true;
+		elseif(is_string($mixed) && !empty($mixed))
+			return true;
+
+		return false;
+	}
+}
+
 $app = new Illuminate\Foundation\Application(
 	realpath(__DIR__.'/../')
 );
