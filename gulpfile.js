@@ -15,7 +15,7 @@ elixir.config.sourcemaps = true;
 
 elixir(function(mix) {
 
-    mix.less(['panels/black/aussie-black.less'], 'public_html/css/panels/black/style-0.css');
+    mix.less(['panels/black/aussie-black.less'], 'public_html/css/panels/black/style.css');
     /*mix.less(['admin.less'], 'public_html/adminpanel/css/admin.css') */
     /*mix.less(['load-ltr.less'], 'public_html/css/bootstrap/rboptions-org-0.css')
         .less(['load-rtl.less'], 'public_html/css/bootstrap/rboptions-org-1.css');*/
