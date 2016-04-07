@@ -74,6 +74,7 @@
 
         {{--ACTIVE METHOD SYSTEM--}}
         <section class="activate-method-system container">
+
             <div class="row">
 
                 {{--TITLE--}}
@@ -86,19 +87,19 @@
                 {{--SUBTITLE--}}
                 <div class="active-method-subtitle  col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h4 class="text-capitalize method-subtitle text-center">
-                        <i></i>
-                        <span class="active-method-text ">start eraning money in 3 easy steps</span>
-                        <i></i>
+                         <i class="fa fa-arrow-down"></i>
+                         <span class="active-method-text ">start eraning money in 3 easy steps</span>
+                        <i class="fa fa-arrow-down"></i>
                     </h4>
                 </div>
-
             </div>
-
         </section>
-        {{--ARROW AT THE BOTTOM--}}
-        <div class="arrow col-md-3">
-            <img src="" alt="arrow pic">
-        </div>
 
+        {{--ARROW AT THE BOTTOM OF THE TOP BAR--}}
+        <section class="arrow-img-wrapper container">
+            <div class="row">
+                <img src="/img/panel/black/cont-arrow.png" alt="arrow picture" class=" arrow-img col-lg-offset-1 col-md-offset-1">
+            </div>
+        </section>
     </div>
 @endsection

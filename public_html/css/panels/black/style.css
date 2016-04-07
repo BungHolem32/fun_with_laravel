@@ -6756,6 +6756,7 @@ button.close {
   letter-spacing: 2.2px;
   background-color: #01395E;
   /*METHOD TITLE WRAPPER*/
+  /*SUBTITLE WRAPPER*/
 }
 .content-wrapper .activate-method-system .active-method-title {
   /*H3 */
@@ -6766,7 +6767,18 @@ button.close {
   padding: 0;
   margin: 0.5em 0 0 1.3em;
 }
-.content-wrapper .activate-method-system .active-method-subtitle .active-method-text {
+.content-wrapper .activate-method-system .active-method-subtitle {
+  /*H4 TAG */
+}
+.content-wrapper .activate-method-system .active-method-subtitle .method-subtitle {
+  /*ARROW ICON (<I> TAG) AT THE START AND THE END */
+  /*SPAN TAG - TEXT WITHIN THE SUBTITLE */
+}
+.content-wrapper .activate-method-system .active-method-subtitle .method-subtitle .fa-arrow-down {
+  color: #EFDE00;
+  padding: 0 10px 0 0;
+}
+.content-wrapper .activate-method-system .active-method-subtitle .method-subtitle .active-method-text {
   font-size: 1.2em;
   position: relative;
   line-height: 31.9px;
@@ -6775,6 +6787,9 @@ button.close {
   font-style: italic;
   color: #FFDE00;
   font-weight: bold;
+}
+.content-wrapper .activate-method-system .arrow-img-wrapper .arrow-img {
+  margin-left: 10.7%;
 }
 
 /*# sourceMappingURL=style.css.map */
