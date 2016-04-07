@@ -12,21 +12,21 @@
     <div class="content-wrapper">
 
         {{--Account Details--}}
-        <aside class="account-details container">
+        <aside class="account-details">
 
-            <div class="row">
                 {{--title Part--}}
                 <header class="account-details-title">
+
                     {{--human avatar--}}
-                    <div class="img-human col-lg-1">
-                        <img src="" alt="img-responsive" class="img-responsive block-center">
+                    <div class="img-human">
+                        <img src="/img/panel/black/icon-human.png" alt="img-responsive" class="img-responsive block-center">
                     </div>
+
                     {{--title place--}}
-                    <div class="title text-uppercase col-lg-11">
+                    <div class="title text-uppercase">
                         account details
                     </div>
                 </header>
-            </div>
         </aside>
     </div>
 @endsection
