@@ -372,6 +372,25 @@
                     </div>
                 </section>
 
+<<<<<<< HEAD
+=======
+                <!--Video How_it_work PIC-->
+                <section id="video-how-method-works" class="container">
+                    <div class="row">
+                        <header class="col-md-12 col-sm-12 col-xs-12">
+                            <h2 class="title-question">How The Maple Method Works</h2>
+                        </header>
+
+                        <div class="video-n-images col-md-12">
+                            <img src="/img/aussie-new/ca/ipad.png" alt="ipad image" class="img-responsive center-block">
+                            <div class="video-tag">
+                                @include('funnels.layouts._partials._video', ['video_url'=>'http://video.chaki.netdna-cdn.com/guide4f.mp4','w'=>'100%', 'h'=>'100%','autoplay'=>'false'])
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+>>>>>>> 525228d115f29169bc5e538c9ca0c9f8c76397a9
                 {{--LIVE THIRD PARTY TRADE--}}
                 <section id="live-third-party" class="container">
                     <div class="row">
