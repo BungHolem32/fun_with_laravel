@@ -9,37 +9,15 @@
 @append
 
 @section('page-layout')
+    <div class="container-fluid content-wrapper">
+        <aside class="container account-de-">
 
+        </aside>
 
-    {{--PANEL TOP STATIC ACOUNT DETAILS--}}
-    <section class="container">
-        <div class="ac-details pull-right">
-            <div class="title">
-                <img src="/img/panel/black/icon-human.png" alt="" /> ACCOUNT DETAILS
-            </div>
-            <div class="inside">
-                <label>Email</label><span>youremail@gmail.com</span>
-                <label>Broker</label><span><img src="/img/panel/black/icon-rboptions.png" alt="" />RBoptions</span>
-                <label>Balance</label><span>$1532.63</span>
-                <label>Account ID</label><span>432563</span>
-            </div>
-        </div>
-    </section>
+        <header>
 
-    {{--NAV BAR --}}
-    <header class="navbar-panel">
-        <nav class="collapse navbar-collapse">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </nav>
-    </header>
+        </header>
 
-
+    </div>
 
 @endsection
