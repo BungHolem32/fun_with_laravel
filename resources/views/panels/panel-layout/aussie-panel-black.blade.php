@@ -54,19 +54,21 @@
             </div>
         </aside>
 
-        <nav class="navbar navbar-default">
+        <nav class="top-navbar navbar navbar-default">
             <div class="container">
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="text-uppercase navbar-part"><a href="#">view welcome message</a></li>
-                        <li class="text-uppercase navbar-part"><a href="#">guided tour</a></li>
-                        <li class="text-uppercase navbar-part"><a href="#">home page</a></li>
-                        <li class="text-uppercase navbar-part"><a href="#">broker trading area</a></li>
-                        <li class="text-uppercase navbar-part"><a href="#">contact us</a></li>
-                        <li class="text-uppercase navbar-part"><a href="#">log out</a></li>
+                        <li class="text-uppercase navbar-part"><a href="#" class="navbar-text">view welcome message</a></li>
+                        <li class="text-uppercase navbar-part"><a href="#" class="navbar-text">guided tour</a></li>
+                        <li class="text-uppercase navbar-part"><a href="#" class="navbar-text" >home page</a></li>
+                        <li class="text-uppercase navbar-part"><a href="#" class="navbar-text">broker trading area</a></li>
+                        <li class="text-uppercase navbar-part"><a href="#" class="navbar-text">contact us</a></li>
+                        <li class="text-uppercase navbar-part"><a href="#" class="navbar-text">log out</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+
+
     </div>
 @endsection

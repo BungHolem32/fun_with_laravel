@@ -6663,6 +6663,7 @@ button.close {
   height: 100em;
   opacity: 0.5;
   /*ACCOUNT DETAILS*/
+  /*TOP NAVBAR*/
 }
 .content-wrapper .account-details {
   width: 205.7px;
@@ -6676,11 +6677,13 @@ button.close {
   background-color: white;
   opacity: 0.6;
   box-shadow: 0em 1.1px 1.4px 0.1px darkgray;
+  z-index: 1;
   /*TITLE */
+  /*PARAGRAPHS WITH THE INFO TITLE*/
 }
 .content-wrapper .account-details .account-details-title {
   height: 2.2em;
-  background: #809CAF;
+  background: #00395E;
   /*DIV WRAPPER HUMAN AVATAR*/
   /*TITLE TEXT */
 }
@@ -6711,6 +6714,37 @@ button.close {
   position: relative;
   top: 7px;
   left: 11px;
+  /*SPAN INFO RESULTS*/
+}
+.content-wrapper .account-details .info-tab .info-result {
+  letter-spacing: 0.2px;
+}
+.content-wrapper .top-navbar {
+  position: relative;
+  top: 6.1%;
+  background: #2c98e0;
+  border: none;
+  color: white;
+  /*NAV BAR COLLAPSE ON MOBILE*/
+}
+.content-wrapper .top-navbar .navbar-collapse {
+  text-align: center;
+  /*NAV BAR INSIDE*/
+}
+.content-wrapper .top-navbar .navbar-collapse .navbar-nav {
+  display: inline-block;
+  float: none;
+  /*LIST ELEMENT IN THE NAV-BAR (SPECIFIC LINK )*/
+}
+.content-wrapper .top-navbar .navbar-collapse .navbar-nav .navbar-part {
+  border-right: 1px solid #55B2EF;
+  border-left: 1px solid #1C6DA2;
+  /*HREF TEXT*/
+}
+.content-wrapper .top-navbar .navbar-collapse .navbar-nav .navbar-part .navbar-text {
+  color: inherit;
+  font-weight: bold;
+  letter-spacing: 0.1px;
 }
 
 /*# sourceMappingURL=style.css.map */
