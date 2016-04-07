@@ -95,7 +95,7 @@ p:last-child {
 }
 .trim_spaces .scalable {
   display: inline-block;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
   -webkit-transform-origin: left top;
   -moz-transform-origin: left top;
   -o-transform-origin: left top;
