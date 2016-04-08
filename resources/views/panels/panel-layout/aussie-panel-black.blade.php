@@ -1,4 +1,5 @@
 @section('head')
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300,300italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/panels/black/style.css"/>
 @append
 @section('bottom-scripts')
@@ -9,7 +10,7 @@
 
 @section('page-layout')
 
-    <div class="content-wrapper container-fluid">
+    <div class="content-wrapper">
 
         {{--Account Details--}}
         <aside class="account-details visible-md-block visible-lg-block">
@@ -77,15 +78,15 @@
 
             <div class="row">
 
-                {{--TITLE--}}
-                <header class="active-method-title col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                {{--TITLE WRAPPER--}}
+                <header class="active-method-title-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h3 class="text-uppercase method-title">to activate method system, your rboptions broker account
                         will need your
                         deposit</h3>
                 </header>
 
-                {{--SUBTITLE--}}
-                <div class="active-method-subtitle  col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                {{--SUBTITLE WRAPPER--}}
+                <div class="active-method-subtitle-wrapper  col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h4 class="text-capitalize method-subtitle text-center">
                          <i class="fa fa-arrow-down"></i>
                          <span class="active-method-text ">start eraning money in 3 easy steps</span>
@@ -99,6 +100,49 @@
         <section class="arrow-img-wrapper container">
             <div class="row">
                 <img src="/img/panel/black/cont-arrow.png" alt="arrow picture" class=" arrow-img col-lg-offset-1 col-md-offset-1">
+            </div>
+        </section>
+
+        <section class="tabs-wrapper container">
+            <div class="row">
+
+                {{--FIRST TAB (LEFT)--}}
+                <div class="tab-wrapper deposit col-lg-5 col-md-4 col-sm-12 col-xs 12">
+                    <div class="top-part">
+                        <span class="tab-number-in-circle text-center">1</span>
+                        <p class="tab-title text-uppercase">deposite into your account</p>
+                    </div>
+                    <div class="buttons-part">
+                        <div class="tab-big-button text-uppercase">deposite now at rboptions</div>
+                    </div>
+                </div>
+
+                {{--SECOND TAB (CENTER)--}}
+                <div class="tab-wrapper auto-trading col-lg-3 col-md-4 col-sm-12 col-xs 12">
+                    <div class="top-part">
+                        <span class="tab-number-in-circle text-center">2</span>
+                        <p class="tab-title text-uppercase">activate auto trading</p>
+                    </div>
+                    <div class="buttons-part">
+                        <div class="tab-switch-button text-uppercase"></div>
+                    </div>
+                </div>
+
+                {{--THIRD TAB (RIGHT)--}}
+                <div class="tab-wrapper amount col-lg-4 col-md-4 col-sm-12 col-xs 12">
+                    <div class="top-part">
+                        <span class="tab-number-in-circle text-center">3</span>
+                        <p class="tab-title text-uppercase">select amount of trading</p>
+                    </div>
+                    <div class="buttons-part">
+                        <div class="tab-four-buttons text-uppercase">
+                            <div class="amount-button1">$25 - $50</div>
+                            <div class="amount-button2">$50 - $100</div>
+                            <div class="amount-button3">$100 - $150</div>
+                            <div class="amount-button4">$150 + </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>

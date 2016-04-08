@@ -1,5 +1,9 @@
 @import "bootstrap/bootstrap.less";
 
+body {
+  font-family: 'Roboto Condensed';
+}
+
 /*WRAPPER FOR ALL THE CONTENT*/
 .content-wrapper {
   background: url(/img/panel/black/black.jpg);
@@ -109,49 +113,111 @@
     font-weight: bold;
     letter-spacing: 2.2px;
     background-color: #01395E;
+    min-height: 5.8em;
 
     /*METHOD TITLE WRAPPER*/
-    .active-method-title {
+    .active-method-title-wrapper {
 
       /*H3 */
       .method-title {
-        font-size: 1.42em;
-        letter-spacing: 0.1em;
+        font-size: 1.8em;
+        letter-spacing: 1.9px;
         padding: 0;
-        margin: 0.5em 0 0 1.3em;
+        margin: 0.22em 0 0 1em;
       }
     }
 
     /*SUBTITLE WRAPPER*/
-    .active-method-subtitle {
+    .active-method-subtitle-wrapper {
 
       /*H4 TAG */
-      .method-subtitle{
-
+      .method-subtitle {
 
         /*ARROW ICON (<I> TAG) AT THE START AND THE END */
         .fa-arrow-down {
           color: #EFDE00;
-          padding: 0 10px 0 0;
         }
 
         /*SPAN TAG - TEXT WITHIN THE SUBTITLE */
         .active-method-text {
           font-size: 1.2em;
           position: relative;
-          line-height: 31.9px;
-          margin: 0px auto 0 -0.7em;
-          letter-spacing: 0.4px;
+          line-height: 23.8px;
+          margin: 0px auto 0 -2.7px;
+          letter-spacing: 2.3px;
           font-style: italic;
           color: #FFDE00;
           font-weight: bold;
         }
       }
     }
-    .arrow-img-wrapper{
-      .arrow-img{
-        margin-left: 10.7%;
+  }
+
+  /*ARROW PICTURE AT THE BOTTOM OF THE INCENTIVE*/
+  .arrow-img-wrapper {
+    .arrow-img {
+      margin-left: 10.7%;
+    }
+  }
+
+  /*TABS SECTION*/
+  .tabs-wrapper {
+
+    &.container {
+      padding: 0
+    }
+
+    /*TAB WRAPPER GENERAL*/
+    .tab-wrapper {
+      border: 1px solid white;
+      min-height: 13.3em;
+      padding: 0;
+      margin: 0.6em 0.5em 0 0.7em;
+      /* background-color: #282828; */
+
+      /*FIRST TAB (SPECIFIC SIZE*/
+      &.deposit {
+        width: 35.5%;
+      }
+
+      /*SECOND TAB SPECIFIC SIZE*/
+      &.auto-trading {
+        width: 30.1%;
+      }
+
+      /*THIRD TAB SPECIFIC SIZE*/
+      &.amount {
+        width: 30.3%;
+        margin-right: 0 !important;
+      }
+
+      /*TOP PART OF EACH TAB*/
+      .top-part {
+
+        /*CIRCLE IMAGE WITH THE STEP NUMBER*/
+        .tab-number-in-circle {
+          position: absolute;
+          top: -21.3px;
+          left: -10.7px;
+          height: 62px;
+          width: 62px;
+          -webkit-border-radius: 50%;
+          -webkit-background-clip: padding-box;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          background-clip: padding-box;
+          background: #ffde00;
+          border: 4px solid #000;
+          font-size: 41px;
+          font-weight: bold;
+          line-height: 51px;
+          color: #000;
+          text-shadow: -1px 2px 1px #f4ff96;
+          -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+        }
       }
     }
   }
+
 }
