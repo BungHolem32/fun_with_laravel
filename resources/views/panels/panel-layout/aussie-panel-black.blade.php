@@ -1,5 +1,6 @@
 @section('head')
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300,300italic' rel='stylesheet'
+          type='text/css'>
     <link rel="stylesheet" href="/css/panels/black/style.css"/>
 @append
 @section('bottom-scripts')
@@ -88,8 +89,8 @@
                 {{--SUBTITLE WRAPPER--}}
                 <div class="active-method-subtitle-wrapper  col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h4 class="text-capitalize method-subtitle text-center">
-                         <i class="fa fa-arrow-down"></i>
-                         <span class="active-method-text ">start eraning money in 3 easy steps</span>
+                        <i class="fa fa-arrow-down"></i>
+                        <span class="active-method-text ">start eraning money in 3 easy steps</span>
                         <i class="fa fa-arrow-down"></i>
                     </h4>
                 </div>
@@ -99,7 +100,8 @@
         {{--ARROW AT THE BOTTOM OF THE TOP BAR--}}
         <section class="arrow-img-wrapper container">
             <div class="row">
-                <img src="/img/panel/black/cont-arrow.png" alt="arrow picture" class=" arrow-img col-lg-offset-1 col-md-offset-1">
+                <img src="/img/panel/black/cont-arrow.png" alt="arrow picture"
+                     class=" arrow-img col-lg-offset-1 col-md-offset-1">
             </div>
         </section>
 
@@ -110,10 +112,12 @@
                 <div class="tab-wrapper deposit col-lg-5 col-md-4 col-sm-12 col-xs 12">
                     <div class="top-part">
                         <span class="tab-number-in-circle text-center">1</span>
-                        <p class="tab-title text-uppercase">deposite into your account</p>
+                        <p class="tab-title text-uppercase">deposit into your account</p>
                     </div>
-                    <div class="buttons-part">
-                        <div class="tab-big-button text-uppercase">deposite now at rboptions</div>
+                    <div class="bottom-part">
+                        <button type="button" class="tab-big-button btn btn-default btn-lg center-block text-uppercase">
+                            deposit now at rboptions
+                        </button>
                     </div>
                 </div>
 
@@ -123,8 +127,10 @@
                         <span class="tab-number-in-circle text-center">2</span>
                         <p class="tab-title text-uppercase">activate auto trading</p>
                     </div>
-                    <div class="buttons-part">
-                        <div class="tab-switch-button text-uppercase"></div>
+                    <div class="bottom-part">
+                        <div class="tab-switch-button text-uppercase">
+
+                        </div>
                     </div>
                 </div>
 
@@ -134,12 +140,12 @@
                         <span class="tab-number-in-circle text-center">3</span>
                         <p class="tab-title text-uppercase">select amount of trading</p>
                     </div>
-                    <div class="buttons-part">
+                    <div class="bottom-part">
                         <div class="tab-four-buttons text-uppercase">
                             <div class="amount-button1">$25 - $50</div>
                             <div class="amount-button2">$50 - $100</div>
                             <div class="amount-button3">$100 - $150</div>
-                            <div class="amount-button4">$150 + </div>
+                            <div class="amount-button4">$150 +</div>
                         </div>
                     </div>
                 </div>

@@ -6812,6 +6812,7 @@ body {
   /*SECOND TAB SPECIFIC SIZE*/
   /*THIRD TAB SPECIFIC SIZE*/
   /*TOP PART OF EACH TAB*/
+  /*BOTTOM PART WITH THE BUTTONS */
 }
 .content-wrapper .tabs-wrapper .tab-wrapper.deposit {
   width: 35.5%;
@@ -6824,6 +6825,7 @@ body {
   margin-right: 0 !important;
 }
 .content-wrapper .tabs-wrapper .tab-wrapper .top-part {
+  border: 1px solid black;
   /*CIRCLE IMAGE WITH THE STEP NUMBER*/
 }
 .content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-number-in-circle {
@@ -6845,6 +6847,31 @@ body {
   text-shadow: -1px 2px 1px #f4ff96;
   -webkit-transform: rotate(5deg);
   transform: rotate(5deg);
+}
+.content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-title {
+  font-size: 1.5em;
+  color: white;
+  line-height: 59.4px;
+  text-indent: 70px;
+  letter-spacing: 1.5px;
+  word-spacing: -2.1px;
+  margin: 0;
+}
+.content-wrapper .tabs-wrapper .tab-wrapper .bottom-part {
+  min-height: 8.8em;
+  /*BUTTON FIRST*/
+}
+.content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button {
+  font-size: 2em;
+  line-height: 2.033333;
+  border-radius: 6px;
+  position: relative;
+  top: 0.8em;
+  background: #aadd20;
+  opacity: 0.5;
+  color: black;
+  word-spacing: -0.7px;
+  background: linear-gradient(to top, #79aa10, #aadd20, #a9dc1f);
 }
 
 /*# sourceMappingURL=style.css.map */
