@@ -175,18 +175,19 @@
 
                     {{--FIRST TABLE ROW WITH ALL THE HEADERS--}}
                     <tr class="table-headers table-row">
-                        <th class="text-capitalize text-center">assets</th>
-                        <th class="text-capitalize text-center">position</th>
-                        <th class="text-capitalize text-center">amount</th>
-                        <th class="text-capitalize text-center">entry rate</th>
-                        <th class="text-capitalize text-center">current rate</th>
-                        <th class="text-capitalize text-center">expiration date</th>
-                        <th class="text-capitalize text-center">status</th>
+                        <th class="table-data text-capitalize text-center">assets</th>
+                        <th class="table-data text-capitalize text-center">position</th>
+                        <th class="table-data text-capitalize text-center">amount</th>
+                        <th class="table-data text-capitalize text-center">entry rate</th>
+                        <th class="table-data text-capitalize text-center">current rate</th>
+                        <th class="table-data text-capitalize text-center">expiration date</th>
+                        <th class="table-data text-capitalize text-center">status</th>
                     </tr>
 
                     {{--TABLE DATA--}}
                     <tr class="table-tr-content table-row text-center">
-                        <td class="table-data td-assets text-capitalize"><span class="text-uppercase">s&p</span>future</td>
+                        <td class="table-data td-assets text-capitalize"><span class="text-uppercase">s&p</span> future
+                        </td>
                         <td class="table-data td-position text-uppercase"><i class="fa fa-arrow-down"></i> put</td>
                         <td class="table-data td-amount text-success">$3955</td>
                         <td class="table-data td-entry-rate">2035.632</td>
@@ -195,7 +196,8 @@
                         <td class="table-data td-status text-capitalize">open</td>
                     </tr>
                     <tr class="table-tr-content table-row text-center">
-                        <td class="table-data td-assets text-capitalize"><span class="text-uppercase">s&p</span>future</td>
+                        <td class="table-data td-assets text-capitalize"><span class="text-uppercase">s&p</span> future
+                        </td>
                         <td class="table-data td-position text-uppercase"><i class="fa fa-arrow-down"></i> put</td>
                         <td class="table-data td-amount text-success">$3955</td>
                         <td class="table-data td-entry-rate">2035.632</td>
@@ -204,7 +206,8 @@
                         <td class="table-data td-status text-capitalize">open</td>
                     </tr>
                     <tr class="table-tr-content table-row text-center">
-                        <td class="table-data td-assets text-capitalize"><span class="text-uppercase">s&p</span>future</td>
+                        <td class="table-data td-assets text-capitalize"><span class="text-uppercase">s&p</span> future
+                        </td>
                         <td class="table-data td-position text-uppercase"><i class="fa fa-arrow-down"></i> put</td>
                         <td class="table-data td-amount text-success">$3955</td>
                         <td class="table-data td-entry-rate">2035.632</td>
@@ -212,23 +215,22 @@
                         <td class="table-data td-expiration-date">2016-01-25</td>
                         <td class="table-data td-status text-capitalize">open</td>
                     </tr>
-
-                    {{--TABLE TR CONTENT--}}
-                    <tr class="table-tr-content text-center">
-                        <td class="td-assets table-data text-capitalize"><span class="text-uppercase">s&p</span>future</td>
-                        <td class="td-position table-data text-uppercase"><i class="fa fa-arrow-down"></i> put</td>
-                        <td class="td-amount table-data text-success">$3955</td>
-                        <td class="td-entry-rate table-data">2035.632</td>
-                        <td class="td-current-rate table-data text-danger">2036</td>
-                        <td class="td-expiration-date table-data">2016-01-25</td>
-                        <td class="td-status text-capitalize table-data">open</td>
+                    <tr class="table-tr-content table-row text-center">
+                        <td class="table-data td-assets text-capitalize"><span class="text-uppercase">s&p</span> future
+                        </td>
+                        <td class="table-data td-position text-uppercase"><i class="fa fa-arrow-up"></i> pull</td>
+                        <td class="table-data td-amount text-success">$3955</td>
+                        <td class="table-data td-entry-rate">2035.632</td>
+                        <td class="table-data td-current-rate text-danger">2036</td>
+                        <td class="table-data td-expiration-date">2016-01-25</td>
+                        <td class="table-data td-status text-capitalize">open</td>
                     </tr>
 
                 </table>
             </div>
         </section>
 
-        {{--TABLE WITH THE OPEN TRADE--}}
+        {{--TABLE WITH THE OPEN TRADE HISTORY--}}
         <section class="table-responsive rb-options-history">
             <div class="container">
                 <table class="table">
@@ -249,13 +251,14 @@
 
                     {{--TABLE DATA--}}
                     <tr class="table-tr-content table-row text-center">
-                        <td class="table-data td-assets text-capitalize"><span class="text-uppercase">s&p</span>future</td>
-                        <td class="table-data td-position text-uppercase"><i class="fa fa-arrow-down"></i> put </td>
+                        <td class="table-data td-assets text-capitalize"><span class="text-uppercase">s&p</span> future
+                        </td>
+                        <td class="table-data td-position text-uppercase"><i class="fa fa-arrow-down"></i> put</td>
                         <td class="table-data td-amount text-success">$3955</td>
                         <td class="table-data td-entry-rate">2035.632</td>
                         <td class="table-data td-current-rate text-danger">2036</td>
                         <td class="table-data td-expiration-date">2016-01-25</td>
-                        <td class="table-data td-status text-capitalize">open</td>
+                        <td class="table-data td-status text-capitalize">close</td>
                     </tr>
 
 
@@ -263,6 +266,12 @@
             </div>
         </section>
 
+
+        <footer class="certificate-logos">
+            <div class="container">
+                <img src="/img/panel/black/cartificate-321.png" alt="3 icons of guaranty" class="img-responsive center-block">
+            </div>
+        </footer>
 
     </div>
 @endsection

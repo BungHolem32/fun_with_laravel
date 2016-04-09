@@ -6903,6 +6903,10 @@ body {
   /*TR WITH ALL THE HEADERS*/
   /*TR WITH ALL THE CONTENT (TD)*/
 }
+.content-wrapper .rb-options-open-trade .container .table-row .table-data,
+.content-wrapper .rb-options-history .container .table-row .table-data {
+  border-top: none;
+}
 .content-wrapper .rb-options-open-trade .container .table-title,
 .content-wrapper .rb-options-history .container .table-title {
   margin: 53px 0 0 0;
