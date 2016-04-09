@@ -1,73 +1,76 @@
 @import "bootstrap/bootstrap.less";
 
-@position: "relative";
+/*ASSIGN VALUES*/
+@image: '/img/panel/black/';
+@font: 'Roboto Condensed';
 
 .btn-space {
   margin-right: 5px;
 }
 
 body {
-  font-family: 'Roboto Condensed';
+  font-family: @font;
 }
 
 /*WRAPPER FOR ALL THE CONTENT*/
 .content-wrapper {
-  background: url(/img/panel/black/black.jpg);
-  //width: 1903px;
-  height: 100em;
-  opacity: 0.5;
+  background:      url('@{image}bg.jpg') top center;
+  background-size: contain;
 
   /*ACCOUNT DETAILS*/
-  .account-details {
-    width: 205.7px;
-    border: 1px solid gray;
-    height: 8.6em;
-    position: fixed;
-    direction: ltr;
-    right: 14.5%;
+  .account-details-desktop {
+    width:                      205.7px;
+    border:                     1px solid gray;
+    height:                     8.6em;
+    position:                   fixed;
+    direction:                  ltr;
+    right:                      14.5%;
     border-bottom-right-radius: 0.6em;
-    border-bottom-left-radius: 0.6em;
-    background-color: white;
-    box-shadow: 0em 1.1px 1.4px 0.1px darkgray;
-    z-index: 1;
+    border-bottom-left-radius:  0.6em;
+    background-color:           white;
+    box-shadow:                 0em 1.1px 1.4px 0.1px darkgray;
+    z-index:                    1;
+    @media (min-width: 980px) and  (max-width: 1636px) {
+      right: 0;
+    }
 
     /*TITLE */
     .account-details-title {
-      height: 2.2em;
+      height:     2.2em;
       background: #00395E;
 
       /*DIV WRAPPER HUMAN AVATAR*/
       .img-human {
         display: inline-block;
-        width: 15.3%;
+        width:   15.3%;
 
         /*IMG TAG*/
         .icon-human-pic {
-          display: block;
+          display:   block;
           max-width: 100%;
-          height: auto;
-          position: absolute;
-          left: 9px;
-          top: 5px;
+          height:    auto;
+          position:  absolute;
+          left:      9px;
+          top:       5px;
         }
       }
       /*TITLE TEXT */
       .title {
-        display: inline-block;
-        color: white;
-        font-weight: bold;
+        display:        inline-block;
+        color:          white;
+        font-weight:    bold;
         letter-spacing: 1.5px;
-        line-height: 31px;
-        font-size: 1.25em;
+        line-height:    31px;
+        font-size:      1.25em;
       }
     }
     /*PARAGRAPHS WITH THE INFO TITLE*/
     .info-tab {
-      margin: 0 0 2.2px;
+      margin:    0 0 2.2px;
       font-size: 0.9em;
-      position: relative;
-      top: 7px;
-      left: 11px;
+      position:  relative;
+      top:       7px;
+      left:      11px;
 
       /*SPAN INFO RESULTS*/
       .info-result {
@@ -76,33 +79,69 @@ body {
     }
   }
 
+  .account-details-mobile {
+    color:     black;
+    font-size: 1.1em;
+    @media (max-width: 400px) {
+      font-size: 0.8em;
+    }
+
+    .container {
+      background: white;
+      .row {
+        /*ACCOUNT DETAIL TITLE */
+        .account-details-title {
+          background: #01395E;
+          color:      white;
+          padding:    0.4em;
+          font-size:  1.3em;
+        }
+
+        /*ACCOUNT DETAIL PERSONAL*/
+        .account-detail-personal {
+          padding: 0.4em;
+        }
+      }
+    }
+  }
   /*TOP NAVBAR*/
   .top-navbar {
-    position: @position;
-    top: 6.1%;
-    background: #2c98e0;
-    border: none;
-    color: white;
 
+    .container{
+      @media (max-width:996px){
+        width: 100%;
+        font-size: 0.9em;
+      }
+    }
+
+    position:   relative;
+    background: #2c98e0;
+    border:     none;
+    color:      white;
+
+    @media (min-width:996px) {
+      top: 5.1em;
+
+    }
     /*NAV BAR COLLAPSE ON MOBILE*/
     .navbar-collapse {
 
       /*NAV BAR INSIDE*/
       .navbar-nav {
         display: inline-block;
-        float: none;
+        float:   none;
 
         /*LIST ELEMENT IN THE NAV-BAR (SPECIFIC LINK )*/
         .navbar-part {
           border-right: 1px solid #55B2EF;
-          border-left: 1px solid #1C6DA2;
+          border-left:  1px solid #1C6DA2;
 
           /*HREF TEXT*/
           .navbar-text {
-            color: inherit;
-            font-weight: bold;
+            color:          inherit;
+            font-weight:    bold;
             letter-spacing: 0.1px;
-            margin: 0;
+            margin:         0;
           }
         }
       }
@@ -111,23 +150,31 @@ body {
 
   /*INCENTIVE GUIDE FOR NEW CUSTOMERS */
   .activate-method-system {
-    margin-top: 7.5em;
-    box-sizing: initial;
-    color: white;
-    font-weight: bold;
-    letter-spacing: 2.2px;
+    margin-top:       7.5em;
+    box-sizing:       initial;
+    color:            white;
+    font-weight:      bold;
+    letter-spacing:   2.2px;
     background-color: #01395E;
-    min-height: 5.8em;
+    min-height:       5.8em;
 
+    @media (max-width: 992px) {
+      margin-top: 1em;
+    }
     /*METHOD TITLE WRAPPER*/
     .active-method-title-wrapper {
 
       /*H3 */
       .method-title {
-        font-size: 1.8em;
+        font-size:      1.8em;
         letter-spacing: 1.9px;
-        padding: 0;
-        margin: 0.22em 0 0 1em;
+        padding:        0;
+        margin:         0.22em 0 0 1em;
+
+        @media (max-width: 1024px) {
+          text-align: center;
+
+        }
       }
     }
 
@@ -140,18 +187,29 @@ body {
         /*ARROW ICON (<I> TAG) AT THE START AND THE END */
         .fa-arrow-down {
           color: #EFDE00;
+          @media(max-width:400px){
+            font-size: 0.6em;
+          }
         }
 
         /*SPAN TAG - TEXT WITHIN THE SUBTITLE */
         .active-method-text {
-          font-size: 1.2em;
-          position: relative;
-          line-height: 23.8px;
-          margin: 0px auto 0 -2.7px;
+          font-size:      1.2em;
+          position:       relative;
+          line-height:    23.8px;
+          margin:         0px auto 0 -2.7px;
           letter-spacing: 2.3px;
-          font-style: italic;
-          color: #FFDE00;
-          font-weight: bold;
+          font-style:     italic;
+          color:          #FFDE00;
+          font-weight:    bold;
+
+          @media (max-width: 640px) {
+            font-size: 1em;
+          }
+
+          @media (max-width: 410px) {
+            font-size: 0.7em;
+          }
         }
       }
     }
@@ -161,94 +219,123 @@ body {
   .arrow-img-wrapper {
     .arrow-img {
       margin-left: 10.7%;
+
+      @media (max-width: 1170px) {
+        display: block;
+        margin:  0 auto;
+      }
     }
   }
 
   /*TABS SECTION*/
   .tabs-wrapper {
-
+    position: relative;
     &.container {
-      padding: 0
+      padding: 0;
+      //@media (max-width:)
     }
 
     /*TAB WRAPPER GENERAL*/
     .tab-wrapper {
       //border: 1px solid white;
-      min-height: 13.3em;
-      padding: 0;
-      margin: 0.6em 0.5em 0 0.7em;
-      min-width: 320px;
+      min-height:       13.3em;
+      padding:          0;
+      margin:           0.6em 1.2em 0 0.9em;
+      min-width:        320px;
       background-color: #282828;
 
+      @media (max-width: 1200px) {
+        margin: 3.6em 0.5em 0 0.7em;
+      }
+
+      &:hover {
+        box-shadow: 3px 24px 24px -10px #06A9FF;
+      }
       /*FIRST TAB (SPECIFIC SIZE*/
       &.deposit {
-        width: 35.5%;
+        //width: 35.5%;
 
         /*SPECIFIC TOP PART OF DEPOSIT*/
-        .top-part{
+        .top-part {
 
           /*SPECIFIC TITLE*/
-          .tab-title{
-            text-indent: 70px;
+          .tab-title {
           }
         }
       }
 
       /*SECOND TAB SPECIFIC SIZE*/
       &.auto-trading {
-        width: 30.1%;
+        //width: 30.1%;
       }
 
       /*THIRD TAB SPECIFIC SIZE*/
       &.amount {
-        width: 30.3%;
+        //width: 30.3%;
         margin-right: 0 !important;
 
         .amount-btn {
-          width: 39%;
-          margin: 0 13px 15px 0;
-          position: relative;
-          top: 8px;
-          left: 4px;
+          width:      39%;
+          margin:     0 13px 15px 0;
+          position:   relative;
+          top:        8px;
+          left:       4px;
           box-shadow: 1px 1px 10px 1px black;
           background: linear-gradient(to top, #222222, #444547);
           /* opacity: 0; */
-          color: white;
+          color:      white;
+          &:hover {
+            background: #252525;
+            background: linear-gradient(to bottom, #252525 0%, #444547 100%);
+            filter:     progid:DXImageTransform.Microsoft.gradient(startColorstr='#252525', endColorstr='#444547', GradientType=0);
+          }
+          &:focus {
+            box-shadow:  inset 5px 3px 27px -4px #313030;
+            text-shadow: 1px -1px 1px #313030;
+            background:  #0288cb;
+            background:  linear-gradient(to bottom, #0288cb 43%, #0288cb 43%, #00daf8 100%);
+            filter:      progid:DXImageTransform.Microsoft.gradient(startColorstr='#0288cb', endColorstr='#00daf8', GradientType=0);
+          }
         }
       }
 
       /*TOP PART OF EACH TAB*/
       .top-part {
-        border: 1px solid black;
+        border-bottom: 1px solid black;
 
         /*CIRCLE IMAGE WITH THE STEP NUMBER*/
         .tab-number-in-circle {
-          position: absolute;
-          top: -21.3px;
-          left: -10.7px;
-          height: 65px;
-          width: 65px;
-          -webkit-border-radius: 50%;
+          position:                absolute;
+          top:                     -25.3px;
+          left:                    -21.4px;
+          height:                  63px;
+          width:                   63px;
+          -webkit-border-radius:   50%;
           -webkit-background-clip: padding-box;
-          border-radius: 50%;
-          background-clip: padding-box;
-          background: #ffde00;
-          border: 6px solid #000;
-          font-size: 41px;
-          font-weight: bold;
-          line-height: 51px;
-          color: #000;
-          text-shadow: -1px 2px 1px #f4ff96;
-          -webkit-transform: rotate(5deg);
-          transform: rotate(5deg);
+          border-radius:           50%;
+          background-clip:         padding-box;
+          background:              #ffde00;
+          border:                  6px solid #000;
+          font-size:               41px;
+          font-weight:             bold;
+          line-height:             51px;
+          color:                   #000;
+          text-shadow:             -1px 2px 1px #f4ff96;
+          -webkit-transform:       rotate(5deg);
+          transform:               rotate(5deg);
+
+          @media (max-width: 640px) {
+            top:  -46.3px;
+            left: 2.3px;
+          }
         }
         .tab-title {
-          font-size: 1.5em;
-          color: white;
-          line-height: 59.4px;
+          font-size:      1.5em;
+          color:          white;
+          line-height:    59.4px;
           letter-spacing: 1.5px;
-          word-spacing: -2.1px;
-          margin: 0;
+          word-spacing:   -2.1px;
+          margin:         0;
         }
       }
       /*BOTTOM PART WITH THE BUTTONS */
@@ -257,83 +344,109 @@ body {
 
         /*BUTTON FIRST*/
         .tab-big-button {
-          font-size: 2em;
-          line-height: 2.033333;
+          font-size:     1.9em;
+          line-height:   2.033333;
           border-radius: 6px;
-          position: relative;
-          top: 0.8em;
-          opacity: 0.5;
-          color: black;
-          word-spacing: 0.8px;
-          background: linear-gradient(to top, #79aa10, #aadd20, #a9dc1f);
-          text-indent: -5.7px;
-          width: 85%;
+          position:      relative;
+          top:           0.8em;
+          //opacity: 0.5;
+          color:         black;
+          word-spacing:  0.8px;
+          background:    linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
+          filter:        progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
+          text-indent:   -5.7px;
+          width:         85%;
+
+          &:hover {
+            background: #72a40e;
+            background: linear-gradient(to bottom, #72a40e 43%, #aadc1f 96%);
+            filter:     progid:DXImageTransform.Microsoft.gradient(startColorstr='#72a40e', endColorstr='#aadc1f', GradientType=0);
+          }
+
+          @media (max-width: 410px) {
+            font-size: 1.5em;
+          }
+
         }
       }
+    }
+    .arrow-rotate {
+      top: 49px;
+      left: -89.1px;
+      position: absolute;
     }
   }
 
   /*TABLE OF THE OPEN TRADE*/
-  .rb-options-open-trade,.rb-options-history{
-
+  .rb-options-open-trade, .rb-options-history {
+    @media (max-width: 507px) {
+      font-size:     7.5px;
+      margin-bottom: 0;
+    }
     /*SPECIFIC CONTAINER*/
     .container {
       padding: 0;
 
-     .table-row{
+      .table-row {
 
-       .table-data{
-         border-top:none;
-       }
-     }
+        .table-data {
+          border-top: none;
+        }
+      }
       /*CAPTION OF THE TABLE */
-      .table-title{
-        margin: 53px 0 0 0;
-        font-size: 1.95em;
-        font-weight: bold;
-        text-indent: -3.6px;
-        color: white;
-        letter-spacing: 0.7px;
-        word-spacing: -1.8px;
+      .table-title {
+        margin:           53px 0 0 0;
+        font-size:        1.95em;
+        font-weight:      bold;
+        text-indent:      -3.6px;
+        color:            white;
+        letter-spacing:   0.7px;
+        word-spacing:     -1.8px;
         background-color: #002A43;
       }
 
       /*TR WITH ALL THE HEADERS*/
-      .table-headers{
+      .table-headers {
         background: #3E8CEE;
-        color: black;
-        font-size: 1.3em;
+        color:      black;
+        font-size:  1.3em;
       }
 
       /*TR WITH ALL THE CONTENT (TD)*/
-      .table-tr-content
-      {
-        color:white;
-        &:nth-of-type(odd){
+      .table-tr-content {
+        color: white;
+        &:nth-of-type(odd) {
           background: #3F3F3F;
-          color: white;
+          color:      white;
         }
-        &:nth-of-type(even){
+        &:nth-of-type(even) {
           background: #282828;
         }
-        
-        .td-position{
+
+        .td-position {
           font-size: 1.1em;
-          .fa-arrow-down{
+          .fa-arrow-down {
             color: red;
+            @media (max-width: 394px) {
+              font-size: 0.7em;
+            }
           }
-          .fa-arrow-up{
+          .fa-arrow-up {
             color: green;
           }
         }
       }
     }
   }
-  .rb-options-history{
-    .container{
-      .table-title{
+  .rb-options-history {
+    .container {
+      .table-title {
         margin: 0px 0 0 0;
       }
     }
+  }
+
+  .footer-certificate-logos {
+    margin: 8.4em 0 0;
   }
 }

@@ -8,9 +8,14 @@
     {{--VALIDATE SCRIPT--}}
     {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
     {{--SOCKETIO SCRIPTS--}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    {{--TOGGLES BUTTON--}}
+    <script src="/js/panels/black/libs/toggles.js"></script>
     <script type="text/javascript" src="//sst-super-c-nl.spotoption.com/socket.io/socket.io.js"></script>
     {{--PANEL BASE SCRIPT--}}
     {!! $page->appendAsset(url('/js/panel-common/panel.js')) !!}
+    {{--Main JS--}}
+    <script src="js/panels/black/main.js"></script>
 
 @append
 
@@ -18,10 +23,10 @@
 
     <div class="content-wrapper">
 
-        {{--Account Details--}}
-        <aside class="account-details visible-md-block visible-lg-block">
+        {{--Account Details  DESKTOP VIEW--}}
+        <aside class="account-details-desktop visible-md-block visible-lg-block">
 
-            {{--title Part--}}
+            {{--TITLE PART--}}
             <header class="account-details-title">
 
                 {{--human avatar--}}
@@ -44,9 +49,8 @@
                 </p>
                 <p class="info-tab">
                     <span class="text-capitalize">broker:</span>
-                    <i></i>
-                    <strong class="info-result text-uppercase">rb</strong>
-                    <strong class="info-result ">options</strong>
+                    <img src="/img/panel/black/icon-rboptions.png" alt="rboption logo">
+                    <strong class="info-result text-uppercase">rb</strong><strong class="info-result">options</strong>
                 </p>
                 <p class="info-tab">
                     <span class="text-capitalize">balance:</span>
@@ -64,13 +68,15 @@
         {{--TOP NAVBAR--}}
         <nav class="top-navbar navbar navbar-default">
             <div class="container">
-                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbarContent">
+                <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target=".te"
+                        aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
 
-                <div class="collapse navbar-collapse navbarContent text-center">
+                <div class="collapse navbar-collapse text-center te" aria-expanded="false">
                     <ul class="nav navbar-nav">
                         <li class="text-uppercase  navbar-part"><a href="#" class="navbar-text">view welcome message</a>
                         </li>
@@ -85,6 +91,64 @@
             </div>
         </nav>
 
+        {{--ACCOUNT DETAILS --}}
+        <aside class="account-details-mobile visible-sm-block visible-xs-block">
+            <div class="container">
+                {{--TITLE PART--}}
+                <div class="row">
+
+                    {{--TITLE PART --}}
+                    <header class="account-details-title col-sm-12 col-xs-12 text-center">
+
+                        {{--HUMAN AVATAR--}}
+                        <div class="img-human col-sm-2 col-xs-2 col-xs-push-3">
+                            <img src="/img/panel/black/icon-human.png" alt="img-responsive"
+                                 class="icon-human-pic img-responsive block-center">
+                        </div>
+
+                        {{--TITLE PLACE--}}
+                        <div class="title text-uppercase col-sm-5 col-xs-push-1 col-xs-7">
+                            account details
+                        </div>
+                    </header>
+
+                </div>
+
+                <div class="row">
+                    {{--PERSONAL INFO  (BASE CONTENT FO THE TAB)--}}
+                    <div class="account-detail-personal-info col-sm-12">
+
+                        {{--EMAIL--}}
+                        <p class="info-tab col-sm-8 col-xs-7">
+                            <span class="text-capitalize">email:</span>
+                            <strong>youremail@gmail.com</strong>
+                        </p>
+
+                        {{--BALANCE--}}
+                        <p class="info-tab col-sm-4 col-xs-5">
+                            <span class="text-capitalize">balance:</span>
+                            <i></i>
+                            <strong class="info-result text-bold">1532.63</strong>
+                        </p>
+
+                        {{--BROKER--}}
+                        <p class="info-tab col-sm-7 col-xs-7">
+                            <span class="text-capitalize">broker:</span>
+                            <img src="/img/panel/black/icon-rboptions.png" alt="rboption logo">
+                            <strong class="info-result text-uppercase">rb</strong><strong class="info-result ">options</strong>
+                        </p>
+                        {{--AOCCOUNT DETAILS--}}
+                        <p class="info-tab col-sm-5 col-sm-push-1 col-xs-5">
+                            <span class="text-capitalize">account </span>
+                            <span class="text-uppercase">id: </span>
+                            <strong class="info-result">432563</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+
         {{--ACTIVE METHOD SYSTEM--}}
         <section class="activate-method-system container">
 
@@ -93,8 +157,8 @@
                 {{--TITLE WRAPPER--}}
                 <header class="active-method-title-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h3 class="text-uppercase method-title">to activate method system, your rboptions broker account
-                        will need your
-                        deposit</h3>
+                                                            will need your
+                                                            deposit</h3>
                 </header>
 
                 {{--SUBTITLE WRAPPER--}}
@@ -122,10 +186,10 @@
             <div class="row">
 
                 {{--FIRST TAB (LEFT)--}}
-                <div class="tab-wrapper deposit  col-sm-12 col-xs 12">
+                <div class="tab-wrapper deposit col-lg-4 col-lg-offset-1 col-md-12 col-sm-12 col-xs 12">
                     <div class="top-part">
                         <span class="tab-number-in-circle text-center">1</span>
-                        <p class="tab-title text-uppercase">deposit into your account</p>
+                        <p class="tab-title text-uppercase text-center">deposit into your account</p>
                     </div>
                     <div class="bottom-part">
                         <button type="button" class="tab-big-button btn btn-lg center-block text-uppercase">
@@ -135,20 +199,22 @@
                 </div>
 
                 {{--SECOND TAB (CENTER)--}}
-                <div class="tab-wrapper auto-trading col-sm-12 col-xs 12">
+                <div class="tab-wrapper auto-trading col-lg-3 col-md-12 col-sm-12 col-xs 12">
                     <div class="top-part">
                         <span class="tab-number-in-circle text-center">2</span>
                         <p class="tab-title text-uppercase text-center">activate auto trading</p>
                     </div>
                     <div class="bottom-part">
                         <div class="tab-switch-button text-uppercase ">
-                            {{--<input type="checkbox" name="tab-switch" checked>--}}
+                            <div class="toggle toggle-light" data-on="ON" data-off="OFF" style="height: 50px; width: 110px;">
+
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 {{--THIRD TAB (RIGHT)--}}
-                <div class="tab-wrapper amount col-sm-12 col-xs 12">
+                <div class="tab-wrapper amount col-lg-4 col-md-12 col-sm-12 col-xs 12">
                     <div class="top-part">
                         <span class="tab-number-in-circle text-center">3</span>
                         <p class="tab-title text-uppercase text-center">select amount of trading</p>
@@ -163,12 +229,16 @@
                     </div>
                 </div>
             </div>
+            <div class="arrow-rotate visible-lg-block">
+                <img src="/img/panel/black/tab-arrow.png" alt="rotate arrow">
+            </div>
         </section>
+
 
         {{--TABLE WITH THE OPEN TRADE--}}
         <section class="table-responsive rb-options-open-trade">
             <div class="container">
-                <table class="table">
+                <table class="table col-sm-12 col-xs-12">
 
                     {{--TABLE TITLE (RBOPTIONS OPEN TRADE)--}}
                     <caption class="table-title text-center text-uppercase">rboptions open trades</caption>
@@ -266,12 +336,12 @@
             </div>
         </section>
 
-
-        <footer class="certificate-logos">
+        {{--FOOTER WITH ALL THE LOGOS --}}
+        <footer class="footer-certificate-logos">
             <div class="container">
-                <img src="/img/panel/black/cartificate-321.png" alt="3 icons of guaranty" class="img-responsive center-block">
+                <img src="/img/panel/black/cartificate-321.png" alt="3 icons of guaranty"
+                     class="img-responsive center-block">
             </div>
         </footer>
-
     </div>
 @endsection

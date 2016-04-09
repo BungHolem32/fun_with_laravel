@@ -6656,6 +6656,7 @@ button.close {
     display: none !important;
   }
 }
+/*ASSIGN VALUES*/
 .btn-space {
   margin-right: 5px;
 }
@@ -6664,9 +6665,8 @@ body {
 }
 /*WRAPPER FOR ALL THE CONTENT*/
 .content-wrapper {
-  background: url(/img/panel/black/black.jpg);
-  height: 100em;
-  opacity: 0.5;
+  background: url('/img/panel/black/bg.jpg') top center;
+  background-size: contain;
   /*ACCOUNT DETAILS*/
   /*TOP NAVBAR*/
   /*INCENTIVE GUIDE FOR NEW CUSTOMERS */
@@ -6674,7 +6674,7 @@ body {
   /*TABS SECTION*/
   /*TABLE OF THE OPEN TRADE*/
 }
-.content-wrapper .account-details {
+.content-wrapper .account-details-desktop {
   width: 205.7px;
   border: 1px solid gray;
   height: 8.6em;
@@ -6689,18 +6689,23 @@ body {
   /*TITLE */
   /*PARAGRAPHS WITH THE INFO TITLE*/
 }
-.content-wrapper .account-details .account-details-title {
+@media (min-width: 980px) and (max-width: 1636px) {
+  .content-wrapper .account-details-desktop {
+    right: 0;
+  }
+}
+.content-wrapper .account-details-desktop .account-details-title {
   height: 2.2em;
   background: #00395E;
   /*DIV WRAPPER HUMAN AVATAR*/
   /*TITLE TEXT */
 }
-.content-wrapper .account-details .account-details-title .img-human {
+.content-wrapper .account-details-desktop .account-details-title .img-human {
   display: inline-block;
   width: 15.3%;
   /*IMG TAG*/
 }
-.content-wrapper .account-details .account-details-title .img-human .icon-human-pic {
+.content-wrapper .account-details-desktop .account-details-title .img-human .icon-human-pic {
   display: block;
   max-width: 100%;
   height: auto;
@@ -6708,7 +6713,7 @@ body {
   left: 9px;
   top: 5px;
 }
-.content-wrapper .account-details .account-details-title .title {
+.content-wrapper .account-details-desktop .account-details-title .title {
   display: inline-block;
   color: white;
   font-weight: bold;
@@ -6716,7 +6721,7 @@ body {
   line-height: 31px;
   font-size: 1.25em;
 }
-.content-wrapper .account-details .info-tab {
+.content-wrapper .account-details-desktop .info-tab {
   margin: 0 0 2.2px;
   font-size: 0.9em;
   position: relative;
@@ -6724,16 +6729,51 @@ body {
   left: 11px;
   /*SPAN INFO RESULTS*/
 }
-.content-wrapper .account-details .info-tab .info-result {
+.content-wrapper .account-details-desktop .info-tab .info-result {
   letter-spacing: 0.2px;
 }
+.content-wrapper .account-details-mobile {
+  color: black;
+  font-size: 1.1em;
+}
+@media (max-width: 400px) {
+  .content-wrapper .account-details-mobile {
+    font-size: 0.8em;
+  }
+}
+.content-wrapper .account-details-mobile .container {
+  background: white;
+}
+.content-wrapper .account-details-mobile .container .row {
+  /*ACCOUNT DETAIL TITLE */
+  /*ACCOUNT DETAIL PERSONAL*/
+}
+.content-wrapper .account-details-mobile .container .row .account-details-title {
+  background: #01395E;
+  color: white;
+  padding: 0.4em;
+  font-size: 1.3em;
+}
+.content-wrapper .account-details-mobile .container .row .account-detail-personal {
+  padding: 0.4em;
+}
 .content-wrapper .top-navbar {
-  position: "relative";
-  top: 6.1%;
+  position: relative;
   background: #2c98e0;
   border: none;
   color: white;
   /*NAV BAR COLLAPSE ON MOBILE*/
+}
+@media (max-width: 996px) {
+  .content-wrapper .top-navbar .container {
+    width: 100%;
+    font-size: 0.9em;
+  }
+}
+@media (min-width: 996px) {
+  .content-wrapper .top-navbar {
+    top: 5.1em;
+  }
 }
 .content-wrapper .top-navbar .navbar-collapse {
   /*NAV BAR INSIDE*/
@@ -6765,6 +6805,11 @@ body {
   /*METHOD TITLE WRAPPER*/
   /*SUBTITLE WRAPPER*/
 }
+@media (max-width: 992px) {
+  .content-wrapper .activate-method-system {
+    margin-top: 1em;
+  }
+}
 .content-wrapper .activate-method-system .active-method-title-wrapper {
   /*H3 */
 }
@@ -6773,6 +6818,11 @@ body {
   letter-spacing: 1.9px;
   padding: 0;
   margin: 0.22em 0 0 1em;
+}
+@media (max-width: 1024px) {
+  .content-wrapper .activate-method-system .active-method-title-wrapper .method-title {
+    text-align: center;
+  }
 }
 .content-wrapper .activate-method-system .active-method-subtitle-wrapper {
   /*H4 TAG */
@@ -6784,6 +6834,11 @@ body {
 .content-wrapper .activate-method-system .active-method-subtitle-wrapper .method-subtitle .fa-arrow-down {
   color: #EFDE00;
 }
+@media (max-width: 400px) {
+  .content-wrapper .activate-method-system .active-method-subtitle-wrapper .method-subtitle .fa-arrow-down {
+    font-size: 0.6em;
+  }
+}
 .content-wrapper .activate-method-system .active-method-subtitle-wrapper .method-subtitle .active-method-text {
   font-size: 1.2em;
   position: relative;
@@ -6794,10 +6849,27 @@ body {
   color: #FFDE00;
   font-weight: bold;
 }
+@media (max-width: 640px) {
+  .content-wrapper .activate-method-system .active-method-subtitle-wrapper .method-subtitle .active-method-text {
+    font-size: 1em;
+  }
+}
+@media (max-width: 410px) {
+  .content-wrapper .activate-method-system .active-method-subtitle-wrapper .method-subtitle .active-method-text {
+    font-size: 0.7em;
+  }
+}
 .content-wrapper .arrow-img-wrapper .arrow-img {
   margin-left: 10.7%;
 }
+@media (max-width: 1170px) {
+  .content-wrapper .arrow-img-wrapper .arrow-img {
+    display: block;
+    margin: 0 auto;
+  }
+}
 .content-wrapper .tabs-wrapper {
+  position: relative;
   /*TAB WRAPPER GENERAL*/
 }
 .content-wrapper .tabs-wrapper.container {
@@ -6806,7 +6878,7 @@ body {
 .content-wrapper .tabs-wrapper .tab-wrapper {
   min-height: 13.3em;
   padding: 0;
-  margin: 0.6em 0.5em 0 0.7em;
+  margin: 0.6em 1.2em 0 0.9em;
   min-width: 320px;
   background-color: #282828;
   /*FIRST TAB (SPECIFIC SIZE*/
@@ -6815,21 +6887,21 @@ body {
   /*TOP PART OF EACH TAB*/
   /*BOTTOM PART WITH THE BUTTONS */
 }
+@media (max-width: 1200px) {
+  .content-wrapper .tabs-wrapper .tab-wrapper {
+    margin: 3.6em 0.5em 0 0.7em;
+  }
+}
+.content-wrapper .tabs-wrapper .tab-wrapper:hover {
+  box-shadow: 3px 24px 24px -10px #06A9FF;
+}
 .content-wrapper .tabs-wrapper .tab-wrapper.deposit {
-  width: 35.5%;
   /*SPECIFIC TOP PART OF DEPOSIT*/
 }
 .content-wrapper .tabs-wrapper .tab-wrapper.deposit .top-part {
   /*SPECIFIC TITLE*/
 }
-.content-wrapper .tabs-wrapper .tab-wrapper.deposit .top-part .tab-title {
-  text-indent: 70px;
-}
-.content-wrapper .tabs-wrapper .tab-wrapper.auto-trading {
-  width: 30.1%;
-}
 .content-wrapper .tabs-wrapper .tab-wrapper.amount {
-  width: 30.3%;
   margin-right: 0 !important;
 }
 .content-wrapper .tabs-wrapper .tab-wrapper.amount .amount-btn {
@@ -6843,16 +6915,28 @@ body {
   /* opacity: 0; */
   color: white;
 }
+.content-wrapper .tabs-wrapper .tab-wrapper.amount .amount-btn:hover {
+  background: #252525;
+  background: linear-gradient(to bottom, #252525 0%, #444547 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#252525', endColorstr='#444547', GradientType=0);
+}
+.content-wrapper .tabs-wrapper .tab-wrapper.amount .amount-btn:focus {
+  box-shadow: inset 5px 3px 27px -4px #313030;
+  text-shadow: 1px -1px 1px #313030;
+  background: #0288cb;
+  background: linear-gradient(to bottom, #0288cb 43%, #0288cb 43%, #00daf8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0288cb', endColorstr='#00daf8', GradientType=0);
+}
 .content-wrapper .tabs-wrapper .tab-wrapper .top-part {
-  border: 1px solid black;
+  border-bottom: 1px solid black;
   /*CIRCLE IMAGE WITH THE STEP NUMBER*/
 }
 .content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-number-in-circle {
   position: absolute;
-  top: -21.3px;
-  left: -10.7px;
-  height: 65px;
-  width: 65px;
+  top: -25.3px;
+  left: -21.4px;
+  height: 63px;
+  width: 63px;
   -webkit-border-radius: 50%;
   -webkit-background-clip: padding-box;
   border-radius: 50%;
@@ -6867,6 +6951,12 @@ body {
   -webkit-transform: rotate(5deg);
   transform: rotate(5deg);
 }
+@media (max-width: 640px) {
+  .content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-number-in-circle {
+    top: -46.3px;
+    left: 2.3px;
+  }
+}
 .content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-title {
   font-size: 1.5em;
   color: white;
@@ -6880,21 +6970,43 @@ body {
   /*BUTTON FIRST*/
 }
 .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button {
-  font-size: 2em;
+  font-size: 1.9em;
   line-height: 2.033333;
   border-radius: 6px;
   position: relative;
   top: 0.8em;
-  opacity: 0.5;
   color: black;
   word-spacing: 0.8px;
-  background: linear-gradient(to top, #79aa10, #aadd20, #a9dc1f);
+  background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
   text-indent: -5.7px;
   width: 85%;
+}
+.content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button:hover {
+  background: #72a40e;
+  background: linear-gradient(to bottom, #72a40e 43%, #aadc1f 96%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72a40e', endColorstr='#aadc1f', GradientType=0);
+}
+@media (max-width: 410px) {
+  .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button {
+    font-size: 1.5em;
+  }
+}
+.content-wrapper .tabs-wrapper .arrow-rotate {
+  top: 49px;
+  left: -89.1px;
+  position: absolute;
 }
 .content-wrapper .rb-options-open-trade,
 .content-wrapper .rb-options-history {
   /*SPECIFIC CONTAINER*/
+}
+@media (max-width: 507px) {
+  .content-wrapper .rb-options-open-trade,
+  .content-wrapper .rb-options-history {
+    font-size: 7.5px;
+    margin-bottom: 0;
+  }
 }
 .content-wrapper .rb-options-open-trade .container,
 .content-wrapper .rb-options-history .container {
@@ -6945,12 +7057,21 @@ body {
 .content-wrapper .rb-options-history .container .table-tr-content .td-position .fa-arrow-down {
   color: red;
 }
+@media (max-width: 394px) {
+  .content-wrapper .rb-options-open-trade .container .table-tr-content .td-position .fa-arrow-down,
+  .content-wrapper .rb-options-history .container .table-tr-content .td-position .fa-arrow-down {
+    font-size: 0.7em;
+  }
+}
 .content-wrapper .rb-options-open-trade .container .table-tr-content .td-position .fa-arrow-up,
 .content-wrapper .rb-options-history .container .table-tr-content .td-position .fa-arrow-up {
   color: green;
 }
 .content-wrapper .rb-options-history .container .table-title {
   margin: 0px 0 0 0;
+}
+.content-wrapper .footer-certificate-logos {
+  margin: 8.4em 0 0;
 }
 
 /*# sourceMappingURL=style.css.map */
