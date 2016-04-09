@@ -5,10 +5,14 @@
     <link rel="stylesheet" href="/css/panels/black/style.css"/>
 @append
 @section('bottom-scripts')
+
+
+
     {{--VALIDATE SCRIPT--}}
     {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
     {{--SOCKETIO SCRIPTS--}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="/js/panels/black/libs/bootstrap.min.js"></script>
     {{--TOGGLES BUTTON--}}
     <script src="/js/panels/black/libs/toggles.js"></script>
     <script type="text/javascript" src="//sst-super-c-nl.spotoption.com/socket.io/socket.io.js"></script>
@@ -68,15 +72,15 @@
         {{--TOP NAVBAR--}}
         <nav class="top-navbar navbar navbar-default">
             <div class="container">
-                <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target=".te"
-                        aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
+                <button  class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-header"
+                       >
+                    {{--<span class="sr-only">Toggle navigation</span>--}}
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
 
-                <div class="collapse navbar-collapse text-center te" aria-expanded="false">
+                <div class="collapse navbar-collapse  navbar-header text-center" >
                     <ul class="nav navbar-nav">
                         <li class="text-uppercase  navbar-part"><a href="#" class="navbar-text">view welcome message</a>
                         </li>
