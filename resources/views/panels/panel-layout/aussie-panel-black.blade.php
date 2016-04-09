@@ -1,12 +1,17 @@
 @section('head')
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300,300italic' rel='stylesheet'
           type='text/css'>
+    {{--BOOTSTRAP SWITCH CSS--}}
     <link rel="stylesheet" href="/css/panels/black/style.css"/>
 @append
 @section('bottom-scripts')
+    {{--VALIDATE SCRIPT--}}
     {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
+    {{--SOCKETIO SCRIPTS--}}
     <script type="text/javascript" src="//sst-super-c-nl.spotoption.com/socket.io/socket.io.js"></script>
+    {{--PANEL BASE SCRIPT--}}
     {!! $page->appendAsset(url('/js/panel-common/panel.js')) !!}
+
 @append
 
 @section('page-layout')
@@ -59,7 +64,13 @@
         {{--TOP NAVBAR--}}
         <nav class="top-navbar navbar navbar-default">
             <div class="container">
-                <div class="collapse navbar-collapse">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbarContent">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse navbarContent text-center">
                     <ul class="nav navbar-nav">
                         <li class="text-uppercase  navbar-part"><a href="#" class="navbar-text">view welcome message</a>
                         </li>
@@ -105,51 +116,153 @@
             </div>
         </section>
 
+        {{--3 TABS WITH THE STEPS--}}
         <section class="tabs-wrapper container">
+
             <div class="row">
 
                 {{--FIRST TAB (LEFT)--}}
-                <div class="tab-wrapper deposit col-lg-5 col-md-4 col-sm-12 col-xs 12">
+                <div class="tab-wrapper deposit  col-sm-12 col-xs 12">
                     <div class="top-part">
                         <span class="tab-number-in-circle text-center">1</span>
                         <p class="tab-title text-uppercase">deposit into your account</p>
                     </div>
                     <div class="bottom-part">
-                        <button type="button" class="tab-big-button btn btn-default btn-lg center-block text-uppercase">
+                        <button type="button" class="tab-big-button btn btn-lg center-block text-uppercase">
                             deposit now at rboptions
                         </button>
                     </div>
                 </div>
 
                 {{--SECOND TAB (CENTER)--}}
-                <div class="tab-wrapper auto-trading col-lg-3 col-md-4 col-sm-12 col-xs 12">
+                <div class="tab-wrapper auto-trading col-sm-12 col-xs 12">
                     <div class="top-part">
                         <span class="tab-number-in-circle text-center">2</span>
-                        <p class="tab-title text-uppercase">activate auto trading</p>
+                        <p class="tab-title text-uppercase text-center">activate auto trading</p>
                     </div>
                     <div class="bottom-part">
-                        <div class="tab-switch-button text-uppercase">
-
+                        <div class="tab-switch-button text-uppercase ">
+                            {{--<input type="checkbox" name="tab-switch" checked>--}}
                         </div>
                     </div>
                 </div>
 
                 {{--THIRD TAB (RIGHT)--}}
-                <div class="tab-wrapper amount col-lg-4 col-md-4 col-sm-12 col-xs 12">
+                <div class="tab-wrapper amount col-sm-12 col-xs 12">
                     <div class="top-part">
                         <span class="tab-number-in-circle text-center">3</span>
-                        <p class="tab-title text-uppercase">select amount of trading</p>
+                        <p class="tab-title text-uppercase text-center">select amount of trading</p>
                     </div>
                     <div class="bottom-part">
-                        <div class="tab-four-buttons text-uppercase">
-                            <div class="amount-button1">$25 - $50</div>
-                            <div class="amount-button2">$50 - $100</div>
-                            <div class="amount-button3">$100 - $150</div>
-                            <div class="amount-button4">$150 +</div>
+                        <div class="tab-four-buttons text-uppercase col-md-12 text-center">
+                            <button class="btn  btn-lg amount-btn amount-button2 btn-space">$50 - $100</button>
+                            <button class="btn  btn-lg amount-btn amount-button1 btn-space">$25 - $50</button>
+                            <button class="btn  btn-lg amount-btn amount-button3 btn-space">$100 - $150</button>
+                            <button class="btn  btn-lg amount-btn amount-button4 btn-space">$150 +</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        {{--TABLE WITH THE OPEN TRADE--}}
+        <section class="table-responsive rb-options-open-trade">
+            <div class="container">
+                <table class="table">
+
+                    {{--TABLE TITLE (RBOPTIONS OPEN TRADE)--}}
+                    <caption class="table-title text-center text-uppercase">rboptions open trades</caption>
+
+                    {{--FIRST TABLE ROW WITH ALL THE HEADERS--}}
+                    <tr class="table-headers table-row">
+                        <th class="text-capitalize text-center">assets</th>
+                        <th class="text-capitalize text-center">position</th>
+                        <th class="text-capitalize text-center">amount</th>
+                        <th class="text-capitalize text-center">entry rate</th>
+                        <th class="text-capitalize text-center">current rate</th>
+                        <th class="text-capitalize text-center">expiration date</th>
+                        <th class="text-capitalize text-center">status</th>
+                    </tr>
+
+                    {{--TABLE DATA--}}
+                    <tr class="table-tr-content table-row text-center">
+                        <td class="table-data td-assets text-capitalize"><span class="text-uppercase">s&p</span>future</td>
+                        <td class="table-data td-position text-uppercase"><i class="fa fa-arrow-down"></i> put</td>
+                        <td class="table-data td-amount text-success">$3955</td>
+                        <td class="table-data td-entry-rate">2035.632</td>
+                        <td class="table-data td-current-rate text-danger">2036</td>
+                        <td class="table-data td-expiration-date">2016-01-25</td>
+                        <td class="table-data td-status text-capitalize">open</td>
+                    </tr>
+                    <tr class="table-tr-content table-row text-center">
+                        <td class="table-data td-assets text-capitalize"><span class="text-uppercase">s&p</span>future</td>
+                        <td class="table-data td-position text-uppercase"><i class="fa fa-arrow-down"></i> put</td>
+                        <td class="table-data td-amount text-success">$3955</td>
+                        <td class="table-data td-entry-rate">2035.632</td>
+                        <td class="table-data td-current-rate text-danger">2036</td>
+                        <td class="table-data td-expiration-date">2016-01-25</td>
+                        <td class="table-data td-status text-capitalize">open</td>
+                    </tr>
+                    <tr class="table-tr-content table-row text-center">
+                        <td class="table-data td-assets text-capitalize"><span class="text-uppercase">s&p</span>future</td>
+                        <td class="table-data td-position text-uppercase"><i class="fa fa-arrow-down"></i> put</td>
+                        <td class="table-data td-amount text-success">$3955</td>
+                        <td class="table-data td-entry-rate">2035.632</td>
+                        <td class="table-data td-current-rate text-danger">2036</td>
+                        <td class="table-data td-expiration-date">2016-01-25</td>
+                        <td class="table-data td-status text-capitalize">open</td>
+                    </tr>
+
+                    {{--TABLE TR CONTENT--}}
+                    <tr class="table-tr-content text-center">
+                        <td class="td-assets table-data text-capitalize"><span class="text-uppercase">s&p</span>future</td>
+                        <td class="td-position table-data text-uppercase"><i class="fa fa-arrow-down"></i> put</td>
+                        <td class="td-amount table-data text-success">$3955</td>
+                        <td class="td-entry-rate table-data">2035.632</td>
+                        <td class="td-current-rate table-data text-danger">2036</td>
+                        <td class="td-expiration-date table-data">2016-01-25</td>
+                        <td class="td-status text-capitalize table-data">open</td>
+                    </tr>
+
+                </table>
+            </div>
+        </section>
+
+        {{--TABLE WITH THE OPEN TRADE--}}
+        <section class="table-responsive rb-options-history">
+            <div class="container">
+                <table class="table">
+
+                    {{--TABLE TITLE (RBOPTIONS OPEN TRADE)--}}
+                    <caption class="table-title text-center text-uppercase">rboptions trade history</caption>
+
+                    {{--FIRST TABLE ROW WITH ALL THE HEADERS--}}
+                    <tr class="table-headers table-row">
+                        <th class="text-capitalize text-center">assets</th>
+                        <th class="text-capitalize text-center">position</th>
+                        <th class="text-capitalize text-center">amount</th>
+                        <th class="text-capitalize text-center">entry rate</th>
+                        <th class="text-capitalize text-center">current rate</th>
+                        <th class="text-capitalize text-center">expiration date</th>
+                        <th class="text-capitalize text-center">status</th>
+                    </tr>
+
+                    {{--TABLE DATA--}}
+                    <tr class="table-tr-content table-row text-center">
+                        <td class="table-data td-assets text-capitalize"><span class="text-uppercase">s&p</span>future</td>
+                        <td class="table-data td-position text-uppercase"><i class="fa fa-arrow-down"></i> put </td>
+                        <td class="table-data td-amount text-success">$3955</td>
+                        <td class="table-data td-entry-rate">2035.632</td>
+                        <td class="table-data td-current-rate text-danger">2036</td>
+                        <td class="table-data td-expiration-date">2016-01-25</td>
+                        <td class="table-data td-status text-capitalize">open</td>
+                    </tr>
+
+
+                </table>
+            </div>
+        </section>
+
+
     </div>
 @endsection
