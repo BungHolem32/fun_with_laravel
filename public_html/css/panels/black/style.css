@@ -7027,6 +7027,7 @@ body {
   box-shadow: 1px 1px 10px 1px black;
   background: linear-gradient(to top, #222222, #444547);
   color: white;
+  border: none;
 }
 .content-wrapper .tabs-wrapper .tab-wrapper.amount .amount-btn:hover {
   background: #252525;

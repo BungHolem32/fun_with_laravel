@@ -6,8 +6,8 @@ $(document).ready(function() {
     }, 10000);
 
 
-    $('.startTrade').on('click', function(){
-        $('.stopTrade').removeClass('btn-danger').addClass('btn-default');
+    $('.toggle-blob').on('click', function(){
+        $('.toggle-off').removeClass('btn-danger').addClass('btn-default');
         var btn = this;
         callAjax("/ajax/turnOn", null, function(res){
             $('.wait-ref').hide();

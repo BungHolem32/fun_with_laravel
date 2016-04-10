@@ -23,7 +23,7 @@
     <script type="text/javascript" src="//sst-super-c-nl.spotoption.com/socket.io/socket.io.js"></script>
 
     {{--PANEL BASE SCRIPT--}}
-    {{--{!! $page->appendAsset(url('/js/panel-common/panel.js')) !!}--}}
+    {!! $page->appendAsset(url('/js/panel-common/panel.js')) !!}
 
     <script src="/js/panels/black/black-script.js"></script>
     {{--Main JS--}}
@@ -82,7 +82,7 @@
         {{--TOP NAVBAR--}}
         <nav class="top-navbar navbar navbar-default" role="navigation">
             <div class="container">
-                <button  class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-header">
+                <button class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-header">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -90,17 +90,25 @@
                 </button>
 
                 {{--NAV BAR CONTENT IN COLLAPSE IT CHANGE HIS APPERIANCE--}}
-                <div class="collapse navbar-collapse  navbar-header text-center" >
+                <div class="collapse navbar-collapse  navbar-header text-center">
                     {{--NAV BAR CONENT--}}
                     <ul class="nav navbar-nav">
-                        <li class="text-uppercase  navbar-part"><a href="#" class="navbar-text">view welcome message</a>
+                        <li class="text-uppercase  navbar-part"><a href="javascript:;"
+                                                                   class="navbar-text" data-toggle="modal" data-target="#myModal">@ln(view welcome message)</a>
                         </li>
-                        <li class="text-uppercase  navbar-part"><a href="#" class="navbar-text">guided tour</a></li>
-                        <li class="text-uppercase  navbar-part"><a href="#" class="navbar-text">home page</a></li>
-                        <li class="text-uppercase  navbar-part"><a href="#" class="navbar-text">broker trading area</a>
+                        <li class="text-uppercase  navbar-part"><a href="javascript:;"
+                                                                   class="navbar-text">@ln(guided tour)</a></li>
+                        <li class="text-uppercase  navbar-part"><a
+                                    href="@include('funnels.layouts._partials._url', ['url'=>$page->getParent()->fullSlug()])"
+                                    class="navbar-text">@ln(home page)</a></li>
+                        <li class="text-uppercase  navbar-part"><a
+                                    href="{{--{{ $c->getAutologinLink() }}--}}"
+                                    class="navbar-text">@ln(broker trading area)</a>
                         </li>
-                        <li class="text-uppercase  navbar-part"><a href="#" class="navbar-text">contact us</a></li>
-                        <li class="text-uppercase  navbar-part"><a href="#" class="navbar-text">log out</a></li>
+                        <li class="text-uppercase  navbar-part"><a href="{{ $page->brand->contactLink }}"
+                                                                   class="navbar-text">@ln(contact us)</a></li>
+                        <li class="text-uppercase  navbar-part"><a href="/logout" class="navbar-text">@ln(log out)</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -150,7 +158,8 @@
                         <p class="info-tab col-sm-7 col-xs-7">
                             <span class="text-capitalize">broker:</span>
                             <img src="/img/panel/black/icon-rboptions.png" alt="rboption logo">
-                            <strong class="info-result text-uppercase">rb</strong><strong class="info-result ">options</strong>
+                            <strong class="info-result text-uppercase">rb</strong><strong
+                                    class="info-result ">options</strong>
                         </p>
                         {{--AOCCOUNT DETAILS--}}
                         <p class="info-tab col-sm-5 col-sm-push-1 col-xs-5">
@@ -172,8 +181,8 @@
                 {{--TITLE WRAPPER--}}
                 <header class="active-method-title-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h3 class="text-uppercase method-title">to activate method system, your rboptions broker account
-                                                            will need your
-                                                            deposit</h3>
+                        will need your
+                        deposit</h3>
                 </header>
 
                 {{--SUBTITLE WRAPPER--}}
@@ -220,9 +229,12 @@
                         <p class="tab-title text-uppercase text-center">activate auto trading</p>
                     </div>
                     <div class="bottom-part">
-                        <div class="tab-switch-button text-uppercase ">
-                            <div class="toggles toggle-light" data-on="ON" data-off="OFF" style="height: 50px; width: 110px;">
-
+                        <div class="tab-switch-button startTrade text-uppercase ">
+                            <div class="toggles toggle-light" data-on="ON" data-off="OFF"
+                                 style="height: 50px; width: 110px;">
+                            </div>
+                            <div class="wait-ref ">
+                                <i class="fa fa-refresh fa-spin"></i>
                             </div>
                         </div>
                     </div>
@@ -236,10 +248,26 @@
                     </div>
                     <div class="bottom-part">
                         <div class="tab-four-buttons text-uppercase col-md-12 text-center">
-                            <button class="btn  btn-lg amount-btn amount-button2 btn-space">$50 - $100</button>
-                            <button class="btn  btn-lg amount-btn amount-button1 btn-space">$25 - $50</button>
-                            <button class="btn  btn-lg amount-btn amount-button3 btn-space">$100 - $150</button>
-                            <button class="btn  btn-lg amount-btn amount-button4 btn-space">$150 +</button>
+                            <?php
+                            if (!isset($bot_settings['minAmount']) || $bot_settings['minAmount'] == 25 && $bot_settings['maxAmount'] == 50)
+                                $btnClass = 'btn-success';
+                            else
+                                $btnClass = 'btn-default';
+                            ?>
+                            <button class="btn {{$btnClass}}  btn-lg amount-btn amount-button1 btn-space"
+                                    data-amount="25-50">$25 -
+                                $50
+                            </button>
+                            <button class="btn {{ ($bot_settings['minAmount'] == 50 && $bot_settings['maxAmount'] == 100) ? 'btn-success' : 'btn-default'}} btn-lg amount-btn amount-button2 btn-space"
+                                    data-amount="50-100">$50 -
+                                $100
+                            </button>
+                            <button class="btn {{ ($bot_settings['minAmount'] == 100 && $bot_settings['maxAmount'] == 150) ? 'btn-success' : 'btn-default'}} btn-lg amount-btn amount-button3 btn-space" data-amount="100-150">$100 -
+                                $150
+                            </button>
+                            <button class="btn {{ ($bot_settings['minAmount'] == 150) ? 'btn-success' : 'btn-default'}}  btn-lg amount-btn amount-button4 btn-space" data-amount="150-1000">$150
+                                +
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -356,7 +384,30 @@
             <div class="container">
                 <img src="/img/panel/black/cartificate-321.png" alt="3 icons of guaranty"
                      class="img-responsive center-block">
+                <p>Copyright © {{ $page->title_h1 }} Method. </p>
+
             </div>
         </footer>
+
+        <!-- Modal Welcome Page -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Welcome To</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Some text in the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
 @endsection
