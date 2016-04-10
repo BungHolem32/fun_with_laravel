@@ -81,7 +81,7 @@ $(document).ready(function() {
         $.post('/ajax/setRange', range);
     });
 
-    $('#logout').click(function(e){
+    $('.logout').click(function(e){
         e.preventDefault();
         callAjax('/ajaxLogout', {}, function() {
             window.location.reload(true);
@@ -127,10 +127,9 @@ $(window).on('ajax-refresh', function () {
         // before send
         $('.getLoading').css('display', 'inline-block').addClass('on');
     });
-
 });
 
-
+/*CALL AJAX*/
 function callAjax(url, data, cbSuccess, cbBefore){
     $.ajax({
         headers: {

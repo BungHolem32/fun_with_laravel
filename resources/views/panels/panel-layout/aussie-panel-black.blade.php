@@ -93,21 +93,31 @@
                 <div class="collapse navbar-collapse  navbar-header text-center">
                     {{--NAV BAR CONENT--}}
                     <ul class="nav navbar-nav">
-                        <li class="text-uppercase  navbar-part"><a href="javascript:;"
-                                                                   class="navbar-text" data-toggle="modal" data-target="#myModal">@ln(view welcome message)</a>
+                        <li class="text-uppercase navbar-part">
+                            <a href="javascript:;" class="navbar-text" data-toggle="modal"
+                               data-target=".modal-welcome">@ln(view welcome message)
+                            </a>
                         </li>
-                        <li class="text-uppercase  navbar-part"><a href="javascript:;"
-                                                                   class="navbar-text">@ln(guided tour)</a></li>
-                        <li class="text-uppercase  navbar-part"><a
-                                    href="@include('funnels.layouts._partials._url', ['url'=>$page->getParent()->fullSlug()])"
-                                    class="navbar-text">@ln(home page)</a></li>
+                        <li class="text-uppercase  navbar-part">
+                            <a href="javascript:;" class="navbar-text">@ln(guided tour)
+                            </a>
+                        </li>
+                        <li class="text-uppercase  navbar-part">
+                            <a href="@include('funnels.layouts._partials._url', ['url'=>$page->getParent()->fullSlug()])"
+                               class="navbar-text">@ln(home page)
+                            </a>
+                        </li>
                         <li class="text-uppercase  navbar-part"><a
                                     href="{{--{{ $c->getAutologinLink() }}--}}"
                                     class="navbar-text">@ln(broker trading area)</a>
                         </li>
-                        <li class="text-uppercase  navbar-part"><a href="{{ $page->brand->contactLink }}"
-                                                                   class="navbar-text">@ln(contact us)</a></li>
-                        <li class="text-uppercase  navbar-part"><a href="/logout" class="navbar-text">@ln(log out)</a>
+                        <li class="text-uppercase  navbar-part">
+                            <a href="{{ $page->brand->contactLink }}" class="navbar-text">
+                                @ln(contact us)
+                            </a>
+                        </li>
+                        <li class="text-uppercase logout  navbar-part">
+                            <a href="/logout" class="navbar-text logout">@ln(log out)</a>
                         </li>
                     </ul>
                 </div>
@@ -216,7 +226,9 @@
                         <p class="tab-title text-uppercase text-center">deposit into your account</p>
                     </div>
                     <div class="bottom-part">
-                        <button type="button" class="tab-big-button btn btn-lg center-block text-uppercase">
+                        <button type="button" class="tab-big-button btn btn-lg center-block text-uppercase"
+                                data-toggle="modal"
+                                data-target=".modal-deposit">
                             deposit now at rboptions
                         </button>
                     </div>
@@ -262,10 +274,12 @@
                                     data-amount="50-100">$50 -
                                 $100
                             </button>
-                            <button class="btn {{ ($bot_settings['minAmount'] == 100 && $bot_settings['maxAmount'] == 150) ? 'btn-success' : 'btn-default'}} btn-lg amount-btn amount-button3 btn-space" data-amount="100-150">$100 -
+                            <button class="btn {{ ($bot_settings['minAmount'] == 100 && $bot_settings['maxAmount'] == 150) ? 'btn-success' : 'btn-default'}} btn-lg amount-btn amount-button3 btn-space"
+                                    data-amount="100-150">$100 -
                                 $150
                             </button>
-                            <button class="btn {{ ($bot_settings['minAmount'] == 150) ? 'btn-success' : 'btn-default'}}  btn-lg amount-btn amount-button4 btn-space" data-amount="150-1000">$150
+                            <button class="btn {{ ($bot_settings['minAmount'] == 150) ? 'btn-success' : 'btn-default'}}  btn-lg amount-btn amount-button4 btn-space"
+                                    data-amount="150-1000">$150
                                 +
                             </button>
                         </div>
@@ -389,24 +403,162 @@
             </div>
         </footer>
 
-        <!-- Modal Welcome Page -->
-        <div id="myModal" class="modal fade" role="dialog">
+        <!-- MODAL WELCOME PAGE -->
+        <div class="modal-welcome modal fade" role="dialog">
             <div class="modal-dialog">
 
                 <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Welcome To</h4>
+                        <h4 class="modal-title">Welcome To Method</h4>
                     </div>
                     <div class="modal-body">
-                        <p>Some text in the modal.</p>
+                        <p>This Software cannot do anything until your account has a positive balance to run trades, so
+                            make sure to deposit some money into your Aussie Panel Method trading account to get
+                            started.
+                            (Remember, this is your money & you can always withdraw it at any time.)
+                        </p>
+                        <div class="steps-wrapper">
+
+                            {{--FIRST STEP--}}
+                            <div class="step-wrapper">
+                                <header class="step-title">
+                                    <h3 class="text-capitalize step-content">step 1 - fund your <span
+                                                class="text-uppercase">rb</span>options broker account</h3>
+                                </header>
+                                <div class="image-wrapper">
+                                    <img class=" step-img" src="/img/panel/black/rboptions.png" alt="rboptions logo">
+                                </div>
+                            </div>
+                            {{--SECOND STEP--}}
+                            <div class="step-wrapper">
+                                <header class="title-wrapper">
+                                    <h3 class="text-capitalize step-content">step 2 - activate your aussie panel method
+                                        software</h3>
+                                </header>
+                                <div class="image-wrapper">
+                                    <img class=" step-img" src="/img/panel/black/rocket.gif" alt="rocket-img">
+                                </div>
+                            </div>
+                            {{--THIRD STEP--}}
+                            <div class="step-wrapper">
+                                <header class="title-wrapper">
+                                    <h3 class="text-capitalize step-content ">step 3 - relaxing and watch your profit
+                                        grow</h3>
+                                </header>
+                                <div class="image-wrapper">
+                                    <img class=" step-img" src="/img/panel/black/money.gif" alt="rboptions logo">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default text-uppercase info" data-dismiss="modal">get
+                            started
+                        </button>
                     </div>
                 </div>
 
+            </div>
+        </div>
+
+        <!-- MODAL DEPOSIT PAGE -->
+        <div class="modal-deposit modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title text-center">Deposit Now Into Your RBoptions Broker Account</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        {{--BROKER NAME--}}
+                        <div class="broker-name navbar text-center">
+
+                            {{--DEPOSIT TEXT--}}
+                            <div class="deposit-broker-text-wrapper">
+                                <h3 class='text-center'>Your Broker</h3>
+                            </div>
+
+                            {{--DEPOSITE IMG--}}
+                            <div class="deposite-img-wrapper">
+                                <img src="/img/panel/black/rboptions.png" alt="">
+                            </div>
+                        </div>
+
+                        {{--DEPOSITE TITLE WRAPPER--}}
+                        <header class="deposite-title-wrapper text-center">
+
+                            {{--TEXT TITLE--}}
+                            <h2 class="deposite-title text-uppercase"><strong>start raking in money!!</strong></h2>
+
+                            {{--SUBTITLE SMALL TEXT--}}
+                            <small>Fill in the necessary information in order to open your The Aussie Panel Method
+                                account and just watch it fill with you earnings.
+                            </small>
+                        </header>
+
+                        <div class="form-wrapper">
+                            <div class="form-title text-capitalize">personal information</div>
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="fname" class="text-capitalize"><i></i> first name</label>
+                                    <input type="text" class="form-control" id="fname">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lname" class="text-capitalzize"><i></i> last name</label>
+                                    <input type="text" class="form-control" id="lname">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="text-capitalize"><i></i> email</label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="text-capitalzize"><i></i>phone</label>
+                                    <input type="phone" class="form-control" id="phone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="country" class="text-capitalize"><i></i> country</label>
+                                    <input type="text" class="form-control" id="country">
+                                </div>
+                                <div class="form-group">
+                                    <label for="city" class="text-capitalzize"><i></i>city</label>
+                                    <input type="text" class="form-control" id="city">
+                                </div>
+                                <div class="form-group">
+                                    <label for="address" class="text-capitalzize"><i></i> address</label>
+                                    <input type="text" class="form-control" id="address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip-code" class="text-capitalzize"><i></i> zip code</label>
+                                    <input type="text" class="form-control" id="zip-code">
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-type" class="text-capitalzize"><i></i> card type</label>
+                                    <input type="text" class="form-control" id="card-type">
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-number" class="text-capitalzize"><i></i> card number</label>
+                                    <input type="text" class="form-control" id="card-number">
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox"> Remember me</label>
+                                </div>
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    {{--MODEL FOOTER--}}
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default text-uppercase text-info" data-dismiss="modal">get
+                            started
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

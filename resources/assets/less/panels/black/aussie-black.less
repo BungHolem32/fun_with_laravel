@@ -6,7 +6,6 @@
 @width: 10%;
 
 /*MIXIN CLASSES*/
-
 body {
   font-family: @font;
 }
@@ -96,8 +95,8 @@ body {
         }
 
         /*ACCOUNT DETAIL PERSONAL*/
-        .account-detail-personal {
-          padding: 0.4em;
+        .account-detail-personal-info {
+          padding-top: 0.4em;
         }
       }
     }
@@ -395,7 +394,7 @@ body {
           box-shadow: 1px 1px 10px 1px black;
           background: linear-gradient(to top, #222222, #444547);
           color: white;
-          border:none;
+          border: none;
           &:hover {
             background: #252525;
             background: linear-gradient(to bottom, #252525 0%, #444547 100%);
@@ -581,5 +580,34 @@ body {
   /*FOOTER TAG WITH ALL THE LOGOS*/
   .footer-certificate-logos {
     margin: 8.4em 0 0;
+  }
+
+  /*FANCY BOX FOR WELCOME SCREEN HREF*/
+  .modal-welcome {
+
+    /*WRAPPER FOR ALL THE DIVS*/
+    .steps-wrapper {
+
+      /*STEP DIV */
+      .step-wrapper {
+        border: 1px dotted gray;
+        padding: 1em;
+        margin: 1em;
+
+        /*IMAGE-WRAPPER DIV*/
+        .image-wrapper {
+          text-align: center;
+
+          /*IMAGE SIZE */
+          .step-img {
+            width: @width*3.3;
+          }
+        }
+      }
+    }
+  }
+
+  .modal-deposite{
+
   }
 }

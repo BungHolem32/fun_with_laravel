@@ -6672,6 +6672,7 @@ body {
   /*TABS SECTION*/
   /*TABLE OF THE OPEN TRADE*/
   /*FOOTER TAG WITH ALL THE LOGOS*/
+  /*FANCY BOX FOR WELCOME SCREEN HREF*/
 }
 .content-wrapper .account-details-desktop {
   width: 205.7px;
@@ -6752,8 +6753,8 @@ body {
   padding: 0.4em;
   font-size: 1.3em;
 }
-.content-wrapper .account-details-mobile .container .row .account-detail-personal {
-  padding: 0.4em;
+.content-wrapper .account-details-mobile .container .row .account-detail-personal-info {
+  padding-top: 0.4em;
 }
 .content-wrapper .top-navbar {
   position: relative;
@@ -7207,6 +7208,25 @@ body {
 }
 .content-wrapper .footer-certificate-logos {
   margin: 8.4em 0 0;
+}
+.content-wrapper .modal-welcome {
+  /*WRAPPER FOR ALL THE DIVS*/
+}
+.content-wrapper .modal-welcome .steps-wrapper {
+  /*STEP DIV */
+}
+.content-wrapper .modal-welcome .steps-wrapper .step-wrapper {
+  border: 1px dotted gray;
+  padding: 1em;
+  margin: 1em;
+  /*IMAGE-WRAPPER DIV*/
+}
+.content-wrapper .modal-welcome .steps-wrapper .step-wrapper .image-wrapper {
+  text-align: center;
+  /*IMAGE SIZE */
+}
+.content-wrapper .modal-welcome .steps-wrapper .step-wrapper .image-wrapper .step-img {
+  width: 33%;
 }
 
 /*# sourceMappingURL=style.css.map */
