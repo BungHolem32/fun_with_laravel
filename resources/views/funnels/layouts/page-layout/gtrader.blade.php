@@ -11,12 +11,6 @@
     @com('funnel_scripts')
     {!! $page->appendAsset(url('/js/firstPage.js')) !!}
     {!! $page->appendAsset(url('/js/gtrader/jquery-migrate.min15761576.js')) !!}
-{{--    {!! $page->appendAsset(url('/js/gtrader/op-jquery-base-all.min38943894.js')) !!}--}}
-{{--    {!! $page->appendAsset(url('/js/gtrader/popup.min38943894.js')) !!}--}}
-{{--    {!! $page->appendAsset(url('/js/gtrader/comment-reply.min9c929c92.js')) !!}--}}
-{{--    {!! $page->appendAsset(url('/js/gtrader/op-front-all.min38943894.js')) !!}--}}
-    {{--{!! $page->appendAsset(url('/js/gtrader/menus.min38943894.js')) !!}--}}
-{{--    {!! $page->appendAsset(url('/js/gtrader/jquery.prettyPhoto.min38943894.js')) !!}--}}
     {!! $page->appendAsset(url('/js/gtrader/script.js')) !!}
 @append
 
@@ -45,19 +39,16 @@
                  data-style="eyJiYWNrZ3JvdW5kQ29sb3JTdGFydCI6IiMyNjMyMzgiLCJwYWRkaW5nVG9wIjoiMjUiLCJwYWRkaW5nQm90dG9tIjoiNjUiLCJib3JkZXJUb3BXaWR0aCI6IjciLCJib3JkZXJUb3BDb2xvciI6IiIsImJvcmRlckJvdHRvbVdpZHRoIjoiIiwiYm9yZGVyQm90dG9tQ29sb3IiOiIiLCJhZGRvbiI6e319">
                 <div class="fixed-width">
                     <div class="one-column column cols" id="le_body_row_2_col_1">
-                        <div class="element-container cf roboto-500 no-margin"
-                             data-style="eyJhZHZhbmNlZENsYXNzIjoicm9ib3RvLTUwMCBuby1tYXJnaW4ifQ=="
-                             id="le_body_row_2_col_1_el_1">
-                            <div class="element"><h2
-                                        style='font-size:27px;font-family:"Lato", sans-serif !important;font-weight:bold;color:#ffffff;text-align:center;line-height:42px;margin-top:10px;'>
-                                    Let The BIGGEST Search Engine in The World Do The Hard Work For YOU...</h2></div>
+                        <div class="element-container cf roboto-500 no-margin" data-style="eyJhZHZhbmNlZENsYXNzIjoicm9ib3RvLTUwMCBuby1tYXJnaW4ifQ==" id="le_body_row_2_col_1_el_1">
+                            <div class="element">
+                                <h2 style='font-size:27px;font-family:"Lato", sans-serif !important;font-weight:bold;color:#ffffff;text-align:center;line-height:42px;margin-top:10px;'>Let The BIGGEST Search Engine in The World Do The Hard Work For YOU...</h2>
+                            </div>
                         </div>
                         <div class="element-container cf roboto-500"
                              data-style="eyJhZHZhbmNlZENsYXNzIjoicm9ib3RvLTUwMCJ9" id="le_body_row_2_col_1_el_2">
-                            <div class="element"><h2
-                                        style='font-size:44px;font-family:"Lato", sans-serif !important;font-style:normal;font-weight:300;color:#ffffff;text-align:center;line-height:42px;margin-bottom:30px;'>
-                                    "Google Has Made Me Over <span style="color: #f25565;"><strong>$6,000,000</strong> </span>in
-                                    The Last Year"</h2></div>
+                            <div class="element">
+                                <h2 style='font-size:44px;font-family:"Lato", sans-serif !important;font-style:normal;font-weight:300;color:#ffffff;text-align:center;line-height:42px;margin-bottom:30px;'>"Google Has Made Me Over <span style="color: #f25565;"><strong>$6,000,000</strong></span>in The Last Year"</h2>
+                            </div>
                         </div>
                         <div class="element-container cf" data-style="" id="le_body_row_2_col_1_el_3">
                             <div class="element">
@@ -65,7 +56,7 @@
                                      style="max-width:100%; width:853px; height:auto; padding-top:0; padding-bottom:0; margin:0 auto;margin:0 auto; border: 0px solid #fff;margin-bottom: 25px;">
                                     <div style="width:853px;height:0;  padding-bottom: 56.271981242673%; padding-top:0;">
                                         <div id="my-video">
-{{--                                            @include('funnels.layouts._partials._video')--}}
+                                            @include('funnels.layouts._partials._video')
                                         </div>
                                     </div>
                                 </div>
