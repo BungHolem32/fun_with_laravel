@@ -6657,6 +6657,7 @@ button.close {
   }
 }
 /*ASSIGN VALUES*/
+/*MIXIN CLASSES*/
 .btn-space {
   margin-right: 5px;
 }
@@ -6676,7 +6677,6 @@ body {
 }
 .content-wrapper .account-details-desktop {
   width: 205.7px;
-  border: 1px solid gray;
   height: 8.6em;
   position: fixed;
   direction: ltr;
@@ -6820,6 +6820,9 @@ body {
   font-weight: bold;
   letter-spacing: 0.1px;
   margin: 0;
+}
+.content-wrapper .top-navbar .navbar-collapse .navbar-nav .navbar-part .navbar-text:hover {
+  background: #0082d8;
 }
 .content-wrapper .activate-method-system {
   margin-top: 7.5em;
@@ -7026,6 +7029,8 @@ body {
 }
 .content-wrapper .rb-options-open-trade,
 .content-wrapper .rb-options-history {
+  margin: 3em 0 0;
+  border: none;
   /*SPECIFIC CONTAINER*/
 }
 @media (max-width: 507px) {
@@ -7033,6 +7038,8 @@ body {
   .content-wrapper .rb-options-history {
     font-size: 7.5px;
     margin-bottom: 0;
+    overflow: hidden;
+    border: none;
   }
 }
 .content-wrapper .rb-options-open-trade .container,
@@ -7042,13 +7049,16 @@ body {
   /*TR WITH ALL THE HEADERS*/
   /*TR WITH ALL THE CONTENT (TD)*/
 }
+.content-wrapper .rb-options-open-trade .container .table,
+.content-wrapper .rb-options-history .container .table {
+  margin-bottom: 0;
+}
 .content-wrapper .rb-options-open-trade .container .table-row .table-data,
 .content-wrapper .rb-options-history .container .table-row .table-data {
   border-top: none;
 }
 .content-wrapper .rb-options-open-trade .container .table-title,
 .content-wrapper .rb-options-history .container .table-title {
-  margin: 53px 0 0 0;
   font-size: 1.95em;
   font-weight: bold;
   text-indent: -3.6px;
@@ -7062,6 +7072,10 @@ body {
   background: #3E8CEE;
   color: black;
   font-size: 1.3em;
+}
+.content-wrapper .rb-options-open-trade .container .table-headers .header,
+.content-wrapper .rb-options-history .container .table-headers .header {
+  border-top: none;
 }
 .content-wrapper .rb-options-open-trade .container .table-tr-content,
 .content-wrapper .rb-options-history .container .table-tr-content {

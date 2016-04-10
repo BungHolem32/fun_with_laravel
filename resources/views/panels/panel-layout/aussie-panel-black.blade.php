@@ -6,28 +6,36 @@
 @append
 @section('bottom-scripts')
 
-
-
     {{--VALIDATE SCRIPT--}}
     {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
+
     {{--SOCKETIO SCRIPTS--}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+    {{--BOOTSTRAP LIBARY--}}
     <script src="/js/panels/black/libs/bootstrap.min.js"></script>
+
     {{--TOGGLES BUTTON--}}
     <script src="/js/panels/black/libs/toggles.js"></script>
+
+    {{--SPOTOPTIONS SOCKET--}}
     <script type="text/javascript" src="//sst-super-c-nl.spotoption.com/socket.io/socket.io.js"></script>
+
     {{--PANEL BASE SCRIPT--}}
     {!! $page->appendAsset(url('/js/panel-common/panel.js')) !!}
+
     {{--Main JS--}}
     <script src="js/panels/black/main.js"></script>
 
 @append
 
+{{--BASE HTML LAYOUT--}}
 @section('page-layout')
 
+    {{--WRAPPER FOR ALL CONTENT--}}
     <div class="content-wrapper">
 
-        {{--Account Details  DESKTOP VIEW--}}
+        {{--ACCOUNT DETAILS  DESKTOP VIEW--}}
         <aside class="account-details-desktop visible-md-block visible-lg-block">
 
             {{--TITLE PART--}}
@@ -70,17 +78,18 @@
         </aside>
 
         {{--TOP NAVBAR--}}
-        <nav class="top-navbar navbar navbar-default">
+        <nav class="top-navbar navbar navbar-default" role="navigation">
             <div class="container">
-                <button  class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-header"
-                       >
-                    {{--<span class="sr-only">Toggle navigation</span>--}}
+                <button  class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-header">
+                    <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
 
+                {{--NAV BAR CONTENT IN COLLAPSE IT CHANGE HIS APPERIANCE--}}
                 <div class="collapse navbar-collapse  navbar-header text-center" >
+                    {{--NAV BAR CONENT--}}
                     <ul class="nav navbar-nav">
                         <li class="text-uppercase  navbar-part"><a href="#" class="navbar-text">view welcome message</a>
                         </li>
