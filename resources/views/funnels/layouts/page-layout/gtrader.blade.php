@@ -17,7 +17,7 @@
 {{--    {!! $page->appendAsset(url('/js/gtrader/op-front-all.min38943894.js')) !!}--}}
     {{--{!! $page->appendAsset(url('/js/gtrader/menus.min38943894.js')) !!}--}}
 {{--    {!! $page->appendAsset(url('/js/gtrader/jquery.prettyPhoto.min38943894.js')) !!}--}}
-    {{--{!! $page->appendAsset(url('/js/gtrader/script.js')) !!}--}}
+    {!! $page->appendAsset(url('/js/gtrader/script.js')) !!}
 @append
 
 @section('page-layout')
@@ -80,7 +80,7 @@
                                         <div style="text-align:center">
                                             @if($page->switches->showEmailField)
                                                 {{--<button id="btn_1_fe858d0f077104def637c2e97de7f84b" class="css-button style-1" type="submit"><span class="text">INSTANT ACCESS</span><span class="hover"></span><span class="active"></span></button>--}}
-                                                <button id="btn_1_fe858d0f077104def637c2e97de7f84b" class="css-button style-1" type="submit"><span class="text">INSTANT ACCESS</span><span class="hover"></span><span class="active"></span></button>
+                                                <button id="btn_1_fe858d0f077104def637c2e97de7f84b" class="css-button style-1 first-submit" type="submit"><span class="text">INSTANT ACCESS</span><span class="hover"></span><span class="active"></span></button>
                                             @endif
                                         </div>
                                         {!! Form::close() !!}
@@ -299,52 +299,16 @@
                 </div>
             </div>
             <div class="row four-columns cf ui-sortable" id="le_body_row_7" data-style="">
-                <div class="fixed-width">
-                    <div class="one-fourth column cols narrow" id="le_body_row_7_col_1">
-                        <div class="element-container cf" data-style="" id="le_body_row_7_col_1_el_1">
-                            <div class="element">
-                                <div class="video-lightbox-link video-lightbox-style-1  video-type-embed"
-                                     style="width:480px; margin:0 auto;">
-                                    <div class="frame-style-inner">
-                                        <a href="#op-asset-video_lightbox-1" title="Click to play" rel="prettyPhoto"
-                                           data-width="560" data-height="315" data-video="" data-video1=""
-                                           data-video2="" data-autobuffer="N" data-hide-controls="N" data-autoplay="N">
-                                            <div class="play-icon"></div>
-                                            <img alt="" src="/img/gtrader/my-review.jpg"
-                                                 style="width:480px; height: 360px;"/>
-                                        </a>
-                                    </div>
-                                    <div style="display:none">
-                                        <div id="op-asset-video_lightbox-1" style="width:560px;height:315px">
-                                            <iframe width="560" height="315"
-                                                    src="https://www.youtube.com/embed/2ku0tdbwQyg" frameborder="0"
-                                                    allowfullscreen=""></iframe>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="fixed-width videos-container">
                     <div class="one-fourth column cols narrow" id="le_body_row_7_col_2">
                         <div class="element-container cf" data-style="" id="le_body_row_7_col_2_el_1">
                             <div class="element">
                                 <div class="video-lightbox-link video-lightbox-style-1  video-type-embed"
                                      style="width:1684px; margin:0 auto;">
                                     <div class="frame-style-inner">
-                                        <a href="#op-asset-video_lightbox-2" title="Click to play" rel="prettyPhoto"
-                                           data-width="560" data-height="315" data-video="" data-video1=""
-                                           data-video2="" data-autobuffer="N" data-hide-controls="N" data-autoplay="N">
-                                            <div class="play-icon"></div>
-                                            <img alt="" src="/img/gtrader/blon.jpg"
-                                                 style="width:1684px; height: 947px;"/>
+                                        <a title="Click to play" onclick="openStories('https://www.youtube.com/embed/Q9oDNyCkYiE')" rel="prettyPhoto">
+                                            <img src="/img/gtrader/blon.jpg" style="width:1684px; height: 947px;"/>
                                         </a>
-                                    </div>
-                                    <div style="display:none">
-                                        <div id="op-asset-video_lightbox-2" style="width:560px;height:315px">
-                                            <iframe width="560" height="315"
-                                                    src="https://www.youtube.com/embed/Q9oDNyCkYiE" frameborder="0"
-                                                    allowfullscreen=""></iframe>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -356,20 +320,9 @@
                                 <div class="video-lightbox-link video-lightbox-style-1  video-type-embed"
                                      style="width:1683px; margin:0 auto;">
                                     <div class="frame-style-inner">
-                                        <a href="#op-asset-video_lightbox-3" title="Click to play" rel="prettyPhoto"
-                                           data-width="560" data-height="315" data-video="" data-video1=""
-                                           data-video2="" data-autobuffer="N" data-hide-controls="N" data-autoplay="N">
-                                            <div class="play-icon"></div>
-                                            <img alt="" src="/img/gtrader/tammy.jpg"
-                                                 style="width:1683px; height: 947px;"/>
+                                        <a title="Click to play" onclick="openStories('https://www.youtube.com/embed/ebTKmldHEWI')" rel="prettyPhoto" data-width="560" data-height="315">
+                                            <img src="/img/gtrader/tammy.jpg" style="width:1683px; height: 947px;"/>
                                         </a>
-                                    </div>
-                                    <div style="display:none">
-                                        <div id="op-asset-video_lightbox-3" style="width:560px;height:315px">
-                                            <iframe width="560" height="315"
-                                                    src="https://www.youtube.com/embed/ebTKmldHEWI" frameborder="0"
-                                                    allowfullscreen=""></iframe>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -381,23 +334,20 @@
                                 <div class="video-lightbox-link video-lightbox-style-1  video-type-embed"
                                      style="width:1683px; margin:0 auto;">
                                     <div class="frame-style-inner">
-                                        <a href="#op-asset-video_lightbox-4" title="Click to play" rel="prettyPhoto"
-                                           data-width="560" data-height="315" data-video="" data-video1=""
-                                           data-video2="" data-autobuffer="N" data-hide-controls="N" data-autoplay="N">
-                                            <div class="play-icon"></div>
-                                            <img alt="" src="/img/gtrader/xavia.jpg"
-                                                 style="width:1683px; height: 947px;"/>
+                                        <a title="Click to play" onclick="openStories('https://www.youtube.com/embed/rqNjgmcsQk0')" rel="prettyPhoto">
+                                            <img src="/img/gtrader/xavia.jpg" style="width:1683px; height: 947px;"/>
                                         </a>
-                                    </div>
-                                    <div style="display:none">
-                                        <div id="op-asset-video_lightbox-4" style="width:560px;height:315px">
-                                            <iframe width="560" height="315"
-                                                    src="https://www.youtube.com/embed/rqNjgmcsQk0" frameborder="0"
-                                                    allowfullscreen=""></iframe>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="stories_videos">
+                    <div class="gray-background" onclick="closeStories()"></div>
+                    <div class="content">
+                        <div id="op-asset-video_lightbox-2">
+                            <iframe src="" frameborder="0" allowfullscreen=""></iframe>
                         </div>
                     </div>
                 </div>
@@ -407,10 +357,9 @@
                     <div class="one-column column cols" id="le_body_row_8_col_1">
                         <div class="element-container cf" data-style="" id="le_body_row_8_col_1_el_1">
                             <div class="element">
-                                <div class="image-caption"
-                                     style='width:1047px;margin-top:0px;margin-bottom:px;margin-right:auto;margin-left:auto;'>
-                                    <img alt="" src="/img/gtrader/fb-coment-side-change4.png" border="0"
-                                         class="full-width"/></div>
+                                <div class="image-caption" style='width:1047px;margin-top:0px;margin-bottom:px;margin-right:auto;margin-left:auto;'>
+                                    <img alt="" src="/img/gtrader/fb-coment-side-change4.png" border="0" class="full-width"/>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -433,8 +382,7 @@
                                     <li>
                                         <div>
                                             <span class="feature-block-4-img-container"
-                                                  style="background-color: #b3e2ef;"><img class="feature-block-4"
-                                                                                          src="/img/gtrader/2.png"/></span>
+                                                  style="background-color: #b3e2ef;"><img class="feature-block-4" src="/img/gtrader/2.png"/></span>
                                             <h2 style='font-size:21px;font-family:"Lato", sans-serif !important;font-weight:bold;color:#4681a8;'>
                                                 No Risks!</h2>
                                             <p style='font-size:19px;font-family:"Lato", sans-serif !important;font-style:normal;font-weight:300;color:#4f4f4f;'>
@@ -447,8 +395,7 @@
                                     <li>
                                         <div>
                                             <span class="feature-block-4-img-container"
-                                                  style="background-color: #fbe6e5;"><img class="feature-block-4"
-                                                                                          src="/img/gtrader/374.png"/></span>
+                                                  style="background-color: #fbe6e5;"><img class="feature-block-4" src="/img/gtrader/374.png"/></span>
                                             <h2 style='font-size:21px;font-family:"Lato", sans-serif !important;font-weight:bold;color:#4681a8;'>
                                                 100% Guaranteed</h2>
                                             <p style='font-size:19px;font-family:"Lato", sans-serif !important;font-style:normal;font-weight:300;color:#4f4f4f;'>
@@ -461,8 +408,7 @@
                                     <li>
                                         <div>
                                             <span class="feature-block-4-img-container"
-                                                  style="background-color: #e8e8e8;"><img class="feature-block-4"
-                                                                                          src="/img/gtrader/424.png"/></span>
+                                                  style="background-color: #e8e8e8;"><img class="feature-block-4" src="/img/gtrader/424.png"/></span>
                                             <h2 style='font-size:21px;font-family:"Lato", sans-serif !important;font-weight:bold;color:#4681a8;'>
                                                 Updates & News</h2>
                                             <p style='font-size:19px;font-family:"Lato", sans-serif !important;font-style:normal;font-weight:300;color:#4f4f4f;'>
@@ -478,7 +424,7 @@
                             <div class="element">
                                 <div class="cf">
                                     <div class="my-button">
-                                        <a id="btn_1_fe858d0f077104def637c2e97de7f84b" class="css-button style-1">
+                                        <a id="btn_1_fe858d0f077104def637c2e97de7f84b" class="css-button style-1 second-submit">
                                             <span class="text">INSTANT ACCESS</span>
                                             <span class="hover"></span>
                                             <span class="active"></span>
@@ -500,13 +446,8 @@
                     </small>
                     <nav class="footer-navigation">
                         <ul id="nav-footer" class="inline-nav">
-                            <li id="menu-item-592"
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-592"><a
-                                        href="#">Disclaimer</a></li>
-                            <li id="menu-item-593"
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-593"><a
-                                        href="#">TOS</a></li>
-
+                            {{--<li id="menu-item-592" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-592"><a href="#">Disclaimer</a></li>--}}
+                            {{--<li id="menu-item-593" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-593"><a href="#">TOS</a></li>--}}
                         </ul>
                     </nav>
                     <p class="footer-copyright">Copyright 2015 - GoogleTrader - All Rights Reserved</p>

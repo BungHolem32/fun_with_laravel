@@ -309,6 +309,41 @@ body, h1, h2, h3, h4, h5, h6, p, li, ul, span{
     max-width: 100%;
     height: 400px;
 }
+.frame-style-inner img { cursor: pointer !important; }
+.gray-background { position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.52); }
+#stories_videos { display: none; }
+
+#stories_videos .content {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    top: 50px;
+    z-index: 999;
+    border-radius: 6px;
+}
+
+#op-asset-video_lightbox-2 {
+    max-width: 100%;
+    width:560px;
+    height:315px;
+}
+
+.videos-container {
+    width: 855px;
+}
+
+#stories_videos .content iframe {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    -webkit-box-shadow: 10px 10px 37px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 37px -13px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 37px -13px rgba(0,0,0,0.75);
+    padding: 10px;
+}
 
 @media only screen and (max-width: 480px) {
     #live-trades {
@@ -316,5 +351,10 @@ body, h1, h2, h3, h4, h5, h6, p, li, ul, span{
         background-size: contain;
         max-width: 100%;
         height: 200px;
+    }
+
+    #stories_videos .content {
+        width: 90%;
+        left: -20px;
     }
 }
