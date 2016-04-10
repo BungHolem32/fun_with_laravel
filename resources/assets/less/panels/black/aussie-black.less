@@ -6,9 +6,6 @@
 @width: 10%;
 
 /*MIXIN CLASSES*/
-.btn-space {
-  margin-right: 5px;
-}
 
 body {
   font-family: @font;
@@ -142,6 +139,7 @@ body {
     /*NAV BAR COLLAPSE ON MOBILE*/
     .navbar-collapse {
       text-align: center;
+      width: @width*10;
 
       /*NAV BAR INSIDE*/
       .navbar-nav {
@@ -279,7 +277,6 @@ body {
       }
       /*FIRST TAB (SPECIFIC SIZE*/
       &.deposit {
-        //width: 35.5%;
 
         /*SPECIFIC TOP PART OF DEPOSIT*/
         .top-part {
@@ -293,11 +290,101 @@ body {
       /*SECOND TAB SPECIFIC SIZE*/
       &.auto-trading {
         //width: 30.1%;
+
+        /*BOTTOM PART OF ALL BUTTONS*/
+        .bottom-part {
+
+          /*SWITCH BUTTON*/
+          .tab-switch-button {
+
+            /**/
+            .toggles {
+              height: 50px;
+              width: 110px;
+
+              &.toggle-light {
+                padding-top: 2.2em;
+                margin: 0 auto;
+
+                .toggle-slide {
+                  border-radius: 9999px;
+                  box-shadow: 0px -5px 28px -5px #999;
+                  border: 1px solid #222222;
+                  overflow: hidden;
+                  cursor: pointer;
+                  -webkit-user-select: none;
+                  -moz-user-select: none;
+                  -ms-user-select: none;
+                  user-select: none;
+                  direction: ltr;
+                  text-align: center;
+
+                  .toggle-inner {
+
+                    /*TOGGLE ON AND STYLES*/
+                    .toggle-on, .toggle-off {
+                      font-size: 22px;
+                      font-weight: bold;
+                      letter-spacing: 1.3px;
+                    }
+                    /*TOGGLE ON OFF AND BOLB STYLE */
+                    .toggle-on, .toggle-off, .toggle-blob {
+                      float: left;
+                    }
+
+                    /*TOGGLE ON SPECIFIC STYLES*/
+                    .toggle-on {
+
+                      /*ON ACTIVE CLASS*/
+                      &.active {
+                        color: #f0ffd4;
+                        text-shadow: -1px 0px 7px #969696;
+                        background: #3fd307;
+                        background: linear-gradient(to bottom, #3fd307 4%, #3fd307 4%, #e1fb38 78%);
+                        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3fd307', endColorstr='#e1fb38', GradientType=0);
+                      }
+                    }
+                    .toggle-off {
+                      background: #242326;
+                      color: #c10505;
+                    }
+                    /*ALL the light of the bolb toggle*/
+                    .toggle-blob {
+                      border-radius: 50px;
+                      background: linear-gradient(#f5f5f5, #cfcfcf);
+                      height: 48px !important;
+                      width: 48px !important;
+                      position: relative;
+                      z-index: 99;
+                      cursor: hand;
+                      cursor: -webkit-grab;
+                      cursor: grab;
+                      height: 50.4px !important;
+
+                      /*NOT ACTIVE */
+                      &[active=false] {
+                        height: 50px !important;
+                        width: 49px !important;
+                        box-shadow: inset 0px -2px 7px #000;
+                        background: linear-gradient(to bottom, #4f5053 0%, #2c2d2e 38%, #2c2d2e 38%, #2c2d2e 50%);
+                        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4f5053', endColorstr='#2c2d2e', GradientType=0);
+                      }
+                      &[active=true] {
+                        background: linear-gradient(to bottom, #e1fb38 49%, #3fd307 100%);
+                        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e1fb38', endColorstr='#3fd307', GradientType=0);
+                        position: relative;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
 
       /*THIRD TAB SPECIFIC SIZE*/
       &.amount {
-        //width: 30.3%;
         margin-right: 0 !important;
 
         .amount-btn {
@@ -308,7 +395,6 @@ body {
           left: 4px;
           box-shadow: 1px 1px 10px 1px black;
           background: linear-gradient(to top, #222222, #444547);
-          /* opacity: 0; */
           color: white;
           &:hover {
             background: #252525;
@@ -406,27 +492,31 @@ body {
   /*TABLE OF THE OPEN TRADE*/
   .rb-options-open-trade, .rb-options-history {
     margin: 3em 0 0;
-    border:none;
+    border: none;
     @media (max-width: 507px) {
       font-size: 7.5px;
       margin-bottom: 0;
       overflow: hidden;
-      border:none;
+      border: none;
     }
     /*SPECIFIC CONTAINER*/
     .container {
       padding: 0;
 
-      .table{
+      /*TABLES GENERAL*/
+      .table {
         margin-bottom: 0;
       }
+      /*TABLE ROW (TR)*/
       .table-row {
 
+        /*TABLE DATA (TD)*/
         .table-data {
           border-top: none;
         }
       }
-      /*CAPTION OF THE TABLE */
+
+      /*CAPTION OF THE TABLE (CAPTION) */
       .table-title {
         font-size: 1.95em;
         font-weight: bold;
@@ -442,22 +532,28 @@ body {
         background: #3E8CEE;
         color: black;
         font-size: 1.3em;
-        .header{
-          border-top:none;
+
+        /*HEADERS (TH)*/
+        .header {
+          border-top: none;
         }
       }
 
-      /*TR WITH ALL THE CONTENT (TD)*/
+      /*TD WITH ALL THE CONTENT (TD)*/
       .table-tr-content {
         color: white;
+
+        /*ALL TDS THE ODD*/
         &:nth-of-type(odd) {
           background: #3F3F3F;
           color: white;
         }
+        /*ALL TDS THE EVEN*/
         &:nth-of-type(even) {
           background: #282828;
         }
 
+        /*SPECIFIC TD POSITION*/
         .td-position {
           font-size: 1.1em;
           .fa-arrow-down {
@@ -466,6 +562,7 @@ body {
               font-size: 0.7em;
             }
           }
+
           .fa-arrow-up {
             color: green;
           }
@@ -481,6 +578,7 @@ body {
     }
   }
 
+  /*FOOTER TAG WITH ALL THE LOGOS*/
   .footer-certificate-logos {
     margin: 8.4em 0 0;
   }

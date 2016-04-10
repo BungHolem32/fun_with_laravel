@@ -1,7 +1,8 @@
 @section('head')
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300,300italic' rel='stylesheet'
           type='text/css'>
-    {{--BOOTSTRAP SWITCH CSS--}}
+    <link rel="stylesheet" href="/css/panels/black/libs/toggles-full.css">
+    {{--BASE STYLE SHEET--}}
     <link rel="stylesheet" href="/css/panels/black/style.css"/>
 @append
 @section('bottom-scripts')
@@ -22,8 +23,9 @@
     <script type="text/javascript" src="//sst-super-c-nl.spotoption.com/socket.io/socket.io.js"></script>
 
     {{--PANEL BASE SCRIPT--}}
-    {!! $page->appendAsset(url('/js/panel-common/panel.js')) !!}
+    {{--{!! $page->appendAsset(url('/js/panel-common/panel.js')) !!}--}}
 
+    <script src="/js/panels/black/black-script.js"></script>
     {{--Main JS--}}
     <script src="js/panels/black/main.js"></script>
 
@@ -219,7 +221,7 @@
                     </div>
                     <div class="bottom-part">
                         <div class="tab-switch-button text-uppercase ">
-                            <div class="toggle toggle-light" data-on="ON" data-off="OFF" style="height: 50px; width: 110px;">
+                            <div class="toggles toggle-light" data-on="ON" data-off="OFF" style="height: 50px; width: 110px;">
 
                             </div>
                         </div>

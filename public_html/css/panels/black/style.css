@@ -6658,9 +6658,6 @@ button.close {
 }
 /*ASSIGN VALUES*/
 /*MIXIN CLASSES*/
-.btn-space {
-  margin-right: 5px;
-}
 body {
   font-family: 'Roboto Condensed';
 }
@@ -6674,6 +6671,7 @@ body {
   /*ARROW PICTURE AT THE BOTTOM OF THE INCENTIVE*/
   /*TABS SECTION*/
   /*TABLE OF THE OPEN TRADE*/
+  /*FOOTER TAG WITH ALL THE LOGOS*/
 }
 .content-wrapper .account-details-desktop {
   width: 205.7px;
@@ -6796,6 +6794,7 @@ body {
 }
 .content-wrapper .top-navbar .navbar-collapse {
   text-align: center;
+  width: 100%;
   /*NAV BAR INSIDE*/
 }
 .content-wrapper .top-navbar .navbar-collapse .navbar-nav {
@@ -6931,6 +6930,91 @@ body {
 .content-wrapper .tabs-wrapper .tab-wrapper.deposit .top-part {
   /*SPECIFIC TITLE*/
 }
+.content-wrapper .tabs-wrapper .tab-wrapper.auto-trading {
+  /*BOTTOM PART OF ALL BUTTONS*/
+}
+.content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part {
+  /*SWITCH BUTTON*/
+}
+.content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button {
+  /**/
+}
+.content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles {
+  height: 50px;
+  width: 110px;
+}
+.content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light {
+  padding-top: 2.2em;
+  margin: 0 auto;
+}
+.content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide {
+  border-radius: 9999px;
+  box-shadow: 0px -5px 28px -5px #999;
+  border: 1px solid #222222;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  direction: ltr;
+  text-align: center;
+}
+.content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide .toggle-inner {
+  /*TOGGLE ON AND STYLES*/
+  /*TOGGLE ON OFF AND BOLB STYLE */
+  /*TOGGLE ON SPECIFIC STYLES*/
+  /*ALL the light of the bolb toggle*/
+}
+.content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide .toggle-inner .toggle-on,
+.content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide .toggle-inner .toggle-off {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1.3px;
+}
+.content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide .toggle-inner .toggle-on,
+.content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide .toggle-inner .toggle-off,
+.content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide .toggle-inner .toggle-blob {
+  float: left;
+}
+.content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide .toggle-inner .toggle-on {
+  /*ON ACTIVE CLASS*/
+}
+.content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide .toggle-inner .toggle-on.active {
+  color: #f0ffd4;
+  text-shadow: -1px 0px 7px #969696;
+  background: #3fd307;
+  background: linear-gradient(to bottom, #3fd307 4%, #3fd307 4%, #e1fb38 78%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3fd307', endColorstr='#e1fb38', GradientType=0);
+}
+.content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide .toggle-inner .toggle-off {
+  background: #242326;
+  color: #c10505;
+}
+.content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide .toggle-inner .toggle-blob {
+  border-radius: 50px;
+  background: linear-gradient(#f5f5f5, #cfcfcf);
+  height: 48px !important;
+  width: 48px !important;
+  position: relative;
+  z-index: 99;
+  cursor: hand;
+  cursor: grab;
+  height: 50.4px !important;
+  /*NOT ACTIVE */
+}
+.content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide .toggle-inner .toggle-blob[active=false] {
+  height: 50px !important;
+  width: 49px !important;
+  box-shadow: inset 0px -2px 7px #000;
+  background: linear-gradient(to bottom, #4f5053 0%, #2c2d2e 38%, #2c2d2e 38%, #2c2d2e 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4f5053', endColorstr='#2c2d2e', GradientType=0);
+}
+.content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide .toggle-inner .toggle-blob[active=true] {
+  background: linear-gradient(to bottom, #e1fb38 49%, #3fd307 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e1fb38', endColorstr='#3fd307', GradientType=0);
+  position: relative;
+}
 .content-wrapper .tabs-wrapper .tab-wrapper.amount {
   margin-right: 0 !important;
 }
@@ -6942,7 +7026,6 @@ body {
   left: 4px;
   box-shadow: 1px 1px 10px 1px black;
   background: linear-gradient(to top, #222222, #444547);
-  /* opacity: 0; */
   color: white;
 }
 .content-wrapper .tabs-wrapper .tab-wrapper.amount .amount-btn:hover {
@@ -7045,13 +7128,19 @@ body {
 .content-wrapper .rb-options-open-trade .container,
 .content-wrapper .rb-options-history .container {
   padding: 0;
-  /*CAPTION OF THE TABLE */
+  /*TABLES GENERAL*/
+  /*TABLE ROW (TR)*/
+  /*CAPTION OF THE TABLE (CAPTION) */
   /*TR WITH ALL THE HEADERS*/
-  /*TR WITH ALL THE CONTENT (TD)*/
+  /*TD WITH ALL THE CONTENT (TD)*/
 }
 .content-wrapper .rb-options-open-trade .container .table,
 .content-wrapper .rb-options-history .container .table {
   margin-bottom: 0;
+}
+.content-wrapper .rb-options-open-trade .container .table-row,
+.content-wrapper .rb-options-history .container .table-row {
+  /*TABLE DATA (TD)*/
 }
 .content-wrapper .rb-options-open-trade .container .table-row .table-data,
 .content-wrapper .rb-options-history .container .table-row .table-data {
@@ -7072,6 +7161,7 @@ body {
   background: #3E8CEE;
   color: black;
   font-size: 1.3em;
+  /*HEADERS (TH)*/
 }
 .content-wrapper .rb-options-open-trade .container .table-headers .header,
 .content-wrapper .rb-options-history .container .table-headers .header {
@@ -7080,6 +7170,9 @@ body {
 .content-wrapper .rb-options-open-trade .container .table-tr-content,
 .content-wrapper .rb-options-history .container .table-tr-content {
   color: white;
+  /*ALL TDS THE ODD*/
+  /*ALL TDS THE EVEN*/
+  /*SPECIFIC TD POSITION*/
 }
 .content-wrapper .rb-options-open-trade .container .table-tr-content:nth-of-type(odd),
 .content-wrapper .rb-options-history .container .table-tr-content:nth-of-type(odd) {
