@@ -4,10 +4,22 @@
 @image: '/img/panel/black/';
 @font: 'Roboto Condensed';
 @width: 10%;
-
+@transition: 'all 1s';
 /*MIXIN CLASSES*/
 body {
   font-family: @font;
+  transition: all 1s;
+  left: 0;
+  margin: 0;
+  position: relative;
+}
+
+.push-body-nav-mobile {
+  left: 200px !important;
+}
+
+.push-navbar-mobile {
+  left: 0 !important;
 }
 
 /*WRAPPER FOR ALL THE CONTENT*/
@@ -85,6 +97,10 @@ body {
 
     .container {
       background: white;
+
+      @media (max-width: 768px) {
+        padding: 0;
+      }
       .row {
         /*ACCOUNT DETAIL TITLE */
         .account-details-title {
@@ -101,8 +117,8 @@ body {
       }
     }
   }
-  /*TOP NAVBAR*/
-  .top-navbar {
+  /*NAVBAR DESKTOP*/
+  .navbar-desktop {
     position: relative;
     background: #2c98e0;
     border: none;
@@ -112,17 +128,38 @@ body {
       top: 5.1em;
     }
 
+    /*BACKGROUND BECAME TRANSPARENT*/
     @media (max-width: 768px) {
-      background: rgba(44, 152, 224, 0.5);
+      background: transparent;
+      margin-bottom: 0;
+
     }
 
     /*CONTAINER INSIDE THE NAV-BAR*/
     .container {
-
       /*ON MOBILE VIEW CHANGE THE NAVBAR TO BE 100% WIDTH AND DECREASE THE SIZE OF THE FONT*/
       @media (max-width: 996px) {
         width: @width*10;
         font-size: 0.9em;
+      }
+      @media (max-width: 768px) {
+        padding: 0;
+      }
+
+      /*BUTTON ELEMENT*/
+      .navbar-toggle {
+        border: none;
+        border-radius: 0;
+        background: #2C98E0;
+        position: relative;
+        float: right;
+        padding: 20px 20px;
+        margin: 0;
+        border-left: 1px solid #237EBB;
+
+        .icon-bar {
+          background-color: white;
+        }
       }
 
       /**/
@@ -166,6 +203,39 @@ body {
               background: #0082d8;
             }
           }
+        }
+      }
+    }
+  }
+
+  /* NAVBAR MOBILE*/
+  .navbar-mobile {
+    left: -200px;
+    height: 100%;
+    position: fixed;
+    width: 200px;
+    top: 0;
+    z-index: 100;
+    background: #2C98E0;
+    transition: all 1s;
+    .navbar-ul-wrapper {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      .navbar-li-wrapper {
+        border-bottom: 1px solid #237EBB;
+        font-family: 'Open Sans', sans-serif;
+        line-height: 45px;
+        padding-bottom: 3px;
+        padding-left: 20px;
+        padding-top: 3px;
+
+        .navbar-text-mobile {
+          color: #fff;
+          font-size: 0.9em;
+          text-decoration: none;
+          text-transform: uppercase;
         }
       }
     }
@@ -582,8 +652,40 @@ body {
     margin: 8.4em 0 0;
   }
 
-  /*FANCY BOX FOR WELCOME SCREEN HREF*/
+  /*FANCY BOX FOR WELCOME SCREEN HREF (DIV)*/
   .modal-welcome {
+
+    /*WRAPPER FOR ALL THE CONTENT HEADER + BODY + FOOTER*/
+    .modal-welcome-content {
+      background: black;
+
+      /*HEADER OF THE MODAL (DIV)*/
+      .modal-header {
+        background: #01385e;
+        border: none;
+
+        /*MODAL TITLE */
+        .modal-title-h3 {
+          margin: 0;
+          line-height: 1.42857143;
+          color: white;
+          font-weight: bold;
+          letter-spacing: 1.2px;
+          font-size: 2em;
+        }
+      }
+      /*BODY PART (CONTENT OF THE MODAL) (DIV)*/
+      .modal-body {
+        .modal-welcome-text-p {
+          color: white;
+          text-align: center;
+          .model-welcome-text-ps-span {
+            color: #0085b9;
+            display: block;
+          }
+        }
+      }
+    }
 
     /*WRAPPER FOR ALL THE DIVS*/
     .steps-wrapper {
@@ -609,60 +711,5 @@ body {
 
   .modal-deposite {
 
-  }
-}
-
-//style for navbar push test
-body {
-  left: 0;
-  margin: 0;
-  overflow: hidden;
-  position: relative;
-
-
-  /* Initial menu */
-  .menu {
-    background: #202024 url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/black-thread.png') repeat left top;
-    left: -200px; /* start off behind the scenes */
-    height: 100%;
-    position: fixed;
-    width: 200px;
-    top: 0;
-    ul {
-      border-top: 1px solid #636366;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    li {
-      border-bottom: 1px solid #636366;
-      font-family: 'Open Sans', sans-serif;
-      line-height: 45px;
-      padding-bottom: 3px;
-      padding-left: 20px;
-      padding-top: 3px;
-    }
-    a {
-      color: #fff;
-      font-size: 15px;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-    .icon-close {
-      cursor: pointer;
-      padding-left: 10px;
-      padding-top: 10px;
-    }
-    .icon-menu {
-      color: #fff;
-      cursor: pointer;
-      font-family: 'Open Sans', sans-serif;
-      font-size: 16px;
-      padding-bottom: 25px;
-      padding-left: 25px;
-      padding-top: 25px;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
   }
 }

@@ -29,7 +29,7 @@
 
     <script src="/js/panels/black/black-script.js"></script>
     {{--Main JS--}}
-    <script src="js/panels/black/main.js"></script>
+    <script src="/js/panels/black/main.js"></script>
 
 @append
 
@@ -81,8 +81,8 @@
             </div>
         </aside>
 
-        {{--TOP NAVBAR--}}
-        <nav class="top-navbar navbar navbar-default" role="navigation">
+        {{--NAVBAR DESKTOP--}}
+        <nav class="navbar-desktop navbar navbar-default" role="navigation">
             <div class="container">
                 <button class="navbar-toggle pull-left icon-menu" {{--data-toggle="collapse" data-target=".navbar-header"--}}>
                     <span class="sr-only">Toggle navigation</span>
@@ -96,7 +96,7 @@
                     {{--NAV BAR CONENT--}}
                     <ul class="nav navbar-nav">
                         <li class="text-uppercase navbar-part">
-                            <a href="javascript:;" class="navbar-text" data-toggle="modal"
+                            <a href="#" class="navbar-text" data-toggle="modal"
                                data-target=".modal-welcome">@ln(view welcome message)
                             </a>
                         </li>
@@ -109,9 +109,11 @@
                                class="navbar-text">@ln(home page)
                             </a>
                         </li>
-                        <li class="text-uppercase  navbar-part"><a
+                        <li class="text-uppercase  navbar-part">
+                            <a
                                     href="{{--{{ $c->getAutologinLink() }}--}}"
-                                    class="navbar-text">@ln(broker trading area)</a>
+                                    class="navbar-text">@ln(broker trading area)
+                            </a>
                         </li>
                         <li class="text-uppercase  navbar-part">
                             <a href="{{ $page->brand->contactLink }}" class="navbar-text">
@@ -126,28 +128,48 @@
             </div>
         </nav>
 
-        {{--nav for mobile --}}
-        <div class="menu">
-
-            <!-- Menu icon -->
-            <div class="icon-close">
-                <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
-            </div>
+        {{--NAV FOR MOBILE CUSTIMIZE --}}
+        <div class="navbar-mobile">
 
             <!-- Menu -->
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Contact</a></li>
+            <ul class="navbar-ul-wrapper">
+                <li class="navbar-li-wrapper" class="navbar-li-wrapper">
+                    <a href="javascript:;" class="navbar-text-mobile" data-toggle="modal"
+                       data-target=".modal-welcome">@ln(view welcome message)
+                    </a>
+                </li>
+                <li class="navbar-li-wrapper" >
+                    <a href="javascript:;" class="navbar-text-mobile">
+                        @ln(guided tour)
+                    </a>
+                </li>
+                <li class="navbar-li-wrapper">
+                    <a href="@include('funnels.layouts._partials._url', ['url'=>$page->getParent()->fullSlug()])"
+                       class="navbar-text-mobile">@ln(home page)
+                    </a>
+                </li>
+                <li class="navbar-li-wrapper">
+                    <a
+                            href="{{--{{ $c->getAutologinLink() }}--}}"
+                            class="navbar-text-mobile">@ln(broker trading area)
+                    </a>
+                </li>
+                <li class="navbar-li-wrapper">
+                    <a href="{{ $page->brand->contactLink }}" class="navbar-text-mobile">
+                        @ln(contact us)
+                    </a>
+                </li>
+                <li class="navbar-li-wrapper">
+                    <a href="{{ $page->brand->contactLink }}" class="navbar-text-mobile">
+                        @ln(contact us)
+                    </a>
+                </li>
+                <li class="navbar-li-wrapper">
+                    <a href="/logout" class="navbar-text-mobile logout">@ln(log out)</a>
+                </li>
+
             </ul>
         </div>
-        {{--<div class="icon-menu">--}}
-            {{--<span class='icon-bar'></span>--}}
-            {{--<span class='icon-bar'></span>--}}
-            {{--<span class='icon-bar'></span>--}}
-            {{--what up--}}
-        {{--</div>--}}
 
         {{--ACCOUNT DETAILS --}}
         <aside class="account-details-mobile visible-sm-block visible-xs-block">
@@ -270,9 +292,6 @@
                             <div class="toggles toggle-light" data-on="ON" data-off="OFF"
                                  style="height: 50px; width: 110px;">
                             </div>
-                            <div class="wait-ref ">
-                                <i class="fa fa-refresh fa-spin"></i>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -315,7 +334,6 @@
                 <img src="/img/panel/black/tab-arrow.png" alt="rotate arrow">
             </div>
         </section>
-
 
         {{--TABLE WITH THE OPEN TRADE--}}
         <section class="table-responsive rb-options-open-trade">
@@ -428,21 +446,22 @@
             </div>
         </footer>
 
-        <!-- MODAL WELCOME PAGE -->
+        {{-- MODAL WELCOME PAGE --}}
         <div class="modal-welcome modal fade" role="dialog">
             <div class="modal-dialog">
 
                 <!-- Modal content-->
-                <div class="modal-content">
+                <div class="modal-content modal-welcome-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Welcome To Method</h4>
+                        <button type="button" class="close" data-dismiss="modal"><i class="glyphicon glyphicon-remove"></i></button>
+
+                        <h3 class="modal-title-h3 text-uppercase text-center">welcome to xxx panel method!</h3>
                     </div>
                     <div class="modal-body">
-                        <p>This Software cannot do anything until your account has a positive balance to run trades, so
+                        <p class="modal-welcome-text-p">This Software cannot do anything until your account has a positive balance to run trades, so
                             make sure to deposit some money into your Aussie Panel Method trading account to get
                             started.
-                            (Remember, this is your money & you can always withdraw it at any time.)
+                           <span class="model-welcome-text-ps-span">(Remember, this is your money & you can always withdraw it at any time.)</span>
                         </p>
                         <div class="steps-wrapper">
 
@@ -488,7 +507,7 @@
             </div>
         </div>
 
-        <!-- MODAL DEPOSIT PAGE -->
+        {{--MODAL DEPOSIT PAGE --}}
         <div class="modal-deposit modal fade" role="dialog">
             <div class="modal-dialog">
 
