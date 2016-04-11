@@ -1,9 +1,11 @@
 @section('head')
+    {{--FONT INCLUDE--}}
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300,300italic' rel='stylesheet'
           type='text/css'>
     <link rel="stylesheet" href="/css/panels/black/libs/toggles-full.css">
     {{--BASE STYLE SHEET--}}
     <link rel="stylesheet" href="/css/panels/black/style.css"/>
+
 @append
 @section('bottom-scripts')
 
@@ -82,7 +84,7 @@
         {{--TOP NAVBAR--}}
         <nav class="top-navbar navbar navbar-default" role="navigation">
             <div class="container">
-                <button class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-header">
+                <button class="navbar-toggle pull-left icon-menu" {{--data-toggle="collapse" data-target=".navbar-header"--}}>
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -123,6 +125,29 @@
                 </div>
             </div>
         </nav>
+
+        {{--nav for mobile --}}
+        <div class="menu">
+
+            <!-- Menu icon -->
+            <div class="icon-close">
+                <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
+            </div>
+
+            <!-- Menu -->
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        {{--<div class="icon-menu">--}}
+            {{--<span class='icon-bar'></span>--}}
+            {{--<span class='icon-bar'></span>--}}
+            {{--<span class='icon-bar'></span>--}}
+            {{--what up--}}
+        {{--</div>--}}
 
         {{--ACCOUNT DETAILS --}}
         <aside class="account-details-mobile visible-sm-block visible-xs-block">
@@ -554,8 +579,8 @@
 
                     {{--MODEL FOOTER--}}
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default text-uppercase text-info" data-dismiss="modal">get
-                            started
+                        <button type="button" class="btn btn-default text-uppercase text-info" data-dismiss="modal">
+                            get started
                         </button>
                     </div>
                 </div>
