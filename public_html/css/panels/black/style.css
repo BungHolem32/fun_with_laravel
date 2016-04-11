@@ -7328,6 +7328,9 @@ body {
   color: white;
   /*INNER WRAPPER */
 }
+.content-wrapper .modal-deposit .modal-dialog {
+  width: 60%;
+}
 .content-wrapper .modal-deposit .modal-deposit-content {
   background: #282827;
   /*MODAL HEADER*/
@@ -7346,6 +7349,7 @@ body {
 }
 .content-wrapper .modal-deposit .modal-deposit-content .modal-body {
   padding: 0;
+  /*FORM WRAPPER FOR DEPOSIT*/
 }
 .content-wrapper .modal-deposit .modal-deposit-content .modal-body .broker-name {
   border-radius: 4px;
@@ -7373,6 +7377,10 @@ body {
   color: black;
   font-weight: bolder;
   font-size: 3em;
+}
+.content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form .first-part-form,
+.content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form .second-part-form {
+  padding: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -430,8 +430,6 @@
                         <td class="table-data td-expiration-date">2016-01-25</td>
                         <td class="table-data td-status text-capitalize">close</td>
                     </tr>
-
-
                 </table>
             </div>
         </section>
@@ -545,122 +543,130 @@
                             </small>
                         </header>
 
+                        {{--FORM OUTER WRAPPER--}}
                         <div class="form-wrapper">
-                            <div class="col-lg-6">
 
-                                {{--FORM TITLE PERSONAL INFO--}}
-                                <div class="form-title text-uppercase">personal information</div>
-                                <div class="img-arrow-to-inputs">
-                                    <img src="" alt="arrow that points to the inputs">
-                                </div>
+                            {{--FORM INPUTS--}}
+                            <form class="form" role="form">
+                                {{--FIRST ROW FORM--}}
+                                <div class="col-lg-6 first-part-form">
 
-                                {{--FORM INPUTS--}}
-                                <form class="form" role="form">
+                                    {{--FORM TITLE PERSONAL INFO--}}
+                                    <div class="form-title-wrapper">
+                                        <h3 class="form-title text-uppercase col-md-7">personal information</h3>
+                                        <img src="" alt="arrow that points to the inputs" class="col-md-5">
+                                    </div>
+
+                                    <div class="clearfix"></div>
 
                                     {{--FIRST NAME--}}
-                                    <div class="form-group">
-                                        <label for="fname" class="text-capitalize"><i></i> first name</label>
-                                        <input type="text" class="form-control" id="fname">
+                                    <div class="form-group ">
+                                        <label for="fname" class="text-capitalize col-md-4"><i></i> first name</label>
+                                        <input type="text" class="form-control col-md-8" id="fname">
                                     </div>
 
                                     {{--LAST NAME --}}
-                                    <div class="form-group">
-                                        <label for="lname" class="text-capitalize"><i></i> last name</label>
-                                        <input type="text" class="form-control" id="lname">
+                                    <div class="form-group ">
+                                        <label for="lname" class="text-capitalize col-md-4"><i></i> last name</label>
+                                        <input type="text" class="form-control col-md-8" id="lname">
                                     </div>
 
                                     {{--EMAIL--}}
-                                    <div class="form-group">
-                                        <label for="email" class="text-capitalize"><i></i> email</label>
-                                        <input type="email" class="form-control" id="email">
+                                    <div class="form-group ">
+                                        <label for="email" class="text-capitalize col-md-4"><i></i> email</label>
+                                        <input type="email" class="form-control col-md-8" id="email">
                                     </div>
 
                                     {{--PHONE--}}
-                                    <div class="form-group">
-                                        <label for="phone" class="text-capitalize"><i></i>phone</label>
-                                        <input type="phone" class="form-control" id="phone">
+                                    <div class="form-group ">
+                                        <label for="phone" class="text-capitalize col-md-4"><i></i>phone</label>
+                                        <input type="phone" class="form-control col-md-8" id="phone">
                                     </div>
 
                                     {{--COUNTRY--}}
-                                    <div class="form-group">
-                                        <label for="country" class="text-capitalize"><i></i> country</label>
-                                        <input type="text" class="form-control" id="country">
+                                    <div class="form-group ">
+                                        <label for="country" class="text-capitalize col-md-4"><i></i> country</label>
+                                        <input type="text" class="form-control col-md-8" id="country">
                                     </div>
 
                                     {{--CITY--}}
-                                    <div class="form-group">
-                                        <label for="city" class="text-capitalize"><i></i> city</label>
-                                        <input type="text" class="form-control" id="city">
+                                    <div class="form-group ">
+                                        <label for="city" class="text-capitalize col-md-4"><i></i> city</label>
+                                        <input type="text" class="form-control col-md-8" id="city">
                                     </div>
 
                                     {{--ADDRESS--}}
-                                    <div class="form-group">
-                                        <label for="address" class="text-capitalize"><i></i> address</label>
-                                        <input type="text" class="form-control" id="address">
+                                    <div class="form-group ">
+                                        <label for="address" class="text-capitalize col-md-4"><i></i> address</label>
+                                        <input type="text" class="form-control col-md-8" id="address">
                                     </div>
 
                                     {{--ZIP CODE--}}
-                                    <div class="form-group">
-                                        <label for="zip-code" class="text-capitalize"><i></i> zip code</label>
-                                        <input type="text" class="form-control" id="zip-code">
+                                    <div class="form-group ">
+                                        <label for="zip-code" class="text-capitalize col-md-4"><i></i> zip code</label>
+                                        <input type="text" class="form-control col-md-8" id="zip-code">
                                     </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-title text-uppercase">your payment details</div>
-                                <div class="img-arrow-to-inputs display">
-                                    <img src="" alt="arrow that points to the inputs">
                                 </div>
-                                {{--CARD-TYPE--}}
-                                <div class="form-group">
-                                    <label for="card-type" class="text-capitalize"><i></i> card type</label>
-                                    <select class="form-control text-capitalize" name="" id="card-type">
-                                        <option value="0">choose type</option>
-                                        <option value="1">visa</option>
-                                        <option value="2">mastercard</option>
-                                        <option value="3">CarteBleue</option>
-                                        <option value="4">Maestro</option>
-                                    </select>
-                                    <img src="" alt="">
-                                </div>
+                                {{--SECOND ROW FORM--}}
+                                <div class="col-lg-6 second-part-form">
+                                    <div class="form-title-wrapper">
+                                        <h3 class="form-title text-uppercase col-md-7 ">your payment details</h3>
+                                        <img src="" alt="arrow that points to the inputs" class="col-md-5">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    {{--CARD-TYPE--}}
+                                    <div class="form-group ">
+                                        <label for="card-type" class="text-capitalize col-md-4"><i></i> card
+                                            type</label>
+                                        <select class="form-control text-capitalize col-md-8" name="" id="card-type">
+                                            <option value="0">choose type</option>
+                                            <option value="1">visa</option>
+                                            <option value="2">mastercard</option>
+                                            <option value="3">CarteBleue</option>
+                                            <option value="4">Maestro</option>
+                                        </select>
+                                        <img src="" alt="">
+                                    </div>
 
-                                {{--CARD NUMBER--}}
-                                <div class="form-group">
-                                    <label for="card-number" class="text-capitalize"><i></i> card number</label>
-                                    <input type="text" class="form-control" id="card-number">
-                                </div>
+                                    {{--CARD NUMBER--}}
+                                    <div class="form-group ">
+                                        <label for="card-number" class="text-capitalize col-md-4"><i></i> card
+                                            number</label>
+                                        <input type="text" class="form-control col-md-8" id="card-number">
+                                    </div>
 
-                                {{--AMOUNT--}}
-                                <div class="form-group">
-                                    <label for="amount" class="text-capitalize"><i></i> amount</label>
-                                    <input type="text" class="form-control" id="amount">
-                                </div>
+                                    {{--AMOUNT--}}
+                                    <div class="form-group ">
+                                        <label for="amount" class="text-capitalize col-md-4"><i></i> amount</label>
+                                        <input type="text" class="form-control col-md-8" id="amount">
+                                    </div>
 
-                                {{--EXPIRATION--}}
-                                <div class="form-group">
-                                    <label for="expiration-date" class="text-capitalize"><i></i>expiration date</label>
-                                    <input type="text" class="form-control" id="expiration">
-                                </div>
+                                    {{--EXPIRATION--}}
+                                    <div class="form-group ">
+                                        <label for="expiration-date" class="text-capitalize col-md-4"><i></i>expiration
+                                            date</label>
+                                        <input type="text" class="form-control col-md-8" id="expiration">
+                                    </div>
 
-                                {{--CVV--}}
-                                <div class="form-group">
-                                    <label for="cvv" class="text-uppercase"><i></i> cvv</label>
-                                    <input type="text" class="form-control" id="cvv">
+                                    {{--CVV--}}
+                                    <div class="form-group ">
+                                        <label for="cvv" class="text-uppercase col-md-4"><i></i> cvv</label>
+                                        <input type="text" class="form-control col-md-8" id="cvv">
+                                    </div>
+                                    <button type="submit" class="btn btn-default ">Submit</button>
                                 </div>
-                            </div>
-
-                            <button type="submit" class="btn btn-default">Submit</button>
                             </form>
                         </div>
                     </div>
-
                     {{--MODEL FOOTER--}}
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default text-uppercase text-info" data-dismiss="modal">
-                            get started
+                        <button type="button" class="btn btn-default text-uppercase info" data-dismiss="modal">get
+                            started
                         </button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 @endsection
