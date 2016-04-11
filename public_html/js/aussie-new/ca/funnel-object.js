@@ -558,10 +558,7 @@
         funnelControll.tweeter_n_facebook_tempalte.appendElement ( [ 'tweets', 'twt' ] );
 
     }, 30000 );
-
-    /*11 = CHANGE THE VALUE OF THE PREFIX INPUT IN MEMBER PAGE*/
-    funnelControll.update_input_prefix ();
-
+    
 
     $ ( '.first-page #video_n_form' ).find ( 'video.video' ).addClass ( 'col-md-7 pull-left' ).attr ( 'id', 'video_part' ).css ( {
         "border" : "9px solid #1E387B",
