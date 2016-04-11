@@ -6684,6 +6684,7 @@ body {
   /*TABLE OF THE OPEN TRADE*/
   /*FOOTER TAG WITH ALL THE LOGOS*/
   /*FANCY BOX FOR WELCOME SCREEN HREF (DIV)*/
+  /*MODAL BASE WRAPPER FOR DEPOSIT FORM*/
 }
 .content-wrapper .account-details-desktop {
   width: 205.7px;
@@ -7277,7 +7278,6 @@ body {
 }
 .content-wrapper .modal-welcome {
   /*WRAPPER FOR ALL THE CONTENT HEADER + BODY + FOOTER*/
-  /*WRAPPER FOR ALL THE DIVS*/
 }
 .content-wrapper .modal-welcome .modal-welcome-content {
   background: black;
@@ -7297,28 +7297,82 @@ body {
   letter-spacing: 1.2px;
   font-size: 2em;
 }
+.content-wrapper .modal-welcome .modal-welcome-content .modal-body {
+  /*WRAPPER FOR ALL THE STEPS NEW USER NEW TO HAVE TO START USE THE PANEL*/
+}
 .content-wrapper .modal-welcome .modal-welcome-content .modal-body .modal-welcome-text-p {
   color: white;
   text-align: center;
 }
 .content-wrapper .modal-welcome .modal-welcome-content .modal-body .modal-welcome-text-p .model-welcome-text-ps-span {
   color: #0085b9;
+  display: block;
 }
-.content-wrapper .modal-welcome .steps-wrapper {
+.content-wrapper .modal-welcome .modal-welcome-content .modal-body .steps-wrapper {
   /*STEP DIV */
 }
-.content-wrapper .modal-welcome .steps-wrapper .step-wrapper {
+.content-wrapper .modal-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper {
   border: 1px dotted gray;
   padding: 1em;
   margin: 1em;
   /*IMAGE-WRAPPER DIV*/
 }
-.content-wrapper .modal-welcome .steps-wrapper .step-wrapper .image-wrapper {
+.content-wrapper .modal-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper .image-wrapper {
   text-align: center;
   /*IMAGE SIZE */
 }
-.content-wrapper .modal-welcome .steps-wrapper .step-wrapper .image-wrapper .step-img {
+.content-wrapper .modal-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper .image-wrapper .step-img {
   width: 33%;
+}
+.content-wrapper .modal-deposit {
+  color: white;
+  /*INNER WRAPPER */
+}
+.content-wrapper .modal-deposit .modal-deposit-content {
+  background: #282827;
+  /*MODAL HEADER*/
+}
+.content-wrapper .modal-deposit .modal-deposit-content .modal-header {
+  background: #01385e;
+  color: white;
+  border: none;
+}
+.content-wrapper .modal-deposit .modal-deposit-content .modal-header .modal-title {
+  margin: 0;
+  line-height: 1.42857143;
+  font-size: 1.6em;
+  font-weight: 600;
+  text-shadow: 1px 0px 1px black;
+}
+.content-wrapper .modal-deposit .modal-deposit-content .modal-body {
+  padding: 0;
+}
+.content-wrapper .modal-deposit .modal-deposit-content .modal-body .broker-name {
+  border-radius: 4px;
+  padding: 0;
+  margin: 0;
+}
+.content-wrapper .modal-deposit .modal-deposit-content .modal-body .broker-name .deposit-broker-text-wrapper {
+  padding: 0;
+  margin: 0;
+}
+.content-wrapper .modal-deposit .modal-deposit-content .modal-body .broker-name .deposit-broker-text-wrapper .deposit-broker-text {
+  padding: 3px 0;
+  margin: 0;
+}
+.content-wrapper .modal-deposit .modal-deposit-content .modal-body .broker-name .hand {
+  color: #0069b1;
+}
+.content-wrapper .modal-deposit .modal-deposit-content .modal-body .deposit-title-wrapper {
+  background: #0099ff;
+  padding: 0.2em;
+  box-shadow: 0px 2px 1px 1px black;
+}
+.content-wrapper .modal-deposit .modal-deposit-content .modal-body .deposit-title-wrapper .deposite-title {
+  margin: 0;
+  color: black;
+  font-weight: bolder;
+  font-size: 3em;
 }
 
 /*# sourceMappingURL=style.css.map */

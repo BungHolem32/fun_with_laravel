@@ -684,32 +684,86 @@ body {
             display: block;
           }
         }
-      }
-    }
+        /*WRAPPER FOR ALL THE STEPS NEW USER NEW TO HAVE TO START USE THE PANEL*/
+        .steps-wrapper {
 
-    /*WRAPPER FOR ALL THE DIVS*/
-    .steps-wrapper {
+          /*STEP DIV */
+          .step-wrapper {
+            border: 1px dotted gray;
+            padding: 1em;
+            margin: 1em;
 
-      /*STEP DIV */
-      .step-wrapper {
-        border: 1px dotted gray;
-        padding: 1em;
-        margin: 1em;
+            /*IMAGE-WRAPPER DIV*/
+            .image-wrapper {
+              text-align: center;
 
-        /*IMAGE-WRAPPER DIV*/
-        .image-wrapper {
-          text-align: center;
-
-          /*IMAGE SIZE */
-          .step-img {
-            width: @width*3.3;
+              /*IMAGE SIZE */
+              .step-img {
+                width: @width*3.3;
+              }
+            }
           }
         }
       }
     }
+
   }
 
-  .modal-deposite {
+  /*MODAL BASE WRAPPER FOR DEPOSIT FORM*/
+  .modal-deposit{
+    color:white;
 
+    /*INNER WRAPPER */
+    .modal-deposit-content{
+      background: #282827;
+
+      /*MODAL HEADER*/
+      .modal-header {
+        background: #01385e;
+        color: white;
+        border: none;
+        .modal-title {
+          margin: 0;
+          line-height: 1.42857143;
+          font-size: 1.6em;
+          font-weight: 600;
+          text-shadow: 1px 0px 1px black;
+        }
+      }
+      .modal-body{
+        padding:0;
+        .broker-name{
+          border-radius: 4px;
+          padding: 0;
+          margin: 0;
+          .deposit-broker-text-wrapper{
+            padding:0;
+            margin:0;
+            .deposit-broker-text{
+              padding: 3px 0;
+              margin:0;
+            }
+          }
+          .hand{
+            color:#0069b1;
+          }
+        }
+
+        .deposit-title-wrapper{
+          background: #0099ff;
+          padding: 0.2em;
+          box-shadow: 0px 2px 1px 1px black;
+
+          .deposite-title{
+            margin: 0;
+            color: black;
+            font-weight: bolder;
+            font-size: 3em;
+          }
+
+
+        }
+      }
+    }
   }
 }
