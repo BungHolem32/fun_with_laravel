@@ -3,7 +3,6 @@
 use App\Http\Requests;
 
 class ZulanderController extends \App\Http\Controllers\Base\AbstractFunnelController {
-
     public function getUserContent() {
         $locationContent    = null;
         $response           = [];
