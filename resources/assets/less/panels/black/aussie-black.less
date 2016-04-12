@@ -687,59 +687,130 @@ body {
 
     /*FANCY BOX FOR WELCOME SCREEN HREF (DIV)*/
     .modal-welcome {
+      color: white;
+      background: rgba(0, 0, 0, 0.6);
 
-      /*WRAPPER FOR ALL THE CONTENT HEADER + BODY + FOOTER*/
-      .modal-welcome-content {
-        background: @bg-color-modal;
-
-        /*HEADER OF THE MODAL (DIV)*/
-        .modal-header {
-          background: #01385e;
-          border: none;
-
-          /*MODAL TITLE */
-          .modal-title-h3 {
-            margin: 0;
-            line-height: 1.42857143;
-            color: white;
-            font-weight: bold;
-            letter-spacing: 1.2px;
-            font-size: 2em;
-          }
+      .modal-dialog-welcome {
+        
+        @media (min-width:768px) {
+          width: 816px;
         }
-        /*BODY PART (CONTENT OF THE MODAL) (DIV)*/
-        .modal-body {
-          .modal-welcome-text-p {
-            color: white;
-            text-align: center;
-            .model-welcome-text-ps-span {
-              color: #0085b9;
-              display: block;
+
+        /*WRAPPER FOR ALL THE CONTENT HEADER + BODY + FOOTER*/
+        .modal-welcome-content {
+          background: black;
+
+          /*HEADER OF THE MODAL (DIV)*/
+          .modal-header {
+            background: #01385e;
+            border: none;
+
+            /*MODAL TITLE */
+            .modal-title-h3 {
+              margin: 0;
+              line-height: 1.42857143;
+              color: white;
+              font-weight: bold;
+              letter-spacing: 1.2px;
+              font-size: 2.6em;
+              text-shadow: 0px -1px 1px black;
+            }
+            /*EXIT BUTTON FROM THE MODAL*/
+            .square-logo {
+              float: right;
+              padding: 0.3em;
+              cursor: pointer;
             }
           }
-          /*WRAPPER FOR ALL THE STEPS NEW USER NEW TO HAVE TO START USE THE PANEL*/
-          .steps-wrapper {
+          /*BODY PART (CONTENT OF THE MODAL) (DIV)*/
+          .modal-body {
+            /* WELCOME TEXT (P TAG)*/
+            .modal-welcome-text-p {
+              color: white;
+              text-align: center;
+              font-size: 1.606em;
+              font-weight: 100;
+              text-shadow: 1px 1px 1px black;
 
-            /*STEP DIV */
-            .step-wrapper {
-              border: 1px dotted gray;
-              padding: 1em;
-              margin: 1em;
+              /*WELCOME PS (SPAN)*/
+              .model-welcome-text-ps-span {
+                color: #06b1f7;
+                display: block;
+              }
+            }
+            /*WRAPPER FOR ALL THE STEPS NEW USER NEW TO HAVE TO START USE THE PANEL*/
+            .steps-wrapper {
 
-              /*IMAGE-WRAPPER DIV*/
-              .image-wrapper {
-                text-align: center;
+              /*STEP DIV */
+              .step-wrapper {
+                padding: 1em;
+                margin: 2.5em;
+                min-height: 6.3em;
 
-                /*IMAGE SIZE */
-                .step-img {
-                  width: @width*3.3;
+                /*MONEY WRAPPER BACKGROUND*/
+                &.money-wrapper {
+                  background: #282828 url('@{image}desktop/money.png') no-repeat;
+                }
+
+                /*ACTIVATE WRAPPER BACKGROUND*/
+                &.activate-wrapper {
+                  background: #282828 url('@{image}desktop/active.png') no-repeat;
+                }
+
+                /*RELAX WRAPPER BACKGROUND*/
+                &.relax-wrapper {
+                  background: #282828 url('@{image}desktop/relax.png') no-repeat;
+                }
+
+                /*WRAPPER FOR ALL THE STEPS IMAGES (LOGOS)*/
+                .step-img-wrapper {
+                  position: relative;
+                  margin: -1em auto;
+                  text-align: center;
+                  bottom: 2em;
+                }
+
+                /*IMAGE-WRAPPER DIV*/
+                .image-wrapper {
+
+                  /*IMAGE SIZE */
+                  .step-img {
+                    width: @width*3.3;
+                  }
+                }
+                /**/
+                .step-content-wrapper {
+
+                  /*STEP TEXT CONTENT (P TAG)*/
+                  .step-content {
+                    padding: 0;
+                    margin: 0;
+                    text-align: center;
+                    color: white;
+                  }
                 }
               }
             }
           }
+          .modal-footer{
+
+            padding: 15px;
+            text-align: right;
+            border-top: 1px solid #222;
+            .button-welcome-footer{
+              color: black;
+              float: none;
+              margin: 0 auto;
+              display: block;
+              width: 50%;
+              height: 7.5vh;
+              font-size: 300%;
+              background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
+            }
+          }
         }
       }
-
     }
 
     /*MODAL BASE WRAPPER FOR DEPOSIT FORM*/
@@ -804,6 +875,7 @@ body {
             }
           }
 
+          /*DEPOSIT TITLE WRAPPER*/
           .deposit-title-wrapper {
             background: @nav-bar-bright-color;
             padding: 0.2em;
@@ -822,6 +894,7 @@ body {
               text-shadow: 0px -1px 1px black;
             }
           }
+
           /*FORM WRAPPER FOR DEPOSIT*/
           .form-wrapper {
 
@@ -867,13 +940,13 @@ body {
                   .month-exp, .year-exp {
                     min-height: 2.858em;
                     border-radius: 4.9px;
-                    color:black;
+                    color: black;
                   }
                   /*EXPIRATION DATE FOR YEAR (SELECT-BOX)*/
                   .year-exp {
                     width: 42%;
                     @media (max-width: 990px) {
-                      width:81.6%;
+                      width: 81.6%;
                     }
                   }
                   /*EXPERATION DATE FOR MONTH (SELECT-BOX)*/
@@ -904,7 +977,7 @@ body {
                   .form-title {
                     margin: 0;
                     padding-right: 0;
-                    @media (max-width:990px) {
+                    @media (max-width: 990px) {
                       margin-bottom: 1em;
                     }
                   }
@@ -920,7 +993,7 @@ body {
                 /*FORM GROUP (EACH INPUT AND INPUT)*/
                 .form-group {
                   padding: 1.3em 0;
-                  @media (max-width:990px){
+                  @media (max-width: 990px) {
                     padding: 0;
                     margin-bottom: 1em;
                   }
@@ -928,7 +1001,7 @@ body {
                   /*CARD NUMBER FIELD AFTER CLEAR FIX */
                   &.card-number-after-clear-fix {
                     margin: -1.1em 0 1em 0;
-                    @media (max-width:990px){
+                    @media (max-width: 990px) {
                       margin: 0 0 1em 0 ;
                     }
                   }
@@ -936,8 +1009,8 @@ body {
                   .form-control {
                     width: 60%;
                     height: 40px;
-                    @media (max-width:990px){
-                      width:100%;
+                    @media (max-width: 990px) {
+                      width: 100%;
                     }
 
                   }
@@ -957,8 +1030,8 @@ body {
                   color: black;
                   text-shadow: 1px 1px 1px white;
                   min-height: 2.1em;
-                  @media (min-width:1460px) and (max-width:1747px) {
-                    font-size:1.8em;
+                  @media (min-width: 1460px) and (max-width: 1747px) {
+                    font-size: 1.8em;
                   }
                 }
                 .warning-massage-beneath-the-button.text-center {

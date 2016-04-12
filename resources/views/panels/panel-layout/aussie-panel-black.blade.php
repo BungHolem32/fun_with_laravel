@@ -453,14 +453,13 @@
 
         {{-- MODAL WELCOME PAGE --}}
         <div class="modal-welcome modal fade" role="dialog">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-welcome">
 
                 <!-- Modal content-->
                 <div class="modal-content modal-welcome-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><i
-                                    class="glyphicon glyphicon-remove"></i></button>
-
+                        <img src="/img/panel/black/desktop/close.png" alt="close square-logo" class="square-logo"
+                             data-dismiss="modal">
                         <h3 class="modal-title-h3 text-uppercase text-center">welcome to xxx panel method!</h3>
                     </div>
                     <div class="modal-body">
@@ -473,39 +472,51 @@
                         <div class="steps-wrapper">
 
                             {{--FIRST STEP--}}
-                            <div class="step-wrapper">
-                                <header class="step-title">
-                                    <h3 class="text-capitalize step-content">step 1 - fund your <span
-                                                class="text-uppercase">rb</span>options broker account</h3>
-                                </header>
-                                <div class="image-wrapper">
-                                    <img class=" step-img" src="/img/panel/black/rboptions.png" alt="rboptions logo">
+                            <div class="step-wrapper money-wrapper">
+
+                                {{--STEP WRAPPER CIRCLE--}}
+                                <div class="step-img-wrapper">
+                                    <img src="/img/panel/black/desktop/step-1.png" alt="step-1 logo">
                                 </div>
+
+
+                                {{--TEXT INSIDE THE ELEMENT--}}
+                                <header class="step-content-wrapper">
+                                    <h3 class="text-uppercase step-content">fund your
+                                        <span class="text-uppercase">rb</span>options broker account</h3>
+                                </header>
                             </div>
+
                             {{--SECOND STEP--}}
-                            <div class="step-wrapper">
-                                <header class="title-wrapper">
-                                    <h3 class="text-capitalize step-content">step 2 - activate your aussie panel method
+                            <div class="step-wrapper activate-wrapper">
+                                <div class="row">
+                                    {{--STEP WRAPPER CIRCLE--}}
+                                    <div class="step-img-wrapper">
+                                        <img src="/img/panel/black/desktop/step-2.png" alt="step-2 logo">
+                                    </div>
+                                </div>
+                                <header class="step-content-wrapper">
+                                    <h3 class="text-uppercase step-content">activate your aussie panel method
                                         software</h3>
                                 </header>
-                                <div class="image-wrapper">
-                                    <img class=" step-img" src="/img/panel/black/rocket.gif" alt="rocket-img">
-                                </div>
                             </div>
+
                             {{--THIRD STEP--}}
-                            <div class="step-wrapper">
-                                <header class="title-wrapper">
-                                    <h3 class="text-capitalize step-content ">step 3 - relaxing and watch your profit
+                            <div class="step-wrapper relax-wrapper">
+                                {{--STEP WRAPPER CIRCLE--}}
+                                <div class="step-img-wrapper">
+                                    <img src="/img/panel/black/desktop/step-3.png" alt="step-3 logo">
+                                </div>
+
+                                <header class="step-content-wrapper">
+                                    <h3 class="text-uppercase step-content ">relaxing and watch your profit
                                         grow</h3>
                                 </header>
-                                <div class="image-wrapper">
-                                    <img class=" step-img" src="/img/panel/black/money.gif" alt="rboptions logo">
-                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default text-uppercase info" data-dismiss="modal">get
+                        <button type="button" class="btn text-uppercase info text-center button-welcome-footer" data-dismiss="modal">get
                             started
                         </button>
                     </div>
@@ -563,9 +574,11 @@
 
                                     {{--FORM TITLE PERSONAL INFO--}}
                                     <div class="form-title-wrapper">
-                                        <h3 class="form-title text-uppercase col-md-6 col-sm-7">personal information</h3>
+                                        <h3 class="form-title text-uppercase col-md-6 col-sm-7">personal
+                                            information</h3>
                                         <img src="/img/panel/black/desktop/yellow-arrow.png"
-                                             alt="arrow that points to the inputs" class="yellow-arrow visible-lg-block visible-md-block">
+                                             alt="arrow that points to the inputs"
+                                             class="yellow-arrow visible-lg-block visible-md-block">
                                     </div>
 
                                     <div class="clearfix"></div>
@@ -630,7 +643,8 @@
                                         <h3 class="form-title text-uppercase col-md-6 col-sm-7 label-form">your payment
                                             details</h3>
                                         <img src="/img/panel/black/desktop/yellow-arrow.png"
-                                             alt="arrow that points to the inputs" class="yellow-arrow visible-lg-block visible-md-block">
+                                             alt="arrow that points to the inputs"
+                                             class="yellow-arrow visible-lg-block visible-md-block">
                                     </div>
                                     {{--CLEAR FIX AFTER TITLE--}}
                                     <div class="clearfix"></div>
@@ -717,7 +731,8 @@
                                     <div class="form-group ">
                                         <label for="cvv" class="label-form text-uppercase col-md-4"> cvv</label>
                                         <input type="text" class="form-control col-md-8" id="cvv">
-                                        <img src="/img/panel/black/desktop/info.png" alt="info logo png" class="info-logo visible-lg-block visible-md-block">
+                                        <img src="/img/panel/black/desktop/info.png" alt="info logo png"
+                                             class="info-logo visible-lg-block visible-md-block">
                                     </div>
 
                                     {{--FIX THE HEIGHTS DEFRENCE AND CLEAR THE FLOAT--}}

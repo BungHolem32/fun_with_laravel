@@ -7060,52 +7060,117 @@ body .content-wrapper .footer-certificate-logos .footer-copyrights {
   color: white;
 }
 body .content-wrapper .modal-welcome {
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+}
+body .content-wrapper .modal-welcome .modal-dialog-welcome {
   /*WRAPPER FOR ALL THE CONTENT HEADER + BODY + FOOTER*/
 }
-body .content-wrapper .modal-welcome .modal-welcome-content {
-  background: #282827;
+@media (min-width: 768px) {
+  body .content-wrapper .modal-welcome .modal-dialog-welcome {
+    width: 816px;
+  }
+}
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content {
+  background: black;
   /*HEADER OF THE MODAL (DIV)*/
   /*BODY PART (CONTENT OF THE MODAL) (DIV)*/
 }
-body .content-wrapper .modal-welcome .modal-welcome-content .modal-header {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-header {
   background: #01385e;
   border: none;
   /*MODAL TITLE */
+  /*EXIT BUTTON FROM THE MODAL*/
 }
-body .content-wrapper .modal-welcome .modal-welcome-content .modal-header .modal-title-h3 {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-header .modal-title-h3 {
   margin: 0;
   line-height: 1.42857143;
   color: white;
   font-weight: bold;
   letter-spacing: 1.2px;
-  font-size: 2em;
+  font-size: 2.6em;
+  text-shadow: 0px -1px 1px black;
 }
-body .content-wrapper .modal-welcome .modal-welcome-content .modal-body {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-header .square-logo {
+  float: right;
+  padding: 0.3em;
+  cursor: pointer;
+}
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body {
+  /* WELCOME TEXT (P TAG)*/
   /*WRAPPER FOR ALL THE STEPS NEW USER NEW TO HAVE TO START USE THE PANEL*/
 }
-body .content-wrapper .modal-welcome .modal-welcome-content .modal-body .modal-welcome-text-p {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .modal-welcome-text-p {
   color: white;
   text-align: center;
+  font-size: 1.606em;
+  font-weight: 100;
+  text-shadow: 1px 1px 1px black;
+  /*WELCOME PS (SPAN)*/
 }
-body .content-wrapper .modal-welcome .modal-welcome-content .modal-body .modal-welcome-text-p .model-welcome-text-ps-span {
-  color: #0085b9;
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .modal-welcome-text-p .model-welcome-text-ps-span {
+  color: #06b1f7;
   display: block;
 }
-body .content-wrapper .modal-welcome .modal-welcome-content .modal-body .steps-wrapper {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .steps-wrapper {
   /*STEP DIV */
 }
-body .content-wrapper .modal-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper {
-  border: 1px dotted gray;
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper {
   padding: 1em;
-  margin: 1em;
+  margin: 2.5em;
+  min-height: 6.3em;
+  /*MONEY WRAPPER BACKGROUND*/
+  /*ACTIVATE WRAPPER BACKGROUND*/
+  /*RELAX WRAPPER BACKGROUND*/
+  /*WRAPPER FOR ALL THE STEPS IMAGES (LOGOS)*/
   /*IMAGE-WRAPPER DIV*/
+  /**/
 }
-body .content-wrapper .modal-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper .image-wrapper {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper.money-wrapper {
+  background: #282828 url('/img/panel/black/desktop/money.png') no-repeat;
+}
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper.activate-wrapper {
+  background: #282828 url('/img/panel/black/desktop/active.png') no-repeat;
+}
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper.relax-wrapper {
+  background: #282828 url('/img/panel/black/desktop/relax.png') no-repeat;
+}
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper .step-img-wrapper {
+  position: relative;
+  margin: -1em auto;
   text-align: center;
+  bottom: 2em;
+}
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper .image-wrapper {
   /*IMAGE SIZE */
 }
-body .content-wrapper .modal-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper .image-wrapper .step-img {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper .image-wrapper .step-img {
   width: 33%;
+}
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper .step-content-wrapper {
+  /*STEP TEXT CONTENT (P TAG)*/
+}
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper .step-content-wrapper .step-content {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  color: white;
+}
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #222;
+}
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-footer .button-welcome-footer {
+  color: black;
+  float: none;
+  margin: 0 auto;
+  display: block;
+  width: 50%;
+  height: 7.5vh;
+  font-size: 300%;
+  background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
 }
 body .content-wrapper .modal-deposit {
   color: white;
@@ -7142,6 +7207,7 @@ body .content-wrapper .modal-deposit .modal-deposit-content .modal-header .squar
 }
 body .content-wrapper .modal-deposit .modal-deposit-content .modal-body {
   padding: 0;
+  /*DEPOSIT TITLE WRAPPER*/
   /*FORM WRAPPER FOR DEPOSIT*/
 }
 body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .broker-name {
