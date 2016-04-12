@@ -1,24 +1,27 @@
-@import "bootstrap/bootstrap.less";
+@direction: 'ltr'; /*CHOOSE THE DIRECTION OF THE PAGE*/
+@import "../../direction.less"; /*IMPORT THE DIRECTION LESS TO TAKE CARE OF THE CHANGE IN DIRECTION OF OTHER LANGUAGES */
+@import "../../bootstrap/bootstrap.less"; /*IMPORT BOOTSTRAP LIBRARY WITH ALL THE ADDONS*/
 
 /*ASSIGN VALUES*/
 @image: '/img/panel/black/';
 @font: 'Roboto Condensed';
 @width: 10%;
 @transition: 'all 1s';
-@bg-color-modal:#282827;
-@nav-bar-bright-color:#2c98e0;
-@nav-bar-dark-color:#01395E;
-
-
+@bg-color-modal: #282827;
+@nav-bar-bright-color: #2c98e0;
+@nav-bar-dark-color: #01395E;
 
 /*MIXIN CLASSES*/
-.active-btn{
+
+/*ACTIVE BUTTON IN THE TAB FOUR BUTTONS*/
+.active-btn {
   box-shadow: inset 5px 3px 27px -4px #313030 !important;
   text-shadow: 1px -1px 1px #313030 !important;
   background: #0288cb !important;
   background: linear-gradient(to bottom, #0288cb 43%, #0288cb 43%, #00daf8 100%) !important;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0288cb', endColorstr='#00daf8', GradientType=0) !important;
 }
+
 /*NAV BAR BODY CLASS ON MENU CLICK*/
 .push-body-nav-mobile {
   left: 200px !important;
@@ -37,7 +40,7 @@ body {
   position: relative;
 
   /*REMOVE TRANSITION ON DESKTOP VIEW*/
-  @media (max-width:1000px){
+  @media (max-width: 1000px) {
     transition: all 1s;
   }
 
@@ -147,9 +150,9 @@ body {
       @media (min-width: 996px) {
         top: 5.1em;
       }
-      @media (max-width:776px) {
-        font-size:0.9em;
-        
+      @media (max-width: 776px) {
+        font-size: 0.9em;
+
       }
 
       /*BACKGROUND BECAME TRANSPARENT*/
@@ -598,11 +601,10 @@ body {
         /*TABLES GENERAL*/
         .table {
           margin-bottom: 0;
-          .table-header-th{
-            border-top:none;
+          .table-header-th {
+            border-top: none;
           }
         }
-
 
         /*TABLE ROW (TR)*/
         .table-row {
@@ -678,8 +680,8 @@ body {
     /*FOOTER TAG WITH ALL THE LOGOS*/
     .footer-certificate-logos {
       margin: 8.4em 0 0;
-      .footer-copyrights{
-          color:white;
+      .footer-copyrights {
+        color: white;
       }
     }
 
@@ -757,12 +759,18 @@ body {
           background: #01385e;
           color: white;
           border: none;
+          padding: 0;
           .modal-title {
             margin: 0;
             line-height: 1.42857143;
-            font-size: 1.6em;
+            font-size: 2.7em;
             font-weight: 600;
             text-shadow: 1px 0px 1px black;
+          }
+          /*BUTTON X FOR EXIT THE MODEL*/
+          .close {
+            color: white;
+            opacity: 1;
           }
         }
         .modal-body {
@@ -774,9 +782,17 @@ body {
             .deposit-broker-text-wrapper {
               padding: 0;
               margin: 0;
+              background: @bg-color-modal;
               .deposit-broker-text {
-                padding: 3px 0;
+                ppadding: 3px 0;
                 margin: 0;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 2em;
+              }
+              .left-hand-header, .right-hand-header {
+                display: inline-block;
+                width: 2.2%;
               }
             }
             .hand {
@@ -792,8 +808,14 @@ body {
             .deposite-title {
               margin: 0;
               color: black;
-              font-weight: bolder;
-              font-size: 3em;
+              font-size: 3.5em;
+              line-height: 1.3em;
+              text-shadow: 0px 1px 1px white;
+              letter-spacing: 1.9px;
+            }
+            small {
+              font-size: 1.5em;
+              text-shadow: 0px -1px 1px black;
             }
           }
           /*FORM WRAPPER FOR DEPOSIT*/
@@ -804,9 +826,17 @@ body {
 
               /*FIRST PART OF THE FORM (DIV TAG WRAPPER)*/
               .first-part-form {
-                .form-title {
 
+                .form-title-wrapper {
+
+                  /*FORM TITLE (PERSONAL INFO)*/
+                  .form-title {
+                  }
+                  /*YELLOW ARROW POINTS TO THE FORM*/
+                  .yellow-arrow {
+                  }
                 }
+
                 /*FORM GROUP (EACH INPUT AND INPUT)*/
                 .form-group {
 
@@ -816,15 +846,76 @@ body {
               /*SECOND PART OF THE FORM (DIV TAG WRAPPER)*/
               .second-part-form {
 
+                /*FORM TITLE WRAPPER*/
+                .form-title-wrapper {
+
+                  /*FORM TITLE (PERSONAL INFO)*/
+                  .form-title {
+                  }
+
+                  .yellow-arrow {
+                  }
+                }
                 /*FORM GROUP (EACH INPUT AND INPUT)*/
                 .form-group {
+                  .form-control {
 
+                  }
+                }
+              }
+
+              /*ALL FORMS WRAPPER GENERAL STYLE*/
+              .first-part-form, .second-part-form {
+                margin-bottom: 2em;
+                /*FORM TITLE WRAPPER*/
+                .form-title-wrapper {
+                  color: #FFDE00;
+                  padding: 2em 0 1em;
+                  /*FORM TITLE (PERSONAL INFO)*/
+                  .form-title {
+                    margin: 0;
+                    padding-right: 0;
+                  }
+
+                  .yellow-arrow {
+                    vertical-align: -webkit-baseline-middle;
+                    position: relative;
+                    top: 6px;
+                  }
                 }
 
-              }
-              .first-part-form, .second-part-form {
-                padding: 0;
-                margin:0;
+                /*FORM GROUP (EACH INPUT AND INPUT)*/
+                .form-group {
+                  padding: 1.3em 0;
+
+                  /*CARD NUMBER FIELD AFTER CLEAR FIX */
+                  &.card-number-after-clear-fix {
+                    margin: -1.1em 0 1em 0;
+                  }
+
+                  .form-control {
+                    width: 60%;
+                    height: 40px;
+
+                  }
+                  /*LABEL TAG FOR ALL THE INPUTS IN THE FORM */
+                  .label-form {
+                    font-size: 1.2em;
+                    font-weight: 100;
+                  }
+                }
+
+                .form-button {
+                  width: 93.4%;
+                  margin-top: 1em;
+                  font-size: 2.2em;
+                  background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
+                  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
+                  color: black;
+                  text-shadow: 1px 1px 1px white;
+                  min-height: 2.1em;
+                }
+
               }
             }
           }
