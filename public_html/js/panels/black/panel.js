@@ -35,43 +35,43 @@ $(document).ready(function() {
         });
     });
 
-    //$('#deposit-form').validate({
-    //    submitHandler: function (form) {
-    //        var data = $('#deposit-form').serialize();
-    //         $.ajax({
-    //            headers: {
-    //                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    //            },
-    //            type: "POST",
-    //            url: "/ajax/deposit",
-    //            dataType: 'json',
-    //            data: data,
-    //            beforeSend: function() {
-    //                $('.depositBtnSect .loadingForm').show();
-    //            },
-    //            success: function (res) {
-    //                if (res.err === 0) {
-    //                    $('body').removeClass('bggray');
-    //                    $('#formDepositModal').fadeOut('fast');
-    //                    $('#thanku').fadeIn();
-    //                    setTimeout(function(){
-    //                        $('#thanku').fadeOut();
-    //                    },3000);
-    //
-    //                    $(window).trigger('ajax-refresh');
-    //                }
-    //                else {
-    //                    $('.depositBtnSect .loadingForm').hide();
-    //                    alert(res.errs.error);
-    //                    //console.log(res);
-    //                }
-    //            },
-    //            error: function (err) {
-    //                console.log(err);
-    //            }
-    //        });
-    //    }
-    //});
+    $('.form-deposit').validate({
+       submitHandler: function (form) {
+           var data = $('#deposit-form').serialize();
+            $.ajax({
+               headers: {
+                   'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+               },
+               type: "POST",
+               url: "/ajax/deposit",
+               dataType: 'json',
+               data: data,
+               beforeSend: function() {
+                   $('.depositBtnSect .loadingForm').show();
+               },
+               success: function (res) {
+                   if (res.err === 0) {
+                       $('body').removeClass('bggray');
+                       $('#formDepositModal').fadeOut('fast');
+                       $('#thanku').fadeIn();
+                       setTimeout(function(){
+                           $('#thanku').fadeOut();
+                       },3000);
+
+                       $(window).trigger('ajax-refresh');
+                   }
+                   else {
+                       $('.depositBtnSect .loadingForm').hide();
+                       alert(res.errs.error);
+                       //console.log(res);
+                   }
+               },
+               error: function (err) {
+                   console.log(err);
+               }
+           });
+       }
+    });
 
     $('#amountOfTrade .btn').click(function(){
         $('#amountOfTrade .btn').addClass('btn-default').removeClass('btn-success');

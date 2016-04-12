@@ -5,442 +5,466 @@
 @font: 'Roboto Condensed';
 @width: 10%;
 @transition: 'all 1s';
-/*MIXIN CLASSES*/
-body {
-  font-family: @font;
-  transition: all 1s;
-  left: 0;
-  margin: 0;
-  position: relative;
-}
+@bg-color-modal:#282827;
+@nav-bar-bright-color:#2c98e0;
+@nav-bar-dark-color:#01395E;
 
+
+
+/*MIXIN CLASSES*/
+.active-btn{
+  box-shadow: inset 5px 3px 27px -4px #313030 !important;
+  text-shadow: 1px -1px 1px #313030 !important;
+  background: #0288cb !important;
+  background: linear-gradient(to bottom, #0288cb 43%, #0288cb 43%, #00daf8 100%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0288cb', endColorstr='#00daf8', GradientType=0) !important;
+}
+/*NAV BAR BODY CLASS ON MENU CLICK*/
 .push-body-nav-mobile {
   left: 200px !important;
 }
 
+/*NAV BAR MOBILE NEVEGATION*/
 .push-navbar-mobile {
   left: 0 !important;
 }
 
-/*WRAPPER FOR ALL THE CONTENT*/
-.content-wrapper {
-  background: url('@{image}bg.jpg') top center;
-  background-size: contain;
+/*BASE BODY STYLE*/
+body {
+  font-family: @font;
+  left: 0;
+  margin: 0;
+  position: relative;
 
-  /*ACCOUNT DETAILS*/
-  .account-details-desktop {
-    width: 205.7px;
-    height: 8.6em;
-    position: fixed;
-    direction: ltr;
-    right: @width*1.45;
-    border-bottom-right-radius: 0.6em;
-    border-bottom-left-radius: 0.6em;
-    background-color: white;
-    box-shadow: 0em 1.1px 1.4px 0.1px darkgray;
-    z-index: 1;
-    @media (min-width: 980px) and  (max-width: 1636px) {
-      right: 0;
-    }
-
-    /*TITLE */
-    .account-details-title {
-      height: 2.2em;
-      background: #00395E;
-
-      /*DIV WRAPPER HUMAN AVATAR*/
-      .img-human {
-        display: inline-block;
-        width: @width*1.53;
-
-        /*IMG TAG*/
-        .icon-human-pic {
-          display: block;
-          max-width: @width*10;
-          height: auto;
-          position: absolute;
-          left: 9px;
-          top: 5px;
-        }
-      }
-      /*TITLE TEXT */
-      .title {
-        display: inline-block;
-        color: white;
-        font-weight: bold;
-        letter-spacing: 1.5px;
-        line-height: 31px;
-        font-size: 1.25em;
-      }
-    }
-    /*PARAGRAPHS WITH THE INFO TITLE*/
-    .info-tab {
-      margin: 0 0 2.2px;
-      font-size: 0.9em;
-      position: relative;
-      top: 7px;
-      left: 11px;
-
-      /*SPAN INFO RESULTS*/
-      .info-result {
-        letter-spacing: 0.2px;
-      }
-    }
+  /*REMOVE TRANSITION ON DESKTOP VIEW*/
+  @media (max-width:1000px){
+    transition: all 1s;
   }
 
-  .account-details-mobile {
-    color: black;
-    font-size: 1.1em;
-    @media (max-width: 400px) {
-      font-size: 0.8em;
-    }
+  /*WRAPPER FOR ALL THE CONTENT*/
+  .content-wrapper {
+    background: url('@{image}bg.jpg') top center;
+    background-size: contain;
 
-    .container {
-      background: white;
-
-      @media (max-width: 768px) {
-        padding: 0;
+    /*ACCOUNT DETAILS*/
+    .account-details-desktop {
+      width: 205.7px;
+      height: 8.6em;
+      position: fixed;
+      direction: ltr;
+      right: @width*1.45;
+      border-bottom-right-radius: 0.6em;
+      border-bottom-left-radius: 0.6em;
+      background-color: white;
+      box-shadow: 0em 1.1px 1.4px 0.1px darkgray;
+      z-index: 1;
+      @media (min-width: 980px) and  (max-width: 1636px) {
+        right: 0;
       }
-      .row {
-        /*ACCOUNT DETAIL TITLE */
-        .account-details-title {
-          background: #01395E;
+
+      /*TITLE */
+      .account-details-title {
+        height: 2.2em;
+        background: #00395E;
+
+        /*DIV WRAPPER HUMAN AVATAR*/
+        .img-human {
+          display: inline-block;
+          width: @width*1.53;
+
+          /*IMG TAG*/
+          .icon-human-pic {
+            display: block;
+            max-width: @width*10;
+            height: auto;
+            position: absolute;
+            left: 9px;
+            top: 5px;
+          }
+        }
+        /*TITLE TEXT */
+        .title {
+          display: inline-block;
           color: white;
-          padding: 0.4em;
-          font-size: 1.3em;
-        }
-
-        /*ACCOUNT DETAIL PERSONAL*/
-        .account-detail-personal-info {
-          padding-top: 0.4em;
+          font-weight: bold;
+          letter-spacing: 1.5px;
+          line-height: 31px;
+          font-size: 1.25em;
         }
       }
-    }
-  }
-  /*NAVBAR DESKTOP*/
-  .navbar-desktop {
-    position: relative;
-    background: #2c98e0;
-    border: none;
-    color: white;
-
-    @media (min-width: 996px) {
-      top: 5.1em;
-    }
-
-    /*BACKGROUND BECAME TRANSPARENT*/
-    @media (max-width: 768px) {
-      background: transparent;
-      margin-bottom: 0;
-
-    }
-
-    /*CONTAINER INSIDE THE NAV-BAR*/
-    .container {
-      /*ON MOBILE VIEW CHANGE THE NAVBAR TO BE 100% WIDTH AND DECREASE THE SIZE OF THE FONT*/
-      @media (max-width: 996px) {
-        width: @width*10;
+      /*PARAGRAPHS WITH THE INFO TITLE*/
+      .info-tab {
+        margin: 0 0 2.2px;
         font-size: 0.9em;
-      }
-      @media (max-width: 768px) {
-        padding: 0;
-      }
-
-      /*BUTTON ELEMENT*/
-      .navbar-toggle {
-        border: none;
-        border-radius: 0;
-        background: #2C98E0;
         position: relative;
-        float: right;
-        padding: 20px 20px;
-        margin: 0;
-        border-left: 1px solid #237EBB;
+        top: 7px;
+        left: 11px;
 
-        .icon-bar {
-          background-color: white;
-        }
-      }
-
-      /**/
-      .nav-bar-header, .navbar-nav, .navbar-collapse {
-        @media (max-width: 768px) {
-          width: @width*10;
-          padding: 0;
-          margin: 0;
+        /*SPAN INFO RESULTS*/
+        .info-result {
+          letter-spacing: 0.2px;
         }
       }
     }
 
-    /*NAV BAR COLLAPSE ON MOBILE*/
-    .navbar-collapse {
-      text-align: center;
-      width: @width*10;
+    .account-details-mobile {
+      color: black;
+      font-size: 1.1em;
+      @media (max-width: 400px) {
+        font-size: 0.8em;
+      }
 
-      /*NAV BAR INSIDE*/
-      .navbar-nav {
-        display: inline-block;
-        float: none;
-        vertical-align: top;
+      .container {
+        background: white;
 
-        /*LIST ELEMENT IN THE NAV-BAR (SPECIFIC LINK )*/
-        .navbar-part {
-          border-right: 1px solid #55B2EF;
-          border-left: 1px solid #1C6DA2;
-          @media (max-width: 776px) {
-            border: none;
-            border-bottom: 1px solid white;
+        @media (max-width: 767px) {
+          padding: 0;
+        }
+        .row {
+          /*ACCOUNT DETAIL TITLE */
+          .account-details-title {
+            background: #01395E;
+            color: white;
+            padding: 0.4em;
+            font-size: 1.3em;
           }
 
-          /*HREF TEXT*/
-          .navbar-text {
-            color: inherit;
-            font-weight: bold;
-            letter-spacing: 0.1px;
-            margin: 0;
+          /*ACCOUNT DETAIL PERSONAL*/
+          .account-detail-personal-info {
+            padding-top: 0.4em;
+          }
+        }
+      }
+    }
+    /*NAVBAR DESKTOP*/
+    .navbar-desktop {
+      position: relative;
+      background: @nav-bar-bright-color;
+      border: none;
+      color: white;
+      overflow: hidden;
 
-            &:hover {
-              background: #0082d8;
+      @media (min-width: 996px) {
+        top: 5.1em;
+      }
+      @media (max-width:776px) {
+        font-size:0.9em;
+        
+      }
+
+      /*BACKGROUND BECAME TRANSPARENT*/
+      @media (max-width: 767px) {
+        background: transparent;
+        margin-bottom: 0;
+
+      }
+
+      /*CONTAINER INSIDE THE NAV-BAR*/
+      .container {
+        /*ON MOBILE VIEW CHANGE THE NAVBAR TO BE 100% WIDTH AND DECREASE THE SIZE OF THE FONT*/
+        @media (max-width: 996px) {
+          width: @width*10;
+          font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+          padding: 0;
+        }
+
+        /*BUTTON ELEMENT*/
+        .navbar-toggle {
+          border: none;
+          border-radius: 0;
+          background: #2C98E0;
+          position: relative;
+          float: right;
+          padding: 20px 20px;
+          margin: 0;
+          border-left: 1px solid #237EBB;
+
+          .icon-bar {
+            background-color: white;
+          }
+        }
+
+        /**/
+        .nav-bar-header, .navbar-nav, .navbar-collapse {
+          @media (max-width: 768px) {
+            width: @width*10;
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+
+      /*NAV BAR COLLAPSE ON MOBILE*/
+      .navbar-collapse {
+        text-align: center;
+        width: @width*10;
+
+        /*NAV BAR INSIDE*/
+        .navbar-nav {
+          display: inline-block;
+          float: none;
+          vertical-align: top;
+
+          /*LIST ELEMENT IN THE NAV-BAR (SPECIFIC LINK )*/
+          .navbar-part {
+            border-right: 1px solid #55B2EF;
+            border-left: 1px solid #1C6DA2;
+            @media (max-width: 767px) {
+              border: none;
+            }
+
+            /*HREF TEXT*/
+            .navbar-text {
+              color: inherit;
+              font-weight: bold;
+              letter-spacing: 0.1px;
+              margin: 0;
+
+              &:hover {
+                background: #0082d8;
+              }
             }
           }
         }
       }
     }
-  }
 
-  /* NAVBAR MOBILE*/
-  .navbar-mobile {
-    left: -200px;
-    height: 100%;
-    position: fixed;
-    width: 200px;
-    top: 0;
-    z-index: 100;
-    background: #2C98E0;
-    transition: all 1s;
-    .navbar-ul-wrapper {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-
-      .navbar-li-wrapper {
-        border-bottom: 1px solid #237EBB;
-        font-family: 'Open Sans', sans-serif;
-        line-height: 45px;
-        padding-bottom: 3px;
-        padding-left: 20px;
-        padding-top: 3px;
-
-        .navbar-text-mobile {
-          color: #fff;
-          font-size: 0.9em;
-          text-decoration: none;
-          text-transform: uppercase;
-        }
-      }
-    }
-  }
-
-  /*INCENTIVE GUIDE FOR NEW CUSTOMERS */
-  .activate-method-system {
-    margin-top: 7.5em;
-    box-sizing: initial;
-    color: white;
-    font-weight: bold;
-    letter-spacing: 2.2px;
-    background-color: #01395E;
-    min-height: 5.8em;
-
-    @media (max-width: 992px) {
-      margin-top: 1em;
-    }
-    /*METHOD TITLE WRAPPER*/
-    .active-method-title-wrapper {
-
-      /*H3 */
-      .method-title {
-        font-size: 1.8em;
-        letter-spacing: 1.9px;
+    /* NAVBAR MOBILE*/
+    .navbar-mobile {
+      left: -200px;
+      height: 100%;
+      position: fixed;
+      width: 200px;
+      top: 0;
+      z-index: 100;
+      background: #2C98E0;
+      transition: all 1s;
+      .navbar-ul-wrapper {
+        list-style: none;
+        margin: 0;
         padding: 0;
-        margin: 0.22em 0 0 1em;
 
-        @media (max-width: 1024px) {
-          text-align: center;
+        .navbar-li-wrapper {
+          border-bottom: 1px solid #237EBB;
+          font-family: 'Open Sans', sans-serif;
+          line-height: 45px;
+          padding-bottom: 3px;
+          padding-left: 20px;
+          padding-top: 3px;
 
-        }
-      }
-    }
-
-    /*SUBTITLE WRAPPER*/
-    .active-method-subtitle-wrapper {
-
-      /*H4 TAG */
-      .method-subtitle {
-
-        /*ARROW ICON (<I> TAG) AT THE START AND THE END */
-        .fa-arrow-down {
-          color: #EFDE00;
-          @media (max-width: 400px) {
-            font-size: 0.6em;
-          }
-        }
-
-        /*SPAN TAG - TEXT WITHIN THE SUBTITLE */
-        .active-method-text {
-          font-size: 1.2em;
-          position: relative;
-          line-height: 23.8px;
-          margin: 0px auto 0 -2.7px;
-          letter-spacing: 2.3px;
-          font-style: italic;
-          color: #FFDE00;
-          font-weight: bold;
-
-          @media (max-width: 640px) {
-            font-size: 1em;
-          }
-
-          @media (max-width: 410px) {
-            font-size: 0.7em;
+          .navbar-text-mobile {
+            color: #fff;
+            font-size: 0.9em;
+            text-decoration: none;
+            text-transform: uppercase;
           }
         }
       }
     }
-  }
 
-  /*ARROW PICTURE AT THE BOTTOM OF THE INCENTIVE*/
-  .arrow-img-wrapper {
-    .arrow-img {
-      margin-left: 10.7%;
+    /*INCENTIVE GUIDE FOR NEW CUSTOMERS */
+    .activate-method-system {
+      margin-top: 7.5em;
+      box-sizing: initial;
+      color: white;
+      font-weight: bold;
+      letter-spacing: 2.2px;
+      background-color: @nav-bar-dark-color;
+      min-height: 5.8em;
 
-      @media (max-width: 1170px) {
-        display: block;
-        margin: 0 auto;
+      @media (max-width: 992px) {
+        margin-top: 1em;
       }
-    }
-  }
+      /*METHOD TITLE WRAPPER*/
+      .active-method-title-wrapper {
 
-  /*TABS SECTION*/
-  .tabs-wrapper {
-    position: relative;
-    &.container {
-      padding: 0;
-      //@media (max-width:)
-    }
+        /*H3 */
+        .method-title {
+          font-size: 1.8em;
+          letter-spacing: 1.9px;
+          padding: 0;
+          margin: 0.22em 0 0 1em;
 
-    /*TAB WRAPPER GENERAL*/
-    .tab-wrapper {
-      min-height: 13.3em;
-      padding: 0;
-      margin: 0.6em 1.2em 0 0.9em;
-      min-width: 320px;
-      background-color: #282828;
+          @media (max-width: 1024px) {
+            text-align: center;
 
-      @media (max-width: 1200px) {
-        margin: 3.6em 0.5em 0 0.7em;
-      }
-
-      &:hover {
-        box-shadow: 3px 24px 24px -10px #06A9FF;
-      }
-      /*FIRST TAB (SPECIFIC SIZE*/
-      &.deposit {
-
-        /*SPECIFIC TOP PART OF DEPOSIT*/
-        .top-part {
-
-          /*SPECIFIC TITLE*/
-          .tab-title {
           }
         }
       }
 
-      /*SECOND TAB SPECIFIC SIZE*/
-      &.auto-trading {
-        //width: 30.1%;
+      /*SUBTITLE WRAPPER*/
+      .active-method-subtitle-wrapper {
 
-        /*BOTTOM PART OF ALL BUTTONS*/
-        .bottom-part {
+        /*H4 TAG */
+        .method-subtitle {
 
-          /*SWITCH BUTTON*/
-          .tab-switch-button {
+          /*ARROW ICON (<I> TAG) AT THE START AND THE END */
+          .fa-arrow-down {
+            color: #EFDE00;
+            @media (max-width: 400px) {
+              font-size: 0.6em;
+            }
+          }
 
-            /**/
-            .toggles {
-              height: 50px;
-              width: 110px;
+          /*SPAN TAG - TEXT WITHIN THE SUBTITLE */
+          .active-method-text {
+            font-size: 1.2em;
+            position: relative;
+            line-height: 23.8px;
+            margin: 0px auto 0 -2.7px;
+            letter-spacing: 2.3px;
+            font-style: italic;
+            color: #FFDE00;
+            font-weight: bold;
 
-              &.toggle-light {
-                padding-top: 2.2em;
-                margin: 0 auto;
+            @media (max-width: 640px) {
+              font-size: 1em;
+            }
 
-                .toggle-slide {
-                  border-radius: 9999px;
-                  box-shadow: 0px -5px 28px -5px #999;
-                  border: 1px solid #222222;
-                  overflow: hidden;
-                  cursor: pointer;
-                  -webkit-user-select: none;
-                  -moz-user-select: none;
-                  -ms-user-select: none;
-                  user-select: none;
-                  direction: ltr;
-                  text-align: center;
+            @media (max-width: 410px) {
+              font-size: 0.7em;
+            }
+          }
+        }
+      }
+    }
 
-                  .toggle-inner {
+    /*ARROW PICTURE AT THE BOTTOM OF THE INCENTIVE*/
+    .arrow-img-wrapper {
+      .arrow-img {
+        margin-left: 10.7%;
 
-                    /*TOGGLE ON AND STYLES*/
-                    .toggle-on, .toggle-off {
-                      font-size: 22px;
-                      font-weight: bold;
-                      letter-spacing: 1.3px;
-                    }
-                    /*TOGGLE ON OFF AND BOLB STYLE */
-                    .toggle-on, .toggle-off, .toggle-blob {
-                      float: left;
-                    }
+        @media (max-width: 1170px) {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
 
-                    /*TOGGLE ON SPECIFIC STYLES*/
-                    .toggle-on {
+    /*TABS SECTION*/
+    .tabs-wrapper {
+      position: relative;
+      &.container {
+        padding: 0;
+        //@media (max-width:)
+      }
 
-                      /*ON ACTIVE CLASS*/
-                      &.active {
-                        color: #f0ffd4;
-                        text-shadow: -1px 0px 7px #969696;
-                        background: #3fd307;
-                        background: linear-gradient(to bottom, #3fd307 4%, #3fd307 4%, #e1fb38 78%);
-                        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3fd307', endColorstr='#e1fb38', GradientType=0);
+      /*TAB WRAPPER GENERAL*/
+      .tab-wrapper {
+        min-height: 13.3em;
+        padding: 0;
+        margin: 0.6em 0.95em 0 0.95em;
+        min-width: 320px;
+        background-color: #282828;
+
+        @media (max-width: 1200px) {
+          margin: 3.6em 0.5em 0 0.7em;
+        }
+
+        &:hover {
+          box-shadow: 3px 24px 24px -10px #06A9FF;
+        }
+        /*FIRST TAB (SPECIFIC SIZE*/
+        &.deposit {
+
+          /*SPECIFIC TOP PART OF DEPOSIT*/
+          .top-part {
+
+            /*SPECIFIC TITLE*/
+            .tab-title {
+            }
+          }
+        }
+
+        /*SECOND TAB SPECIFIC SIZE*/
+        &.auto-trading {
+          //width: 30.1%;
+
+          /*BOTTOM PART OF ALL BUTTONS*/
+          .bottom-part {
+
+            /*SWITCH BUTTON*/
+            .tab-switch-button {
+
+              /**/
+              .toggles {
+                height: 50px;
+                width: 110px;
+
+                &.toggle-light {
+                  padding-top: 2.2em;
+                  margin: 0 auto;
+
+                  .toggle-slide {
+                    border-radius: 9999px;
+                    box-shadow: 0px -5px 28px -5px #999;
+                    border: 1px solid #222222;
+                    overflow: hidden;
+                    cursor: pointer;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    direction: ltr;
+                    text-align: center;
+
+                    .toggle-inner {
+
+                      /*TOGGLE ON AND STYLES*/
+                      .toggle-on, .toggle-off {
+                        font-size: 22px;
+                        font-weight: bold;
+                        letter-spacing: 1.3px;
                       }
-                    }
-                    .toggle-off {
-                      background: #242326;
-                      color: #c10505;
-                    }
-                    /*ALL the light of the bolb toggle*/
-                    .toggle-blob {
-                      border-radius: 50px;
-                      background: linear-gradient(#f5f5f5, #cfcfcf);
-                      height: 48px !important;
-                      width: 48px !important;
-                      position: relative;
-                      z-index: 99;
-                      cursor: hand;
-                      cursor: -webkit-grab;
-                      cursor: grab;
-                      height: 50.4px !important;
-
-                      /*NOT ACTIVE */
-                      &[active=false] {
-                        height: 50px !important;
-                        width: 49px !important;
-                        box-shadow: inset 0px -2px 7px #000;
-                        background: linear-gradient(to bottom, #4f5053 0%, #2c2d2e 38%, #2c2d2e 38%, #2c2d2e 50%);
-                        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4f5053', endColorstr='#2c2d2e', GradientType=0);
+                      /*TOGGLE ON OFF AND BOLB STYLE */
+                      .toggle-on, .toggle-off, .toggle-blob {
+                        float: left;
                       }
-                      &[active=true] {
-                        background: linear-gradient(to bottom, #e1fb38 49%, #3fd307 100%);
-                        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e1fb38', endColorstr='#3fd307', GradientType=0);
+
+                      /*TOGGLE ON SPECIFIC STYLES*/
+                      .toggle-on {
+
+                        /*ON ACTIVE CLASS*/
+                        &.active {
+                          color: #f0ffd4;
+                          text-shadow: -1px 0px 7px #969696;
+                          background: #3fd307;
+                          background: linear-gradient(to bottom, #3fd307 4%, #3fd307 4%, #e1fb38 78%);
+                          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3fd307', endColorstr='#e1fb38', GradientType=0);
+                        }
+                      }
+                      .toggle-off {
+                        background: #242326;
+                        color: #c10505;
+                      }
+                      /*ALL the light of the bolb toggle*/
+                      .toggle-blob {
+                        border-radius: 50px;
+                        background: linear-gradient(#f5f5f5, #cfcfcf);
+                        height: 48px !important;
+                        width: 48px !important;
                         position: relative;
+                        z-index: 99;
+                        cursor: hand;
+                        cursor: -webkit-grab;
+                        cursor: grab;
+                        height: 50.4px !important;
+
+                        /*NOT ACTIVE */
+                        &[active=false] {
+                          height: 50px !important;
+                          width: 49px !important;
+                          box-shadow: inset 0px -2px 7px #000;
+                          background: linear-gradient(to bottom, #4f5053 0%, #2c2d2e 38%, #2c2d2e 38%, #2c2d2e 50%);
+                          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4f5053', endColorstr='#2c2d2e', GradientType=0);
+                        }
+                        &[active=true] {
+                          background: linear-gradient(to bottom, #e1fb38 49%, #3fd307 100%);
+                          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e1fb38', endColorstr='#3fd307', GradientType=0);
+                          position: relative;
+                        }
                       }
                     }
                   }
@@ -449,338 +473,359 @@ body {
             }
           }
         }
-      }
 
-      /*THIRD TAB SPECIFIC SIZE*/
-      &.amount {
-        margin-right: 0 !important;
+        /*THIRD TAB SPECIFIC SIZE*/
+        &.amount {
+          margin-right: 0 !important;
 
-        .amount-btn {
-          width: @width*3.9%;
-          margin: 0 13px 15px 0;
-          position: relative;
-          top: 8px;
-          left: 4px;
-          box-shadow: 1px 1px 10px 1px black;
-          background: linear-gradient(to top, #222222, #444547);
-          color: white;
-          border: none;
-          &:hover {
-            background: #252525;
-            background: linear-gradient(to bottom, #252525 0%, #444547 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#252525', endColorstr='#444547', GradientType=0);
-          }
-          &:focus {
-            box-shadow: inset 5px 3px 27px -4px #313030;
-            text-shadow: 1px -1px 1px #313030;
-            background: #0288cb;
-            background: linear-gradient(to bottom, #0288cb 43%, #0288cb 43%, #00daf8 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0288cb', endColorstr='#00daf8', GradientType=0);
-          }
-        }
-      }
-
-      /*TOP PART OF EACH TAB*/
-      .top-part {
-        border-bottom: 1px solid black;
-
-        /*CIRCLE IMAGE WITH THE STEP NUMBER*/
-        .tab-number-in-circle {
-          position: absolute;
-          top: -25.3px;
-          left: -21.4px;
-          height: 63px;
-          width: 63px;
-          -webkit-border-radius: 50%;
-          -webkit-background-clip: padding-box;
-          border-radius: 50%;
-          background-clip: padding-box;
-          background: #ffde00;
-          border: 6px solid #000;
-          font-size: 41px;
-          font-weight: bold;
-          line-height: 51px;
-          color: #000;
-          text-shadow: -1px 2px 1px #f4ff96;
-          -webkit-transform: rotate(5deg);
-          transform: rotate(5deg);
-
-          @media (max-width: 640px) {
-            top: -46.3px;
-            left: 2.3px;
-          }
-        }
-        .tab-title {
-          font-size: 1.5em;
-          color: white;
-          line-height: 59.4px;
-          letter-spacing: 1.5px;
-          word-spacing: -2.1px;
-          margin: 0;
-        }
-      }
-      /*BOTTOM PART WITH THE BUTTONS */
-      .bottom-part {
-        min-height: 8.8em;
-
-        /*BUTTON FIRST*/
-        .tab-big-button {
-          font-size: 1.9em;
-          line-height: 2.033333;
-          border-radius: 6px;
-          position: relative;
-          top: 0.8em;
-          //opacity: 0.5;
-          color: black;
-          word-spacing: 0.8px;
-          background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
-          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
-          text-indent: -5.7px;
-          width: @width*8.5;
-
-          &:hover {
-            background: #72a40e;
-            background: linear-gradient(to bottom, #72a40e 43%, #aadc1f 96%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72a40e', endColorstr='#aadc1f', GradientType=0);
-          }
-
-          @media (max-width: 410px) {
-            font-size: 1.5em;
-          }
-
-        }
-      }
-    }
-    .arrow-rotate {
-      top: 49px;
-      left: -89.1px;
-      position: absolute;
-    }
-  }
-
-  /*TABLE OF THE OPEN TRADE*/
-  .rb-options-open-trade, .rb-options-history {
-    margin: 3em 0 0;
-    border: none;
-    @media (max-width: 507px) {
-      font-size: 7.5px;
-      margin-bottom: 0;
-      overflow: hidden;
-      border: none;
-    }
-    /*SPECIFIC CONTAINER*/
-    .container {
-      padding: 0;
-
-      /*TABLES GENERAL*/
-      .table {
-        margin-bottom: 0;
-      }
-      /*TABLE ROW (TR)*/
-      .table-row {
-
-        /*TABLE DATA (TD)*/
-        .table-data {
-          border-top: none;
-        }
-      }
-
-      /*CAPTION OF THE TABLE (CAPTION) */
-      .table-title {
-        font-size: 1.95em;
-        font-weight: bold;
-        text-indent: -3.6px;
-        color: white;
-        letter-spacing: 0.7px;
-        word-spacing: -1.8px;
-        background-color: #002A43;
-      }
-
-      /*TR WITH ALL THE HEADERS*/
-      .table-headers {
-        background: #3E8CEE;
-        color: black;
-        font-size: 1.3em;
-
-        /*HEADERS (TH)*/
-        .header {
-          border-top: none;
-        }
-      }
-
-      /*TD WITH ALL THE CONTENT (TD)*/
-      .table-tr-content {
-        color: white;
-
-        /*ALL TDS THE ODD*/
-        &:nth-of-type(odd) {
-          background: #3F3F3F;
-          color: white;
-        }
-        /*ALL TDS THE EVEN*/
-        &:nth-of-type(even) {
-          background: #282828;
-        }
-
-        /*SPECIFIC TD POSITION*/
-        .td-position {
-          font-size: 1.1em;
-          .fa-arrow-down {
-            color: red;
-            @media (max-width: 394px) {
-              font-size: 0.7em;
+          .amount-btn {
+            width: @width*3.9%;
+            margin: 0 13px 15px 0;
+            position: relative;
+            top: 8px;
+            left: 4px;
+            box-shadow: 1px 1px 10px 1px black;
+            background: linear-gradient(to top, #222222, #444547);
+            color: white;
+            border: none;
+            &:hover {
+              background: #252525;
+              background: linear-gradient(to bottom, #252525 0%, #444547 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#252525', endColorstr='#444547', GradientType=0);
+            }
+            &:focus {
+              box-shadow: inset 5px 3px 27px -4px #313030;
+              text-shadow: 1px -1px 1px #313030;
+              background: #0288cb;
+              background: linear-gradient(to bottom, #0288cb 43%, #0288cb 43%, #00daf8 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0288cb', endColorstr='#00daf8', GradientType=0);
             }
           }
+        }
 
-          .fa-arrow-up {
-            color: green;
+        /*TOP PART OF EACH TAB*/
+        .top-part {
+          border-bottom: 1px solid black;
+
+          /*CIRCLE IMAGE WITH THE STEP NUMBER*/
+          .tab-number-in-circle {
+            position: absolute;
+            top: -25.3px;
+            left: -21.4px;
+            height: 63px;
+            width: 63px;
+            -webkit-border-radius: 50%;
+            -webkit-background-clip: padding-box;
+            border-radius: 50%;
+            background-clip: padding-box;
+            background: #ffde00;
+            border: 6px solid #000;
+            font-size: 41px;
+            font-weight: bold;
+            line-height: 51px;
+            color: #000;
+            text-shadow: -1px 2px 1px #f4ff96;
+            -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+
+            @media (max-width: 640px) {
+              top: -46.3px;
+              left: 2.3px;
+            }
+          }
+          .tab-title {
+            font-size: 1.5em;
+            color: white;
+            line-height: 59.4px;
+            letter-spacing: 1.5px;
+            word-spacing: -2.1px;
+            margin: 0;
+          }
+        }
+        /*BOTTOM PART WITH THE BUTTONS */
+        .bottom-part {
+          min-height: 8.8em;
+
+          /*BUTTON FIRST*/
+          .tab-big-button {
+            font-size: 1.9em;
+            line-height: 2.033333;
+            border-radius: 6px;
+            position: relative;
+            top: 0.8em;
+            //opacity: 0.5;
+            color: black;
+            word-spacing: 0.8px;
+            background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
+            text-indent: -5.7px;
+            width: @width*8.5;
+
+            &:hover {
+              background: #72a40e;
+              background: linear-gradient(to bottom, #72a40e 43%, #aadc1f 96%);
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72a40e', endColorstr='#aadc1f', GradientType=0);
+            }
+
+            @media (max-width: 410px) {
+              font-size: 1.5em;
+            }
+
           }
         }
       }
-    }
-  }
-  .rb-options-history {
-    .container {
-      .table-title {
-        margin: 0px 0 0 0;
+      .arrow-rotate {
+        top: 49px;
+        left: -89.1px;
+        position: absolute;
       }
     }
-  }
 
-  /*FOOTER TAG WITH ALL THE LOGOS*/
-  .footer-certificate-logos {
-    margin: 8.4em 0 0;
-  }
-
-  /*FANCY BOX FOR WELCOME SCREEN HREF (DIV)*/
-  .modal-welcome {
-
-    /*WRAPPER FOR ALL THE CONTENT HEADER + BODY + FOOTER*/
-    .modal-welcome-content {
-      background: black;
-
-      /*HEADER OF THE MODAL (DIV)*/
-      .modal-header {
-        background: #01385e;
+    /*TABLE OF THE OPEN TRADE*/
+    .rb-options-open-trade, .rb-options-history {
+      margin: 3em 0 0;
+      border: none;
+      @media (max-width: 507px) {
+        font-size: 7.5px;
+        margin-bottom: 0;
+        overflow: hidden;
         border: none;
-
-        /*MODAL TITLE */
-        .modal-title-h3 {
-          margin: 0;
-          line-height: 1.42857143;
-          color: white;
-          font-weight: bold;
-          letter-spacing: 1.2px;
-          font-size: 2em;
-        }
       }
-      /*BODY PART (CONTENT OF THE MODAL) (DIV)*/
-      .modal-body {
-        .modal-welcome-text-p {
-          color: white;
-          text-align: center;
-          .model-welcome-text-ps-span {
-            color: #0085b9;
-            display: block;
+      /*SPECIFIC CONTAINER*/
+      .container {
+        padding: 0;
+
+        /*TABLES GENERAL*/
+        .table {
+          margin-bottom: 0;
+          .table-header-th{
+            border-top:none;
           }
         }
-        /*WRAPPER FOR ALL THE STEPS NEW USER NEW TO HAVE TO START USE THE PANEL*/
-        .steps-wrapper {
 
-          /*STEP DIV */
-          .step-wrapper {
-            border: 1px dotted gray;
-            padding: 1em;
-            margin: 1em;
 
-            /*IMAGE-WRAPPER DIV*/
-            .image-wrapper {
-              text-align: center;
+        /*TABLE ROW (TR)*/
+        .table-row {
 
-              /*IMAGE SIZE */
-              .step-img {
-                width: @width*3.3;
+          /*TABLE DATA (TD)*/
+          .table-data {
+            border-top: none;
+          }
+        }
+
+        /*CAPTION OF THE TABLE (CAPTION) */
+        .table-title {
+          font-size: 1.95em;
+          font-weight: bold;
+          text-indent: -3.6px;
+          color: white;
+          letter-spacing: 0.7px;
+          word-spacing: -1.8px;
+          background-color: @nav-bar-dark-color;
+        }
+
+        /*TR WITH ALL THE HEADERS*/
+        .table-headers {
+          background: @nav-bar-bright-color;
+          color: black;
+          font-size: 1.3em;
+
+          /*HEADERS (TH)*/
+          .header {
+            border-top: none;
+          }
+        }
+
+        /*TD WITH ALL THE CONTENT (TD)*/
+        .table-tr-content {
+          color: white;
+
+          /*ALL TDS THE ODD*/
+          &:nth-of-type(odd) {
+            background: #3F3F3F;
+            color: white;
+          }
+          /*ALL TDS THE EVEN*/
+          &:nth-of-type(even) {
+            background: #282828;
+          }
+
+          /*SPECIFIC TD POSITION*/
+          .td-position {
+            font-size: 1.1em;
+            .fa-arrow-down {
+              color: red;
+              @media (max-width: 394px) {
+                font-size: 0.7em;
+              }
+            }
+
+            .fa-arrow-up {
+              color: green;
+            }
+          }
+        }
+      }
+    }
+    .rb-options-history {
+      .container {
+        .table-title {
+          margin: 0px 0 0 0;
+        }
+      }
+    }
+
+    /*FOOTER TAG WITH ALL THE LOGOS*/
+    .footer-certificate-logos {
+      margin: 8.4em 0 0;
+      .footer-copyrights{
+          color:white;
+      }
+    }
+
+    /*FANCY BOX FOR WELCOME SCREEN HREF (DIV)*/
+    .modal-welcome {
+
+      /*WRAPPER FOR ALL THE CONTENT HEADER + BODY + FOOTER*/
+      .modal-welcome-content {
+        background: @bg-color-modal;
+
+        /*HEADER OF THE MODAL (DIV)*/
+        .modal-header {
+          background: #01385e;
+          border: none;
+
+          /*MODAL TITLE */
+          .modal-title-h3 {
+            margin: 0;
+            line-height: 1.42857143;
+            color: white;
+            font-weight: bold;
+            letter-spacing: 1.2px;
+            font-size: 2em;
+          }
+        }
+        /*BODY PART (CONTENT OF THE MODAL) (DIV)*/
+        .modal-body {
+          .modal-welcome-text-p {
+            color: white;
+            text-align: center;
+            .model-welcome-text-ps-span {
+              color: #0085b9;
+              display: block;
+            }
+          }
+          /*WRAPPER FOR ALL THE STEPS NEW USER NEW TO HAVE TO START USE THE PANEL*/
+          .steps-wrapper {
+
+            /*STEP DIV */
+            .step-wrapper {
+              border: 1px dotted gray;
+              padding: 1em;
+              margin: 1em;
+
+              /*IMAGE-WRAPPER DIV*/
+              .image-wrapper {
+                text-align: center;
+
+                /*IMAGE SIZE */
+                .step-img {
+                  width: @width*3.3;
+                }
               }
             }
           }
         }
       }
+
     }
 
-  }
+    /*MODAL BASE WRAPPER FOR DEPOSIT FORM*/
+    .modal-deposit {
+      color: white;
 
-  /*MODAL BASE WRAPPER FOR DEPOSIT FORM*/
-  .modal-deposit {
-    color: white;
-
-    .modal-dialog {
-      width: 60%;
-    }
-
-    /*INNER WRAPPER */
-    .modal-deposit-content {
-      background: #282827;
-
-      /*MODAL HEADER*/
-      .modal-header {
-        background: #01385e;
-        color: white;
-        border: none;
-        .modal-title {
-          margin: 0;
-          line-height: 1.42857143;
-          font-size: 1.6em;
-          font-weight: 600;
-          text-shadow: 1px 0px 1px black;
-        }
+      .modal-dialog {
+        width: 60%;
       }
-      .modal-body {
-        padding: 0;
-        .broker-name {
-          border-radius: 4px;
+
+      /*INNER WRAPPER */
+      .modal-deposit-content {
+        background: @bg-color-modal;
+
+        /*MODAL HEADER*/
+        .modal-header {
+          background: #01385e;
+          color: white;
+          border: none;
+          .modal-title {
+            margin: 0;
+            line-height: 1.42857143;
+            font-size: 1.6em;
+            font-weight: 600;
+            text-shadow: 1px 0px 1px black;
+          }
+        }
+        .modal-body {
           padding: 0;
-          margin: 0;
-          .deposit-broker-text-wrapper {
+          .broker-name {
+            border-radius: 4px;
             padding: 0;
             margin: 0;
-            .deposit-broker-text {
-              padding: 3px 0;
+            .deposit-broker-text-wrapper {
+              padding: 0;
               margin: 0;
+              .deposit-broker-text {
+                padding: 3px 0;
+                margin: 0;
+              }
+            }
+            .hand {
+              color: #0069b1;
             }
           }
-          .hand {
-            color: #0069b1;
-          }
-        }
 
-        .deposit-title-wrapper {
-          background: #0099ff;
-          padding: 0.2em;
-          box-shadow: 0px 2px 1px 1px black;
+          .deposit-title-wrapper {
+            background: @nav-bar-bright-color;
+            padding: 0.2em;
+            box-shadow: 0px 2px 1px 1px black;
 
-          .deposite-title {
-            margin: 0;
-            color: black;
-            font-weight: bolder;
-            font-size: 3em;
+            .deposite-title {
+              margin: 0;
+              color: black;
+              font-weight: bolder;
+              font-size: 3em;
+            }
           }
-        }
-        /*FORM WRAPPER FOR DEPOSIT*/
-        .form-wrapper {
-          .form{
-            .first-part-form{
-                .form-group{
+          /*FORM WRAPPER FOR DEPOSIT*/
+          .form-wrapper {
+
+            /*FORM TAG ITSELF */
+            .form-deposit {
+
+              /*FIRST PART OF THE FORM (DIV TAG WRAPPER)*/
+              .first-part-form {
+                .form-title {
 
                 }
-            }
-            .second-part-form{
-               .form-group{
+                /*FORM GROUP (EACH INPUT AND INPUT)*/
+                .form-group {
 
-               }
+                }
+              }
 
-            }
-            .first-part-form,.second-part-form{
-              padding:1em;
+              /*SECOND PART OF THE FORM (DIV TAG WRAPPER)*/
+              .second-part-form {
+
+                /*FORM GROUP (EACH INPUT AND INPUT)*/
+                .form-group {
+
+                }
+
+              }
+              .first-part-form, .second-part-form {
+                padding: 0;
+                margin:0;
+              }
             }
           }
         }

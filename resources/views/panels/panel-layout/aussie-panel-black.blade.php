@@ -25,7 +25,7 @@
     <script type="text/javascript" src="//sst-super-c-nl.spotoption.com/socket.io/socket.io.js"></script>
 
     {{--PANEL BASE SCRIPT--}}
-    {!! $page->appendAsset(url('/js/panel-common/panel.js')) !!}
+    {!! $page->appendAsset(url('/js/panels/black/panel.js')) !!}
 
     <script src="/js/panels/black/black-script.js"></script>
     {{--Main JS--}}
@@ -305,7 +305,7 @@
                     <div class="bottom-part">
                         <div class="tab-four-buttons text-uppercase col-md-12 text-center">
                             <?php
-                            if (!isset($bot_settings['minAmount']) || $bot_settings['minAmount'] == 25 && $bot_settings['maxAmount'] == 50)
+                            if ( ! isset($bot_settings[ 'minAmount' ]) || $bot_settings[ 'minAmount' ] == 25 && $bot_settings[ 'maxAmount' ] == 50)
                                 $btnClass = 'btn-success';
                             else
                                 $btnClass = 'btn-default';
@@ -314,7 +314,7 @@
                                     data-amount="25-50">$25 -
                                 $50
                             </button>
-                            <button class="btn {{ ($bot_settings['minAmount'] == 50 && $bot_settings['maxAmount'] == 100) ? 'btn-success' : 'btn-default'}} btn-lg amount-btn amount-button2 btn-space"
+                            <button class="btn  {{ ($bot_settings['minAmount'] == 50 && $bot_settings['maxAmount'] == 100) ? 'btn-success' : 'btn-default'}} btn-lg amount-btn amount-button2 btn-space active-btn"
                                     data-amount="50-100">$50 -
                                 $100
                             </button>
@@ -410,13 +410,13 @@
 
                     {{--FIRST TABLE ROW WITH ALL THE HEADERS--}}
                     <tr class="table-headers table-row">
-                        <th class="text-capitalize text-center">assets</th>
-                        <th class="text-capitalize text-center">position</th>
-                        <th class="text-capitalize text-center">amount</th>
-                        <th class="text-capitalize text-center">entry rate</th>
-                        <th class="text-capitalize text-center">current rate</th>
-                        <th class="text-capitalize text-center">expiration date</th>
-                        <th class="text-capitalize text-center">status</th>
+                        <th class="text-capitalize text-center table-header-th">assets</th>
+                        <th class="text-capitalize text-center table-header-th">position</th>
+                        <th class="text-capitalize text-center table-header-th">amount</th>
+                        <th class="text-capitalize text-center table-header-th">entry rate</th>
+                        <th class="text-capitalize text-center table-header-th">current rate</th>
+                        <th class="text-capitalize text-center table-header-th">expiration date</th>
+                        <th class="text-capitalize text-center table-header-th">status</th>
                     </tr>
 
                     {{--TABLE DATA--}}
@@ -439,7 +439,7 @@
             <div class="container">
                 <img src="/img/panel/black/cartificate-321.png" alt="3 icons of guaranty"
                      class="img-responsive center-block">
-                <p>Copyright © {{ $page->title_h1 }} Method. </p>
+                <p class="footer-copyrights text-center">Copyright © {{ $page->title_h1 }} Method. </p>
 
             </div>
         </footer>
@@ -547,7 +547,7 @@
                         <div class="form-wrapper">
 
                             {{--FORM INPUTS--}}
-                            <form class="form" role="form">
+                            <form class="form-deposit" role="form">
                                 {{--FIRST ROW FORM--}}
                                 <div class="col-lg-6 first-part-form">
 
@@ -561,49 +561,49 @@
 
                                     {{--FIRST NAME--}}
                                     <div class="form-group ">
-                                        <label for="fname" class="text-capitalize col-md-4"><i></i> first name</label>
+                                        <label for="fname" class="text-capitalize col-md-3"><i></i> first name</label>
                                         <input type="text" class="form-control col-md-8" id="fname">
                                     </div>
 
                                     {{--LAST NAME --}}
                                     <div class="form-group ">
-                                        <label for="lname" class="text-capitalize col-md-4"><i></i> last name</label>
+                                        <label for="lname" class="text-capitalize col-md-3"><i></i> last name</label>
                                         <input type="text" class="form-control col-md-8" id="lname">
                                     </div>
 
                                     {{--EMAIL--}}
                                     <div class="form-group ">
-                                        <label for="email" class="text-capitalize col-md-4"><i></i> email</label>
+                                        <label for="email" class="text-capitalize col-md-3"><i></i> email</label>
                                         <input type="email" class="form-control col-md-8" id="email">
                                     </div>
 
                                     {{--PHONE--}}
                                     <div class="form-group ">
-                                        <label for="phone" class="text-capitalize col-md-4"><i></i>phone</label>
+                                        <label for="phone" class="text-capitalize col-md-3"><i></i>phone</label>
                                         <input type="phone" class="form-control col-md-8" id="phone">
                                     </div>
 
                                     {{--COUNTRY--}}
                                     <div class="form-group ">
-                                        <label for="country" class="text-capitalize col-md-4"><i></i> country</label>
+                                        <label for="country" class="text-capitalize col-md-3"><i></i> country</label>
                                         <input type="text" class="form-control col-md-8" id="country">
                                     </div>
 
                                     {{--CITY--}}
                                     <div class="form-group ">
-                                        <label for="city" class="text-capitalize col-md-4"><i></i> city</label>
+                                        <label for="city" class="text-capitalize col-md-3"><i></i> city</label>
                                         <input type="text" class="form-control col-md-8" id="city">
                                     </div>
 
                                     {{--ADDRESS--}}
                                     <div class="form-group ">
-                                        <label for="address" class="text-capitalize col-md-4"><i></i> address</label>
+                                        <label for="address" class="text-capitalize col-md-3"><i></i> address</label>
                                         <input type="text" class="form-control col-md-8" id="address">
                                     </div>
 
                                     {{--ZIP CODE--}}
                                     <div class="form-group ">
-                                        <label for="zip-code" class="text-capitalize col-md-4"><i></i> zip code</label>
+                                        <label for="zip-code" class="text-capitalize col-md-3"><i></i> zip code</label>
                                         <input type="text" class="form-control col-md-8" id="zip-code">
                                     </div>
                                 </div>
@@ -616,7 +616,7 @@
                                     <div class="clearfix"></div>
                                     {{--CARD-TYPE--}}
                                     <div class="form-group ">
-                                        <label for="card-type" class="text-capitalize col-md-4"><i></i> card
+                                        <label for="card-type" class="text-capitalize col-md-3"><i></i> card
                                             type</label>
                                         <select class="form-control text-capitalize col-md-8" name="" id="card-type">
                                             <option value="0">choose type</option>
@@ -630,34 +630,39 @@
 
                                     {{--CARD NUMBER--}}
                                     <div class="form-group ">
-                                        <label for="card-number" class="text-capitalize col-md-4"><i></i> card
+                                        <label for="card-number" class="text-capitalize col-md-3"><i></i> card
                                             number</label>
                                         <input type="text" class="form-control col-md-8" id="card-number">
                                     </div>
 
                                     {{--AMOUNT--}}
                                     <div class="form-group ">
-                                        <label for="amount" class="text-capitalize col-md-4"><i></i> amount</label>
+                                        <label for="amount" class="text-capitalize col-md-3"><i></i> amount</label>
                                         <input type="text" class="form-control col-md-8" id="amount">
                                     </div>
 
                                     {{--EXPIRATION--}}
                                     <div class="form-group ">
-                                        <label for="expiration-date" class="text-capitalize col-md-4"><i></i>expiration
+                                        <label for="expiration-date" class="text-capitalize col-md-3"><i></i>expiration
                                             date</label>
                                         <input type="text" class="form-control col-md-8" id="expiration">
                                     </div>
 
                                     {{--CVV--}}
                                     <div class="form-group ">
-                                        <label for="cvv" class="text-uppercase col-md-4"><i></i> cvv</label>
+                                        <label for="cvv" class="text-uppercase col-md-3"><i></i> cvv</label>
                                         <input type="text" class="form-control col-md-8" id="cvv">
                                     </div>
+                                    {{--FIX THE HEIGHTS DEFRENCE AND CLEAR THE FLOAT--}}
+                                    <div class="clearfix"></div>
                                     <button type="submit" class="btn btn-default ">Submit</button>
                                 </div>
                             </form>
                         </div>
                     </div>
+                    {{--FIX THE HEIGHTS DEFRENCE AND CLEAR THE FLOAT--}}
+                    <div class="clearfix"></div>
+
                     {{--MODEL FOOTER--}}
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default text-uppercase info" data-dismiss="modal">get
