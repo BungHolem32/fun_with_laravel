@@ -7075,6 +7075,7 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
   background: black;
   /*HEADER OF THE MODAL (DIV)*/
   /*BODY PART (CONTENT OF THE MODAL) (DIV)*/
+  /*MODAL FOOTER WRAPPER*/
 }
 body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-header {
   background: #01385e;
@@ -7124,7 +7125,7 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
   /*RELAX WRAPPER BACKGROUND*/
   /*WRAPPER FOR ALL THE STEPS IMAGES (LOGOS)*/
   /*IMAGE-WRAPPER DIV*/
-  /**/
+  /*STEP CONTENT WRAPPER*/
 }
 body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper.money-wrapper {
   background: #282828 url('/img/panel/black/desktop/money.png') no-repeat;
@@ -7160,6 +7161,7 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
   padding: 15px;
   text-align: right;
   border-top: 1px solid #222;
+  /*FOOTER PLACE IN THE WELCOME FOOTER*/
 }
 body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-footer .button-welcome-footer {
   color: black;
