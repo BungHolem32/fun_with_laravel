@@ -521,7 +521,8 @@
                 <!-- Modal content-->
                 <div class="modal-content modal-deposit-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <img src="/img/panel/black/desktop/close.png" alt="close square-logo" class="square-logo"
+                             data-dismiss="modal">
                         <h4 class="modal-title text-center text-uppercase">Deposit Now Into Your RBoptions Broker
                             Account</h4>
                     </div>
@@ -562,25 +563,25 @@
 
                                     {{--FORM TITLE PERSONAL INFO--}}
                                     <div class="form-title-wrapper">
-                                        <h3 class="form-title text-uppercase col-md-6">personal information</h3>
+                                        <h3 class="form-title text-uppercase col-md-6 col-sm-7">personal information</h3>
                                         <img src="/img/panel/black/desktop/yellow-arrow.png"
-                                             alt="arrow that points to the inputs" class="yellow-arrow">
+                                             alt="arrow that points to the inputs" class="yellow-arrow visible-lg-block visible-md-block">
                                     </div>
 
                                     <div class="clearfix"></div>
 
                                     {{--FIRST NAME--}}
                                     <div class="form-group ">
-                                        <label for="fname" class="text-capitalize col-md-4 label-form"> first
+                                        <label for="first-name" class="text-capitalize col-md-4 label-form"> first
                                             name</label>
-                                        <input type="text" class="form-control col-md-8" id="fname">
+                                        <input type="text" class="form-control col-md-8" id="first-name">
                                     </div>
 
                                     {{--LAST NAME --}}
                                     <div class="form-group ">
                                         <label for="lname" class="text-capitalize col-md-4 label-form"> last
                                             name</label>
-                                        <input type="text" class="form-control col-md-8" id="lname">
+                                        <input type="text" class="form-control col-md-8" id="last-name">
                                     </div>
                                     {{--EMAIL--}}
                                     <div class="form-group ">
@@ -623,20 +624,24 @@
                                 </div>
                                 {{--SECOND ROW FORM--}}
                                 <div class="col-lg-6 second-part-form">
+
+                                    {{--TITLE WRAPPER--}}
                                     <div class="form-title-wrapper">
-                                        <h3 class="form-title text-uppercase col-md-6 label-form">your payment
+                                        <h3 class="form-title text-uppercase col-md-6 col-sm-7 label-form">your payment
                                             details</h3>
                                         <img src="/img/panel/black/desktop/yellow-arrow.png"
-                                             alt="arrow that points to the inputs" class="yellow-arrow">
+                                             alt="arrow that points to the inputs" class="yellow-arrow visible-lg-block visible-md-block">
                                     </div>
+                                    {{--CLEAR FIX AFTER TITLE--}}
                                     <div class="clearfix"></div>
+
                                     {{--CARD-TYPE--}}
                                     <div class="form-group ">
                                         <div class="col-md-4">
-                                            <label for="card-type" class="text-capitalize  label-form"> card
+                                            <label for="card-type" class="label-form text-capitalize"> card
                                                 type</label>
                                             <img src="/img/panel/black/desktop/credit-cards.png" alt="card type images"
-                                                 class="card-type">
+                                                 class="card-type visible-lg-block visible-md-block">
                                         </div>
                                         <select class="form-control text-capitalize col-md-8" name="" id="card-type">
                                             <option value="0">choose type</option>
@@ -645,12 +650,12 @@
                                             <option value="3">CarteBleue</option>
                                             <option value="4">Maestro</option>
                                         </select>
-                                        <img src="" alt="">
                                     </div>
                                     <div class="clearfix"></div>
+
                                     {{--CARD NUMBER--}}
                                     <div class="form-group card-number-after-clear-fix">
-                                        <label for="card-number" class="text-capitalize col-md-4 label-form"> card
+                                        <label for="card-number" class="label-form text-capitalize col-md-4"> card
                                             number</label>
                                         <input type="text" class="form-control col-md-8" id="card-number">
                                     </div>
@@ -662,21 +667,72 @@
                                     </div>
 
                                     {{--EXPIRATION--}}
-                                    <div class="form-group ">
-                                        <label for="expiration-date" class="text-capitalize col-md-4 label-form">expiration
+                                    <div class="form-group">
+                                        {{--LABEL OF THE EXPERAION DATE--}}
+                                        <label for="expiration-date" class="label-form text-capitalize col-md-4">expiration
                                             date</label>
-                                        <input type="text" class="form-control col-md-8" id="expiration">
+                                        {{--SELECT BOX  FOR MONTH EXPERATION--}}
+                                        <select name="month-exp" id="month-exp" class="col-md-2 month-exp">
+                                            <option value="" class="text-capitalize col-md-4">month</option>
+                                            <option value="1">01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                            <option value="4">04</option>
+                                            <option value="5">05</option>
+                                            <option value="6">06</option>
+                                            <option value="7">07</option>
+                                            <option value="8">08</option>
+                                            <option value="9">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        {{--SELECT BOX FOR YEAR EXPERATION--}}
+                                        <select name="year-exp" id="year-exp" class="col-md-4 year-exp">
+                                            <option value="" class="text-capitalize col-md-4">year</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
+                                            <option value="2028">2028</option>
+                                            <option value="2029">2029</option>
+                                            <option value="2030">2030</option>
+                                            <option value="2031">2031</option>
+                                            <option value="2032">2032</option>
+                                            <option value="2033">2033</option>
+                                            <option value="2034">2034</option>
+                                        </select>
                                     </div>
 
                                     {{--CVV--}}
                                     <div class="form-group ">
-                                        <label for="cvv" class="text-uppercase col-md-4 label-form"> cvv</label>
+                                        <label for="cvv" class="label-form text-uppercase col-md-4"> cvv</label>
                                         <input type="text" class="form-control col-md-8" id="cvv">
+                                        <img src="/img/panel/black/desktop/info.png" alt="info logo png" class="info-logo visible-lg-block visible-md-block">
                                     </div>
+
                                     {{--FIX THE HEIGHTS DEFRENCE AND CLEAR THE FLOAT--}}
                                     <div class="clearfix"></div>
-                                    <button type="submit" class="btn form-button text-uppercase">get me started - deposit funds</button>
-                                    <div></div>
+
+                                    {{--SUBMIT BUTTON --}}
+                                    <button type="submit" class="btn form-button text-uppercase">get me started -
+                                        deposit funds
+                                    </button>
+
+                                    {{--WARNING MESSAGE COMMENT AT THE BOTTOM OF THE FORM--}}
+                                    <div class="warning-massage-beneath-the-button text-center">
+                                        Deposit funds into your RBoptions trading account. <br>
+                                        (Finish button will automatically be available once you've funded your account)
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -686,9 +742,42 @@
 
                     {{--MODEL FOOTER--}}
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default text-uppercase info" data-dismiss="modal">get
-                            started
-                        </button>
+
+                        {{--THREE STEPS WRAPPER--}}
+                        <div class="three-steps-for-register-wrapper text-center">
+
+                            {{--ONE STEP WRAPPER LOCKER--}}
+                            <div class="step-wrapper col-md-4">
+                                {{--LOCK LOGO IMG--}}
+                                <img src="/img/panel/black/desktop/lock.png" alt="locker-sign">
+                                {{--TEXT LOCKER--}}
+                                <p class="text-step step-locker">In order to unlock your The Aussie Panel Method
+                                    Account, You have to fund your
+                                    RBoptions broker account.</p>
+                            </div>
+
+                            {{--ONE STEP WRAPPER ALERT--}}
+                            <div class="step-wrapper col-md-4">
+                                {{--LOCK ALERT IMG--}}
+                                <img src="/img/panel/black/desktop/alert.png" alt="alert-sign">
+                                {{--TEXT ALERT LOGO--}}
+                                <p class="text-step step-alert">Deposit Form Is Currently Not Working? Click Here To
+                                    Deposit In Your RBoptions Broker
+                                    Website.</p>
+                            </div>
+
+                            {{--ONE STEP WRAPPER V SIGN--}}
+                            <div class="step-wrapper col-md-4">
+                                {{--IMG V LOGO--}}
+                                <img src="/img/panel/black/desktop/v.png" alt="v-sign">
+                                {{--TEXT V LOGO--}}
+                                <p class="text-step step-v">Your RBoptions account is fully connected to your The Aussie
+                                    Panel Method. Once you
+                                    get started within 3 short minutes you will see your cash flow straight to your
+                                    account!
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
