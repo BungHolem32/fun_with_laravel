@@ -530,11 +530,13 @@ body {
             text-shadow: -1px 2px 1px #f4ff96;
             -webkit-transform: rotate(5deg);
             transform: rotate(5deg);
-
-            @media (max-width: 640px) {
-              top: -46.3px;
-              left: 2.3px;
+            @media(max-width:1012px){
+              left:15px;
             }
+            @media(max-width:433px){
+              top: -47px;
+            }
+
           }
           .tab-title {
             font-size: 1.5em;
@@ -807,6 +809,7 @@ body {
               width: 50%;
               height: 7.5vh;
               font-size: 300%;
+              text-shadow: 0px 1px 2px white;
               background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
               filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
             }
@@ -834,6 +837,7 @@ body {
           color: white;
           border: none;
           padding: 0;
+
           /*MODAL TITLE */
           .modal-title {
             margin: 0;
@@ -841,6 +845,7 @@ body {
             font-size: 2.7em;
             font-weight: 600;
             text-shadow: 1px 0px 1px black;
+
           }
 
           /*BUTTON X FOR EXIT THE MODEL*/
@@ -995,9 +1000,10 @@ body {
                 /*FORM GROUP (EACH INPUT AND INPUT)*/
                 .form-group {
                   padding: 1.3em 0;
-                  @media (max-width: 990px) {
+                  @media (max-width: 998px) {
                     padding: 0;
                     margin-bottom: 1em;
+                    width:100%;
                   }
 
                   /*CARD NUMBER FIELD AFTER CLEAR FIX */

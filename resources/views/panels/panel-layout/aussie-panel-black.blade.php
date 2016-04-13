@@ -525,28 +525,37 @@
             </div>
         </div>
 
-        {{--MODAL DEPOSIT PAGE --}}
+        {{--MODAL DEPOSIT PAGE WRAPPER --}}
         <div class="modal-deposit modal fade" role="dialog">
             <div class="modal-dialog">
 
-                <!-- Modal content-->
+                <!-- MODAL CONTENT-->
                 <div class="modal-content modal-deposit-content">
                     <div class="modal-header">
+
+                        {{--EXIT ICON--}}
                         <img src="/img/panel/black/desktop/close.png" alt="close square-logo" class="square-logo"
                              data-dismiss="modal">
+
+                        {{--TITLE OF THE MODAL--}}
                         <h4 class="modal-title text-center text-uppercase">Deposit Now Into Your RBoptions Broker
                             Account</h4>
                     </div>
+                   {{--BODY PART --}}
                     <div class="modal-body">
 
-                        {{--BROKER NAME--}}
+                        {{--BROKER NAME WRAPPER--}}
                         <div class="broker-name text-center">
 
-                            {{--DEPOSIT TEXT--}}
+                            {{--DEPOSIT TEXT WRAPPER--}}
                             <div class="deposit-broker-text-wrapper col-md-12">
+
+                                {{--HAND LEFT-IMG--}}
                                 <img src="/img/panel/black/desktop/header-hand-left.png" alt=""
                                      class="left-hand-header">
+                                {{--TEXT (H2)--}}
                                 <h2 class='deposit-broker-text text-center text-uppercase col-'>Your Broker: </h2>
+                                {{--HAND LEFT-IMG--}}
                                 <img src="/img/panel/black/desktop/header-hand-right.png" alt=""
                                      class="right-hand-header">
                             </div>
@@ -567,12 +576,13 @@
                         {{--FORM OUTER WRAPPER--}}
                         <div class="form-wrapper">
 
-                            {{--FORM INPUTS--}}
+                            {{--FORM INPUTS (FORM TAG)--}}
                             <form class="form-deposit" role="form">
-                                {{--FIRST ROW FORM--}}
+
+                                {{--FIRST ROW FORM WAPPER--}}
                                 <div class="col-lg-6 first-part-form">
 
-                                    {{--FORM TITLE PERSONAL INFO--}}
+                                    {{--FORM TITLE PERSONAL INFO INPUT WRAPPER--}}
                                     <div class="form-title-wrapper">
                                         <h3 class="form-title text-uppercase col-md-6 col-sm-7">personal
                                             information</h3>
@@ -583,62 +593,63 @@
 
                                     <div class="clearfix"></div>
 
-                                    {{--FIRST NAME--}}
+                                    {{--FIRST NAME INPUT WRAPPER--}}
                                     <div class="form-group ">
                                         <label for="first-name" class="text-capitalize col-md-4 label-form"> first
                                             name</label>
                                         <input type="text" class="form-control col-md-8" id="first-name">
                                     </div>
 
-                                    {{--LAST NAME --}}
+                                    {{--LAST NAME INPUT WRAPPER--}}
                                     <div class="form-group ">
                                         <label for="lname" class="text-capitalize col-md-4 label-form"> last
                                             name</label>
                                         <input type="text" class="form-control col-md-8" id="last-name">
                                     </div>
-                                    {{--EMAIL--}}
+                                    {{--EMAIL INPUT WRAPPER--}}
                                     <div class="form-group ">
                                         <label for="email" class="text-capitalize col-md-4 label-form"> email</label>
                                         <input type="email" class="form-control col-md-8" id="email">
                                     </div>
 
-                                    {{--PHONE--}}
+                                    {{--PHONE INPUT WRAPPER--}}
                                     <div class="form-group ">
                                         <label for="phone" class="text-capitalize col-md-4 label-form">phone</label>
                                         <input type="phone" class="form-control col-md-8" id="phone">
                                     </div>
 
-                                    {{--COUNTRY--}}
+                                    {{--COUNTRY INPUT WRAPPER--}}
                                     <div class="form-group ">
                                         <label for="country" class="text-capitalize col-md-4 label-form">
                                             country</label>
                                         <input type="text" class="form-control col-md-8" id="country">
                                     </div>
 
-                                    {{--CITY--}}
+                                    {{--CITY INPUT WRAPPER--}}
                                     <div class="form-group ">
                                         <label for="city" class="text-capitalize col-md-4 label-form"> city</label>
                                         <input type="text" class="form-control col-md-8" id="city">
                                     </div>
 
-                                    {{--ADDRESS--}}
+                                    {{--ADDRESS INPUT WRAPPER--}}
                                     <div class="form-group ">
                                         <label for="address" class="text-capitalize col-md-4 label-form">
                                             address</label>
                                         <input type="text" class="form-control col-md-8" id="address">
                                     </div>
 
-                                    {{--ZIP CODE--}}
+                                    {{--ZIP CODE INPUT  WRAPPER--}}
                                     <div class="form-group ">
                                         <label for="zip-code" class="text-capitalize col-md-4 label-form"> zip
                                             code</label>
                                         <input type="text" class="form-control col-md-8" id="zip-code">
                                     </div>
                                 </div>
-                                {{--SECOND ROW FORM--}}
+
+                                {{--SECOND ROW FORM (DIV) --}}
                                 <div class="col-lg-6 second-part-form">
 
-                                    {{--TITLE WRAPPER--}}
+                                    {{--TITLE WRAPPER INPUT WRAPPER--}}
                                     <div class="form-title-wrapper">
                                         <h3 class="form-title text-uppercase col-md-6 col-sm-7 label-form">your payment
                                             details</h3>
@@ -649,7 +660,7 @@
                                     {{--CLEAR FIX AFTER TITLE--}}
                                     <div class="clearfix"></div>
 
-                                    {{--CARD-TYPE--}}
+                                    {{--CARD-TYPE INPUT WRAPPER--}}
                                     <div class="form-group ">
                                         <div class="col-md-4">
                                             <label for="card-type" class="label-form text-capitalize"> card
@@ -667,25 +678,26 @@
                                     </div>
                                     <div class="clearfix"></div>
 
-                                    {{--CARD NUMBER--}}
+                                    {{--CARD NUMBER INPUT WRAPPER--}}
                                     <div class="form-group card-number-after-clear-fix">
                                         <label for="card-number" class="label-form text-capitalize col-md-4"> card
                                             number</label>
                                         <input type="text" class="form-control col-md-8" id="card-number">
                                     </div>
 
-                                    {{--AMOUNT--}}
+                                    {{--AMOUNT INPUT WRAPPER--}}
                                     <div class="form-group ">
                                         <label for="amount" class="text-capitalize col-md-4 label-form"> amount</label>
                                         <input type="text" class="form-control col-md-8" id="amount">
                                     </div>
 
-                                    {{--EXPIRATION--}}
+                                    {{--EXPIRATION INPUT WRAPPER--}}
                                     <div class="form-group">
-                                        {{--LABEL OF THE EXPERAION DATE--}}
+
+                                        {{--LABEL FOR THE EXPERAION DATE--}}
                                         <label for="expiration-date" class="label-form text-capitalize col-md-4">expiration
                                             date</label>
-                                        {{--SELECT BOX  FOR MONTH EXPERATION--}}
+                                        {{--SELECT BOX  FOR MONTH EXPERATION INPUT--}}
                                         <select name="month-exp" id="month-exp" class="col-md-2 month-exp">
                                             <option value="" class="text-capitalize col-md-4">month</option>
                                             <option value="1">01</option>
@@ -701,7 +713,8 @@
                                             <option value="11">11</option>
                                             <option value="12">12</option>
                                         </select>
-                                        {{--SELECT BOX FOR YEAR EXPERATION--}}
+
+                                        {{--SELECT BOX FOR YEAR EXPERATION INPUT--}}
                                         <select name="year-exp" id="year-exp" class="col-md-4 year-exp">
                                             <option value="" class="text-capitalize col-md-4">year</option>
                                             <option value="2015">2015</option>
@@ -727,7 +740,7 @@
                                         </select>
                                     </div>
 
-                                    {{--CVV--}}
+                                    {{--CVV INPUT--}}
                                     <div class="form-group ">
                                         <label for="cvv" class="label-form text-uppercase col-md-4"> cvv</label>
                                         <input type="text" class="form-control col-md-8" id="cvv">
@@ -763,8 +776,10 @@
 
                             {{--ONE STEP WRAPPER LOCKER--}}
                             <div class="step-wrapper col-md-4">
+
                                 {{--LOCK LOGO IMG--}}
                                 <img src="/img/panel/black/desktop/lock.png" alt="locker-sign">
+
                                 {{--TEXT LOCKER--}}
                                 <p class="text-step step-locker">In order to unlock your The Aussie Panel Method
                                     Account, You have to fund your
@@ -773,8 +788,10 @@
 
                             {{--ONE STEP WRAPPER ALERT--}}
                             <div class="step-wrapper col-md-4">
+
                                 {{--LOCK ALERT IMG--}}
                                 <img src="/img/panel/black/desktop/alert.png" alt="alert-sign">
+
                                 {{--TEXT ALERT LOGO--}}
                                 <p class="text-step step-alert">Deposit Form Is Currently Not Working? Click Here To
                                     Deposit In Your RBoptions Broker
@@ -783,8 +800,10 @@
 
                             {{--ONE STEP WRAPPER V SIGN--}}
                             <div class="step-wrapper col-md-4">
+
                                 {{--IMG V LOGO--}}
                                 <img src="/img/panel/black/desktop/v.png" alt="v-sign">
+
                                 {{--TEXT V LOGO--}}
                                 <p class="text-step step-v">Your RBoptions account is fully connected to your The Aussie
                                     Panel Method. Once you

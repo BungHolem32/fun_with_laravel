@@ -6909,10 +6909,14 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-number-in-circle
   -webkit-transform: rotate(5deg);
   transform: rotate(5deg);
 }
-@media (max-width: 640px) {
+@media (max-width: 1012px) {
   body .content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-number-in-circle {
-    top: -46.3px;
-    left: 2.3px;
+    left: 15px;
+  }
+}
+@media (max-width: 433px) {
+  body .content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-number-in-circle {
+    top: -47px;
   }
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-title {
@@ -7171,6 +7175,7 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
   width: 50%;
   height: 7.5vh;
   font-size: 300%;
+  text-shadow: 0px 1px 2px white;
   background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
 }
@@ -7339,11 +7344,12 @@ body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wr
   /*CARD NUMBER FIELD AFTER CLEAR FIX */
   /*LABEL TAG FOR ALL THE INPUTS IN THE FORM */
 }
-@media (max-width: 990px) {
+@media (max-width: 998px) {
   body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .first-part-form .form-group,
   body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .form-group {
     padding: 0;
     margin-bottom: 1em;
+    width: 100%;
   }
 }
 body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .first-part-form .form-group.card-number-after-clear-fix,
