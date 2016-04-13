@@ -40,6 +40,7 @@ body {
   left: 0;
   margin: 0;
   position: relative;
+  padding: 0;
 
   /*REMOVE TRANSITION ON DESKTOP VIEW*/
   @media (max-width: 1000px) {
@@ -718,6 +719,10 @@ body {
               letter-spacing: 1.2px;
               font-size: 2.6em;
               text-shadow: 0px -1px 1px black;
+
+              @media (max-width:500px){
+                font-size: 2em;
+              }
             }
             /*EXIT BUTTON FROM THE MODAL*/
             .square-logo {
@@ -736,6 +741,13 @@ body {
               font-weight: 100;
               text-shadow: 1px 1px 1px black;
 
+              @media (max-width:768px){
+                font-size: 1.4em;
+              }
+              @media (max-width:400px) {
+                font-size: 1.2em;
+              }
+              
               /*WELCOME PS (SPAN)*/
               .model-welcome-text-ps-span {
                 color: #06b1f7;
@@ -814,6 +826,10 @@ body {
               text-shadow: 0px 1px 2px white;
               background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
               filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
+
+              @media (max-width:768px){
+                width: @width*9 !important;
+              }
             }
           }
         }
@@ -1118,10 +1134,20 @@ body {
     .modal-faq {
       color: white;
       background: rgba(0, 0, 0, 0.6);
+      .padding(0,0,0,0) !important;
 
       /*MODAL FAQ FIRST INNER WRAPPER*/
       .modal-dialog-faq {
-        width: @width*4.3;
+        width: @width*4;
+
+        @media (max-width:993px){
+          width: @width*8;
+          width: @width*8;
+          margin: 12.9em auto 0;
+        }
+        @media (max-width: 768px) {
+          width: auto;
+        }
 
         /*MODEL FAQ SECOND INNER WRAPPER*/
         .modal-faq-content {
@@ -1138,10 +1164,24 @@ body {
               font-size: 2.6em;
               text-shadow: 1px 1px 1px black;
               letter-spacing: 0.9px;
+
+              @media (max-width:600px){
+                padding: 0.6em 0;
+                margin: 1em 0.3em;
+                font-size: 1.5em;
+              }
             }
 
             .square-logo {
               padding: 0.5%;
+
+              @media (max-width:993px){
+                padding: 0.8%;
+                height: 30px;
+              }
+              @media (max-width:px) {
+                
+              }
             }
           }
 
@@ -1153,30 +1193,71 @@ body {
               margin-top: 1.3em;
               /*QUESTION WRAPPER*/
               .question-wrapper {
-                margin-top: 1em;
+                .margin(0,0,0,0);
+
+                @media (max-width:600px) {
+                  .margin(0, 0,0,0)
+                }
 
                 /*QUESTION TEXT WRAPPER*/
-                .question-text-wrapper {
                   .question-text {
-                    margin: 0 0 0;
-                    color: @nav-bar-bright-color;
-                    font-size: 1.8em;
+                    width: 90%;
+                    display: inline-block;
+                    vertical-align: sub;
+                    font-size: 1.6em;
+                    color:@nav-bar-bright-color;
+                    @media (max-width:993px){
+                      font-size: 1.4em;
+                    }
+                    @media (max-width:500px) {
+                      font-size: 1.2em;
+                      display: inline-table;
+                    }
                   }
-                }
 
                 /*IMG NUMBER WRAPPER*/
                 .img-number-wrapper {
-                  width: @width*0.33%;
-                  margin: 0 1.2em;
+                  //width: @width*0.33%;
+                  //margin: 0 1.2em;
+                  @media (max-width:993px){
+                  }
+                }
+
+                .question-button{
+                  height: 1.7em;
+                  @media (max-width:768px) {
+                    height: 1.4em;
+                  }
+
+                  @media (max-width:410px){
+                    height: 1.2em;
+                  }
                 }
               }
 
               /*ANSWER WRAPPER*/
               .answer-wrapper {
-                padding: 0.5em 5.9em;
+                padding: 0.5em 3em;
                 border-bottom: 2px solid #3C3B3B;
-                &:nth-last-of-type(3){
-                  border-bottom: none;
+
+                ///*THE LAST ANSWER WRAPPER*/
+                //&:last-of-type {
+                //  border-bottom: none;
+                //}
+
+                @media (max-width:993px){
+                  font-size: 0.9em;
+                  padding: 1em;
+                }
+
+                @media (max-width: 768px) {
+                  padding: 1em 0.5em 0 2.4em;
+
+                }
+
+                /*ANSWER TEXT (P TAB)*/
+                .answer{
+                  text-shadow: 0px -1px 1px gray;
                 }
               }
             }

@@ -168,8 +168,9 @@
                     </a>
                 </li>
                 <li class="navbar-li-wrapper">
-                    <a href="{{ $page->brand->contactLink }}" class="navbar-text-mobile">
-                        @ln(contact us)
+                    <a href="{{ $page->brand->contactLink }}" class="navbar-text-mobile" data-toggle="modal"
+                       data-target=".modal-faq">
+                        @ln(faq)
                     </a>
                 </li>
                 <li class="navbar-li-wrapper">
@@ -850,15 +851,9 @@
                         <div class="question-n-answer-wrapper">
 
                             {{--QUESTION WRAPPER--}}
-                            <div class="question-wrapper col-lg-12 col-md-12">
-                                <div class="img-number-wrapper col-lg-1 col-md-1">
-                                    <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics">
-                                </div>
-                                <div class="question-text-wrapper col-12">
-                                    <h3 class="question-text text-uppercase">
-                                        what is the aussie method?
-                                    </h3>
-                                </div>
+                            <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics" class="question-button">
+                                    <h3 class="question-text text-uppercase">what is the aussie method?</h3>
                             </div>
 
                             {{--ANSWER WRPPER--}}
@@ -870,18 +865,14 @@
                                 </p>
                             </div>
                         </div>
+
+                        {{--QUESTION AND ANSWER WRAPPER--}}
                         <div class="question-n-answer-wrapper">
 
                             {{--QUESTION WRAPPER--}}
-                            <div class="question-wrapper col-lg-12 col-md-12">
-                                <div class="img-number-wrapper col-lg-1 col-md-1">
-                                    <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics">
-                                </div>
-                                <div class="question-text-wrapper col-12">
-                                    <h3 class="question-text text-uppercase">
-                                        How much money can I make with this software?
-                                    </h3>
-                                </div>
+                            <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics" class="question-button">
+                                <h3 class="question-text text-uppercase">How much money can I make with this software?</h3>
                             </div>
 
                             {{--ANSWER WRPPER--}}
@@ -889,24 +880,19 @@
                                 <p class="answer text-capitalize">
                                     to put it in short, there's no limit. to put it more technically, it really depends
                                     on how much money you fund your account with. most of our members fund their account
-                                    with
-                                    $300, and make about $800-1000 daily. those who fund their account with $1,000 or
+                                    with $300, and make about $800-1000 daily. those who fund their account with $1,000 or
                                     over make over $2,500 per day!
                                 </p>
                             </div>
                         </div>
+
+                        {{--QUESTION AND ANSWER WRAPPER--}}
                         <div class="question-n-answer-wrapper">
 
                             {{--QUESTION WRAPPER--}}
-                            <div class="question-wrapper col-lg-12 col-md-12">
-                                <div class="img-number-wrapper col-lg-1 col-md-1">
-                                    <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics">
-                                </div>
-                                <div class="question-text-wrapper col-12">
-                                    <h3 class="question-text text-uppercase">
-                                        How long does each trade last??
-                                    </h3>
-                                </div>
+                            <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics" class="question-button">
+                                <h3 class="question-text text-uppercase">how long does each trade last??</h3>
                             </div>
 
                             {{--ANSWER WRPPER--}}
@@ -917,18 +903,14 @@
                                 </p>
                             </div>
                         </div>
+
+                        {{--QUESTION AND ANSWER WRAPPER--}}
                         <div class="question-n-answer-wrapper">
 
                             {{--QUESTION WRAPPER--}}
-                            <div class="question-wrapper col-lg-12 col-md-12">
-                                <div class="img-number-wrapper col-lg-1 col-md-1">
-                                    <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics">
-                                </div>
-                                <div class="question-text-wrapper col-12">
-                                    <h3 class="question-text text-uppercase">
-                                        Do I need to use my credit card when I signup?
-                                    </h3>
-                                </div>
+                            <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics" class="question-button">
+                                <h3 class="question-text text-uppercase">do i need to use my credit card when i signup?</h3>
                             </div>
 
                             {{--ANSWER WRPPER--}}
@@ -943,6 +925,7 @@
                                 </p>
                             </div>
                         </div>
+
                     </div>
                     {{--FIX THE HEIGHTS DEFRENCE AND CLEAR THE FLOAT--}}
                     <div class="clearfix"></div>
