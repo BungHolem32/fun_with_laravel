@@ -122,7 +122,8 @@
                         </li>
                         {{--need to change the href to the proper one--}}
                         <li class="text-uppercase  navbar-part">
-                            <a href="{{ $page->brand->contactLink }}" class="navbar-text">
+                            <a href="{{ $page->brand->contactLink }}" class="navbar-text" data-toggle="modal"
+                               data-target=".modal-faq">
                                 @ln(faq)
                             </a>
                         </li>
@@ -457,12 +458,12 @@
 
                 <!-- Modal content-->
                 <div class="modal-content modal-welcome-content">
-                    <div class="modal-header">
+                    <div class="modal-header-welcome modal-header">
                         <img src="/img/panel/black/desktop/close.png" alt="close square-logo" class="square-logo"
                              data-dismiss="modal">
                         <h3 class="modal-title-h3 text-uppercase text-center">welcome to xxx panel method!</h3>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body-welcome modal-body">
                         <p class="modal-welcome-text-p">This Software cannot do anything until your account has a
                             positive balance to run trades, so
                             make sure to deposit some money into your Aussie Panel Method trading account to get
@@ -515,8 +516,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn text-uppercase info text-center button-welcome-footer" data-dismiss="modal">get
+                    <div class="modal-footer-welcome modal-footer">
+                        <button type="button" class="btn text-uppercase info text-center button-welcome-footer"
+                                data-dismiss="modal">get
                             started
                         </button>
                     </div>
@@ -527,11 +529,11 @@
 
         {{--MODAL DEPOSIT PAGE WRAPPER --}}
         <div class="modal-deposit modal fade" role="dialog">
-            <div class="modal-dialog">
+            <div class="modal-dialog-deposit modal-dialog">
 
                 <!-- MODAL CONTENT-->
                 <div class="modal-content modal-deposit-content">
-                    <div class="modal-header">
+                    <div class="modal-header-deposit modal-header">
 
                         {{--EXIT ICON--}}
                         <img src="/img/panel/black/desktop/close.png" alt="close square-logo" class="square-logo"
@@ -541,8 +543,9 @@
                         <h4 class="modal-title text-center text-uppercase">Deposit Now Into Your RBoptions Broker
                             Account</h4>
                     </div>
-                   {{--BODY PART --}}
-                    <div class="modal-body">
+
+                    {{--BODY PART --}}
+                    <div class="modal-body-deposit modal-body">
 
                         {{--BROKER NAME WRAPPER--}}
                         <div class="broker-name text-center">
@@ -584,11 +587,11 @@
 
                                     {{--FORM TITLE PERSONAL INFO INPUT WRAPPER--}}
                                     <div class="form-title-wrapper">
-                                        <h3 class="form-title text-uppercase col-md-6 col-sm-7">personal
+                                        <h3 class="form-title text-uppercase col-md-6 col-sm-12 col-xs-12">personal
                                             information</h3>
                                         <img src="/img/panel/black/desktop/yellow-arrow.png"
                                              alt="arrow that points to the inputs"
-                                             class="yellow-arrow visible-lg-block visible-md-block">
+                                             class="yellow-arrow visible-lg-inline-block visible-md-inline-block">
                                     </div>
 
                                     <div class="clearfix"></div>
@@ -602,7 +605,7 @@
 
                                     {{--LAST NAME INPUT WRAPPER--}}
                                     <div class="form-group ">
-                                        <label for="lname" class="text-capitalize col-md-4 label-form"> last
+                                        <label for="last-name" class="text-capitalize col-md-4 label-form"> last
                                             name</label>
                                         <input type="text" class="form-control col-md-8" id="last-name">
                                     </div>
@@ -651,7 +654,8 @@
 
                                     {{--TITLE WRAPPER INPUT WRAPPER--}}
                                     <div class="form-title-wrapper">
-                                        <h3 class="form-title text-uppercase col-md-6 col-sm-7 label-form">your payment
+                                        <h3 class="form-title text-uppercase col-md-6 col-sm-12 col-xs-12 label-form">
+                                            your payment
                                             details</h3>
                                         <img src="/img/panel/black/desktop/yellow-arrow.png"
                                              alt="arrow that points to the inputs"
@@ -662,14 +666,15 @@
 
                                     {{--CARD-TYPE INPUT WRAPPER--}}
                                     <div class="form-group ">
-                                        <div class="col-md-4">
+                                        <div class="col-md-4 card-type-title-wrapper">
                                             <label for="card-type" class="label-form text-capitalize"> card
                                                 type</label>
                                             <img src="/img/panel/black/desktop/credit-cards.png" alt="card type images"
-                                                 class="card-type visible-lg-block visible-md-block">
+                                                 class="card-type-img visible-lg-inline-block visible-md-inline-block">
                                         </div>
-                                        <select class="form-control text-capitalize col-md-8" name="" id="card-type">
-                                            <option value="0">choose type</option>
+                                        <select class="form-control text-capitalize col-md-8 card-type-selectbox"
+                                                name="" id="card-type">
+                                            <option value="-1">choose type</option>
                                             <option value="1">visa</option>
                                             <option value="2">mastercard</option>
                                             <option value="3">CarteBleue</option>
@@ -692,14 +697,15 @@
                                     </div>
 
                                     {{--EXPIRATION INPUT WRAPPER--}}
-                                    <div class="form-group">
+                                    <div class="form-group  col-md-12 col-sm-12 col-xs-12">
 
                                         {{--LABEL FOR THE EXPERAION DATE--}}
                                         <label for="expiration-date" class="label-form text-capitalize col-md-4">expiration
                                             date</label>
                                         {{--SELECT BOX  FOR MONTH EXPERATION INPUT--}}
-                                        <select name="month-exp" id="month-exp" class="col-md-2 month-exp">
-                                            <option value="" class="text-capitalize col-md-4">month</option>
+                                        <select name="month-exp" id="month-exp"
+                                                class="pull-left col-lg-3 col-md-3 col-sm-6 col-xs-6 month-exp-selectbox text-capitalize">
+                                            <option value="-1" class="text-capitalize">month</option>
                                             <option value="1">01</option>
                                             <option value="2">02</option>
                                             <option value="3">03</option>
@@ -715,8 +721,9 @@
                                         </select>
 
                                         {{--SELECT BOX FOR YEAR EXPERATION INPUT--}}
-                                        <select name="year-exp" id="year-exp" class="col-md-4 year-exp">
-                                            <option value="" class="text-capitalize col-md-4">year</option>
+                                        <select name="year-exp" id="year-exp"
+                                                class="pull-right col-lg-5 col-md-4  col-sm-6 col-xs-6 year-exp-selectbox">
+                                            <option value="-1" class="text-capitalize col-md-4">year</option>
                                             <option value="2015">2015</option>
                                             <option value="2016">2016</option>
                                             <option value="2017">2017</option>
@@ -741,7 +748,7 @@
                                     </div>
 
                                     {{--CVV INPUT--}}
-                                    <div class="form-group ">
+                                    <div class="form-group cvv-wrapper ">
                                         <label for="cvv" class="label-form text-uppercase col-md-4"> cvv</label>
                                         <input type="text" class="form-control col-md-8" id="cvv">
                                         <img src="/img/panel/black/desktop/info.png" alt="info logo png"
@@ -765,11 +772,12 @@
                             </form>
                         </div>
                     </div>
+
                     {{--FIX THE HEIGHTS DEFRENCE AND CLEAR THE FLOAT--}}
                     <div class="clearfix"></div>
 
                     {{--MODEL FOOTER--}}
-                    <div class="modal-footer">
+                    <div class="modal-footer-deposit modal-footer">
 
                         {{--THREE STEPS WRAPPER--}}
                         <div class="three-steps-for-register-wrapper text-center">
@@ -816,6 +824,132 @@
                 </div>
             </div>
         </div>
+
+        {{--MODAL FAQ PAGE WRAPPER --}}
+        <div class="modal-faq modal fade" role="dialog">
+            <div class="modal-dialog-faq modal-dialog">
+
+                <!-- MODAL CONTENT-->
+                <div class="modal-content modal-faq-content">
+
+                    {{--HEADER-TAG--}}
+                    <div class="modal-header-faq modal-header">
+
+                        {{--EXIT ICON--}}
+                        <img src="/img/panel/black/desktop/close.png" alt="close square-logo"
+                             class="square-logo pull-right"
+                             data-dismiss="modal">
+
+                        {{--TITLE OF THE MODAL--}}
+                        <h4 class="modal-title text-center text-uppercase">aussie panel method faq </h4>
+                    </div>
+                    {{--BODY PART --}}
+                    <div class="modal-body-faq modal-body">
+
+                        {{--QUESTION AND ANSWER WRAPPER--}}
+                        <div class="question-n-answer-wrapper">
+
+                            {{--QUESTION WRAPPER--}}
+                            <div class="question-wrapper col-lg-12 col-md-12">
+                                <div class="img-number-wrapper col-lg-1 col-md-1">
+                                    <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics">
+                                </div>
+                                <div class="question-text-wrapper col-12">
+                                    <h3 class="question-text text-uppercase">
+                                        what is the aussie method?
+                                    </h3>
+                                </div>
+                            </div>
+
+                            {{--ANSWER WRPPER--}}
+                            <div class="answer-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <p class="answer text-capitalize">
+                                    the aussie method is a 100% free software that will trade on the binary options
+                                    markets with just 1 click! it's fully automated and places the winning trades for
+                                    you!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="question-n-answer-wrapper">
+
+                            {{--QUESTION WRAPPER--}}
+                            <div class="question-wrapper col-lg-12 col-md-12">
+                                <div class="img-number-wrapper col-lg-1 col-md-1">
+                                    <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics">
+                                </div>
+                                <div class="question-text-wrapper col-12">
+                                    <h3 class="question-text text-uppercase">
+                                        How much money can I make with this software?
+                                    </h3>
+                                </div>
+                            </div>
+
+                            {{--ANSWER WRPPER--}}
+                            <div class="answer-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <p class="answer text-capitalize">
+                                    to put it in short, there's no limit. to put it more technically, it really depends
+                                    on how much money you fund your account with. most of our members fund their account
+                                    with
+                                    $300, and make about $800-1000 daily. those who fund their account with $1,000 or
+                                    over make over $2,500 per day!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="question-n-answer-wrapper">
+
+                            {{--QUESTION WRAPPER--}}
+                            <div class="question-wrapper col-lg-12 col-md-12">
+                                <div class="img-number-wrapper col-lg-1 col-md-1">
+                                    <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics">
+                                </div>
+                                <div class="question-text-wrapper col-12">
+                                    <h3 class="question-text text-uppercase">
+                                        How long does each trade last??
+                                    </h3>
+                                </div>
+                            </div>
+
+                            {{--ANSWER WRPPER--}}
+                            <div class="answer-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <p class="answer text-capitalize">
+                                    Anywhere from a minute to an hour. So you will see your profits right
+                                    away, no more waiting for long periods of time.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="question-n-answer-wrapper">
+
+                            {{--QUESTION WRAPPER--}}
+                            <div class="question-wrapper col-lg-12 col-md-12">
+                                <div class="img-number-wrapper col-lg-1 col-md-1">
+                                    <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics">
+                                </div>
+                                <div class="question-text-wrapper col-12">
+                                    <h3 class="question-text text-uppercase">
+                                        Do I need to use my credit card when I signup?
+                                    </h3>
+                                </div>
+                            </div>
+
+                            {{--ANSWER WRPPER--}}
+                            <div class="answer-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <p class="answer text-capitalize">
+                                    NO WAY. The Aussie Method App is 100% FREE. You will NOT be asked for your credit
+                                    card or paypal or bank information when you download the Aussie Method System!
+                                    Once you are in the members area, we will recommend a binary options broker that
+                                    you can exploit. For this, you'll need funds to deposit in order to start making
+                                    profits. This is YOUR money that you are just depositing to trade with, and you can
+                                    withdraw it at any time!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {{--FIX THE HEIGHTS DEFRENCE AND CLEAR THE FLOAT--}}
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
     </div>
     </div>
 @endsection

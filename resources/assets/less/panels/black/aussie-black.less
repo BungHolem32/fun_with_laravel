@@ -10,6 +10,8 @@
 @bg-color-modal: #282827;
 @nav-bar-bright-color: #2c98e0;
 @nav-bar-dark-color: #01395E;
+@select-box-font-color: gray;
+@bg-color-header-modal: #01385e;
 
 /*MIXIN CLASSES*/
 
@@ -530,10 +532,10 @@ body {
             text-shadow: -1px 2px 1px #f4ff96;
             -webkit-transform: rotate(5deg);
             transform: rotate(5deg);
-            @media(max-width:1012px){
-              left:15px;
+            @media (max-width: 1012px) {
+              left: 15px;
             }
-            @media(max-width:433px){
+            @media (max-width: 433px) {
               top: -47px;
             }
 
@@ -693,8 +695,8 @@ body {
       background: rgba(0, 0, 0, 0.6);
 
       .modal-dialog-welcome {
-        
-        @media (min-width:768px) {
+
+        @media (min-width: 768px) {
           width: 816px;
         }
 
@@ -703,8 +705,8 @@ body {
           background: black;
 
           /*HEADER OF THE MODAL (DIV)*/
-          .modal-header {
-            background: #01385e;
+          .modal-header-welcome {
+            background: @bg-color-header-modal;
             border: none;
 
             /*MODAL TITLE */
@@ -725,7 +727,7 @@ body {
             }
           }
           /*BODY PART (CONTENT OF THE MODAL) (DIV)*/
-          .modal-body {
+          .modal-body-welcome {
             /* WELCOME TEXT (P TAG)*/
             .modal-welcome-text-p {
               color: white;
@@ -795,13 +797,13 @@ body {
             }
           }
           /*MODAL FOOTER WRAPPER*/
-          .modal-footer{
+          .modal-footer-welcome {
             padding: 15px;
             text-align: right;
             border-top: 1px solid #222;
 
             /*FOOTER PLACE IN THE WELCOME FOOTER*/
-            .button-welcome-footer{
+            .button-welcome-footer {
               color: black;
               float: none;
               margin: 0 auto;
@@ -823,252 +825,368 @@ body {
       color: white;
       background: rgba(0, 0, 0, 0.6);
 
-      .modal-dialog {
+      /*CONTENT FIRST INNER WRAPPER*/
+      .modal-dialog-deposit {
         width: 60%;
-      }
-
-      /*INNER WRAPPER */
-      .modal-deposit-content {
-        background: @bg-color-modal;
-
-        /*MODAL HEADER*/
-        .modal-header {
-          background: #01385e;
-          color: white;
-          border: none;
-          padding: 0;
-
-          /*MODAL TITLE */
-          .modal-title {
-            margin: 0;
-            line-height: 1.42857143;
-            font-size: 2.7em;
-            font-weight: 600;
-            text-shadow: 1px 0px 1px black;
-
-          }
-
-          /*BUTTON X FOR EXIT THE MODEL*/
-          .square-logo {
-            float: right;
-            padding: 0.3em;
-            cursor: pointer;
-          }
+        margin: 0 auto;
+        @media (max-width: 992px) {
+          width: 100%;
+          margin: 0 auto;
         }
-        .modal-body {
-          padding: 0;
-          .broker-name {
-            border-radius: 4px;
+        /*CONTENT SECOND INNER WRAPPER */
+        .modal-deposit-content {
+          background: @bg-color-modal;
+
+          /*MODAL HEADER*/
+          .modal-header-deposit {
+            background: @bg-color-header-modal;
+            color: white;
+            border: none;
             padding: 0;
-            margin: 0;
-            .deposit-broker-text-wrapper {
-              padding: 1em;
+
+            /*MODAL TITLE */
+            .modal-title {
               margin: 0;
-              background: @bg-color-modal;
-              .deposit-broker-text {
-                padding: 3px 0;
+              line-height: 1.42857143;
+              font-size: 2.7em;
+              font-weight: 600;
+              text-shadow: 1px 0px 1px black;
+
+            }
+
+            /*BUTTON X FOR EXIT THE MODEL*/
+            .square-logo {
+              float: right;
+              padding: 0.3em;
+              cursor: pointer;
+            }
+          }
+          /*MODAL BODY*/
+          .modal-body-deposit {
+            padding: 0;
+            .broker-name {
+              border-radius: 4px;
+              padding: 0;
+              margin: 0;
+              .deposit-broker-text-wrapper {
+                padding: 1em;
                 margin: 0;
-                display: inline-block;
-                vertical-align: middle;
-                font-size: 2em;
-              }
-              .left-hand-header, .right-hand-header {
-                display: inline-block;
-                width: 2.2em;
-              }
-            }
-            .hand {
-              color: #0069b1;
-            }
-          }
-
-          /*DEPOSIT TITLE WRAPPER*/
-          .deposit-title-wrapper {
-            background: @nav-bar-bright-color;
-            padding: 0.2em;
-            box-shadow: 0px 2px 1px 1px black;
-
-            .deposite-title {
-              margin: 0;
-              color: black;
-              font-size: 3.5em;
-              line-height: 1.3em;
-              text-shadow: 0px 1px 1px white;
-              letter-spacing: 1.9px;
-            }
-            small {
-              font-size: 1.5em;
-              text-shadow: 0px -1px 1px black;
-            }
-          }
-
-          /*FORM WRAPPER FOR DEPOSIT*/
-          .form-wrapper {
-
-            /*FORM TAG ITSELF */
-            .form-deposit {
-
-              /*FIRST PART OF THE FORM (DIV TAG WRAPPER)*/
-              .first-part-form {
-
-                .form-title-wrapper {
-
-                  /*FORM TITLE (PERSONAL INFO)*/
-                  .form-title {
-                  }
-                  /*YELLOW ARROW POINTS TO THE FORM*/
-                  .yellow-arrow {
-                  }
+                background: @bg-color-modal;
+                .deposit-broker-text {
+                  padding: 3px 0;
+                  margin: 0;
+                  display: inline-block;
+                  vertical-align: middle;
+                  font-size: 2em;
                 }
-
-                /*FORM GROUP (EACH INPUT AND INPUT)*/
-                .form-group {
-
+                .left-hand-header, .right-hand-header {
+                  display: inline-block;
+                  width: 2.2em;
                 }
               }
+              .hand {
+                color: #0069b1;
+              }
+            }
 
-              /*SECOND PART OF THE FORM (DIV TAG WRAPPER)*/
-              .second-part-form {
+            /*DEPOSIT TITLE WRAPPER*/
+            .deposit-title-wrapper {
+              background: @nav-bar-bright-color;
+              padding: 0.2em;
+              box-shadow: 0px 2px 1px 1px black;
 
-                /*FORM TITLE WRAPPER*/
-                .form-title-wrapper {
+              .deposite-title {
+                margin: 0;
+                color: black;
+                font-size: 3.5em;
+                line-height: 1.3em;
+                text-shadow: 0px 1px 1px white;
+                letter-spacing: 1.9px;
+              }
+              small {
+                font-size: 1.5em;
+                text-shadow: 0px -1px 1px black;
+              }
+            }
 
-                  /*FORM TITLE (PERSONAL INFO)*/
-                  .form-title {
-                  }
+            /*FORM WRAPPER FOR DEPOSIT*/
+            .form-wrapper {
 
-                  .yellow-arrow {
-                  }
-                }
-                /*FORM GROUP (EACH INPUT AND INPUT)*/
-                .form-group {
+              /*FORM TAG ITSELF */
+              .form-deposit {
 
-                  /*MONTH AND YEAR GENERAL STYLE (SELECT-BOX)*/
-                  .month-exp, .year-exp {
-                    min-height: 2.858em;
-                    border-radius: 4.9px;
-                    color: black;
-                  }
-                  /*EXPIRATION DATE FOR YEAR (SELECT-BOX)*/
-                  .year-exp {
-                    width: 42%;
-                    @media (max-width: 990px) {
-                      width: 81.6%;
+                /*FIRST PART OF THE FORM (DIV TAG WRAPPER)*/
+                .first-part-form {
+
+                  .form-title-wrapper {
+
+                    /*FORM TITLE (PERSONAL INFO)*/
+                    .form-title {
+                    }
+                    /*YELLOW ARROW POINTS TO THE FORM*/
+                    .yellow-arrow {
                     }
                   }
-                  /*EXPERATION DATE FOR MONTH (SELECT-BOX)*/
-                  .month-exp {
-                    margin-right: 0.5em;
-                  }
-                  /*INPUT*/
-                  .form-control {
 
-                  }
-                  /*INFO LOGO IN THE CVV BUTTON*/
-                  .info-logo {
-                    padding: 0.5em 0.3em 0;
+                  /*FORM GROUP (EACH INPUT AND INPUT)*/
+                  .form-group {
+
                   }
                 }
-              }
 
-              /*ALL FORMS WRAPPER GENERAL STYLE*/
-              .first-part-form, .second-part-form {
-                margin-bottom: 2em;
+                /*SECOND PART OF THE FORM (DIV TAG WRAPPER)*/
+                .second-part-form {
 
-                /*FORM TITLE WRAPPER*/
-                .form-title-wrapper {
-                  color: #FFDE00;
-                  padding: 2em 0 1em;
+                  /*FORM TITLE WRAPPER*/
+                  .form-title-wrapper {
 
-                  /*FORM TITLE (PERSONAL INFO && YOUR PAYMENT DETAILS)*/
-                  .form-title {
-                    margin: 0;
-                    padding-right: 0;
-                    @media (max-width: 990px) {
+                    @media (max-width: 992px) {
+                      padding-top: 0 !important;
+                    }
+
+                    /*FORM TITLE (PERSONAL INFO)*/
+                    .form-title {
+                    }
+
+                    .yellow-arrow {
+                    }
+                  }
+                  /*FORM GROUP (EACH INPUT AND INPUT)*/
+                  .form-group {
+
+                    /*CARD TYPE WRAPPER*/
+                    .card-type-title-wrapper {
+                      height: 1px;
+
+                      /*IMAGE IN THE CARD TYPE */
+                      .card-type-img {
+                        max-width: 6.9vw;
+                      }
+                    }
+
+                    /*CVV WRAPPER*/
+                    &.cvv-wrapper {
+                      padding-top: 0px !important;
+                    }
+
+                    .card-type-selectbox {
+                      color: @select-box-font-color;
+                    }
+
+                    /*MONTH AND YEAR GENERAL STYLE (SELECT-BOX)*/
+                    .month-exp-selectbox, .year-exp-selectbox {
+                      min-height: 2.858em;
+                      border-radius: 4.9px;
+                      color: @select-box-font-color;
+                    }
+                    /*EXPIRATION DATE FOR YEAR (SELECT-BOX)*/
+                    .year-exp-selectbox {
+                      //width: 42%; //todo check if this work
+                      @media (max-width: 992px) {
+                        width: @width*4.64%;
+                      }
+                      @media (min-width: 993px) {
+                        float: none !important;
+                        width: @width*3.38;
+                      }
+                    }
+                    /*EXPERATION DATE FOR MONTH (SELECT-BOX)*/
+                    .month-exp-selectbox {
+                      margin-right: 0.5em;
+                    }
+                    /*INPUT*/
+                    .form-control {
+
+                    }
+                    /*INFO LOGO IN THE CVV BUTTON*/
+                    .info-logo {
+                      padding: 0.6vw 0.1vw 0;
+                    }
+                  }
+                }
+
+                /*ALL FORMS WRAPPER GENERAL STYLE*/
+                .first-part-form, .second-part-form {
+                  margin-bottom: 2em;
+
+                  /*FORM TITLE WRAPPER*/
+                  .form-title-wrapper {
+                    color: #FFDE00;
+                    padding: 2em 0 1em;
+
+                    /*FORM TITLE (PERSONAL INFO && YOUR PAYMENT DETAILS)*/
+                    .form-title {
+                      margin: 0;
+                      padding-right: 0;
+                      @media (max-width: 992px) {
+                        margin-bottom: 1em;
+                      }
+                    }
+
+                    /*YELLOW ARROW DISPLAYED ONLY IN DESKTOP*/
+                    .yellow-arrow {
+                      position: relative;
+                      top: 10px;
+                    }
+                  }
+
+                  /*FORM GROUP (EACH INPUT AND INPUT)*/
+                  .form-group {
+                    padding: 1em 0;
+                    clear: both;
+                    margin-bottom: 0;
+                    @media (max-width: 992px) {
+                      padding: 0;
                       margin-bottom: 1em;
-                    }
-                  }
-
-                  /*YELLOW ARROW DISPLAYED ONLY IN DESKTOP*/
-                  .yellow-arrow {
-                    vertical-align: -webkit-baseline-middle;
-                    position: relative;
-                    top: 6px;
-                  }
-                }
-
-                /*FORM GROUP (EACH INPUT AND INPUT)*/
-                .form-group {
-                  padding: 1.3em 0;
-                  @media (max-width: 998px) {
-                    padding: 0;
-                    margin-bottom: 1em;
-                    width:100%;
-                  }
-
-                  /*CARD NUMBER FIELD AFTER CLEAR FIX */
-                  &.card-number-after-clear-fix {
-                    margin: -1.1em 0 1em 0;
-                    @media (max-width: 990px) {
-                      margin: 0 0 1em 0 ;
-                    }
-                  }
-
-                  .form-control {
-                    width: 60%;
-                    height: 40px;
-                    @media (max-width: 990px) {
                       width: 100%;
                     }
 
-                  }
-                  /*LABEL TAG FOR ALL THE INPUTS IN THE FORM */
-                  .label-form {
-                    font-size: 1.2em;
-                    font-weight: 100;
-                  }
-                }
+                    /*CARD NUMBER FIELD AFTER CLEAR FIX */
+                    &.card-number-after-clear-fix {
 
-                .form-button {
-                  width: 93.4%;
-                  margin-top: 1em;
-                  font-size: 2.2em;
-                  background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
-                  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
-                  color: black;
-                  text-shadow: 1px 1px 1px white;
-                  min-height: 2.1em;
-                  @media (min-width: 1460px) and (max-width: 1747px) {
-                    font-size: 1.8em;
+                      @media (max-width: 992px) {
+                        margin: 0 0 1em 0 ;
+                      }
+                    }
+
+                    .form-control {
+                      width: 60%;
+                      height: 40px;
+                      @media (max-width: 992px) {
+                        width: 100%;
+                      }
+
+                    }
+                    /*LABEL TAG FOR ALL THE INPUTS IN THE FORM */
+                    .label-form {
+                      font-size: 1.2em;
+                      font-weight: 100;
+                      margin: 0;
+                    }
                   }
-                }
-                .warning-massage-beneath-the-button.text-center {
-                  color: #2C98E0;
-                  margin: 1em 0;
-                  font-size: 1.1em;
-                  text-shadow: 1px 1px 1px black;
+                  .form-button {
+                    width: 93.4%;
+                    margin-top: 1em;
+                    font-size: 1.6vw;
+                    background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
+                    color: black;
+                    text-shadow: 1px 1px 1px white;
+                    min-height: 7.6vh;
+                    @media (max-width: 1200px) {
+                      font-size: 3vw;
+                    }
+                    @media (max-width: 992px) {
+                      width: 100%;
+                      font-size: 5.1vw;
+                      min-height: 7vh;
+                      margin: 1vh 0;
+                    }
+
+                  }
+                  .warning-massage-beneath-the-button.text-center {
+                    color: #2C98E0;
+                    margin: 1em 0;
+                    font-size: 1.1em;
+                    text-shadow: 1px 1px 1px black;
+                  }
                 }
               }
             }
           }
-        }
-        /*FOOTER PART*/
-        .modal-footer {
+          /*MODAL FOOTER*/
+          .modal-footer-deposit {
+            /*THREE STEPS REGISTER WRAPPER*/
+            .three-steps-for-register-wrapper {
 
-          /*THREE STEPS REGISTER WRAPPER*/
-          .three-steps-for-register-wrapper {
+              /*STEP WRAPPER */
+              .step-wrapper {
 
-            /*STEP WRAPPER */
-            .step-wrapper {
-
-              /*TEXT STEP (P TAG)*/
-              .text-step {
-                margin-top: 1em;
+                /*TEXT STEP (P TAG)*/
+                .text-step {
+                  margin-top: 1em;
+                }
               }
             }
           }
         }
       }
+
+    }
+
+    /*MODAL BASE WRAPPER FOR FAQ*/
+    .modal-faq {
+      color: white;
+      background: rgba(0, 0, 0, 0.6);
+
+      /*MODAL FAQ FIRST INNER WRAPPER*/
+      .modal-dialog-faq {
+        width: @width*4.3;
+
+        /*MODEL FAQ SECOND INNER WRAPPER*/
+        .modal-faq-content {
+          background: black;
+
+          /*HEADER TAG*/
+          .modal-header-faq {
+            background: @bg-color-header-modal;
+            border: none;
+            padding: 0;
+
+            /*MODAL TITLE*/
+            .modal-title {
+              font-size: 2.6em;
+              text-shadow: 1px 1px 1px black;
+              letter-spacing: 0.9px;
+            }
+
+            .square-logo {
+              padding: 0.5%;
+            }
+          }
+
+          /*BODY TAG*/
+          .modal-body-faq {
+              padding: 0;
+            /*QUESTION N ANSWER WRAPPER*/
+            .question-n-answer-wrapper {
+              margin-top: 1.3em;
+              /*QUESTION WRAPPER*/
+              .question-wrapper {
+                margin-top: 1em;
+
+                /*QUESTION TEXT WRAPPER*/
+                .question-text-wrapper {
+                  .question-text {
+                    margin: 0 0 0;
+                    color: @nav-bar-bright-color;
+                    font-size: 1.8em;
+                  }
+                }
+
+                /*IMG NUMBER WRAPPER*/
+                .img-number-wrapper {
+                  width: @width*0.33%;
+                  margin: 0 1.2em;
+                }
+              }
+
+              /*ANSWER WRAPPER*/
+              .answer-wrapper {
+                padding: 0.5em 5.9em;
+                border-bottom: 2px solid #3C3B3B;
+                &:nth-last-of-type(3){
+                  border-bottom: none;
+                }
+              }
+            }
+          }
+          /*FOOTER TAG*/
+          .modal-footer-faq {
+          }
+        }
+      }
+
     }
   }
 }

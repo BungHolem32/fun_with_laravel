@@ -6456,6 +6456,7 @@ body .content-wrapper {
   /*FOOTER TAG WITH ALL THE LOGOS*/
   /*FANCY BOX FOR WELCOME SCREEN HREF (DIV)*/
   /*MODAL BASE WRAPPER FOR DEPOSIT FORM*/
+  /*MODAL BASE WRAPPER FOR FAQ*/
 }
 body .content-wrapper .account-details-desktop {
   width: 205.7px;
@@ -7081,13 +7082,13 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
   /*BODY PART (CONTENT OF THE MODAL) (DIV)*/
   /*MODAL FOOTER WRAPPER*/
 }
-body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-header {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-header-welcome {
   background: #01385e;
   border: none;
   /*MODAL TITLE */
   /*EXIT BUTTON FROM THE MODAL*/
 }
-body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-header .modal-title-h3 {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-header-welcome .modal-title-h3 {
   margin: 0;
   line-height: 1.42857143;
   color: white;
@@ -7096,16 +7097,16 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
   font-size: 2.6em;
   text-shadow: 0px -1px 1px black;
 }
-body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-header .square-logo {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-header-welcome .square-logo {
   float: right;
   padding: 0.3em;
   cursor: pointer;
 }
-body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body-welcome {
   /* WELCOME TEXT (P TAG)*/
   /*WRAPPER FOR ALL THE STEPS NEW USER NEW TO HAVE TO START USE THE PANEL*/
 }
-body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .modal-welcome-text-p {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body-welcome .modal-welcome-text-p {
   color: white;
   text-align: center;
   font-size: 1.606em;
@@ -7113,14 +7114,14 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
   text-shadow: 1px 1px 1px black;
   /*WELCOME PS (SPAN)*/
 }
-body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .modal-welcome-text-p .model-welcome-text-ps-span {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body-welcome .modal-welcome-text-p .model-welcome-text-ps-span {
   color: #06b1f7;
   display: block;
 }
-body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .steps-wrapper {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body-welcome .steps-wrapper {
   /*STEP DIV */
 }
-body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body-welcome .steps-wrapper .step-wrapper {
   padding: 1em;
   margin: 2.5em;
   min-height: 6.3em;
@@ -7131,43 +7132,43 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
   /*IMAGE-WRAPPER DIV*/
   /*STEP CONTENT WRAPPER*/
 }
-body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper.money-wrapper {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body-welcome .steps-wrapper .step-wrapper.money-wrapper {
   background: #282828 url('/img/panel/black/desktop/money.png') no-repeat;
 }
-body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper.activate-wrapper {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body-welcome .steps-wrapper .step-wrapper.activate-wrapper {
   background: #282828 url('/img/panel/black/desktop/active.png') no-repeat;
 }
-body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper.relax-wrapper {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body-welcome .steps-wrapper .step-wrapper.relax-wrapper {
   background: #282828 url('/img/panel/black/desktop/relax.png') no-repeat;
 }
-body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper .step-img-wrapper {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body-welcome .steps-wrapper .step-wrapper .step-img-wrapper {
   position: relative;
   margin: -1em auto;
   text-align: center;
   bottom: 2em;
 }
-body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper .image-wrapper {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body-welcome .steps-wrapper .step-wrapper .image-wrapper {
   /*IMAGE SIZE */
 }
-body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper .image-wrapper .step-img {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body-welcome .steps-wrapper .step-wrapper .image-wrapper .step-img {
   width: 33%;
 }
-body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper .step-content-wrapper {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body-welcome .steps-wrapper .step-wrapper .step-content-wrapper {
   /*STEP TEXT CONTENT (P TAG)*/
 }
-body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body .steps-wrapper .step-wrapper .step-content-wrapper .step-content {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body-welcome .steps-wrapper .step-wrapper .step-content-wrapper .step-content {
   padding: 0;
   margin: 0;
   text-align: center;
   color: white;
 }
-body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-footer {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-footer-welcome {
   padding: 15px;
   text-align: right;
   border-top: 1px solid #222;
   /*FOOTER PLACE IN THE WELCOME FOOTER*/
 }
-body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-footer .button-welcome-footer {
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-footer-welcome .button-welcome-footer {
   color: black;
   float: none;
   margin: 0 auto;
@@ -7182,17 +7183,26 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
 body .content-wrapper .modal-deposit {
   color: white;
   background: rgba(0, 0, 0, 0.6);
-  /*INNER WRAPPER */
+  /*CONTENT FIRST INNER WRAPPER*/
 }
-body .content-wrapper .modal-deposit .modal-dialog {
+body .content-wrapper .modal-deposit .modal-dialog-deposit {
   width: 60%;
+  margin: 0 auto;
+  /*CONTENT SECOND INNER WRAPPER */
 }
-body .content-wrapper .modal-deposit .modal-deposit-content {
+@media (max-width: 992px) {
+  body .content-wrapper .modal-deposit .modal-dialog-deposit {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content {
   background: #282827;
   /*MODAL HEADER*/
-  /*FOOTER PART*/
+  /*MODAL BODY*/
+  /*MODAL FOOTER*/
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-header {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-header-deposit {
   background: #01385e;
   color: white;
   border: none;
@@ -7200,54 +7210,54 @@ body .content-wrapper .modal-deposit .modal-deposit-content .modal-header {
   /*MODAL TITLE */
   /*BUTTON X FOR EXIT THE MODEL*/
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-header .modal-title {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-header-deposit .modal-title {
   margin: 0;
   line-height: 1.42857143;
   font-size: 2.7em;
   font-weight: 600;
   text-shadow: 1px 0px 1px black;
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-header .square-logo {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-header-deposit .square-logo {
   float: right;
   padding: 0.3em;
   cursor: pointer;
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit {
   padding: 0;
   /*DEPOSIT TITLE WRAPPER*/
   /*FORM WRAPPER FOR DEPOSIT*/
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .broker-name {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .broker-name {
   border-radius: 4px;
   padding: 0;
   margin: 0;
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .broker-name .deposit-broker-text-wrapper {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .broker-name .deposit-broker-text-wrapper {
   padding: 1em;
   margin: 0;
   background: #282827;
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .broker-name .deposit-broker-text-wrapper .deposit-broker-text {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .broker-name .deposit-broker-text-wrapper .deposit-broker-text {
   padding: 3px 0;
   margin: 0;
   display: inline-block;
   vertical-align: middle;
   font-size: 2em;
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .broker-name .deposit-broker-text-wrapper .left-hand-header,
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .broker-name .deposit-broker-text-wrapper .right-hand-header {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .broker-name .deposit-broker-text-wrapper .left-hand-header,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .broker-name .deposit-broker-text-wrapper .right-hand-header {
   display: inline-block;
   width: 2.2em;
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .broker-name .hand {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .broker-name .hand {
   color: #0069b1;
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .deposit-title-wrapper {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .deposit-title-wrapper {
   background: #2c98e0;
   padding: 0.2em;
   box-shadow: 0px 2px 1px 1px black;
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .deposit-title-wrapper .deposite-title {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .deposit-title-wrapper .deposite-title {
   margin: 0;
   color: black;
   font-size: 3.5em;
@@ -7255,164 +7265,253 @@ body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .deposit
   text-shadow: 0px 1px 1px white;
   letter-spacing: 1.9px;
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .deposit-title-wrapper small {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .deposit-title-wrapper small {
   font-size: 1.5em;
   text-shadow: 0px -1px 1px black;
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper {
   /*FORM TAG ITSELF */
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit {
   /*FIRST PART OF THE FORM (DIV TAG WRAPPER)*/
   /*SECOND PART OF THE FORM (DIV TAG WRAPPER)*/
   /*ALL FORMS WRAPPER GENERAL STYLE*/
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .first-part-form {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form {
   /*FORM GROUP (EACH INPUT AND INPUT)*/
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .first-part-form .form-title-wrapper {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-title-wrapper {
   /*FORM TITLE (PERSONAL INFO)*/
   /*YELLOW ARROW POINTS TO THE FORM*/
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form {
   /*FORM TITLE WRAPPER*/
   /*FORM GROUP (EACH INPUT AND INPUT)*/
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .form-title-wrapper {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-title-wrapper {
   /*FORM TITLE (PERSONAL INFO)*/
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .form-group {
+@media (max-width: 992px) {
+  body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-title-wrapper {
+    padding-top: 0 !important;
+  }
+}
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group {
+  /*CARD TYPE WRAPPER*/
+  /*CVV WRAPPER*/
   /*MONTH AND YEAR GENERAL STYLE (SELECT-BOX)*/
   /*EXPIRATION DATE FOR YEAR (SELECT-BOX)*/
   /*EXPERATION DATE FOR MONTH (SELECT-BOX)*/
   /*INPUT*/
   /*INFO LOGO IN THE CVV BUTTON*/
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .form-group .month-exp,
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .form-group .year-exp {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .card-type-title-wrapper {
+  height: 1px;
+  /*IMAGE IN THE CARD TYPE */
+}
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .card-type-title-wrapper .card-type-img {
+  max-width: 6.9vw;
+}
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group.cvv-wrapper {
+  padding-top: 0px !important;
+}
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .card-type-selectbox {
+  color: gray;
+}
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .month-exp-selectbox,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .year-exp-selectbox {
   min-height: 2.858em;
   border-radius: 4.9px;
-  color: black;
+  color: gray;
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .form-group .year-exp {
-  width: 42%;
-}
-@media (max-width: 990px) {
-  body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .form-group .year-exp {
-    width: 81.6%;
+@media (max-width: 992px) {
+  body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .year-exp-selectbox {
+    width: 46.4%;
   }
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .form-group .month-exp {
+@media (min-width: 993px) {
+  body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .year-exp-selectbox {
+    float: none !important;
+    width: 33.8%;
+  }
+}
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .month-exp-selectbox {
   margin-right: 0.5em;
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .form-group .info-logo {
-  padding: 0.5em 0.3em 0;
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .info-logo {
+  padding: 0.6vw 0.1vw 0;
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .first-part-form,
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form {
   margin-bottom: 2em;
   /*FORM TITLE WRAPPER*/
   /*FORM GROUP (EACH INPUT AND INPUT)*/
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .first-part-form .form-title-wrapper,
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .form-title-wrapper {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-title-wrapper,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-title-wrapper {
   color: #FFDE00;
   padding: 2em 0 1em;
   /*FORM TITLE (PERSONAL INFO && YOUR PAYMENT DETAILS)*/
   /*YELLOW ARROW DISPLAYED ONLY IN DESKTOP*/
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .first-part-form .form-title-wrapper .form-title,
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .form-title-wrapper .form-title {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-title-wrapper .form-title,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-title-wrapper .form-title {
   margin: 0;
   padding-right: 0;
 }
-@media (max-width: 990px) {
-  body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .first-part-form .form-title-wrapper .form-title,
-  body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .form-title-wrapper .form-title {
+@media (max-width: 992px) {
+  body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-title-wrapper .form-title,
+  body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-title-wrapper .form-title {
     margin-bottom: 1em;
   }
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .first-part-form .form-title-wrapper .yellow-arrow,
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .form-title-wrapper .yellow-arrow {
-  vertical-align: -webkit-baseline-middle;
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-title-wrapper .yellow-arrow,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-title-wrapper .yellow-arrow {
   position: relative;
-  top: 6px;
+  top: 10px;
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .first-part-form .form-group,
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .form-group {
-  padding: 1.3em 0;
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-group,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group {
+  padding: 1em 0;
+  clear: both;
+  margin-bottom: 0;
   /*CARD NUMBER FIELD AFTER CLEAR FIX */
   /*LABEL TAG FOR ALL THE INPUTS IN THE FORM */
 }
-@media (max-width: 998px) {
-  body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .first-part-form .form-group,
-  body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .form-group {
+@media (max-width: 992px) {
+  body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-group,
+  body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group {
     padding: 0;
     margin-bottom: 1em;
     width: 100%;
   }
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .first-part-form .form-group.card-number-after-clear-fix,
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .form-group.card-number-after-clear-fix {
-  margin: -1.1em 0 1em 0;
-}
-@media (max-width: 990px) {
-  body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .first-part-form .form-group.card-number-after-clear-fix,
-  body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .form-group.card-number-after-clear-fix {
+@media (max-width: 992px) {
+  body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-group.card-number-after-clear-fix,
+  body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group.card-number-after-clear-fix {
     margin: 0 0 1em 0 ;
   }
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .first-part-form .form-group .form-control,
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .form-group .form-control {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-group .form-control,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .form-control {
   width: 60%;
   height: 40px;
 }
-@media (max-width: 990px) {
-  body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .first-part-form .form-group .form-control,
-  body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .form-group .form-control {
+@media (max-width: 992px) {
+  body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-group .form-control,
+  body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .form-control {
     width: 100%;
   }
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .first-part-form .form-group .label-form,
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .form-group .label-form {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-group .label-form,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .label-form {
   font-size: 1.2em;
   font-weight: 100;
+  margin: 0;
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .first-part-form .form-button,
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .form-button {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-button,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-button {
   width: 93.4%;
   margin-top: 1em;
-  font-size: 2.2em;
+  font-size: 1.6vw;
   background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
   color: black;
   text-shadow: 1px 1px 1px white;
-  min-height: 2.1em;
+  min-height: 7.6vh;
 }
-@media (min-width: 1460px) and (max-width: 1747px) {
-  body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .first-part-form .form-button,
-  body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .form-button {
-    font-size: 1.8em;
+@media (max-width: 1200px) {
+  body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-button,
+  body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-button {
+    font-size: 3vw;
   }
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .first-part-form .warning-massage-beneath-the-button.text-center,
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-body .form-wrapper .form-deposit .second-part-form .warning-massage-beneath-the-button.text-center {
+@media (max-width: 992px) {
+  body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-button,
+  body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-button {
+    width: 100%;
+    font-size: 5.1vw;
+    min-height: 7vh;
+    margin: 1vh 0;
+  }
+}
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .warning-massage-beneath-the-button.text-center,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .warning-massage-beneath-the-button.text-center {
   color: #2C98E0;
   margin: 1em 0;
   font-size: 1.1em;
   text-shadow: 1px 1px 1px black;
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-footer {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-footer-deposit {
   /*THREE STEPS REGISTER WRAPPER*/
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-footer .three-steps-for-register-wrapper {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-footer-deposit .three-steps-for-register-wrapper {
   /*STEP WRAPPER */
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-footer .three-steps-for-register-wrapper .step-wrapper {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-footer-deposit .three-steps-for-register-wrapper .step-wrapper {
   /*TEXT STEP (P TAG)*/
 }
-body .content-wrapper .modal-deposit .modal-deposit-content .modal-footer .three-steps-for-register-wrapper .step-wrapper .text-step {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-footer-deposit .three-steps-for-register-wrapper .step-wrapper .text-step {
   margin-top: 1em;
+}
+body .content-wrapper .modal-faq {
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  /*MODAL FAQ FIRST INNER WRAPPER*/
+}
+body .content-wrapper .modal-faq .modal-dialog-faq {
+  width: 43%;
+  /*MODEL FAQ SECOND INNER WRAPPER*/
+}
+body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content {
+  background: black;
+  /*HEADER TAG*/
+  /*BODY TAG*/
+  /*FOOTER TAG*/
+}
+body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-header-faq {
+  background: #01385e;
+  border: none;
+  padding: 0;
+  /*MODAL TITLE*/
+}
+body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-header-faq .modal-title {
+  font-size: 2.6em;
+  text-shadow: 1px 1px 1px black;
+  letter-spacing: 0.9px;
+}
+body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-header-faq .square-logo {
+  padding: 0.5%;
+}
+body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq {
+  padding: 0;
+  /*QUESTION N ANSWER WRAPPER*/
+}
+body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper {
+  margin-top: 1.3em;
+  /*QUESTION WRAPPER*/
+  /*ANSWER WRAPPER*/
+}
+body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper {
+  margin-top: 1em;
+  /*QUESTION TEXT WRAPPER*/
+  /*IMG NUMBER WRAPPER*/
+}
+body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-text-wrapper .question-text {
+  margin: 0 0 0;
+  color: #2c98e0;
+  font-size: 1.8em;
+}
+body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .img-number-wrapper {
+  width: 3.3%;
+  margin: 0 1.2em;
+}
+body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .answer-wrapper {
+  padding: 0.5em 5.9em;
+  border-bottom: 2px solid #3C3B3B;
+}
+body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .answer-wrapper:nth-last-of-type(3) {
+  border-bottom: none;
 }
 
 /*# sourceMappingURL=style.css.map */

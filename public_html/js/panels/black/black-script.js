@@ -76,19 +76,38 @@
                         /*GET THE INPUT VALUE*/
                         var input = $ ( el ).attr ( 'for' );
                         input     = input.replace ( '-', ' ' );
-                        
-
 
                         /*RUN ON ALL THE LABELS AND HIDE THEM */
-                        if ( width < 998 ) {
+                        if ( width < 992 ) {
+
+                            /*IF INPUT EXPIRATION DATE  IN MOBILE CHANGE THE DEFAULT VALUE*/
+                            if(input == 'expiration date'){
+                                $(el).next().find('[value=-1]').text('exp-mm');
+                                $(el).next().next().find('[value=-1]').text('Exp-YYYY')
+                            }
+                            /*IF INPUT CARD TYPE IN MOBILE CHANGE THE DEFAULT VALUE*/
+                            if(input=='card type'){
+                                $(el).parent().next().find('[value=-1]').text('choose card type');
+                            }
+
                             $ ( el )
                                 .css ('display' ,'none' )
                                 .next ().attr ( 'placeholder', input )
                                 .addClass ( 'text-capitalize' );
-                            $ ( el )
+
                         }
                         /*ELSE SHOW LABEL AND HIDE PLACEHOLDER */
                         else {
+                            /*RETURN TO THE DEFAULT VALUE IN DESKTOP*/
+                            if(input == 'expiration date'){
+
+                                $(el).next().find('[value=-1]').text('month');
+                                $(el).next().next().find('[value=-1]').text('year')
+                            }
+                            /*RETURN TO THE DEFAULT VALUE IN DESKTOP*/
+                            if(input=='card type'){
+                                $(el).parent().next().find('[value=-1]').text('choose type');
+                            }
                             $ ( el )
                                 .css ( 'display','block' )
                                 .next ().removeAttr ( 'placeholder' )
