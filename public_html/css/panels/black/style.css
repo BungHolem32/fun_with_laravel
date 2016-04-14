@@ -6429,6 +6429,9 @@ button.close {
 .push-navbar-mobile {
   left: 0 !important;
 }
+.hide {
+  opacity: 0;
+}
 /*BASE BODY STYLE*/
 body {
   font-family: 'Roboto Condensed';
@@ -6512,6 +6515,11 @@ body .content-wrapper .account-details-desktop .info-tab {
   top: 7px;
   left: 11px;
   /*SPAN INFO RESULTS*/
+}
+@media (max-width: 993px) {
+  body .content-wrapper .account-details-desktop .info-tab {
+    padding: 0 0 0 0;
+  }
 }
 body .content-wrapper .account-details-desktop .info-tab .info-result {
   letter-spacing: 0.2px;
@@ -7199,6 +7207,7 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
 @media (max-width: 768px) {
   body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-footer-welcome .button-welcome-footer {
     width: 90% !important;
+    font-size: 2.2em;
   }
 }
 body .content-wrapper .modal-deposit {
@@ -7505,7 +7514,7 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content {
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-header-faq {
   background: #01385e;
   border: none;
-  padding: 0;
+  padding: 0.4em 0 0 0;
   /*MODAL TITLE*/
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-header-faq .modal-title {
@@ -7515,9 +7524,9 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-hea
 }
 @media (max-width: 600px) {
   body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-header-faq .modal-title {
-    padding: 0.6em 0;
-    margin: 1em 0.3em;
-    font-size: 1.5em;
+    padding: 0.6em 0 0.2em;
+    margin: 0.1em 0.3em;
+    font-size: 1.4em;
   }
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-header-faq .square-logo {
@@ -7526,7 +7535,7 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-hea
 @media (max-width: 993px) {
   body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-header-faq .square-logo {
     padding: 0.8%;
-    height: 30px;
+    height: 24px;
   }
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq {
@@ -7534,12 +7543,17 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
   /*QUESTION N ANSWER WRAPPER*/
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper {
-  margin-top: 1.3em;
+  border-bottom: 1.9px solid #333;
+  clear: both;
   /*QUESTION WRAPPER*/
   /*ANSWER WRAPPER*/
 }
+body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper:first-of-type {
+  border: none;
+}
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper {
   margin: 0 0 0 0;
+  cursor: pointer;
   /*QUESTION TEXT WRAPPER*/
   /*IMG NUMBER WRAPPER*/
 }
@@ -7581,7 +7595,6 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .answer-wrapper {
   padding: 0.5em 3em;
-  border-bottom: 2px solid #3C3B3B;
   /*ANSWER TEXT (P TAB)*/
 }
 @media (max-width: 993px) {

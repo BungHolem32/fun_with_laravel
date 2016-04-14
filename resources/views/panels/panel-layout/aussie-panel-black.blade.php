@@ -319,19 +319,19 @@
                             else
                                 $btnClass = 'btn-default';
                             ?>
-                            <button class="btn {{$btnClass}}  btn-lg amount-btn amount-button1 btn-space"
+                            <button class="btn {{$btnClass}}  btn-lg amount-btn amount-button1 btn-amount-selected"
                                     data-amount="25-50">$25 -
                                 $50
                             </button>
-                            <button class="btn  {{ ($bot_settings['minAmount'] == 50 && $bot_settings['maxAmount'] == 100) ? 'btn-success' : 'btn-default'}} btn-lg amount-btn amount-button2 btn-space active-btn"
+                            <button class="btn  {{ ($bot_settings['minAmount'] == 50 && $bot_settings['maxAmount'] == 100) ? 'btn-success' : 'btn-default'}} btn-lg amount-btn amount-button2 btn-amount-selected active-btn"
                                     data-amount="50-100">$50 -
                                 $100
                             </button>
-                            <button class="btn {{ ($bot_settings['minAmount'] == 100 && $bot_settings['maxAmount'] == 150) ? 'btn-success' : 'btn-default'}} btn-lg amount-btn amount-button3 btn-space"
+                            <button class="btn {{ ($bot_settings['minAmount'] == 100 && $bot_settings['maxAmount'] == 150) ? 'btn-success' : 'btn-default'}} btn-lg amount-btn amount-button3 btn-amount-selected"
                                     data-amount="100-150">$100 -
                                 $150
                             </button>
-                            <button class="btn {{ ($bot_settings['minAmount'] == 150) ? 'btn-success' : 'btn-default'}}  btn-lg amount-btn amount-button4 btn-space"
+                            <button class="btn {{ ($bot_settings['minAmount'] == 150) ? 'btn-success' : 'btn-default'}}  btn-lg amount-btn amount-button4 btn-amount-selected"
                                     data-amount="150-1000">$150
                                 +
                             </button>
@@ -852,7 +852,7 @@
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics" class="question-button">
+                                    <img src="/img/panel/black/desktop/m-q-open.png" data-btn-open= "/img/panel/black/desktop/m-q-open.png" data-btn-close="/img/panel/black/desktop/m-q-close.png" alt="open close pics" class="question-button">
                                     <h3 class="question-text text-uppercase">what is the aussie method?</h3>
                             </div>
 
@@ -871,7 +871,7 @@
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics" class="question-button">
+                                <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics" class="question-button" data-btn-open= "/img/panel/black/desktop/m-q-open.png" data-btn-close="/img/panel/black/desktop/m-q-close.png">
                                 <h3 class="question-text text-uppercase">How much money can I make with this software?</h3>
                             </div>
 
@@ -891,7 +891,7 @@
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics" class="question-button">
+                                <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics" class="question-button" data-btn-open= "/img/panel/black/desktop/m-q-open.png" data-btn-close="/img/panel/black/desktop/m-q-close.png">
                                 <h3 class="question-text text-uppercase">how long does each trade last??</h3>
                             </div>
 
@@ -909,7 +909,7 @@
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics" class="question-button">
+                                <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics" class="question-button" data-btn-open= "/img/panel/black/desktop/m-q-open.png" data-btn-close="/img/panel/black/desktop/m-q-close.png">
                                 <h3 class="question-text text-uppercase">do i need to use my credit card when i signup?</h3>
                             </div>
 

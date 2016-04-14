@@ -34,6 +34,10 @@
   left: 0 !important;
 }
 
+.hide{
+  opacity: 0;
+}
+
 /*BASE BODY STYLE*/
 body {
   font-family: @font;
@@ -105,6 +109,10 @@ body {
         position: relative;
         top: 7px;
         left: 11px;
+
+        @media (max-width:993px){
+          .padding(0, 0, 0, 0);
+        }
 
         /*SPAN INFO RESULTS*/
         .info-result {
@@ -829,6 +837,7 @@ body {
 
               @media (max-width:768px){
                 width: @width*9 !important;
+                font-size: 2.2em;
               }
             }
           }
@@ -1157,7 +1166,7 @@ body {
           .modal-header-faq {
             background: @bg-color-header-modal;
             border: none;
-            padding: 0;
+            .padding(0.4em, 0, 0, 0);
 
             /*MODAL TITLE*/
             .modal-title {
@@ -1166,9 +1175,9 @@ body {
               letter-spacing: 0.9px;
 
               @media (max-width:600px){
-                padding: 0.6em 0;
-                margin: 1em 0.3em;
-                font-size: 1.5em;
+                padding: 0.6em 0 0.2em;
+                margin: 0.1em 0.3em;
+                font-size: 1.4em;
               }
             }
 
@@ -1177,7 +1186,7 @@ body {
 
               @media (max-width:993px){
                 padding: 0.8%;
-                height: 30px;
+                height: 24px;
               }
               @media (max-width:px) {
                 
@@ -1190,10 +1199,17 @@ body {
               padding: 0;
             /*QUESTION N ANSWER WRAPPER*/
             .question-n-answer-wrapper {
-              margin-top: 1.3em;
+              border-bottom: 1.9px solid #333;
+              clear: both;
+
+              &:first-of-type{
+                border:none;
+              }
+
               /*QUESTION WRAPPER*/
               .question-wrapper {
                 .margin(0,0,0,0);
+                cursor: pointer;
 
                 @media (max-width:600px) {
                   .margin(0, 0,0,0)
@@ -1238,12 +1254,6 @@ body {
               /*ANSWER WRAPPER*/
               .answer-wrapper {
                 padding: 0.5em 3em;
-                border-bottom: 2px solid #3C3B3B;
-
-                ///*THE LAST ANSWER WRAPPER*/
-                //&:last-of-type {
-                //  border-bottom: none;
-                //}
 
                 @media (max-width:993px){
                   font-size: 0.9em;
