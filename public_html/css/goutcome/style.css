@@ -1,0 +1,191 @@
+body {
+
+    background-color: #00080b;
+    background-image: url(/img/goutcome/background.jpg);
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    background-position: center top;
+    background-attachment: fixed;
+
+}
+
+.email-bg {
+
+    background-repeat: no-repeat;
+
+    height: 30px;
+
+    width: 246px;
+
+    text-align: center;
+
+}
+
+.body-txt {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 17px;
+
+    color: #FFFFFF;
+
+}
+
+.email-bg input {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 16px;
+
+    height: 42px;
+
+    width: 223px;
+
+    border: 1px solid #FFFFFF;
+
+    margin-left: 15px;
+
+    text-align: center;
+
+    margin-top: 18px;
+
+}
+
+#imageField {
+
+    margin-top: 10px;
+
+}
+
+.ari-18 {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #d2d2d2;
+
+}
+
+.ari-18-red {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #e60000;
+
+}
+
+.ari-33 {
+
+    font-family: "Trebuchet MS";
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #FFFFFF;
+
+    text-transform: uppercase;
+
+    text-align: center;
+
+}
+
+.ari-14 {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    color: #000000;
+
+    font-weight: bold;
+
+}
+
+.ftr-txt {
+
+    color: #FFFFFF;
+
+    text-decoration: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+
+}
+
+.ftr-txt a {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+
+    color: #FFFFFF;
+
+    text-decoration: none;
+
+    padding-right: 15px;
+
+    padding-left: 15px;
+
+}
+
+.ftr-txt a:hover {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+
+    color: #FFFFFF;
+
+    text-decoration: underline;
+
+    padding-right: 15px;
+
+    padding-left: 15px;
+
+}
+
+.live-script {
+    color: #FFFFFF;
+    font-size: 18px;
+    text-align: center;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.style3 {
+    color: #FFFFFF;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.ff-btn {
+    background-image: url(/img/goutcome/Button.png);
+    background-repeat: no-repeat;
+    height: 78px;
+    width: 272px;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+.ff-btn:hover {
+    background-image: url(/img/goutcome/Button-rollOver.png);
+}
+
+#logo-img {
+    margin: 20px 0;
+}
+
+-->
