@@ -53,12 +53,12 @@
 
                     /*COLLAPSE THE NAV-BAR ON IMAGE RESIZE*/
                     on_resize_change: function () {
-
+                        console.log(12);
                         /*ON WINDOW RESIZE ABOVE 768PX CLOSE THE NAVBAR*/
                         $ ( window ).on ( 'resize', function () {
                             var width = $ ( window ).width ();
                             if ( width > 768 ) {
-                                panel_object.navbar_push_mobile.show_or_hide_navbar ( true, '.navbar-mobile', 'push-navbar-mobile', 'body', 'push-body-nav-mobile' );
+                                panel_object.nav_bar_mobile.show_or_hide_navbar ( true, '.navbar-mobile', 'push-navbar-mobile', 'body', 'push-body-nav-mobile' );
                                 $ ( this ).removeClass ( 'active-nav-pushed' );
                             }
                         } )
@@ -92,7 +92,7 @@
 
                             /*IF INPUT EXPIRATION DATE  IN MOBILE CHANGE THE DEFAULT VALUE*/
                             if ( input == 'expiration date' ) {
-                                $ ( el ).next ().find ( '[value="-1"]' ).text ( 'exp-mm' );
+                                $ ( el ).next ().find ( '[value="-1"]' ).text ( 'exp-MM' );
                                 $ ( el ).next ().next ().find ( '[value="-1"]' ).text ( 'Exp-YYYY' )
                             }
 
@@ -180,6 +180,11 @@
 
         /*4 - ON MODAL DEPOSIT TOGGLE LABELS ON RESIZE CHANGING*/
         panel_object.on_mobile_hide_label ();
+
+        /*5- ON RESIZE CHANGE THE LABEL APPEARANCE*/
+        $(window).resize(function (  ) {
+            panel_object.on_mobile_hide_label ();
+        })
 
         /*5 - SHOW OR HIDE THE ANSWER ON A CLICK && CHANGE BUTTON PICTURE*/
         panel_object.faq.init ();

@@ -6476,9 +6476,14 @@ body .content-wrapper .account-details-desktop {
   /*TITLE */
   /*PARAGRAPHS WITH THE INFO TITLE*/
 }
-@media (min-width: 980px) and (max-width: 1636px) {
+@media (min-width: 1240px) and (max-width: 1740px) {
   body .content-wrapper .account-details-desktop {
     right: 0;
+  }
+}
+@media (max-width: 1240px) {
+  body .content-wrapper .account-details-desktop {
+    display: none !important;
   }
 }
 body .content-wrapper .account-details-desktop .account-details-title {
@@ -6533,6 +6538,12 @@ body .content-wrapper .account-details-mobile {
     font-size: 0.8em;
   }
 }
+@media (min-width: 994px) and (max-width: 1240px) {
+  body .content-wrapper .account-details-mobile {
+    display: block !important;
+    margin: 5em 0 0 0;
+  }
+}
 body .content-wrapper .account-details-mobile .container {
   background: white;
 }
@@ -6577,7 +6588,7 @@ body .content-wrapper .navbar-desktop {
 @media (max-width: 767px) {
   body .content-wrapper .navbar-desktop {
     background: transparent;
-    margin-bottom: 0;
+    margin: 0 0 0 0;
   }
 }
 body .content-wrapper .navbar-desktop .container {
@@ -6623,6 +6634,16 @@ body .content-wrapper .navbar-desktop .navbar-collapse {
   width: 100%;
   /*NAV BAR INSIDE*/
 }
+@media (max-width: 993px) {
+  body .content-wrapper .navbar-desktop .navbar-collapse {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 768px) {
+  body .content-wrapper .navbar-desktop .navbar-collapse {
+    font-size: 0.8em;
+  }
+}
 body .content-wrapper .navbar-desktop .navbar-collapse .navbar-nav {
   display: inline-block;
   float: none;
@@ -6667,9 +6688,7 @@ body .content-wrapper .navbar-mobile .navbar-ul-wrapper .navbar-li-wrapper {
   border-bottom: 1px solid #237EBB;
   font-family: 'Open Sans', sans-serif;
   line-height: 45px;
-  padding-bottom: 3px;
-  padding-left: 20px;
-  padding-top: 3px;
+  padding: 3px 0 3px 20px;
 }
 body .content-wrapper .navbar-mobile .navbar-ul-wrapper .navbar-li-wrapper .navbar-text-mobile {
   color: #fff;
@@ -6678,7 +6697,7 @@ body .content-wrapper .navbar-mobile .navbar-ul-wrapper .navbar-li-wrapper .navb
   text-transform: uppercase;
 }
 body .content-wrapper .activate-method-system {
-  margin-top: 7.5em;
+  margin: 7.5em auto 0;
   box-sizing: initial;
   color: white;
   font-weight: bold;
@@ -6688,9 +6707,14 @@ body .content-wrapper .activate-method-system {
   /*METHOD TITLE WRAPPER*/
   /*SUBTITLE WRAPPER*/
 }
+@media (max-width: 1240px) {
+  body .content-wrapper .activate-method-system {
+    margin-top: 0.5em;
+  }
+}
 @media (max-width: 992px) {
   body .content-wrapper .activate-method-system {
-    margin-top: 1em;
+    margin: 1em auto 0;
   }
 }
 body .content-wrapper .activate-method-system .active-method-title-wrapper {
@@ -6726,7 +6750,7 @@ body .content-wrapper .activate-method-system .active-method-subtitle-wrapper .m
   font-size: 1.2em;
   position: relative;
   line-height: 23.8px;
-  margin: 0px auto 0 -2.7px;
+  margin: 0px 0 0 -2.7px;
   letter-spacing: 2.3px;
   font-style: italic;
   color: #FFDE00;
@@ -6743,9 +6767,9 @@ body .content-wrapper .activate-method-system .active-method-subtitle-wrapper .m
   }
 }
 body .content-wrapper .arrow-img-wrapper .arrow-img {
-  margin-left: 10.7%;
+  margin: 0 0 0 10.7%;
 }
-@media (max-width: 1170px) {
+@media (max-width: 1200px) {
   body .content-wrapper .arrow-img-wrapper .arrow-img {
     display: block;
     margin: 0 auto;
@@ -6776,7 +6800,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper {
   }
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper:hover {
-  box-shadow: 3px 24px 24px -10px #06A9FF;
+  box-shadow: 0px 4px 8.1px 0 rgba(255, 255, 255, 0.8), 0px 10.3px 9px 0px rgba(29, 134, 194, 0.7), 0px 14px 14.4px 0px rgba(62, 198, 245, 0.7), 0px 22px 38.1px 0px rgba(199, 230, 251, 0.5), inset 0px -4.6px 21.9px 0px rgba(13, 143, 231, 0.3);
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper.deposit {
   /*SPECIFIC TOP PART OF DEPOSIT*/
@@ -6798,7 +6822,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-
   width: 110px;
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light {
-  padding-top: 2.2em;
+  padding: 2.2em 0 0 0;
   margin: 0 auto;
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide {
@@ -6869,9 +6893,6 @@ body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e1fb38', endColorstr='#3fd307', GradientType=0);
   position: relative;
 }
-body .content-wrapper .tabs-wrapper .tab-wrapper.amount {
-  margin-right: 0 !important;
-}
 body .content-wrapper .tabs-wrapper .tab-wrapper.amount .amount-btn {
   width: 39%;
   margin: 0 13px 15px 0;
@@ -6918,6 +6939,11 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-number-in-circle
   text-shadow: -1px 2px 1px #f4ff96;
   -webkit-transform: rotate(5deg);
   transform: rotate(5deg);
+}
+@media (max-width: 1200px) {
+  body .content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-number-in-circle {
+    left: 9px;
+  }
 }
 @media (max-width: 1012px) {
   body .content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-number-in-circle {
@@ -6971,7 +6997,7 @@ body .content-wrapper .tabs-wrapper .arrow-rotate {
 }
 body .content-wrapper .rb-options-open-trade,
 body .content-wrapper .rb-options-history {
-  margin: 3em 0 0;
+  margin: 3em 0 0 0;
   border: none;
   /*SPECIFIC CONTAINER*/
 }
@@ -6979,7 +7005,7 @@ body .content-wrapper .rb-options-history {
   body .content-wrapper .rb-options-open-trade,
   body .content-wrapper .rb-options-history {
     font-size: 7.5px;
-    margin-bottom: 0;
+    margin: 0 0 0 0;
     overflow: hidden;
     border: none;
   }
@@ -7065,10 +7091,10 @@ body .content-wrapper .rb-options-history .container .table-tr-content .td-posit
   color: green;
 }
 body .content-wrapper .rb-options-history .container .table-title {
-  margin: 0px 0 0 0;
+  margin: 0;
 }
 body .content-wrapper .footer-certificate-logos {
-  margin: 8.4em 0 0;
+  margin: 8.4em 0 0 0;
 }
 body .content-wrapper .footer-certificate-logos .footer-copyrights {
   color: white;
@@ -7216,11 +7242,11 @@ body .content-wrapper .modal-deposit {
   /*CONTENT FIRST INNER WRAPPER*/
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit {
-  width: 60%;
+  width: 1130px;
   margin: 0 auto;
   /*CONTENT SECOND INNER WRAPPER */
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   body .content-wrapper .modal-deposit .modal-dialog-deposit {
     width: 100%;
     margin: 0 auto;
@@ -7482,7 +7508,7 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
   /*TEXT STEP (P TAG)*/
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-footer-deposit .three-steps-for-register-wrapper .step-wrapper .text-step {
-  margin-top: 1em;
+  margin: 1em 0 0 0;
 }
 body .content-wrapper .modal-faq {
   color: white;
@@ -7491,18 +7517,19 @@ body .content-wrapper .modal-faq {
   /*MODAL FAQ FIRST INNER WRAPPER*/
 }
 body .content-wrapper .modal-faq .modal-dialog-faq {
-  width: 40%;
+  width: 820px;
   /*MODEL FAQ SECOND INNER WRAPPER*/
 }
 @media (max-width: 993px) {
   body .content-wrapper .modal-faq .modal-dialog-faq {
     width: 80%;
-    margin: 12.9em auto 0;
+    margin-top: 12.9em;
   }
 }
 @media (max-width: 768px) {
   body .content-wrapper .modal-faq .modal-dialog-faq {
     width: auto;
+    margin: 12em 0 0 0;
   }
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content {
@@ -7524,22 +7551,22 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-hea
 }
 @media (max-width: 600px) {
   body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-header-faq .modal-title {
-    padding: 0.6em 0 0.2em;
-    margin: 0.1em 0.3em;
+    padding: 0.6em 0 0.2em 0;
+    margin: 0.1em 0.3em 0.1em 0.3em;
     font-size: 1.4em;
   }
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-header-faq .square-logo {
-  padding: 0.5%;
+  padding: 0.5% 0.5% 0.5% 0.5%;
 }
 @media (max-width: 993px) {
   body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-header-faq .square-logo {
-    padding: 0.8%;
+    padding: 0.8% 0.8% 0.8% 0.8%;
     height: 24px;
   }
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq {
-  padding: 0;
+  padding: 0 0 0 0;
   /*QUESTION N ANSWER WRAPPER*/
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper {
@@ -7594,13 +7621,13 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
   }
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .answer-wrapper {
-  padding: 0.5em 3em;
+  padding: 0.5em 3em 0.5em 3em;
   /*ANSWER TEXT (P TAB)*/
 }
 @media (max-width: 993px) {
   body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .answer-wrapper {
     font-size: 0.9em;
-    padding: 1em;
+    padding: 1em 1em 1em 1em;
   }
 }
 @media (max-width: 768px) {
