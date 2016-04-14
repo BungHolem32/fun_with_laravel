@@ -6432,6 +6432,9 @@ button.close {
 .hide {
   opacity: 0;
 }
+.on {
+  display: inline-block !important;
+}
 /*BASE BODY STYLE*/
 body {
   font-family: 'Roboto Condensed';
@@ -6461,6 +6464,7 @@ body .content-wrapper {
   /*FANCY BOX FOR WELCOME SCREEN HREF (DIV)*/
   /*MODAL BASE WRAPPER FOR DEPOSIT FORM*/
   /*MODAL BASE WRAPPER FOR FAQ*/
+  /*LOGO BRAND WRAPPER*/
 }
 body .content-wrapper .account-details-desktop {
   width: 205.7px;
@@ -7004,8 +7008,8 @@ body .content-wrapper .rb-options-history {
 @media (max-width: 507px) {
   body .content-wrapper .rb-options-open-trade,
   body .content-wrapper .rb-options-history {
-    font-size: 7.5px;
-    margin: 0 0 0 0;
+    font-size: 10.6px;
+    margin: 3em 0 0 0;
     overflow: hidden;
     border: none;
   }
@@ -7035,6 +7039,12 @@ body .content-wrapper .rb-options-open-trade .container .table-row .table-data,
 body .content-wrapper .rb-options-history .container .table-row .table-data {
   border-top: none;
 }
+@media (max-width: 400px) {
+  body .content-wrapper .rb-options-open-trade .container .table-row .table-data,
+  body .content-wrapper .rb-options-history .container .table-row .table-data {
+    font-size: 11px;
+  }
+}
 body .content-wrapper .rb-options-open-trade .container .table-title,
 body .content-wrapper .rb-options-history .container .table-title {
   font-size: 1.95em;
@@ -7044,6 +7054,11 @@ body .content-wrapper .rb-options-history .container .table-title {
   letter-spacing: 0.7px;
   word-spacing: -1.8px;
   background-color: #01395E;
+}
+body .content-wrapper .rb-options-open-trade .container .table-title .fa-spin,
+body .content-wrapper .rb-options-history .container .table-title .fa-spin {
+  text-indent: 0;
+  display: none;
 }
 body .content-wrapper .rb-options-open-trade .container .table-headers,
 body .content-wrapper .rb-options-history .container .table-headers {
@@ -7109,6 +7124,12 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome {
 @media (min-width: 768px) {
   body .content-wrapper .modal-welcome .modal-dialog-welcome {
     width: 816px;
+  }
+}
+@media (max-width: 768px) {
+  body .content-wrapper .modal-welcome .modal-dialog-welcome {
+    width: 100%;
+    margin: 0 0 0 0;
   }
 }
 body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content {
@@ -7239,6 +7260,7 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
 body .content-wrapper .modal-deposit {
   color: white;
   background: rgba(0, 0, 0, 0.6);
+  padding-right: 0 !important;
   /*CONTENT FIRST INNER WRAPPER*/
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit {
@@ -7378,6 +7400,7 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .year-exp-selectbox {
   min-height: 2.858em;
   border-radius: 4.9px;
+  height: 40px;
   color: gray;
 }
 @media (max-width: 992px) {
@@ -7637,6 +7660,19 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .answer-wrapper .answer {
   text-shadow: 0px -1px 1px gray;
+}
+body .content-wrapper .logo-brand {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  height: 20px;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  /*LOGO BRAND IMAGE*/
+}
+body .content-wrapper .logo-brand .logo-brand-img {
+  height: 71.1px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -161,6 +161,14 @@
                 },
                 enumerable  : true,
                 configurable: true,
+            },
+            exit_modal_button:{
+                value:function(){
+                    $('body').on('click','.square-logo',function(){
+                        $('.modal-deposit').hide();
+                        $('body').removeClass();
+                    })
+                }
             }
         } )
 
@@ -189,6 +197,8 @@
         /*5 - SHOW OR HIDE THE ANSWER ON A CLICK && CHANGE BUTTON PICTURE*/
         panel_object.faq.init ();
 
+        /*6 - */
+        panel_object.exit_modal_button();
         /*ASSIGN GLOBAL VALUE TO THE OBJECT */
         window._panel = panel_object;
     }

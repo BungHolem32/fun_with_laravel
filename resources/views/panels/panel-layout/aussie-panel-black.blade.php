@@ -53,43 +53,50 @@
 
                 {{--title place--}}
                 <div class="title text-uppercase">
-                    account details
+                    @ln(account details)
                 </div>
             </header>
 
             {{--PERSONAL INFO  (BASE CONTENT FO THE TAB)--}}
             <div class="account-detail-personal-info">
                 <p class="info-tab">
-                    <span class="text-capitalize">email:</span>
-                    <strong>youremail@gmail.com</strong>
+                    <span class="text-capitalize">@ln(email):</span>
+                    <strong>{{ App\Customer::get()->email }}</strong>
                 </p>
                 <p class="info-tab">
-                    <span class="text-capitalize">broker:</span>
+                    <span class="text-capitalize">@ln(broker name):</span>
                     <img src="/img/panel/black/icon-rboptions.png" alt="rboption logo">
-                    <strong class="info-result text-uppercase">rb</strong><strong class="info-result">options</strong>
+                    <strong class="info-result text-uppercase">{{ $page->brand->name }}{{--brand name--}}
+                        rb</strong><strong class="info-result">options</strong>
                 </p>
                 <p class="info-tab">
-                    <span class="text-capitalize">balance:</span>
-
-                    <strong class="info-result text-bold">1532.63</strong>
+                    <span class="text-capitalize">@ln(balance):</span>
+                    <strong class="info-result text-bold balance getLoading ">$ 0.00 <i
+                                class="fa fa-refresh fa-spin"></i></strong>
                 </p>
                 <p class="info-tab">
-                    <span class="text-capitalize">account </span>
+                    <span class="text-capitalize">@ln(account)</span>
                     <span class="text-uppercase">id: </span>
-                    <strong class="info-result">432563</strong>
+                    <strong class="info-result">{{ App\Customer::get()->id }}</strong>
                 </p>
             </div>
+        </aside>
+
+        <aside class="logo-brand">
+            <img src="{{ $page->panel_logo }}" alt="method_logo" class="logo-brand-img">
         </aside>
 
         {{--NAVBAR DESKTOP--}}
         <nav class="navbar-desktop navbar navbar-default" role="navigation">
             <div class="container">
-                <button class="navbar-toggle pull-left icon-menu" {{--data-toggle="collapse" data-target=".navbar-header"--}}>
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+                <div class="navbar-header">
+                    <button class="navbar-toggle pull-left icon-menu" {{--data-toggle="collapse" data-target=".navbar-header"--}}>
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
 
                 {{--NAV BAR CONTENT IN COLLAPSE IT CHANGE HIS APPERIANCE--}}
                 <div class="collapse navbar-collapse  navbar-header text-center">
@@ -294,11 +301,11 @@
                 <div class="tab-wrapper auto-trading col-lg-3 col-md-12 col-sm-12 col-xs 12">
                     <div class="top-part">
                         <span class="tab-number-in-circle text-center">2</span>
-                        <p class="tab-title text-uppercase text-center">activate auto trading</p>
+                        <p class="tab-title text-uppercase text-center  low-alert">activate auto trading</p>
                     </div>
                     <div class="bottom-part">
                         <div class="tab-switch-button startTrade text-uppercase ">
-                            <div class="toggles toggle-light" data-on="ON" data-off="OFF"
+                            <div class="toggles startTrade toggle-light" data-on="ON" data-off="OFF"
                                  style="height: 50px; width: 110px;">
                             </div>
                         </div>
@@ -323,7 +330,7 @@
                                     data-amount="25-50">$25 -
                                 $50
                             </button>
-                            <button class="btn  {{ ($bot_settings['minAmount'] == 50 && $bot_settings['maxAmount'] == 100) ? 'btn-success' : 'btn-default'}} btn-lg amount-btn amount-button2 btn-amount-selected active-btn"
+                            <button class="btn  {{ ($bot_settings['minAmount'] == 50 && $bot_settings['maxAmount'] == 100) ? 'btn-success' : 'btn-default'}} btn-lg amount-btn amount-button2 btn-amount-selected"
                                     data-amount="50-100">$50 -
                                 $100
                             </button>
@@ -331,7 +338,7 @@
                                     data-amount="100-150">$100 -
                                 $150
                             </button>
-                            <button class="btn {{ ($bot_settings['minAmount'] == 150) ? 'btn-success' : 'btn-default'}}  btn-lg amount-btn amount-button4 btn-amount-selected"
+                            <button class="btn {{ ($bot_settings['minAmount'] == 150) ? 'btn-success' : 'btn-default'}}  btn-lg amount-btn amount-button4 btn-amount-selected active-btn"
                                     data-amount="150-1000">$150
                                 +
                             </button>
@@ -350,7 +357,8 @@
                 <table class="table col-sm-12 col-xs-12">
 
                     {{--TABLE TITLE (RBOPTIONS OPEN TRADE)--}}
-                    <caption class="table-title text-center text-uppercase">rboptions open trades</caption>
+                    <caption class="table-title text-center text-uppercase">rboptions @ln(open trades) <i
+                                class="getLoading fa fa-refresh fa-spin"></i></caption>
 
                     {{--FIRST TABLE ROW WITH ALL THE HEADERS--}}
                     <tr class="table-headers table-row">
@@ -415,7 +423,8 @@
                 <table class="table">
 
                     {{--TABLE TITLE (RBOPTIONS OPEN TRADE)--}}
-                    <caption class="table-title text-center text-uppercase">rboptions trade history</caption>
+                    <caption class="table-title text-center text-uppercase">rboptions @ln(Trades History) <i
+                                class="getLoading fa fa-refresh fa-spin"></i></caption>
 
                     {{--FIRST TABLE ROW WITH ALL THE HEADERS--}}
                     <tr class="table-headers table-row">
@@ -852,8 +861,11 @@
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <img src="/img/panel/black/desktop/m-q-open.png" data-btn-open= "/img/panel/black/desktop/m-q-open.png" data-btn-close="/img/panel/black/desktop/m-q-close.png" alt="open close pics" class="question-button">
-                                    <h3 class="question-text text-uppercase">what is the aussie method?</h3>
+                                <img src="/img/panel/black/desktop/m-q-open.png"
+                                     data-btn-open="/img/panel/black/desktop/m-q-open.png"
+                                     data-btn-close="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
+                                     class="question-button">
+                                <h3 class="question-text text-uppercase">what is the aussie method?</h3>
                             </div>
 
                             {{--ANSWER WRPPER--}}
@@ -871,8 +883,11 @@
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics" class="question-button" data-btn-open= "/img/panel/black/desktop/m-q-open.png" data-btn-close="/img/panel/black/desktop/m-q-close.png">
-                                <h3 class="question-text text-uppercase">How much money can I make with this software?</h3>
+                                <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics"
+                                     class="question-button" data-btn-open="/img/panel/black/desktop/m-q-open.png"
+                                     data-btn-close="/img/panel/black/desktop/m-q-close.png">
+                                <h3 class="question-text text-uppercase">How much money can I make with this
+                                    software?</h3>
                             </div>
 
                             {{--ANSWER WRPPER--}}
@@ -880,7 +895,8 @@
                                 <p class="answer text-capitalize">
                                     to put it in short, there's no limit. to put it more technically, it really depends
                                     on how much money you fund your account with. most of our members fund their account
-                                    with $300, and make about $800-1000 daily. those who fund their account with $1,000 or
+                                    with $300, and make about $800-1000 daily. those who fund their account with $1,000
+                                    or
                                     over make over $2,500 per day!
                                 </p>
                             </div>
@@ -891,7 +907,9 @@
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics" class="question-button" data-btn-open= "/img/panel/black/desktop/m-q-open.png" data-btn-close="/img/panel/black/desktop/m-q-close.png">
+                                <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics"
+                                     class="question-button" data-btn-open="/img/panel/black/desktop/m-q-open.png"
+                                     data-btn-close="/img/panel/black/desktop/m-q-close.png">
                                 <h3 class="question-text text-uppercase">how long does each trade last??</h3>
                             </div>
 
@@ -909,8 +927,11 @@
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics" class="question-button" data-btn-open= "/img/panel/black/desktop/m-q-open.png" data-btn-close="/img/panel/black/desktop/m-q-close.png">
-                                <h3 class="question-text text-uppercase">do i need to use my credit card when i signup?</h3>
+                                <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics"
+                                     class="question-button" data-btn-open="/img/panel/black/desktop/m-q-open.png"
+                                     data-btn-close="/img/panel/black/desktop/m-q-close.png">
+                                <h3 class="question-text text-uppercase">do i need to use my credit card when i
+                                    signup?</h3>
                             </div>
 
                             {{--ANSWER WRPPER--}}
@@ -933,6 +954,7 @@
             </div>
         </div>
 
+    </div>
     </div>
     </div>
 @endsection

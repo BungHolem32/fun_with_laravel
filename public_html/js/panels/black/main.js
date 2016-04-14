@@ -9,17 +9,6 @@
 //});
 
 $(document).ready(function(){
-
-    //$('.toggle').toggles({
-    //    text: {
-    //        on: $('.toggle').data('on'), // text for the ON position
-    //        off: $('.toggle').data('off') // and off
-    //    },
-    //    animate: 180, // animation time (ms)
-    //    width: 110, // width used if not set in css
-    //    height: 50 // height if not set in css
-    //});
-
     // cool loading jquery
     function loading(){
         $('.loading').show();
@@ -41,13 +30,13 @@ $(document).ready(function(){
 
     /******* Actions *******/
 
-    $('.toggle').on('toggle', function(e, active) {
-        if (active) {
-            console.log('Toggle ON');
-        } else {
-            console.log('Toggle OFF');
-        }
-    });
+    //$('.toggles').on('toggle', function(e, active) {
+    //    if (active) {
+    //        console.log('Toggle ON');
+    //    } else {
+    //        console.log('Toggle OFF');
+    //    }
+    //});
 
     $('.amount').on('click',function(){
         var tthis = $(this);

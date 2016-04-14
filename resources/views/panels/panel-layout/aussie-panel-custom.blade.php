@@ -280,6 +280,10 @@
                 <td class="status"></td>
             </tr>
         </script>
+
+        <div class="balance">
+
+        </div>
         <style type="text/css">
             #runningPositionsTable .hide-open{
                 display:none;

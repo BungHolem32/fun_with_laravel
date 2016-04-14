@@ -3,11 +3,11 @@ $(document).ready(function() {
 
     setInterval(function(){
         $(window).trigger('ajax-refresh')
-    }, 30000);
+    }, 10000);
 
 
-    $('.startTrade').on('click', function(){
-        $('.stopTrade').removeClass('btn-danger').addClass('btn-default');
+    $('.toggle-blob').on('click', function(){
+        $('.toggle-off').removeClass('btn-danger').addClass('btn-default');
         var btn = this;
         callAjax("/ajax/turnOn", null, function(res){
             $('.wait-ref').hide();
@@ -35,42 +35,42 @@ $(document).ready(function() {
         });
     });
 
-    $('#deposit-form').validate({
-        submitHandler: function (form) {
-            var data = $('#deposit-form').serialize();
-             $.ajax({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                type: "POST",
-                url: "/ajax/deposit",
-                dataType: 'json',
-                data: data,
-                beforeSend: function() {
-                    $('.depositBtnSect .loadingForm').show();
-                },
-                success: function (res) {
-                    if (res.err === 0) {
-                        $('body').removeClass('bggray');
-                        $('#formDepositModal').fadeOut('fast');
-                        $('#thanku').fadeIn();
-                        setTimeout(function(){
-                            $('#thanku').fadeOut();
-                        },3000);
+    $('.form-deposit').validate({
+       submitHandler: function (form) {
+           var data = $('#deposit-form').serialize();
+            $.ajax({
+               headers: {
+                   'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+               },
+               type: "POST",
+               url: "/ajax/deposit",
+               dataType: 'json',
+               data: data,
+               beforeSend: function() {
+                   $('.depositBtnSect .loadingForm').show();
+               },
+               success: function (res) {
+                   if (res.err === 0) {
+                       $('body').removeClass('bggray');
+                       $('#formDepositModal').fadeOut('fast');
+                       $('#thanku').fadeIn();
+                       setTimeout(function(){
+                           $('#thanku').fadeOut();
+                       },3000);
 
-                        $(window).trigger('ajax-refresh');
-                    }
-                    else {
-                        $('.depositBtnSect .loadingForm').hide();
-                        alert(res.errs.error);
-                        //console.log(res);
-                    }
-                },
-                error: function (err) {
-                    console.log(err);
-                }
-            });
-        }
+                       $(window).trigger('ajax-refresh');
+                   }
+                   else {
+                       $('.depositBtnSect .loadingForm').hide();
+                       alert(res.errs.error);
+                       //console.log(res);
+                   }
+               },
+               error: function (err) {
+                   console.log(err);
+               }
+           });
+       }
     });
 
     $('#amountOfTrade .btn').click(function(){
@@ -81,7 +81,7 @@ $(document).ready(function() {
         $.post('/ajax/setRange', range);
     });
 
-    $('#logout').click(function(e){
+    $('.logout').click(function(e){
         e.preventDefault();
         callAjax('/ajaxLogout', {}, function() {
             window.location.reload(true);
@@ -96,7 +96,6 @@ $(window).on('ajax-refresh', function () {
     callAjax("/ajax/refresh", null, function(res){
         if (res.err === 0) {
             $('.getLoading').removeClass('on');
-            console.log(res);
             $('.balance').html(res.customer.currencySign + ' ' + res.customer.accountBalance);
 
             if(res.customer.accountBalance<25)
@@ -123,20 +122,14 @@ $(window).on('ajax-refresh', function () {
 
             asset_list = load_positions(res.positions);
             socketRefresh(asset_list);
-        }else{
-            if(res.refresh)
-                window.location.reload(true);
-            else
-                alert(res.errs.errors[0]);
         }
     },function(){
         // before send
         $('.getLoading').css('display', 'inline-block').addClass('on');
     });
-
 });
 
-
+/*CALL AJAX*/
 function callAjax(url, data, cbSuccess, cbBefore){
     $.ajax({
         headers: {

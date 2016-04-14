@@ -38,6 +38,10 @@
   opacity: 0;
 }
 
+.on{
+  display: inline-block !important;
+
+}
 /*BASE BODY STYLE*/
 body {
   font-family: @font;
@@ -627,8 +631,8 @@ body {
       .margin(3em, 0, 0, 0);
       border: none;
       @media (max-width: 507px) {
-        font-size: 7.5px;
-        .margin(0, 0, 0, 0);
+        font-size: 10.6px;
+        .margin(3em, 0, 0, 0);
         overflow: hidden;
         border: none;
       }
@@ -650,6 +654,10 @@ body {
           /*TABLE DATA (TD)*/
           .table-data {
             border-top: none;
+            @media (max-width:400px){
+              font-size: 11px;
+            }
+
           }
         }
 
@@ -662,6 +670,10 @@ body {
           letter-spacing: 0.7px;
           word-spacing: -1.8px;
           background-color: @nav-bar-dark-color;
+          .fa-spin{
+            text-indent: 0;
+            display: none;
+          }
         }
 
         /*TR WITH ALL THE HEADERS*/
@@ -729,9 +741,12 @@ body {
       background: rgba(0, 0, 0, 0.6);
 
       .modal-dialog-welcome {
-
         @media (min-width: 768px) {
           width: 816px;
+        }
+        @media (max-width:768px) {
+          width:100%;
+          .margin(0,0,0,0);
         }
 
         /*WRAPPER FOR ALL THE CONTENT HEADER + BODY + FOOTER*/
@@ -874,6 +889,7 @@ body {
     .modal-deposit {
       color: white;
       background: rgba(0, 0, 0, 0.6);
+      .padding-right(0) !important;
 
       /*CONTENT FIRST INNER WRAPPER*/
       .modal-dialog-deposit {
@@ -1029,6 +1045,7 @@ body {
                     .month-exp-selectbox, .year-exp-selectbox {
                       min-height: 2.858em;
                       border-radius: 4.9px;
+                      height: 40px;
                       color: @select-box-font-color;
                     }
                     /*EXPIRATION DATE FOR YEAR (SELECT-BOX)*/
@@ -1302,6 +1319,22 @@ body {
         }
       }
 
+    }
+
+    /*LOGO BRAND WRAPPER*/
+    .logo-brand{
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      height: 20px;
+      right: 0;
+      margin: 0 auto;
+      text-align: center;
+
+      /*LOGO BRAND IMAGE*/
+      .logo-brand-img{
+        height: 71.1px;
+      }
     }
   }
 }
