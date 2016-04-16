@@ -6413,6 +6413,9 @@ button.close {
 /*IMPORT BOOTSTRAP LIBRARY WITH ALL THE ADDONS*/
 /*ASSIGN VALUES*/
 /*MIXIN CLASSES*/
+/*BOX SHADOW PREFIXES  IF IT PASS ON PARAM*/
+/*IF IT PASS MORE THE ONE THEN PASS */
+/*ANIMATION PREFIX*/
 /*ACTIVE BUTTON IN THE TAB FOUR BUTTONS*/
 .active-btn {
   box-shadow: inset 5px 3px 27px -4px #313030 !important;
@@ -6475,7 +6478,7 @@ body .content-wrapper .account-details-desktop {
   border-bottom-right-radius: 0.6em;
   border-bottom-left-radius: 0.6em;
   background-color: white;
-  box-shadow: 0em 1.1px 1.4px 0.1px darkgray;
+  box-shadow: 0 1.1px 1.4px 0.1px darkgray;
   z-index: 1;
   /*TITLE */
   /*PARAGRAPHS WITH THE INFO TITLE*/
@@ -6804,7 +6807,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper {
   }
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper:hover {
-  box-shadow: 0px 4px 8.1px 0 rgba(255, 255, 255, 0.8), 0px 10.3px 9px 0px rgba(29, 134, 194, 0.7), 0px 14px 14.4px 0px rgba(62, 198, 245, 0.7), 0px 22px 38.1px 0px rgba(199, 230, 251, 0.5), inset 0px -4.6px 21.9px 0px rgba(13, 143, 231, 0.3);
+  box-shadow: 0 4px 8.1px 0 rgba(255, 255, 255, 0.8), 0 10.3px 9px 0 rgba(29, 134, 194, 0.7), 0 14px 14.4px 0 rgba(62, 198, 245, 0.7), 0 22px 38.1px 0 rgba(199, 230, 251, 0.5), inset 0 -4.6px 21.9px 0 rgba(13, 143, 231, 0.3);
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper.deposit {
   /*SPECIFIC TOP PART OF DEPOSIT*/
@@ -6831,7 +6834,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide {
   border-radius: 9999px;
-  box-shadow: 0px -5px 28px -5px #999;
+  box-shadow: 0 -5px 28px -5px #999;
   border: 1px solid #222222;
   overflow: hidden;
   cursor: pointer;
@@ -7117,6 +7120,7 @@ body .content-wrapper .footer-certificate-logos .footer-copyrights {
 body .content-wrapper .modal-welcome {
   color: white;
   background: rgba(0, 0, 0, 0.6);
+  padding-right: 0 !important;
 }
 body .content-wrapper .modal-welcome .modal-dialog-welcome {
   /*WRAPPER FOR ALL THE CONTENT HEADER + BODY + FOOTER*/
@@ -7546,17 +7550,18 @@ body .content-wrapper .modal-faq .modal-dialog-faq {
 @media (max-width: 993px) {
   body .content-wrapper .modal-faq .modal-dialog-faq {
     width: 80%;
-    margin-top: 12.9em;
   }
 }
 @media (max-width: 768px) {
   body .content-wrapper .modal-faq .modal-dialog-faq {
-    width: auto;
-    margin: 12em 0 0 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content {
   background: black;
+  font-size: 1.1em;
   /*HEADER TAG*/
   /*BODY TAG*/
   /*FOOTER TAG*/
@@ -7576,7 +7581,6 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-hea
   body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-header-faq .modal-title {
     padding: 0.6em 0 0.2em 0;
     margin: 0.1em 0.3em 0.1em 0.3em;
-    font-size: 1.4em;
   }
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-header-faq .square-logo {
@@ -7620,13 +7624,9 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
   color: #2c98e0;
 }
 @media (max-width: 993px) {
-  body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-text {
-    font-size: 1.4em;
-  }
 }
 @media (max-width: 500px) {
   body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-text {
-    font-size: 1.2em;
     display: inline-table;
   }
 }
@@ -7649,7 +7649,6 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
 }
 @media (max-width: 993px) {
   body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .answer-wrapper {
-    font-size: 0.9em;
     padding: 1em 1em 1em 1em;
   }
 }

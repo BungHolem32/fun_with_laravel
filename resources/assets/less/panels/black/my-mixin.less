@@ -1,0 +1,38 @@
+/*ASSIGN VALUES*/
+@image: '/img/panel/black/';
+@font: 'Roboto Condensed';
+@width: 10%;
+@transition: 'all 1s';
+@bg-color-modal: #282827;
+@nav-bar-bright-color: #2c98e0;
+@nav-bar-dark-color: #01395E;
+@select-box-font-color: gray;
+@bg-color-header-modal: #01385e;
+
+/*MIXIN CLASSES*/
+
+/*BOX SHADOW PREFIXES  IF IT PASS ON PARAM*/
+.boxShadow(@prop) {
+  -webkit-box-shadow: @prop;
+  -moz-box-shadow: @prop;
+  box-shadow: @prop;
+}
+
+/*IF IT PASS MORE THE ONE THEN PASS */
+.boxShadow(@prop1:1px 1px 1px 1px blue,@prop2:2px 2px 1px 10px gray,@prop3,@prop4,@prop5) {
+  -webkit-box-shadow: @prop1,@prop2,@prop3,@prop4,@prop5;
+  -moz-box-shadow: @prop1,@prop2,@prop3,@prop4,@prop5;
+  box-shadow: @prop1,@prop2,@prop3,@prop4,@prop5;
+}
+
+/*ANIMATION PREFIX*/
+.animate(@animate: all,@deration) {
+  -webkit-animation: @animation @deration;
+  -moz-animation: @animation @deration;
+  -ms-animation: @animation @deration;
+  -o-animation: @animation @deration;
+  animation: @animation @deration;
+}
+
+.mix-color(@color1,@color2){
+}

@@ -1,23 +1,12 @@
 @direction: 'ltr'; /*CHOOSE THE DIRECTION OF THE PAGE*/
-@import "../../direction.less"; /*IMPORT THE DIRECTION LESS TO TAKE CARE OF THE CHANGE IN DIRECTION OF OTHER LANGUAGES */
-@import "../../bootstrap/bootstrap.less"; /*IMPORT BOOTSTRAP LIBRARY WITH ALL THE ADDONS*/
+@import "../../direction"; /*IMPORT THE DIRECTION LESS TO TAKE CARE OF THE CHANGE IN DIRECTION OF OTHER LANGUAGES */
+@import "../../bootstrap/bootstrap"; /*IMPORT BOOTSTRAP LIBRARY WITH ALL THE ADDONS*/
+@import "my-mixin";
 
-/*ASSIGN VALUES*/
-@image: '/img/panel/black/';
-@font: 'Roboto Condensed';
-@width: 10%;
-@transition: 'all 1s';
-@bg-color-modal: #282827;
-@nav-bar-bright-color: #2c98e0;
-@nav-bar-dark-color: #01395E;
-@select-box-font-color: gray;
-@bg-color-header-modal: #01385e;
-
-/*MIXIN CLASSES*/
 
 /*ACTIVE BUTTON IN THE TAB FOUR BUTTONS*/
 .active-btn {
-  box-shadow: inset 5px 3px 27px -4px #313030 !important;
+  .boxShadow(inset 5px 3px 27px -4px #313030) !important;
   text-shadow: 1px -1px 1px #313030 !important;
   background: #0288cb !important;
   background: linear-gradient(to bottom, #0288cb 43%, #0288cb 43%, #00daf8 100%) !important;
@@ -38,10 +27,11 @@
   opacity: 0;
 }
 
-.on{
+.on {
   display: inline-block !important;
 
 }
+
 /*BASE BODY STYLE*/
 body {
   font-family: @font;
@@ -70,7 +60,7 @@ body {
       border-bottom-right-radius: 0.6em;
       border-bottom-left-radius: 0.6em;
       background-color: white;
-      box-shadow: 0em 1.1px 1.4px 0.1px darkgray;
+      .box-shadow(0 1.1px 1.4px 0.1px darkgray);
       z-index: 1;
       @media (min-width: 1240px) and  (max-width: 1740px) {
         right: 0;
@@ -398,12 +388,11 @@ body {
         }
 
         &:hover {
-          //box-shadow: 3px 24px 24px -10px #06A9FF;
-          box-shadow: 0px 4px 8.1px 0 rgba(255, 255, 255, 0.8),
-          0px 10.3px 9px 0px rgba(29, 134, 194, 0.7),
-          0px 14px 14.4px 0px rgba(62, 198, 245, 0.7),
-          0px 22px 38.1px 0px rgba(199, 230, 251, 0.5),
-          inset 0px -4.6px 21.9px 0px rgba(13, 143, 231, 0.3);
+          .boxShadow(0 4px 8.1px 0 rgba(255, 255, 255, 0.8),
+                  0 10.3px 9px 0 rgba(29, 134, 194, 0.7),
+                  0 14px 14.4px 0 rgba(62, 198, 245, 0.7),
+                  0 22px 38.1px 0 rgba(199, 230, 251, 0.5),
+                  inset 0 -4.6px 21.9px 0 rgba(13, 143, 231, 0.3));
         }
         /*FIRST TAB (SPECIFIC SIZE*/
         &.deposit {
@@ -438,7 +427,7 @@ body {
 
                   .toggle-slide {
                     border-radius: 9999px;
-                    box-shadow: 0px -5px 28px -5px #999;
+                    .boxShadow(0 -5px 28px -5px #999);
                     border: 1px solid #222222;
                     overflow: hidden;
                     cursor: pointer;
@@ -495,7 +484,7 @@ body {
                         &[active=false] {
                           height: 50px !important;
                           width: 49px !important;
-                          box-shadow: inset 0px -2px 7px #000;
+                          .box-shadow(inset 0px -2px 7px #000);
                           background: linear-gradient(to bottom, #4f5053 0%, #2c2d2e 38%, #2c2d2e 38%, #2c2d2e 50%);
                           filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4f5053', endColorstr='#2c2d2e', GradientType=0);
                         }
@@ -522,7 +511,7 @@ body {
             position: relative;
             top: 8px;
             left: 4px;
-            box-shadow: 1px 1px 10px 1px black;
+            .box-shadow(1px 1px 10px 1px black);
             background: linear-gradient(to top, #222222, #444547);
             color: white;
             border: none;
@@ -654,7 +643,7 @@ body {
           /*TABLE DATA (TD)*/
           .table-data {
             border-top: none;
-            @media (max-width:400px){
+            @media (max-width: 400px) {
               font-size: 11px;
             }
 
@@ -670,7 +659,7 @@ body {
           letter-spacing: 0.7px;
           word-spacing: -1.8px;
           background-color: @nav-bar-dark-color;
-          .fa-spin{
+          .fa-spin {
             text-indent: 0;
             display: none;
           }
@@ -739,14 +728,15 @@ body {
     .modal-welcome {
       color: white;
       background: rgba(0, 0, 0, 0.6);
+      .padding-right(0) !important;
 
       .modal-dialog-welcome {
         @media (min-width: 768px) {
           width: 816px;
         }
-        @media (max-width:768px) {
-          width:100%;
-          .margin(0,0,0,0);
+        @media (max-width: 768px) {
+          width: 100%;
+          .margin(0, 0, 0, 0);
         }
 
         /*WRAPPER FOR ALL THE CONTENT HEADER + BODY + FOOTER*/
@@ -961,7 +951,7 @@ body {
             .deposit-title-wrapper {
               background: @nav-bar-bright-color;
               padding: 0.2em;
-              box-shadow: 0px 2px 1px 1px black;
+              .boxShadow(0px 2px 1px 1px black);
 
               .deposite-title {
                 margin: 0;
@@ -1195,16 +1185,19 @@ body {
 
         @media (max-width: 993px) {
           width: @width*8;
-          margin-top: 12.9em;
+          //margin-top: 12.9em;
         }
         @media (max-width: 768px) {
-          width: auto;
-          .margin(12em, 0, 0, 0);
+          width: @width*10%;
+          padding: 0;
+          margin: 0;
+          //.margin(12em, 0, 0, 0);
         }
 
         /*MODEL FAQ SECOND INNER WRAPPER*/
         .modal-faq-content {
           background: black;
+          font-size: 1.1em;
 
           /*HEADER TAG*/
           .modal-header-faq {
@@ -1221,7 +1214,7 @@ body {
               @media (max-width: 600px) {
                 .padding(0.6em, 0, 0.2em, 0);
                 .margin(0.1em, 0.3em, 0.1em, 0.3em);
-                font-size: 1.4em;
+                //font-size: 1.4em;
               }
             }
 
@@ -1267,10 +1260,10 @@ body {
                   font-size: 1.6em;
                   color: @nav-bar-bright-color;
                   @media (max-width: 993px) {
-                    font-size: 1.4em;
+                    //font-size: 1.4em;
                   }
                   @media (max-width: 500px) {
-                    font-size: 1.2em;
+                    //font-size: 1.2em;
                     display: inline-table;
                   }
                 }
@@ -1298,7 +1291,7 @@ body {
                 .padding(0.5em, 3em, 0.5em, 3em);
 
                 @media (max-width: 993px) {
-                  font-size: 0.9em;
+                  //font-size: 0.9em;
                   .padding(1em, 1em, 1em, 1em)
                 }
 
@@ -1322,7 +1315,7 @@ body {
     }
 
     /*LOGO BRAND WRAPPER*/
-    .logo-brand{
+    .logo-brand {
       position: absolute;
       z-index: 1;
       left: 0;
@@ -1332,7 +1325,7 @@ body {
       text-align: center;
 
       /*LOGO BRAND IMAGE*/
-      .logo-brand-img{
+      .logo-brand-img {
         height: 71.1px;
       }
     }
