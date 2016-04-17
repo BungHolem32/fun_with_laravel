@@ -713,7 +713,7 @@ class BladeCompiler extends Compiler implements CompilerInterface {
     {
         if (starts_with($expression, '('))
         {
-            $expression = substr($expression, 1, -1);
+            /*$expression = substr($expression, 1, -1);
             $temp = explode("'", substr($expression, 1));
             if(str_contains($expression, ','))
             {
@@ -723,11 +723,48 @@ class BladeCompiler extends Compiler implements CompilerInterface {
 
             }
             else
-                $expression = "'".$temp[0].".comIndex', ['comName'=>'{$temp[0]}']";
+                $expression = "'".$temp[0].".comIndex', ['comName'=>'{$temp[0]}']";*/
+
+			$isVariable = false;
+			if(str_contains($expression, '$')){
+				$isVariable = true;
+			}
+			$expression = substr($expression, 1, -1);
+			$temp = explode("'", substr($expression, 1));
+			if($isVariable)
+				$expression = '$'.$temp[0].".'.comIndex', ['comName'=>'{$temp[0]}']";
+			else
+				$expression = "'".$temp[0].".comIndex', ['comName'=>'{$temp[0]}']";
         }
 
         return "<?php echo \$__env->make($expression, array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>";
     }
+
+	/**
+	 * Compile the include statements into valid PHP.
+	 *
+	 * @param  string  $expression
+	 * @return string
+	 */
+	protected function compileComedit($expression)
+	{
+		if (starts_with($expression, '('))
+		{
+			$isVariable = false;
+			if(str_contains($expression, '$')){
+				$isVariable = true;
+			}
+			$expression = substr($expression, 1, -1);
+			$temp = explode("'", substr($expression, 1));
+			if($isVariable)
+				$expression = '$'.$temp[0].".'.comEdit', ['comName'=>'{$temp[0]}']";
+			else
+				$expression = "'".$temp[0].".comEdit', ['comName'=>'{$temp[0]}']";
+
+		}
+
+		return "<?php echo \$__env->make($expression, array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>";
+	}
 
 	/**
 	 * Compile the stack statements into the content.

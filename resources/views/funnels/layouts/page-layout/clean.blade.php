@@ -8,6 +8,13 @@
 @append
 
 @section('page-layout')
+    @com('timer')
+
+    @foreach($page->faq->getChildren() as $i => $field)
+        {!! $field->question !!}
+        {!! $field->answer !!}
+        <br><br>
+    @endforeach
     <div align="center" id="firstP">
 
         {!! $page->htmlHeader !!}
