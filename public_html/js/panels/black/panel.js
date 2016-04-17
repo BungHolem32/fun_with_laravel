@@ -11,33 +11,39 @@ $(document).ready(function () {
     /*TOGGLES ON CLICK*/
     $('.toggles').on('click', function () {
 
+
         /*FIND THE BUTTON THAT HAVE THE ACTIVE CLASS (ON OR OFF)*/
-        var btn = $(this).find('.active')
+        var btn = $(this).find('.active');
 
-        /*TODO CHECK WHY WE NEED TO ADD THIS CLASS AND REMOVE IT*/
+        /*todo-ilan  CHECK WHY WE NEED TO ADD THIS CLASS AND REMOVE IT*/
         /*.removeClass('btn-danger').addClass('btn-default')*/
-        callAjax("/ajax/turnOn", null, function (res) {
-            if (res.err === 0) {
 
-                /*RUN THE AJAX REFRESH FUNCTIONS*/
-                $(window).trigger('ajax-refresh');
+        if ($(btn).hasClass('toggle-on')) {
+            callAjax("/ajax/turnOn", null, function (res) {
+                console.log(res);
+                if (res.err === 0) {
 
-                /*ADD THE BUTTON SUCCESS TO THE BUTTON TO CHANGE HIS COLOR (REMOVE THE DEFAULT DESIGN)*/
-                $(btn).addClass('btn-success').removeClass('btn-default');
-            }
+                    /*RUN THE AJAX REFRESH FUNCTIONS*/
+                    $(window).trigger('ajax-refresh');
+                    console.log(res.err);
+                }
 
-            /*IF THERE'S AN ERROR */
-            else if (res.err === 1) {
+                /*IF THERE'S AN ERROR */
+                else if (res.err === 1) {
 
-                /*IF THERE NO MONEY SHOW THE FORM FOR DEPOSIT MONEY*/
-                $('.modal-deposit').css({'display': 'block', 'padding-right': '17px'}).addClass('in');
-                $('body').append('<div class="modal-backdrop fade in"></div>').addClass('modal-open');
-            }
+                    /*IF THERE NO MONEY SHOW THE FORM FOR DEPOSIT MONEY*/
+                    $('.modal-deposit').css({'display': 'block', 'padding-right': '17px'}).addClass('in');
+                    $('body').append('<div class="modal-backdrop fade in"></div>').addClass('modal-open');
 
-            /*SHOW THE WAIT ANIMATION*/
-        }, function () {
-            $('.wait-ref').show();
-        });
+                    /*TURN OFF THE SWITCH*/
+                    $('.toggles').toggles(false);
+                }
+
+                /*SHOW THE WAIT ANIMATION*/
+            }, function () {
+                $('.wait-ref').show();
+            });
+        }
     });
 
     /*ON STOP TRADE */
@@ -64,7 +70,7 @@ $(document).ready(function () {
     });
 
     /*VALIDATE THE DEPOSITE FORM*/
-    $('.deposit-form').validate({
+    $('.form-deposit').validate({
         submitHandler: function (form) {
             var data = $('.deposit-form').serialize();
             $.ajax({
@@ -78,12 +84,16 @@ $(document).ready(function () {
 
                 /*TODO before send show the loading form div (check from where i can get it */
                 beforeSend: function () {
-                    $('.depositBtnSect .loadingForm').show();
+                    console.log(123);
+                    console.log($('.deposit-form .loadingForm'));
+                    $('.deposit-form .loadingForm').show();
                 },
 
                 /*ON SUCCESS REMOVE THE MODAL FORM */
                 success: function (res) {
+
                     if (res.err === 0) {
+
                         $('body').removeClass('bggray');
                         $('.modal-deposit').fadeOut('fast');
 
@@ -106,7 +116,7 @@ $(document).ready(function () {
 
                         /*HIDE THE LOAD FORM AND THEN ALRERT THE ERROR MESSAGE*/
                         /*TODO loadform need to check if there is form ready to use with*/
-                        $('.depositBtnSect .loadingForm').hide();
+                        $('.deposit-form .loadingForm').hide();
                         alert(res.errs.error);
                         //console.log(res);
                     }
@@ -271,7 +281,7 @@ function load_positions(positions) {
     $('tr', history_table).addClass('pending');
 
     /*CREATE ROW WITH THE STRUCTURE OF THE ROW*/
-    var row = $('.table-tr-content').html();
+    var row = $('.rb-options-open-trade .table-tr-content').html();
 
     /*ADD THE CLASS WRAPPER TO THE TABLE TO FIT THE TABLE*/
     row = "<tr class='table-tr-content'>" + row + "</tr>";
@@ -377,7 +387,36 @@ function socketRefresh(asset_ids) {
                 /*CHECK IF THERE WAS CHANGE TO THE GOOD OR BAD ... */
                 if (Math.abs(change))
                     row.addClass((change > 0) ? "up" : "down");
+
+                /*CHANGE THE CSS OF THE TEXT IN THE TABLE */
+                change_color_text(row);
+
             });
         });
     });
+}
+
+function change_color_text(row){
+    /*IF THE RATE WAS UP*/
+    if (row.hasClass('up')) {
+
+        $(row.find('.td-endRate,.rate')).removeClass('text-danger').addClass('text-success');
+    }
+    /*IF THE RATE WAS DOWN*/
+    else if (row.hasClass('down')) {
+        $(row.find('.td-endRate ,.rate')).removeClass('text-success').addClass('text-danger');
+    }
+
+    /*IF THE STATUS WON*/
+    if(row.find('.td-status').text()=='won'){
+        $(row).find('.td-status').removeClass('text-danger').addClass('text-success')
+    }
+    /*IF THE STATUS LOST*/
+    else if(row.find('.td-status').text()=='lost'){
+        $(row.find('.td-status')).removeClass('text-success').addClass('text-danger');
+
+    /*ELSE IF THE STATUS IS TIE OR CANCELED*/
+    }else{
+        $(row.find('.td-status')).removeClass('text-success').removeClass('text-danger');
+    }
 }

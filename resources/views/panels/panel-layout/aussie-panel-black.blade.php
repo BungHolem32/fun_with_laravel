@@ -1,3 +1,4 @@
+<?php $c = \Session::get('spotCustomer'); ?>
 @section('head')
     {{--FONT INCLUDE--}}
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300,300italic' rel='stylesheet'
@@ -8,12 +9,12 @@
 
 @append
 @section('bottom-scripts')
+    {{--SOCKETIO SCRIPTS--}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
     {{--VALIDATE SCRIPT--}}
     {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
 
-    {{--SOCKETIO SCRIPTS--}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
     {{--BOOTSTRAP LIBARY--}}
     <script src="/js/panels/black/libs/bootstrap.min.js"></script>
@@ -38,6 +39,9 @@
 
     {{--WRAPPER FOR ALL CONTENT--}}
     <div class="content-wrapper">
+        {{--<a href="#"  data-toggle="modal"--}}
+           {{--data-target=".modal-thanku">what</a>--}}
+
 
         {{--ACCOUNT DETAILS  DESKTOP VIEW--}}
         <aside class="account-details-desktop visible-md-block visible-lg-block">
@@ -295,6 +299,10 @@
                             deposit now at rboptions
                         </button>
                     </div>
+                    <div class="tab-shadow-first">
+                        <img class="tab-shadow-1" src="/img/panel/black/desktop/tab-h-big.png"
+                             alt="shadow of the tab (lighten)">
+                    </div>
                 </div>
 
                 {{--SECOND TAB (CENTER)--}}
@@ -310,6 +318,10 @@
                             </div>
                         </div>
                     </div>
+                    <div class="tab-shadow-second">
+                        <img class="tab-shadow-2" src="/img/panel/black/desktop/tab-h-big.png"
+                             alt="shadow of the tab (lighten)">
+                    </div>
                 </div>
 
                 {{--THIRD TAB (RIGHT)--}}
@@ -321,7 +333,7 @@
                     <div class="bottom-part">
                         <div class="tab-four-buttons text-uppercase col-md-12 text-center ">
                             <?php
-                            if ( ! isset($bot_settings[ 'minAmount' ]) || $bot_settings[ 'minAmount' ] == 25 && $bot_settings[ 'maxAmount' ] == 50)
+                            if (!isset($bot_settings['minAmount']) || $bot_settings['minAmount'] == 25 && $bot_settings['maxAmount'] == 50)
                                 $btnClass = 'btn-success';
                             else
                                 $btnClass = 'btn-default';
@@ -344,7 +356,12 @@
                             </button>
                         </div>
                     </div>
+                    <div class='tab-third'>
+                        <img class="tab-shadow-3" src="/img/panel/black/desktop/tab-h-big.png"
+                             alt="shadow of the tab (lighten)">
+                    </div>
                 </div>
+
             </div>
             <div class="arrow-rotate visible-lg-block">
                 <img src="/img/panel/black/tab-arrow.png" alt="rotate arrow">
@@ -362,57 +379,52 @@
 
                     {{--FIRST TABLE ROW WITH ALL THE HEADERS--}}
                     <thead class="table-headers table-row">
-                        <th class="table-data text-capitalize text-center">assets</th>
-                        <th class="table-data text-capitalize text-center">position</th>
-                        <th class="table-data text-capitalize text-center">amount</th>
-                        <th class="table-data text-capitalize text-center">entry rate</th>
-                        <th class="table-data text-capitalize text-center">current rate</th>
-                        <th class="table-data text-capitalize text-center">expiration date</th>
-                        <th class="table-data text-capitalize text-center">status</th>
+                    <th class="table-data text-capitalize text-center">assets</th>
+                    <th class="table-data text-capitalize text-center">position</th>
+                    <th class="table-data text-capitalize text-center">amount</th>
+                    <th class="table-data text-capitalize text-center">entry rate</th>
+                    <th class="table-data text-capitalize text-center">current rate</th>
+                    <th class="table-data text-capitalize text-center">expiration date</th>
+                    <th class="table-data text-capitalize text-center">status</th>
                     </thead>
-                        {{--TABLE DATA--}}
-                        <tr class="table-tr-content table-row text-center">
-                            <td class="table-data td-name text-capitalize text-center"><span class="text-uppercase">s&p</span>
-                                future
-                            </td>
-                            <td class="table-data td-position text-uppercase text-center"><i class="fa fa-arrow-down"></i> put</td>
-                            <td class="table-data td-amount text-success text-center">$3955</td>
-                            <td class="table-data td-entryRate text-center">2035.632</td>
-                            <td class="table-data td-assets text-danger text-center"><span class='rate'></span></td>
-                            <td class="table-data td-endDate text-center">2016-01-25</td>
-                            <td class="table-data td-status text-capitalize text-center">close</td>
-                        </tr>
-                    {{--<tr class="table-tr-content table-row text-center">--}}
-                    {{--<td class="table-data td-assets text-capitalize"><span class="text-uppercase">s&p</span> future--}}
-                    {{--</td>--}}
-                    {{--<td class="table-data td-position text-uppercase"><i class="fa fa-arrow-down"></i> put</td>--}}
-                    {{--<td class="table-data td-amount text-success">$3955</td>--}}
-                    {{--<td class="table-data td-entry-rate">2035.632</td>--}}
-                    {{--<td class="table-data td-current-rate text-danger">2036</td>--}}
-                    {{--<td class="table-data td-expiration-date">2016-01-25</td>--}}
-                    {{--<td class="table-data td-status text-capitalize">open</td>--}}
-                    {{--</tr>--}}
-                    {{--<tr class="table-tr-content table-row text-center">--}}
-                    {{--<td class="table-data td-assets text-capitalize"><span class="text-uppercase">s&p</span> future--}}
-                    {{--</td>--}}
-                    {{--<td class="table-data td-position text-uppercase"><i class="fa fa-arrow-down"></i> put</td>--}}
-                    {{--<td class="table-data td-amount text-success">$3955</td>--}}
-                    {{--<td class="table-data td-entry-rate">2035.632</td>--}}
-                    {{--<td class="table-data td-current-rate text-danger">2036</td>--}}
-                    {{--<td class="table-data td-expiration-date">2016-01-25</td>--}}
-                    {{--<td class="table-data td-status text-capitalize">open</td>--}}
-                    {{--</tr>--}}
-                    {{--<tr class="table-tr-content table-row text-center">--}}
-                    {{--<td class="table-data td-assets text-capitalize"><span class="text-uppercase">s&p</span> future--}}
-                    {{--</td>--}}
-                    {{--<td class="table-data td-position text-uppercase"><i class="fa fa-arrow-up"></i> pull</td>--}}
-                    {{--<td class="table-data td-amount text-success">$3955</td>--}}
-                    {{--<td class="table-data td-entry-rate">2035.632</td>--}}
-                    {{--<td class="table-data td-current-rate text-danger">2036</td>--}}
-                    {{--<td class="table-data td-expiration-date">2016-01-25</td>--}}
-                    {{--<td class="table-data td-status text-capitalize">open</td>--}}
-                    {{--</tr>--}}
 
+
+                    {{--TABLE DATA FOR OPEN TRADE TABLE--}}
+                    <tr class="table-tr-content table-row text-center">
+
+                        {{--ASSET NAME--}}
+                        <td class="table-data td-assets  text-capitalize text-center"><span
+                                    class="text-uppercase">s&p</span> future
+                        </td>
+
+                        {{--POSITION--}}
+                        <td class="table-data td-position text-uppercase text-center">put</td>
+
+                        {{--AMOUNT--}}
+                        <td class="table-data td-amount  text-center">$3955</td>
+
+                        {{--ENTRY RATE--}}
+                        <td class="table-data td-entryRate text-center">2035.632</td>
+
+                        {{--CURRNET RATE --}}
+                        <td class="hide-td-in-history-trade table-data td-assets current-rate text-danger text-center text-center">
+                            <span class='rate'></span></td>
+
+                        {{--END RATE--}}
+                        <td class="table-data td-endRate text-danger hide-td-in-open-trade text-center">2036</td>
+
+                        {{--PAYOUT--}}
+                        <td class="table-data td-payOut hide-td-in-open-trade text-center">$250</td>
+
+                        {{--PROFIT--}}
+                        <td class="table-data td-profit hide-td-in-open-trade text-center">$211.45</td>
+
+                        {{--END DATE EXPERATION DATE--}}
+                        <td class="table-data td-endDate  text-center">2016-01-25</td>
+
+                        {{--STATUS--}}
+                        <td class="table-data td-status text-capitalize text-center">close</td>
+                    </tr>
                 </table>
             </div>
         </section>
@@ -428,25 +440,48 @@
 
                     {{--FIRST TABLE ROW WITH ALL THE HEADERS--}}
                     <thead class="table-headers table-row">
-                        <th class="text-capitalize text-center table-header-th">assets</th>
-                        <th class="text-capitalize text-center table-header-th">position</th>
-                        <th class="text-capitalize text-center table-header-th">amount</th>
-                        <th class="text-capitalize text-center table-header-th">entry rate</th>
-                        <th class="text-capitalize text-center table-header-th">current rate</th>
-                        <th class="text-capitalize text-center table-header-th">expiration date</th>
-                        <th class="text-capitalize text-center table-header-th">status</th>
+                    <th class="text-capitalize text-center table-header-th">assets</th>
+                    <th class="text-capitalize text-center table-header-th">position</th>
+                    <th class="text-capitalize text-center table-header-th">amount</th>
+                    <th class="text-capitalize text-center table-header-th">entry rate</th>
+                    <th class="text-capitalize text-center table-header-th">closing rate</th>
+                    <th class="text-capitalize text-center table-header-th">payout</th>
+                    <th class="text-capitalize text-center table-header-th">profit</th>
+                    <th class="text-capitalize text-center table-header-th">date</th>
+                    <th class="text-capitalize text-center table-header-th">status</th>
                     </thead>
 
-                    {{--TABLE DATA--}}
+                    {{--TABLE DATA FOR TABLE RB OPTIONS HISTORY--}}
                     <tr class="table-tr-content table-row text-center">
-                        <td class="table-data td-assets  text-capitalize"><span class="text-uppercase">s&p</span> future
+
+                        {{--ASSET NAME--}}
+                        <td class="table-data td-assets  text-capitalize text-center"><span
+                                    class="text-uppercase">s&p</span> future
                         </td>
-                        <td class="table-data td-position text-uppercase"><i class="fa fa-arrow-down"></i> put</td>
-                        <td class="table-data td-amount text-success">$3955</td>
-                        <td class="table-data td-entryRate">2035.632</td>
-                        <td class="table-data td-endRate text-danger">2036</td>
-                        <td class="table-data td-endDate">2016-01-25</td>
-                        <td class="table-data td-status text-capitalize">close</td>
+
+                        {{--POSITION--}}
+                        <td class="table-data td-position text-uppercase text-center">put</td>
+
+                        {{--AMOUNT--}}
+                        <td class="table-data td-amount  text-center">$3955</td>
+
+                        {{--ENTRY RATE--}}
+                        <td class="table-data td-entryRate text-center">2035.632</td>
+
+                        {{--CLOSING RATE--}}
+                        <td class="table-data td-endRate text-danger hide-td-in-open-trade text-center">2036</td>
+
+                        {{--PAYOUT--}}
+                        <td class="table-data td-payOut hide-td-in-open-trade text-center">$250</td>
+
+                        {{--PROFIT--}}
+                        <td class="table-data td-profit hide-td-in-open-trade text-center">$211.45</td>
+
+                        {{--END DATE EXPERATION DATE--}}
+                        <td class="table-data td-endDate  text-center">2016-01-25</td>
+
+                        {{--STATUS--}}
+                        <td class="table-data td-status text-capitalize text-center">close</td>
                     </tr>
                 </table>
             </div>
@@ -471,12 +506,12 @@
                     <div class="modal-header-welcome modal-header">
                         <img src="/img/panel/black/desktop/close.png" alt="close square-logo" class="square-logo"
                              data-dismiss="modal">
-                        <h3 class="modal-title-h3 text-uppercase text-center">welcome to xxx panel method!</h3>
+                        <h3 class="modal-title-h3 text-uppercase text-center">welcome to {{ $page->title_h1 }} panel method!</h3>
                     </div>
                     <div class="modal-body-welcome modal-body">
                         <p class="modal-welcome-text-p">This Software cannot do anything until your account has a
                             positive balance to run trades, so
-                            make sure to deposit some money into your Aussie Panel Method trading account to get
+                            make sure to deposit some money into your {{ $page->title_h1 }} Method trading account to get
                             started.
                             <span class="model-welcome-text-ps-span">(Remember, this is your money & you can always withdraw it at any time.)</span>
                         </p>
@@ -494,7 +529,7 @@
                                 {{--TEXT INSIDE THE ELEMENT--}}
                                 <header class="step-content-wrapper">
                                     <h3 class="text-uppercase step-content">fund your
-                                        <span class="text-uppercase">rb</span>options broker account</h3>
+                                        {{ $page->brand->name }} broker account</h3>
                                 </header>
                             </div>
 
@@ -507,7 +542,7 @@
                                     </div>
                                 </div>
                                 <header class="step-content-wrapper">
-                                    <h3 class="text-uppercase step-content">activate your aussie panel method
+                                    <h3 class="text-uppercase step-content">activate your {{ $page->title_h1 }} method
                                         software</h3>
                                 </header>
                             </div>
@@ -538,7 +573,8 @@
         </div>
 
         {{--MODAL DEPOSIT PAGE WRAPPER --}}
-        <div class="modal-deposit modal fade" role="dialog">
+        <div class="modal-deposit modal fade  {{ \App\Customer::get()->balance < 100 ? 'showen hidden-ref':'hidden hidden-on hidden-ref' }}"
+             role="dialog">
             <div class="modal-dialog-deposit modal-dialog">
 
                 <!-- MODAL CONTENT-->
@@ -550,7 +586,8 @@
                              data-dismiss="modal">
 
                         {{--TITLE OF THE MODAL--}}
-                        <h4 class="modal-title text-center text-uppercase">Deposit Now Into Your RBoptions Broker
+                        <h4 class="modal-title text-center text-uppercase">Deposit Now Into
+                            Your {{ $page->brand->name }} Broker
                             Account</h4>
                     </div>
 
@@ -575,13 +612,13 @@
                         </div>
 
                         {{--DEPOSITE TITLE WRAPPER--}}
-                        <header class="deposit-title-wrapper text-center">
+                        <header class="deposit-title-wrapper text-center ">
 
                             {{--TEXT TITLE--}}
                             <h2 class="deposite-title text-uppercase"><strong>start raking in money!!</strong></h2>
 
                             {{--SUBTITLE SMALL TEXT--}}
-                            <small>Fill in the necessary information in order to open your The Aussie Panel Method
+                            <small>Fill in the necessary information in order to open your {{ $page->title_h1 }} Method
                                 account and just watch it fill with you earnings.
                             </small>
                         </header>
@@ -610,52 +647,65 @@
                                     <div class="form-group ">
                                         <label for="first-name" class="text-capitalize col-md-4 label-form"> first
                                             name</label>
-                                        <input type="text" class="form-control col-md-8" id="first-name">
+                                        <input type="text" name="first_name" class="form-control col-md-8"
+                                               id="first_name" value="{{ App\Customer::get()->firstName }}" required
+                                               aria-required="true">
                                     </div>
 
                                     {{--LAST NAME INPUT WRAPPER--}}
                                     <div class="form-group ">
                                         <label for="last-name" class="text-capitalize col-md-4 label-form"> last
                                             name</label>
-                                        <input type="text" class="form-control col-md-8" id="last-name">
+                                        <input type="text" class="form-control col-md-8" id="last_name"
+                                               value="{{ App\Customer::get()->lastName }}" required
+                                               aria-required="true">
                                     </div>
+
                                     {{--EMAIL INPUT WRAPPER--}}
                                     <div class="form-group ">
                                         <label for="email" class="text-capitalize col-md-4 label-form"> email</label>
-                                        <input type="email" class="form-control col-md-8" id="email">
+                                        <input type="email" class="form-control col-md-8" id="email" name="email"
+                                               value="{{ App\Customer::get()->email }}" required aria-required="true">
                                     </div>
 
                                     {{--PHONE INPUT WRAPPER--}}
                                     <div class="form-group ">
                                         <label for="phone" class="text-capitalize col-md-4 label-form">phone</label>
-                                        <input type="phone" class="form-control col-md-8" id="phone">
+                                        <input type="phone" class="form-control col-md-8" id="phone" name="phone"
+                                               required value="{{ \App\Customer::get()->phone}}">
                                     </div>
 
                                     {{--COUNTRY INPUT WRAPPER--}}
                                     <div class="form-group ">
                                         <label for="country" class="text-capitalize col-md-4 label-form">
                                             country</label>
-                                        <input type="text" class="form-control col-md-8" id="country">
+                                        <select name="country_id" id="country_id" type="text"
+                                                class="form-control col-md-8 input-sm" required>
+                                            @include('funnels.layouts._partials._countries')
+                                        </select>
                                     </div>
 
                                     {{--CITY INPUT WRAPPER--}}
                                     <div class="form-group ">
                                         <label for="city" class="text-capitalize col-md-4 label-form"> city</label>
-                                        <input type="text" class="form-control col-md-8" id="city">
+                                        <input type="text" class="form-control col-md-8" id="city" name="city" required
+                                               placeholder="City..">
                                     </div>
 
                                     {{--ADDRESS INPUT WRAPPER--}}
                                     <div class="form-group ">
                                         <label for="address" class="text-capitalize col-md-4 label-form">
                                             address</label>
-                                        <input type="text" class="form-control col-md-8" id="address">
+                                        <input type="text" class="form-control col-md-8" id="address" name="address"
+                                               id="address" required placeholder="Address..">
                                     </div>
 
                                     {{--ZIP CODE INPUT  WRAPPER--}}
                                     <div class="form-group ">
                                         <label for="zip-code" class="text-capitalize col-md-4 label-form"> zip
                                             code</label>
-                                        <input type="text" class="form-control col-md-8" id="zip-code">
+                                        <input type="text" class="form-control col-md-8" id="zip_code" name="zip_code"
+                                               required placeholder="Zip Code..">
                                     </div>
                                 </div>
 
@@ -682,7 +732,9 @@
                                             <img src="/img/panel/black/desktop/credit-cards.png" alt="card type images"
                                                  class="card-type-img visible-lg-inline-block visible-md-inline-block">
                                         </div>
-                                        <select class="form-control text-capitalize col-md-8 card-type-selectbox"
+                                        <select name="card_type" id="card_type"
+                                                class="form-control text-capitalize col-md-8 card-type-selectbox"
+                                                aria-required="true"
                                                 name="" id="card-type">
                                             <option value="-1">choose type</option>
                                             <option value="1">visa</option>
@@ -697,13 +749,15 @@
                                     <div class="form-group card-number-after-clear-fix">
                                         <label for="card-number" class="label-form text-capitalize col-md-4"> card
                                             number</label>
-                                        <input type="text" class="form-control col-md-8" id="card-number">
+                                        <input type="text" class="form-control col-md-8" name="card_number"
+                                               id="card_number" required placeholder="Card Number..">
                                     </div>
 
                                     {{--AMOUNT INPUT WRAPPER--}}
                                     <div class="form-group ">
                                         <label for="amount" class="text-capitalize col-md-4 label-form"> amount</label>
-                                        <input type="text" class="form-control col-md-8" id="amount">
+                                        <input type="text" class="form-control col-md-8" id="amount" name="amount"
+                                               required placeholder="Amount..">
                                     </div>
 
                                     {{--EXPIRATION INPUT WRAPPER--}}
@@ -714,7 +768,8 @@
                                             date</label>
                                         {{--SELECT BOX  FOR MONTH EXPERATION INPUT--}}
                                         <select name="month-exp" id="month-exp"
-                                                class="pull-left col-lg-3 col-md-3 col-sm-6 col-xs-6 month-exp-selectbox text-capitalize">
+                                                class="pull-left col-lg-3 col-md-3 col-sm-6 col-xs-6 month-exp-selectbox text-capitalize"
+                                                name="expires_month">
                                             <option value="-1" class="text-capitalize">month</option>
                                             <option value="1">01</option>
                                             <option value="2">02</option>
@@ -732,7 +787,8 @@
 
                                         {{--SELECT BOX FOR YEAR EXPERATION INPUT--}}
                                         <select name="year-exp" id="year-exp"
-                                                class="pull-right col-lg-5 col-md-4  col-sm-6 col-xs-6 year-exp-selectbox">
+                                                class="pull-right col-lg-5 col-md-4  col-sm-6 col-xs-6 year-exp-selectbox"
+                                                name="expires_year">
                                             <option value="-1" class="text-capitalize col-md-4">year</option>
                                             <option value="2015">2015</option>
                                             <option value="2016">2016</option>
@@ -760,7 +816,8 @@
                                     {{--CVV INPUT--}}
                                     <div class="form-group cvv-wrapper ">
                                         <label for="cvv" class="label-form text-uppercase col-md-4"> cvv</label>
-                                        <input type="text" class="form-control col-md-8" id="cvv">
+                                        <input type="text" class="form-control col-md-8" id="cvv" name="cvv" required
+                                               placeholder="CVV..">
                                         <img src="/img/panel/black/desktop/info.png" alt="info logo png"
                                              class="info-logo visible-lg-block visible-md-block">
                                     </div>
@@ -769,17 +826,23 @@
                                     <div class="clearfix"></div>
 
                                     {{--SUBMIT BUTTON --}}
-                                    <button type="submit" class="btn form-button text-uppercase">get me started -
+                                    <button type="submit" id="depositBtn" class="btn form-button text-uppercase">get me
+                                        started -
                                         deposit funds
                                     </button>
+                                    <div class="loadingForm"><i class="fa fa-refresh fa-spin"></i> Proccessing...
+                                    </div>
 
                                     {{--WARNING MESSAGE COMMENT AT THE BOTTOM OF THE FORM--}}
-                                    <div class="warning-massage-beneath-the-button text-center">
-                                        Deposit funds into your RBoptions trading account. <br>
+                                    <div class="warning-massage-beneath-the-button text-center text-capitalize">
+                                        deposit funds into your {{ $page->brand->name }} trading account. <br>
                                         (Finish button will automatically be available once you've funded your account)
                                     </div>
                                 </div>
                             </form>
+                            <div class="error-message hidden visible-xs visible-sm">
+                                <span class="error-text"></span>
+                            </div>
                         </div>
                     </div>
 
@@ -799,9 +862,10 @@
                                 <img src="/img/panel/black/desktop/lock.png" alt="locker-sign">
 
                                 {{--TEXT LOCKER--}}
-                                <p class="text-step step-locker">In order to unlock your The Aussie Panel Method
+                                <p class="text-step step-locker">In order to unlock your The {{ $page->title_h1 }}
+                                    Method
                                     Account, You have to fund your
-                                    RBoptions broker account.</p>
+                                    {{ $page->brand->name }} broker account.</p>
                             </div>
 
                             {{--ONE STEP WRAPPER ALERT--}}
@@ -811,9 +875,13 @@
                                 <img src="/img/panel/black/desktop/alert.png" alt="alert-sign">
 
                                 {{--TEXT ALERT LOGO--}}
-                                <p class="text-step step-alert">Deposit Form Is Currently Not Working? Click Here To
-                                    Deposit In Your RBoptions Broker
-                                    Website.</p>
+                                <p class="text-step step-alert  text-capitalize">deposit form is currently not working?
+                                    click
+                                    <a href="{{ $c->getAutologinLink() }}"
+                                       class="broker-login js-broker-login animated bounce"
+                                       target="_blank"> here </a>to
+                                    deposit in your {{ $page->brand->name }} broker
+                                    website.</p>
                             </div>
 
                             {{--ONE STEP WRAPPER V SIGN--}}
@@ -823,8 +891,8 @@
                                 <img src="/img/panel/black/desktop/v.png" alt="v-sign">
 
                                 {{--TEXT V LOGO--}}
-                                <p class="text-step step-v">Your RBoptions account is fully connected to your The Aussie
-                                    Panel Method. Once you
+                                <p class="text-step step-v">Your {{ $page->brand->name }} account is fully connected to
+                                    your The {{ $page->title_h1 }} Method. Once you
                                     get started within 3 short minutes you will see your cash flow straight to your
                                     account!
                                 </p>
@@ -851,110 +919,273 @@
                              data-dismiss="modal">
 
                         {{--TITLE OF THE MODAL--}}
-                        <h4 class="modal-title text-center text-uppercase">aussie panel method faq </h4>
+                        <h4 class="modal-title text-center text-uppercase">{{ $page->title_h1 }} method faq </h4>
                     </div>
+
+
                     {{--BODY PART --}}
                     <div class="modal-body-faq modal-body">
 
-                        {{--QUESTION AND ANSWER WRAPPER--}}
+                        {{--QUESTION AND ANSWER WRAPPER 1--}}
                         <div class="question-n-answer-wrapper">
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="/img/panel/black/desktop/m-q-open.png"
+                                <img src="/img/panel/black/desktop/m-q-close.png"
                                      data-btn-open="/img/panel/black/desktop/m-q-open.png"
                                      data-btn-close="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
                                      class="question-button">
-                                <h3 class="question-text text-uppercase">what is the aussie method?</h3>
+                                <h3 class="question-text text-uppercase">How much
+                                    does {{ $page->title_h1 }} Method cost?</h3>
                             </div>
 
                             {{--ANSWER WRPPER--}}
-                            <div class="answer-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="answer-wrapper hide col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <p class="answer text-capitalize">
-                                    the aussie method is a 100% free software that will trade on the binary options
-                                    markets with just 1 click! it's fully automated and places the winning trades for
-                                    you!
+                                    {{ $page->title_h1 }} Method is completely free of charge. As we said before, we
+                                    don’t need nor want your credit card or Paypal details.
                                 </p>
                             </div>
                         </div>
 
-                        {{--QUESTION AND ANSWER WRAPPER--}}
-                        <div class="question-n-answer-wrapper">
+                        {{--QUESTION AND ANSWER WRAPPER 2--}}
+                        <div class="question-n-answer-wrapper ">
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics"
+                                <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
                                      class="question-button" data-btn-open="/img/panel/black/desktop/m-q-open.png"
                                      data-btn-close="/img/panel/black/desktop/m-q-close.png">
-                                <h3 class="question-text text-uppercase">How much money can I make with this
-                                    software?</h3>
+                                <h3 class="question-text text-uppercase">How much money can I make
+                                    with {{ $page->title_h1 }} Method?</h3>
                             </div>
 
                             {{--ANSWER WRPPER--}}
-                            <div class="answer-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="answer-wrapper hide col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <p class="answer text-capitalize">
-                                    to put it in short, there's no limit. to put it more technically, it really depends
-                                    on how much money you fund your account with. most of our members fund their account
-                                    with $300, and make about $800-1000 daily. those who fund their account with $1,000
-                                    or
-                                    over make over $2,500 per day!
+                                    Your profits are unlimited and are dependent on how much you are prepared to
+                                    invest.
                                 </p>
                             </div>
                         </div>
 
-                        {{--QUESTION AND ANSWER WRAPPER--}}
-                        <div class="question-n-answer-wrapper">
+                        {{--QUESTION AND ANSWER WRAPPER 3--}}
+                        <div class="question-n-answer-wrapper ">
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics"
+                                <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
                                      class="question-button" data-btn-open="/img/panel/black/desktop/m-q-open.png"
                                      data-btn-close="/img/panel/black/desktop/m-q-close.png">
-                                <h3 class="question-text text-uppercase">how long does each trade last??</h3>
+                                <h3 class="question-text text-uppercase"> How can I make a profit
+                                    using {{ $page->title_h1 }} Method?</h3>
                             </div>
 
                             {{--ANSWER WRPPER--}}
-                            <div class="answer-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="answer-wrapper hide col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <p class="answer text-capitalize">
-                                    Anywhere from a minute to an hour. So you will see your profits right
-                                    away, no more waiting for long periods of time.
+                                    In 3 easy steps, you will be on your way to riches with {{ $page->title_h1 }}Method:<br>
+                                    1. Make a deposit.<br>
+                                    2. Start using {{ $page->title_h1 }} Method.<br>
+                                    3. Watch your profits grow.<br>
                                 </p>
                             </div>
                         </div>
 
-                        {{--QUESTION AND ANSWER WRAPPER--}}
+                        {{--QUESTION AND ANSWER WRAPPER 4--}}
+                        <div class="question-n-answer-wrapper ">
+
+                            {{--QUESTION WRAPPER--}}
+                            <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
+                                     class="question-button" data-btn-open="/img/panel/black/desktop/m-q-open.png"
+                                     data-btn-close="/img/panel/black/desktop/m-q-close.png">
+                                <h3 class="question-text text-uppercase">How much does it cost to open
+                                    an account with the recommended binary options broker?</h3>
+                            </div>
+
+                            {{--ANSWER WRPPER--}}
+                            <div class="answer-wrapper hide col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <p class="answer text-capitalize">
+                                    There is no extra charge to open a trading account, and once you have completed the
+                                    short registration form, your trading account will be open. We have managed to
+                                    select the better and most reliable brokers, so you will never have to experience
+                                    any delays or bad experiences.
+                                </p>
+                            </div>
+                        </div>
+
+                        {{--QUESTION AND ANSWER WRAPPER 5--}}
+                        <div class="question-n-answer-wrapper ">
+
+                            {{--QUESTION WRAPPER--}}
+                            <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
+                                     class="question-button" data-btn-open="/img/panel/black/desktop/m-q-open.png"
+                                     data-btn-close="/img/panel/black/desktop/m-q-close.png">
+                                <h3 class="question-text text-uppercase">Do I need to have previous
+                                    experience with binary options trading in order to use {{ $page->title_h1 }} Method?</h3>
+                            </div>
+
+                            {{--ANSWER WRPPER--}}
+                            <div class="answer-wrapper hide col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <p class="answer text-capitalize">
+                                    No, you do not. {{ $page->title_h1 }} Method is designed to work fully automated and
+                                    100% hands free, so even a complete newbie can make a profit.
+                                </p>
+                            </div>
+                        </div>
+
+                        {{--QUESTION AND ANSWER WRAPPER 6--}}
+                        <div class="question-n-answer-wrapper ">
+
+                            {{--QUESTION WRAPPER--}}
+                            <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
+                                     class="question-button" data-btn-open="/img/panel/black/desktop/m-q-open.png"
+                                     data-btn-close="/img/panel/black/desktop/m-q-close.png">
+                                <h3 class="question-text text-uppercase">Do I need to download any other
+                                    software in order to trade binary options?</h3>
+                            </div>
+
+                            {{--ANSWER WRPPER--}}
+                            <div class="answer-wrapper hide col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <p class="answer text-capitalize">
+                                    No, the trading interface is 100% web-based so no software download is required. So,
+                                    there aren’t any messy downloads or installations everything is ready for you to
+                                    start making money.
+                                </p>
+                            </div>
+                        </div>
+
+                        {{--QUESTION AND ANSWER WRAPPER 7 --}}
+                        <div class="question-n-answer-wrapper ">
+
+                            {{--QUESTION WRAPPER--}}
+                            <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
+                                     class="question-button" data-btn-open="/img/panel/black/desktop/m-q-open.png"
+                                     data-btn-close="/img/panel/black/desktop/m-q-close.png">
+                                <h3 class="question-text text-uppercase">What is the minimum investment
+                                    amount per trade?</h3>
+                            </div>
+
+                            {{--ANSWER WRPPER--}}
+                            <div class="answer-wrapper hide col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <p class="answer text-capitalize">
+                                    The minimum investment amount per trade is only $25.
+                                </p>
+                            </div>
+                        </div>
+
+                        {{--QUESTION AND ANSWER WRAPPER 8--}}
                         <div class="question-n-answer-wrapper">
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="/img/panel/black/desktop/m-q-open.png" alt="open close pics"
+                                <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
                                      class="question-button" data-btn-open="/img/panel/black/desktop/m-q-open.png"
                                      data-btn-close="/img/panel/black/desktop/m-q-close.png">
-                                <h3 class="question-text text-uppercase">do i need to use my credit card when i
-                                    signup?</h3>
+                                <h3 class="question-text text-uppercase">How do I withdraw my profits
+                                    from my trading account?</h3>
                             </div>
 
                             {{--ANSWER WRPPER--}}
-                            <div class="answer-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="answer-wrapper hide col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <p class="answer text-capitalize">
-                                    NO WAY. The Aussie Method App is 100% FREE. You will NOT be asked for your credit
-                                    card or paypal or bank information when you download the Aussie Method System!
-                                    Once you are in the members area, we will recommend a binary options broker that
-                                    you can exploit. For this, you'll need funds to deposit in order to start making
-                                    profits. This is YOUR money that you are just depositing to trade with, and you can
-                                    withdraw it at any time!
+                                    Withdrawals are simple and our preferred binary options broker provides a selection
+                                    of withdrawal options. All withdrawal requests are processed within 1-2 business
+                                    days. Again, we have consistently tested all brokers, and we only choose the ones
+                                    that perform the better and processed withdrawls easily and without any delays.
+                                </p>
+                            </div>
+                        </div>
+
+                        {{--QUESTION AND ANSWER WRAPPER 9--}}
+                        <div class="question-n-answer-wrapper">
+
+                            {{--QUESTION WRAPPER--}}
+                            <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
+                                     class="question-button" data-btn-open="/img/panel/black/desktop/m-q-open.png"
+                                     data-btn-close="/img/panel/black/desktop/m-q-close.png">
+                                <h3 class="question-text text-uppercase">What can I trade in when I
+                                    trade binary options?</h3>
+                            </div>
+
+                            {{--ANSWER WRPPER--}}
+                            <div class="answer-wrapper hide col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <p class="answer text-capitalize">
+                                    You can trade in a variety of underlying assets including stocks, currency pairs,
+                                    indices and commodities.
+                                </p>
+                            </div>
+                        </div>
+
+                        {{--QUESTION AND ANSWER WRAPPER 10--}}
+                        <div class="question-n-answer-wrapper">
+
+                            {{--QUESTION WRAPPER--}}
+                            <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
+                                     class="question-button" data-btn-open="/img/panel/black/desktop/m-q-open.png"
+                                     data-btn-close="/img/panel/black/desktop/m-q-close.png">
+                                <h3 class="question-text text-uppercase">My question is not answered
+                                    here, what do I do?</h3>
+                            </div>
+
+                            {{--ANSWER WRPPER--}}
+                            <div class="answer-wrapper hide col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <p class="answer text-capitalize">
+                                    Please, don’t hesitate to contact your Personal Profit Consultant and our amazing
+                                    support system. Both are available 24/7 to ensure that you will make the most
+                                    possible money. You can reach them here at
+                                    <a href="{{ $page->brand->contactLink }}"
+                                       style="color:green">{{ $page->brand->name }}</a>
                                 </p>
                             </div>
                         </div>
 
                     </div>
+
                     {{--FIX THE HEIGHTS DEFRENCE AND CLEAR THE FLOAT--}}
                     <div class="clearfix"></div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
 
-    </div>
-    </div>
+
+        {{--<div class="modal-thanku modal fade thanku" role="dialog">--}}
+            {{--<div class="modal-dialog-thanku modal-dialog">--}}
+
+                {{--<!-- MODAL CONTENT-->--}}
+                {{--<div class="modal-content modal-thanku-content">--}}
+
+                    {{--HEADER-TAG--}}
+                    {{--<div class="modal-header-thanku modal-header">--}}
+                        {{--<button type="image" class="xclose close" data-dismiss="modal">×</button>--}}
+
+                    {{--</div>--}}
+                    {{--BODY PART --}}
+                    {{--<div class="modal-body-thanku modal-body">--}}
+                        {{--<div class="center">--}}
+                            {{--<br>--}}
+                            {{--<br>--}}
+                            {{--<i class="fa fa-check-circle fa-2x"></i>--}}
+                            {{--<br>--}}
+                            {{--<br>--}}
+                            {{--@ln(Thank you for investing at) {{$page->brand->name}}.--}}
+                            {{--<br><br>--}}
+                            {{--<img src="{{$page->brand->logo}}" alt="{{$page->brand->name}}">--}}
+                            {{--<br><br>--}}
+                            {{--<button class="close text-capitalize" data-dismiss="modal">@ln(close)</button>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
     </div>
 @endsection

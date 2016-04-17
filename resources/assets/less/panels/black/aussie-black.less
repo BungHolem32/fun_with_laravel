@@ -3,7 +3,6 @@
 @import "../../bootstrap/bootstrap"; /*IMPORT BOOTSTRAP LIBRARY WITH ALL THE ADDONS*/
 @import "my-mixin";
 
-
 /*ACTIVE BUTTON IN THE TAB FOUR BUTTONS*/
 .active-btn {
   .boxShadow(inset 5px 3px 27px -4px #313030) !important;
@@ -161,7 +160,7 @@ body {
       overflow: hidden;
 
       @media (min-width: 996px) {
-        top: 5.1em;
+        top: 5em;
       }
       @media (max-width: 776px) {
         font-size: 0.9em;
@@ -387,13 +386,60 @@ body {
           .margin(3.6em, 0.5em, 0, 0.7em);
         }
 
-        &:hover {
-          .boxShadow(0 4px 8.1px 0 rgba(255, 255, 255, 0.8),
-                  0 10.3px 9px 0 rgba(29, 134, 194, 0.7),
-                  0 14px 14.4px 0 rgba(62, 198, 245, 0.7),
-                  0 22px 38.1px 0 rgba(199, 230, 251, 0.5),
-                  inset 0 -4.6px 21.9px 0 rgba(13, 143, 231, 0.3));
+        &:hover [class^="tab-shadow"] {
+          opacity: 1;
         }
+
+        .tab-shadow-1 {
+          position: absolute;
+          top: 170.9px;
+          width: 108.1%;
+          right: -15.7px;
+          opacity: 0;
+
+          @media (max-width: 1200px) {
+            top: 145.7px;
+            left: -4.2%;
+          }
+          @media (max-width: 560px) {
+            top: 163.9px;
+          }
+        }
+        .tab-shadow-2 {
+          position: absolute;
+          top: 173px;
+          right: -15.5px;
+          width: 109.9%;
+          opacity: 0;
+          @media (max-width: 1200px) {
+            top: 145.7px;
+            left: -4.2%;
+          }
+          @media (max-width:998px) {
+            top: 153.8px;
+          }
+          @media (max-width: 560px) {
+            top: 163.9px;
+          }
+
+        }
+
+        .tab-shadow-3 {
+          position: absolute;
+          top: 170.9px;
+          left: -18px;
+          width: 108.9%;
+          opacity: 0;
+          @media (max-width: 1200px) {
+            top: 145.7px;
+            left: -4.2%;
+          }
+
+          @media (max-width: 560px) {
+            top: 163.9px;
+          }
+        }
+
         /*FIRST TAB (SPECIFIC SIZE*/
         &.deposit {
 
@@ -702,17 +748,30 @@ body {
             }
 
             .fa-arrow-up {
-              color: green;
+              color: lightgreen;
             }
           }
         }
       }
     }
+    /*SET ONLY FOR HISTORY TABLE*/
     .rb-options-history {
       .container {
         .table-title {
           margin: 0;
         }
+
+      }
+      .hide-td-in-history-trade {
+        display: none;
+      }
+    }
+
+    /*SET ONLY FOR OPEN TRADE TABLE*/
+    .rb-options-open-trade {
+
+      .hide-td-in-open-trade {
+        display: none;
       }
     }
 
@@ -1255,7 +1314,7 @@ body {
                 /*QUESTION TEXT WRAPPER*/
                 .question-text {
                   width: @width*9;
-                  display: inline-block;
+                  display: inline-table;
                   vertical-align: sub;
                   font-size: 1.6em;
                   color: @nav-bar-bright-color;

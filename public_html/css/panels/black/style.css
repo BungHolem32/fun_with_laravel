@@ -6416,6 +6416,14 @@ button.close {
 /*BOX SHADOW PREFIXES  IF IT PASS ON PARAM*/
 /*IF IT PASS MORE THE ONE THEN PASS */
 /*ANIMATION PREFIX*/
+/*CHANGE THE DANGER ICON AND COLOR TO RED */
+.text-danger {
+  color: red;
+  font-weight: bold;
+}
+.text-success {
+  color: lightgreen;
+}
 /*ACTIVE BUTTON IN THE TAB FOUR BUTTONS*/
 .active-btn {
   box-shadow: inset 5px 3px 27px -4px #313030 !important;
@@ -6463,6 +6471,8 @@ body .content-wrapper {
   /*ARROW PICTURE AT THE BOTTOM OF THE INCENTIVE*/
   /*TABS SECTION*/
   /*TABLE OF THE OPEN TRADE*/
+  /*SET ONLY FOR HISTORY TABLE*/
+  /*SET ONLY FOR OPEN TRADE TABLE*/
   /*FOOTER TAG WITH ALL THE LOGOS*/
   /*FANCY BOX FOR WELCOME SCREEN HREF (DIV)*/
   /*MODAL BASE WRAPPER FOR DEPOSIT FORM*/
@@ -6584,7 +6594,7 @@ body .content-wrapper .navbar-desktop {
 }
 @media (min-width: 996px) {
   body .content-wrapper .navbar-desktop {
-    top: 5.1em;
+    top: 5em;
   }
 }
 @media (max-width: 776px) {
@@ -6806,8 +6816,67 @@ body .content-wrapper .tabs-wrapper .tab-wrapper {
     margin: 3.6em 0.5em 0 0.7em;
   }
 }
-body .content-wrapper .tabs-wrapper .tab-wrapper:hover {
-  box-shadow: 0 4px 8.1px 0 rgba(255, 255, 255, 0.8), 0 10.3px 9px 0 rgba(29, 134, 194, 0.7), 0 14px 14.4px 0 rgba(62, 198, 245, 0.7), 0 22px 38.1px 0 rgba(199, 230, 251, 0.5), inset 0 -4.6px 21.9px 0 rgba(13, 143, 231, 0.3);
+body .content-wrapper .tabs-wrapper .tab-wrapper:hover [class^="tab-shadow"] {
+  opacity: 1;
+}
+body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-1 {
+  position: absolute;
+  top: 170.9px;
+  width: 108.1%;
+  right: -15.7px;
+  opacity: 0;
+}
+@media (max-width: 1200px) {
+  body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-1 {
+    top: 145.7px;
+    left: -4.2%;
+  }
+}
+@media (max-width: 560px) {
+  body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-1 {
+    top: 163.9px;
+  }
+}
+body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-2 {
+  position: absolute;
+  top: 173px;
+  right: -15.5px;
+  width: 109.9%;
+  opacity: 0;
+}
+@media (max-width: 1200px) {
+  body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-2 {
+    top: 145.7px;
+    left: -4.2%;
+  }
+}
+@media (max-width: 998px) {
+  body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-2 {
+    top: 153.8px;
+  }
+}
+@media (max-width: 560px) {
+  body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-2 {
+    top: 163.9px;
+  }
+}
+body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-3 {
+  position: absolute;
+  top: 170.9px;
+  left: -18px;
+  width: 108.9%;
+  opacity: 0;
+}
+@media (max-width: 1200px) {
+  body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-3 {
+    top: 145.7px;
+    left: -4.2%;
+  }
+}
+@media (max-width: 560px) {
+  body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-3 {
+    top: 163.9px;
+  }
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper.deposit {
   /*SPECIFIC TOP PART OF DEPOSIT*/
@@ -7106,10 +7175,16 @@ body .content-wrapper .rb-options-history .container .table-tr-content .td-posit
 }
 body .content-wrapper .rb-options-open-trade .container .table-tr-content .td-position .fa-arrow-up,
 body .content-wrapper .rb-options-history .container .table-tr-content .td-position .fa-arrow-up {
-  color: green;
+  color: lightgreen;
 }
 body .content-wrapper .rb-options-history .container .table-title {
   margin: 0;
+}
+body .content-wrapper .rb-options-history .hide-td-in-history-trade {
+  display: none;
+}
+body .content-wrapper .rb-options-open-trade .hide-td-in-open-trade {
+  display: none;
 }
 body .content-wrapper .footer-certificate-logos {
   margin: 8.4em 0 0 0;

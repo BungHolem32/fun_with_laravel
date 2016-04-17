@@ -162,7 +162,9 @@ function load_positions(positions){
     $('tr', open_table).addClass('pending');
     $('tr', history_table).addClass('pending');
 
+    console.log(open_table);
     var row = $('#position-row').html();
+    console.log(row);
     var asset_list = [];
 
     $.each(positions, function(i, position){
@@ -187,7 +189,7 @@ function load_positions(positions){
         (position.status == 'open' ? open_table : history_table).append(new_row);
     });
     if($('tr.pending').length){
-        console.log('removing ', $('tr.pending'));
+        // console.log('removing ', $('tr.pending'));
         $('tr.pending').attr('id', '').remove();
     }
     return asset_list;
