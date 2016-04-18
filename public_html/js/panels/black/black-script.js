@@ -25,6 +25,8 @@
             /*METHOD THAT ACTIVATE THE PUSH PULL NAVBAR ON MOBILE*/
             nav_bar_mobile: {
                 value: {
+                    
+                    
 
                     init: function () {
                         /*ON CLICK ON THE ICON-MENU PUSH THE MENU ON AND BODY INSIDE*/
@@ -55,7 +57,7 @@
 
                     /*COLLAPSE THE NAV-BAR ON IMAGE RESIZE*/
                     on_resize_change: function () {
-                        console.log(12);
+
                         /*ON WINDOW RESIZE ABOVE 768PX CLOSE THE NAVBAR*/
                         $(window).on('resize', function () {
                             var width = $(window).width();

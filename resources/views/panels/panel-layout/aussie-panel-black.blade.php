@@ -5,7 +5,7 @@
           type='text/css'>
     <link rel="stylesheet" href="/css/panels/black/libs/toggles-full.css">
     {{--BASE STYLE SHEET--}}
-    <link rel="stylesheet" href="/css/panels/black/style.css"/>
+    <link rel="stylesheet" href="/css/panels/black/style-0.css"/>
 
 @append
 @section('bottom-scripts')
@@ -28,9 +28,11 @@
     {{--PANEL BASE SCRIPT--}}
     {!! $page->appendAsset(url('/js/panels/black/panel.js')) !!}
 
-    <script src="/js/panels/black/black-script.js"></script>
     {{--Main JS--}}
     <script src="/js/panels/black/main.js"></script>
+
+    {{--New JS--}}
+    <script src="/js/panels/black/black-script.js"></script>
 
 @append
 
@@ -40,7 +42,7 @@
     {{--WRAPPER FOR ALL CONTENT--}}
     <div class="content-wrapper">
         {{--<a href="#"  data-toggle="modal"--}}
-           {{--data-target=".modal-thanku">what</a>--}}
+        {{--data-target=".modal-thanku">what</a>--}}
 
 
         {{--ACCOUNT DETAILS  DESKTOP VIEW--}}
@@ -69,9 +71,17 @@
                 </p>
                 <p class="info-tab">
                     <span class="text-capitalize">@ln(broker name):</span>
-                    <img src="/img/panel/black/icon-rboptions.png" alt="rboption logo">
-                    <strong class="info-result text-uppercase">{{ $page->brand->name }}{{--brand name--}}
-                        rb</strong><strong class="info-result">options</strong>
+
+                    {{--todo-ilan add mongo class to the panel--}}
+                    @if(!empty($page->brand->name))
+                        <img src="{{$page->brand->logo}}" alt="rb-option logo">
+                        <strong>{{ $page->brand->name }}</strong>
+                        {{--@else--}}
+
+                        {{--<strong class="info-result text-uppercase">rb</strong><strong--}}
+                        {{--class="info-result">options</strong>--}}
+                    @endif
+                    {{--todo-ilan add mongo class to the panel--}}
                 </p>
                 <p class="info-tab">
                     <span class="text-capitalize">@ln(balance):</span>
@@ -120,7 +130,7 @@
                                class="navbar-text">@ln(home page)
                             </a>
                         </li>
-                        <li class="text-uppercase  navbar-part">
+                        <li class="text-uppercase navbar-part">
                             <a
                                     href="{{--{{ $c->getAutologinLink() }}--}}"
                                     class="navbar-text">@ln(broker trading area)
@@ -220,28 +230,27 @@
 
                         {{--EMAIL--}}
                         <p class="info-tab col-sm-8 col-xs-7">
-                            <span class="text-capitalize">email:</span>
+                            <span class="text-capitalize">@ln(email):</span>
                             <strong>youremail@gmail.com</strong>
                         </p>
 
                         {{--BALANCE--}}
                         <p class="info-tab col-sm-4 col-xs-5">
-                            <span class="text-capitalize">balance:</span>
+                            <span class="text-capitalize">@ln(balance):</span>
 
                             <strong class="info-result text-bold">1532.63</strong>
                         </p>
 
                         {{--BROKER--}}
                         <p class="info-tab col-sm-7 col-xs-7">
-                            <span class="text-capitalize">broker:</span>
+                            <span class="text-capitalize">@ln(broker):</span>
                             <img src="/img/panel/black/icon-rboptions.png" alt="rboption logo">
-                            <strong class="info-result text-uppercase">rb</strong><strong
-                                    class="info-result ">options</strong>
+                            <strong class="info-result text-uppercase">{{$page->brand->name}}</strong>
                         </p>
                         {{--AOCCOUNT DETAILS--}}
                         <p class="info-tab col-sm-5 col-sm-push-1 col-xs-5">
-                            <span class="text-capitalize">account </span>
-                            <span class="text-uppercase">id: </span>
+                            <span class="text-capitalize">@ln(account) </span>
+                            <span class="text-uppercase">@ln(id): </span>
                             <strong class="info-result">432563</strong>
                         </p>
                     </div>
@@ -257,16 +266,14 @@
 
                 {{--TITLE WRAPPER--}}
                 <header class="active-method-title-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h3 class="text-uppercase method-title">to activate method system, your rboptions broker account
-                        will need your
-                        deposit</h3>
+                    <h3 class="text-uppercase method-title"> {{$page->body}}</h3>
                 </header>
 
                 {{--SUBTITLE WRAPPER--}}
                 <div class="active-method-subtitle-wrapper  col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h4 class="text-capitalize method-subtitle text-center">
                         <i class="fa fa-arrow-down"></i>
-                        <span class="active-method-text ">start eraning money in 3 easy steps</span>
+                        <span class="active-method-text">@ln(start earning money in 3 easy steps)</span>
                         <i class="fa fa-arrow-down"></i>
                     </h4>
                 </div>
@@ -290,13 +297,13 @@
                 <div class="tab-wrapper deposit col-lg-4 col-lg-offset-1 col-md-12 col-sm-12 col-xs 12">
                     <div class="top-part">
                         <span class="tab-number-in-circle text-center">1</span>
-                        <p class="tab-title text-uppercase text-center">deposit into your account</p>
+                        <p class="tab-title text-uppercase text-center">@ln(deposit into your account)</p>
                     </div>
                     <div class="bottom-part">
                         <button type="button" class="tab-big-button btn btn-lg center-block text-uppercase"
                                 data-toggle="modal"
                                 data-target=".modal-deposit">
-                            deposit now at rboptions
+                            @ln(deposit now at) {{$page->brand->name}}
                         </button>
                     </div>
                     <div class="tab-shadow-first">
@@ -309,7 +316,7 @@
                 <div class="tab-wrapper auto-trading col-lg-3 col-md-12 col-sm-12 col-xs 12">
                     <div class="top-part">
                         <span class="tab-number-in-circle text-center">2</span>
-                        <p class="tab-title text-uppercase text-center  low-alert">activate auto trading</p>
+                        <p class="tab-title text-uppercase text-center  low-alert">@ln(activate auto trading)</p>
                     </div>
                     <div class="bottom-part">
                         <div class="tab-switch-button startTrade text-uppercase ">
@@ -328,13 +335,13 @@
                 <div class="tab-wrapper amount col-lg-4 col-md-12 col-sm-12 col-xs 12">
                     <div class="top-part">
                         <span class="tab-number-in-circle text-center">3</span>
-                        <p class="tab-title text-uppercase text-center">select amount of trading</p>
+                        <p class="tab-title text-uppercase text-center">@ln(select amount of trading)</p>
                     </div>
                     <div class="bottom-part">
                         <div class="tab-four-buttons text-uppercase col-md-12 text-center ">
                             <?php
                             if (!isset($bot_settings['minAmount']) || $bot_settings['minAmount'] == 25 && $bot_settings['maxAmount'] == 50)
-                                $btnClass = 'btn-success';
+                                $btnClass = 'active-btn';
                             else
                                 $btnClass = 'btn-default';
 
@@ -345,15 +352,15 @@
                                     data-amount="25-50">$25 -
                                 $50
                             </button>
-                            <button class="btn  {{ ($bot_settings['minAmount'] == 50 && $bot_settings['maxAmount'] == 100) ? 'btn-success' : 'btn-default'}} btn-lg amount-btn amount-button2 btn-amount-selected"
+                            <button class="btn  {{ ($bot_settings['minAmount'] == 50 && $bot_settings['maxAmount'] == 100) ? 'active-btn' : 'btn-default'}} btn-lg amount-btn amount-button2 btn-amount-selected"
                                     data-amount="50-100">$50 -
                                 $100
                             </button>
-                            <button class="btn {{ ($bot_settings['minAmount'] == 100 && $bot_settings['maxAmount'] == 150) ? 'btn-success' : 'btn-default'}} btn-lg amount-btn amount-button3 btn-amount-selected"
+                            <button class="btn {{ ($bot_settings['minAmount'] == 100 && $bot_settings['maxAmount'] == 150) ? 'active-btn' : 'btn-default'}} btn-lg amount-btn amount-button3 btn-amount-selected"
                                     data-amount="100-150">$100 -
                                 $150
                             </button>
-                            <button class="btn {{ ($bot_settings['minAmount'] == 150) ? 'btn-success' : 'btn-default'}}  btn-lg amount-btn amount-button4 btn-amount-selected "
+                            <button class="btn {{ ($bot_settings['minAmount'] == 150) ? 'active-btn' : 'btn-default'}}  btn-lg amount-btn amount-button4 btn-amount-selected "
                                     data-amount="150-1000">$150
                                 +
                             </button>
@@ -377,18 +384,18 @@
                 <table class="table col-sm-12 col-xs-12">
 
                     {{--TABLE TITLE (RBOPTIONS OPEN TRADE)--}}
-                    <caption class="table-title text-center text-uppercase">rboptions @ln(open trades) <i
+                    <caption class="table-title text-center text-uppercase">{{ $page->brand->name }} @ln(open trades) <i
                                 class="getLoading fa fa-refresh fa-spin"></i></caption>
 
                     {{--FIRST TABLE ROW WITH ALL THE HEADERS--}}
                     <thead class="table-headers table-row">
-                    <th class="table-data text-capitalize text-center">assets</th>
-                    <th class="table-data text-capitalize text-center">position</th>
-                    <th class="table-data text-capitalize text-center">amount</th>
-                    <th class="table-data text-capitalize text-center">entry rate</th>
-                    <th class="table-data text-capitalize text-center">current rate</th>
-                    <th class="table-data text-capitalize text-center">expiration date</th>
-                    <th class="table-data text-capitalize text-center">status</th>
+                    <th class="table-data text-capitalize text-center">@ln(assets)</th>
+                    <th class="table-data text-capitalize text-center">@ln(position)</th>
+                    <th class="table-data text-capitalize text-center">@ln(amount)</th>
+                    <th class="table-data text-capitalize text-center">@ln(entry rate)</th>
+                    <th class="table-data text-capitalize text-center">@ln(current rate)</th>
+                    <th class="table-data text-capitalize text-center">@ln(expiration date)</th>
+                    <th class="table-data text-capitalize text-center">@ln(status)</th>
                     </thead>
 
 
@@ -396,12 +403,14 @@
                     <tr class="table-tr-content table-row text-center">
 
                         {{--ASSET NAME--}}
-                        <td class="table-data td-assets  text-capitalize text-center"><span
-                                    class="text-uppercase">s&p</span> future
+                        <td class="table-data td-name  text-capitalize text-center">
+                            <span
+                                    class="text-uppercase"> {{  $page->brand->name }}
+                            </span>
                         </td>
 
                         {{--POSITION--}}
-                        <td class="table-data td-position text-uppercase text-center">put</td>
+                        <td class="table-data td-position text-uppercase text-center">@ln(put)</td>
 
                         {{--AMOUNT--}}
                         <td class="table-data td-amount  text-center">$3955</td>
@@ -410,11 +419,11 @@
                         <td class="table-data td-entryRate text-center">2035.632</td>
 
                         {{--CURRNET RATE --}}
-                        <td class="hide-td-in-history-trade table-data td-assets current-rate text-danger text-center text-center">
+                        <td class="hide-td-in-history-trade table-data td-assets current-rate  text-center text-center">
                             <span class='rate'></span></td>
 
                         {{--END RATE--}}
-                        <td class="table-data td-endRate text-danger hide-td-in-open-trade text-center">2036</td>
+                        <td class="table-data td-endRate hide-td-in-open-trade text-center">2036</td>
 
                         {{--PAYOUT--}}
                         <td class="table-data td-payOut hide-td-in-open-trade text-center">$250</td>
@@ -438,24 +447,25 @@
                 <table class="table">
 
                     {{--TABLE TITLE (RBOPTIONS OPEN TRADE)--}}
-                    <caption class="table-title text-center text-uppercase">rboptions @ln(Trades History) <i
+                    <caption class="table-title text-center text-uppercase">{{$page->brand->name}} @ln(Trades History)
+                        <i
                                 class="getLoading fa fa-refresh fa-spin"></i></caption>
 
                     {{--FIRST TABLE ROW WITH ALL THE HEADERS--}}
                     <thead class="table-headers table-row">
-                    <th class="text-capitalize text-center table-header-th">assets</th>
-                    <th class="text-capitalize text-center table-header-th">position</th>
-                    <th class="text-capitalize text-center table-header-th">amount</th>
-                    <th class="text-capitalize text-center table-header-th">entry rate</th>
-                    <th class="text-capitalize text-center table-header-th">closing rate</th>
-                    <th class="text-capitalize text-center table-header-th">payout</th>
-                    <th class="text-capitalize text-center table-header-th">profit</th>
-                    <th class="text-capitalize text-center table-header-th">date</th>
-                    <th class="text-capitalize text-center table-header-th">status</th>
+                    <th class="text-capitalize text-center table-header-th">@ln(assets)</th>
+                    <th class="text-capitalize text-center table-header-th">@ln(position)</th>
+                    <th class="text-capitalize text-center table-header-th">@ln(amount)</th>
+                    <th class="text-capitalize text-center table-header-th">@ln(entry rate)</th>
+                    <th class="text-capitalize text-center table-header-th">@ln(closing rate)</th>
+                    <th class="text-capitalize text-center table-header-th">@ln(payout)</th>
+                    <th class="text-capitalize text-center table-header-th">@ln(profit)</th>
+                    <th class="text-capitalize text-center table-header-th">@ln(date)</th>
+                    <th class="text-capitalize text-center table-header-th">@ln(status)</th>
                     </thead>
 
                     {{--TABLE DATA FOR TABLE RB OPTIONS HISTORY--}}
-                    <tr class="table-tr-content table-row text-center">
+                    <tr class="table-tr-content table-row  text-center">
 
                         {{--ASSET NAME--}}
                         <td class="table-data td-assets  text-capitalize text-center"><span
@@ -463,7 +473,7 @@
                         </td>
 
                         {{--POSITION--}}
-                        <td class="table-data td-position text-uppercase text-center">put</td>
+                        <td class="table-data td-position text-uppercase text-center">@ln(put)</td>
 
                         {{--AMOUNT--}}
                         <td class="table-data td-amount  text-center">$3955</td>
@@ -472,7 +482,7 @@
                         <td class="table-data td-entryRate text-center">2035.632</td>
 
                         {{--CLOSING RATE--}}
-                        <td class="table-data td-endRate text-danger hide-td-in-open-trade text-center">2036</td>
+                        <td class="table-data td-endRate  hide-td-in-open-trade text-center">2036</td>
 
                         {{--PAYOUT--}}
                         <td class="table-data td-payOut hide-td-in-open-trade text-center">$250</td>
@@ -504,17 +514,21 @@
         <div class="modal-welcome modal fade" role="dialog">
             <div class="modal-dialog modal-dialog-welcome">
 
-                <!-- Modal content-->
+                {{--MODAL CONTENT WELCOME--}}
                 <div class="modal-content modal-welcome-content">
                     <div class="modal-header-welcome modal-header">
                         <img src="/img/panel/black/desktop/close.png" alt="close square-logo" class="square-logo"
                              data-dismiss="modal">
-                        <h3 class="modal-title-h3 text-uppercase text-center">welcome to {{ $page->title_h1 }} panel method!</h3>
+                        <h3 class="modal-title-h3 text-uppercase text-center">welcome to {{ $page->title_h1 }} panel
+                            method!</h3>
                     </div>
+
+                    {{--MODAL BODY WELOCME--}}
                     <div class="modal-body-welcome modal-body">
                         <p class="modal-welcome-text-p">This Software cannot do anything until your account has a
                             positive balance to run trades, so
-                            make sure to deposit some money into your {{ $page->title_h1 }} Method trading account to get
+                            make sure to deposit some money into your {{ $page->title_h1 }} Method trading account to
+                            get
                             started.
                             <span class="model-welcome-text-ps-span">(Remember, this is your money & you can always withdraw it at any time.)</span>
                         </p>
@@ -1025,7 +1039,8 @@
                                      class="question-button" data-btn-open="/img/panel/black/desktop/m-q-open.png"
                                      data-btn-close="/img/panel/black/desktop/m-q-close.png">
                                 <h3 class="question-text text-uppercase">Do I need to have previous
-                                    experience with binary options trading in order to use {{ $page->title_h1 }} Method?</h3>
+                                    experience with binary options trading in order to use {{ $page->title_h1 }}
+                                    Method?</h3>
                             </div>
 
                             {{--ANSWER WRPPER--}}
@@ -1151,42 +1166,42 @@
 
                     {{--FIX THE HEIGHTS DEFRENCE AND CLEAR THE FLOAT--}}
                     <div class="clearfix"></div>
-                    </div>
-
-
                 </div>
+
+
             </div>
         </div>
+    </div>
 
 
-        {{--<div class="modal-thanku modal fade thanku" role="dialog">--}}
-            {{--<div class="modal-dialog-thanku modal-dialog">--}}
+    {{--<div class="modal-thanku modal fade thanku" role="dialog">--}}
+        {{--<div class="modal-dialog-thanku modal-dialog">--}}
 
-                {{--<!-- MODAL CONTENT-->--}}
-                {{--<div class="modal-content modal-thanku-content">--}}
+            {{--<!-- MODAL CONTENT-->--}}
+            {{--<div class="modal-content modal-thanku-content">--}}
 
-                    {{--HEADER-TAG--}}
-                    {{--<div class="modal-header-thanku modal-header">--}}
-                        {{--<button type="image" class="xclose close" data-dismiss="modal">×</button>--}}
+                {{--HEADER-TAG--}}
+                {{--<div class="modal-header-thanku modal-header">--}}
+                    {{--<button type="image" class="xclose close" data-dismiss="modal">×</button>--}}
 
-                    {{--</div>--}}
-                    {{--BODY PART --}}
-                    {{--<div class="modal-body-thanku modal-body">--}}
-                        {{--<div class="center">--}}
-                            {{--<br>--}}
-                            {{--<br>--}}
-                            {{--<i class="fa fa-check-circle fa-2x"></i>--}}
-                            {{--<br>--}}
-                            {{--<br>--}}
-                            {{--@ln(Thank you for investing at) {{$page->brand->name}}.--}}
-                            {{--<br><br>--}}
-                            {{--<img src="{{$page->brand->logo}}" alt="{{$page->brand->name}}">--}}
-                            {{--<br><br>--}}
-                            {{--<button class="close text-capitalize" data-dismiss="modal">@ln(close)</button>--}}
-                        {{--</div>--}}
+                {{--</div>--}}
+                {{--BODY PART--}}
+                {{--<div class="modal-body-thanku modal-body">--}}
+                    {{--<div class="center">--}}
+                        {{--<br>--}}
+                        {{--<br>--}}
+                        {{--<i class="fa fa-check-circle fa-2x"></i>--}}
+                        {{--<br>--}}
+                        {{--<br>--}}
+                        {{--@ln(Thank you for investing at) {{$page->brand->name}}.--}}
+                        {{--<br><br>--}}
+                        {{--<img src="{{$page->brand->logo}}" alt="{{$page->brand->name}}">--}}
+                        {{--<br><br>--}}
+                        {{--<button class="close text-capitalize" data-dismiss="modal">@ln(close)</button>--}}
                     {{--</div>--}}
                 {{--</div>--}}
             {{--</div>--}}
         {{--</div>--}}
+    {{--</div>--}}
     </div>
 @endsection
