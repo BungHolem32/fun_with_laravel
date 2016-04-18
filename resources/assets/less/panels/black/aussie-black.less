@@ -15,18 +15,18 @@
 
 /*NAV BAR BODY CLASS ON MENU CLICK*/
 .push-body-nav-mobile {
-  left: 200px !important;
+  .left(200px) !important;
 }
 
 /*NAV BAR MOBILE NEVEGATION*/
 .push-navbar-mobile {
-  left: 0 !important;
+  .left (0) !important;
 }
 
 /*BASE BODY STYLE*/
 body {
   font-family: @font;
-  left: 0;
+  .left (0);
   margin: 0;
   position: relative;
   padding: 0;
@@ -53,7 +53,7 @@ body {
       .box-shadow(0 1.1px 1.4px 0.1px darkgray);
       z-index: 1;
       @media (min-width: 1240px) and  (max-width: 1740px) {
-        right: 0;
+        .right (0);
       }
       @media (max-width: 1240px) {
         display: none !important;
@@ -99,6 +99,7 @@ body {
 
         @media (max-width: 993px) {
           .padding(0, 0, 0, 0);
+
         }
 
         /*SPAN INFO RESULTS*/
@@ -115,6 +116,7 @@ body {
       @media (min-width: 994px) and (max-width: 1240px) {
         display: block !important;
         .margin(8em, 0, 0, 0);
+
       }
       @media (max-width: 998px) {
         margin-top: 3.7em;
@@ -188,6 +190,7 @@ body {
           padding: 20px 20px;
           margin: 0;
           border-left: 1px solid #237EBB;
+          z-index: 10;
 
           .icon-bar {
             background-color: white;
@@ -247,7 +250,7 @@ body {
 
     /* NAVBAR MOBILE*/
     .navbar-mobile {
-      left: -200px;
+      .left(-200px);
       height: 100%;
       position: fixed;
       width: 200px;
@@ -392,12 +395,12 @@ body {
           position: absolute;
           top: 170.9px;
           width: 108.1%;
-          right: -15.7px;
+          .right(-15.7px);
           opacity: 0;
 
           @media (max-width: 1200px) {
             top: 145.7px;
-            left: -4.2%;
+            .left(-4.2%);
           }
           @media (max-width: 560px) {
             top: 170.9px;
@@ -406,12 +409,12 @@ body {
         .tab-shadow-2 {
           position: absolute;
           top: 173px;
-          right: -15.5px;
+          .right(-15.5px);
           width: 109.9%;
           opacity: 0;
           @media (max-width: 1200px) {
             top: 145.7px;
-            left: -4.2%;
+            .left (-4.2%);
           }
           @media (max-width: 998px) {
             top: 153.8px;
@@ -425,12 +428,12 @@ body {
         .tab-shadow-3 {
           position: absolute;
           top: 170.9px;
-          left: -18px;
+          .left(-18px);
           width: 108.9%;
           opacity: 0;
           @media (max-width: 1200px) {
             top: 145.7px;
-            left: -4.2%;
+            .left(-4.2%);
           }
 
           @media (max-width: 560px) {
@@ -554,7 +557,7 @@ body {
             .margin(0, 13px, 15px, 0);
             position: relative;
             top: 8px;
-            left: 4px;
+            .left(4px);
             .box-shadow(1px 1px 10px 1px black);
             background: linear-gradient(to top, #222222, #444547);
             color: white;
@@ -582,7 +585,7 @@ body {
           .tab-number-in-circle {
             position: absolute;
             top: -25.3px;
-            left: -21.4px;
+            .left(-21.4px);
             height: 63px;
             width: 63px;
             -webkit-border-radius: 50%;
@@ -600,11 +603,11 @@ body {
             transform: rotate(5deg);
 
             @media (max-width: 1200px) {
-              left: 9px;
+              .left( 9px);
             }
 
             @media (max-width: 1012px) {
-              left: 15px;
+              .left(15px);
             }
             @media (max-width: 433px) {
               top: -47px;
@@ -908,7 +911,7 @@ body {
           /*MODAL FOOTER WRAPPER*/
           .modal-footer-welcome {
             padding: 15px;
-            text-align: right;
+            text-align: @right;
             border-top: 1px solid #222;
 
             /*FOOTER PLACE IN THE WELCOME FOOTER*/
@@ -1121,9 +1124,12 @@ body {
                     }
                     /*EXPERATION DATE FOR MONTH (SELECT-BOX)*/
                     .month-exp-selectbox {
-                      margin-right: 0.5em;
+                      .margin-right (0.5em);
                       & when (@direction=rtl) {
-                        margin-left: 33px;
+                        margin-left: 2.5em;
+                        @media (max-width:993px) {
+                          margin:0;
+                        }
                       }
                     }
                     /*INPUT AND SELECT-BOX*/
@@ -1401,8 +1407,12 @@ body {
         .left(16.4%);
         z-index: 1;
 
+
         @media (max-width: 1240px) {
-          left: 0;
+          .left(0);
+          .right(0);
+          margin: 0 auto;
+          text-align: center;
         }
 
         @media (max-width: 998px) {
@@ -1411,6 +1421,8 @@ body {
           right: 0;
           margin: 0 auto;
           top: 3.7em;
+          text-align: center;
+
         }
 
         @media (max-width: 768px) {
@@ -1420,9 +1432,14 @@ body {
       }
     }
   }
-  ::-webkit-scrollbar {
-    width: 20px; /* for vertical scrollbars */
-    height: 20px; /* for horizontal scrollbars */
-  }
+
+  /*SCROLL BAR STYLES*/
+  .scroll-bar-style;
+
+  /*TEXT-COLOR-ON-TABLES*/
+  .text-colors-on-tables;
+
+  /*DISPLAY OPTIONS ON THE WAITING LOGOS*/
+  .displaying-options-on-waiting-logos;
 
 }

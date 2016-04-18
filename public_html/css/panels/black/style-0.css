@@ -6415,29 +6415,40 @@ button.close {
 /*BOX SHADOW PREFIXES  IF IT PASS ON PARAM*/
 /*IF IT PASS MORE THE ONE THEN PASS */
 /*ANIMATION PREFIX*/
-/*CHANGE THE DANGER ICON AND COLOR TO RED */
-.text-danger {
+/*TEXT COLORS ON TABLES*/
+.text-colors-on-tables {
+  /*CHANGE THE COLOR OF THE  DANGER-TEXT  TO RED */
+}
+.text-colors-on-tables .text-danger {
   color: red;
   font-weight: bold;
 }
-.text-success {
+.text-colors-on-tables .text-success {
   color: lightgreen;
 }
-/*HIDE ELEMENT*/
-.hide {
+.displaying-options-on-waiting-logos {
+  /*HIDE ELEMENT*/
+  /*SHOW ELELMENT */
+}
+.displaying-options-on-waiting-logos .hide {
   opacity: 0;
 }
-/*SHOW ELELMENT */
-.on {
+.displaying-options-on-waiting-logos .on {
   display: inline-block !important;
 }
-/*SCROLL BAR*/
-::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.2);
-}
-::-webkit-scrollbar-thumb {
+/*SCROLL BAR STYLE*/
+.scroll-bar-style ::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.6);
+}
+.scroll-bar-style ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
+}
+.scroll-bar-style ::-webkit-scrollbar {
+  width: 20px;
+  /* for vertical scrollbars */
+  height: 20px;
+  /* for horizontal scrollbars */
 }
 /*ACTIVE BUTTON IN THE TAB FOUR BUTTONS*/
 .active-btn {
@@ -6464,6 +6475,12 @@ body {
   padding: 0;
   /*REMOVE TRANSITION ON DESKTOP VIEW*/
   /*WRAPPER FOR ALL THE CONTENT*/
+  /*SCROLL BAR STYLES*/
+  /*TEXT-COLOR-ON-TABLES*/
+  /*CHANGE THE COLOR OF THE  DANGER-TEXT  TO RED */
+  /*DISPLAY OPTIONS ON THE WAITING LOGOS*/
+  /*HIDE ELEMENT*/
+  /*SHOW ELELMENT */
 }
 @media (max-width: 1000px) {
   body {
@@ -6646,6 +6663,7 @@ body .content-wrapper .navbar-desktop .container .navbar-toggle {
   padding: 20px 20px;
   margin: 0;
   border-left: 1px solid #237EBB;
+  z-index: 10;
 }
 body .content-wrapper .navbar-desktop .container .navbar-toggle .icon-bar {
   background-color: white;
@@ -7777,6 +7795,9 @@ body .content-wrapper .logo-brand .logo-brand-img {
 @media (max-width: 1240px) {
   body .content-wrapper .logo-brand .logo-brand-img {
     left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 @media (max-width: 998px) {
@@ -7786,6 +7807,7 @@ body .content-wrapper .logo-brand .logo-brand-img {
     right: 0;
     margin: 0 auto;
     top: 3.7em;
+    text-align: center;
   }
 }
 @media (max-width: 768px) {
@@ -7794,11 +7816,31 @@ body .content-wrapper .logo-brand .logo-brand-img {
     top: 0;
   }
 }
+body ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.6);
+}
+body ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
 body ::-webkit-scrollbar {
   width: 20px;
   /* for vertical scrollbars */
   height: 20px;
   /* for horizontal scrollbars */
+}
+body .text-danger {
+  color: red;
+  font-weight: bold;
+}
+body .text-success {
+  color: lightgreen;
+}
+body .hide {
+  opacity: 0;
+}
+body .on {
+  display: inline-block !important;
 }
 
 /*# sourceMappingURL=style-0.css.map */

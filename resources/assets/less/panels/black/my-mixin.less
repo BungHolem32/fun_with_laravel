@@ -9,8 +9,8 @@
 @select-box-font-color: gray;
 @bg-color-header-modal: #01385e;
 
-/*MIXIN CLASSES*/
 
+/*MIXIN CLASSES*/
 /*BOX SHADOW PREFIXES  IF IT PASS ON PARAM*/
 .boxShadow(@prop) {
   -webkit-box-shadow: @prop;
@@ -34,35 +34,52 @@
   animation: @animation @deration;
 }
 
-/*CHANGE THE DANGER ICON AND COLOR TO RED */
-.text-danger {
-  color: red;
-  font-weight: bold;
+/*TEXT COLORS ON TABLES*/
+.text-colors-on-tables{
+
+  /*CHANGE THE COLOR OF THE  DANGER-TEXT  TO RED */
+  .text-danger {
+    color: red;
+    font-weight: bold;
+  }
+
+  .text-success {
+    color: lightgreen;
+  }
 }
 
-.text-success {
-  color: lightgreen;
+.displaying-options-on-waiting-logos{
+
+  /*HIDE ELEMENT*/
+  .hide {
+    opacity: 0;
+  }
+
+  /*SHOW ELELMENT */
+  .on {
+    display: inline-block !important;
+  }
+
 }
 
-/*HIDE ELEMENT*/
-.hide {
-  opacity: 0;
+/*SCROLL BAR STYLE*/
+.scroll-bar-style{
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 20px; /* for vertical scrollbars */
+    height: 20px; /* for horizontal scrollbars */
+  }
 }
 
-/*SHOW ELELMENT */
-.on {
-  display: inline-block !important;
-}
-
-/*SCROLL BAR*/
-::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 5px;
-}
 
 .flip-able when (@direction=rtl){
   -moz-transform: scaleX(-1);    /* Gecko */

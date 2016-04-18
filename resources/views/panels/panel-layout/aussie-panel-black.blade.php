@@ -10,10 +10,10 @@
 
 
     {{--<style>--}}
-        {{--body .content-wrapper {--}}
-            {{--background-image: url('{{$page->panel_background}}');--}}
+    {{--body .content-wrapper {--}}
+    {{--background-image: url('{{$page->panel_background}}');--}}
 
-        {{--}--}}
+    {{--}--}}
     {{--</style>--}}
 
 
