@@ -337,7 +337,10 @@
                                 $btnClass = 'btn-success';
                             else
                                 $btnClass = 'btn-default';
+
                             ?>
+
+                            {{--{{$bot_settings['maxAmount']}}--}}
                             <button class="btn {{$btnClass}}  btn-lg amount-btn amount-button1 btn-amount-selected"
                                     data-amount="25-50">$25 -
                                 $50
@@ -350,7 +353,7 @@
                                     data-amount="100-150">$100 -
                                 $150
                             </button>
-                            <button class="btn {{ ($bot_settings['minAmount'] == 150) ? 'btn-success' : 'btn-default'}}  btn-lg amount-btn amount-button4 btn-amount-selected active-btn"
+                            <button class="btn {{ ($bot_settings['minAmount'] == 150) ? 'btn-success' : 'btn-default'}}  btn-lg amount-btn amount-button4 btn-amount-selected "
                                     data-amount="150-1000">$150
                                 +
                             </button>
@@ -830,8 +833,6 @@
                                         started -
                                         deposit funds
                                     </button>
-                                    <div class="loadingForm"><i class="fa fa-refresh fa-spin"></i> Proccessing...
-                                    </div>
 
                                     {{--WARNING MESSAGE COMMENT AT THE BOTTOM OF THE FORM--}}
                                     <div class="warning-massage-beneath-the-button text-center text-capitalize">

@@ -126,7 +126,7 @@ body {
       }
       @media (min-width: 994px) and (max-width: 1240px) {
         display: block !important;
-        .margin(5em, 0, 0, 0);
+        .margin(8em, 0, 0, 0);
       }
 
       .container {
@@ -160,7 +160,7 @@ body {
       overflow: hidden;
 
       @media (min-width: 996px) {
-        top: 5em;
+        top: 6em;
       }
       @media (max-width: 776px) {
         font-size: 0.9em;
@@ -284,7 +284,7 @@ body {
 
     /*INCENTIVE GUIDE FOR NEW CUSTOMERS */
     .activate-method-system {
-      margin: 7.5em auto 0;
+      margin: 8.5em auto 0;
       box-sizing: initial;
       color: white;
       font-weight: bold;
@@ -293,12 +293,12 @@ body {
       min-height: 5.8em;
 
       @media (max-width: 1240px) {
-        margin-top: 0.5em;
+        margin-top: 2.5em;
       }
 
       @media (max-width: 992px) {
         //todo check how to change this to right to left
-        margin: 1em auto 0;
+        margin: 3em auto 0;
       }
       /*METHOD TITLE WRAPPER*/
       .active-method-title-wrapper {
@@ -383,7 +383,11 @@ body {
         background-color: #282828;
 
         @media (max-width: 1200px) {
-          .margin(3.6em, 0.5em, 0, 0.7em);
+          .margin(1.4em ,0.7em, 2.5em, 0em);
+        }
+
+        @media (max-width:996px) {
+          .margin(1.4em, 0.7em, 3.5em, 0em)
         }
 
         &:hover [class^="tab-shadow"] {
@@ -402,7 +406,7 @@ body {
             left: -4.2%;
           }
           @media (max-width: 560px) {
-            top: 163.9px;
+            top: 170.9px;
           }
         }
         .tab-shadow-2 {
@@ -415,11 +419,11 @@ body {
             top: 145.7px;
             left: -4.2%;
           }
-          @media (max-width:998px) {
+          @media (max-width: 998px) {
             top: 153.8px;
           }
           @media (max-width: 560px) {
-            top: 163.9px;
+            top: 170.9px;
           }
 
         }
@@ -436,7 +440,7 @@ body {
           }
 
           @media (max-width: 560px) {
-            top: 163.9px;
+            top: 170.9px;
           }
         }
 
@@ -640,6 +644,7 @@ body {
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
             text-indent: -5.7px;
             width: @width*8.5;
+            text-shadow: 1px -2px 1px white;
 
             &:hover {
               background: #72a40e;
@@ -1047,6 +1052,11 @@ body {
 
                   /*FORM GROUP (EACH INPUT AND INPUT)*/
                   .form-group {
+                    label {
+                      &.error {
+                        display: none !important;
+                      }
+                    }
 
                   }
                 }
@@ -1070,6 +1080,12 @@ body {
                   }
                   /*FORM GROUP (EACH INPUT AND INPUT)*/
                   .form-group {
+
+                    label {
+                      &.error {
+                        display: none !important;
+                      }
+                    }
 
                     /*CARD TYPE WRAPPER*/
                     .card-type-title-wrapper {
@@ -1112,7 +1128,7 @@ body {
                     .month-exp-selectbox {
                       margin-right: 0.5em;
                     }
-                    /*INPUT*/
+                    /*INPUT AND SELECTBOX*/
                     .form-control {
 
                     }
@@ -1167,11 +1183,15 @@ body {
                       }
                     }
 
+                    /*INPUTS AND SELECT BOX*/
                     .form-control {
                       width: 60%;
                       height: 40px;
                       @media (max-width: 992px) {
                         width: 100%;
+                      }
+                      &.error {
+                        border: 3px solid red;
                       }
 
                     }

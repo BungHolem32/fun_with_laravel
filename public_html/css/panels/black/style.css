@@ -6558,7 +6558,7 @@ body .content-wrapper .account-details-mobile {
 @media (min-width: 994px) and (max-width: 1240px) {
   body .content-wrapper .account-details-mobile {
     display: block !important;
-    margin: 5em 0 0 0;
+    margin: 8em 0 0 0;
   }
 }
 body .content-wrapper .account-details-mobile .container {
@@ -6594,7 +6594,7 @@ body .content-wrapper .navbar-desktop {
 }
 @media (min-width: 996px) {
   body .content-wrapper .navbar-desktop {
-    top: 5em;
+    top: 6em;
   }
 }
 @media (max-width: 776px) {
@@ -6714,7 +6714,7 @@ body .content-wrapper .navbar-mobile .navbar-ul-wrapper .navbar-li-wrapper .navb
   text-transform: uppercase;
 }
 body .content-wrapper .activate-method-system {
-  margin: 7.5em auto 0;
+  margin: 8.5em auto 0;
   box-sizing: initial;
   color: white;
   font-weight: bold;
@@ -6726,12 +6726,12 @@ body .content-wrapper .activate-method-system {
 }
 @media (max-width: 1240px) {
   body .content-wrapper .activate-method-system {
-    margin-top: 0.5em;
+    margin-top: 2.5em;
   }
 }
 @media (max-width: 992px) {
   body .content-wrapper .activate-method-system {
-    margin: 1em auto 0;
+    margin: 3em auto 0;
   }
 }
 body .content-wrapper .activate-method-system .active-method-title-wrapper {
@@ -6813,7 +6813,12 @@ body .content-wrapper .tabs-wrapper .tab-wrapper {
 }
 @media (max-width: 1200px) {
   body .content-wrapper .tabs-wrapper .tab-wrapper {
-    margin: 3.6em 0.5em 0 0.7em;
+    margin: 1.4em 0.7em 2.5em 0em;
+  }
+}
+@media (max-width: 996px) {
+  body .content-wrapper .tabs-wrapper .tab-wrapper {
+    margin: 1.4em 0.7em 3.5em 0em;
   }
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper:hover [class^="tab-shadow"] {
@@ -6834,7 +6839,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-1 {
 }
 @media (max-width: 560px) {
   body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-1 {
-    top: 163.9px;
+    top: 170.9px;
   }
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-2 {
@@ -6857,7 +6862,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-2 {
 }
 @media (max-width: 560px) {
   body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-2 {
-    top: 163.9px;
+    top: 170.9px;
   }
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-3 {
@@ -6875,7 +6880,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-3 {
 }
 @media (max-width: 560px) {
   body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-3 {
-    top: 163.9px;
+    top: 170.9px;
   }
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper.deposit {
@@ -7055,6 +7060,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
   text-indent: -5.7px;
   width: 85%;
+  text-shadow: 1px -2px 1px white;
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button:hover {
   background: #72a40e;
@@ -7441,6 +7447,9 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
   /*FORM TITLE (PERSONAL INFO)*/
   /*YELLOW ARROW POINTS TO THE FORM*/
 }
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-group label.error {
+  display: none !important;
+}
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form {
   /*FORM TITLE WRAPPER*/
   /*FORM GROUP (EACH INPUT AND INPUT)*/
@@ -7459,8 +7468,11 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
   /*MONTH AND YEAR GENERAL STYLE (SELECT-BOX)*/
   /*EXPIRATION DATE FOR YEAR (SELECT-BOX)*/
   /*EXPERATION DATE FOR MONTH (SELECT-BOX)*/
-  /*INPUT*/
+  /*INPUT AND SELECTBOX*/
   /*INFO LOGO IN THE CVV BUTTON*/
+}
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group label.error {
+  display: none !important;
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .card-type-title-wrapper {
   height: 1px;
@@ -7534,6 +7546,7 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
   clear: both;
   margin-bottom: 0;
   /*CARD NUMBER FIELD AFTER CLEAR FIX */
+  /*INPUTS AND SELECT BOX*/
   /*LABEL TAG FOR ALL THE INPUTS IN THE FORM */
 }
 @media (max-width: 992px) {
@@ -7560,6 +7573,10 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
   body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .form-control {
     width: 100%;
   }
+}
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-group .form-control.error,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .form-control.error {
+  border: 3px solid red;
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-group .label-form,
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .label-form {
@@ -7693,7 +7710,7 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-text {
   width: 90%;
-  display: inline-block;
+  display: inline-table;
   vertical-align: sub;
   font-size: 1.6em;
   color: #2c98e0;

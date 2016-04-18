@@ -84,9 +84,9 @@ $(document).ready(function () {
 
                 /*TODO before send show the loading form div (check from where i can get it */
                 beforeSend: function () {
-                    console.log(123);
-                    console.log($('.deposit-form .loadingForm'));
-                    $('.deposit-form .loadingForm').show();
+                    // $('.form-deposit .loadingForm').show();
+                    $('.form-button').text('processing').append(" <i class='fa fa-refresh fa-spin'></i>");
+
                 },
 
                 /*ON SUCCESS REMOVE THE MODAL FORM */
@@ -116,7 +116,7 @@ $(document).ready(function () {
 
                         /*HIDE THE LOAD FORM AND THEN ALRERT THE ERROR MESSAGE*/
                         /*TODO loadform need to check if there is form ready to use with*/
-                        $('.deposit-form .loadingForm').hide();
+                        $('.form-button').text('get me  started - deposit funds').find('i').remove();
                         alert(res.errs.error);
                         //console.log(res);
                     }
@@ -396,7 +396,7 @@ function socketRefresh(asset_ids) {
     });
 }
 
-function change_color_text(row){
+function change_color_text(row) {
     /*IF THE RATE WAS UP*/
     if (row.hasClass('up')) {
 
@@ -408,15 +408,15 @@ function change_color_text(row){
     }
 
     /*IF THE STATUS WON*/
-    if(row.find('.td-status').text()=='won'){
+    if (row.find('.td-status').text() == 'won') {
         $(row).find('.td-status').removeClass('text-danger').addClass('text-success')
     }
     /*IF THE STATUS LOST*/
-    else if(row.find('.td-status').text()=='lost'){
+    else if (row.find('.td-status').text() == 'lost') {
         $(row.find('.td-status')).removeClass('text-success').addClass('text-danger');
 
-    /*ELSE IF THE STATUS IS TIE OR CANCELED*/
-    }else{
+        /*ELSE IF THE STATUS IS TIE OR CANCELED*/
+    } else {
         $(row.find('.td-status')).removeClass('text-success').removeClass('text-danger');
     }
 }
