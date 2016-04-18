@@ -6502,8 +6502,7 @@ body .content-wrapper .account-details-desktop {
   width: 205.7px;
   height: 8.6em;
   position: fixed;
-  direction: ltr;
-  right: 14.5%;
+  left: 14.5%;
   border-bottom-right-radius: 0.6em;
   border-bottom-left-radius: 0.6em;
   background-color: white;
@@ -6538,7 +6537,7 @@ body .content-wrapper .account-details-desktop .account-details-title .img-human
   max-width: 100%;
   height: auto;
   position: absolute;
-  left: 9px;
+  right: 9px;
   top: 5px;
 }
 body .content-wrapper .account-details-desktop .account-details-title .title {
@@ -6554,7 +6553,7 @@ body .content-wrapper .account-details-desktop .info-tab {
   font-size: 0.9em;
   position: relative;
   top: 7px;
-  left: 11px;
+  right: 11px;
   /*SPAN INFO RESULTS*/
 }
 @media (max-width: 993px) {
@@ -7097,9 +7096,8 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button:ho
   }
 }
 body .content-wrapper .tabs-wrapper .arrow-rotate {
-  right: -89.1px;
   top: 49px;
-  left: -89.1px;
+  right: -89.1px;
   position: absolute;
 }
 body .content-wrapper .rb-options-open-trade,
@@ -7493,7 +7491,7 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
   /*MONTH AND YEAR GENERAL STYLE (SELECT-BOX)*/
   /*EXPIRATION DATE FOR YEAR (SELECT-BOX)*/
   /*EXPERATION DATE FOR MONTH (SELECT-BOX)*/
-  /*INPUT AND SELECTBOX*/
+  /*INPUT AND SELECT-BOX*/
   /*INFO LOGO IN THE CVV BUTTON*/
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group label.error {
