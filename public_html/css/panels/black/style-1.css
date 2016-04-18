@@ -7782,7 +7782,7 @@ body .content-wrapper .logo-brand {
 body .content-wrapper .logo-brand .logo-brand-img {
   height: 5.9em;
   position: fixed;
-  left: 16.4%;
+  right: 16.4%;
   z-index: 1;
 }
 @media (max-width: 1240px) {
