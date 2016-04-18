@@ -121,12 +121,15 @@ body {
       color: black;
       font-size: 1.1em;
 
-      @media (max-width: 400px) {
-        font-size: 0.8em;
-      }
       @media (min-width: 994px) and (max-width: 1240px) {
         display: block !important;
         .margin(8em, 0, 0, 0);
+      }
+      @media (max-width:998px){
+        margin-top: 3.7em;
+      }
+      @media (max-width: 400px) {
+        font-size: 0.8em;
       }
 
       .container {
@@ -190,7 +193,7 @@ body {
           border-radius: 0;
           background: #2C98E0;
           position: relative;
-          float: right;
+          .float(right);
           padding: 20px 20px;
           margin: 0;
           border-left: 1px solid #237EBB;
@@ -201,7 +204,7 @@ body {
         }
 
         /**/
-        .nav-bar-header, .navbar-nav, .navbar-collapse {
+        .navbar-header, .navbar-nav, .navbar-collapse {
           @media (max-width: 768px) {
             width: @width*10;
             padding: 0;
@@ -224,7 +227,7 @@ body {
         /*NAV BAR INSIDE*/
         .navbar-nav {
           display: inline-block;
-          float: none;
+          .float(none);
           vertical-align: top;
 
           /*LIST ELEMENT IN THE NAV-BAR (SPECIFIC LINK )*/
@@ -498,7 +501,7 @@ body {
                       }
                       /*TOGGLE ON OFF AND BOLB STYLE */
                       .toggle-on, .toggle-off, .toggle-blob {
-                        float: left;
+                        .float (left);
                       }
 
                       /*TOGGLE ON SPECIFIC STYLES*/
@@ -828,7 +831,7 @@ body {
             }
             /*EXIT BUTTON FROM THE MODAL*/
             .square-logo {
-              float: right;
+              .float(right);
               padding: 0.3em;
               cursor: pointer;
             }
@@ -919,7 +922,7 @@ body {
             /*FOOTER PLACE IN THE WELCOME FOOTER*/
             .button-welcome-footer {
               color: black;
-              float: none;
+              .float( none);
               margin: 0 auto;
               display: block;
               width: @width*5;
@@ -978,7 +981,7 @@ body {
 
             /*BUTTON X FOR EXIT THE MODEL*/
             .square-logo {
-              float: right;
+              .float(right);
               padding: 0.3em;
               cursor: pointer;
             }
@@ -1120,7 +1123,7 @@ body {
                         width: @width*4.64%;
                       }
                       @media (min-width: 993px) {
-                        float: none !important;
+                        .float(none) !important;
                         width: @width*3.38;
                       }
                     }
@@ -1395,18 +1398,37 @@ body {
 
     /*LOGO BRAND WRAPPER*/
     .logo-brand {
-      position: absolute;
-      z-index: 1;
-      left: 0;
-      height: 20px;
-      right: 0;
-      margin: 0 auto;
-      text-align: center;
 
       /*LOGO BRAND IMAGE*/
       .logo-brand-img {
-        height: 71.1px;
+        height: 5.9em;
+        position: fixed;
+        left: 16.4%;
+        z-index: 1;
+
+        @media (max-width:1240px){
+          left:0;
+        }
+
+        @media (max-width:998px) {
+          max-height:53px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          top: 3.7em;
+        }
+        
+        @media (max-width:768px){
+          max-height:53px;
+          top:0;
+        }
       }
     }
   }
+  ::-webkit-scrollbar
+  {
+    width: 20px;  /* for vertical scrollbars */
+    height: 20px; /* for horizontal scrollbars */
+  }
+
 }

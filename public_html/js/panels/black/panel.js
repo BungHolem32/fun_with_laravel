@@ -287,10 +287,10 @@ function load_positions(positions) {
         /*ADD THE VALUE OF THE ASSET ID TO THE ASSET VARIABLE */
         var assetId = 'asset_' + position['assetId'];
 
-        //ADD THE NEW ASSET TO ARRAY OF ALL THE ASSETS;
+        /*ADD THE NEW ASSET TO ARRAY OF ALL THE ASSETS*/
         asset_list.push(assetId);
 
-        //FIND IN THE NEW ROW THE CURRENT RATE TD AND ADD CLASS TO IT WITH THE ASSET-ID
+        /*FIND IN THE NEW ROW THE CURRENT RATE TD AND ADD CLASS TO IT WITH THE ASSET-ID*/
         new_row.find('.td-assets').addClass(assetId);
 
         /*ITTERATE OVER ALL THE ELEMENTS AND SIGN THE NEW DATA*/

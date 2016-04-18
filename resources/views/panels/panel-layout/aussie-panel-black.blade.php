@@ -46,6 +46,14 @@
 
 
         {{--ACCOUNT DETAILS  DESKTOP VIEW--}}
+        <div class="aside">
+
+
+
+
+
+
+        </div>
         <aside class="account-details-desktop visible-md-block visible-lg-block">
 
             {{--TITLE PART--}}
@@ -97,7 +105,8 @@
         </aside>
 
         <aside class="logo-brand">
-            <img src="{{ $page->panel_logo }}" alt="method_logo" class="logo-brand-img">
+
+                <img src="{{ $page->panel_logo }}" alt="method_logo" class="logo-brand-img">
         </aside>
 
         {{--NAVBAR DESKTOP--}}
@@ -525,11 +534,10 @@
 
                     {{--MODAL BODY WELOCME--}}
                     <div class="modal-body-welcome modal-body">
-                        <p class="modal-welcome-text-p">This Software cannot do anything until your account has a
-                            positive balance to run trades, so
+                        <p class="modal-welcome-text-p">
+                            This Software cannot do anything until your account has a positive balance to run trades, so
                             make sure to deposit some money into your {{ $page->title_h1 }} Method trading account to
-                            get
-                            started.
+                            get started.
                             <span class="model-welcome-text-ps-span">(Remember, this is your money & you can always withdraw it at any time.)</span>
                         </p>
                         <div class="steps-wrapper">
@@ -1175,33 +1183,33 @@
 
 
     {{--<div class="modal-thanku modal fade thanku" role="dialog">--}}
-        {{--<div class="modal-dialog-thanku modal-dialog">--}}
+    {{--<div class="modal-dialog-thanku modal-dialog">--}}
 
-            {{--<!-- MODAL CONTENT-->--}}
-            {{--<div class="modal-content modal-thanku-content">--}}
+    {{--<!-- MODAL CONTENT-->--}}
+    {{--<div class="modal-content modal-thanku-content">--}}
 
-                {{--HEADER-TAG--}}
-                {{--<div class="modal-header-thanku modal-header">--}}
-                    {{--<button type="image" class="xclose close" data-dismiss="modal">×</button>--}}
+    {{--HEADER-TAG--}}
+    {{--<div class="modal-header-thanku modal-header">--}}
+    {{--<button type="image" class="xclose close" data-dismiss="modal">×</button>--}}
 
-                {{--</div>--}}
-                {{--BODY PART--}}
-                {{--<div class="modal-body-thanku modal-body">--}}
-                    {{--<div class="center">--}}
-                        {{--<br>--}}
-                        {{--<br>--}}
-                        {{--<i class="fa fa-check-circle fa-2x"></i>--}}
-                        {{--<br>--}}
-                        {{--<br>--}}
-                        {{--@ln(Thank you for investing at) {{$page->brand->name}}.--}}
-                        {{--<br><br>--}}
-                        {{--<img src="{{$page->brand->logo}}" alt="{{$page->brand->name}}">--}}
-                        {{--<br><br>--}}
-                        {{--<button class="close text-capitalize" data-dismiss="modal">@ln(close)</button>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
+    {{--</div>--}}
+    {{--BODY PART--}}
+    {{--<div class="modal-body-thanku modal-body">--}}
+    {{--<div class="center">--}}
+    {{--<br>--}}
+    {{--<br>--}}
+    {{--<i class="fa fa-check-circle fa-2x"></i>--}}
+    {{--<br>--}}
+    {{--<br>--}}
+    {{--@ln(Thank you for investing at) {{$page->brand->name}}.--}}
+    {{--<br><br>--}}
+    {{--<img src="{{$page->brand->logo}}" alt="{{$page->brand->name}}">--}}
+    {{--<br><br>--}}
+    {{--<button class="close text-capitalize" data-dismiss="modal">@ln(close)</button>--}}
+    {{--</div>--}}
+    {{--</div>--}}
+    {{--</div>--}}
+    {{--</div>--}}
     {{--</div>--}}
     </div>
 @endsection
