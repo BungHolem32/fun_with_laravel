@@ -1,4 +1,3 @@
-/*CHOOSE THE DIRECTION OF THE PAGE*/
 /*!
 * direction.less v0.1.0
 *
@@ -6424,6 +6423,14 @@ button.close {
 .text-success {
   color: lightgreen;
 }
+/*HIDE ELEMENT*/
+.hide {
+  opacity: 0;
+}
+/*SHOW ELELMENT */
+.on {
+  display: inline-block !important;
+}
 /*SCROLL BAR*/
 ::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.2);
@@ -6447,12 +6454,6 @@ button.close {
 /*NAV BAR MOBILE NEVEGATION*/
 .push-navbar-mobile {
   left: 0 !important;
-}
-.hide {
-  opacity: 0;
-}
-.on {
-  display: inline-block !important;
 }
 /*BASE BODY STYLE*/
 body {
@@ -6539,7 +6540,7 @@ body .content-wrapper .account-details-desktop .account-details-title .title {
   font-size: 1.25em;
 }
 body .content-wrapper .account-details-desktop .info-tab {
-  margin: 0 0 2.2px;
+  margin: 0 0 2.2px 0;
   font-size: 0.9em;
   position: relative;
   top: 7px;
@@ -6727,7 +6728,7 @@ body .content-wrapper .navbar-mobile .navbar-ul-wrapper .navbar-li-wrapper .navb
   text-transform: uppercase;
 }
 body .content-wrapper .activate-method-system {
-  margin: 8.5em auto 0;
+  margin: 8.5em auto 0 auto;
   box-sizing: initial;
   color: white;
   font-weight: bold;
@@ -6744,7 +6745,7 @@ body .content-wrapper .activate-method-system {
 }
 @media (max-width: 992px) {
   body .content-wrapper .activate-method-system {
-    margin: 3em auto 0;
+    margin: 3em auto 0 auto;
   }
 }
 body .content-wrapper .activate-method-system .active-method-title-wrapper {
@@ -6934,7 +6935,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide .toggle-inner {
   /*TOGGLE ON AND STYLES*/
-  /*TOGGLE ON OFF AND BOLB STYLE */
+  /*TOGGLE ON OFF AND BLOB STYLE */
   /*TOGGLE ON SPECIFIC STYLES*/
   /*ALL the light of the bolb toggle*/
 }

@@ -1,11 +1,12 @@
 <?php $c = \Session::get('spotCustomer'); ?>
 @section('head')
+    <link rel="stylesheet" href="/css/panels/black/libs/toggles-full.css">
     {{--FONT INCLUDE--}}
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300,300italic' rel='stylesheet'
           type='text/css'>
-    <link rel="stylesheet" href="/css/panels/black/libs/toggles-full.css">
+
     {{--BASE STYLE SHEET--}}
-    <link rel="stylesheet" href="/css/panels/black/style-0.css"/>
+    <link rel="stylesheet" href="/css/panels/black/style-{{Request::local()->dir}}.css"/>
 
 @append
 @section('bottom-scripts')
@@ -51,58 +52,57 @@
 
 
 
-
-
-        </div>
         <aside class="account-details-desktop visible-md-block visible-lg-block">
 
-            {{--TITLE PART--}}
-            <header class="account-details-title">
 
-                {{--human avatar--}}
-                <div class="img-human">
-                    <img src="/img/panel/black/icon-human.png" alt="img-responsive"
-                         class="icon-human-pic img-responsive block-center">
+                {{--TITLE PART--}}
+                <header class="account-details-title">
+
+                    {{--human avatar--}}
+                    <div class="img-human">
+                        <img src="/img/panel/black/icon-human.png" alt="img-responsive"
+                             class="icon-human-pic img-responsive block-center">
+                    </div>
+
+                    {{--title place--}}
+                    <div class="title text-uppercase">
+                        @ln(account details)
+                    </div>
+                </header>
+
+                {{--PERSONAL INFO  (BASE CONTENT FO THE TAB)--}}
+                <div class="account-detail-personal-info">
+                    <p class="info-tab">
+                        <span class="text-capitalize">@ln(email):</span>
+                        <strong>{{ App\Customer::get()->email }}</strong>
+                    </p>
+                    <p class="info-tab">
+                        <span class="text-capitalize">@ln(broker name):</span>
+
+                        {{--todo-ilan add mongo class to the panel--}}
+                        @if(!empty($page->brand->name))
+                            <img src="{{$page->brand->logo}}" alt="rb-option logo">
+                            <strong>{{ $page->brand->name }}</strong>
+                            {{--@else--}}
+
+                            {{--<strong class="info-result text-uppercase">rb</strong><strong--}}
+                            {{--class="info-result">options</strong>--}}
+                        @endif
+                        {{--todo-ilan add mongo class to the panel--}}
+                    </p>
+                    <p class="info-tab">
+                        <span class="text-capitalize">@ln(balance):</span>
+                        <strong class="info-result text-bold balance getLoading ">$ 0.00 <i
+                                    class="fa fa-refresh fa-spin"></i></strong>
+                    </p>
+                    <p class="info-tab">
+                        <span class="text-capitalize">@ln(account)</span>
+                        <span class="text-uppercase">id: </span>
+                        <strong class="info-result">{{ App\Customer::get()->id }}</strong>
+                    </p>
                 </div>
-
-                {{--title place--}}
-                <div class="title text-uppercase">
-                    @ln(account details)
-                </div>
-            </header>
-
-            {{--PERSONAL INFO  (BASE CONTENT FO THE TAB)--}}
-            <div class="account-detail-personal-info">
-                <p class="info-tab">
-                    <span class="text-capitalize">@ln(email):</span>
-                    <strong>{{ App\Customer::get()->email }}</strong>
-                </p>
-                <p class="info-tab">
-                    <span class="text-capitalize">@ln(broker name):</span>
-
-                    {{--todo-ilan add mongo class to the panel--}}
-                    @if(!empty($page->brand->name))
-                        <img src="{{$page->brand->logo}}" alt="rb-option logo">
-                        <strong>{{ $page->brand->name }}</strong>
-                        {{--@else--}}
-
-                        {{--<strong class="info-result text-uppercase">rb</strong><strong--}}
-                        {{--class="info-result">options</strong>--}}
-                    @endif
-                    {{--todo-ilan add mongo class to the panel--}}
-                </p>
-                <p class="info-tab">
-                    <span class="text-capitalize">@ln(balance):</span>
-                    <strong class="info-result text-bold balance getLoading ">$ 0.00 <i
-                                class="fa fa-refresh fa-spin"></i></strong>
-                </p>
-                <p class="info-tab">
-                    <span class="text-capitalize">@ln(account)</span>
-                    <span class="text-uppercase">id: </span>
-                    <strong class="info-result">{{ App\Customer::get()->id }}</strong>
-                </p>
-            </div>
-        </aside>
+            </aside>
+        </div>
 
         <aside class="logo-brand">
 
@@ -383,7 +383,7 @@
 
             </div>
             <div class="arrow-rotate visible-lg-block">
-                <img src="/img/panel/black/tab-arrow.png" alt="rotate arrow">
+                <img src="/img/panel/black/tab-arrow.png" alt="rotate arrow" class="flip-able">
             </div>
         </section>
 
@@ -663,7 +663,7 @@
                                             information</h3>
                                         <img src="/img/panel/black/desktop/yellow-arrow.png"
                                              alt="arrow that points to the inputs"
-                                             class="yellow-arrow visible-lg-inline-block visible-md-inline-block">
+                                             class="yellow-arrow visible-lg-inline-block visible-md-inline-block flip-able">
                                     </div>
 
                                     <div class="clearfix"></div>
@@ -744,7 +744,7 @@
                                             details</h3>
                                         <img src="/img/panel/black/desktop/yellow-arrow.png"
                                              alt="arrow that points to the inputs"
-                                             class="yellow-arrow visible-lg-block visible-md-block">
+                                             class="yellow-arrow visible-lg-block visible-md-block flip-able">
                                     </div>
                                     {{--CLEAR FIX AFTER TITLE--}}
                                     <div class="clearfix"></div>

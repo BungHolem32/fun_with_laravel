@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" dir={!! Request::local()->dir == 0 ? '"ltr"' : '"rtl"' !!}>
 <head>
     @include('funnels.layouts._head')
 
@@ -9,8 +9,6 @@
         {!! $page->getParent()->scripts->headScripts !!}
         {!! $page->scripts->headScripts !!}
     @endif
-
-
 </head>
 <body>
 

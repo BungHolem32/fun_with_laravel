@@ -20,9 +20,9 @@
 
 /*IF IT PASS MORE THE ONE THEN PASS */
 .boxShadow(@prop1:1px 1px 1px 1px blue,@prop2:2px 2px 1px 10px gray,@prop3,@prop4,@prop5) {
-  -webkit-box-shadow: @prop1,@prop2,@prop3,@prop4,@prop5;
-  -moz-box-shadow: @prop1,@prop2,@prop3,@prop4,@prop5;
-  box-shadow: @prop1,@prop2,@prop3,@prop4,@prop5;
+  -webkit-box-shadow: @prop1, @prop2, @prop3, @prop4, @prop5;
+  -moz-box-shadow: @prop1, @prop2, @prop3, @prop4, @prop5;
+  box-shadow: @prop1, @prop2, @prop3, @prop4, @prop5;
 }
 
 /*ANIMATION PREFIX*/
@@ -35,24 +35,39 @@
 }
 
 /*CHANGE THE DANGER ICON AND COLOR TO RED */
-.text-danger{
+.text-danger {
   color: red;
   font-weight: bold;
 }
 
-.text-success{
+.text-success {
   color: lightgreen;
 }
 
+/*HIDE ELEMENT*/
+.hide {
+  opacity: 0;
+}
+
+/*SHOW ELELMENT */
+.on {
+  display: inline-block !important;
+}
 
 /*SCROLL BAR*/
-::-webkit-scrollbar-track
-{
+::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.2);
 }
 
-::-webkit-scrollbar-thumb
-{
+::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
+}
+
+.flip-able when (@direction=rtl){
+  -moz-transform: scaleX(-1);    /* Gecko */
+  -o-transform: scaleX(-1);      /* Opera */
+  -webkit-transform: scaleX(-1); /* Webkit */
+  transform: scaleX(-1);         /* Standard */
+  filter: FlipH;
 }
