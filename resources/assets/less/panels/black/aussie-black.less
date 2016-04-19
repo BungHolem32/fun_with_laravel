@@ -603,7 +603,7 @@ body {
             transform: rotate(5deg);
 
             @media (max-width: 1200px) {
-              .left( 9px);
+              .left(9px);
             }
 
             @media (max-width: 1012px) {
@@ -1125,10 +1125,12 @@ body {
                     /*EXPERATION DATE FOR MONTH (SELECT-BOX)*/
                     .month-exp-selectbox {
                       .margin-right (0.5em);
+
                       & when (@direction=rtl) {
-                        margin-left: 2.5em;
-                        @media (max-width:993px) {
-                          margin:0;
+                        //  margin-left: 0em;
+
+                        @media (max-width: 993px) {
+                          margin: 0;
                         }
                       }
                     }
@@ -1403,10 +1405,9 @@ body {
       /*LOGO BRAND IMAGE*/
       .logo-brand-img {
         height: 5.9em;
-        position: fixed;
+        position: absolute;
         .left(16.4%);
         z-index: 1;
-
 
         @media (max-width: 1240px) {
           .left(0);
@@ -1442,4 +1443,84 @@ body {
   /*DISPLAY OPTIONS ON THE WAITING LOGOS*/
   .displaying-options-on-waiting-logos;
 
+
+
+
+  /*LOGIN PAGE PART*/
+  .wrapper-login {
+
+    /*CONTENT - WRAPPER LOGIN */
+    .content-wrapper-login {
+      font-family: @font;
+
+      .row {
+
+        /*FIRST INNER CONTENT*/
+        .inner-first-content-wrapper-login {
+
+          /*SECOND INNER CONTENT*/
+          .inner-second-content-inner {
+            .form-title {
+              margin-bottom: 0.5em;
+              font-size: 3.1em;
+              font-family: Roboto Condensed;
+              text-indent: 30px;
+              letter-spacing: 0.3px;
+            }
+
+            /*LOGIN FORM*/
+            .loginForm {
+
+              /**/
+              .container {
+                .margin(3em, auto, 0, auto);
+
+                .row {
+                  .form {
+                    float: none;
+
+                    .form-group {
+                      .form-control {
+                        height: 48.9px;
+                      }
+                    }
+                    .form-options {
+                      .btn {
+                        width: 100%;
+                        margin: 0;
+                        min-height: 49px;
+                        font-size: 2.1em;
+                        line-height: 1px;
+                      }
+                      .forgotpass {
+                        color: #3E80D4;
+                      }
+                    }
+
+                  }
+                }
+
+              }
+            }
+
+          }
+
+        }
+
+      }
+    }
+
+    .wrapper-img-logo{
+      #logo_login{
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+
+
 }
+
+
+

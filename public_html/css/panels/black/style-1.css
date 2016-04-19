@@ -7548,7 +7548,6 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .month-exp-selectbox {
   margin-left: 0.5em;
-  margin-left: 2.5em;
 }
 @media (max-width: 993px) {
   body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .month-exp-selectbox {
@@ -7804,7 +7803,7 @@ body .content-wrapper .logo-brand {
 }
 body .content-wrapper .logo-brand .logo-brand-img {
   height: 5.9em;
-  position: fixed;
+  position: absolute;
   right: 16.4%;
   z-index: 1;
 }
@@ -7857,6 +7856,55 @@ body .hide {
 }
 body .on {
   display: inline-block !important;
+}
+body .wrapper-login {
+  /*CONTENT - WRAPPER LOGIN */
+}
+body .wrapper-login .content-wrapper-login {
+  font-family: 'Roboto Condensed';
+}
+body .wrapper-login .content-wrapper-login .row {
+  /*FIRST INNER CONTENT*/
+}
+body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login {
+  /*SECOND INNER CONTENT*/
+}
+body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner {
+  /*LOGIN FORM*/
+}
+body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .form-title {
+  margin-bottom: 0.5em;
+  font-size: 3.1em;
+  font-family: Roboto Condensed;
+  text-indent: 30px;
+  letter-spacing: 0.3px;
+}
+body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm {
+  /**/
+}
+body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container {
+  margin: 3em auto 0 auto;
+}
+body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form {
+  float: none;
+}
+body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-group .form-control {
+  height: 48.9px;
+}
+body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-options .btn {
+  width: 100%;
+  margin: 0;
+  min-height: 49px;
+  font-size: 2.1em;
+  line-height: 1px;
+}
+body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-options .forgotpass {
+  color: #3E80D4;
+}
+body .wrapper-login .wrapper-img-logo #logo_login {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
 }
 
 /*# sourceMappingURL=style-1.css.map */
