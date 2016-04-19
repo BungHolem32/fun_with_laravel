@@ -15,3 +15,13 @@
 #container-members {
  background: url("/img/dreamprofits/mbg.jpg") no-repeat fixed center;
 }
+
+#SubmitOptIn {
+    background: url('/img/dreamprofits/INSTANT-ACCESS.png');
+    width: 266px;
+    height: 80px;
+}
+
+#SubmitOptIn:hover {
+    background: url('/img/dreamprofits/INSTANT-ACCESS-hover.png');
+}

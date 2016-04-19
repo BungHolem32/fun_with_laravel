@@ -1,11 +1,11 @@
 @section('head')
-    {!! $page->appendAsset(url('/css/dreamprofits/style.css')) !!}
     {!! $page->appendAsset(url('/css/dreamprofits/normalize.css')) !!}
     {!! $page->appendAsset(url('/css/dreamprofits/webflow.css')) !!}
     {!! $page->appendAsset(url('/css/dreamprofits/dreamprofit.webflow.css')) !!}
     {!! $page->appendAsset(url('/js/dreamprofits/webfont.js')) !!}
     {!! $page->appendAsset(url('/js/dreamprofits/script.js')) !!}
     {!! $page->appendAsset(url('/js/dreamprofits/modernizr.js')) !!}
+    {!! $page->appendAsset(url('/css/dreamprofits/style.css')) !!}
 @append
 
 @section('bottom-scripts')

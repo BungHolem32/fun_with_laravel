@@ -4,6 +4,10 @@ WebFont.load({
     }
 });
 
+$(document).ready(function () {
+    $('#SubmitOptIn').val('')
+});
+
 function firstPageSignUp() {
     window.scrollTo(0,0);
 }
