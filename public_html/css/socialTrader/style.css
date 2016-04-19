@@ -1070,9 +1070,10 @@ input.name:first-child {
 }
 
 #members input {
-	height: 57px;
-padding: 10px 5px;
-font: 600 20px "Raleway";
+	height: 44px;
+	padding: 10px 5px;
+	font: 600 20px "Raleway";
+	margin-bottom: 8px !important;
 }
 #members input.name,
 #members input.last-name {
@@ -1638,6 +1639,7 @@ margin-bottom: 18px;
 }
 
 @media (max-width:500px) {
+	#LastName { width: 100% !important; };
 	#members input[type="text"],
 	#members input[type="password"],
 	#members input[type="tel"]{
@@ -1649,7 +1651,6 @@ margin-bottom: 18px;
 	#members input[type="password"]{
 	font-size:18px !important;
 	}
-
 }
 @media (max-width:440px) {
 	#members .member {
@@ -4211,7 +4212,7 @@ height: 56vw;
 }
 
 #home .gray .submit {
-	    font: 700 24px/13px "Raleway";
+	font: 700 24px/13px "Raleway";
     height: 58px;
     padding: 11px 0px 8px !important;
 }
@@ -4226,4 +4227,13 @@ height: 56vw;
 #home .headline2 {
     font: 700 26px/1.1 "Open Sans";
 }
+}
+
+#membs form { text-align: center; }
+.error { text-align: center; margin: 0 !important;  }
+#prefix-error { display: none !important; }
+.custom-submit-size {
+	height: 50px !important;
+	box-shadow: none !important;
+	font-size: 30px !important;
 }
