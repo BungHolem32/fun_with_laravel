@@ -69,10 +69,12 @@ $(document).ready(function () {
             });
     });
 
-    /*VALIDATE THE DEPOSITE FORM*/
+    /*VALIDATE THE DEPOSIT FORM*/
     $('.form-deposit').validate({
+
         submitHandler: function (form) {
-            var data = $('.deposit-form').serialize();
+
+            var data = $('.form-deposit').serialize();
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -129,7 +131,6 @@ $(document).ready(function () {
             });
         }
     });
-
 
 
     /*ON CLICK ON THE BUTTONS TO CHANGE THE AMOUNT OF MONEY TO TRADE*/
@@ -255,16 +256,20 @@ function load_positions(positions) {
     /*CREATE VARIABLE FOR THE TWO TABLES*/
     var open_table = $('.rb-options-open-trade table tbody');
     var history_table = $('.rb-options-history table tbody');
+    var row, table_to_insert;
+
 
     /*ADD CLASS PENDING AND ID TO ALL THE TRS*/
-    $('.table-tr-content', open_table).addClass('pending').parents('.rb-options-open-trade').attr('id','rb-options-open-trade-table');
-    $('.table-tr-content', history_table).addClass('pending').parents('.rb-options-history').attr('id','rb-options-history-trade-table');
+    $('.table-tr-content', open_table).addClass('pending').parents('.rb-options-open-trade').attr('id', 'rb-options-open-trade-table');
+    $('.table-tr-content', history_table).addClass('pending').parents('.rb-options-history').attr('id', 'rb-options-history-trade-table');
 
     /*CREATE ROW WITH THE STRUCTURE OF THE ROW*/
-    var row = $('.rb-options-open-trade .table-tr-content').html();
+    var rb_open = $('.rb-options-open-trade .table-tr-content').html();
+    var rb_history = $('.rb-options-history .table-tr-content').html();
 
     /*ADD THE CLASS WRAPPER TO THE TABLE TO FIT THE TABLE*/
-    row = "<tr class='table-tr-content'>" + row + "</tr>";
+    rb_open = "<tr class='table-tr-content'>" + rb_open + "</tr>";
+    rb_history = "<tr class='table-tr-content'>" + rb_history + "</tr>";
 
     /*CREATE EMPTY ARRAY*/
     var asset_list = [];
@@ -272,39 +277,52 @@ function load_positions(positions) {
     /*ITERATE OVER ALL THE POSITIONS*/
     $.each(positions, function (i, position) {
 
-        /*IF ID WITH POSITION IS FOUND REMOVE CLASS PENDING FROM IT*/
-        if ($('#position-' + position.id).length) {
-            $('#position-' + position.id).removeClass('pending');
-            return;
-        }
-
-        /*AMOUNT DATE VARIABLE*/
-        position['amount'] = position['amount'].replace(/(\.\d{2})0+$/, '$1');
-
-        /*CREATE NEW ROW WITH THE ATTRIBUTE ID POSITION WITH THE CURRENT POSITION ID AND ADD CLASS 'STATUS AND POSITION PLACE'*/
-        var new_row = $(row).clone().attr('id', 'position-' + position.id).addClass(position.status + ' ' + position.position);
-
-        /*ADD THE VALUE OF THE ASSET ID TO THE ASSET VARIABLE */
-        var assetId = 'asset_' + position['assetId'];
-
-        /*ADD THE NEW ASSET TO ARRAY OF ALL THE ASSETS*/
-        asset_list.push(assetId);
-
-        /*FIND IN THE NEW ROW THE CURRENT RATE TD AND ADD CLASS TO IT WITH THE ASSET-ID*/
-        new_row.find('.td-assets').addClass(assetId);
-
-        /*ITTERATE OVER ALL THE ELEMENTS AND SIGN THE NEW DATA*/
-        $.each(position, function (j, data) {
-            new_row.find('.td-' + j).text(data);
-
-            if(j=='amount'|| j=='profit'){
-                new_row.find('.td-' + j).text(data).prepend('$').addClass('text-success');
+            /*IF ID WITH POSITION IS FOUND REMOVE CLASS PENDING FROM IT*/
+            if ($('#position-' + position.id).length) {
+                $('#position-' + position.id).removeClass('pending');
+                return;
             }
-        });
 
-        /*APPEND TO THE TABLE IF OPEN PEND TO THE OPEN TABLE IF NOT TO THE HISTORY TABLE */
-        (position.status == 'open' ? open_table : history_table).append(new_row);
-    });
+            /*AMOUNT DATE VARIABLE*/
+            position['amount'] = position['amount'].replace(/(\.\d{2})0+$/, '$1');
+
+            /*CREATE NEW ROW WITH THE ATTRIBUTE ID POSITION WITH THE CURRENT POSITION ID AND ADD CLASS 'STATUS AND POSITION PLACE'*/
+            if (position.status == 'open') {
+                row = rb_open;
+                table_to_insert = open_table;
+            }
+            else {
+                row = rb_history;
+                table_to_insert = history_table;
+            }
+
+
+            var new_row = $(row).clone().attr('id', 'position-' + position.id).addClass(position.status + ' ' + position.position);
+            /*ADD THE VALUE OF THE ASSET ID TO THE ASSET VARIABLE */
+            var assetId = 'asset_' + position['assetId'];
+
+            /*ADD THE NEW ASSET TO ARRAY OF ALL THE ASSETS*/
+            asset_list.push(assetId);
+
+            /*FIND IN THE NEW ROW THE CURRENT RATE TD AND ADD CLASS TO IT WITH THE ASSET-ID*/
+            new_row.find('.td-assets').addClass(assetId);
+
+            /*ITERATE OVER ALL THE ELEMENTS AND SIGN THE NEW DATA*/
+            $.each(position, function (j, data) {
+                new_row.find('.td-' + j).text(data);
+
+                if (j == 'amount' || j == 'profit') {
+                    new_row.find('.td-' + j).text(data).prepend('$').addClass('text-success');
+                }
+            });
+
+            /*APPEND TO THE TABLE IF OPEN PEND TO THE OPEN TABLE IF NOT TO THE HISTORY TABLE */
+
+            table_to_insert.append(new_row);
+            change_color_text(new_row);
+        }
+    );
+
     if ($('tr.pending').length) {
         $('tr.pending').attr('id', '').remove();
     }
@@ -347,32 +365,29 @@ function socketRefresh(asset_ids) {
 
         /*ITERATE THE FULL DATE*/
         $.each(full_data, function (i, data) {
-
             /*RUN OVER THE ALL PROPERTIES AND UPDATE THE NEW ONE*/
-
             $.each($("." + i), function (j, el) {
-
                 /*GET THE ROW OF THE SPECIFIC ASSET_ID */
                 var row = $(el).parents('.table-tr-content');
 
+
                 /*CHECK IF THE OPEN TABLE WAS CHOSEN*/
-                if(row.parents('#rb-options-open-trade-table').length>0) {
+                if (row.parents('#rb-options-open-trade-table').length > 0) {
 
                     /*CHANGE THE INFO FROM NUMBER TO  STRING*/
                     rate = parseFloat(data.rate);
 
-                /*CHECK IF THE HISTORY TABLE WAS CHOSEN*/
-                }else{
+                    /*CHECK IF THE HISTORY TABLE WAS CHOSEN*/
+                } else {
                     rate = parseFloat(row.find('.td-endRate').text());
+                    console.log(rate);
                 }
 
                 /*GET THE HTML OF THE SPECIFIC PERSON*/
                 var base = parseFloat(row.find('.td-entryRate').text());
 
-
                 /*CHANGE THE HTML AFTER ROUND TO CENTS FROM DOLLAR*/
                 var change = rate - base;
-
 
                 /*UPDATE THE VALUE OF THE  SPECIFIC ELEMENT*/
                 $(".rate", el).html(data.rate);
@@ -395,6 +410,23 @@ function socketRefresh(asset_ids) {
 }
 
 function change_color_text(row) {
+
+    if(row.find('.td-endRate').length>0){
+        var start_rate = row.find('.td-entryRate')
+        var end_rate = row.find('.td-endRate');
+
+        console.log(parseFloat(start_rate.text()));
+        console.log(parseFloat(end_rate.text()));
+        var change = parseFloat(start_rate.text()) - parseFloat(end_rate.text());
+
+        if((change<0)){
+            end_rate.addClass('text-success').removeClass('text-danger');
+
+        }else{
+            end_rate.removeClass('text-success').addClass('text-danger');
+        }
+    }
+
 
     /*IF THE RATE WAS UP*/
     if (row.hasClass('up'))

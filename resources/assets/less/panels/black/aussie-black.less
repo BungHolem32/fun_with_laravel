@@ -30,16 +30,19 @@ body {
   margin: 0;
   position: relative;
   padding: 0;
+  background: black;
 
   /*REMOVE TRANSITION ON DESKTOP VIEW*/
   @media (max-width: 1000px) {
     transition: all 1s;
+    overflow-x: hidden;
   }
 
   /*WRAPPER FOR ALL THE CONTENT*/
   .content-wrapper {
     background: url('@{image}bg.jpg') top center;
     background-size: contain;
+    overflow-x: hidden;
 
     /*ACCOUNT DETAILS*/
     .account-details-desktop {
@@ -132,11 +135,15 @@ body {
           padding: 0;
         }
         .row {
+          @media (max-width: 768px) {
+            margin: 0;
+          }
+
           /*ACCOUNT DETAIL TITLE */
           .account-details-title {
             background: #01395E;
             color: white;
-            padding: 0.4em;
+            .padding(0.4em, 0, 0.4em, 0);
             font-size: 1.3em;
           }
 
@@ -368,7 +375,6 @@ body {
       position: relative;
       &.container {
         padding: 0;
-        //@media (max-width:)
       }
 
       /*TAB WRAPPER GENERAL*/
@@ -380,11 +386,14 @@ body {
         background-color: #282828;
 
         @media (max-width: 1200px) {
-          .margin(1.4em, 0.7em, 2.5em, 0em);
+          .margin(1.4em, 0em, 2.5em, 0em);
         }
 
         @media (max-width: 996px) {
-          .margin(1.4em, 0.7em, 3.5em, 0em)
+          .margin(1.4em, 0em, 3.5em, 0em);
+        }
+        @media (max-width:768px) {
+          width: 95%;
         }
 
         &:hover [class^="tab-shadow"] {
@@ -673,6 +682,7 @@ body {
         .margin(3em, 0, 0, 0);
         overflow: hidden;
         border: none;
+        padding: 4px 1px;
       }
       /*SPECIFIC CONTAINER*/
       .container {
@@ -694,6 +704,8 @@ body {
             border-top: none;
             @media (max-width: 400px) {
               font-size: 11px;
+              vertical-align: middle !important;
+              padding: 8px 2.5px !important;
             }
 
           }
@@ -930,6 +942,7 @@ body {
               @media (max-width: 768px) {
                 width: @width*9 !important;
                 font-size: 2.2em;
+                min-height: 1.8em;
               }
             }
           }
@@ -942,7 +955,7 @@ body {
       color: white;
       background: rgba(0, 0, 0, 0.6);
       .padding-right(0) !important;
-
+      .padding-left(0) !important;
       /*CONTENT FIRST INNER WRAPPER*/
       .modal-dialog-deposit {
         //width: 60%;
@@ -1443,9 +1456,6 @@ body {
   /*DISPLAY OPTIONS ON THE WAITING LOGOS*/
   .displaying-options-on-waiting-logos;
 
-
-
-
   /*LOGIN PAGE PART*/
   .wrapper-login {
 
@@ -1479,10 +1489,27 @@ body {
                   .form {
                     float: none;
 
+                    /*FORM ELEMENTS*/
                     .form-group {
+
+                      /*INPUT DESIGN*/
                       .form-control {
                         height: 48.9px;
+                        font-family: Arial, FontAwesome;
+
+                        /*ERROR ON THE INPUT */
+                        &.error {
+                          border: 1px solid red;
+                        }
                       }
+
+                      /*LABEL DESIGN*/
+                      label {
+                        &.error, #error {
+                          display: none !important;
+                        }
+                      }
+
                     }
                     .form-options {
                       .btn {
@@ -1495,23 +1522,21 @@ body {
                       .forgotpass {
                         color: #3E80D4;
                       }
+                      .loading {
+                        margin-top: -2.4em;
+                      }
                     }
-
                   }
                 }
-
               }
             }
-
           }
-
         }
-
       }
     }
 
-    .wrapper-img-logo{
-      #logo_login{
+    .wrapper-img-logo {
+      #logo_login {
         text-align: center;
         margin: 0 auto;
         display: block;
@@ -1519,8 +1544,14 @@ body {
     }
   }
 
-
 }
 
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+  @media (max-width: 500px) {
+    padding: 3px;
+    vertical-align: middle;
+  }
 
-
+  vertical-align: middle;
+  padding: 3px;
+}

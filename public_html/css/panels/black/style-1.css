@@ -6449,6 +6449,12 @@ button.close {
   /* for vertical scrollbars */
   height: 20px;
   /* for horizontal scrollbars */
+  /*HIDE SCROLLBAR ON MOBILE */
+}
+@media (max-width: 640px) {
+  .scroll-bar-style ::-webkit-scrollbar {
+    display: none;
+  }
 }
 .flip-able {
   /* Gecko */
@@ -6459,6 +6465,12 @@ button.close {
   /* Standard */
   -webkit-filter: FlipH;
   filter: FlipH;
+}
+input.empty {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
 }
 /*ACTIVE BUTTON IN THE TAB FOUR BUTTONS*/
 .active-btn {
@@ -6483,6 +6495,7 @@ body {
   margin: 0;
   position: relative;
   padding: 0;
+  background: black;
   /*REMOVE TRANSITION ON DESKTOP VIEW*/
   /*WRAPPER FOR ALL THE CONTENT*/
   /*SCROLL BAR STYLES*/
@@ -6491,15 +6504,18 @@ body {
   /*DISPLAY OPTIONS ON THE WAITING LOGOS*/
   /*HIDE ELEMENT*/
   /*SHOW ELELMENT */
+  /*LOGIN PAGE PART*/
 }
 @media (max-width: 1000px) {
   body {
     transition: all 1s;
+    overflow-x: hidden;
   }
 }
 body .content-wrapper {
   background: url('/img/panel/black/bg.jpg') top center;
   background-size: contain;
+  overflow-x: hidden;
   /*ACCOUNT DETAILS*/
   /*NAVBAR DESKTOP*/
   /* NAVBAR MOBILE*/
@@ -6613,10 +6629,15 @@ body .content-wrapper .account-details-mobile .container .row {
   /*ACCOUNT DETAIL TITLE */
   /*ACCOUNT DETAIL PERSONAL*/
 }
+@media (max-width: 768px) {
+  body .content-wrapper .account-details-mobile .container .row {
+    margin: 0;
+  }
+}
 body .content-wrapper .account-details-mobile .container .row .account-details-title {
   background: #01395E;
   color: white;
-  padding: 0.4em;
+  padding: 0.4em 0 0.4em 0;
   font-size: 1.3em;
 }
 body .content-wrapper .account-details-mobile .container .row .account-detail-personal-info {
@@ -6854,12 +6875,17 @@ body .content-wrapper .tabs-wrapper .tab-wrapper {
 }
 @media (max-width: 1200px) {
   body .content-wrapper .tabs-wrapper .tab-wrapper {
-    margin: 1.4em 0em 2.5em 0.7em;
+    margin: 1.4em 0em 2.5em 0em;
   }
 }
 @media (max-width: 996px) {
   body .content-wrapper .tabs-wrapper .tab-wrapper {
-    margin: 1.4em 0em 3.5em 0.7em;
+    margin: 1.4em 0em 3.5em 0em;
+  }
+}
+@media (max-width: 768px) {
+  body .content-wrapper .tabs-wrapper .tab-wrapper {
+    width: 95%;
   }
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper:hover [class^="tab-shadow"] {
@@ -7131,6 +7157,7 @@ body .content-wrapper .rb-options-history {
     margin: 3em 0 0 0;
     overflow: hidden;
     border: none;
+    padding: 4px 1px;
   }
 }
 body .content-wrapper .rb-options-open-trade .container,
@@ -7162,6 +7189,8 @@ body .content-wrapper .rb-options-history .container .table-row .table-data {
   body .content-wrapper .rb-options-open-trade .container .table-row .table-data,
   body .content-wrapper .rb-options-history .container .table-row .table-data {
     font-size: 11px;
+    vertical-align: middle !important;
+    padding: 8px 2.5px !important;
   }
 }
 body .content-wrapper .rb-options-open-trade .container .table-title,
@@ -7381,12 +7410,14 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
   body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-footer-welcome .button-welcome-footer {
     width: 90% !important;
     font-size: 2.2em;
+    min-height: 1.8em;
   }
 }
 body .content-wrapper .modal-deposit {
   color: white;
   background: rgba(0, 0, 0, 0.6);
   padding-left: 0 !important;
+  padding-right: 0 !important;
   /*CONTENT FIRST INNER WRAPPER*/
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit {
@@ -7843,6 +7874,12 @@ body ::-webkit-scrollbar {
   /* for vertical scrollbars */
   height: 20px;
   /* for horizontal scrollbars */
+  /*HIDE SCROLLBAR ON MOBILE */
+}
+@media (max-width: 640px) {
+  body ::-webkit-scrollbar {
+    display: none;
+  }
 }
 body .text-danger {
   color: red;
@@ -7887,9 +7924,23 @@ body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-log
 }
 body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form {
   float: none;
+  /*FORM ELEMENTS*/
+}
+body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-group {
+  /*INPUT DESIGN*/
+  /*LABEL DESIGN*/
 }
 body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-group .form-control {
   height: 48.9px;
+  font-family: Arial, FontAwesome;
+  /*ERROR ON THE INPUT */
+}
+body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-group .form-control.error {
+  border: 1px solid red;
+}
+body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-group label.error,
+body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-group label #error {
+  display: none !important;
 }
 body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-options .btn {
   width: 100%;
@@ -7901,10 +7952,33 @@ body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-log
 body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-options .forgotpass {
   color: #3E80D4;
 }
+body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-options .loading {
+  margin-top: -2.4em;
+}
 body .wrapper-login .wrapper-img-logo #logo_login {
   text-align: center;
   margin: 0 auto;
   display: block;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  vertical-align: middle;
+  padding: 3px;
+}
+@media (max-width: 500px) {
+  .table > thead > tr > th,
+  .table > tbody > tr > th,
+  .table > tfoot > tr > th,
+  .table > thead > tr > td,
+  .table > tbody > tr > td,
+  .table > tfoot > tr > td {
+    padding: 3px;
+    vertical-align: middle;
+  }
 }
 
 /*# sourceMappingURL=style-1.css.map */

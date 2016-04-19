@@ -1,6 +1,8 @@
 <?php $c = \Session::get('spotCustomer'); ?>
 @section('head')
     <link rel="stylesheet" href="/css/panels/black/libs/toggles-full.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     {{--FONT INCLUDE--}}
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300,300italic' rel='stylesheet'
           type='text/css'>
@@ -408,10 +410,10 @@
                     <th class="table-data text-capitalize text-center">@ln(assets)</th>
                     <th class="table-data text-capitalize text-center">@ln(position)</th>
                     <th class="table-data text-capitalize text-center">@ln(amount)</th>
-                    <th class="table-data text-capitalize text-center">@ln(entry rate)</th>
-                    <th class="table-data text-capitalize text-center">@ln(current rate)</th>
-                    <th class="table-data text-capitalize text-center">@ln(expiration date)</th>
-                    <th class="table-data text-capitalize text-center">@ln(status)</th>
+                    <th class="table-data text-capitalize text-center ">@ln(entry rate)</th>
+                    <th class="table-data text-capitalize text-center ">@ln(current rate)</th>
+                    <th class="table-data text-capitalize text-center ">@ln(expiration date)</th>
+                    <th class="table-data text-capitalize text-center showed hidden-sm hidden-xs">@ln(status)</th>
                     </thead>
 
 
@@ -429,88 +431,82 @@
                         <td class="table-data td-position text-uppercase text-center">@ln(put)</td>
 
                         {{--AMOUNT--}}
-                        <td class="table-data td-amount  text-center">$3955</td>
+                        <td class="table-data td-amount  text-center"></td>
 
                         {{--ENTRY RATE--}}
-                        <td class="table-data td-entryRate text-center">2035.632</td>
+                        <td class="table-data td-entryRate text-center"></td>
 
                         {{--CURRNET RATE --}}
                         <td class="hide-td-in-history-trade table-data td-assets current-rate  text-center text-center">
                             <span class='rate'></span></td>
 
                         {{--END RATE--}}
-                        <td class="table-data td-endRate hide-td-in-open-trade text-center">2036</td>
-
-                        {{--PAYOUT--}}
-                        <td class="table-data td-payOut hide-td-in-open-trade text-center">$250</td>
-
-                        {{--PROFIT--}}
-                        <td class="table-data td-profit hide-td-in-open-trade text-center">$211.45</td>
+                        <td class="table-data td-endRate hide-td-in-open-trade text-center "></td>
 
                         {{--END DATE EXPERATION DATE--}}
-                        <td class="table-data td-endDate  text-center">2016-01-25</td>
+                        <td class="table-data td-endDate  text-center"></td>
 
                         {{--STATUS--}}
-                        <td class="table-data td-status text-capitalize text-center">close</td>
+                        <td class="table-data td-status text-capitalize text-center hidden-sm hidden-xs"></td>
                     </tr>
                 </table>
             </div>
         </section>
 
-        {{--TABLE WITH THE OPEN TRADE HISTORY--}}
+        {{--TABLE  HISTORY TRADE--}}
         <section class="table-responsive rb-options-history">
             <div class="container">
                 <table class="table">
 
-                    {{--TABLE TITLE (RBOPTIONS OPEN TRADE)--}}
+                    {{--TABLE TITLE (RBOPTIONS HISTORY TRADE)--}}
                     <caption class="table-title text-center text-uppercase">{{$page->brand->name}} @ln(Trades History)
-                        <i
-                                class="getLoading fa fa-refresh fa-spin"></i></caption>
+                        <i class="getLoading fa fa-refresh fa-spin"></i></caption>
 
                     {{--FIRST TABLE ROW WITH ALL THE HEADERS--}}
                     <thead class="table-headers table-row">
                     <th class="text-capitalize text-center table-header-th">@ln(assets)</th>
                     <th class="text-capitalize text-center table-header-th">@ln(position)</th>
                     <th class="text-capitalize text-center table-header-th">@ln(amount)</th>
-                    <th class="text-capitalize text-center table-header-th">@ln(entry rate)</th>
-                    <th class="text-capitalize text-center table-header-th">@ln(closing rate)</th>
-                    <th class="text-capitalize text-center table-header-th">@ln(payout)</th>
-                    <th class="text-capitalize text-center table-header-th">@ln(profit)</th>
-                    <th class="text-capitalize text-center table-header-th">@ln(date)</th>
-                    <th class="text-capitalize text-center table-header-th">@ln(status)</th>
+                    <th class="text-capitalize text-center table-header-th hidden-sm hidden-xs">@ln(entry rate)</th>
+                    <th class="text-capitalize text-center table-header-th hidden-sm hidden-xs">@ln(closing rate)</th>
+                    <th class="text-capitalize text-center table-header-th hidden-sm hidden-xs ">@ln(payout)</th>
+                    <th class="text-capitalize text-center table-header-th hidden-sm hidden-xs">@ln(profit)</th>
+                    <th class="text-capitalize text-center table-header-th hidden-sm hidden-xs">@ln(date)</th>
+                    <th class="text-capitalize text-center table-header-th ">@ln(status)</th>
                     </thead>
 
                     {{--TABLE DATA FOR TABLE RB OPTIONS HISTORY--}}
                     <tr class="table-tr-content table-row  text-center">
 
                         {{--ASSET NAME--}}
-                        <td class="table-data td-assets  text-capitalize text-center"><span
-                                    class="text-uppercase">s&p</span> future
+                        <td class="table-data td-name  text-capitalize text-center">
+                            <span class="text-uppercase">
+                            </span>
                         </td>
 
                         {{--POSITION--}}
-                        <td class="table-data td-position text-uppercase text-center">@ln(put)</td>
+                        <td class="table-data td-position text-uppercase text-center"></td>
 
                         {{--AMOUNT--}}
-                        <td class="table-data td-amount  text-center">$3955</td>
+                        <td class="table-data td-amount  text-center"></td>
 
                         {{--ENTRY RATE--}}
-                        <td class="table-data td-entryRate text-center">2035.632</td>
+                        <td class="table-data td-entryRate text-center hidden-sm hidden-xs"></td>
 
                         {{--CLOSING RATE--}}
-                        <td class="table-data td-endRate  hide-td-in-open-trade text-center">2036</td>
+                        <td class="table-data td-endRate hide-td-in-open-trade text-center hidden-sm hidden-xs"></td>
 
                         {{--PAYOUT--}}
-                        <td class="table-data td-payOut hide-td-in-open-trade text-center">$250</td>
+                        <td class="table-data td-payout hide-td-in-open-trade text-center hidden-sm hidden-xs"></td>
 
                         {{--PROFIT--}}
-                        <td class="table-data td-profit hide-td-in-open-trade text-center">$211.45</td>
+                        <td class="table-data td-profit hide-td-in-open-trade text-center hidden-sm hidden-xs"></td>
 
                         {{--END DATE EXPERATION DATE--}}
-                        <td class="table-data td-endDate  text-center">2016-01-25</td>
+                        <td class="table-data td-endDate  text-center hidden-sm hidden-xs"></td>
 
                         {{--STATUS--}}
-                        <td class="table-data td-status text-capitalize text-center">close</td>
+                        <td class="table-data td-status text-capitalize text-center "></td>
                     </tr>
                 </table>
             </div>
@@ -659,7 +655,7 @@
                         <div class="form-wrapper">
 
                             {{--FORM INPUTS (FORM TAG)--}}
-                            <form class="form-deposit" role="form">
+                            <form class="form-deposit" role="form" id="form-deposit" novalidate="novalidate">
 
                                 {{--FIRST ROW FORM WAPPER--}}
                                 <div class="col-lg-6 first-part-form">
@@ -688,7 +684,7 @@
                                     <div class="form-group ">
                                         <label for="last-name" class="text-capitalize col-md-4 label-form"> last
                                             name</label>
-                                        <input type="text" class="form-control col-md-8" id="last_name"
+                                        <input type="text" class="form-control col-md-8" id="last_name" name="last_name"
                                                value="{{ App\Customer::get()->lastName }}" required
                                                aria-required="true">
                                     </div>
@@ -747,8 +743,7 @@
                                     {{--TITLE WRAPPER INPUT WRAPPER--}}
                                     <div class="form-title-wrapper">
                                         <h3 class="form-title text-uppercase col-md-6 col-sm-12 col-xs-12 label-form">
-                                            your payment
-                                            details</h3>
+                                            @ln(your payment details)</h3>
                                         <img src="/img/panel/black/desktop/yellow-arrow.png"
                                              alt="arrow that points to the inputs"
                                              class="yellow-arrow visible-lg-block visible-md-block flip-able">
@@ -756,18 +751,33 @@
                                     {{--CLEAR FIX AFTER TITLE--}}
                                     <div class="clearfix"></div>
 
+
+                                    {{--Deposit LOADING REGIONS--}}
+                                    {{--<div id="deposit-loading-region"></div>--}}
+                                    {{--<div class="form-group saved-cards-group hidden">--}}
+                                        {{--<label for="fund_id" class="col-xs-4 control-label"><i--}}
+                                                    {{--class="fa fa-credit-card"></i> Saved Cards</label>--}}
+
+                                        {{--<div class="col-xs-8">--}}
+                                            {{--<select name="fund_id" id="fund_id" class="form-control input-sm">--}}
+                                                {{--<option value="-1">Loading Credit Cards...</option>--}}
+                                            {{--</select>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+
+
+
                                     {{--CARD-TYPE INPUT WRAPPER--}}
                                     <div class="form-group ">
                                         <div class="col-md-4 card-type-title-wrapper">
-                                            <label for="card-type" class="label-form text-capitalize"> card
-                                                type</label>
+                                            <label for="card-type" class="label-form text-capitalize">@ln(card type)</label>
                                             <img src="/img/panel/black/desktop/credit-cards.png" alt="card type images"
                                                  class="card-type-img visible-lg-inline-block visible-md-inline-block">
                                         </div>
+
                                         <select name="card_type" id="card_type"
                                                 class="form-control text-capitalize col-md-8 card-type-selectbox"
-                                                aria-required="true"
-                                                name="" id="card-type">
+                                                aria-required="true" id="card-type">
                                             <option value="-1">choose type</option>
                                             <option value="1">visa</option>
                                             <option value="2">mastercard</option>
@@ -794,14 +804,14 @@
 
                                     {{--EXPIRATION INPUT WRAPPER--}}
                                     <div class="form-group  col-md-12 col-sm-12 col-xs-12">
-
                                         {{--LABEL FOR THE EXPERAION DATE--}}
                                         <label for="expiration-date" class="label-form text-capitalize col-md-4">expiration
                                             date</label>
                                         {{--SELECT BOX  FOR MONTH EXPERATION INPUT--}}
-                                        <select name="month-exp" id="month-exp"
+                                        <select id="month-exp"
                                                 class="pull-left col-lg-3 col-md-3 col-sm-6 col-xs-6 month-exp-selectbox text-capitalize"
                                                 name="expires_month">
+
                                             <option value="-1" class="text-capitalize">month</option>
                                             <option value="1">01</option>
                                             <option value="2">02</option>
@@ -818,7 +828,7 @@
                                         </select>
 
                                         {{--SELECT BOX FOR YEAR EXPERATION INPUT--}}
-                                        <select name="year-exp" id="year-exp"
+                                        <select id="year-exp"
                                                 class="pull-right col-lg-5 col-md-4  col-sm-6 col-xs-6 year-exp-selectbox"
                                                 name="expires_year">
                                             <option value="-1" class="text-capitalize col-md-4">year</option>
@@ -858,15 +868,14 @@
                                     <div class="clearfix"></div>
 
                                     {{--SUBMIT BUTTON --}}
-                                    <button type="submit" id="depositBtn" class="btn form-button text-uppercase">get me
-                                        started -
-                                        deposit funds
+                                    <button type="submit" id="depositBtn" class="btn form-button text-uppercase">@ln(get me started -
+                                        deposit funds)
                                     </button>
 
                                     {{--WARNING MESSAGE COMMENT AT THE BOTTOM OF THE FORM--}}
                                     <div class="warning-massage-beneath-the-button text-center text-capitalize">
-                                        deposit funds into your {{ $page->brand->name }} trading account. <br>
-                                        (Finish button will automatically be available once you've funded your account)
+                                        @ln(deposit funds into your) {{ $page->brand->name }} @ln(trading account. <br>
+                                        (Finish button will automatically be available once you've funded your account))
                                     </div>
                                 </div>
                             </form>

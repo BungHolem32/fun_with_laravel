@@ -62,7 +62,7 @@ class PanelController extends Controller {
     
     public function deposit(){
         if(Customer::isLogged()){
-
+            
             // From server
             $data['method'] = 'creditCard';
             $data['customerId'] = Customer::get('id');

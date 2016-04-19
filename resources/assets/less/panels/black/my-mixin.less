@@ -74,9 +74,15 @@
     border-radius: 5px;
   }
 
+
   ::-webkit-scrollbar {
     width: 20px; /* for vertical scrollbars */
     height: 20px; /* for horizontal scrollbars */
+
+    /*HIDE SCROLLBAR ON MOBILE */
+    @media (max-width:640px) {
+        display: none;
+    }
   }
 }
 
@@ -87,4 +93,12 @@
   -webkit-transform: scaleX(-1); /* Webkit */
   transform: scaleX(-1);         /* Standard */
   filter: FlipH;
+}
+
+
+input.empty {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
 }
