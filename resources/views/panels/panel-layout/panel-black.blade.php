@@ -149,9 +149,7 @@
                             </a>
                         </li>
                         <li class="text-uppercase navbar-part">
-                            <a
-                                    href="{{--{{ $c->getAutologinLink() }}--}}"
-                                    class="navbar-text">@ln(broker trading area)
+                            <a href="{{ $c->getAutologinLink() }}" class="navbar-text">@ln(broker trading area)
                             </a>
                         </li>
                         <li class="text-uppercase  navbar-part">
@@ -197,7 +195,7 @@
                 </li>
                 <li class="navbar-li-wrapper">
                     <a
-                            href="{{--{{ $c->getAutologinLink() }}--}}"
+                            href="{{ $c->getAutologinLink() }}"
                             class="navbar-text-mobile">@ln(broker trading area)
                     </a>
                 </li>
