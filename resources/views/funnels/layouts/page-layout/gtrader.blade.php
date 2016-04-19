@@ -338,6 +338,7 @@
                     <div class="gray-background" onclick="closeStories()"></div>
                     <div class="content">
                         <div id="op-asset-video_lightbox-2">
+                            <div><span id="close-story" onclick="closeStories()">X</span></div>
                             <iframe src="" frameborder="0" allowfullscreen=""></iframe>
                         </div>
                     </div>

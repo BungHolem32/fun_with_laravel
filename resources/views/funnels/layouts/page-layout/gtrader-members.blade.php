@@ -36,11 +36,6 @@
                         </div>
                     </div>
                     <div class="one-third column cols narrow" id="le_body_row_1_col_2"></div>
-                    <div class="one-third column cols narrow" id="le_body_row_1_col_3">
-                        <div class="element-container cf" data-style="" id="le_body_row_1_col_3_el_1">
-                            <div class="element"> AVAILABLE - Wednesday, April 6th</div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div style='background:#263238;padding-top:25px;padding-bottom:25px;border-top-width:7px;border-top-style:solid;border-top-color:;border-bottom-width:px;border-bottom-style:solid;border-bottom-color:;'
@@ -75,7 +70,7 @@
                         <div class="element-container cf" data-style="" id="le_body_row_3_col_1_el_1">
                             <div class="element">
                                 <div class="video-plugin-new" style="max-width:100%; width:853px; height:auto; padding-top:0; padding-bottom:0; margin:0 auto;margin:0 auto; border: 0px solid #fff;margin-bottom: 25px;">
-                                    <div style="width:853px;height:0;  padding-bottom: 56.271981242673%; padding-top:0;">
+                                    <div style="width:853px; padding-top:0;">
                                         @include('funnels.layouts._partials._video')
                                     </div>
                                 </div>
@@ -360,6 +355,7 @@
                     <div class="gray-background" onclick="closeStories()"></div>
                     <div class="content">
                         <div id="op-asset-video_lightbox-2">
+                            <div><span id="close-story" onclick="closeStories()">X</span></div>
                             <iframe src="" frameborder="0" allowfullscreen=""></iframe>
                         </div>
                     </div>
@@ -392,7 +388,7 @@
                         <div class="element-container cf" data-style="" id="le_body_row_12_col_1_el_2">
                             <div class="element"><h2
                                         style='font-size:30px;font-family:"Lato", sans-serif;font-style:normal;font-weight:300;text-align:center;'>
-                                    Don’t Hesitate To Contact Our Friendly Support Team Any Time support@gtradersoft.com</h2>
+                                    Don’t Hesitate To Contact Our Friendly Support Team Any Time</h2>
                             </div>
                         </div>
                     </div>
