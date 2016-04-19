@@ -6883,11 +6883,6 @@ body .content-wrapper .tabs-wrapper .tab-wrapper {
     margin: 1.4em 0em 3.5em 0em;
   }
 }
-@media (max-width: 768px) {
-  body .content-wrapper .tabs-wrapper .tab-wrapper {
-    width: 95%;
-  }
-}
 body .content-wrapper .tabs-wrapper .tab-wrapper:hover [class^="tab-shadow"] {
   opacity: 1;
 }
