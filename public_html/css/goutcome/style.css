@@ -157,17 +157,11 @@ body {
 }
 
 .live-script {
-
     color: #FFFFFF;
-
     font-size: 18px;
-
     text-align: center;
-
     padding-right: 10px;
-
     padding-left: 10px;
-
 }
 
 .style3 {
@@ -178,12 +172,16 @@ body {
 }
 
 .ff-btn {
-    background-image: url(/img/goutcome/Get-Access-FREE.png);
+    background-image: url(/img/goutcome/Button.png);
     background-repeat: no-repeat;
     height: 78px;
     width: 272px;
     border: 1px solid transparent;
     background-color: transparent;
+}
+
+.ff-btn:hover {
+    background-image: url(/img/goutcome/Button-rollOver.png);
 }
 
 #logo-img {
