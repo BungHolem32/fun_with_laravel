@@ -272,7 +272,7 @@ body {
 
         .navbar-li-wrapper {
           border-bottom: 1px solid #237EBB;
-          font-family: 'Open Sans', sans-serif;
+          font-family: @font;
           line-height: 45px;
           .padding(3px, 0, 3px, 20px);
 
@@ -1470,9 +1470,10 @@ body {
             .form-title {
               margin-bottom: 0.5em;
               font-size: 3.1em;
-              font-family: Roboto Condensed;
+              font-family: @font;
               text-indent: 30px;
               letter-spacing: 0.3px;
+              color: white;
             }
 
             /*LOGIN FORM*/
@@ -1492,7 +1493,9 @@ body {
                       /*INPUT DESIGN*/
                       .form-control {
                         height: 48.9px;
-                        font-family: Arial, FontAwesome;
+                        font-family: @font;
+                        font-size: 1.5em;
+                        text-indent: 30px;
 
                         /*ERROR ON THE INPUT */
                         &.error {
@@ -1507,17 +1510,46 @@ body {
                         }
                       }
 
+                      .fa-user{
+                        position: absolute;
+                        top: 10px;
+                        left: 22px;
+                        font-size: 2.3em;
+                        color: gray;
+                      }
+
+                      .fa.fa-lock {
+                        position: absolute;
+                        top: 72px;
+                        left: 22px;
+                        font-size: 2.3em;
+                        color: gray;
+                      }
+
                     }
+                    /*FORM BTN + LABEL + ICONS*/
                     .form-options {
+                      /*BUTTON SUBMIT */
                       .btn {
                         width: 100%;
                         margin: 0;
                         min-height: 49px;
                         font-size: 2.1em;
                         line-height: 1px;
+                        color: black;
+                        text-shadow: 0px -0.6px 0px white;
+                        font-family: @font;
                       }
+                      /*HREF FORGOT PASSWORD*/
                       .forgotpass {
                         color: #3E80D4;
+                        float: right;
+                        text-decoration: none;
+                        font-family: @font;
+                        &:hover{
+                          color: lighten(#3E80D4,20%);
+
+                        }
                       }
                       .loading {
                         margin-top: -2.4em;

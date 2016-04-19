@@ -91,7 +91,7 @@
                                            {{--USER NAME --}}
                                             <div class="form-group">
                                                 <label for="text" class="sr-only">Email address:</label>
-                                                <i class="fa-user"></i>
+                                                <i class="fa fa-user"></i>
                                                 <input type="text" value="{{\Request::get('email')}}"
                                                        class="form-control" type="text" placeholder="user name"
                                                        required name="email">
@@ -100,6 +100,7 @@
                                             {{--PASSWORD--}}
                                             <div class="form-group">
                                                 <label for="pwd" class="sr-only">Password:</label>
+                                                <i class="fa fa-lock"></i>
                                                 <input name="password" value="{{\Request::get('password')}}"
                                                        class="form-control" type="password"
                                                        placeholder="password" required>
