@@ -1,0 +1,17 @@
+.update_title {
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+.update_title:first-child {
+    margin-top: 30px;
+}
+.update_subtitle {
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+.video { border: none !important; }
+
+#container-members {
+ background: url("/img/dreamprofits/mbg.jpg") no-repeat fixed center;
+}
