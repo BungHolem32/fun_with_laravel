@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from social-trader.co/feed/feed.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Apr 2016 07:25:57 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Tweeter Feed</title>
+<link type="text/css" rel="stylesheet" href="style.css">
+<script src="jQuery.js"></script>
+</head>
+
+<body>
+<div id="facebook_feed">
+	<div id="feed">
+	    <div id="feed_content"></div>
+    </div>
+</div>
+<script>
+	var nm = ["Mike","Roger","Charles","Reece","Brandon","Robert","Luca","Harrison","Ryan","Taylor","Frank","Larry","Billy","Sam","Finlay","Zara","Rafael","George","Georgia","Matthew","Sylvie","Kiera","Chris","Paul","Mark","Austin","Karol","Juan","Conrad","Michal","Ben","Patria","Ava","Diane","Skye","Helen","Jennifer","Isabella","Faith","Jessica","Penny","Rebecca","Summer","Tamara","Tamika","Magdalene","Wendy","Genevieve","Stephanie","Erin"];
+	var data = [
+	
+		"@socialtrader you rock - finally getting that paper! I’m ready to quit my job this week #paperchasing",
+
+	"about to make my withdrawal of $22,334 and its still my first week @socialtrader - cheers Jonathan! #jonathancooper #st",
+
+	"@socialtrader RULES! made 30k in my first month - the software literally copies winning trades for us - get in or miss out forever #winning #st #socialtrader",
+
+	"$1,000 day already thanks to the Social Trader I’m using to copy winning binary trades. Thanks so much ST #milliondollar #dreambig #thinkbig",
+
+	"Holy hell….this is amazing - about to withdraw $30,283 from my Social Trader account…first months earnings look good! #socialtrader",
+
+	"Jonathan I can’t thank you and the team enough @socialtrader. This suff is straight up bananas. I just quit my job!", 
+
+	"Epic system, just made $15,393 with the @socialtrader.  This year is gonna be so damn good! #st #socialtrader",
+
+	"Thee days ago I deposited $500 and I now have $16,302 in my account, is this legit!!?!? I hope so cos i just withdrew the cash! Gonna part hard this weekend @socialtrader.",
+
+	"@socialtrader already made $7,500 today and the day has just started.  Awesome software Jonathan",
+
+	"all i can say is thank you @socialtrader.  my life has changed forever! #winning",
+
+	"The @socialtrader support really is amazing.  They have resolved my query in minutes and I’m now back to making money with the social trader. Thanks!"];
+
+	var images = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg","12.jpg","13.jpg","14.jpg","15.jpg","16.jpg","17.jpg","18.jpg","19.jpg","20.jpg","21.jpg","22.jpg","23.jpg","24.jpg","25.jpg","26.jpg","27.jpg","28.jpg","29.jpg","30.jpg","31.jpg","32.jpg","33.jpg","34.jpg","35.jpg","36.jpg","37.jpg","38.jpg","39.jpg","40.jpg","41.jpg","42.jpg","43.jpg","44.jpg","45.jpg","46.jpg","47.jpg","48.jpg","49.jpg","50.jpg"];
+
+
+	setInterval('autoRefresh()',60000);
+	var cnt=1;
+	function autoRefresh()
+	{
+		var counter = rand_num(0,images.length);
+		var dc = rand_num(0,data.length);
+		var oldtime = new Date();
+		var old_time = oldtime.getSeconds();
+		document.getElementById("feed_content").innerHTML = "<div style='clear:both;'></div><div id='feed_name'><img src='" + images[counter] + "' height='50' /><div id='data'><b><a href='#'>" + nm[counter] + "</a></b><span id='curr_time_"+cnt+"' class='ctime' sec='60'>1 minute ago</span><p> " + data[dc] + "</p></div></div>"+document.getElementById("feed_content").innerHTML;
+		cnt++;
+		
+		for(i=1;i<cnt;i++)
+		{
+			var day=hour=minute=0;
+			sec1=$("#curr_time_"+i).attr('sec');
+			sec1=parseInt(sec1)+60;//rand_num(60,360);
+			$("#curr_time_"+i).attr('sec',sec1)
+			minute=sec1/60;
+			if(minute>60)
+				hour=minute/60;
+			if(hour>24)
+				day=hour/24;
+			
+			if(day>0)
+				$("#curr_time_"+i).html(parseInt(day)+"d");
+			else if(hour>0)
+				$("#curr_time_"+i).html(parseInt(hour)+"h");
+			else if(minute>0)
+				$("#curr_time_"+i).html(parseInt(minute)+"m");
+		}
+	}
+	
+	function rand_num(min,max) {
+	 var number = min + Math.floor(Math.random() * max);
+	 return number;
+	}
+	
+	for(i=0;i<10;i++)
+		autoRefresh();
+	
+</script>
+
+</body>
+<!-- Mirrored from social-trader.co/feed/feed.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Apr 2016 07:26:12 GMT -->
+</html>

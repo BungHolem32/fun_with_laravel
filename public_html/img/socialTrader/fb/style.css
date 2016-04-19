@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+body
+{
+	font-family:Verdana, Geneva, sans-serif;
+	padding:0;
+	margin:0;
+}
+#facebook_feed
+{
+	width:100%;
+	margin:0 auto;
+}
+.title
+{
+	/*width:302px;*/
+}
+.title h3
+{
+	height:30px;
+	color:#39588F;
+	font-weight:bold;
+	padding:5px 0 0 10px;
+	margin:0;
+}
+#feed
+{
+	width:100%;
+	/*margin:20px auto 0;*/
+}
+#feed_content
+{
+	/*width:300px;*/
+	height:100%;
+	background:#FFF;
+	overflow-y: auto;
+	border: 1px solid #CCC;
+}
+#data
+{
+	/*height:50px;*/
+	margin:0 0 0 5px;
+}
+#feed_name
+{
+	/*font-weight:bold;*/
+	color:#39588F;
+	padding:3px;
+	float:left;
+	border-bottom:1px solid #CCC;
+	width:98%;
+}
+#feed_name img
+{
+	padding:5px;
+	float:left;
+}
+#feed_name a
+{
+	text-decoration:none;
+	font-size:15px;
+	color:#39588F;
+}
+#feed_name span
+{
+	font-weight:normal;
+	color:#000;
+	font-size:14px;
+}
+span.ctime
+{
+	font-size:13px !important;
+	color:#8B9396 !important;
+}
+.comment
+{
+	font-size:12px;
+	padding:5px 0 0 6px;
+}
+.dash{
+	font-size:6px !important;
+}
