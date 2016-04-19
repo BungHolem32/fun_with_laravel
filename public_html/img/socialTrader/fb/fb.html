@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from social-trader.co/fb/fb.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Apr 2016 07:25:37 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Facebook Feed</title>
+<link type="text/css" rel="stylesheet" href="style.css">
+<script src="jQuery.js"></script>
+</head>
+
+<body>
+<div id="facebook_feed">
+	<div id="feed">
+	    <div id="feed_content"></div>
+    </div>
+</div>
+<script>
+	var nm = ["Harvey","Christopher","David","Morgan","Jason","Travis","Charlie","Robert","Henry","Kieran","Charles","Joseph","Ellis","Billy","Andrew","Johnny","George","Sebastian","Cameron","Tory","Joel","Adam","Bryce","Dwayne","Vincent","Summer","Tamara","Tamika","Magdalene","Wendy","Genevieve","Stephanie","Erin","Abby","Ann","Abbie","Leigh","Shanna","Tilly","Laura","Mary","Paula","Isabel","Ella","Tatiana","Mary","Tegan","Cynthia","Abigail","Lauren"];
+	var data = [
+	"Another fantastic day with the SocialTrader, thanks Jonathan",
+"Just had a $20k day with the social trader - OMG",
+"Thanks to the SocialTrader for creating a binary system that actually works! Always winning!",
+"Celebrating another successful day with the SocialTrader! over $5,000 in pure profit!",
+"Yo this is so damn tight! thanks for letting me in to use the social trader, already had a $1,000 day!",
+"Woohoo, im so happy to be here, been making $$$ from day one! Thanks Jonathan!!",
+"After being scammed so much, I’m so happy to be inside the socialtrader and finally making some real money.",
+"WOW , this really is REAL! Thanks for the invite - already banking some big $$ in my first week.",
+"After the deposit of $250 I made two days ago, I now have $12,000 in my account! WOW THIS IS THE REAL DEAL",
+"Jonathan Cooper you really are a legend, thanks for the invite, already making sick money, cheers.",
+"Thanks to the SocialTrader I finally know how to make real money on the internet. Up $21,393 in two weeks!!!"];
+
+	var images = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg","12.jpg","13.jpg","14.jpg","15.jpg","16.jpg","17.jpg","18.jpg","19.jpg","20.jpg","21.jpg","22.jpg","23.jpg","24.jpg","25.jpg","26.jpg","27.jpg","28.jpg","29.jpg","30.jpg","31.jpg","32.jpg","33.jpg","34.jpg","35.jpg","36.jpg","37.jpg","38.jpg","39.jpg","40.jpg","41.jpg","42.jpg","43.jpg","44.jpg","45.jpg","46.jpg","47.jpg","48.jpg","49.jpg","50.jpg"];
+
+
+	setInterval('autoRefresh()',60000);
+	var cnt=1;
+	function autoRefresh()
+	{
+		var counter = rand_num(0,images.length);
+		var dc = rand_num(0,data.length);
+		var oldtime = new Date();
+		var old_time = oldtime.getSeconds();
+		document.getElementById("feed_content").innerHTML = "<div style='clear:both;'></div><div id='feed_name'><img src='" + images[counter] + "' height='40' /><b><a href='#'>" + nm[counter] + "</a></b><br/><span id='curr_time_"+cnt+"' class='ctime' sec='60'>1 minute</span><div style='clear:both;'></div><div id='data'> <span> " + data[dc] + "</span></div><div class='comment'>Like <span class='dash'>-</span> Comment <span class='dash'>-</span> Share </div></div>"+document.getElementById("feed_content").innerHTML;
+		cnt++;
+		
+		for(i=1;i<cnt;i++)
+		{
+			var day=hour=minute=0;
+			sec1=$("#curr_time_"+i).attr('sec');
+			sec1=parseInt(sec1)+60;//rand_num(60,360);
+			$("#curr_time_"+i).attr('sec',sec1)
+			minute=sec1/60;
+			if(minute>60)
+				hour=minute/60;
+			if(hour>24)
+				day=hour/24;
+			
+			if(day>0)
+				$("#curr_time_"+i).html(parseInt(day)+" days");
+			else if(hour>0)
+				$("#curr_time_"+i).html(parseInt(hour)+" hrs");
+			else if(minute>0)
+				$("#curr_time_"+i).html(parseInt(minute)+" mins");
+		}
+	}
+	
+	function rand_num(min,max) {
+	 var number = min + Math.floor(Math.random() * max);
+	 return number;
+	}
+	
+	for(i=0;i<10;i++)
+		autoRefresh();
+	
+</script>
+</body>
+
+<!-- Mirrored from social-trader.co/fb/fb.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Apr 2016 07:25:57 GMT -->
+</html>
