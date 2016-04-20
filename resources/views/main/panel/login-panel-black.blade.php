@@ -23,10 +23,10 @@
 
 @section('page-layout')
 
-
-
+    {{--LOGIN WRAPPER--}}
     <div class="login-wrapper">
 
+        {{--LOGIN LOG WRAPPER--}}
         <div class="logo-wrapper">
             <a href="/login" class="logo logo-login">
                 {{--LOGO DYNAMIC MANAGED IN THE PAGE MANAGEMNT--}}
@@ -34,14 +34,14 @@
             </a>
         </div>
 
-
+        {{--LOGIN TITLE WRAPPER--}}
         <div class="login-title-wrapper">
             <h3 class="login-title" align="center"><i class="icon-lock"></i> @ln(Login)
             </h3>
         </div>
 
+        {{--LOGIN FORM  WRAPPER --}}
         <div class="login-form-wrapper col-md-4 col-md-offset-4 col-sm-12 col-xs-12">
-
             {{--form opening--}}
             {!! Form::open(['action'=>'OpenAccountController@login','class'=>'loginForm ajax-api']) !!}
 
@@ -69,10 +69,13 @@
                        class="form-control" type="password"
                        placeholder="password" required>
             </div>
-            <div class="form-options">
 
+            <div class="form-options">
+                {{--SUBMIT BTN --}}
                 <button type="submit"
                         class="btn btn-success btn-lg text-center center-block btn-login">@ln(Login)</button>
+
+                {{--FORGOT PASSWORD--}}
                 <a href="http://www.rboptions.com/ForgotPassword" class=" btn-lg bfloat forgotpass">@ln(Forgot Password)</a>
             </div>
             {!! Form::close() !!}
