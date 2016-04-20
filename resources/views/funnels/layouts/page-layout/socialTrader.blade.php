@@ -200,8 +200,8 @@
                     {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post']) !!}
                         <input type="hidden" name="pageId" value="{{ $page->id }}">
                         @if($page->switches->showEmailField)
-                            <input id="name-1" placeholder="Name" name="name" tabindex="501" type="text">
-                            <input id="email-2" placeholder="Email address" tabindex="502" name="email" type="email">
+                            {{--<input id="name-1" placeholder="Name" name="name" tabindex="501" type="text">--}}
+                            {{--<input id="email-2" placeholder="Email address" tabindex="502" name="email" type="email">--}}
                             <input value="INSTANT ACCESS" class="btn submit" tabindex="503" type="submit">
                         @endif
                     {!! Form::close() !!}
