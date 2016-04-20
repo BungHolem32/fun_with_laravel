@@ -6502,6 +6502,114 @@ button.close {
   -webkit-filter: FlipH;
   filter: FlipH;
 }
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background: black url('/img/panel/black/desktop/big-bg-login.jpg') no-repeat top center !important;
+  background-size: contain;
+  /*LOGIN PAGE PART*/
+}
+body .login-wrapper {
+  font-family: 'Roboto Condensed', sans-serif;
+  /*BRAND LOGO*/
+  /*H3 TAG TITLE (LOGIN)*/
+  /*FORM INSIDE LOGIN PAGE*/
+}
+body .login-wrapper .logo-wrapper {
+  /*LOGO LOGIN H REF*/
+}
+body .login-wrapper .logo-wrapper .logo-login {
+  /*LOGO IMG TAG*/
+}
+body .login-wrapper .logo-wrapper .logo-login #logo_login {
+  margin: 33px auto;
+  display: block;
+}
+body .login-wrapper .login-title-wrapper .login-title {
+  margin-bottom: 0.5em;
+  font-size: 3.1em;
+  font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: 0.3px;
+  color: white;
+}
+body .login-wrapper .login-form-wrapper {
+  /*FORM ELEMENTS*/
+  /*FORM BTN + LABEL + ICONS*/
+}
+body .login-wrapper .login-form-wrapper .form-group {
+  /*INPUT DESIGN*/
+  /*LABEL DESIGN*/
+}
+body .login-wrapper .login-form-wrapper .form-group.user-input {
+  margin-bottom: 0;
+}
+body .login-wrapper .login-form-wrapper .form-group .form-control {
+  height: 48.9px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.5em;
+  text-indent: 23px;
+  /*ERROR ON THE INPUT */
+}
+body .login-wrapper .login-form-wrapper .form-group .form-control.error {
+  border: 1px solid red;
+}
+body .login-wrapper .login-form-wrapper .form-group label.error,
+body .login-wrapper .login-form-wrapper .form-group label #error {
+  display: none !important;
+}
+body .login-wrapper .login-form-wrapper .form-group .fa-user {
+  position: absolute;
+  top: 10px;
+  left: 22px;
+  font-size: 2.3em;
+  color: gray;
+}
+body .login-wrapper .login-form-wrapper .form-group .account-login-image {
+  position: relative;
+  top: 35px;
+  left: 11px;
+  height: 22.1px;
+}
+body .login-wrapper .login-form-wrapper .form-group .password-login-image {
+  position: relative;
+  top: 35px;
+  left: 11px;
+  height: 22.1px;
+}
+body .login-wrapper .login-form-wrapper .form-group .fa.fa-lock {
+  position: absolute;
+  top: 72px;
+  left: 22px;
+  font-size: 2.3em;
+  color: gray;
+}
+body .login-wrapper .login-form-wrapper .form-options {
+  /*BUTTON SUBMIT */
+  /*HREF FORGOT PASSWORD*/
+}
+body .login-wrapper .login-form-wrapper .form-options .btn {
+  width: 100%;
+  margin: 0;
+  min-height: 52px;
+  font-size: 2.1em;
+  font-weight: bold;
+  line-height: 1px;
+  color: black;
+  text-shadow: 0.2px 0.9px 0px white;
+  font-family: 'Roboto Condensed', sans-serif;
+  background: linear-gradient(to bottom, #AADD20, #79AA10);
+}
+body .login-wrapper .login-form-wrapper .form-options .forgotpass {
+  color: #3E80D4;
+  float: right;
+  text-decoration: none;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+body .login-wrapper .login-form-wrapper .form-options .forgotpass:hover {
+  color: #91b7e7;
+}
+body .login-wrapper .login-form-wrapper .form-options .loading {
+  margin-top: -2.4em;
+}
 /*BASE BODY STYLE*/
 body {
   font-family: 'Roboto Condensed', sans-serif;
@@ -6518,7 +6626,6 @@ body {
   /*DISPLAY OPTIONS ON THE WAITING LOGOS*/
   /*HIDE ELEMENT*/
   /*SHOW ELELMENT */
-  /*LOGIN PAGE PART*/
 }
 @media (max-width: 1000px) {
   body {
@@ -7929,126 +8036,6 @@ body ::-moz-placeholder {
 }
 body :-ms-input-placeholder {
   text-transform: capitalize;
-}
-body .wrapper-login {
-  background: url('/img/panel/black/desktop/big-bg-login.jpg') top center no-repeat;
-  background-size: contain;
-  /*CONTENT - WRAPPER LOGIN */
-}
-body .wrapper-login .content-wrapper-login {
-  font-family: 'Roboto Condensed', sans-serif;
-}
-body .wrapper-login .content-wrapper-login .row {
-  /*FIRST INNER CONTENT*/
-}
-body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login {
-  /*SECOND INNER CONTENT*/
-}
-body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner {
-  /*LOGIN FORM*/
-}
-body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .form-title {
-  margin-bottom: 0.5em;
-  font-size: 3.1em;
-  font-family: 'Roboto Condensed', sans-serif;
-  letter-spacing: 0.3px;
-  color: white;
-}
-body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm {
-  /**/
-}
-body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container {
-  margin: 3em auto 0 auto;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form {
-  float: none;
-  /*FORM ELEMENTS*/
-  /*FORM BTN + LABEL + ICONS*/
-}
-body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form.login-form {
-  padding: 0;
-}
-body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-group {
-  /*INPUT DESIGN*/
-  /*LABEL DESIGN*/
-}
-body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-group.user-input {
-  margin-bottom: 0;
-}
-body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-group .form-control {
-  height: 48.9px;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 1.5em;
-  text-indent: 23px;
-  /*ERROR ON THE INPUT */
-}
-body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-group .form-control.error {
-  border: 1px solid red;
-}
-body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-group label.error,
-body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-group label #error {
-  display: none !important;
-}
-body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-group .fa-user {
-  position: absolute;
-  top: 10px;
-  left: 22px;
-  font-size: 2.3em;
-  color: gray;
-}
-body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-group .account-login-image {
-  position: relative;
-  top: 35px;
-  left: 11px;
-  height: 22.1px;
-}
-body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-group .password-login-image {
-  position: relative;
-  top: 35px;
-  left: 11px;
-  height: 22.1px;
-}
-body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-group .fa.fa-lock {
-  position: absolute;
-  top: 72px;
-  left: 22px;
-  font-size: 2.3em;
-  color: gray;
-}
-body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-options {
-  /*BUTTON SUBMIT */
-  /*HREF FORGOT PASSWORD*/
-}
-body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-options .btn {
-  width: 100%;
-  margin: 0;
-  min-height: 52px;
-  font-size: 2.1em;
-  font-weight: bold;
-  line-height: 1px;
-  color: black;
-  text-shadow: 0.2px 0.9px 0px white;
-  font-family: 'Roboto Condensed', sans-serif;
-  background: linear-gradient(to bottom, #AADD20, #79AA10);
-}
-body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-options .forgotpass {
-  color: #3E80D4;
-  float: right;
-  text-decoration: none;
-  font-family: 'Roboto Condensed', sans-serif;
-}
-body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-options .forgotpass:hover {
-  color: #91b7e7;
-}
-body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-options .loading {
-  margin-top: -2.4em;
-}
-body .wrapper-login .wrapper-img-logo #logo_login {
-  text-align: center;
-  margin: 20px auto;
-  display: block;
 }
 /*CUSTOMIZE THE TABLE LAYOUT */
 .table > thead > tr > th,

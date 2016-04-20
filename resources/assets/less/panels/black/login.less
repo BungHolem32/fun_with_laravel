@@ -1,0 +1,129 @@
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background: black url('@{image}desktop/big-bg-login.jpg') no-repeat top center !important;
+  background-size: contain;
+
+  /*LOGIN PAGE PART*/
+  .login-wrapper {
+    font-family: @font;
+
+    /*BRAND LOGO*/
+    .logo-wrapper {
+
+      /*LOGO LOGIN H REF*/
+      .logo-login {
+
+        /*LOGO IMG TAG*/
+        #logo_login {
+          margin: 33px auto;
+          display: block;
+        }
+      }
+    }
+    /*H3 TAG TITLE (LOGIN)*/
+    .login-title-wrapper {
+      .login-title {
+        margin-bottom: 0.5em;
+        font-size: 3.1em;
+        font-family: @font;
+        letter-spacing: 0.3px;
+        color: white;
+      }
+    }
+
+    /*FORM INSIDE LOGIN PAGE*/
+    .login-form-wrapper {
+
+      /*FORM ELEMENTS*/
+      .form-group {
+
+        &.user-input {
+          margin-bottom: 0;
+        }
+
+        /*INPUT DESIGN*/
+        .form-control {
+          height: 48.9px;
+          font-family: @font;
+          font-size: 1.5em;
+          text-indent: 23px;
+
+          /*ERROR ON THE INPUT */
+          &.error {
+            border: 1px solid red;
+          }
+        }
+
+        /*LABEL DESIGN*/
+        label {
+          &.error, #error {
+            display: none !important;
+          }
+        }
+
+        .fa-user {
+          position: absolute;
+          top: 10px;
+          left: 22px;
+          font-size: 2.3em;
+          color: gray;
+        }
+
+        .account-login-image {
+          position: relative;
+          top: 35px;
+          left: 11px;
+          height: 22.1px;
+        }
+
+        .password-login-image {
+          position: relative;
+          top: 35px;
+          left: 11px;
+          height: 22.1px;
+        }
+
+        .fa.fa-lock {
+          position: absolute;
+          top: 72px;
+          left: 22px;
+          font-size: 2.3em;
+          color: gray;
+        }
+
+      }
+
+      /*FORM BTN + LABEL + ICONS*/
+      .form-options {
+        /*BUTTON SUBMIT */
+        .btn {
+          width: 100%;
+          margin: 0;
+          min-height: 52px;
+          font-size: 2.1em;
+          font-weight: bold;
+          line-height: 1px;
+          color: black;
+          text-shadow: 0.2px 0.9px 0px white;
+          font-family: @font;
+          background: linear-gradient(to bottom, #AADD20, #79AA10);
+        }
+        /*HREF FORGOT PASSWORD*/
+        .forgotpass {
+          color: #3E80D4;
+          float: right;
+          text-decoration: none;
+          font-family: @font;
+          &:hover {
+            color: lighten(#3E80D4, 20%);
+
+          }
+        }
+        .loading {
+          margin-top: -2.4em;
+        }
+      }
+
+    }
+  }
+}
