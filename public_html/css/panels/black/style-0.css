@@ -7915,18 +7915,6 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
   vertical-align: middle;
   color: #009AFF;
 }
-@media (max-width: 768px) {
-  body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-button {
-    height: 1.4em;
-    vertical-align: middle;
-  }
-}
-@media (max-width: 410px) {
-  body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-button {
-    height: 1.2em;
-    vertical-align: middle;
-  }
-}
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .answer-wrapper {
   padding: 0.5em 3em 0.5em 3em;
   /*ANSWER TEXT (P TAB)*/
