@@ -59,11 +59,10 @@ class PanelController extends Controller {
             echo json_encode(['err'=>0, 'positions'=>$positions, 'customer'=>$customer]);
         }
     }
-
-
+    
     public function deposit(){
         if(Customer::isLogged()){
-
+            
             // From server
             $data['method'] = 'creditCard';
             $data['customerId'] = Customer::get('id');
@@ -98,8 +97,7 @@ class PanelController extends Controller {
 
         }
     }
-
-
+    
     public function botOn(){
         if(Customer::isLogged()){
             return Bot::create(Customer::get())->turnOn();

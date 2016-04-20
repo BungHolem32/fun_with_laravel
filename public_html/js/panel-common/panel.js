@@ -96,6 +96,7 @@ $(window).on('ajax-refresh', function () {
     callAjax("/ajax/refresh", null, function(res){
         if (res.err === 0) {
             $('.getLoading').removeClass('on');
+            console.log(res);
             $('.balance').html(res.customer.currencySign + ' ' + res.customer.accountBalance);
 
             if(res.customer.accountBalance<25)
@@ -161,7 +162,9 @@ function load_positions(positions){
     $('tr', open_table).addClass('pending');
     $('tr', history_table).addClass('pending');
 
+    console.log(open_table);
     var row = $('#position-row').html();
+    console.log(row);
     var asset_list = [];
 
     $.each(positions, function(i, position){
@@ -186,7 +189,7 @@ function load_positions(positions){
         (position.status == 'open' ? open_table : history_table).append(new_row);
     });
     if($('tr.pending').length){
-        console.log('removing ', $('tr.pending'));
+        // console.log('removing ', $('tr.pending'));
         $('tr.pending').attr('id', '').remove();
     }
     return asset_list;

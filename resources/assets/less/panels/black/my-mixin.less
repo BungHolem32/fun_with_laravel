@@ -1,0 +1,134 @@
+
+
+/*ASSIGN VALUES*/
+@image: '/img/panel/black/';
+@font: 'Roboto Condensed', sans-serif;
+@width: 10%;
+@transition: 'all 1s';
+@bg-color-modal: #282827;
+@nav-bar-bright-color: #2c98e0;
+@nav-bar-dark-color: #01395E;
+@select-box-font-color: gray;
+@bg-color-header-modal: #01385e;
+
+
+/*MIXIN CLASSES*/
+/*BOX SHADOW PREFIXES  IF IT PASS ON PARAM*/
+.boxShadow(@prop) {
+  -webkit-box-shadow: @prop;
+  -moz-box-shadow: @prop;
+  box-shadow: @prop;
+}
+
+/*IF IT PASS MORE THE ONE THEN PASS */
+.boxShadow(@prop1:1px 1px 1px 1px blue,@prop2:2px 2px 1px 10px gray,@prop3,@prop4,@prop5) {
+  -webkit-box-shadow: @prop1, @prop2, @prop3, @prop4, @prop5;
+  -moz-box-shadow: @prop1, @prop2, @prop3, @prop4, @prop5;
+  box-shadow: @prop1, @prop2, @prop3, @prop4, @prop5;
+}
+
+/*ANIMATION PREFIX*/
+.animate(@animate: all,@deration) {
+  -webkit-animation: @animation @deration;
+  -moz-animation: @animation @deration;
+  -ms-animation: @animation @deration;
+  -o-animation: @animation @deration;
+  animation: @animation @deration;
+}
+
+/*ACTIVE BUTTON IN THE TAB FOUR BUTTONS*/
+.active-btn {
+  .boxShadow(inset 5px 3px 27px -4px #313030) !important;
+  text-shadow: 1px -1px 1px #313030 !important;
+  background: #0288cb !important;
+  background: linear-gradient(to bottom, #0288cb 43%, #0288cb 43%, #00daf8 100%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0288cb', endColorstr='#00daf8', GradientType=0) !important;
+}
+
+/*NAV BAR BODY CLASS ON MENU CLICK*/
+.push-body-nav-mobile {
+  .left(200px) !important;
+}
+
+/*NAV BAR MOBILE NAVIGATION*/
+.push-navbar-mobile {
+  .left (0) !important;
+}
+
+
+/*TEXT COLORS ON TABLES*/
+.text-colors-on-tables{
+
+  /*CHANGE THE COLOR OF THE  DANGER-TEXT  TO RED */
+  .text-danger {
+    color: red;
+    font-weight: bold;
+  }
+
+  .text-success {
+    color: lightgreen;
+  }
+}
+
+.displaying-options-on-waiting-logos{
+
+  /*HIDE ELEMENT*/
+  .hide {
+    opacity: 0;
+  }
+
+  /*SHOW ELELMENT */
+  .on {
+    display: inline-block !important;
+  }
+
+}
+
+/*SCROLL BAR STYLE*/
+.scroll-bar-style{
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+  }
+
+
+  ::-webkit-scrollbar {
+    width: 20px; /* for vertical scrollbars */
+    height: 20px; /* for horizontal scrollbars */
+
+    /*HIDE SCROLLBAR ON MOBILE */
+    @media (max-width:640px) {
+        display: none;
+    }
+  }
+}
+
+/*PLACE HOLDER*/
+
+.placeholder{
+
+  ::-webkit-input-placeholder{
+    text-transform: capitalize;
+  }
+  ::-moz-placeholder{
+    text-transform: capitalize;
+  }
+  :-ms-input-placeholder{
+    text-transform: capitalize;
+  }
+
+}
+
+.flip-able when (@direction=rtl){
+  -moz-transform: scaleX(-1);    /* Gecko */
+  -o-transform: scaleX(-1);      /* Opera */
+  -webkit-transform: scaleX(-1); /* Webkit */
+  transform: scaleX(-1);         /* Standard */
+  filter: FlipH;
+}
+

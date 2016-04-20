@@ -37,11 +37,12 @@
   }
   .col(@index, @list) when (@index > @grid-columns) { // terminal
     @{list} {
-      float: left;
+      float: @left;
     }
   }
   .col(1); // kickstart it
 }
+
 
 .calc-grid-column(@index, @class, @type) when (@type = width) and (@index > 0) {
   .col-@{class}-@{index} {
