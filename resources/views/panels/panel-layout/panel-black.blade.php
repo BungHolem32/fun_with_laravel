@@ -964,7 +964,6 @@
                         <h4 class="modal-title text-center text-uppercase">{{ $page->title_h1 }} method faq </h4>
                     </div>
 
-
                     {{--BODY PART --}}
                     <div class="modal-body-faq modal-body">
 
