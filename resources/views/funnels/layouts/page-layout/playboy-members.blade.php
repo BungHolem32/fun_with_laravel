@@ -6,7 +6,7 @@
     {!! $page->appendAsset(url('/css/playboy/font-awesome.css')) !!}
     {!! $page->appendAsset(url('/css/playboy/form_style_en.css')) !!}
     {!! $page->appendAsset(url('/js/playboy/bootstrap.min.js')) !!}
-    {!! $page->appendAsset(url('/js/playboy/members-script.js')) !!}
+    {!! $page->appendAsset(url('/js/playboy/script.js')) !!}
     {!! $page->appendAsset(url('/js/playboy/playboy.js')) !!}
 @append
 
@@ -37,7 +37,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 nonogutter">
                     <div class="form-bg">
                         <p class="sub">Register your<br>
-                            <span class="red">free account</span> here
+                            <span class="darkyellow">free account</span> here
                         </p>
                         <p class="sub-little">Register your <span class="red">free account</span> here</p>
                         <div class="form">

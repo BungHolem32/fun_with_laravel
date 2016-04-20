@@ -43,7 +43,11 @@ body {
 }
 
 .red {
-    color: #fe2b53;
+    color: #FAF494;
+}
+
+.darkyellow {
+    color: #B7B151;
 }
 
 .regulartxt {
@@ -62,8 +66,8 @@ body {
 }
 
 .timer_box {
-    width: 339px;
-    height: 192px;
+    width: 242px;
+    height: 230px;
     background: url(/img/playboy/timer_bg.png) no-repeat;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
@@ -82,8 +86,8 @@ body {
     height: auto;
     background: #fff;
 
-    border-top: 10px solid #fe2b53;
-    border-bottom: 10px solid #fe2b53;
+    border-top: 10px solid #FAF494;
+    border-bottom: 10px solid #FAF494;
 }
 
 .form-bg {
@@ -91,8 +95,8 @@ body {
     background: #fff;
     float: left;
     padding: 50px 60px 0;
-    border-top: 10px solid #fe2b53;
-    border-bottom: 10px solid #fe2b53;
+    border-top: 10px solid #FAF494;
+    border-bottom: 10px solid #FAF494;
 }
 
 .nonogutter

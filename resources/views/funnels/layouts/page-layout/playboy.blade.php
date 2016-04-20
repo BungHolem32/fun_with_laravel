@@ -6,7 +6,7 @@
     {!! $page->appendAsset(url('/js/playboy/bootstrap.min.js')) !!}
     {!! $page->appendAsset(url('/js/playboy/jquery.simple.timer.js')) !!}
     {!! $page->appendAsset(url('/js/playboy/playboy.js')) !!}
-    {!! $page->appendAsset(url('/js/playboy/funnel-script.js')) !!}
+    {!! $page->appendAsset(url('/js/playboy/script.js')) !!}
 @append
 
 @section('bottom-scripts')
@@ -18,9 +18,7 @@
     <div class="container-fluid">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-md-10 col-sm-8 col-xs-12 title">LEARN HOW YOU CAN MAKE<br><span
-                            class="undered">A FORTUNE</span> MY WAY
-                </div>
+                <div class="col-lg-8 col-md-10 col-sm-8 col-xs-12 title">LEARN HOW YOU CAN MAKE<br><span class="undered">A FORTUNE</span> MY WAY</div>
                 <div class="col-md-4 timer_box visible-sm visible-md visible-lg">
                     <div class="box_center">
                         <div class="spot">JUST<br><span class="red">30 SPOTS</span><br>AVAILABLE</div>
@@ -72,7 +70,7 @@
                                 <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-12 nogutter">
-                                <input type="submit" class="btn btn-primary btn-block" value="SUBMIT">
+                                <input type="submit" value="">
                             </div>
                         </div>
                         @endif
