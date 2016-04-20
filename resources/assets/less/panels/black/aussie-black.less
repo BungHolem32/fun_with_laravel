@@ -16,7 +16,7 @@ body {
 
   /*REMOVE TRANSITION ON DESKTOP VIEW*/
   @media (max-width: 1000px) {
-    transition: all 1s;
+    transition: all 0.5s;
     overflow-x: hidden;
   }
 
@@ -246,7 +246,7 @@ body {
       top: 0;
       z-index: 100;
       background: #2C98E0;
-      transition: all 1s;
+      transition: all 0.5s;
       .navbar-ul-wrapper {
         list-style: none;
         margin: 0;
@@ -1396,9 +1396,11 @@ body {
 
       /*LOGO BRAND IMAGE*/
       .logo-brand-img {
-        height: 5.9em;
+        height: 4.7em;
         position: absolute;
-        .left(16.4%);
+        .left(0);
+        .right(0);
+        margin: 0 auto;
         z-index: 1;
 
         @media (max-width: 1240px) {
@@ -1419,7 +1421,7 @@ body {
         }
 
         @media (max-width: 768px) {
-          max-height: 53px;
+          max-height: 41.4px;
           top: 0;
         }
       }
@@ -1435,8 +1437,12 @@ body {
   /*DISPLAY OPTIONS ON THE WAITING LOGOS*/
   .displaying-options-on-waiting-logos;
 
+  .placeholder;
+
   /*LOGIN PAGE PART*/
   .wrapper-login {
+    background: url('@{image}desktop/big-bg-login.jpg') top center no-repeat;
+    background-size: contain;
 
     /*CONTENT - WRAPPER LOGIN */
     .content-wrapper-login {
@@ -1467,8 +1473,11 @@ body {
                 .row {
                   .form {
                     float: none;
-                    &.login-form
-                      /*FORM ELEMENTS*/
+                    &.login-form{
+                      padding: 0;
+                    }
+
+                    /*FORM ELEMENTS*/
                     .form-group {
 
                       /*INPUT DESIGN*/
@@ -1476,7 +1485,7 @@ body {
                         height: 48.9px;
                         font-family: @font;
                         font-size: 1.5em;
-                        text-indent: 30px;
+                        text-indent: 45px;
 
                         /*ERROR ON THE INPUT */
                         &.error {
@@ -1516,10 +1525,12 @@ body {
                         margin: 0;
                         min-height: 49px;
                         font-size: 2.1em;
+                        font-weight: bold;
                         line-height: 1px;
                         color: black;
-                        text-shadow: 0px -0.6px 0px white;
+                        text-shadow: 0.2px 0.9px 0px white;
                         font-family: @font;
+                        background: linear-gradient(to bottom, #AADD20,#79AA10);
                       }
                       /*HREF FORGOT PASSWORD*/
                       .forgotpass {
@@ -1548,7 +1559,7 @@ body {
     .wrapper-img-logo {
       #logo_login {
         text-align: center;
-        margin: 0 auto;
+        margin: 20px auto;
         display: block;
       }
     }

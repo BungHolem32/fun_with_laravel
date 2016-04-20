@@ -8,7 +8,7 @@
         <style>
             @if(isMongoNotEmpty($page->background_panel))
             .bg-login {
-                background: url(../../../img/aussie/panel/{{$page->background_panel}}.jpg) center center fixed;
+                background: url(../../../img/panel/{{$page->background_panel}}-login.jpg) center center fixed;
             }
             @endif
         </style>

@@ -96,31 +96,44 @@
             nav_bar_mobile: {
                 value: {
 
-
+                    /*INITIATE THE METHOD TO TRIGER EVENT CLICK ON THE MENU*/
                     init: function () {
                         /*ON CLICK ON THE ICON-MENU PUSH THE MENU ON AND BODY INSIDE*/
                         $('body').on('click', '.icon-menu', function () {
 
-                            panel_object.nav_bar_mobile.show_or_hide_navbar(null, '.navbar-mobile', 'push-navbar-mobile', 'body', 'push-body-nav-mobile');
-                            $(this).addClass('active-nav-pushed');
+                            /*pass arguments to the method show or hide the nav on click*/
+                            panel_object.nav_bar_mobile.show_or_hide_navbar(null, '.navbar-mobile', 'push-navbar-mobile', 'body', 'push-body-nav-mobile', '.icon-menu', 'active-nav-pushed');
                         });
 
                         /*ON CLICK AGAIN HIDE THE NAVBAR*/
                         $('body').on('click', '.active-nav-pushed, .navbar-text-mobile', function () {
 
-                            /*CHECK IF THE BUTTON ACTIVE*/
-                            panel_object.nav_bar_mobile.show_or_hide_navbar(true, '.navbar-mobile', 'push-navbar-mobile', 'body', 'push-body-nav-mobile');
-                            $(this).removeClass('active-nav-pushed');
+                            /*and you inside the nav-bar */
+                            panel_object.nav_bar_mobile.show_or_hide_navbar(true, '.navbar-mobile', 'push-navbar-mobile', 'body', 'push-body-nav-mobile', '.icon-menu', 'active-nav-pushed');
                         })
                     },
 
-                    /*FUNCTION TO ADD AND REMOVE CLASS IN NAVBAR MOBILE CLICK*/
-                    show_or_hide_navbar: function (remove, selector1, class1, selector2, class2) {
+                    /**
+                     * @param {boolean} remove - if true the button already open
+                     * @param {string} selector1 - id of the first selector = navbar
+                     * @param {string} class2 = the class to add to the first selector
+                     * @param {string} selector2 - id of the second selector = body
+                     * @param {string} class2 = the class to add to the second selector
+                     */
+
+                    /*METHOD THAT OPEN AND CLOSE THE NAV BAR BY TRIGGER THE CLICK EVENT*/
+                    show_or_hide_navbar: function (remove, selector1, class1, selector2, class2, navbar, class3) {
+                        /*add the classes to the body and the navbar to move inside the dom*/
                         $(selector1).addClass(class1);
                         $(selector2).addClass(class2);
+                        $(navbar).addClass(class3);
+
+                        /*if the navbar already open close it*/
                         if (remove) {
                             $(selector1).removeClass(class1);
                             $(selector2).removeClass(class2);
+                            $(navbar).removeClass(class3);
+
                         }
                     },
 
@@ -454,7 +467,7 @@
                                     }
 
                                     /*call the method load_positions and at the end get the asset_list*/
-                                    asset_list = panel_object.dynamic_add_to_rb_options_tables.load_positions(res.positions,res.customer.currencySign);
+                                    asset_list = panel_object.dynamic_add_to_rb_options_tables.load_positions(res.positions, res.customer.currencySign);
 
                                     /*REFRESH THE SOCKET LIST EACH ITERATION (Update only the socket)*/
                                     panel_object.dynamic_add_to_rb_options_tables.socketRefresh(asset_list);
@@ -484,7 +497,7 @@
 
                         });
                     },
-                    load_positions: function (positions,currency) {
+                    load_positions: function (positions, currency) {
                         /*create two variables*/
                         var row, table_to_insert;
                         var open_table = panel_object.dynamic_add_to_rb_options_tables.prepare_table('rb-options-open-trade');
@@ -533,9 +546,9 @@
                                 /*find in the new row the current rate td and add class to it with the asset-id*/
                                 new_row.find('.td-assets').addClass(assetId);
 
-                            var status,amount;
-                            /*ITERATE OVER ALL THE ELEMENTS AND SIGN THE NEW DATA*/
-                            $.each(position, function (j, data) {
+                                var status, amount;
+                                /*ITERATE OVER ALL THE ELEMENTS AND SIGN THE NEW DATA*/
+                                $.each(position, function (j, data) {
 
                                     if (j == 'status') {
                                         status = data;
@@ -551,11 +564,11 @@
                                         if (j == 'profit') {
                                             if (status == 'won') {
                                                 data = ((data / 100) + 1) * amount;
-                                                data = (Math.ceil(data*100))/100;
+                                                data = (Math.ceil(data * 100)) / 100;
                                                 console.log(currency);
-                                                new_row.find('.td-' + j).text(data).prepend(currency).addClass('text-success')
+                                                new_row.find('.td-' + j).text(data).prepend(currency).addClass('text-success');
                                                 return;
-                                            }else{
+                                            } else {
                                                 data = 0;
                                                 new_row.find('.td-' + j).text(data).removeClass('text-success')
                                                 return;
