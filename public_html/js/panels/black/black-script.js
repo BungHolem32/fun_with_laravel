@@ -479,7 +479,6 @@
                                     /*reload the page*/
                                         window.location.reload(true);
 
-
                                     else
                                     /*alert the error message*/
                                         alert(res.errs.errors[0]);
@@ -543,44 +542,24 @@
                                 /*find in the new row the current rate td and add class to it with the asset-id*/
                                 new_row.find('.td-assets').addClass(assetId);
 
-                                var status, amount;
+                                var status, amount, profit;
+
+
                                 /*ITERATE OVER ALL THE ELEMENTS AND SIGN THE NEW DATA*/
-                                $.each(position, function (j, data) {
+                                $.each(position, function (position_name, position_value) {
 
-                                    if (j == 'status') {
-                                        status = data;
-                                    }
-                                    /*IF THERE'S SOME KEYS  AMOUNT AND PROFIT*/
-                                    if (j == 'amount' || j == 'profit') {
-
-                                        /*change there color to green*/
-                                        if (j == 'amount') {
-                                            amount = data;
-                                        }
-
-                                        if (j == 'profit') {
-                                            if (status == 'won') {
-                                                data = ((data / 100) + 1) * amount;
-                                                data = (Math.ceil(data * 100)) / 100;
-                                                new_row.find('.td-' + j).text(data).prepend(currency).addClass('text-success');
-                                                return;
-                                            } else {
-                                                data = 0;
-                                                new_row.find('.td-' + j).text(data).removeClass('text-success')
-                                                return;
-                                            }
-                                        }
-                                    }
                                     /*add to the new arrow the updated text from the server*/
-                                    new_row.find('.td-' + j).text(data);
+                                    new_row.find('.td-' + position_name).text(position_value);
 
+
+                                    /*update the color of the text upon situation*/
+                                    new_row = panel_object.dynamic_add_to_rb_options_tables.change_color_text(new_row, position_name, position_value, currency);
                                 });
 
-                                /*append to the table if open pend to the open table if not to the history table */
-                                table_to_insert.append(new_row);
 
-                                /*update the color of the text upon situation*/
-                                panel_object.dynamic_add_to_rb_options_tables.change_color_text(new_row);
+                                /*append to the table if open pend to the open table if not to the history table */
+
+                                table_to_insert.append(new_row);
                             }
                         );
 
@@ -669,7 +648,49 @@
                             });
                         });
                     },
-                    change_color_text: function (row) {
+
+
+                    /*CHANGE THE COLOR OF THE TEXT UPPON VALUE*/
+                    change_color_text: function (row, position_name, position_value, currency) {
+                        var status, profit;
+
+
+                        if (position_name == 'profit' && position_value != "" && position_value != undefined) {
+                            profit = position_value;
+                            status = row.find('.td-status').text();
+
+                            /*STATUS WON*/
+                            if (status == 'won') {
+
+                                /*profit get-value*/
+                                var amount = row.find('.td-amount').text();
+
+                                /*-----------PROFIT-------------*/
+                                /*calculate the profit value*/
+                                profit = ((profit / 100) + 1) * amount;
+                                /*round the amount*/
+                                profit = (Math.ceil(profit * 100)) / 100;
+                                /*append the new amount to the dom*/
+                                row.find('.td-profit').text(profit).prepend(currency).addClass('text-success').removeClass('text-danger');
+                                row.find('.td-amount').prepend(currency).addClass('text-success').removeClass('text-danger');
+                                row.find('.td-status').addClass('text-success').removeClass('text-danger')
+                            }
+                            /*STATUS LOST*/
+                            else if (status == 'lost') {
+                                profit = 0;
+                                row.find('.td-profit').text(profit).removeClass('text-success');
+                                row.find('.td-amount,.td-status').removeClass('text-success').addClass('text-danger');
+                            }
+                            /*STATUS CANCELED TIED*/
+                            else if (status == 'open') {
+                                row.find('.td-amount').addClass('text-success').prepend(currency);
+                            }
+
+                             /*IF THE STATUS IS TIE ON CANCELED*/
+                            else {
+                                row.find('.td-status').removeClass('text-success').removeClass('text-danger')
+                            }
+                        }
 
                         /*CHECK IF THERE'S AN END-RATE CLASS IN THE ROW (IT MEANT YOU'RE INSIDE THE HISTORY TRADE)*/
                         if (row.find('.td-endRate').length > 0) {
@@ -704,24 +725,10 @@
                         /*so the rate is decreased so the text  color changes to  red*/
                             $(row.find('.td-endRate,.rate')).removeClass('text-success').addClass('text-danger');
 
-                        /*IF THE USER  WON*/
-                        if (row.find('.td-status').text() == 'won')
+                        return row;
 
-                        /*change the text color to green*/
-                            $(row).find('.td-status').removeClass('text-danger').addClass('text-success')
-
-                        /*IF THE STATUS LOST*/
-                        if (row.find('.td-status').text() == 'lost')
-
-                        /*change the text color to red*/
-                            $(row.find('.td-status')).removeClass('text-success').addClass('text-danger');
-
-                        /*ELSE IF THE STATUS IS TIE OR CANCELED*/
-                        if (row.find('.td-status').text() == 'tie' || row.find('.td-status').text() == 'canceled')
-
-                        /*remove text color and change it to white (the default one)*/
-                            $(row.find('.td-status')).removeClass('text-success').removeClass('text-danger');
                     },
+                    /*PRPRARE THE SELECTION FOR THE TABLE */
                     prepare_table: function (tableSelector) {
 
                         /*create variable for the two tables*/
@@ -812,7 +819,15 @@
                 },
                 configurable: true,
                 enumerable: true
+            },
+            show_welcome_page_on_load: {
+                value: function () {
+                    $('.navbar-part:first-of-type').find('a').click();
+                },
+                configurable: true,
+                enumerable: true
             }
+
         })
 
         /*=============================================================================================================*/
@@ -832,46 +847,49 @@
         /*3 -  IN THE THIRD STEP OF THE HOME PAGE (TOGGLE SELECTION ON CHANGE) */
         panel_object.remove_selection_from_amount_buttons();
 
-        /*4 - ON MODAL DEPOSIT TOGGLE LABELS ON RESIZE CHANGING*/
+        /*4- SET THE AMOUNT OF THE TRADE*/
+        panel_object.set_amount_of_trade();
+
+
+        /*5 - ON MODAL DEPOSIT TOGGLE LABELS ON RESIZE CHANGING*/
         panel_object.on_mobile_hide_label();
 
-        /*5- ON RESIZE CHANGE THE LABEL APPEARANCE*/
+        /*6- ON RESIZE CHANGE THE LABEL APPEARANCE*/
         $(window).resize(function () {
             panel_object.on_mobile_hide_label();
         })
 
-        /*5 - SHOW OR HIDE THE ANSWER ON A CLICK && CHANGE BUTTON PICTURE*/
+        /*7 - SHOW OR HIDE THE ANSWER ON A CLICK && CHANGE BUTTON PICTURE*/
         panel_object.faq.init();
 
-        /*6 INITIATE THE TRIGGER ON CLICK FOR THE EXIT BUTTON ON THE MODALS */
+        /*8 INITIATE THE TRIGGER ON CLICK FOR THE EXIT BUTTON ON THE MODALS */
         panel_object.exit_modal_button();
 
-        /*7- LOOP OVER ALL THE STATUS AND CHANGE HIS COLOR*/
-        panel_object.change_color_by_status.init();
-        setTimeout(panel_object.change_color_by_status.loop_on_the_position, 1500);
-
-        /*8 - FORM VALIDATION AND SENDING*/
-        panel_object.form_validation_and_sending();
-
-        /*9 - SET THE AMOUNT OF THE TRADE*/
-        panel_object.set_amount_of_trade();
-
-        /*10 -TRIGGER THE CLICK ON LOGOUT LINK IN THE NAV BAR */
-        panel_object.logout_from_panel.init();
-
-        /*11 - DYNAMIC INSERT TO THE RB-OPTIONS TABLE */
+        /*9  DYNAMIC INSERT TO THE RB-OPTIONS TABLE */
         panel_object.dynamic_add_to_rb_options_tables.init();
-        panel_object.change_color_by_status.init();
 
-        /*11-2*/
+        /*9-2*/
         /*TRIGGER THE AJAX-REFRESH FUNCTION*/
         $(window).trigger('ajax-refresh');
 
-        /*11-3*/
+        /*9-3*/
         /*RUN EVERY 30 SECOND THE AJAX REFRESH CALL*/
         setInterval(function () {
-            $(window).trigger('ajax-refresh')
+            $(window).trigger('ajax-refresh');
         }, 30000);
+
+        /*10- LOOP OVER ALL THE ELEMENTS AND CHANGE THERE COLOR*/
+        panel_object.change_color_by_status.init();
+        setTimeout(panel_object.change_color_by_status.loop_on_the_position, 1700);
+
+        /*11 - FORM VALIDATION AND SENDING*/
+        panel_object.form_validation_and_sending();
+
+        /*12 -TRIGGER THE CLICK ON LOGOUT LINK IN THE NAV BAR */
+        panel_object.logout_from_panel.init();
+
+        /*13 SHOW WELCOME SCREEN ON LOAD*/
+        panel_object.show_welcome_page_on_load();
 
         /*ASSIGN GLOBAL VALUE TO THE OBJECT */
         window._panel = panel_object;
