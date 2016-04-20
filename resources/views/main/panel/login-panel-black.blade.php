@@ -5,13 +5,14 @@
     {{--REQUEST THE CSS--}}
     <link rel="stylesheet" href="/css/panels/black/style-{{Request::local()->dir}}.css"/>
 
+    @if(isMongoNotEmpty($page->background_panel))
+        {{123}}
         <style>
-            @if(isMongoNotEmpty($page->background_panel))
             .bg-login {
                 background: url(../../../img/panel/{{$page->background_panel}}-login.jpg) center center fixed;
             }
-            @endif
         </style>
+    @endif
 @append
 
 @section('bottom-scripts')
@@ -70,18 +71,18 @@
                                     <div class="form login-form center-block col-md-4 ">
 
                                         {{--USER NAME INPUT--}}
-                                        <div class="form-group">
+                                        <div class="form-group user-input">
                                             <label for="text" class="sr-only">Email address:</label>
-                                            <i class="fa fa-user"></i>
+                                            <img  src="/img/panel/black/login-account-ico.png" alt="" class="account-login-image">
                                             <input type="text" value="{{\Request::get('email')}}"
                                                    class="form-control" type="text" placeholder="user name"
                                                    required name="email">
                                         </div>
 
                                         {{--PASSWORD INPUT--}}
-                                        <div class="form-group">
+                                        <div class="form-group pasword-input">
                                             <label for="pwd" class="sr-only">Password:</label>
-                                            <i class="fa fa-lock"></i>
+                                            <img  src="/img/panel/black/login-password-ico.png" alt="" class="password-login-image">
                                             <input name="password" value="{{\Request::get('password')}}"
                                                    class="form-control" type="password"
                                                    placeholder="password" required>
@@ -92,11 +93,8 @@
 
                                             {{--BUTTON SUBMIT--}}
                                             <button type="submit"
-                                                    class="btn btn-success btn-lg text-center center-block">@ln(Login)</button>
+                                                    class="btn btn-success btn-lg text-center center-block btn-login">@ln(Login)</button>
 
-                                            {{-- LOADING DIV--}}
-                                            <div class="btn btn-success btn-lg loading" style="display: none;"><i
-                                                        class="fa fa-spinner fa-spin"></i></div>
 
                                             {{--FORGOT PASSWORD--}}
                                             <a href="http://www.rboptions.com/ForgotPassword"

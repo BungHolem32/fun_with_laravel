@@ -10,8 +10,8 @@ $(document).ready(function () {
                 dataType: 'json',
                 data: data,
                 beforeSend: function () {
-                    $('.login_btns').hide();
-                    $('.loading').show();
+                    $('.btn-login').text("").append('<i class="fa fa-spinner fa-spin"></i>');
+
                 },
                 success: function (res) {
                     if (res.err === 0) {
@@ -19,8 +19,8 @@ $(document).ready(function () {
                     }
                     else {
                         alert(res.errs.error);
-                        $('.loading').hide();
-                        $('.login_btns').show();
+                        $('.btn-login').text('Login');
+
                     }
                 },
                 error: function (err) {
