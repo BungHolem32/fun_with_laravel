@@ -973,10 +973,7 @@
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="/img/panel/black/desktop/m-q-close.png"
-                                     data-btn-open="/img/panel/black/desktop/m-q-open.png"
-                                     data-btn-close="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
-                                     class="question-button flip-able">
+                                <i class="fa fa-chevron-circle-right question-button" aria-hidden="true"></i>
                                 <h3 class="question-text text-uppercase">How much
                                     does {{ $page->title_h1 }} Method cost?</h3>
                             </div>
@@ -995,9 +992,7 @@
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
-                                     class="question-button" data-btn-open="/img/panel/black/desktop/m-q-open.png"
-                                     data-btn-close="/img/panel/black/desktop/m-q-close.png">
+                                <i class="fa fa-chevron-circle-right question-button" aria-hidden="true"></i>
                                 <h3 class="question-text text-uppercase">How much money can I make
                                     with {{ $page->title_h1 }} Method?</h3>
                             </div>
@@ -1016,10 +1011,7 @@
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
-                                     class="question-button flip-able"
-                                     data-btn-open="/img/panel/black/desktop/m-q-open.png"
-                                     data-btn-close="/img/panel/black/desktop/m-q-close.png">
+                                <i class="fa fa-chevron-circle-right question-button" aria-hidden="true"></i>
                                 <h3 class="question-text text-uppercase"> How can I make a profit
                                     using {{ $page->title_h1 }} Method?</h3>
                             </div>
@@ -1040,10 +1032,7 @@
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
-                                     class="question-button flip-able"
-                                     data-btn-open="/img/panel/black/desktop/m-q-open.png"
-                                     data-btn-close="/img/panel/black/desktop/m-q-close.png">
+                                <i class="fa fa-chevron-circle-right question-button" aria-hidden="true"></i>
                                 <h3 class="question-text text-uppercase">How much does it cost to open
                                     an account with the recommended binary options broker?</h3>
                             </div>
@@ -1064,10 +1053,7 @@
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
-                                     class="question-button flip-able"
-                                     data-btn-open="/img/panel/black/desktop/m-q-open.png"
-                                     data-btn-close="/img/panel/black/desktop/m-q-close.png">
+                                <i class="fa fa-chevron-circle-right question-button" aria-hidden="true"></i>
                                 <h3 class="question-text text-uppercase">Do I need to have previous
                                     experience with binary options trading in order to use {{ $page->title_h1 }}
                                     Method?</h3>
@@ -1087,10 +1073,7 @@
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
-                                     class="question-button flip-able"
-                                     data-btn-open="/img/panel/black/desktop/m-q-open.png"
-                                     data-btn-close="/img/panel/black/desktop/m-q-close.png">
+                                <i class="fa fa-chevron-circle-right question-button" aria-hidden="true"></i>
                                 <h3 class="question-text text-uppercase">Do I need to download any other
                                     software in order to trade binary options?</h3>
                             </div>
@@ -1110,10 +1093,7 @@
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
-                                     class="question-button flip-able"
-                                     data-btn-open="/img/panel/black/desktop/m-q-open.png"
-                                     data-btn-close="/img/panel/black/desktop/m-q-close.png">
+                                <i class="fa fa-chevron-circle-right question-button" aria-hidden="true"></i>
                                 <h3 class="question-text text-uppercase">What is the minimum investment
                                     amount per trade?</h3>
                             </div>
@@ -1131,10 +1111,7 @@
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
-                                     class="question-button flip-able"
-                                     data-btn-open="/img/panel/black/desktop/m-q-open.png"
-                                     data-btn-close="/img/panel/black/desktop/m-q-close.png">
+                                <i class="fa fa-chevron-circle-right question-button" aria-hidden="true"></i>
                                 <h3 class="question-text text-uppercase">How do I withdraw my profits
                                     from my trading account?</h3>
                             </div>
@@ -1155,10 +1132,7 @@
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
-                                     class="question-button flip-able"
-                                     data-btn-open="/img/panel/black/desktop/m-q-open.png"
-                                     data-btn-close="/img/panel/black/desktop/m-q-close.png">
+                                <i class="fa fa-chevron-circle-right question-button" aria-hidden="true"></i>
                                 <h3 class="question-text text-uppercase">What can I trade in when I
                                     trade binary options?</h3>
                             </div>
@@ -1177,10 +1151,7 @@
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
-                                     class="question-button flip-able"
-                                     data-btn-open="/img/panel/black/desktop/m-q-open.png"
-                                     data-btn-close="/img/panel/black/desktop/m-q-close.png">
+                                <i class="fa fa-chevron-circle-right question-button" aria-hidden="true"></i>
                                 <h3 class="question-text text-uppercase">My question is not answered
                                     here, what do I do?</h3>
                             </div>

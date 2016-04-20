@@ -7232,7 +7232,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part {
   /*BUTTON FIRST*/
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button {
-  font-size: 1.9em;
+  font-size: 1.7em;
   line-height: 2.033333;
   border-radius: 6px;
   position: relative;
@@ -7922,7 +7922,9 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
   }
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-button {
-  height: 1.7em;
+  font-size: 2em;
+  vertical-align: middle;
+  color: #009AFF;
 }
 @media (max-width: 768px) {
   body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-button {

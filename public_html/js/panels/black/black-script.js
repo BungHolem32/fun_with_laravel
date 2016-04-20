@@ -170,19 +170,17 @@
                         })
                     },
                     change_button_pic: function (elem) {
-                        /*TRIGER THE IMG BUTTON AFTER THE QUESTION*/
-                        img = $(elem).find(":first-child");
 
-                        /*CHECK IF THE ANSWER IS SHOWN OR HIDDEN*/
-                        /*AND CHANGE TO THE PROPER PIC*/
+                        /*trigger the icon*/
+                        var icon = $(elem).find(':first-child');
+
+                        /*if the answer is hidden change the icon to down */
                         if ($(elem).next().hasClass('hide')) {
-
-                            btn = img.data('btn-close');
-                            img.attr('src', btn);
+                            $(icon).addClass('fa-chevron-circle-right').removeClass('fa-chevron-circle-down');
                         }
+                        /* change the icon to right */
                         else {
-                            var btn = img.data('btn-open');
-                            img.attr('src', btn);
+                            $(icon).removeClass('fa-chevron-circle-right').addClass('fa-chevron-circle-down');
                         }
                     }
                 },
@@ -301,7 +299,6 @@
             remove_selection_from_amount_buttons: {
                 value: function () {
                     $('body').on('click', '.btn-amount-selected', function () {
-                        console.log($('.btn-amount-selected'))
                         $('.btn-amount-selected').removeClass('active-btn');
                     })
                 }
@@ -565,7 +562,6 @@
                                             if (status == 'won') {
                                                 data = ((data / 100) + 1) * amount;
                                                 data = (Math.ceil(data * 100)) / 100;
-                                                console.log(currency);
                                                 new_row.find('.td-' + j).text(data).prepend(currency).addClass('text-success');
                                                 return;
                                             } else {
@@ -647,7 +643,6 @@
                                         /*CHECK IF THE HISTORY TABLE WAS CHOSEN*/
                                     } else {
                                         rate = parseFloat(row.find('.td-endRate').text());
-                                        console.log(rate);
                                     }
 
                                     /*get the html of the specific person*/

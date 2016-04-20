@@ -304,5 +304,4 @@
             display: inline;
         }
     </style>
-
 @endsection
