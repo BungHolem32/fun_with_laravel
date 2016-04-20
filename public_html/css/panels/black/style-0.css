@@ -6885,6 +6885,8 @@ body .content-wrapper .navbar-mobile .navbar-ul-wrapper .navbar-li-wrapper .navb
   font-size: 0.9em;
   text-decoration: none;
   text-transform: uppercase;
+  width: 100%;
+  display: block;
 }
 body .content-wrapper .activate-method-system {
   margin: 8.5em auto 0 auto;
