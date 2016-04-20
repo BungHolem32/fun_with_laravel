@@ -99,7 +99,7 @@
                                                         class="fa fa-spinner fa-spin"></i></div>
 
                                             {{--FORGOT PASSWORD--}}
-                                            <a href="{{ $page->brand->forgotPassLink }}"
+                                            <a href="http://www.rboptions.com/ForgotPassword"
                                                class=" btn-lg bfloat forgotpass">@ln(Forgot Password)</a>
                                         </div>
                                     </div>
