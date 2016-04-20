@@ -40,7 +40,7 @@ html {
 body {
   margin: 0;
   min-height: 100%;
-  background-color: #fff;
+  background-color: #000a1a;
   font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
@@ -1963,10 +1963,38 @@ textarea.w-select {
     transform: rotate(360deg);
   }
 }
+
+@keyframes glowing {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .w-dyn-empty {
   padding: 10px;
   background-color: #dddddd;
 }
 .w-condition-invisible {
   display: none !important;
+}
+
+label.error {
+  text-align: center;
+}
+
+#prefix-error {
+  display: none !important;
+}
+
+#members-sub-submit {
+  -webkit-animation: glowing 1s infinite; /* Chrome, Safari, Opera */
+  animation: glowing 2s infinite;
+  padding: 40px;
+  margin-top: 60px;
 }
