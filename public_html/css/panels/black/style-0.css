@@ -12,6 +12,7 @@
 }*/
 /*IMPORT THE DIRECTION LESS TO TAKE CARE OF THE CHANGE IN DIRECTION OF OTHER LANGUAGES */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+@import url(https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -6415,6 +6416,22 @@ button.close {
 /*BOX SHADOW PREFIXES  IF IT PASS ON PARAM*/
 /*IF IT PASS MORE THE ONE THEN PASS */
 /*ANIMATION PREFIX*/
+/*ACTIVE BUTTON IN THE TAB FOUR BUTTONS*/
+.active-btn {
+  box-shadow: inset 5px 3px 27px -4px #313030 !important;
+  text-shadow: 1px -1px 1px #313030 !important;
+  background: #0288cb !important;
+  background: linear-gradient(to bottom, #0288cb 43%, #0288cb 43%, #00daf8 100%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0288cb', endColorstr='#00daf8', GradientType=0) !important;
+}
+/*NAV BAR BODY CLASS ON MENU CLICK*/
+.push-body-nav-mobile {
+  left: 200px !important;
+}
+/*NAV BAR MOBILE NAVIGATION*/
+.push-navbar-mobile {
+  left: 0 !important;
+}
 /*TEXT COLORS ON TABLES*/
 .text-colors-on-tables {
   /*CHANGE THE COLOR OF THE  DANGER-TEXT  TO RED */
@@ -6456,31 +6473,9 @@ button.close {
     display: none;
   }
 }
-input.empty {
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: inherit;
-}
-/*ACTIVE BUTTON IN THE TAB FOUR BUTTONS*/
-.active-btn {
-  box-shadow: inset 5px 3px 27px -4px #313030 !important;
-  text-shadow: 1px -1px 1px #313030 !important;
-  background: #0288cb !important;
-  background: linear-gradient(to bottom, #0288cb 43%, #0288cb 43%, #00daf8 100%) !important;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0288cb', endColorstr='#00daf8', GradientType=0) !important;
-}
-/*NAV BAR BODY CLASS ON MENU CLICK*/
-.push-body-nav-mobile {
-  left: 200px !important;
-}
-/*NAV BAR MOBILE NEVEGATION*/
-.push-navbar-mobile {
-  left: 0 !important;
-}
 /*BASE BODY STYLE*/
 body {
-  font-family: 'Roboto Condensed', arial;
+  font-family: 'Roboto Condensed', sans-serif;
   left: 0;
   margin: 0;
   position: relative;
@@ -6755,7 +6750,7 @@ body .content-wrapper .navbar-mobile .navbar-ul-wrapper {
 }
 body .content-wrapper .navbar-mobile .navbar-ul-wrapper .navbar-li-wrapper {
   border-bottom: 1px solid #237EBB;
-  font-family: 'Roboto Condensed', arial;
+  font-family: 'Roboto Condensed', sans-serif;
   line-height: 45px;
   padding: 3px 0 3px 20px;
 }
@@ -7878,7 +7873,7 @@ body .wrapper-login {
   /*CONTENT - WRAPPER LOGIN */
 }
 body .wrapper-login .content-wrapper-login {
-  font-family: 'Roboto Condensed', arial;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 body .wrapper-login .content-wrapper-login .row {
   /*FIRST INNER CONTENT*/
@@ -7892,7 +7887,7 @@ body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-log
 body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .form-title {
   margin-bottom: 0.5em;
   font-size: 3.1em;
-  font-family: 'Roboto Condensed', arial;
+  font-family: 'Roboto Condensed', sans-serif;
   text-indent: 30px;
   letter-spacing: 0.3px;
   color: white;
@@ -7914,7 +7909,7 @@ body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-log
 }
 body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-group .form-control {
   height: 48.9px;
-  font-family: 'Roboto Condensed', arial;
+  font-family: 'Roboto Condensed', sans-serif;
   font-size: 1.5em;
   text-indent: 30px;
   /*ERROR ON THE INPUT */
@@ -7952,13 +7947,13 @@ body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-log
   line-height: 1px;
   color: black;
   text-shadow: 0px -0.6px 0px white;
-  font-family: 'Roboto Condensed', arial;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-options .forgotpass {
   color: #3E80D4;
   float: right;
   text-decoration: none;
-  font-family: 'Roboto Condensed', arial;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 body .wrapper-login .content-wrapper-login .row .inner-first-content-wrapper-login .inner-second-content-inner .loginForm .container .row .form .form-options .forgotpass:hover {
   color: #91b7e7;
@@ -7971,6 +7966,7 @@ body .wrapper-login .wrapper-img-logo #logo_login {
   margin: 0 auto;
   display: block;
 }
+/*CUSTOMIZE THE TABLE LAYOUT */
 .table > thead > tr > th,
 .table > tbody > tr > th,
 .table > tfoot > tr > th,

@@ -539,6 +539,7 @@
                                     /*add to the new arrow the updated text from the server*/
                                     new_row.find('.td-' + j).text(data);
 
+
                                     /*IF THERE'S SOME KEYS  AMOUNT AND PROFIT*/
                                     if (j == 'amount' || j == 'profit') {
 
@@ -719,7 +720,6 @@
                 configurable: true
             },
 
-
             /*ON CLICK ON THE EXIT BUTTON IN THE MODAL EXIT THE MODAL*/
             exit_modal_button: {
                 value: function () {
@@ -733,7 +733,9 @@
                 value: {
                     init: function () {
                         var inter;
-                        inter = setInterval(panel_object.change_color_by_status.loop_on_the_position, 30000);
+                        inter = setInterval(function(){
+                            panel_object.change_color_by_status.loop_on_the_position();
+                        }, 30000);
                     },
 
                     /*CHANGE THE COLORS OF STATUS WHEN IT START THE LOOP*/
@@ -753,6 +755,7 @@
 
                     /*CHANGE THE ICON OF THE ARROW ON LOAD */
                     loop_on_the_position: function () {
+
                         /*ITTERATE OVER THE POSITIONS AND CHANGE THE ICON*/
                         $('.td-position').each(function (i, el) {
                             var position = $(el).text().toLowerCase();
@@ -786,7 +789,7 @@
         })
 
         /*=============================================================================================================*/
-        /*=============================================================================================================*/
+        /*==========================================INITIATE THE METHODS===============================================*/
         /*=============================================================================================================*/
 
         /*LETS INITIATE THE METHODS */
@@ -817,8 +820,8 @@
         panel_object.exit_modal_button();
 
         /*7- LOOP OVER ALL THE STATUS AND CHANGE HIS COLOR*/
-        setTimeout(panel_object.change_color_by_status.loop_on_the_position, 100);
         panel_object.change_color_by_status.init();
+        setTimeout(panel_object.change_color_by_status.loop_on_the_position, 1500);
 
         /*8 - FORM VALIDATION AND SENDING*/
         panel_object.form_validation_and_sending();
@@ -831,6 +834,7 @@
 
         /*11 - DYNAMIC INSERT TO THE RB-OPTIONS TABLE */
         panel_object.dynamic_add_to_rb_options_tables.init();
+        panel_object.change_color_by_status.init();
 
         /*11-2*/
         /*TRIGGER THE AJAX-REFRESH FUNCTION*/

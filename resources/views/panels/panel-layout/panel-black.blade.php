@@ -2,14 +2,14 @@
 @section('head')
     <link rel="stylesheet" href="/css/panels/black/libs/toggles-full.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    {{--FONT INCLUDE--}}
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300,300italic' rel='stylesheet'
-          type='text/css'>
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    {{--ADD FONTAWSOME LIBARARY--}}
+    <link rel="stylesheet" href="/css/panels/black/libs/font-awesome.min.css">
 
     {{--BASE STYLE SHEET--}}
     <link rel="stylesheet" href="/css/panels/black/style-{{Request::local()->dir}}.css"/>
-
 
     {{--<style>--}}
     {{--body .content-wrapper {--}}
@@ -21,12 +21,11 @@
 
 @append
 @section('bottom-scripts')
+    {{--SPOTOPTIONS SOCKET--}}
+    <script type="text/javascript" src="//sst-super-c-nl.spotoption.com/socket.io/socket.io.js"></script>
+
     {{--SOCKETIO SCRIPTS--}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-
-    {{--VALIDATE SCRIPT--}}
-    {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
-
 
     {{--BOOTSTRAP LIBARY--}}
     <script src="/js/panels/black/libs/bootstrap.min.js"></script>
@@ -34,17 +33,17 @@
     {{--TOGGLES BUTTON--}}
     <script src="/js/panels/black/libs/toggles.js"></script>
 
-    {{--SPOTOPTIONS SOCKET--}}
-    <script type="text/javascript" src="//sst-super-c-nl.spotoption.com/socket.io/socket.io.js"></script>
+    {{--VALIDATE SCRIPT--}}
+    {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
 
     {{--PANEL BASE SCRIPT--}}
-    {!! $page->appendAsset(url('/js/panels/black/panel.js')) !!}
+    {!! $page->appendAsset(url('/js/panels/black/black-script.js')) !!}
 
     {{--Main JS--}}
     <script src="/js/panels/black/main.js"></script>
 
     {{--New JS--}}
-    <script src="/js/panels/black/black-script.js"></script>
+    {{--<script src="/js/panels/black/black-script.js"></script>--}}
 
 @append
 
@@ -88,20 +87,14 @@
                     <p class="info-tab">
                         <span class="text-capitalize">@ln(broker name):</span>
 
-                        {{--todo-ilan add mongo class to the panel--}}
-                        @if(!empty($page->brand->name))
+                        @if(isMongoNotEmpty($page->brand->logo))
                             <img src="{{$page->brand->logo}}" alt="rb-option logo">
-                            <strong>{{ $page->brand->name }}</strong>
-                            {{--@else--}}
-
-                            {{--<strong class="info-result text-uppercase">rb</strong><strong--}}
-                            {{--class="info-result">options</strong>--}}
                         @endif
-                        {{--todo-ilan add mongo class to the panel--}}
+                        <strong>{{ $page->brand->name }}</strong>
                     </p>
                     <p class="info-tab">
                         <span class="text-capitalize">@ln(balance):</span>
-                        <strong class="info-result text-bold balance getLoading ">$ 0.00 <i
+                        <strong class="info-result text-bold balance getLoading "><i
                                     class="fa fa-refresh fa-spin"></i></strong>
                     </p>
                     <p class="info-tab">
@@ -114,8 +107,9 @@
         </div>
 
         <aside class="logo-brand">
-
-            <img src="{{ $page->panel_logo }}" alt="method_logo" class="logo-brand-img">
+            @if(isMongoNotEmpty($page->panel_logo))
+                <img src="{{ $page->panel_logo }}" alt="method_logo" class="logo-brand-img">
+            @endif
         </aside>
 
         {{--NAVBAR DESKTOP--}}
@@ -217,7 +211,7 @@
             </ul>
         </div>
 
-        {{--ACCOUNT DETAILS --}}
+        {{--ACCOUNT DETAILS MOBILE--}}
         <aside class="account-details-mobile visible-sm-block visible-xs-block">
             <div class="container">
                 {{--TITLE PART--}}
@@ -241,33 +235,39 @@
                 </div>
 
                 <div class="row">
-                    {{--PERSONAL INFO  (BASE CONTENT FO THE TAB)--}}
+                    {{--PERSONAL INFO  (BASE CONTENT FOR THE TAB)--}}
                     <div class="account-detail-personal-info col-sm-12">
 
                         {{--EMAIL--}}
                         <p class="info-tab col-sm-8 col-xs-7">
                             <span class="text-capitalize">@ln(email):</span>
-                            <strong>youremail@gmail.com</strong>
+                            <strong>{{ App\Customer::get()->email }}</strong>
                         </p>
+
 
                         {{--BALANCE--}}
                         <p class="info-tab col-sm-4 col-xs-5">
                             <span class="text-capitalize">@ln(balance):</span>
 
-                            <strong class="info-result text-bold">1532.63</strong>
+                            <strong class="info-result text-bold balance getLoading "><i
+                                        class="fa fa-refresh fa-spin"></i></strong>
                         </p>
 
                         {{--BROKER--}}
                         <p class="info-tab col-sm-7 col-xs-7">
                             <span class="text-capitalize">@ln(broker):</span>
-                            <img src="/img/panel/black/icon-rboptions.png" alt="rboption logo">
-                            <strong class="info-result text-uppercase">{{$page->brand->name}}</strong>
+                            {{--dynamic change for the brand name--}}
+                            @if(isMongoNotEmpty($page->brand->logo))
+                                <img src="{{$page->brand->logo}}" alt="brand logo">
+                            @endif
+                            <strong>{{ $page->brand->name }}</strong>
                         </p>
-                        {{--AOCCOUNT DETAILS--}}
+
+                        {{--ACCOUNT DETAILS--}}
                         <p class="info-tab col-sm-5 col-sm-push-1 col-xs-5">
                             <span class="text-capitalize">@ln(account) </span>
                             <span class="text-uppercase">@ln(id): </span>
-                            <strong class="info-result">432563</strong>
+                            <strong class="info-result">{{ App\Customer::get()->id }}</strong>
                         </p>
                     </div>
                 </div>
@@ -282,7 +282,10 @@
 
                 {{--TITLE WRAPPER--}}
                 <header class="active-method-title-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h3 class="text-uppercase method-title"> {{$page->body}}</h3>
+                    <h3 class="text-uppercase method-title">
+                        @if(isMongoNotEmpty($page->body))
+                            {{$page->body}}</h3>
+                    @endif
                 </header>
 
                 {{--SUBTITLE WRAPPER--}}
@@ -753,14 +756,14 @@
                                     {{--Deposit LOADING REGIONS--}}
                                     {{--<div id="deposit-loading-region"></div>--}}
                                     {{--<div class="form-group saved-cards-group hidden">--}}
-                                        {{--<label for="fund_id" class="col-xs-4 control-label"><i--}}
-                                                    {{--class="fa fa-credit-card"></i> Saved Cards</label>--}}
+                                    {{--<label for="fund_id" class="col-xs-4 control-label"><i--}}
+                                    {{--class="fa fa-credit-card"></i> Saved Cards</label>--}}
 
-                                        {{--<div class="col-xs-8">--}}
-                                            {{--<select name="fund_id" id="fund_id" class="form-control input-sm">--}}
-                                                {{--<option value="-1">Loading Credit Cards...</option>--}}
-                                            {{--</select>--}}
-                                        {{--</div>--}}
+                                    {{--<div class="col-xs-8">--}}
+                                    {{--<select name="fund_id" id="fund_id" class="form-control input-sm">--}}
+                                    {{--<option value="-1">Loading Credit Cards...</option>--}}
+                                    {{--</select>--}}
+                                    {{--</div>--}}
                                     {{--</div>--}}
 
 
@@ -768,7 +771,8 @@
                                     {{--CARD-TYPE INPUT WRAPPER--}}
                                     <div class="form-group ">
                                         <div class="col-md-4 card-type-title-wrapper">
-                                            <label for="card-type" class="label-form text-capitalize">@ln(card type)</label>
+                                            <label for="card-type"
+                                                   class="label-form text-capitalize">@ln(card type)</label>
                                             <img src="/img/panel/black/desktop/credit-cards.png" alt="card type images"
                                                  class="card-type-img visible-lg-inline-block visible-md-inline-block">
                                         </div>
@@ -1012,7 +1016,8 @@
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
-                                     class="question-button flip-able" data-btn-open="/img/panel/black/desktop/m-q-open.png"
+                                     class="question-button flip-able"
+                                     data-btn-open="/img/panel/black/desktop/m-q-open.png"
                                      data-btn-close="/img/panel/black/desktop/m-q-close.png">
                                 <h3 class="question-text text-uppercase"> How can I make a profit
                                     using {{ $page->title_h1 }} Method?</h3>
@@ -1035,7 +1040,8 @@
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
-                                     class="question-button flip-able" data-btn-open="/img/panel/black/desktop/m-q-open.png"
+                                     class="question-button flip-able"
+                                     data-btn-open="/img/panel/black/desktop/m-q-open.png"
                                      data-btn-close="/img/panel/black/desktop/m-q-close.png">
                                 <h3 class="question-text text-uppercase">How much does it cost to open
                                     an account with the recommended binary options broker?</h3>
@@ -1058,7 +1064,8 @@
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
-                                     class="question-button flip-able" data-btn-open="/img/panel/black/desktop/m-q-open.png"
+                                     class="question-button flip-able"
+                                     data-btn-open="/img/panel/black/desktop/m-q-open.png"
                                      data-btn-close="/img/panel/black/desktop/m-q-close.png">
                                 <h3 class="question-text text-uppercase">Do I need to have previous
                                     experience with binary options trading in order to use {{ $page->title_h1 }}
@@ -1080,7 +1087,8 @@
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
-                                     class="question-button flip-able" data-btn-open="/img/panel/black/desktop/m-q-open.png"
+                                     class="question-button flip-able"
+                                     data-btn-open="/img/panel/black/desktop/m-q-open.png"
                                      data-btn-close="/img/panel/black/desktop/m-q-close.png">
                                 <h3 class="question-text text-uppercase">Do I need to download any other
                                     software in order to trade binary options?</h3>
@@ -1102,7 +1110,8 @@
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
-                                     class="question-button flip-able" data-btn-open="/img/panel/black/desktop/m-q-open.png"
+                                     class="question-button flip-able"
+                                     data-btn-open="/img/panel/black/desktop/m-q-open.png"
                                      data-btn-close="/img/panel/black/desktop/m-q-close.png">
                                 <h3 class="question-text text-uppercase">What is the minimum investment
                                     amount per trade?</h3>
@@ -1122,7 +1131,8 @@
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
-                                     class="question-button flip-able" data-btn-open="/img/panel/black/desktop/m-q-open.png"
+                                     class="question-button flip-able"
+                                     data-btn-open="/img/panel/black/desktop/m-q-open.png"
                                      data-btn-close="/img/panel/black/desktop/m-q-close.png">
                                 <h3 class="question-text text-uppercase">How do I withdraw my profits
                                     from my trading account?</h3>
@@ -1145,7 +1155,8 @@
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
-                                     class="question-button flip-able" data-btn-open="/img/panel/black/desktop/m-q-open.png"
+                                     class="question-button flip-able"
+                                     data-btn-open="/img/panel/black/desktop/m-q-open.png"
                                      data-btn-close="/img/panel/black/desktop/m-q-close.png">
                                 <h3 class="question-text text-uppercase">What can I trade in when I
                                     trade binary options?</h3>
@@ -1166,7 +1177,8 @@
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <img src="/img/panel/black/desktop/m-q-close.png" alt="open close pics"
-                                     class="question-button flip-able" data-btn-open="/img/panel/black/desktop/m-q-open.png"
+                                     class="question-button flip-able"
+                                     data-btn-open="/img/panel/black/desktop/m-q-open.png"
                                      data-btn-close="/img/panel/black/desktop/m-q-close.png">
                                 <h3 class="question-text text-uppercase">My question is not answered
                                     here, what do I do?</h3>

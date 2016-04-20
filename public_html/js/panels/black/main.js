@@ -1,12 +1,3 @@
-// nav fix
-//$(window).on('scroll',function(){
-//    if($('.collapse.in').length)
-//        $('.collapse.in').removeClass('collapse').removeClass('in');
-//});
-//$('*:not(.nav)').on('click',function(){
-//    if($('.collapse.in').length)
-//        $('.collapse.in').removeClass('collapse').removeClass('in');
-//});
 
 $(document).ready(function(){
     // cool loading jquery
@@ -23,20 +14,9 @@ $(document).ready(function(){
                 $('.loading .dots').removeClass('d1').removeClass('d2').removeClass('d3').addClass('d4').html('');
         },1300);
     }
-   // loading();
-    // hide loading:          $('.loading').hide();
-
-
 
     /******* Actions *******/
 
-    //$('.toggles').on('toggle', function(e, active) {
-    //    if (active) {
-    //        console.log('Toggle ON');
-    //    } else {
-    //        console.log('Toggle OFF');
-    //    }
-    //});
 
     $('.amount').on('click',function(){
         var tthis = $(this);

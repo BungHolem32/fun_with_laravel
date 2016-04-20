@@ -1,6 +1,8 @@
+
+
 /*ASSIGN VALUES*/
 @image: '/img/panel/black/';
-@font: 'Roboto Condensed',arial;
+@font: 'Roboto Condensed', sans-serif;
 @width: 10%;
 @transition: 'all 1s';
 @bg-color-modal: #282827;
@@ -33,6 +35,26 @@
   -o-animation: @animation @deration;
   animation: @animation @deration;
 }
+
+/*ACTIVE BUTTON IN THE TAB FOUR BUTTONS*/
+.active-btn {
+  .boxShadow(inset 5px 3px 27px -4px #313030) !important;
+  text-shadow: 1px -1px 1px #313030 !important;
+  background: #0288cb !important;
+  background: linear-gradient(to bottom, #0288cb 43%, #0288cb 43%, #00daf8 100%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0288cb', endColorstr='#00daf8', GradientType=0) !important;
+}
+
+/*NAV BAR BODY CLASS ON MENU CLICK*/
+.push-body-nav-mobile {
+  .left(200px) !important;
+}
+
+/*NAV BAR MOBILE NAVIGATION*/
+.push-navbar-mobile {
+  .left (0) !important;
+}
+
 
 /*TEXT COLORS ON TABLES*/
 .text-colors-on-tables{
@@ -95,10 +117,3 @@
   filter: FlipH;
 }
 
-
-input.empty {
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: inherit;
-}

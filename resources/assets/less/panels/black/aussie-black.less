@@ -3,25 +3,7 @@
 @import "../../bootstrap/bootstrap";
 /*IMPORT BOOTSTRAP LIBRARY WITH ALL THE ADDONS*/
 @import "my-mixin";
-
-/*ACTIVE BUTTON IN THE TAB FOUR BUTTONS*/
-.active-btn {
-  .boxShadow(inset 5px 3px 27px -4px #313030) !important;
-  text-shadow: 1px -1px 1px #313030 !important;
-  background: #0288cb !important;
-  background: linear-gradient(to bottom, #0288cb 43%, #0288cb 43%, #00daf8 100%) !important;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0288cb', endColorstr='#00daf8', GradientType=0) !important;
-}
-
-/*NAV BAR BODY CLASS ON MENU CLICK*/
-.push-body-nav-mobile {
-  .left(200px) !important;
-}
-
-/*NAV BAR MOBILE NEVEGATION*/
-.push-navbar-mobile {
-  .left (0) !important;
-}
+@import url(https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab);
 
 /*BASE BODY STYLE*/
 body {
@@ -1154,7 +1136,6 @@ body {
                     }
                   }
                 }
-
                 /*ALL FORMS WRAPPER GENERAL STYLE*/
                 .first-part-form, .second-part-form {
                   margin-bottom: 2em;
@@ -1172,7 +1153,6 @@ body {
                         margin-bottom: 1em;
                       }
                     }
-
                     /*YELLOW ARROW DISPLAYED ONLY IN DESKTOP*/
                     .yellow-arrow {
                       position: relative;
@@ -1406,7 +1386,6 @@ body {
           }
         }
       }
-
     }
 
     /*LOGO BRAND WRAPPER*/
@@ -1510,7 +1489,7 @@ body {
                         }
                       }
 
-                      .fa-user{
+                      .fa-user {
                         position: absolute;
                         top: 10px;
                         left: 22px;
@@ -1546,8 +1525,8 @@ body {
                         float: right;
                         text-decoration: none;
                         font-family: @font;
-                        &:hover{
-                          color: lighten(#3E80D4,20%);
+                        &:hover {
+                          color: lighten(#3E80D4, 20%);
 
                         }
                       }
@@ -1572,9 +1551,9 @@ body {
       }
     }
   }
-
 }
 
+/*CUSTOMIZE THE TABLE LAYOUT */
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
   @media (max-width: 500px) {
     padding: 3px;

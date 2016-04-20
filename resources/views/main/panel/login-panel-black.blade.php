@@ -1,18 +1,17 @@
 @section('head')
+    {{--FONT AWSOME ADDON--}}
+    <link rel="stylesheet" href="/css/panels/black/libs/font-awesome.min.css">
+
     {{--REQUEST THE CSS--}}
     <link rel="stylesheet" href="/css/panels/black/style-{{Request::local()->dir}}.css"/>
-    {{--<link rel="stylesheet" href="/css/aussie/panel/custom.css" />--}}
-    {{--FONT AWSOME ADDON--}}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
-    {{--OPEN SUN SERIF FONT --}}
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300,300italic' rel='stylesheet'
-          type='text/css'>
-    <style>
-    .bg-login{
-    background:url(../../../img/aussie/panel/{{$page->title_h1}}.jpg) center center fixed;
-    }
-    </style>
+        <style>
+            @if(isMongoNotEmpty($page->background_panel))
+            .bg-login {
+                background: url(../../../img/aussie/panel/{{$page->background_panel}}.jpg) center center fixed;
+            }
+            @endif
+        </style>
 @append
 
 @section('bottom-scripts')
