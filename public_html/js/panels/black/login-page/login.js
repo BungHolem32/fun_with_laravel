@@ -10,7 +10,7 @@ $(document).ready(function () {
                 dataType: 'json',
                 data: data,
                 beforeSend: function () {
-                    $('.btn-login').text("").append('<i class="fa fa-spinner fa-spin"></i>');
+                    $('.btn-login').text("process..").append('<i class="fa fa-spinner fa-spin"></i>');
 
                 },
                 success: function (res) {
