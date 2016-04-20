@@ -949,7 +949,7 @@
         <div class="modal-faq modal fade" role="dialog">
             <div class="modal-dialog-faq modal-dialog">
 
-                <!-- MODAL CONTENT-->
+                {{--MODAL CONTENT--}}
                 <div class="modal-content modal-faq-content">
 
                     {{--HEADER-TAG--}}
