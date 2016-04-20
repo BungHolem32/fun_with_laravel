@@ -4,13 +4,13 @@
         position : [ 'CALL', 'PUT' ],
         asset    : [ 'USD/CHF', 'GBP/USD', 'CHF/JPY', 'EUR/USD', 'NZD/USD', 'USD/CAD', 'EUR/JPY', 'EUR/CHF', 'EUR/GBP', 'NZD/USD', 'GBP/CHF' ],
         names    : [ 'Max', 'Janice', 'Emery', 'George', 'James', 'Edwin', 'Mary', 'James', 'Ronald', 'Robert', 'Dagmar', 'Manuel', 'Michael', 'Cora', 'Francisco', 'Mary', 'Robin', 'Inez', 'Leon', 'Leann', 'Kelly', 'Iris', 'Andreas', 'Elizabeth', 'Susan', 'Charles', 'Maurice', 'Susan', 'Rhonda', 'Kathleen', 'Russell', 'Lonnie', 'Phoebe', 'Carlos', 'Nancy', 'Matthew', 'Mildred', 'Hermine', 'Karlene', 'Pamela', 'David', 'Holly', 'Juanita', 'Jeffery', 'Mark', 'Kelsey', 'Julia', 'Richard', 'Thomas', 'Harold', 'Mohammed', 'Grace', 'Steven', 'Jules', 'Melanie', 'Claudia', 'Jessie', 'Judy', 'Frances', 'William', 'Denise', 'Mark', 'Shane', 'Lisa', 'Jo', 'Terry', 'George', 'Ronald', 'Sheena', 'Wilbert', 'Harold', 'Don', 'Samuel', 'Jose', 'Kenneth', 'Suzanne', 'Tiffany', 'David', 'Alma', 'John', 'James', 'Arturo', 'Jessica', 'Janet', 'Jeanine', 'Allyson', 'Lorene', 'Terry', 'Stacy', 'Benjamin', 'Daniel', 'Daniel', 'Heather', 'Abraham', 'Maureen', 'Caroline', 'Johnny', 'David', 'Tori', 'Monty', 'Carol', 'Wendy', 'Eve', 'Robert', 'Crystal', 'Ruth', 'Kenny', 'Rachel', 'Gary', 'David', 'Nicholas', 'Jeffery', 'Matthew' ],
-        questions: [ 'What is the Aussie Method?', 'How much money can I make with this software?', 'How long does each trade last??', 'Do I need to use my credit card when I signup?',
-            'Does your software work with Mac computers?', 'I don\'t have much free time - Is the Aussie Method really automated?', 'How easy is it to use the software?',
+        questions: [ 'What is the The Maple Method?', 'How much money can I make with this software?', 'How long does each trade last??', 'Do I need to use my credit card when I signup?',
+            'Does your software work with Mac computers?', 'I don\'t have much free time - Is the The Maple Method really automated?', 'How easy is it to use the software?',
             'What about customer support?' ],
-        answers  : [ 'The Aussie Method is a 100% FREE software that will trade on the binary options markets with just 1 click! It\'s fully automated and places the winning trades for you!',
+        answers  : [ 'The The Maple Method is a 100% FREE software that will trade on the binary options markets with just 1 click! It\'s fully automated and places the winning trades for you!',
             'To put it in short, there\'s no limit. To put it more technically, it really depends on how much money you fund your account with. Most of our members fund their account with ' +
             '$300, and make about $800-1000 daily. Those who fund their account with $1,000 or over make over $2,500 per day!', 'Anywhere from a minute to an hour. So you will see your profits right' +
-            'away, no more waiting for long periods of time.', 'NO WAY. The Aussie Method App is 100% FREE. You will NOT be asked for your credit card or paypal or bank information when you download the Aussie Method System!' +
+            'away, no more waiting for long periods of time.', 'NO WAY. The The Maple Method App is 100% FREE. You will NOT be asked for your credit card or paypal or bank information when you download the The Maple Method System!' +
             'Once you are in the members area, we will recommend a binary options broker that you can exploit. For this, you\'ll need funds to deposit in order to start making profits. This is YOUR money that you are just depositing to trade with, and you can withdraw it at' + 'any time!',
             'It is a web based application which means it can be used on  Windows, Mac or Linux based  systems! You just need a web browser.', ' You simply click play in the software and it will trade for you! You can walk away from' +
             'your computer, and enjoy your profits! You don\'t have to be anywhere near the software for it to work for you and make you thousands per day!', '<span>VERY EASY!</span> Once you sign up in the members area by' + 'filling in a simple form, the' +
@@ -339,25 +339,25 @@
         tweeter_n_facebook_tempalte: {
             value       : {
                 nm           : [ "Harvey", "Christopher", "David", "Morgan", "Jason", "Travis", "Charlie", "Robert", "Henry", "Kieran", "Charles", "Joseph", "Ellis", "Billy", "Andrew", "Johnny", "George", "Sebastian", "Cameron", "Tory", "Joel", "Adam", "Bryce", "Dwayne", "Vincent", "Leon", "Aidan", "Aidan", "David", "Jacob", "Ben", "Alex", "Enrique", "Dennis", "Nathan", "Charles", "Robert", "Alfie", "Dominic", "Leon", "John", "Daniel", "Charles", "Romeo", "Noah", "Anthony", "James", "Mohammed", "Louis", "Joseph", "Ellis", "Kai", "Jay", "Noah", "Lewis", "Anthony", "Jamie", "Elliot", "Ronald", "Troy", "Reece", "Richard", "Joel", "Callum", "Jack", "Richard", "Nicholas", "Cameron", "Harry", "William", "Lyle", "Frank", "Norman", "Anthony", "Morgan", "Geoffrey", "Alejandro", "Zak", "Anthony", "Kieran", "Ross", "Paul", "Sam", "Richard", "Michael", "Roger", "Charles", "Reece", "Brandon", "Robert", "Luca", "Harrison", "Ryan", "Taylor", "Frank", "Larry", "Billy", "Sam", "Finlay", "Zara", "Georgia", "Sylvie", "Kiera", "Margaret", "Patria", "Ava", "Diane", "Skye", "Helen", "Jennifer", "Isabella", "Faith", "Jessica", "Penny", "Rebecca", "Summer", "Tamara", "Tamika", "Magdalene", "Wendy", "Genevieve", "Stephanie", "Erin", "Abby", "Ann", "Abbie", "Leigh", "Shanna", "Tilly", "Laura", "Mary", "Paula", "Isabel", "Ella", "Tatiana", "Mary", "Tegan", "Cynthia", "Abigail", "Lauren", "Laura", "Katherine", "Naomi", "Barbara", "Melisa", "Pamela", "Leeann", "Jodie", "Terri", "Caitlin", "Roberta", "Daisy", "Molly", "Frieda", "Louise", "Elizabeth", "Stella", "Billie", "Gracie", "Sienna", "Katie", "Mildred", "Kayleigh", "Christy", "Kiera", "Yun", "Courtney", "Tegan", "Sheila", "Ray", "Lydia", "Mamie", "Keira", "Matilda", "Sonya", "Ava", "Cerys", "Eleanor", "Grace", "Jodie", "Sharon", "Elva", "Eleanor", "Freya", "Bessie", "Sofia", "Amelie", "Brenda", "Poppy", "Tegan", "Sienna", "Leah", "Antoinette", "Zoe" ],
-                data         : [ "Wow this might sound cheesy but I LOVE you guys <b class='p-nickname'>Aussie Method</b> the ONLY system u need for making money online makemoney Aussie Method awesome",
-                    "How long until the money hits my account from my broker account? <b class='p-nickname'>Aussie Method</b> Just withdrawn 5 figures 5figureprofits profits awesome",
-                    "This is like printing money...For Real Take it off the market <b class='p-nickname'>Aussie Method</b> dont want others getting their hands on this selfish",
-                    "Celebrating another profitable day using the <b class='p-nickname'>Aussie Method</b> not had a losing day yet",
-                    "Brilliant stuff, u guys are the bomb <b class='p-nickname'>Aussie Method</b> First trade today and just made $389.11 profit moreprofits Aussie Method",
-                    "Awesome system, made over $2000 in my first 2 hours using the <b class='p-nickname'>Aussie Method</b> system",
-                    "Thank You Thank You Thank You <b class='p-nickname'>Aussie Method</b>",
-                    "Holy crap, this is amazing, I've made $7,891.32 on my very first day using the verified trader system <b class='p-nickname'>Aussie Method</b> system binary amazing",
-                    "<b class='p-nickname'>Aussie Method</b> Sup guys, super sick system u got here",
-                    "Deposited $250 <b class='p-nickname'>Aussie Method</b> with the verified trader system now my account sits at over $30k in just a week Lovethis millionairestatus",
-                    "At last a legit binary system <b class='p-nickname'>Aussie Method</b>",
-                    "Can't thank you guys enough <b class='p-nickname'>Aussie Method</b> been scammed so many times before but this really is the real deal",
-                    "Thanks to <b class='p-nickname'>Aussie Method</b> for finally making a binary system that really works amazing makemoney",
-                    "<b class='p-nickname'>Aussie Method</b> Already up over $3800 and the day is still young",
-                    "Just made $868.44 in a single trade <b class='p-nickname'>Aussie Method</b>",
-                    "<b class='p-nickname'>Aussie Method</b> Just made $918.88 in 34 minutes",
-                    "what is happening?? My account now sits at $23,891.44 I only deposited $300 4 days ago, this is insane <b class='p-nickname'>Aussie Method</b>",
-                    "Thanks support for solving my small problem, looking forward to making lots of cash with this cash thanks Aussie Method support <b class='p-nickname'>Aussie Method</b>",
-                    "WTF.... Thank You This thing is awesome <b class='p-nickname'>Aussie Method</b>" ],
+                data         : [ "Wow this might sound cheesy but I LOVE you guys <b class='p-nickname'>The Maple Method</b> the ONLY system u need for making money online makemoney The Maple Method awesome",
+                    "How long until the money hits my account from my broker account? <b class='p-nickname'>The Maple Method</b> Just withdrawn 5 figures 5figureprofits profits awesome",
+                    "This is like printing money...For Real Take it off the market <b class='p-nickname'>The Maple Method</b> dont want others getting their hands on this selfish",
+                    "Celebrating another profitable day using the <b class='p-nickname'>The Maple Method</b> not had a losing day yet",
+                    "Brilliant stuff, u guys are the bomb <b class='p-nickname'>The Maple Method</b> First trade today and just made $389.11 profit moreprofits The Maple Method",
+                    "Awesome system, made over $2000 in my first 2 hours using the <b class='p-nickname'>The Maple Method</b> system",
+                    "Thank You Thank You Thank You <b class='p-nickname'>The Maple Method</b>",
+                    "Holy crap, this is amazing, I've made $7,891.32 on my very first day using the verified trader system <b class='p-nickname'>The Maple Method</b> system binary amazing",
+                    "<b class='p-nickname'>The Maple Method</b> Sup guys, super sick system u got here",
+                    "Deposited $250 <b class='p-nickname'>The Maple Method</b> with the verified trader system now my account sits at over $30k in just a week Lovethis millionairestatus",
+                    "At last a legit binary system <b class='p-nickname'>The Maple Method</b>",
+                    "Can't thank you guys enough <b class='p-nickname'>The Maple Method</b> been scammed so many times before but this really is the real deal",
+                    "Thanks to <b class='p-nickname'>The Maple Method</b> for finally making a binary system that really works amazing makemoney",
+                    "<b class='p-nickname'>The Maple Method</b> Already up over $3800 and the day is still young",
+                    "Just made $868.44 in a single trade <b class='p-nickname'>The Maple Method</b>",
+                    "<b class='p-nickname'>The Maple Method</b> Just made $918.88 in 34 minutes",
+                    "what is happening?? My account now sits at $23,891.44 I only deposited $300 4 days ago, this is insane <b class='p-nickname'>The Maple Method</b>",
+                    "Thanks support for solving my small problem, looking forward to making lots of cash with this cash thanks The Maple Method support <b class='p-nickname'>The Maple Method</b>",
+                    "WTF.... Thank You This thing is awesome <b class='p-nickname'>The Maple Method</b>" ],
                 images1      : [ "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg", "15.jpg", "16.jpg", "17.jpg", "18.jpg", "19.jpg", "20.jpg", "21.jpg", "22.jpg", "23.jpg", "24.jpg", "25.jpg", "26.jpg", "27.jpg", "28.jpg", "29.jpg", "30.jpg", "31.jpg", "32.jpg", "33.jpg", "34.jpg", "35.jpg", "36.jpg", "37.jpg", "38.jpg", "39.jpg", "40.jpg", "41.jpg", "42.jpg", "43.jpg", "44.jpg", "45.jpg", "46.jpg", "47.jpg", "48.jpg", "49.jpg", "50.jpg", "51.jpg", "52.jpg", "53.jpg", "54.jpg", "55.jpg", "56.jpg", "57.jpg", "58.jpg", "59.jpg", "60.jpg", "61.jpg", "62.jpg", "63.jpg", "64.jpg", "65.jpg", "66.jpg", "67.jpg", "68.jpg", "69.jpg", "70.jpg", "71.jpg", "72.jpg", "73.jpg", "74.jpg", "75.jpg", "76.jpg", "77.jpg", "78.jpg", "79.jpg", "80.jpg", "81.jpg", "82.jpg", "83.jpg", "84.jpg", "85.jpg", "86.jpg", "87.jpg", "88.jpg", "89.jpg", "90.jpg", "91.jpg", "92.jpg", "93.jpg", "94.jpg", "95.jpg", "96.jpg", "97.jpg", "98.jpg" ],
                 images2      : [ "1(1).jpg", "2(1).jpg", "3(1).jpg", "4(1).jpg", "5(1).jpg", "6(1).jpg", "7(1).jpg", "8(1).jpg", "9(1).jpg", "10(1).jpg", "11(1).jpg", "12(1).jpg", "13(1).jpg", "14(1).jpg", "15(1).jpg", "16(1).jpg", "17(1).jpg", "18(1).jpg", "19(1).jpg", "20(1).jpg", "21(1).jpg", "22(1).jpg", "23(1).jpg", "24(1).jpg", "25(1).jpg", "26(1).jpg", "27(1).jpg", "28(1).jpg", "29(1).jpg", "30(1).jpg", "31(1).jpg", "32(1).jpg", "33(1).jpg", "34(1).jpg", "35(1).jpg", "36(1).jpg", "37(1).jpg", "38(1).jpg", "39(1).jpg", "40(1).jpg", "41(1).jpg", "42(1).jpg", "43(1).jpg", "44(1).jpg", "45(1).jpg", "46(1).jpg", "47(1).jpg", "48(1).jpg", "49(1).jpg", "50(1).jpg", "51(1).jpg", "52(1).jpg", "53(1).jpg", "54(1).jpg", "55(1).jpg", "56(1).jpg", "57(1).jpg", "58(1).jpg", "59(1).jpg", "60(1).jpg", "61(1).jpg", "62(1).jpg", "63(1).jpg", "64(1).jpg", "65(1).jpg", "66(1).jpg", "67(1).jpg", "68(1).jpg", "69(1).jpg", "70(1).jpg", "71(1).jpg", "72(1).jpg", "73(1).jpg", "74(1).jpg", "75(1).jpg", "76(1).jpg", "77(1).jpg", "78(1).jpg", "79(1).jpg", "80(1).jpg", "81(1).jpg", "82(1).jpg", "83(1).jpg", "84(1).jpg", "85(1).jpg", "86(1).jpg", "87(1).jpg", "88(1).jpg", "89(1).jpg", "90(1).jpg", "91(1).jpg", "92(1).jpg", "93(1).jpg", "94(1).jpg", "95(1).jpg" ],
                 cnt          : 1,
@@ -558,10 +558,7 @@
         funnelControll.tweeter_n_facebook_tempalte.appendElement ( [ 'tweets', 'twt' ] );
 
     }, 30000 );
-
-    /*11 = CHANGE THE VALUE OF THE PREFIX INPUT IN MEMBER PAGE*/
-    funnelControll.update_input_prefix ();
-
+    
 
     $ ( '.first-page #video_n_form' ).find ( 'video.video' ).addClass ( 'col-md-7 pull-left' ).attr ( 'id', 'video_part' ).css ( {
         "border" : "9px solid #1E387B",

@@ -2,6 +2,7 @@
 <meta name="viewport" content="initial-scale=1.0">
 <!-- Startup CSS -->
 {!! $page->appendAsset(url('css/aussie-new/ca/style-0.css')) !!}
+<link rel="stylesheet" href="/css/aussie-new/ca/style-new.css">
 <!--[if lt IE 9]>
 <!--[if lt IE 9]>
 <script src="/js/vendor/html5shiv.min.js"></script>
@@ -61,16 +62,13 @@
                 <div class="row">
 
                     <!--Video Tag-->
-                    <div id="video_part" class='col-md-7  {{--col-sm-12--}} pull-left'>
                         @include('funnels.layouts._partials._video',  ['w'=>'100%','h'=>'100%'])
-                    </div>
-
                     <!--Form Tag-->
                     <div id="form_part" class='col-md-4  col-sm-12 form-first'>
                         {{--TEXT--}}
                         <p>START <strong>NOW</strong></p>
                         <p>Enter your email below to gain instant
-                            free access to the Aussie Method system
+                            free access to the Maple Method system
                         </p>
                         {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post','align'=>'center']) !!}
                         <input type="hidden" name="pageId" value="{{ $page->id }}">
@@ -203,11 +201,13 @@
                     </div>
                 </div>
             </section>
+<<<<<<< HEAD
+=======
             <!--Video How_it_work PIC-->
             <section id="video-how-method-works" class="container">
                 <div class="row">
                     <header class="col-md-12 col-sm-12 col-xs-12">
-                        <h2 class="title-question">How The Aussie Method Works</h2>
+                        <h2 class="title-question">How The Maple Method Works</h2>
                     </header>
 
                     <div class="video-n-images col-md-12">
@@ -218,6 +218,7 @@
                     </div>
                 </div>
             </section>
+>>>>>>> 525228d115f29169bc5e538c9ca0c9f8c76397a9
 
             {{--LIVE THIRD PARTY  PART--}}
             <section id="live-third-party" class="container center-block">
@@ -230,7 +231,11 @@
                         {{--table layout--}}
                         <div class="table-trader col-md-12 col-sm-12 col-xs-12 align-center">
                             <ul class="col-md-12 col-sm-12 col-xs-12 align-center">
-                                <li class="col-lg-6 col-md-4 col-sm-4 col-xs-4">Aussie Method Member</li>
+<<<<<<< HEAD
+                                <li class="col-lg-6 col-md-4 col-sm-4 col-xs-4">The Maple Method Member</li>
+=======
+                                <li class="col-lg-6 col-md-4 col-sm-4 col-xs-4">Maple Method Member</li>
+>>>>>>> 525228d115f29169bc5e538c9ca0c9f8c76397a9
                                 <li class="col-lg-1 col-md-2 col-sm-2 col-xs-2">Profit</li>
                                 <li class="col-lg-3 col-md-3 col-sm-3 col-xs-3">Trade Time</li>
                                 <li class="col-lg-2 col-md-3 col-sm-3 col-xs-3">Currency</li>
@@ -258,12 +263,12 @@
     </div>
     <footer class="row col-md-12">
         <div class="container footer-content">
-            <div id="left-footer" class="col-md-10 col-sm-10 col-xs-9 push-left"> Copyright 2016 Aussie Method. All
+            <div id="left-footer" class="col-md-10 col-sm-10 col-xs-9 push-left"> Copyright 2016 Maple Method. All
                 Right Reserved.
             </div>
             <div id="right-footer" class="col-md-2 col-sm-2 col-xs-3 push-right">
                 @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/policy", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Privacy'])
-                &nbsp;&nbsp;
+                &nbsp;
                 @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/terms", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Terms'])
             </div>
         </div>

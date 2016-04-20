@@ -29,10 +29,10 @@ $('#awelcomeModal').on('click',function(){
 });
 
 $('#cvv-popover').on('mouseenter',function(){
-    $('.popover').animate({'opacity':1},500);
+    $('.popover').css({'display':'block'});
 });
 $('#cvv-popover').on('mouseleave',function(){
-    $('.popover').animate({'opacity':0},500);
+    $('.popover').css({'display':'none'});
 });
 
 

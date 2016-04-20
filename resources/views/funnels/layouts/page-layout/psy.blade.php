@@ -17,7 +17,7 @@
 
         {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post']) !!}
         <input type="hidden" name="pageId" value="{{ $page->id }}">
-        <button class="submit en"><span>@ln(FREE DOWNLOAD)</span></button>
+        <button class="submit en"><span>@ln(FREE ACCESS)</span></button>
         {!! Form::close() !!}
     </div>
     <img class="cer" src="/img/psy/cer.png" />
