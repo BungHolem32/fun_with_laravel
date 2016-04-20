@@ -654,7 +654,7 @@
                     change_color_text: function (row, position_name, position_value, currency) {
                         var status, profit;
 
-
+                        /*CHECK IF THERE WAS PROFIT VALUE */
                         if (position_name == 'profit' && position_value != "" && position_value != undefined) {
                             profit = position_value;
                             status = row.find('.td-status').text();
@@ -668,8 +668,10 @@
                                 /*-----------PROFIT-------------*/
                                 /*calculate the profit value*/
                                 profit = ((profit / 100) + 1) * amount;
+
                                 /*round the amount*/
                                 profit = (Math.ceil(profit * 100)) / 100;
+
                                 /*append the new amount to the dom*/
                                 row.find('.td-profit').text(profit).prepend(currency).addClass('text-success').removeClass('text-danger');
                                 row.find('.td-amount').prepend(currency).addClass('text-success').removeClass('text-danger');
