@@ -1,0 +1,247 @@
+/*body 												{color:#4e4e4e; background:none;}*/
+.input-group {
+	margin-bottom: 10px;
+}
+.form-group {
+	margin-bottom: 10px;
+}
+.formTitle {
+	font-size: 20px;
+	color: #4e4e4e;
+	text-align: center;
+}
+.form-control {
+	height: 40px;
+}
+.terms {
+	font-size: 11px;
+	margin-top: 5px;
+	color: #4e4e4e;
+}
+p {
+	font-size: 14px;
+}
+#fontcolor {
+	color: #4e4e4e;
+}
+.form-control-feedback {
+	height: 40px;
+	line-height: 40px;
+}
+a:link, a:visited {
+	text-decoration: underline;
+	font-size: 12px;
+}
+a:hover, a:active {
+	text-decoration: none;
+	font-size: 12px;
+}
+.submitbtn {
+	font-family: 'Open Sans', sans-serif;
+	border: 0px solid #c9b86a;
+	display: inline-block;
+	color: #2f2f2f;
+	font-size: 24px;
+	font-style: bold;
+	height: 49px;
+	line-height: 30px;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	-webkit-text-stroke: 1px;
+	text-transform: uppercase;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background: #e1c647; /* Old browsers */
+	text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
+	-webkit-box-shadow: 0px 1px 0px 0px rgba(83, 65, 3, 0.75);
+	-moz-box-shadow: 0px 1px 0px 0px rgba(83, 65, 3, 0.75);
+	box-shadow: 0px 1px 0px 0px rgba(83, 65, 3, 0.75);
+	text-shadow: 0px 2px 3px rgba(255,255,255,0.5);	
+}
+.submitbtn:before {
+	content: '';
+	font-size: 18px;
+	position: absolute;
+	background:url(../images/arrow.png);
+	height: 51px;
+	width: 37px;
+	top: -1px;
+	right: 18px;
+}
+.submitbtn:after {
+	content: '';
+	position: absolute;
+	height: 80%;
+	top: 10%;
+	width: 0;
+	border-left: 1px solid rgba(47, 47, 47, 0.3);
+	border-right: 1px solid rgba(47, 47, 47, 1);
+	right: 2.15em;
+}
+.submitbtn:hover {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #edd048;
+	font-size: 24px;
+	font-style: bold;
+	height: 49px;
+	line-height: 30px;
+	color: #2f2f2f;
+}
+.submitbtn:active {
+	font-size: 24px;
+	font-style: bold;
+	height: 48px;
+	line-height: 28px;	
+}
+.rclpOnErrorRemove {
+	display: none;
+}
+.rclpBeforeReg {
+	display: none;
+} /*Ronith Change*/
+.rclpAfterReg {
+}
+#rclpRegForm.rclpAfterRegSuccess {
+	display: none;
+}
+#regSuccess.rclpBeforeRegSuccess {
+	display: none;
+}
+#regSuccess.rclpAfterRegSuccess {
+	display: block;
+}
+#successholder {
+	border: 0px solid #CCCCCC;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.messagetitle {
+	font-size: 19px;
+	padding: 10px 0px;
+	text-align: center;
+	font-weight: normal;
+}
+.warningmsgtitle {
+	padding: 5px 10px;
+	text-align: center;
+	font-weight: normal;
+}
+.prefix {
+	min-width: 50px;
+	padding: 0 5px;
+}
+.row .span2NoGutter {
+	margin-left: -17px;
+	padding-right: 0;
+}
+.input-group-addon {
+	background-color: #FFFFFF;
+}
+.fa-user, .fa-money, .fa-envelope, .fa-phone-square {
+	color: #a6a6a6;
+}
+.errormsgbox {
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	padding: 8px;
+	border: 1px solid #d1d4d7;
+	color: #CC0000;
+	font-size: 11px;
+	text-align: center;
+	background-color: #FFFCB7;
+	margin: auto;
+	margin-bottom: 10px;
+}
+.loadingcontainer {
+	background: rgba(255,255,255,0.8);
+	width: 92%;
+	height: 50px;
+	padding: 15px 0px;
+	text-align: center;
+	font-weight: bold;
+	position: absolute;
+	z-index: 999;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color: #006699;
+	font-size: 15px;
+}
+.rclp-prefix-prefix {
+	padding: 6px 0px;
+}
+
+@media (max-width: 767px) {
+.submitbtn {
+	font-size: 24px;
+}
+.submitbtn:hover {
+	font-size: 24px;
+}
+}
+
+@media (max-width: 380px) {
+.submitbtn {
+	font-size: 38px;
+	padding: 10px 0px;
+}
+.submitbtn:hover {
+	font-size: 38px;
+	padding: 10px 0px;
+}
+}
+
+@media (min-width: 0px) and (max-width: 319px) {
+.formTitle {
+	font-size: 15px;
+	color: #4e4e4e
+}
+.submitbtn {
+	font-size: 15px;
+	padding: 10px 25px;
+}
+.submitbtn:hover {
+	font-size: 15px;
+}
+}
+
+@media (min-device-width: 220px) and (max-width:479px) {
+.submitbtn {
+	font-size: 19px;
+}
+.submitbtn:hover {
+	font-size: 19px;
+}
+.submitbtn:before {
+	content: '';
+	font-size: 18px;
+	position: absolute;
+	background:url(../images/arrow.png);
+	height: 51px;
+	width: 37px;
+	top: -1px;
+	right: 14px;
+}
+.submitbtn:after {
+	content: '';
+	position: absolute;
+	height: 80%;
+	top: 10%;
+	width: 0;
+	border-left: 1px solid rgba(47, 47, 47, 0.3);
+	border-right: 1px solid rgba(47, 47, 47, 1);
+	right: 2.3em;
+}
+}
+
+@media (min-width:0px) and (max-width:220px) {
+.prefix {
+	min-width: 25px;
+	float: none;
+	padding: 0 5px;
+}
+}

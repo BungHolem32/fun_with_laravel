@@ -1,0 +1,239 @@
+@charset "utf-8";
+
+.iframe						{width:87%; margin:auto;}
+.formTitle  				{font-size:1px;}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.bg_red {
+	background: url(/img/playboy/bg_red.jpg) no-repeat center top #000;
+}
+
+.bg_redblck {
+	background: url(/img/playboy/bg_redblck.jpg) no-repeat center top #000;
+}
+
+.blonde {
+	background: url(/img/playboy/blonde.jpg) no-repeat center top #000;
+}
+
+.container-fluid {}
+
+.title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.titlesuc {
+    font-family: 'Oswald', sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    margin: 20px 0 10px;
+    padding: 0;
+}
+
+.red {
+    color: #fe2b53;
+}
+
+.regulartxt {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 26px;
+    text-align: center;
+    color: #fff;
+    margin: 0 0 10px;
+    padding: 0;
+    font-weight: 400;
+}
+
+.underwhite {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.timer_box {
+    width: 339px;
+    height: 192px;
+    background: url(/img/playboy/timer_bg.png) no-repeat;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    margin: 65px 0 0;
+    padding: 10px 0 0;
+}
+
+.second_chu p strong {
+    color: #000;
+    font-weight: 600;
+}
+
+.movie {
+    width: 100%;
+    height: auto;
+    background: #fff;
+
+    border-top: 10px solid #fe2b53;
+    border-bottom: 10px solid #fe2b53;
+}
+
+.form-bg {
+	height: 594px;
+    background: #fff;
+    float: left;
+    padding: 50px 60px 0;
+    border-top: 10px solid #fe2b53;
+    border-bottom: 10px solid #fe2b53;
+}
+
+.nonogutter
+{
+    padding: 0;
+}
+
+.form-bg p.sub {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 26px;
+    font-weight: 700; 
+    text-align: center;
+    padding: 30px 0 0;
+}
+
+.img-trust {
+    max-width: 600px;
+    height: auto;
+    margin: 30px auto 0;
+}
+
+.sub-little {
+    display: none;
+}
+
+@media only screen and (max-width: 1499px) {
+	.form-bg {
+		height: 481px;
+		padding: 20px 60px 0;
+	}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+    .form-bg {
+        border-top: none;
+        width: 100%;
+    }
+
+    .form iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    .regulartxt {
+        font-size: 25px;
+    }
+
+    .form-bg p.sub {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .sub-little {
+        display: block;
+
+        font-family: 'Open Sans', sans-serif;
+        font-size: 26px;
+        font-weight: 700; 
+        text-align: center;
+        padding:  0;
+    }
+
+    .sub {
+        display: none;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 991px) {
+    .movie {
+        border-bottom: none;
+    }
+	
+	.titlesuc {
+		font-size: 52px;
+	}
+
+    .regulartxt {
+        font-size: 25px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 767px) {
+    .title {
+        font-size: 42px;
+    }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width: 479px) {
+    .title {
+        font-size: 25px;
+        margin: 20px 0 5px;
+    }
+	
+	.titlesuc {
+		font-size: 32px;
+	}
+
+    .regulartxt {
+        font-size: 16px;
+    }
+	
+	.form-bg {
+		overflow: hidden;
+		padding: 20px 20px 0;
+	}
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width: 319px) {
+	.titlesuc {
+		font-size: 22px;
+	}
+}
+
+#members-form input {
+    margin-bottom: 10px;
+}
+
+#prefix, #phone {
+    display: block;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555555;
+    height: 40px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+#prefix-error {
+    display: none !important;
+}

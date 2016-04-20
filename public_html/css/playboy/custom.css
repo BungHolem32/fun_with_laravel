@@ -1,0 +1,282 @@
+@charset "utf-8";
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.bg_red {
+	background: url(/img/playboy/bg_red.jpg) no-repeat center top #000;
+}
+
+.bg_redblck {
+	background: url(/img/playboy/bg_redblck.jpg) no-repeat center top #000;
+}
+
+.blonde {
+	background: url(/img/playboy/blonde.jpg) no-repeat center top #000;
+}
+
+/*.container-fluid {
+	padding-right: 0;
+    padding-left:  0;
+}*/
+
+.margin10top {
+	margin-top: 10px;
+}
+
+.title {
+	font-family: 'Oswald', sans-serif;
+	font-size: 46px;
+	font-weight: 700;
+	line-height: 60px;
+	color: #fff;
+	margin: 50px 0 20px;
+}
+
+.title-sm {
+	display: none;
+}
+
+.subtitle {
+	font-weight: 700;
+	padding: 5px 15px;
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	font-size: 20px;
+}
+
+.bgblack {
+	background-color: #000;
+}
+
+.undered {
+	color: #fe2b53;
+	text-decoration: underline;
+}
+
+.timer_box {
+	position: absolute;
+	z-index: 999;
+	width: 339px;
+	height: 192px;
+	background: url(/img/playboy/timer_bg.png) no-repeat;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	margin: 62px 0 0 718px;
+	padding: 10px 0 0;
+}
+
+.box_center {
+	width: 120px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.spot {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.red {
+	color: #fe2b53;
+}
+
+.timer {
+	width: 100%;
+	font-size: 46px;
+	font-weight: 700;
+	color: #fe2b53;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	line-height: 50px;
+	margin: 5px 0;
+}
+
+.miss {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.movie {
+	width: 760px;
+	height: 428px;
+	background: #000;
+}
+
+.movie_res {
+	width: 100%;
+	background: #000;
+	
+	border-top: 10px solid #fe2b53;
+	border-bottom: 10px solid #fe2b53;
+}
+
+.movie_res iframe {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.form_holder {
+	padding: 10px;
+	background-color: #000;
+	border-bottom: 10px solid #fe2b53;
+	font-family: 'Open Sans', sans-serif;
+	overflow: hidden;
+}
+
+form {
+	overflow: hidden;
+}
+
+input[type="text"], input[type="email"] {
+	font-size: 18px;
+	height: 60px;
+	margin-bottom: 10px;
+}
+
+input[type="submit"] {
+	background-color: #fe2b53;
+	color: #fff;
+	font-weight: bold; 
+	margin: 0;
+	border: 0;
+    font-size: 22px;
+	/*width: 127px;*/
+	height: 60px;
+	margin-bottom: 10px;
+}
+
+input[type="submit"]:hover {
+	background-color: #fff;
+	color: #fe2b53;
+}
+
+.activate {
+	font-size: 27px;
+	color: #fed100;
+	font-family: 'Open Sans', sans-serif;
+	font-style: italic;
+	text-align: center;
+	padding: 0 0 10px;
+}
+
+.img-trust {
+	max-width: 484px;
+	height: auto;
+	/*background-image: url(/img/playboy/trust.png);
+	background-repeat: no-repeat;*/
+	margin: 30px auto 0;
+}
+
+.nogutter {
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.nonogutter
+{
+	padding: 0;
+}
+
+/*COUNTDOWN*/
+
+.days {
+  float: left;
+  margin-right: 4px;
+}
+.hours {
+  float: left;
+}
+.minutes {
+  float: left;
+}
+.seconds {
+  float: left;
+}
+.clearDiv {
+  clear: both;
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1499px) {
+	.timer_box {
+		margin: 62px 0 0 505px;
+	}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+	.title {
+		font-size: 38px;
+	}
+	
+	.timer_box {
+		margin: 62px 0 0 440px;
+	}
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 991px) {
+	.title {
+		font-size: 40px;
+	}
+}
+	
+/* Small Devices, Tablets */
+@media only screen and (max-width: 767px) {
+	.form_holder {
+		border: none;
+	}
+	
+	.title {
+		display: none;
+	}
+	
+	.title-sm {
+		display: block;
+		
+		font-family: 'Oswald', sans-serif;
+		font-size: 46px;
+		font-weight: 700;
+		line-height: 60px;
+		color: #fff;
+		margin: 20px 0;
+		text-align: center;
+	}
+	
+	input[type="submit"] {
+		font-size: 30px;
+	}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width: 479px) {
+		body {
+			background: none;
+			background-color: #222e38;
+			margin: 0 -30px;
+		}
+		
+		.bgblacksm {
+			background-color: #000;
+		}
+		
+		.title-sm {
+			font-size: 24px;
+			line-height: 28px;
+		}
+		
+		.subtitle {
+			font-size: 16px;
+		}
+}
+	
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width: 319px) {}
