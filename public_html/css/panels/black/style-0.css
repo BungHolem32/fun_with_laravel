@@ -7882,7 +7882,7 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
   border: none;
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper {
-  margin: 0 0 0 0;
+  margin: 20px 0 0 0;
   cursor: pointer;
   /*QUESTION TEXT WRAPPER*/
   /*IMG NUMBER WRAPPER*/
@@ -7900,10 +7900,14 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
   color: #2c98e0;
 }
 @media (max-width: 993px) {
+  body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-text {
+    margin-top: 0;
+  }
 }
 @media (max-width: 500px) {
   body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-text {
     display: inline-table;
+    margin-top: 0;
   }
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-button {
@@ -7914,11 +7918,13 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
 @media (max-width: 768px) {
   body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-button {
     height: 1.4em;
+    vertical-align: middle;
   }
 }
 @media (max-width: 410px) {
   body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-button {
     height: 1.2em;
+    vertical-align: middle;
   }
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .answer-wrapper {
