@@ -69,6 +69,7 @@
                        placeholder="password" required>
             </div>
 
+            {{--SUMBIT AND FORGOT PASSWORD PASSWORD --}}
             <div class="form-options">
                 {{--SUBMIT BTN --}}
                 <button type="submit"
