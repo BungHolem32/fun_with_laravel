@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="/css/panels/black/style-{{Request::local()->dir}}.css"/>
 
     @if(isMongoNotEmpty($page->background_panel))
-        {{123}}
         <style>
             .bg-login {
                 background: url(../../../img/panel/{{$page->background_panel}}-login.jpg) center center fixed;
