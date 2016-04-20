@@ -25,3 +25,13 @@
 #SubmitOptIn:hover {
     background: url('/img/dreamprofits/INSTANT-ACCESS-hover.png');
 }
+
+.g-recaptcha > div > div {
+    height: auto !important;
+}
+
+.g-recaptcha iframe {
+    width: 267px !important;
+    float: left;
+    margin-bottom: 10px;
+}
