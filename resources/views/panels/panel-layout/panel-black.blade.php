@@ -1,4 +1,7 @@
-<?php $c = \Session::get('spotCustomer'); ?>
+<?php $c = \Session::get('spotCustomer');
+?>
+
+
 @section('head')
     <link rel="stylesheet" href="/css/panels/black/libs/toggles-full.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -1,5 +1,5 @@
 (function ($) {
-    var socket;
+        var socket;
         var panel_object = {}
 
         Object.defineProperties(panel_object, {
@@ -454,7 +454,7 @@
                                     }
 
                                     /*call the method load_positions and at the end get the asset_list*/
-                                    asset_list = panel_object.dynamic_add_to_rb_options_tables.load_positions(res.positions);
+                                    asset_list = panel_object.dynamic_add_to_rb_options_tables.load_positions(res.positions,res.customer.currencySign);
 
                                     /*REFRESH THE SOCKET LIST EACH ITERATION (Update only the socket)*/
                                     panel_object.dynamic_add_to_rb_options_tables.socketRefresh(asset_list);
@@ -484,7 +484,7 @@
 
                         });
                     },
-                    load_positions: function (positions) {
+                    load_positions: function (positions,currency) {
                         /*create two variables*/
                         var row, table_to_insert;
                         var open_table = panel_object.dynamic_add_to_rb_options_tables.prepare_table('rb-options-open-trade');
@@ -533,19 +533,38 @@
                                 /*find in the new row the current rate td and add class to it with the asset-id*/
                                 new_row.find('.td-assets').addClass(assetId);
 
-                                /*ITERATE OVER ALL THE ELEMENTS AND SIGN THE NEW DATA*/
-                                $.each(position, function (j, data) {
+                            var status,amount;
+                            /*ITERATE OVER ALL THE ELEMENTS AND SIGN THE NEW DATA*/
+                            $.each(position, function (j, data) {
 
-                                    /*add to the new arrow the updated text from the server*/
-                                    new_row.find('.td-' + j).text(data);
-
-
+                                    if (j == 'status') {
+                                        status = data;
+                                    }
                                     /*IF THERE'S SOME KEYS  AMOUNT AND PROFIT*/
                                     if (j == 'amount' || j == 'profit') {
 
                                         /*change there color to green*/
-                                        new_row.find('.td-' + j).text(data).prepend('$').addClass('text-success');
+                                        if (j == 'amount') {
+                                            amount = data;
+                                        }
+
+                                        if (j == 'profit') {
+                                            if (status == 'won') {
+                                                data = ((data / 100) + 1) * amount;
+                                                data = (Math.ceil(data*100))/100;
+                                                console.log(currency);
+                                                new_row.find('.td-' + j).text(data).prepend(currency).addClass('text-success')
+                                                return;
+                                            }else{
+                                                data = 0;
+                                                new_row.find('.td-' + j).text(data).removeClass('text-success')
+                                                return;
+                                            }
+                                        }
                                     }
+                                    /*add to the new arrow the updated text from the server*/
+                                    new_row.find('.td-' + j).text(data);
+
                                 });
 
                                 /*append to the table if open pend to the open table if not to the history table */
@@ -733,7 +752,7 @@
                 value: {
                     init: function () {
                         var inter;
-                        inter = setInterval(function(){
+                        inter = setInterval(function () {
                             panel_object.change_color_by_status.loop_on_the_position();
                         }, 30000);
                     },
