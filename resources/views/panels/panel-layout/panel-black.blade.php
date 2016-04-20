@@ -42,8 +42,6 @@
     {{--Main JS--}}
     <script src="/js/panels/black/main.js"></script>
 
-    {{--New JS--}}
-    {{--<script src="/js/panels/black/black-script.js"></script>--}}
 
 @append
 
@@ -87,9 +85,9 @@
                     <p class="info-tab">
                         <span class="text-capitalize">@ln(broker name):</span>
 
-                        @if(isMongoNotEmpty($page->brand->logo))
-                            <img src="{{$page->brand->logo}}" alt="rb-option logo">
-                        @endif
+                        {{--@if(isMongoNotEmpty($page->brand->logo))--}}
+                            {{--<img src="{{$page->brand->logo}}" alt="rb-option logo">--}}
+                        {{--@endif--}}
                         <strong>{{ $page->brand->name }}</strong>
                     </p>
                     <p class="info-tab">
@@ -133,10 +131,10 @@
                                data-target=".modal-welcome">@ln(view welcome message)
                             </a>
                         </li>
-                        <li class="text-uppercase  navbar-part">
-                            <a href="javascript:;" class="navbar-text">@ln(guided tour)
-                            </a>
-                        </li>
+                        {{--<li class="text-uppercase  navbar-part">--}}
+                            {{--<a href="javascript:;" class="navbar-text">@ln(guided tour)--}}
+                            {{--</a>--}}
+                        {{--</li>--}}
                         <li class="text-uppercase  navbar-part">
                             <a href="@include('funnels.layouts._partials._url', ['url'=>$page->getParent()->fullSlug()])"
                                class="navbar-text">@ln(home page)
@@ -177,11 +175,11 @@
                        data-target=".modal-welcome">@ln(view welcome message)
                     </a>
                 </li>
-                <li class="navbar-li-wrapper">
-                    <a href="javascript:;" class="navbar-text-mobile">
-                        @ln(guided tour)
-                    </a>
-                </li>
+                {{--<li class="navbar-li-wrapper">--}}
+                    {{--<a href="javascript:;" class="navbar-text-mobile">--}}
+                        {{--@ln(guided tour)--}}
+                    {{--</a>--}}
+                {{--</li>--}}
                 <li class="navbar-li-wrapper">
                     <a href="@include('funnels.layouts._partials._url', ['url'=>$page->getParent()->fullSlug()])"
                        class="navbar-text-mobile">@ln(home page)
@@ -257,9 +255,9 @@
                         <p class="info-tab col-sm-7 col-xs-7">
                             <span class="text-capitalize">@ln(broker):</span>
                             {{--dynamic change for the brand name--}}
-                            @if(isMongoNotEmpty($page->brand->logo))
+                            {{--@if(isMongoNotEmpty($page->brand->logo))
                                 <img src="{{$page->brand->logo}}" alt="brand logo">
-                            @endif
+                            @endif--}}
                             <strong>{{ $page->brand->name }}</strong>
                         </p>
 
@@ -284,7 +282,7 @@
                 <header class="active-method-title-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h3 class="text-uppercase method-title">
                         @if(isMongoNotEmpty($page->body))
-                            {{$page->body}}</h3>
+                            {!! $page->body !!} </h3>
                     @endif
                 </header>
 
