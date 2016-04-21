@@ -70,6 +70,7 @@ class SpotApi
 
     private static function processAnswer($answer){
         $answer = json_decode($answer,true);
+        Log::debug('Spot answer', $answer);
         $answer['err'] = 1;
         if(isset($answer['status']) && isset($answer['status']['connection_status']) && $answer['status']['connection_status'] == 'successful'){
             // batch operation - prepare parent values from all batches
