@@ -6885,6 +6885,8 @@ body .content-wrapper .navbar-mobile .navbar-ul-wrapper .navbar-li-wrapper .navb
   font-size: 0.9em;
   text-decoration: none;
   text-transform: uppercase;
+  width: 100%;
+  display: block;
 }
 body .content-wrapper .activate-method-system {
   margin: 8.5em auto 0 auto;
@@ -7882,7 +7884,7 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
   border: none;
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper {
-  margin: 0 0 0 0;
+  margin: 20px 0 0 0;
   cursor: pointer;
   /*QUESTION TEXT WRAPPER*/
   /*IMG NUMBER WRAPPER*/
@@ -7900,26 +7902,20 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
   color: #2c98e0;
 }
 @media (max-width: 993px) {
+  body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-text {
+    margin-top: 0;
+  }
 }
 @media (max-width: 500px) {
   body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-text {
     display: inline-table;
+    margin-top: 0;
   }
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-button {
-  font-size: 2em;
+  font-size: 1.9em;
   vertical-align: middle;
   color: #009AFF;
-}
-@media (max-width: 768px) {
-  body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-button {
-    height: 1.4em;
-  }
-}
-@media (max-width: 410px) {
-  body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-button {
-    height: 1.2em;
-  }
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .answer-wrapper {
   padding: 0.5em 3em 0.5em 3em;
