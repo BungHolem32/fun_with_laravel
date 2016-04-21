@@ -48,7 +48,9 @@
                 </div>
             </div>
             <div id="aussiemethod_logo_img" style="width: 268px;margin: 0 auto;">
+                @if(isMongoNotEmpty($page->panel_logo))
                 <img src="{{ $page->panel_logo }}" alt="method_logo" id="logo">
+                @endif
             </div>
         </div>
     </div>
