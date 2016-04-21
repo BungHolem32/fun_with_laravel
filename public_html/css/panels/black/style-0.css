@@ -6760,6 +6760,8 @@ body .content-wrapper .navbar-desktop {
   border: none;
   color: white;
   overflow: hidden;
+  border-radius: 0;
+  border-top: 1px solid #65BEF9;
   /*BACKGROUND BECAME TRANSPARENT*/
   /*CONTAINER INSIDE THE NAV-BAR*/
   /*NAV BAR COLLAPSE ON MOBILE*/
@@ -6767,6 +6769,7 @@ body .content-wrapper .navbar-desktop {
 @media (min-width: 996px) {
   body .content-wrapper .navbar-desktop {
     top: 6em;
+    border-radius: 0;
   }
 }
 @media (max-width: 776px) {
@@ -6852,9 +6855,9 @@ body .content-wrapper .navbar-desktop .navbar-collapse .navbar-nav .navbar-part 
 }
 body .content-wrapper .navbar-desktop .navbar-collapse .navbar-nav .navbar-part .navbar-text {
   color: inherit;
-  font-weight: bold;
-  letter-spacing: 0.1px;
+  letter-spacing: 0.3px;
   margin: 0;
+  text-shadow: -1px -1px 2px #444;
 }
 body .content-wrapper .navbar-desktop .navbar-collapse .navbar-nav .navbar-part .navbar-text:hover {
   background: #0082d8;
@@ -7159,6 +7162,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper.amount .amount-btn {
   background: linear-gradient(to top, #222222, #444547);
   color: white;
   border: none;
+  outline: none;
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper.amount .amount-btn:hover {
   background: #252525;
@@ -7226,7 +7230,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part {
 body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button {
   font-size: 1.7em;
   line-height: 2.033333;
-  border-radius: 6px;
+  border: none;
   position: relative;
   top: 0.8em;
   color: black;
@@ -7516,9 +7520,14 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
   width: 50%;
   height: 7.5vh;
   font-size: 300%;
-  text-shadow: 0px 1px 2px white;
+  text-shadow: 1px -2px 1px white;
   background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
+}
+body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-footer-welcome .button-welcome-footer:hover {
+  background: #72a40e;
+  background: linear-gradient(to bottom, #72a40e 43%, #aadc1f 96%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72a40e', endColorstr='#aadc1f', GradientType=0);
 }
 @media (max-width: 768px) {
   body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-footer-welcome .button-welcome-footer {
@@ -7884,14 +7893,14 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
   border: none;
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper {
-  margin: 20px 0 0 0;
+  margin: 0 0 0 0;
   cursor: pointer;
   /*QUESTION TEXT WRAPPER*/
   /*IMG NUMBER WRAPPER*/
 }
 @media (max-width: 600px) {
   body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper {
-    margin: 0 0 0 0;
+    margin: 2em 0 0 0;
   }
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-text {

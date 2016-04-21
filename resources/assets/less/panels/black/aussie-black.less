@@ -144,9 +144,13 @@ body {
       border: none;
       color: white;
       overflow: hidden;
+      border-radius: 0;
+      border-top: 1px solid #65BEF9;
+
 
       @media (min-width: 996px) {
         top: 6em;
+        border-radius: 0;
       }
       @media (max-width: 776px) {
         font-size: 0.9em;
@@ -225,9 +229,9 @@ body {
             /*HREF TEXT*/
             .navbar-text {
               color: inherit;
-              font-weight: bold;
-              letter-spacing: 0.1px;
+              letter-spacing: 0.3px;
               margin: 0;
+              text-shadow: -1px -1px 2px #444;
 
               &:hover {
                 background: #0082d8;
@@ -553,6 +557,7 @@ body {
             background: linear-gradient(to top, #222222, #444547);
             color: white;
             border: none;
+            outline: none;
             &:hover {
               background: #252525;
               background: linear-gradient(to bottom, #252525 0%, #444547 100%);
@@ -622,17 +627,16 @@ body {
           .tab-big-button {
             font-size: 1.7em;
             line-height: 2.033333;
-            border-radius: 6px;
+            border:none;
             position: relative;
             top: 0.8em;
-            //opacity: 0.5;
             color: black;
             word-spacing: 0.8px;
             background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
             text-indent: -5.7px;
             width: @width*8.5;
-            text-shadow: 1px -2px 1px white;
+            text-shadow: @text-shadow;
 
             &:hover {
               background: #72a40e;
@@ -920,9 +924,15 @@ body {
               width: @width*5;
               height: 7.5vh;
               font-size: @width*30%;
-              text-shadow: 0px 1px 2px white;
+              text-shadow:@text-shadow;
               background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
               filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
+
+              &:hover {
+                background: #72a40e;
+                background: linear-gradient(to bottom, #72a40e 43%, #aadc1f 96%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72a40e', endColorstr='#aadc1f', GradientType=0);
+              }
 
               @media (max-width: 768px) {
                 width: @width*9 !important;
