@@ -781,7 +781,7 @@
                                         <select name="card_type" id="card_type"
                                                 class="form-control text-capitalize col-md-8 card-type-selectbox"
                                                 aria-required="true" id="card-type">
-                                            <option value="-1">choose type</option>
+                                            <option value="" selected>choose type</option>
                                             <option value="1">visa</option>
                                             <option value="2">mastercard</option>
                                             <option value="3">CarteBleue</option>
@@ -815,7 +815,7 @@
                                                 class="pull-left col-lg-3 col-md-3 col-sm-6 col-xs-6 month-exp-selectbox text-capitalize"
                                                 name="expires_month">
 
-                                            <option value="-1" class="text-capitalize">month</option>
+                                            <option value="" selected class="text-capitalize">month</option>
                                             <option value="01">01</option>
                                             <option value="02">02</option>
                                             <option value="03">03</option>
@@ -834,7 +834,7 @@
                                         <select id="year-exp"
                                                 class="pull-right col-lg-5 col-md-4  col-sm-6 col-xs-6 year-exp-selectbox"
                                                 name="expires_year">
-                                            <option value="-1" class="text-capitalize col-md-4">year</option>
+                                            <option value="" selected class="text-capitalize col-md-4">year</option>
                                             <option value="2015">2015</option>
                                             <option value="2016">2016</option>
                                             <option value="2017">2017</option>
