@@ -2,6 +2,7 @@
         var socket;
         var panel_object = {}
 
+        /*OBJECT PANEL BLACK*/
         Object.defineProperties(panel_object, {
 
             /*TOGGLE BUTTON (SWITCH BUTTON IN THE ACTIVATE AUTO TRADING)*/
