@@ -340,7 +340,7 @@
                     </div>
                     <div class="bottom-part">
                         <div class="tab-switch-button startTrade text-uppercase ">
-                            <div class="toggles startTrade toggle-light" data-on="ON" data-off="OFF"
+                            <div class="toggles toggle-iphone startTrade toggle-light" data-on="ON" data-off="OFF"
                                  style="height: 50px; width: 110px;">
                             </div>
                         </div>
@@ -409,13 +409,13 @@
 
                     {{--FIRST TABLE ROW WITH ALL THE HEADERS--}}
                     <thead class="table-headers table-row">
-                    <th class="table-data text-capitalize text-center">@ln(assets)</th>
-                    <th class="table-data text-capitalize text-center">@ln(position)</th>
-                    <th class="table-data text-capitalize text-center">@ln(amount)</th>
-                    <th class="table-data text-capitalize text-center ">@ln(entry rate)</th>
-                    <th class="table-data text-capitalize text-center ">@ln(current rate)</th>
-                    <th class="table-data text-capitalize text-center ">@ln(expiration date)</th>
-                    <th class="table-data text-capitalize text-center showed hidden-sm hidden-xs">@ln(status)</th>
+                    <th class="table-header-th text-capitalize text-center">@ln(assets)</th>
+                    <th class="table-header-th text-capitalize text-center">@ln(position)</th>
+                    <th class="table-header-th text-capitalize text-center">@ln(amount)</th>
+                    <th class="table-header-th text-capitalize text-center ">@ln(entry rate)</th>
+                    <th class="table-header-th text-capitalize text-center ">@ln(current rate)</th>
+                    <th class="table-header-th text-capitalize text-center ">@ln(expiration date)</th>
+                    <th class="table-header-th text-capitalize text-center showed hidden-sm hidden-xs">@ln(status)</th>
                     </thead>
 
 

@@ -1,8 +1,5 @@
-
-
 /*ASSIGN VALUES*/
 @image: '/img/panel/black/';
-@font: 'Roboto Condensed', sans-serif;
 @width: 10%;
 @transition: 'all 1s';
 @bg-color-modal: #282827;
@@ -10,40 +7,78 @@
 @nav-bar-dark-color: #01395E;
 @select-box-font-color: gray;
 @bg-color-header-modal: #01385e;
-@text-shadow:1px -2px 1px white;
-
+@text-shadow: 1px -2px 1px white;
+@font-buttons: 'Roboto Condensed', sans-serif;
+@font-headers-running: helvetica, arial;
 
 /*MIXIN CLASSES*/
 /*BOX SHADOW PREFIXES  IF IT PASS ON PARAM*/
 .boxShadow(@prop) {
   -webkit-box-shadow: @prop;
-  -moz-box-shadow: @prop;
-  box-shadow: @prop;
+  -moz-box-shadow:    @prop;
+  box-shadow:         @prop;
+}
+
+.boxShadow(@prop1,@prop2){
+  -webkit-box-shadow: @prop1,@prop2;
+  -moz-box-shadow:    @prop1,@prop2;
+  box-shadow:         @prop1,@prop2;
 }
 
 /*IF IT PASS MORE THE ONE THEN PASS */
 .boxShadow(@prop1:1px 1px 1px 1px blue,@prop2:2px 2px 1px 10px gray,@prop3,@prop4,@prop5) {
   -webkit-box-shadow: @prop1, @prop2, @prop3, @prop4, @prop5;
-  -moz-box-shadow: @prop1, @prop2, @prop3, @prop4, @prop5;
-  box-shadow: @prop1, @prop2, @prop3, @prop4, @prop5;
+  -moz-box-shadow:    @prop1, @prop2, @prop3, @prop4, @prop5;
+  box-shadow:         @prop1, @prop2, @prop3, @prop4, @prop5;
 }
 
 /*ANIMATION PREFIX*/
 .animate(@animate: all,@deration) {
   -webkit-animation: @animation @deration;
-  -moz-animation: @animation @deration;
-  -ms-animation: @animation @deration;
-  -o-animation: @animation @deration;
-  animation: @animation @deration;
+  -moz-animation:    @animation @deration;
+  -ms-animation:     @animation @deration;
+  -o-animation:      @animation @deration;
+  animation:         @animation @deration;
 }
 
 /*ACTIVE BUTTON IN THE TAB FOUR BUTTONS*/
 .active-btn {
-  .boxShadow(inset 5px 3px 27px -4px #313030) !important;
+  .boxShadow(inset 6px 7.9px 16px 4.4px #01385B, 0px 1px 3px -0.2px #999 ) !important;
   text-shadow: 1px -1px 1px #313030 !important;
-  background: #0288cb !important;
-  background: linear-gradient(to bottom, #0288cb 43%, #0288cb 43%, #00daf8 100%) !important;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0288cb', endColorstr='#00daf8', GradientType=0) !important;
+  background:  #0288cb !important;
+  background:  linear-gradient(to bottom, #0288cb 43%, #0288cb 43%, #00daf8 100%) !important;
+  filter:      progid:DXImageTransform.Microsoft.gradient(startColorstr='#0288cb', endColorstr='#00daf8', GradientType=0) !important;
+}
+
+/*LINEAR GRADIENT STYLE */
+.linear-gradient-big-button {
+  background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
+  filter:     progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
+}
+
+/*BIG BUTTON STYLE*/
+.big-button-style {
+
+  .color {
+    background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
+    filter:     progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
+  }
+  .color_hover {
+    background: #72a40e;
+    background: linear-gradient(to bottom, #72a40e 43%, #aadc1f 96%);
+    filter:     progid:DXImageTransform.Microsoft.gradient(startColorstr='#72a40e', endColorstr='#aadc1f', GradientType=0);
+  }
+}
+
+/*HOVER EFFECT ON BUTTON */
+.hover-effect-on-green-buttons {
+  background: #72a40e;
+  background: linear-gradient(to bottom, #72a40e 43%, #aadc1f 96%);
+  filter:     progid:DXImageTransform.Microsoft.gradient(startColorstr='#72a40e', endColorstr='#aadc1f', GradientType=0);
+}
+
+.add_overflow_hidden {
+  overflow: hidden;
 }
 
 /*NAV BAR BODY CLASS ON MENU CLICK*/
@@ -56,22 +91,25 @@
   .left (0) !important;
 }
 
-
 /*TEXT COLORS ON TABLES*/
-.text-colors-on-tables{
+.text-colors-on-tables {
 
   /*CHANGE THE COLOR OF THE  DANGER-TEXT  TO RED */
   .text-danger {
-    color: red;
+    color:       #B91010;
     font-weight: bold;
   }
 
   .text-success {
-    color: lightgreen;
+    color: #A0D11C;
+  }
+
+  .text-profit {
+    color: #89B120;
   }
 }
 
-.displaying-options-on-waiting-logos{
+.displaying-options-on-waiting-logos {
 
   /*HIDE ELEMENT*/
   .hide {
@@ -86,50 +124,49 @@
 }
 
 /*SCROLL BAR STYLE*/
-.scroll-bar-style{
+.scroll-bar-style {
 
   ::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.6);
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.3);
+    background:    rgba(0, 0, 0, 0.3);
     border-radius: 5px;
   }
 
-
   ::-webkit-scrollbar {
-    width: 20px; /* for vertical scrollbars */
+    width:  20px; /* for vertical scrollbars */
     height: 20px; /* for horizontal scrollbars */
 
     /*HIDE SCROLLBAR ON MOBILE */
-    @media (max-width:640px) {
-        display: none;
+    @media (max-width: 640px) {
+      display: none;
     }
   }
 }
 
 /*PLACE HOLDER*/
 
-.placeholder{
+.placeholder {
 
-  ::-webkit-input-placeholder{
+  ::-webkit-input-placeholder {
     text-transform: capitalize;
   }
-  ::-moz-placeholder{
+  ::-moz-placeholder {
     text-transform: capitalize;
   }
-  :-ms-input-placeholder{
+  :-ms-input-placeholder {
     text-transform: capitalize;
   }
 
 }
 
-.flip-able when (@direction=rtl){
-  -moz-transform: scaleX(-1);    /* Gecko */
-  -o-transform: scaleX(-1);      /* Opera */
+.flip-able when (@direction=rtl) {
+  -moz-transform:    scaleX(-1); /* Gecko */
+  -o-transform:      scaleX(-1); /* Opera */
   -webkit-transform: scaleX(-1); /* Webkit */
-  transform: scaleX(-1);         /* Standard */
-  filter: FlipH;
+  transform:         scaleX(-1); /* Standard */
+  filter:            FlipH;
 }
 

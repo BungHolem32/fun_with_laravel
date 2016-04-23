@@ -31,10 +31,12 @@
 
                             /*CHECK  THIS BUTTON IS THE  TURN ON BUTTON CALL AJAX TURN-ON */
                             if ($(btn).hasClass('toggle-on')) {
+                                console.log('toggle-on');
+                                $('.toggles').addClass('switch-on').removeClass('switch-off');
                                 panel_object.toggle_switch.turn_on();
                             }
                             if ($(btn).hasClass('toggle-off')) {
-                                $('.startTrade').removeClass('btn-success').addClass('btn-default');
+                                $('.toggles').addClass('switch-off').removeClass('switch-on');
                                 panel_object.toggle_switch.turn_off();
                             }
                         });
@@ -61,7 +63,8 @@
                                 /*show modal page*/
                                 $('body').append('<div class="modal-backdrop fade in"></div>').addClass('modal-open');
                                 /*turn off the switch*/
-                                $('.toggles').toggles(false);
+                                $('.toggles').toggles(false).removeClass('switch-on').addClass('switch-off');
+
                             }
                         }, function () {
                             /*before get response show the loading animation*/
@@ -79,7 +82,7 @@
                                 $('.wait-ref').hide();
 
                                 /*add the btn danger to the stop button and add the danger class to the button*/
-                                $(btn).addClass('btn-danger').removeClass('btn-default');
+                                // $(btn).addClass('btn-danger').removeClass('btn-default');
                             }
 
                             /*on wait show the logo animation */
@@ -672,14 +675,14 @@
                                 /*round the amount*/
                                 profit = (Math.ceil(profit * 100)) / 100;
                                 /*append the new amount to the dom*/
-                                row.find('.td-profit').text(profit).prepend(currency).addClass('text-success').removeClass('text-danger');
+                                row.find('.td-profit').text(profit).prepend(currency).addClass('text-profit').removeClass('text-danger');
                                 row.find('.td-amount').prepend(currency).addClass('text-success').removeClass('text-danger');
                                 row.find('.td-status').addClass('text-success').removeClass('text-danger')
                             }
                             /*STATUS LOST*/
                             else if (status == 'lost') {
                                 profit = 0;
-                                row.find('.td-profit').text(profit).removeClass('text-success');
+                                row.find('.td-profit').text(profit).removeClass('text-profit');
                                 row.find('.td-amount,.td-status').removeClass('text-success').addClass('text-danger');
                             }
                             /*STATUS CANCELED TIED*/
@@ -823,6 +826,7 @@
             },
             show_welcome_page_on_load: {
                 value: function () {
+                    $('body').addClass('add_overflow_hidden');
                     $('.navbar-part:first-of-type').find('a').click();
                 },
                 configurable: true,
