@@ -2,6 +2,7 @@
         var socket;
         var panel_object = {}
 
+        /*OBJECT PANEL BLACK*/
         Object.defineProperties(panel_object, {
 
             /*TOGGLE BUTTON (SWITCH BUTTON IN THE ACTIVATE AUTO TRADING)*/
@@ -44,7 +45,7 @@
                     turn_on: function () {
                         /*TOGGLES ON CLICK*/
                         panel_object.ajax_call("/ajax/turnOn", null, function (res) {
-                            console.log(res);
+
                             if (res.err === 0) {  /*check if there's no error*/
 
                                 $(window).trigger('ajax-refresh');

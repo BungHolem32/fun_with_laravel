@@ -28,8 +28,10 @@
         {{--LOGIN LOG WRAPPER--}}
         <div class="logo-wrapper">
             <a href="/login" class="logo logo-login">
+                @if(isMongoNotEmpty($page->panel_logo))
                 {{--LOGO DYNAMIC MANAGED IN THE PAGE MANAGEMNT--}}
                 <img src="{{ $page->panel_logo }}" alt="logo-login" id="logo_login">
+                @endif
             </a>
         </div>
 
