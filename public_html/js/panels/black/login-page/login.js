@@ -28,5 +28,10 @@ $(document).ready(function () {
             });
         }
     });
+    /*IF THE PAGE IS LOGIN PAGE ADD CLASS TO THE BODY WITH THE BG-IMG*/
+        if($('body').find('.login-wrapper').length>0){
+            $('body').addClass('body-login');
+        }
+
 
 });

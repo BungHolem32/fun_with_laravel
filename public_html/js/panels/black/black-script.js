@@ -59,7 +59,7 @@
                             else if (res.err === 1) {
 
                                 /*if there no money show the form for deposit money*/
-                                $('.modal-deposit').css({'display': 'block', 'padding-right': '17px'}).addClass('in');
+                                $('.modal-deposit').css({'display': 'block'}).addClass('in');
                                 /*show modal page*/
                                 $('body').append('<div class="modal-backdrop fade in"></div>').addClass('modal-open');
                                 /*turn off the switch*/
@@ -670,7 +670,7 @@
                                 var amount = row.find('.td-amount').text();
 
                                 /*-----------PROFIT-------------*/
-                                /*calculate the profit value*/
+                                   /*calculate the profit value*/
                                 profit = ((profit / 100) + 1) * amount;
 
                                 /*round the amount*/
@@ -765,7 +765,9 @@
                 value: function () {
                     $('body').on('click', '.square-logo', function () {
                         $('.modal-deposit').hide();
-                        $('body').removeClass();
+                        setTimeout(function () {
+                           $('body').removeClass('add_overflow_hidden');
+                        },3000)
                     })
                 }
             },
@@ -815,7 +817,7 @@
 
                                 /*ADD NEW ARROW WITH THE PROPER SIGN*/
                                 if (position == 'put') {
-                                    $(el).prepend('<i class="fa fa-arrow-down"></i> ');
+                                    $(el).prepend('<i class="fa fa-arrow-down"></i> &nbsp;');
                                 } else {
                                     $(el).prepend('<i class="fa fa-arrow-up"></i> ');
                                 }
@@ -828,12 +830,24 @@
             },
             show_welcome_page_on_load: {
                 value: function () {
-                    $('body').addClass('add_overflow_hidden');
+                    // $('body').addClass('add_overflow_hidden');
                     $('.navbar-part:first-of-type').find('a').click();
                 },
                 configurable: true,
                 enumerable: true
+            },
+            modal_overflowhide:{
+            value:function () {
+                $('.modal').on('click',function(){
+                    // $('body').addClass('add_overflow_hidden'),
+                        $('.modal').on('click',function () {
+                            setTimeout(function () {
+                                // $('body').removeClass('add_overflow_hidden');
+                            },3000);
+                        })
+                })
             }
+        }
 
         })
 
@@ -897,6 +911,9 @@
 
         /*13 SHOW WELCOME SCREEN ON LOAD*/
         panel_object.show_welcome_page_on_load();
+
+
+        panel_object.modal_overflowhide();
 
         /*ASSIGN GLOBAL VALUE TO THE OBJECT */
         window._panel = panel_object;

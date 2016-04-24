@@ -29,8 +29,9 @@
         <div class="logo-wrapper">
             <a href="/login" class="logo logo-login">
                 @if(isMongoNotEmpty($page->panel_logo))
-                {{--LOGO DYNAMIC MANAGED IN THE PAGE MANAGEMNT--}}
-                <img src="{{ $page->panel_logo }}" alt="logo-login" id="logo_login">
+
+                    {{--LOGO DYNAMIC MANAGED IN THE PAGE MANAGEMNT--}}
+                    <img src="{{ $page->panel_logo }}" alt="logo-login" id="logo_login">
                 @endif
             </a>
         </div>
@@ -47,11 +48,11 @@
             {!! Form::open(['action'=>'OpenAccountController@login','class'=>'loginForm ajax-api']) !!}
 
             {{--CHECK IF THERES A FLASH MESSAGE (IF THERE IS --}}
-                             @if(isMongoNotEmpty(\Session::get('flashMsg')))
-                                 <div class="alert alert-danger" role="alert">
-                                     @ln(Oh snap)! {{ \Session::get('flashMsg') }}
-                                 </div>
-                             @endif
+            @if(isMongoNotEmpty(\Session::get('flashMsg')))
+                <div class="alert alert-danger" role="alert">
+                    @ln(Oh snap)! {{ \Session::get('flashMsg') }}
+                </div>
+            @endif
 
             {{--USER NAME INPUT = EMAIL FIELD--}}
             <div class="form-group user-input">
@@ -78,7 +79,8 @@
                         class="btn btn-success btn-lg text-center center-block btn-login text-uppercase">@ln(login)</button>
 
                 {{--FORGOT PASSWORD--}}
-                <a href="http://www.rboptions.com/ForgotPassword" class=" btn-lg bfloat forgotpass">@ln(Forgot Password)</a>
+                <a href="http://www.rboptions.com/ForgotPassword"
+                   class=" btn-lg bfloat forgotpass">@ln(Forgot Password)</a>
             </div>
             {!! Form::close() !!}
         </div>

@@ -5572,7 +5572,7 @@ button.close {
   -webkit-appearance: none;
 }
 .modal-open {
-  overflow: hidden;
+  padding-right: 0 !important;
 }
 .modal {
   display: none;
@@ -6519,10 +6519,12 @@ button.close {
 .placeholder :-ms-input-placeholder {
   text-transform: capitalize;
 }
-body {
-  font-family: 'Roboto Condensed', sans-serif;
+.body-login {
+  font-family: 'Helvetica', Arial;
   background: black url('/img/panel/black/desktop/big-bg-login.jpg') no-repeat top center !important;
   background-size: contain;
+}
+body {
   /*LOGIN PAGE PART*/
 }
 body .login-wrapper {
@@ -6549,6 +6551,10 @@ body .login-wrapper .login-title-wrapper .login-title {
   color: white;
 }
 body .login-wrapper .login-form-wrapper {
+  width: 25%;
+  margin: 0 auto;
+  float: none;
+  min-width: 280px;
   /*FORM ELEMENTS*/
   /*FORM BTN + LABEL + ICONS*/
 }
@@ -6938,8 +6944,10 @@ body .content-wrapper .activate-method-system {
   /*METHOD TITLE WRAPPER*/
   /*SUBTITLE WRAPPER*/
 }
-body .content-wrapper .activate-method-system.container {
-  width: 1145px;
+@media (min-width: 998px) {
+  body .content-wrapper .activate-method-system.container {
+    width: 1145px;
+  }
 }
 @media (max-width: 1240px) {
   body .content-wrapper .activate-method-system {
@@ -7012,6 +7020,7 @@ body .content-wrapper .arrow-img-wrapper .arrow-img {
 body .content-wrapper .tabs-wrapper {
   position: relative;
   /*TAB WRAPPER GENERAL*/
+  /*BIG ARROW IN THE LEFT OF THE SCREEN*/
 }
 body .content-wrapper .tabs-wrapper.container {
   padding: 0;
@@ -7257,7 +7266,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .top-part {
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-number-in-circle {
   position: absolute;
-  top: -25.3px;
+  top: -35.3px;
   left: -21.4px;
   height: 63px;
   width: 63px;
@@ -7269,7 +7278,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-number-in-circle
   border: 6px solid #000;
   font-size: 41px;
   font-weight: bold;
-  line-height: 51px;
+  line-height: 56px;
   color: #000;
   text-shadow: -1px 2px 1px #f4ff96;
   -webkit-transform: rotate(5deg);
@@ -7314,12 +7323,14 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
   text-indent: -5.7px;
   width: 85%;
-  text-shadow: 1px -2px 1px white;
+  text-shadow: 0.8px -1.3px 1.3px white;
+  outline: none;
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button:hover {
   background: #72a40e;
   background: linear-gradient(to bottom, #72a40e 43%, #aadc1f 96%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72a40e', endColorstr='#aadc1f', GradientType=0);
+  outline: none;
 }
 @media (max-width: 410px) {
   body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button {
@@ -7606,7 +7617,7 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
   width: 50%;
   height: 7.5vh;
   font-size: 300%;
-  text-shadow: 1px -2px 1px white;
+  text-shadow: 0.8px -1.3px 1.3px white;
   background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
 }
@@ -7650,20 +7661,20 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
   background: #01385e;
   color: white;
   border: none;
-  padding: 0;
+  padding: 15px;
   /*MODAL TITLE */
   /*BUTTON X FOR EXIT THE MODEL*/
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-header-deposit .modal-title {
   margin: 0;
   line-height: 1.42857143;
-  font-size: 2.7em;
+  font-size: 2.5em;
   font-weight: 600;
   text-shadow: 1px 0px 1px black;
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-header-deposit .square-logo {
   float: right;
-  padding: 0.2em;
+  margin: -0.7em -0.7em 0.7em 0.7em;
   cursor: pointer;
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit {
@@ -7943,7 +7954,6 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content {
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-header-faq {
   background: #01385e;
   border: none;
-  padding: 0.4em 0 0 0;
   /*MODAL TITLE*/
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-header-faq .modal-title {
@@ -7958,7 +7968,9 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-hea
   }
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-header-faq .square-logo {
-  margin: -0.5em -0.5em -0.5em -0.5em;
+  position: absolute;
+  right: 1%;
+  top: 1%;
 }
 @media (max-width: 993px) {
   body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-header-faq .square-logo {
@@ -7978,6 +7990,7 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper:first-of-type {
   border: none;
+  margin-bottom: 1em;
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper {
   margin: 0 0 0 0;
@@ -8140,6 +8153,9 @@ body :-ms-input-placeholder {
     padding: 3px;
     vertical-align: middle;
   }
+}
+.add_overflow_hidden {
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=style-0.css.map */

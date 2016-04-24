@@ -1,8 +1,11 @@
-body {
-  font-family: 'Roboto Condensed', sans-serif;
+.body-login{
+  font-family: 'Helvetica',Arial;
   background: black url('@{image}desktop/big-bg-login.jpg') no-repeat top center !important;
   background-size: contain;
+}
 
+
+body  {
   /*LOGIN PAGE PART*/
   .login-wrapper {
     font-family: @font-headers-running;
@@ -33,6 +36,10 @@ body {
 
     /*FORM INSIDE LOGIN PAGE*/
     .login-form-wrapper {
+      width: 25%;
+      margin: 0 auto;
+      float: none;
+      min-width: 280px;
 
       /*FORM ELEMENTS*/
       .form-group {
