@@ -36,7 +36,7 @@
         </div>
 
         {{--LOGIN TITLE WRAPPER--}}
-        <div class="login-title-wrapper">
+        <div class="login-title-wrapper text-uppercase">
             <h3 class="login-title" align="center"><i class="icon-lock"></i> @ln(Login)
             </h3>
         </div>
@@ -75,7 +75,7 @@
             <div class="form-options">
                 {{--SUBMIT BTN --}}
                 <button type="submit"
-                        class="btn btn-success btn-lg text-center center-block btn-login">@ln(Login)</button>
+                        class="btn btn-success btn-lg text-center center-block btn-login text-uppercase">@ln(login)</button>
 
                 {{--FORGOT PASSWORD--}}
                 <a href="http://www.rboptions.com/ForgotPassword" class=" btn-lg bfloat forgotpass">@ln(Forgot Password)</a>
