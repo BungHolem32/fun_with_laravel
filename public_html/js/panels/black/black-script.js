@@ -31,7 +31,6 @@
 
                             /*CHECK  THIS BUTTON IS THE  TURN ON BUTTON CALL AJAX TURN-ON */
                             if ($(btn).hasClass('toggle-on')) {
-                                console.log('toggle-on');
                                 $('.toggles').addClass('switch-on').removeClass('switch-off');
                                 panel_object.toggle_switch.turn_on();
                             }
