@@ -62,6 +62,8 @@ $(document).ready(function() {
                     }
                     else {
                         $('.depositBtnSect .loadingForm').hide();
+                        if(res.errs.error.join)
+                            res.errs.error = res.errs.error.join('\r\n');
                         alert(res.errs.error);
                         //console.log(res);
                     }
@@ -125,8 +127,11 @@ $(window).on('ajax-refresh', function () {
         }else{
             if(res.refresh)
                 window.location.reload(true);
-            else
+            else {
+                if(res.errs.error.join)
+                    res.errs.error = res.errs.error.join('\r\n');
                 alert(res.errs.errors[0]);
+            }
         }
     },function(){
         // before send

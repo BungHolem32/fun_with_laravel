@@ -30,6 +30,8 @@ $(document).ready(function(){
                     }
                     else{
                         $('div.loading').remove();
+                        if(res.errs.error.join)
+                            res.errs.error = res.errs.error.join('\r\n');
                         alert(res.errs.error);
                     }
                 }

@@ -87,6 +87,8 @@
                     }
                     else{
                         dataLayer.push({ 'event': 'form_error' });
+                        if(res.errs.error.join)
+                            res.errs.error = res.errs.error.join('\r\n');
                         alert(res.errs.error);
                         $('div.loading').remove();
                         $(form).removeClass('visible-hidden').find('input').removeClass('visible-hidden');
