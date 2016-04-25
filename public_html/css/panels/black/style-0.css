@@ -6489,6 +6489,21 @@ button.close {
 .displaying-options-on-waiting-logos .on {
   display: inline-block !important;
 }
+/*BUTTON STYLE*/
+.btn-color {
+  color: black;
+  text-shadow: 0.2px 0.9px 0px #caff1f;
+  font-family: 'Roboto Condensed', sans-serif;
+  background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
+  border: 1px solid #afe713;
+  /*HOVER EFFECT */
+}
+.btn-color:hover {
+  background: #72a40e;
+  background: linear-gradient(to bottom, #72a40e 43%, #aadc1f 96%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72a40e', endColorstr='#aadc1f', GradientType=0);
+}
 /*SCROLL BAR STYLE*/
 .scroll-bar-style ::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.6);
@@ -6622,6 +6637,7 @@ body .login-wrapper .login-form-wrapper .form-options .btn {
   background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
   border: 1px solid #afe713;
+  /*HOVER EFFECT */
 }
 body .login-wrapper .login-form-wrapper .form-options .btn:hover {
   background: #72a40e;
@@ -7195,8 +7211,8 @@ body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-
   font-size: 1.5em;
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide .toggle-inner .toggle-off.active {
-  height: 50.8px !important;
-  width: 83px !important;
+  height: 51.5px !important;
+  width: 84px !important;
   margin-left: -26.9px !important;
   text-indent: 16.8px !important;
   line-height: 50.4px !important;
@@ -7322,7 +7338,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
   text-indent: -5.7px;
   width: 85%;
-  text-shadow: 0.8px -1.3px 1.3px white;
+  text-shadow: 0.2px 0.9px 0px #caff1f;
   outline: none;
   border: 1px solid #afe713;
 }
@@ -7618,7 +7634,7 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
   width: 50%;
   height: 7.5vh;
   font-size: 300%;
-  text-shadow: 0.8px -1.3px 1.3px white;
+  text-shadow: 0.2px 0.9px 0px #caff1f;
   background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
 }
