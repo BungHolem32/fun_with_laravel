@@ -1,11 +1,14 @@
-body {
-  font-family: 'Roboto Condensed', sans-serif;
+.body-login{
+  font-family: 'Helvetica',Arial;
   background: black url('@{image}desktop/big-bg-login.jpg') no-repeat top center !important;
   background-size: contain;
+}
 
+
+body  {
   /*LOGIN PAGE PART*/
   .login-wrapper {
-    font-family: @font;
+    font-family: @font-headers-running;
 
     /*BRAND LOGO*/
     .logo-wrapper {
@@ -25,7 +28,7 @@ body {
       .login-title {
         margin-bottom: 0.5em;
         font-size: 3.1em;
-        font-family: @font;
+        font-family: @font-headers-running;
         letter-spacing: 0.3px;
         color: white;
       }
@@ -33,6 +36,10 @@ body {
 
     /*FORM INSIDE LOGIN PAGE*/
     .login-form-wrapper {
+      width: 25%;
+      margin: 0 auto;
+      float: none;
+      min-width: 280px;
 
       /*FORM ELEMENTS*/
       .form-group {
@@ -43,10 +50,10 @@ body {
 
         /*INPUT DESIGN*/
         .form-control {
-          height: 48.9px;
-          font-family: @font;
+          font-family: @font-headers-running;
           font-size: 1.5em;
           text-indent: 23px;
+          padding: 1em;
 
           /*ERROR ON THE INPUT */
           &.error {
@@ -98,22 +105,29 @@ body {
         /*BUTTON SUBMIT */
         .btn {
           width: 100%;
-          margin: 0;
+          margin-top: 0.8em;
           min-height: 52px;
           font-size: 2.1em;
           font-weight: bold;
           line-height: 1px;
           color: black;
-          text-shadow: 0.2px 0.9px 0px white;
-          font-family: @font;
-          background: linear-gradient(to bottom, #AADD20, #79AA10);
+          text-shadow: 0.2px 0.9px 0px #caff1f;
+          font-family: @font-buttons;
+          .linear-gradient-big-button;
+          border: 1px solid #afe713;
+
+          &:hover{
+            .hover-effect-on-green-buttons;
+          }
         }
         /*HREF FORGOT PASSWORD*/
         .forgotpass {
           color: #3E80D4;
           float: right;
           text-decoration: none;
-          font-family: @font;
+          .padding-right(0);
+        ;
+          font-family: @font-headers-running;
           &:hover {
             color: lighten(#3E80D4, 20%);
 

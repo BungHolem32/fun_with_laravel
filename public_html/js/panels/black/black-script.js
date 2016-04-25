@@ -31,10 +31,12 @@
 
                             /*CHECK  THIS BUTTON IS THE  TURN ON BUTTON CALL AJAX TURN-ON */
                             if ($(btn).hasClass('toggle-on')) {
+                                console.log('toggle-on');
+                                $('.toggles').addClass('switch-on').removeClass('switch-off');
                                 panel_object.toggle_switch.turn_on();
                             }
                             if ($(btn).hasClass('toggle-off')) {
-                                $('.startTrade').removeClass('btn-success').addClass('btn-default');
+                                $('.toggles').addClass('switch-off').removeClass('switch-on');
                                 panel_object.toggle_switch.turn_off();
                             }
                         });
@@ -57,11 +59,12 @@
                             else if (res.err === 1) {
 
                                 /*if there no money show the form for deposit money*/
-                                $('.modal-deposit').css({'display': 'block', 'padding-right': '17px'}).addClass('in');
+                                $('.modal-deposit').css({'display': 'block'}).addClass('in');
                                 /*show modal page*/
                                 $('body').append('<div class="modal-backdrop fade in"></div>').addClass('modal-open');
                                 /*turn off the switch*/
-                                $('.toggles').toggles(false);
+                                $('.toggles').toggles(false).removeClass('switch-on').addClass('switch-off');
+
                             }
                         }, function () {
                             /*before get response show the loading animation*/
@@ -79,7 +82,7 @@
                                 $('.wait-ref').hide();
 
                                 /*add the btn danger to the stop button and add the danger class to the button*/
-                                $(btn).addClass('btn-danger').removeClass('btn-default');
+                                // $(btn).addClass('btn-danger').removeClass('btn-default');
                             }
 
                             /*on wait show the logo animation */
@@ -655,7 +658,7 @@
                     change_color_text: function (row, position_name, position_value, currency) {
                         var status, profit;
 
-
+                        /*CHECK IF THERE WAS PROFIT VALUE */
                         if (position_name == 'profit' && position_value != "" && position_value != undefined) {
                             profit = position_value;
                             status = row.find('.td-status').text();
@@ -667,19 +670,21 @@
                                 var amount = row.find('.td-amount').text();
 
                                 /*-----------PROFIT-------------*/
-                                /*calculate the profit value*/
+                                   /*calculate the profit value*/
                                 profit = ((profit / 100) + 1) * amount;
+
                                 /*round the amount*/
                                 profit = (Math.ceil(profit * 100)) / 100;
+
                                 /*append the new amount to the dom*/
-                                row.find('.td-profit').text(profit).prepend(currency).addClass('text-success').removeClass('text-danger');
+                                row.find('.td-profit').text(profit).prepend(currency).addClass('text-profit').removeClass('text-danger');
                                 row.find('.td-amount').prepend(currency).addClass('text-success').removeClass('text-danger');
                                 row.find('.td-status').addClass('text-success').removeClass('text-danger')
                             }
                             /*STATUS LOST*/
                             else if (status == 'lost') {
                                 profit = 0;
-                                row.find('.td-profit').text(profit).removeClass('text-success');
+                                row.find('.td-profit').text(profit).removeClass('text-profit');
                                 row.find('.td-amount,.td-status').removeClass('text-success').addClass('text-danger');
                             }
                             /*STATUS CANCELED TIED*/
@@ -760,7 +765,9 @@
                 value: function () {
                     $('body').on('click', '.square-logo', function () {
                         $('.modal-deposit').hide();
-                        $('body').removeClass();
+                        setTimeout(function () {
+                           $('body').removeClass('add_overflow_hidden');
+                        },3000)
                     })
                 }
             },
@@ -810,7 +817,7 @@
 
                                 /*ADD NEW ARROW WITH THE PROPER SIGN*/
                                 if (position == 'put') {
-                                    $(el).prepend('<i class="fa fa-arrow-down"></i> ');
+                                    $(el).prepend('<i class="fa fa-arrow-down"></i> &nbsp;');
                                 } else {
                                     $(el).prepend('<i class="fa fa-arrow-up"></i> ');
                                 }
@@ -823,11 +830,24 @@
             },
             show_welcome_page_on_load: {
                 value: function () {
+                    // $('body').addClass('add_overflow_hidden');
                     $('.navbar-part:first-of-type').find('a').click();
                 },
                 configurable: true,
                 enumerable: true
+            },
+            modal_overflowhide:{
+            value:function () {
+                $('.modal').on('click',function(){
+                    // $('body').addClass('add_overflow_hidden'),
+                        $('.modal').on('click',function () {
+                            setTimeout(function () {
+                                // $('body').removeClass('add_overflow_hidden');
+                            },3000);
+                        })
+                })
             }
+        }
 
         })
 
@@ -891,6 +911,9 @@
 
         /*13 SHOW WELCOME SCREEN ON LOAD*/
         panel_object.show_welcome_page_on_load();
+
+
+        panel_object.modal_overflowhide();
 
         /*ASSIGN GLOBAL VALUE TO THE OBJECT */
         window._panel = panel_object;

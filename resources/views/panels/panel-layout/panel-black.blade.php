@@ -13,6 +13,7 @@
 
     {{--BASE STYLE SHEET--}}
     <link rel="stylesheet" href="/css/panels/black/style-{{Request::local()->dir}}.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.css">
 
     {{--<style>--}}
     {{--body .content-wrapper {--}}
@@ -340,7 +341,7 @@
                     </div>
                     <div class="bottom-part">
                         <div class="tab-switch-button startTrade text-uppercase ">
-                            <div class="toggles startTrade toggle-light" data-on="ON" data-off="OFF"
+                            <div class="toggles toggle-iphone startTrade toggle-light" data-on="ON" data-off="OFF"
                                  style="height: 50px; width: 110px;">
                             </div>
                         </div>
@@ -409,13 +410,13 @@
 
                     {{--FIRST TABLE ROW WITH ALL THE HEADERS--}}
                     <thead class="table-headers table-row">
-                    <th class="table-data text-capitalize text-center">@ln(assets)</th>
-                    <th class="table-data text-capitalize text-center">@ln(position)</th>
-                    <th class="table-data text-capitalize text-center">@ln(amount)</th>
-                    <th class="table-data text-capitalize text-center ">@ln(entry rate)</th>
-                    <th class="table-data text-capitalize text-center ">@ln(current rate)</th>
-                    <th class="table-data text-capitalize text-center ">@ln(expiration date)</th>
-                    <th class="table-data text-capitalize text-center showed hidden-sm hidden-xs">@ln(status)</th>
+                    <th class="table-header-th text-capitalize text-center">@ln(assets)</th>
+                    <th class="table-header-th text-capitalize text-center">@ln(position)</th>
+                    <th class="table-header-th text-capitalize text-center">@ln(amount)</th>
+                    <th class="table-header-th text-capitalize text-center ">@ln(entry rate)</th>
+                    <th class="table-header-th text-capitalize text-center ">@ln(current rate)</th>
+                    <th class="table-header-th text-capitalize text-center ">@ln(expiration date)</th>
+                    <th class="table-header-th text-capitalize text-center showed hidden-sm hidden-xs">@ln(status)</th>
                     </thead>
 
 
@@ -664,7 +665,7 @@
 
                                     {{--FORM TITLE PERSONAL INFO INPUT WRAPPER--}}
                                     <div class="form-title-wrapper">
-                                        <h3 class="form-title text-uppercase col-md-6 col-sm-12 col-xs-12">personal
+                                        <h3 class="form-title text-uppercase col-md-8 col-sm-12 col-xs-12">personal
                                             information</h3>
                                         <img src="/img/panel/black/desktop/yellow-arrow.png"
                                              alt="arrow that points to the inputs"
@@ -744,7 +745,7 @@
 
                                     {{--TITLE WRAPPER INPUT WRAPPER--}}
                                     <div class="form-title-wrapper">
-                                        <h3 class="form-title text-uppercase col-md-6 col-sm-12 col-xs-12 label-form">
+                                        <h3 class="form-title text-uppercase col-md-8 col-sm-12 col-xs-12 label-form">
                                             @ln(your payment details)</h3>
                                         <img src="/img/panel/black/desktop/yellow-arrow.png"
                                              alt="arrow that points to the inputs"
