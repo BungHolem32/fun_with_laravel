@@ -66,7 +66,7 @@ class PanelController extends Controller {
             // From server
             $data['method'] = 'creditCard';
             $data['customerId'] = Customer::get('id');
-            $data['fundId'] = '-1';                         // new card maybe ? -> could be from session
+            //$data['fundId'] = '-1';                         // new card maybe ? -> could be from session
             $data['Country'] = \Request::get('country_id'); // Could be from IP
             $data['currency'] = Customer::get('currency');  // need to be from server
 
@@ -87,6 +87,7 @@ class PanelController extends Controller {
 
             // Testing for Ip change
             $data['IPAddress'] = \Request::ip();
+            //$data['IPAddress'] = '31.132.16.11';
 
             // do we need those?
             //$data['State'] = 'NY';
