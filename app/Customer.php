@@ -105,7 +105,7 @@ class Customer
 
         $data = SpotApi::sendRequest('Customer', 'view', ['FILTER'=>$filter]);
         if($data['err'] !== 0){
-            throw new SpotException($data['errs']['error']);
+            throw new SpotException(implode("\r\n", (array)$data['errs']['error']));
         }
         //prepare data - view returns subarrays of customer, e.g. DATA_0=>[], DATA_1=>[]. we only have one record and need to prefix each key with data_ to be consistent with the form that 'verify' method returns
 

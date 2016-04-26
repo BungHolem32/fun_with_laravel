@@ -31,6 +31,8 @@
                                 window.location.reload();
                             }
                             else {
+                                if(res.errs.error.join)
+                                    res.errs.error = res.errs.error.join('\r\n');
                                 alert(res.errs.error);
                                 $('.loading').hide();
                                 $('.login_btns').show();

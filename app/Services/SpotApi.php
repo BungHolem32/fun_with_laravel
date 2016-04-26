@@ -89,11 +89,11 @@ class SpotApi
                 $answer['err'] = 0;
                 return $answer;
             }
-            $errs = array_map(function($e){
+            $errs = ['error' => array_map(function($e){
                 if(is_array($e))
                     return Languages::getTrans(array_values($e)[0]);
                 return Languages::getTrans($e);
-            }, $answer['status']['errors']);
+            }, self::getErrorTexts($answer['status']['errors']))];
             $answer['msg'] = 'Operation Failed!';
             $answer['errs'] = $errs;
             return $answer;
@@ -103,6 +103,20 @@ class SpotApi
         return $answer;
     }
 
+    private static function getErrorTexts($data, $key=""){
+        $errors = [];
+        if(is_array($data)) {
+            foreach($data as $key => $node) {
+                $errors = array_merge($errors,self::getErrorTexts($node, $key));
+            }
+        }
+        else {
+            if(!is_numeric($data[0])) { // we will only show text messages, no numbers. This is meant to avoid showing any IP addresses to users
+                $errors[] = $data;
+            }
+        }
+        return $errors;
+    }
 
     private static function beforeCustomeradd($data){
 
