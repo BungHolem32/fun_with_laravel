@@ -6200,6 +6200,10 @@ button.close {
   background-color: transparent;
   border: 0;
 }
+.hidden {
+  visibility: hidden !important;
+  display: none;
+}
 #so_container .hidden {
   display: none;
   visibility: visible !important;
@@ -6679,6 +6683,9 @@ body .login-wrapper .login-form-wrapper .form-options .forgotpass:hover {
 }
 body .login-wrapper .login-form-wrapper .form-options .loading {
   margin-top: -2.4em;
+}
+.hidden {
+  visibility: visible !important;
 }
 /*BASE BODY STYLE*/
 body {
