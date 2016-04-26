@@ -7038,6 +7038,7 @@ body .content-wrapper .activate-method-system .active-method-subtitle-wrapper .m
 @media (max-width: 400px) {
   body .content-wrapper .activate-method-system .active-method-subtitle-wrapper .method-subtitle .fa-arrow-down {
     font-size: 0.7em;
+    display: none;
   }
 }
 body .content-wrapper .activate-method-system .active-method-subtitle-wrapper .method-subtitle .active-method-text {
@@ -7512,7 +7513,6 @@ body .content-wrapper .rb-options-history .container .table-tr-content .td-posit
   body .content-wrapper .rb-options-open-trade .container .table-tr-content .td-position .fa-arrow-down,
   body .content-wrapper .rb-options-history .container .table-tr-content .td-position .fa-arrow-down {
     font-size: 0.7em;
-    display: none;
   }
 }
 body .content-wrapper .rb-options-open-trade .container .table-tr-content .td-position .fa-arrow-up,
@@ -7523,7 +7523,6 @@ body .content-wrapper .rb-options-history .container .table-tr-content .td-posit
   body .content-wrapper .rb-options-open-trade .container .table-tr-content .td-position .fa-arrow-up,
   body .content-wrapper .rb-options-history .container .table-tr-content .td-position .fa-arrow-up {
     font-size: 0.7em;
-    display: none;
   }
 }
 body .content-wrapper .rb-options-history .container .table-title {
