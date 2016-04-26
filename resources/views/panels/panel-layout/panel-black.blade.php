@@ -223,7 +223,7 @@
                     <header class="account-details-title col-sm-12 col-xs-12 text-center">
 
                         {{--HUMAN AVATAR--}}
-                        <div class="img-human col-sm-2 col-xs-2 col-xs-push-3">
+                        <div class="img-human col-sm-2 col-xs-2 col-xs-push-2">
                             <img src="/img/panel/black/icon-human.png" alt="img-responsive"
                                  class="icon-human-pic img-responsive block-center">
                         </div>
