@@ -1,10 +1,15 @@
-@import "../../direction";
-/*IMPORT THE DIRECTION LESS TO TAKE CARE OF THE CHANGE IN DIRECTION OF OTHER LANGUAGES */
-@import "../../bootstrap/bootstrap";
-/*IMPORT BOOTSTRAP LIBRARY WITH ALL THE ADDONS*/
-@import "my-mixin";
-@import "login";
+/*FONT ROBOTO IMPORT*/
 @import url(https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab);
+/*IMPORT THE DIRECTION LESS TO TAKE CARE OF THE CHANGE IN DIRECTION OF OTHER LANGUAGES */
+@import "../../direction";
+/*IMPORT BOOTSTRAP LIBRARY WITH ALL THE ADDONS*/
+@import "../../bootstrap/bootstrap";
+/*MY VARIABLE*/
+@import "my-variable";
+/*MY MIXING */
+@import "my-mixin";
+/*LOGIN PAGE STYLES*/
+@import "login";
 
 /*BASE BODY STYLE*/
 body {
@@ -33,14 +38,16 @@ body {
       height: 8.6em;
       position: fixed;
       .right(@width*1.45);
+      .boxShadow(0 15.5px 5.9px -9.8px rgba(44, 44, 44, 0.7));
       border-bottom-right-radius: 0.6em;
       border-bottom-left-radius: 0.6em;
       background-color: white;
-      .boxShadow(0 15.5px 5.9px -9.8px rgba(44, 44, 44, 0.7));
       z-index: 1;
+
       @media (min-width: 1240px) and  (max-width: 1740px) {
         .right (0);
       }
+
       @media (max-width: 1240px) {
         display: none !important;
       }
@@ -48,7 +55,7 @@ body {
       /*TITLE */
       .account-details-title {
         height: 2.2em;
-        background: #00395E;
+        background: @account-details-header-bg;
 
         /*DIV WRAPPER HUMAN AVATAR*/
         .img-human {
@@ -123,7 +130,7 @@ body {
 
           /*ACCOUNT DETAIL TITLE */
           .account-details-title {
-            background: #01395E;
+            background: @account-details-header-bg;
             color: white;
             .padding(0.4em, 0, 0.4em, 0);
             font-size: 1.3em;
@@ -144,7 +151,7 @@ body {
       color: white;
       overflow: hidden;
       border-radius: 0;
-      border-top: 1px solid #65BEF9;
+      border-top: @default-border-style @nav-bar-border-color-shadow;
 
       @media (min-width: 996px) {
         top: 6em;
@@ -177,12 +184,12 @@ body {
           font-family: @font-buttons;
           border: none;
           border-radius: 0;
-          background: #2C98E0;
+          background: @nav-bar-bright-color;
           position: relative;
           float: @right;
           padding: 20px 20px;
           margin: 0;
-          border-left: 1px solid #237EBB;
+          border-left: @default-border-style #237EBB;
           z-index: 10;
 
           .icon-bar {
@@ -219,8 +226,8 @@ body {
 
           /*LIST ELEMENT IN THE NAV-BAR (SPECIFIC LINK )*/
           .navbar-part {
-            border-right: 1px solid #55B2EF;
-            border-left: 1px solid #1C6DA2;
+            border-right: @default-border-style @nav-bar-border-right;
+            border-left: @default-border-style @nav-bar-border-left;
             @media (max-width: 767px) {
               border: none;
             }
@@ -232,7 +239,7 @@ body {
               margin: 0;
               text-shadow: -1px -1px 2px #444;
               font-family: Helvetica, Arial;
-
+              l
               &:hover {
                 background: #0082d8;
               }
@@ -257,7 +264,7 @@ body {
         padding: 0;
 
         .navbar-li-wrapper {
-          border-bottom: 1px solid #237EBB;
+          border-bottom: @default-border-style #237EBB;
           font-family: @font-headers-running;
           line-height: 45px;
           .padding(3px, 0, 3px, 20px);
@@ -306,7 +313,6 @@ body {
           font-size: 1.4em;
           padding: 0;
           .margin(0.62em, 0, 0, 1em);
-
 
           @media (max-width: 1024px) {
             text-align: center;
@@ -459,7 +465,7 @@ body {
 
           /*BOTTOM PART OF ALL BUTTONS*/
           .bottom-part {
-            border-top: 1px solid #444;
+            border-top: @default-border-style #444;
 
             /*SWITCH BUTTON*/
             .tab-switch-button {
@@ -489,7 +495,7 @@ body {
                   .toggle-slide {
                     border-radius: 9999px;
                     .boxShadow(0 -5px 28px -5px #999);
-                    border: 1px solid #666;
+                    border: @default-border-style #666;
                     overflow: hidden;
                     cursor: pointer;
                     -webkit-user-select: none;
@@ -544,8 +550,8 @@ body {
                         font-size: 1.5em;
 
                         &.active {
-                          height: 50.8px !important;
-                          width: 83px !important;
+                          height: 51.5px !important;
+                          width: 84px !important;
                           margin-left: -26.9px !important;
                           text-indent: 16.8px !important;
                           line-height: 50.4px !important;
@@ -581,7 +587,7 @@ body {
                           background: radial-gradient(circle farthest-corner at 20px 1px, #C6DE26 26%, #3BC506, #3CC708);
                           filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3fd307', endColorstr='#e1fb38', GradientType=0);
                           box-shadow: 1px 2px 1px 2px #2F2D2D, inset 1px 1px 1px #ddd;
-                          border: 1px solid #34C134;
+                          border: @default-border-style #34C134;
                         }
                       }
                     }
@@ -624,7 +630,7 @@ body {
 
         /*TOP PART OF EACH TAB*/
         .top-part {
-          border-bottom: 1px solid black;
+          border-bottom: @default-border-style black;
 
           /*CIRCLE IMAGE WITH THE STEP NUMBER*/
           .tab-number-in-circle {
@@ -669,37 +675,23 @@ body {
         /*BOTTOM PART WITH THE BUTTONS */
         .bottom-part {
           min-height: 8.8em;
-          border-top: 1px solid #444;
+          border-top: @default-border-style #444;
 
           /*BUTTON FIRST*/
           .tab-big-button {
-            font-family: @font-buttons;
-            font-size: 1.7em;
-            line-height: 2.033333;
-            border: none;
             position: relative;
             top: 0.8em;
-            color: black;
+            font-size: 1.7em;
+            outline: none;
+            line-height: 2.033333;
             word-spacing: 0.8px;
-            .linear-gradient-big-button;
             text-indent: -5.7px;
             width: @width*8.5;
-            text-shadow: @text-shadow;
-            outline: none;
-            border: 1px solid #afe713;
-
-            &:hover {
-              background: #72a40e;
-              background: linear-gradient(to bottom, #72a40e 43%, #aadc1f 96%);
-              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72a40e', endColorstr='#aadc1f', GradientType=0);
-              outline: none;
-              border: 1px solid #afe713;
-            }
+            .btn-color;
 
             @media (max-width: 410px) {
               font-size: 1.5em;
             }
-
           }
         }
       }
@@ -762,7 +754,7 @@ body {
           color: white;
           letter-spacing: 0.7px;
           word-spacing: -1.8px;
-          background-color: @nav-bar-dark-color;
+          background-color: @table-bg-title;
           border-bottom: 4.2px solid black;
           .fa-spin {
             text-indent: 0;
@@ -772,7 +764,7 @@ body {
 
         /*TR WITH ALL THE HEADERS*/
         .table-headers {
-          background: @nav-bar-bright-color;
+          background: @table-bg-sub-title;
           color: black;
           font-size: 1.3em;
 
@@ -788,14 +780,15 @@ body {
 
           /*ALL TDS THE ODD*/
           &:nth-of-type(odd) {
-            background: #282828;
+            background: @table-bg-odd;
             color: white;
           }
           /*ALL TDS THE EVEN*/
           &:nth-of-type(even) {
-            background: #3F3F3F;
+            background: @table-bg-even;
           }
 
+          /*TABLE DATA*/
           .table-data {
             border-top: none !important;
           }
@@ -980,23 +973,13 @@ body {
 
             /*FOOTER PLACE IN THE WELCOME FOOTER*/
             .button-welcome-footer {
-              font-family: @font-buttons;
-              color: black;
               .float(none);
               margin: 0 auto;
               display: block;
               width: @width*5;
               height: 7.5vh;
               font-size: @width*30%;
-              text-shadow: @text-shadow;
-              background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
-              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
-
-              &:hover {
-                background: #72a40e;
-                background: linear-gradient(to bottom, #72a40e 43%, #aadc1f 96%);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72a40e', endColorstr='#aadc1f', GradientType=0);
-              }
+              .btn-color;
 
               @media (max-width: 768px) {
                 width: @width*9 !important;
@@ -1086,7 +1069,7 @@ body {
               padding: 0.2em;
               .boxShadow(0px 2px 1px 1px black);
 
-              .deposite-title {
+              .deposit-title {
                 margin: 0;
                 color: black;
                 font-size: 3.5em;
@@ -1246,7 +1229,7 @@ body {
                     @media (max-width: 992px) {
                       padding: 0;
                       margin-bottom: 1em;
-                      width: 100%;
+                      width: @width *10%;
                     }
 
                     /*CARD NUMBER FIELD AFTER CLEAR FIX */
@@ -1255,14 +1238,18 @@ body {
                       @media (max-width: 992px) {
                         margin: 0 0 1em 0 ;
                       }
+
+                    }
+                    label {
+                      text-transform: uppercase;
                     }
 
                     /*INPUTS AND SELECT BOX*/
                     .form-control {
-                      width: 60%;
+                      width: @width*6%;
                       height: 40px;
                       @media (max-width: 992px) {
-                        width: 100%;
+                        width: @width*10%;
                       }
                       &.error {
                         border: 3px solid red;
@@ -1277,20 +1264,16 @@ body {
                     }
                   }
                   .form-button {
+                    .btn-color;
                     width: 93.4%;
-                    font-family: @font-buttons;
                     margin-top: 1em;
                     font-size: 1.6vw;
-                    background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
-                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
-                    color: black;
-                    text-shadow: 1px 1px 1px white;
                     min-height: 7.6vh;
                     @media (max-width: 1200px) {
                       font-size: 3vw;
                     }
                     @media (max-width: 992px) {
-                      width: 100%;
+                      width: @width*10%;
                       font-size: 5.1vw;
                       min-height: 7vh;
                       margin: 1vh 0;
@@ -1413,7 +1396,7 @@ body {
                   width: @width*9;
                   display: inline-table;
                   vertical-align: sub;
-                  font-size: 1.6em;
+                  font-size: 1.5em;
                   color: @nav-bar-bright-color;
                   @media (max-width: 993px) {
                     //font-size: 1.4em;
@@ -1493,8 +1476,8 @@ body {
 
         @media (max-width: 998px) {
           max-height: 53px;
-          left: 0;
-          right: 0;
+          .left(0);
+          .right (0);
           margin: 0 auto;
           top: 3.7em;
           text-align: center;
@@ -1522,15 +1505,12 @@ body {
 
 /*CUSTOMIZE THE TABLE LAYOUT */
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+
+  vertical-align: middle;
+  padding: 3px;
+
   @media (max-width: 500px) {
     padding: 3px;
     vertical-align: middle;
   }
-
-  vertical-align: middle;
-  padding: 3px;
-}
-
-.add_overflow_hidden {
-  overflow: hidden;
 }

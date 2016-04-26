@@ -1,3 +1,6 @@
+/*FONT ROBOTO IMPORT*/
+@import url(https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab);
+/*IMPORT THE DIRECTION LESS TO TAKE CARE OF THE CHANGE IN DIRECTION OF OTHER LANGUAGES */
 /*!
 * direction.less v0.1.0
 *
@@ -10,9 +13,8 @@
   display: inline-block;
   .flip-horizontal();
 }*/
-/*IMPORT THE DIRECTION LESS TO TAKE CARE OF THE CHANGE IN DIRECTION OF OTHER LANGUAGES */
+/*IMPORT BOOTSTRAP LIBRARY WITH ALL THE ADDONS*/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-@import url(https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5603,7 +5605,7 @@ button.close {
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: 10px;
+  margin: 10px 10px 10px 10px;
 }
 .modal-content {
   position: relative;
@@ -6419,8 +6421,17 @@ button.close {
     display: none !important;
   }
 }
-/*IMPORT BOOTSTRAP LIBRARY WITH ALL THE ADDONS*/
+/*MY VARIABLE*/
 /*ASSIGN VALUES*/
+/*ACCOUNT-DETAILS*/
+/*NAV-BAR  */
+/*MODAL*/
+/*SELECT-BOX*/
+/*TEXT SHADOW*/
+/*FONTS*/
+/*BUTTONS*/
+/*TABLES*/
+/*MY MIXING */
 /*MIXIN CLASSES*/
 /*BOX SHADOW PREFIXES  IF IT PASS ON PARAM*/
 /*IF IT PASS MORE THE ONE THEN PASS */
@@ -6468,6 +6479,7 @@ button.close {
 /*TEXT COLORS ON TABLES*/
 .text-colors-on-tables {
   /*CHANGE THE COLOR OF THE  DANGER-TEXT  TO RED */
+  /*TEXT COLOR (GREEN WHEN THE RATE IS UP) */
 }
 .text-colors-on-tables .text-danger {
   color: #B91010;
@@ -6479,6 +6491,7 @@ button.close {
 .text-colors-on-tables .text-profit {
   color: #89B120;
 }
+/*DI*/
 .displaying-options-on-waiting-logos {
   /*HIDE ELEMENT*/
   /*SHOW ELELMENT */
@@ -6488,6 +6501,22 @@ button.close {
 }
 .displaying-options-on-waiting-logos .on {
   display: inline-block !important;
+}
+/*BUTTON STYLE*/
+.btn-color {
+  color: black;
+  outline: 0;
+  text-shadow: 0.2px 0.9px 0px #caff1f;
+  font-family: 'Roboto Condensed', sans-serif;
+  background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
+  border: 1px solid #afe713;
+  /*HOVER EFFECT */
+}
+.btn-color:hover {
+  background: #72a40e;
+  background: linear-gradient(to bottom, #72a40e 43%, #aadc1f 96%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72a40e', endColorstr='#aadc1f', GradientType=0);
 }
 /*SCROLL BAR STYLE*/
 .scroll-bar-style ::-webkit-scrollbar-track {
@@ -6519,6 +6548,7 @@ button.close {
 .placeholder :-ms-input-placeholder {
   text-transform: capitalize;
 }
+/*FLIP-ABLE WHEN THE LANGUAGE START FROM RTL*/
 .flip-able {
   /* Gecko */
   /* Opera */
@@ -6529,6 +6559,7 @@ button.close {
   -webkit-filter: FlipH;
   filter: FlipH;
 }
+/*LOGIN PAGE STYLES*/
 .body-login {
   font-family: 'Helvetica', Arial;
   background: black url('/img/panel/black/desktop/big-bg-login.jpg') no-repeat top center !important;
@@ -6627,11 +6658,13 @@ body .login-wrapper .login-form-wrapper .form-options .btn {
   font-weight: bold;
   line-height: 1px;
   color: black;
+  outline: 0;
   text-shadow: 0.2px 0.9px 0px #caff1f;
   font-family: 'Roboto Condensed', sans-serif;
   background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
   border: 1px solid #afe713;
+  /*HOVER EFFECT */
 }
 body .login-wrapper .login-form-wrapper .form-options .btn:hover {
   background: #72a40e;
@@ -6664,6 +6697,7 @@ body {
   /*SCROLL BAR STYLES*/
   /*TEXT-COLOR-ON-TABLES*/
   /*CHANGE THE COLOR OF THE  DANGER-TEXT  TO RED */
+  /*TEXT COLOR (GREEN WHEN THE RATE IS UP) */
   /*DISPLAY OPTIONS ON THE WAITING LOGOS*/
   /*HIDE ELEMENT*/
   /*SHOW ELELMENT */
@@ -6701,7 +6735,6 @@ body .content-wrapper .account-details-desktop {
   border-bottom-right-radius: 0.6em;
   border-bottom-left-radius: 0.6em;
   background-color: white;
-  box-shadow: 0 15.5px 5.9px -9.8px rgba(44, 44, 44, 0.7);
   z-index: 1;
   /*TITLE */
   /*PARAGRAPHS WITH THE INFO TITLE*/
@@ -6796,7 +6829,7 @@ body .content-wrapper .account-details-mobile .container .row {
   }
 }
 body .content-wrapper .account-details-mobile .container .row .account-details-title {
-  background: #01395E;
+  background: #00395E;
   color: white;
   padding: 0.4em 0 0.4em 0;
   font-size: 1.3em;
@@ -6853,7 +6886,7 @@ body .content-wrapper .navbar-desktop .container .navbar-toggle {
   font-family: 'Roboto Condensed', sans-serif;
   border: none;
   border-radius: 0;
-  background: #2C98E0;
+  background: #2c98e0;
   position: relative;
   float: left;
   padding: 20px 20px;
@@ -6911,7 +6944,7 @@ body .content-wrapper .navbar-desktop .navbar-collapse .navbar-nav .navbar-part 
   text-shadow: -1px -1px 2px #444;
   font-family: Helvetica, Arial;
 }
-body .content-wrapper .navbar-desktop .navbar-collapse .navbar-nav .navbar-part .navbar-text:hover {
+l body .content-wrapper .navbar-desktop .navbar-collapse .navbar-nav .navbar-part .navbar-text:hover {
   background: #0082d8;
 }
 body .content-wrapper .navbar-mobile {
@@ -7148,7 +7181,6 @@ body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide {
   border-radius: 9999px;
-  box-shadow: 0 -5px 28px -5px #999;
   border: 1px solid #666;
   overflow: hidden;
   cursor: pointer;
@@ -7205,8 +7237,8 @@ body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-
   font-size: 1.5em;
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide .toggle-inner .toggle-off.active {
-  height: 50.8px !important;
-  width: 83px !important;
+  height: 51.5px !important;
+  width: 84px !important;
   margin-left: -26.9px !important;
   text-indent: 16.8px !important;
   line-height: 50.4px !important;
@@ -7320,28 +7352,27 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part {
   /*BUTTON FIRST*/
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 1.7em;
-  line-height: 2.033333;
-  border: none;
   position: relative;
   top: 0.8em;
-  color: black;
+  font-size: 1.7em;
+  outline: none;
+  line-height: 2.033333;
   word-spacing: 0.8px;
-  background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
   text-indent: -5.7px;
   width: 85%;
-  text-shadow: 0.8px -1.3px 1.3px white;
-  outline: none;
+  color: black;
+  outline: 0;
+  text-shadow: 0.2px 0.9px 0px #caff1f;
+  font-family: 'Roboto Condensed', sans-serif;
+  background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
   border: 1px solid #afe713;
+  /*HOVER EFFECT */
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button:hover {
   background: #72a40e;
   background: linear-gradient(to bottom, #72a40e 43%, #aadc1f 96%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72a40e', endColorstr='#aadc1f', GradientType=0);
-  outline: none;
-  border: 1px solid #afe713;
 }
 @media (max-width: 410px) {
   body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button {
@@ -7438,6 +7469,7 @@ body .content-wrapper .rb-options-history .container .table-tr-content {
   color: white;
   /*ALL TDS THE ODD*/
   /*ALL TDS THE EVEN*/
+  /*TABLE DATA*/
   /*SPECIFIC TD POSITION*/
 }
 body .content-wrapper .rb-options-open-trade .container .table-tr-content:nth-of-type(odd),
@@ -7620,17 +7652,20 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
   /*FOOTER PLACE IN THE WELCOME FOOTER*/
 }
 body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-footer-welcome .button-welcome-footer {
-  font-family: 'Roboto Condensed', sans-serif;
-  color: black;
   float: none;
   margin: 0 auto;
   display: block;
   width: 50%;
   height: 7.5vh;
   font-size: 300%;
-  text-shadow: 0.8px -1.3px 1.3px white;
+  color: black;
+  outline: 0;
+  text-shadow: 0.2px 0.9px 0px #caff1f;
+  font-family: 'Roboto Condensed', sans-serif;
   background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
+  border: 1px solid #afe713;
+  /*HOVER EFFECT */
 }
 body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-footer-welcome .button-welcome-footer:hover {
   background: #72a40e;
@@ -7721,9 +7756,8 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .deposit-title-wrapper {
   background: #2c98e0;
   padding: 0.2em;
-  box-shadow: 0px 2px 1px 1px black;
 }
-body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .deposit-title-wrapper .deposite-title {
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .deposit-title-wrapper .deposit-title {
   margin: 0;
   color: black;
   font-size: 3.5em;
@@ -7871,6 +7905,10 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
     margin: 0 0 1em 0 ;
   }
 }
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-group label,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group label {
+  text-transform: uppercase;
+}
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-group .form-control,
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .form-control {
   width: 60%;
@@ -7894,15 +7932,24 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-button,
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-button {
-  width: 93.4%;
+  color: black;
+  outline: 0;
+  text-shadow: 0.2px 0.9px 0px #caff1f;
   font-family: 'Roboto Condensed', sans-serif;
-  margin-top: 1em;
-  font-size: 1.6vw;
   background: linear-gradient(to bottom, #aadc1f 43%, #72a40e 96%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aadc1f', endColorstr='#72a40e', GradientType=0);
-  color: black;
-  text-shadow: 1px 1px 1px white;
+  border: 1px solid #afe713;
+  /*HOVER EFFECT */
+  width: 93.4%;
+  margin-top: 1em;
+  font-size: 1.6vw;
   min-height: 7.6vh;
+}
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-button:hover,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-button:hover {
+  background: #72a40e;
+  background: linear-gradient(to bottom, #72a40e 43%, #aadc1f 96%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72a40e', endColorstr='#aadc1f', GradientType=0);
 }
 @media (max-width: 1200px) {
   body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-button,
@@ -8023,7 +8070,7 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
   width: 90%;
   display: inline-table;
   vertical-align: sub;
-  font-size: 1.6em;
+  font-size: 1.5em;
   color: #2c98e0;
 }
 @media (max-width: 993px) {
@@ -8169,9 +8216,6 @@ body :-ms-input-placeholder {
     padding: 3px;
     vertical-align: middle;
   }
-}
-.add_overflow_hidden {
-  overflow: hidden;
 }
 
 /*# sourceMappingURL=style-1.css.map */

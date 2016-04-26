@@ -646,7 +646,7 @@
                         <header class="deposit-title-wrapper text-center ">
 
                             {{--TEXT TITLE--}}
-                            <h2 class="deposite-title text-uppercase"><strong>start raking in money!!</strong></h2>
+                            <h2 class="deposit-title text-uppercase"><strong>start raking in money!!</strong></h2>
 
                             {{--SUBTITLE SMALL TEXT--}}
                             <small>Fill in the necessary information in order to open your {{ $page->title_h1 }} Method
