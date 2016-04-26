@@ -6827,6 +6827,16 @@ body .content-wrapper .account-details-mobile .container .row .account-details-t
 body .content-wrapper .account-details-mobile .container .row .account-detail-personal-info {
   padding-top: 0.4em;
 }
+@media (max-width: 500px) {
+  body .content-wrapper .account-details-mobile .container .row .account-detail-personal-info p.info-tab.col-xs-7 {
+    padding: 0 0 0 0;
+  }
+}
+@media (max-width: 500px) {
+  body .content-wrapper .account-details-mobile .container .row .account-detail-personal-info p.info-tab.col-xs-5 {
+    padding-right: 0;
+  }
+}
 body .content-wrapper .navbar-desktop {
   position: relative;
   background: #2c98e0;
@@ -7032,7 +7042,7 @@ body .content-wrapper .activate-method-system .active-method-subtitle-wrapper .m
 }
 @media (max-width: 640px) {
   body .content-wrapper .activate-method-system .active-method-subtitle-wrapper .method-subtitle .active-method-text {
-    font-size: 1em;
+    font-size: 0.9em;
   }
 }
 @media (max-width: 410px) {
@@ -7336,6 +7346,11 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-title {
   line-height: 59.4px;
   margin: 0;
 }
+@media (max-width: 500px) {
+  body .content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-title {
+    font-size: 1.3em;
+  }
+}
 body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part {
   min-height: 8.8em;
   border-top: 1px solid #444;
@@ -7487,6 +7502,7 @@ body .content-wrapper .rb-options-history .container .table-tr-content .td-posit
   body .content-wrapper .rb-options-open-trade .container .table-tr-content .td-position .fa-arrow-down,
   body .content-wrapper .rb-options-history .container .table-tr-content .td-position .fa-arrow-down {
     font-size: 0.7em;
+    display: none;
   }
 }
 body .content-wrapper .rb-options-open-trade .container .table-tr-content .td-position .fa-arrow-up,
@@ -7497,6 +7513,7 @@ body .content-wrapper .rb-options-history .container .table-tr-content .td-posit
   body .content-wrapper .rb-options-open-trade .container .table-tr-content .td-position .fa-arrow-up,
   body .content-wrapper .rb-options-history .container .table-tr-content .td-position .fa-arrow-up {
     font-size: 0.7em;
+    display: none;
   }
 }
 body .content-wrapper .rb-options-history .container .table-title {

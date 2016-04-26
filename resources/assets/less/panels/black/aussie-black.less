@@ -91,7 +91,6 @@ body {
 
         @media (max-width: 993px) {
           .padding(0, 0, 0, 0);
-
         }
 
         /*SPAN INFO RESULTS*/
@@ -139,6 +138,24 @@ body {
           /*ACCOUNT DETAIL PERSONAL*/
           .account-detail-personal-info {
             padding-top: 0.4em;
+
+            p {
+              &.info-tab {
+                &.col-xs-7 {
+                  @media (max-width: 500px) {
+                    .padding(0, 0, 0, 0);
+                  }
+                }
+                &.col-xs-5 {
+                  @media (max-width: 500px) {
+                    .padding-right(0);
+                  }
+
+                }
+              }
+
+            }
+
           }
         }
       }
@@ -347,7 +364,7 @@ body {
             font-weight: bold;
 
             @media (max-width: 640px) {
-              font-size: 1em;
+              font-size: 0.9em;
             }
 
             @media (max-width: 410px) {
@@ -670,6 +687,9 @@ body {
             color: white;
             line-height: 59.4px;
             margin: 0;
+            @media (max-width:500px) {
+              font-size: 1.3em;
+            }
           }
         }
         /*BOTTOM PART WITH THE BUTTONS */
@@ -800,6 +820,7 @@ body {
               color: red;
               @media (max-width: 394px) {
                 font-size: 0.7em;
+                display: none;
               }
             }
 
@@ -807,7 +828,9 @@ body {
               color: #B8F116;
               @media (max-width: 394px) {
                 font-size: 0.7em;
+                display: none;
               }
+
             }
           }
         }
