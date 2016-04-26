@@ -455,15 +455,12 @@
 
                                     /*IF THE BALANCE LESS THEN 100 AND BIGGER THEN 25$*/
                                     if (res.customer.accountBalance < 100) {
-
-                                        /*add the class .low-alert*/
-                                        $('.low-alert').fadeIn();
+                                        
                                     }
                                     /*ELSE
                                      HIDE THE LOW-ALERT THEN THE BALANCE BIGGER THEN 100*/
                                     else {
-                                        /*hide the alert*/
-                                        $('.low-alert').hide();
+
                                     }
 
                                     /*call the method load_positions and at the end get the asset_list*/

@@ -6200,10 +6200,6 @@ button.close {
   background-color: transparent;
   border: 0;
 }
-.hidden {
-  visibility: hidden !important;
-  display: none;
-}
 #so_container .hidden {
   display: none;
   visibility: visible !important;
@@ -6868,6 +6864,7 @@ body .content-wrapper .navbar-desktop {
 @media (max-width: 776px) {
   body .content-wrapper .navbar-desktop {
     font-size: 0.9em;
+    border-top: none;
   }
 }
 @media (max-width: 767px) {
@@ -7314,6 +7311,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper.amount .amount-btn:focus {
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper .top-part {
   border-bottom: 1px solid black;
+  display: block !important;
   /*CIRCLE IMAGE WITH THE STEP NUMBER*/
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-number-in-circle {
