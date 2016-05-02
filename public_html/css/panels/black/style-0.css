@@ -2205,7 +2205,7 @@ table {
   background-color: transparent;
 }
 caption {
-  padding-top: 8px;
+  padding-top: 12px;
   padding-bottom: 8px;
   color: #777777;
   text-align: left;
@@ -4318,6 +4318,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > li > a:focus {
   color: #333;
   background-color: transparent;
+  text-decoration: underline;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
@@ -5633,7 +5634,6 @@ button.close {
   filter: alpha(opacity=50);
 }
 .modal-header {
-  padding: 15px;
   border-bottom: 1px solid #e5e5e5;
   min-height: 16.42857143px;
 }
@@ -5649,9 +5649,9 @@ button.close {
   padding: 15px;
 }
 .modal-footer {
-  padding: 15px;
+  padding: 30px 15px 15px 15px;
   text-align: right;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #424242;
 }
 .modal-footer .btn + .btn {
   margin-left: 5px;
@@ -5676,7 +5676,7 @@ button.close {
     margin: 30px auto;
   }
   .modal-content {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 27.6px 13px rgba(0, 0, 0, 0.5);
   }
   .modal-sm {
     width: 300px;
@@ -6441,6 +6441,8 @@ button.close {
   box-shadow: inset 6px 7.9px 16px 4.4px #01385B, 0px 1px 3px -0.2px #999 !important;
   text-shadow: 1px -1px 1px #313030 !important;
   background: #0288cb !important;
+  color: white !important;
+  border-top: 1px solid black !important;
   background: linear-gradient(to bottom, #0288cb 43%, #0288cb 43%, #00daf8 100%) !important;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0288cb', endColorstr='#00daf8', GradientType=0) !important;
 }
@@ -6661,6 +6663,17 @@ body .login-wrapper .login-form-wrapper .form-options .btn:hover {
   background: linear-gradient(to bottom, #72a40e 43%, #aadc1f 96%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72a40e', endColorstr='#aadc1f', GradientType=0);
 }
+body .login-wrapper .login-form-wrapper .form-options .proccess {
+  position: absolute;
+  top: 141px;
+  line-height: 31px !important;
+  display: none;
+  width: 450px;
+  border-radius: 10px;
+}
+body .login-wrapper .login-form-wrapper .form-options .proccess.active {
+  display: block;
+}
 body .login-wrapper .login-form-wrapper .form-options .forgotpass {
   color: #3E80D4;
   float: right;
@@ -6731,6 +6744,11 @@ body .content-wrapper .account-details-desktop {
   z-index: 1;
   /*TITLE */
   /*PARAGRAPHS WITH THE INFO TITLE*/
+}
+body .content-wrapper .account-details-desktop:after {
+  content: url('/img/panel/black/account-shadow.png');
+  position: relative;
+  top: 12px;
 }
 @media (min-width: 1240px) and (max-width: 1740px) {
   body .content-wrapper .account-details-desktop {
@@ -6945,11 +6963,15 @@ body .content-wrapper .navbar-desktop .navbar-collapse .navbar-nav .navbar-part 
   color: inherit;
   letter-spacing: 0.3px;
   margin: 0;
-  text-shadow: -1px -1px 2px #444;
+  text-shadow: -1px -1px 2px #444444;
   font-family: Helvetica, Arial;
 }
-l body .content-wrapper .navbar-desktop .navbar-collapse .navbar-nav .navbar-part .navbar-text:hover {
-  background: #0082d8;
+body .content-wrapper .navbar-desktop .navbar-collapse .navbar-nav .navbar-part .navbar-text:hover {
+  text-decoration: underline;
+}
+body .content-wrapper .navbar-desktop .navbar-collapse .navbar-nav .navbar-part .navbar-text:active {
+  text-decoration: none;
+  background-color: #0082d8;
 }
 body .content-wrapper .navbar-mobile {
   left: -200px;
@@ -6973,7 +6995,7 @@ body .content-wrapper .navbar-mobile .navbar-ul-wrapper .navbar-li-wrapper {
   padding: 3px 0 3px 20px;
 }
 body .content-wrapper .navbar-mobile .navbar-ul-wrapper .navbar-li-wrapper .navbar-text-mobile {
-  color: #fff;
+  color: #ffffff;
   font-size: 0.9em;
   text-decoration: none;
   text-transform: uppercase;
@@ -7010,8 +7032,8 @@ body .content-wrapper .activate-method-system .active-method-title-wrapper {
   /*H3 */
 }
 body .content-wrapper .activate-method-system .active-method-title-wrapper .method-title {
-  font-size: 1.4em;
-  padding: 0;
+  font-size: 1.65em;
+  letter-spacing: 0;
   margin: 0.62em 0 0 1em;
 }
 @media (max-width: 1024px) {
@@ -7040,7 +7062,7 @@ body .content-wrapper .activate-method-system .active-method-subtitle-wrapper .m
   position: relative;
   line-height: 23.8px;
   margin: 0px 0 0 -2.7px;
-  letter-spacing: 2.3px;
+  letter-spacing: 0px;
   font-style: italic;
   color: #FFDE00;
   font-weight: bold;
@@ -7124,7 +7146,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-2 {
 }
 @media (max-width: 1200px) {
   body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-2 {
-    top: 145.7px;
+    top: 155.7px;
     left: -4.2%;
   }
 }
@@ -7166,7 +7188,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading {
   /*BOTTOM PART OF ALL BUTTONS*/
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part {
-  border-top: 1px solid #444;
+  border-top: 1px solid #444444;
   /*SWITCH BUTTON*/
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button {
@@ -7186,7 +7208,6 @@ body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide {
   border-radius: 9999px;
-  border: 1px solid #666;
   overflow: hidden;
   cursor: pointer;
   -webkit-user-select: none;
@@ -7195,6 +7216,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-
   user-select: none;
   direction: ltr;
   text-align: center;
+  box-shadow: 0px -5px 17px 0px rgba(230, 250, 250, 0.3);
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide .toggle-inner {
   /*TOGGLE ON AND STYLES*/
@@ -7237,14 +7259,14 @@ body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-
   font-family: helvetica;
   background: radial-gradient(#232426, #252525);
   border: 1.5px solid black;
-  box-shadow: inset 1px 0px 11.6px #444;
+  box-shadow: inset 1px 0px 11.6px #444444;
   z-index: -1;
   font-size: 1.5em;
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide .toggle-inner .toggle-off.active {
-  height: 51.5px !important;
-  width: 84px !important;
-  margin-left: -26.9px !important;
+  height: 50.5px !important;
+  width: 86px !important;
+  margin-left: -24.9px !important;
   text-indent: 16.8px !important;
   line-height: 50.4px !important;
 }
@@ -7262,10 +7284,11 @@ body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-
   /*WHEN THE SWITCH IS ON */
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide .toggle-inner .toggle-blob[active=false] {
-  height: 51px !important;
-  width: 51px !important;
-  box-shadow: inset -0.1px 2.1px 3.1px #555;
-  background: radial-gradient(#3B3B3C, #2E2E31, #191919);
+  height: 49px !important;
+  margin-top: 1px;
+  width: 48px !important;
+  box-shadow: inset -0.1px 2.1px 3.1px #555555;
+  background: linear-gradient(#3B3B3C, #2E2E31, #191919);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4f5053', endColorstr='#2c2d2e', GradientType=0);
   border: 1.5px solid black;
 }
@@ -7275,11 +7298,10 @@ body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-
   background: #3fd307;
   background: radial-gradient(circle farthest-corner at 20px 1px, #C6DE26 26%, #3BC506, #3CC708);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3fd307', endColorstr='#e1fb38', GradientType=0);
-  box-shadow: 1px 2px 1px 2px #2F2D2D, inset 1px 1px 1px #ddd;
+  box-shadow: 1px 2px 1px 2px #2F2D2D, inset 1px 1px 1px #dddddd;
   border: 1px solid #34C134;
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper.amount .amount-btn {
-  font-family: 'Roboto Condensed', sans-serif;
   width: 39%;
   margin: 0 13px 15px 0;
   position: relative;
@@ -7287,12 +7309,13 @@ body .content-wrapper .tabs-wrapper .tab-wrapper.amount .amount-btn {
   left: 4px;
   box-shadow: 1px 1px 10px 1px black;
   background: linear-gradient(to top, #222222, #444547);
-  color: white;
+  color: #cccccc;
+  text-shadow: 0 -2px 1px black;
   outline: none;
   border-bottom: 1.5px solid black;
-  border-top: 1.5px solid #000;
   border-left: 1.9px solid black;
   border-right: none;
+  border-top: 1.5px solid #777777;
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper.amount .amount-btn:hover {
   background: #252525;
@@ -7303,6 +7326,8 @@ body .content-wrapper .tabs-wrapper .tab-wrapper.amount .amount-btn:focus {
   box-shadow: inset 6px 7.9px 16px 4.4px #01385B, 0px 1px 3px -0.2px #999 !important;
   text-shadow: 1px -1px 1px #313030 !important;
   background: #0288cb !important;
+  color: white !important;
+  border-top: 1px solid black !important;
   background: linear-gradient(to bottom, #0288cb 43%, #0288cb 43%, #00daf8 100%) !important;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0288cb', endColorstr='#00daf8', GradientType=0) !important;
 }
@@ -7322,14 +7347,13 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-number-in-circle
   border-radius: 50%;
   background-clip: padding-box;
   background: #ffde00;
-  border: 6px solid #000;
-  font-size: 41px;
+  border: 6px solid #000000;
+  font-size: 35.1px;
   font-weight: bold;
-  line-height: 56px;
-  color: #000;
+  line-height: 49.6px;
+  color: #000000;
   text-shadow: -1px 2px 1px #f4ff96;
-  -webkit-transform: rotate(5deg);
-  transform: rotate(5deg);
+  box-shadow: inset 1px 2.3px 1px 1px #fff299;
 }
 @media (max-width: 1200px) {
   body .content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-number-in-circle {
@@ -7359,7 +7383,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-title {
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part {
   min-height: 8.8em;
-  border-top: 1px solid #444;
+  border-top: 1px solid #444444;
   /*BUTTON FIRST*/
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button {
@@ -7395,6 +7419,9 @@ body .content-wrapper .tabs-wrapper .arrow-rotate {
   left: -89.1px;
   position: absolute;
 }
+body .content-wrapper table {
+  border-collapse: separate;
+}
 body .content-wrapper .rb-options-open-trade,
 body .content-wrapper .rb-options-history {
   margin: 3em 0 0 0;
@@ -7423,10 +7450,7 @@ body .content-wrapper .rb-options-history .container {
 body .content-wrapper .rb-options-open-trade .container .table,
 body .content-wrapper .rb-options-history .container .table {
   margin-bottom: 0;
-}
-body .content-wrapper .rb-options-open-trade .container .table .table-header-th,
-body .content-wrapper .rb-options-history .container .table .table-header-th {
-  border: none;
+  padding: 0;
 }
 body .content-wrapper .rb-options-open-trade .container .table-row,
 body .content-wrapper .rb-options-history .container .table-row {
@@ -7435,6 +7459,19 @@ body .content-wrapper .rb-options-history .container .table-row {
 body .content-wrapper .rb-options-open-trade .container .table-row .table-header-th,
 body .content-wrapper .rb-options-history .container .table-row .table-header-th {
   border: none;
+  border-left: 1px solid #0765a5;
+  border-right: 1px solid #52a5f5;
+  font-size: 16px;
+  height: 34px;
+  text-shadow: 1px 1px 1px #7bb2f4;
+}
+body .content-wrapper .rb-options-open-trade .container .table-row .table-header-th:last-of-type,
+body .content-wrapper .rb-options-history .container .table-row .table-header-th:last-of-type {
+  border-right: none;
+}
+body .content-wrapper .rb-options-open-trade .container .table-row .table-header-th:first-of-type,
+body .content-wrapper .rb-options-history .container .table-row .table-header-th:first-of-type {
+  border-left: none;
 }
 body .content-wrapper .rb-options-open-trade .container .table-row .table-data,
 body .content-wrapper .rb-options-history .container .table-row .table-data {
@@ -7450,8 +7487,7 @@ body .content-wrapper .rb-options-history .container .table-row .table-data {
 }
 body .content-wrapper .rb-options-open-trade .container .table-title,
 body .content-wrapper .rb-options-history .container .table-title {
-  font-size: 1.95em;
-  font-weight: bold;
+  font-size: 1.65em;
   text-indent: -3.6px;
   color: white;
   letter-spacing: 0.7px;
@@ -7466,7 +7502,7 @@ body .content-wrapper .rb-options-history .container .table-title .fa-spin {
 }
 body .content-wrapper .rb-options-open-trade .container .table-headers,
 body .content-wrapper .rb-options-history .container .table-headers {
-  background: #2c98e0;
+  background: #3e8cee;
   color: black;
   font-size: 1.3em;
   /*HEADERS (TH)*/
@@ -7478,6 +7514,7 @@ body .content-wrapper .rb-options-history .container .table-headers .header {
 body .content-wrapper .rb-options-open-trade .container .table-tr-content,
 body .content-wrapper .rb-options-history .container .table-tr-content {
   color: white;
+  height: 34px;
   /*ALL TDS THE ODD*/
   /*ALL TDS THE EVEN*/
   /*TABLE DATA*/
@@ -7563,6 +7600,7 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
 body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-header-welcome {
   background: #01385e;
   border: none;
+  padding: 15px;
   /*MODAL TITLE */
   /*EXIT BUTTON FROM THE MODAL*/
 }
@@ -7571,7 +7609,6 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
   line-height: 1.42857143;
   color: white;
   font-weight: bold;
-  letter-spacing: 1.2px;
   font-size: 2.6em;
   text-shadow: 0px -1px 1px black;
 }
@@ -7593,7 +7630,7 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
 body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body-welcome .modal-welcome-text-p {
   color: white;
   text-align: center;
-  font-size: 1.606em;
+  font-size: 1.30em;
   font-weight: 100;
   text-shadow: 1px 1px 1px black;
   /*WELCOME PS (SPAN)*/
@@ -7655,6 +7692,7 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
   margin: 0;
   text-align: center;
   color: white;
+  font-size: 1.4em;
 }
 body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-footer-welcome {
   padding: 0 0 30px 0;
@@ -7664,7 +7702,7 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
 }
 body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-footer-welcome .button-welcome-footer {
   float: none;
-  margin: 0 auto;
+  margin: -0.5em auto;
   display: block;
   width: 50%;
   height: 7.5vh;
@@ -7714,8 +7752,26 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
   /*MODAL BODY*/
   /*MODAL FOOTER*/
 }
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .clearfix.end-content,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .dl-horizontal dd.end-content,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .container.end-content,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .container-fluid.end-content,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .row.end-content,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .form-horizontal .form-group.end-content,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .btn-toolbar.end-content,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .btn-group-vertical > .btn-group.end-content,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .nav.end-content,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .navbar.end-content,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .navbar-header.end-content,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .navbar-collapse.end-content,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .pager.end-content,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .panel-body.end-content,
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-footer.end-content {
+  border-bottom: 1px solid black;
+}
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-header-deposit {
   background: #01385e;
+  border-bottom: 2px solid black;
   color: white;
   border: none;
   padding: 15px;
@@ -7736,6 +7792,7 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit {
   padding: 0;
+  border-bottom: 2px solid black;
   /*DEPOSIT TITLE WRAPPER*/
   /*FORM WRAPPER FOR DEPOSIT*/
 }
@@ -7773,11 +7830,11 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
   color: black;
   font-size: 3.5em;
   line-height: 1.3em;
-  text-shadow: 0px 1px 1px white;
+  text-shadow: 0px 1px 1px #3fb3ff;
   letter-spacing: 1.9px;
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .deposit-title-wrapper small {
-  font-size: 1.5em;
+  font-size: 1.4em;
   text-shadow: 0px -1px 1px black;
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper {
@@ -7857,7 +7914,7 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
   margin-right: 0.5em;
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .info-logo {
-  padding: 0.6vw 0.1vw 0;
+  padding: 0.5vw 0.3vw 0 0.3vw;
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form,
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form {
@@ -7913,7 +7970,7 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-group label,
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group label {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-group .form-control,
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .form-control {
@@ -7935,6 +7992,7 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
   font-size: 1.2em;
   font-weight: 100;
   margin: 0;
+  line-height: 32px;
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-button,
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-button {
@@ -7975,9 +8033,10 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .warning-massage-beneath-the-button.text-center,
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .warning-massage-beneath-the-button.text-center {
   color: #2C98E0;
-  margin: 1em 0;
-  font-size: 1.1em;
+  margin: 2em auto;
+  font-size: 0.8em;
   text-shadow: 1px 1px 1px black;
+  width: 93.266667%;
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-footer-deposit {
   /*THREE STEPS REGISTER WRAPPER*/
@@ -8026,9 +8085,14 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-hea
   /*MODAL TITLE*/
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-header-faq .modal-title {
-  font-size: 2.6em;
-  text-shadow: 1px 1px 1px black;
-  letter-spacing: 0.9px;
+  background: #01385e;
+  border-bottom: 2px solid black;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 2.5em;
+  text-shadow: 1px 0px 1px black;
+  font-weight: 600;
 }
 @media (max-width: 600px) {
   body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-header-faq .modal-title {
@@ -8038,8 +8102,8 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-hea
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-header-faq .square-logo {
   position: absolute;
-  right: 1%;
-  top: 1%;
+  right: 0.6%;
+  top: 0.8%;
 }
 @media (max-width: 993px) {
   body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-header-faq .square-logo {
@@ -8052,14 +8116,14 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
   /*QUESTION N ANSWER WRAPPER*/
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper {
-  border-bottom: 1.9px solid #333;
+  border-bottom: 3px solid #282828;
   clear: both;
   /*QUESTION WRAPPER*/
   /*ANSWER WRAPPER*/
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper:first-of-type {
   border: none;
-  margin-bottom: 1em;
+  margin-top: 2em;
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper {
   margin: 0 0 0 0;
@@ -8075,9 +8139,11 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-text {
   width: 90%;
   display: inline-table;
-  vertical-align: sub;
-  font-size: 1.5em;
-  color: #2c98e0;
+  font-size: 22px;
+  color: #009aff;
+  text-indent: 1px;
+  margin: 0.7em 0 0.5em 0;
+  padding-left: 5px;
 }
 @media (max-width: 993px) {
   body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-text {
@@ -8091,8 +8157,8 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
   }
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-button {
-  font-size: 1.9em;
-  vertical-align: middle;
+  font-size: 1.5em;
+  vertical-align: baseline;
   color: #009AFF;
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .answer-wrapper {
@@ -8110,7 +8176,8 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
   }
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .answer-wrapper .answer {
-  text-shadow: 0px -1px 1px gray;
+  text-shadow: 0px 2px 1px #404040;
+  font-size: 18px;
 }
 body .content-wrapper .logo-brand {
   /*LOGO BRAND IMAGE*/

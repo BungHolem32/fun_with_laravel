@@ -455,7 +455,7 @@
 
                                     /*IF THE BALANCE LESS THEN 100 AND BIGGER THEN 25$*/
                                     if (res.customer.accountBalance < 100) {
-                                        
+
                                     }
                                     /*ELSE
                                      HIDE THE LOW-ALERT THEN THE BALANCE BIGGER THEN 100*/
@@ -666,7 +666,7 @@
                                 var amount = row.find('.td-amount').text();
 
                                 /*-----------PROFIT-------------*/
-                                   /*calculate the profit value*/
+                                /*calculate the profit value*/
                                 profit = ((profit / 100) + 1) * amount;
 
                                 /*round the amount*/
@@ -688,7 +688,7 @@
                                 row.find('.td-amount').addClass('text-success').prepend(currency);
                             }
 
-                             /*IF THE STATUS IS TIE ON CANCELED*/
+                            /*IF THE STATUS IS TIE ON CANCELED*/
                             else {
                                 row.find('.td-status').removeClass('text-success').removeClass('text-danger')
                             }
@@ -762,8 +762,8 @@
                     $('body').on('click', '.square-logo', function () {
                         $('.modal-deposit').hide();
                         setTimeout(function () {
-                           $('body').removeClass('add_overflow_hidden');
-                        },3000)
+                            $('body').removeClass('add_overflow_hidden');
+                        }, 3000)
                     })
                 }
             },
@@ -832,19 +832,16 @@
                 configurable: true,
                 enumerable: true
             },
-            modal_overflowhide:{
-            value:function () {
-                $('.modal').on('click',function(){
-                    // $('body').addClass('add_overflow_hidden'),
-                        $('.modal').on('click',function () {
-                            setTimeout(function () {
-                                // $('body').removeClass('add_overflow_hidden');
-                            },3000);
-                        })
-                })
+            slide_to_top_on_press_on_modals:{
+                value: function () {
+                    /*ON CALL MODAL SCROLL-TO-TOP*/
+                    $('body').on('click', "[data-toggle='modal']", function () {
+                        $('body').scrollTop(0)
+                    });
+                },
+                configurable:true,
+                enumerable:true
             }
-        }
-
         })
 
         /*=============================================================================================================*/
@@ -908,17 +905,16 @@
         /*13 SHOW WELCOME SCREEN ON LOAD*/
         panel_object.show_welcome_page_on_load();
 
+        /*14 SCROLL TO TOP BODY ON MODAL SHOWING*/
+        panel_object.slide_to_top_on_press_on_modals();
 
-        panel_object.modal_overflowhide();
+
+        // panel_object.modal_overflowhide();
 
         /*ASSIGN GLOBAL VALUE TO THE OBJECT */
         window._panel = panel_object;
 
 
-        /*ON CALL MODAL SCROLL-TO-TOP*/
-        $('body').on('click',"[data-toggle='modal']",function(){
-            $('body').scrollTop(0)
-        });
     }
     ($)
 );

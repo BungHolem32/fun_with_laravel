@@ -77,6 +77,7 @@
                 {{--SUBMIT BTN --}}
                 <button type="submit"
                         class="btn btn-success btn-lg text-center center-block btn-login text-uppercase">@ln(login)</button>
+                <div class="btn btn-success proccess text-uppercase">Proccessing.. <i class="fa fa-spinner fa-spin"></i></div>
 
                 {{--FORGOT PASSWORD--}}
                 <a href="http://www.rboptions.com/ForgotPassword"

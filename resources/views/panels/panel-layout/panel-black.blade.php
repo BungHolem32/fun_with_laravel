@@ -534,7 +534,7 @@
                     <div class="modal-header-welcome modal-header">
                         <img src="/img/panel/black/desktop/close.png" alt="close square-logo" class="square-logo"
                              data-dismiss="modal">
-                        <h3 class="modal-title-h3 text-uppercase text-center">welcome to {{ $page->title_h1 }} panel
+                        <h3 class="modal-title-h3 text-uppercase text-center">welcome to {{ $page->title_h1 }}
                             method!</h3>
                     </div>
 
@@ -877,7 +877,7 @@
                                     </button>
 
                                     {{--WARNING MESSAGE COMMENT AT THE BOTTOM OF THE FORM--}}
-                                    <div class="warning-massage-beneath-the-button text-center text-capitalize">
+                                    <div class="warning-massage-beneath-the-button text-center text-capitalize col-xs-11">
                                         @ln(deposit funds into your) {{ $page->brand->name }} @ln(trading account. <br>
                                         (Finish button will automatically be available once you've funded your account))
                                     </div>
@@ -890,7 +890,7 @@
                     </div>
 
                     {{--FIX THE HEIGHTS DEFRENCE AND CLEAR THE FLOAT--}}
-                    <div class="clearfix"></div>
+                    <div class="clearfix end-content"></div>
 
                     {{--MODEL FOOTER--}}
                     <div class="modal-footer-deposit modal-footer">
@@ -974,13 +974,13 @@
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <i class="fa fa-chevron-circle-right question-button" aria-hidden="true"></i>
+                                <i class="fa fa-chevron-circle-down question-button" aria-hidden="true"></i>
                                 <h3 class="question-text text-uppercase">How much
                                     does {{ $page->title_h1 }} Method cost?</h3>
                             </div>
 
                             {{--ANSWER WRPPER--}}
-                            <div class="answer-wrapper hide col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="answer-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <p class="answer text-capitalize">
                                     {{ $page->title_h1 }} Method is completely free of charge. As we said before, we
                                     don’t need nor want your credit card or Paypal details.
