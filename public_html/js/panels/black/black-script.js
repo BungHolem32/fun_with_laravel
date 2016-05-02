@@ -913,6 +913,12 @@
 
         /*ASSIGN GLOBAL VALUE TO THE OBJECT */
         window._panel = panel_object;
+
+
+        /*ON CALL MODAL SCROLL-TO-TOP*/
+        $('body').on('click',"[data-toggle='modal']",function(){
+            $('body').scrollTop(0)
+        });
     }
     ($)
 );
