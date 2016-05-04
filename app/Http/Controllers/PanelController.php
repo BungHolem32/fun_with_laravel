@@ -62,22 +62,24 @@ class PanelController extends Controller {
     
     public function deposit(){
         if(Customer::isLogged()){
-            
+
             // From server
             $data['method'] = 'creditCard';
             $data['customerId'] = Customer::get('id');
-
-            $data['fundId'] = '-1';                         // new card maybe ? -> could be from session
 
             $data['Country'] = \Request::get('country_id'); // Could be from IP
             $data['currency'] = Customer::get('currency');  // need to be from server
 
             // from request
-            $data['cardType'] = \Request::get('card_type');
-            $data['cardNum'] = \Request::get('card_number');
-            $data['ExpMonth'] = \Request::get('expires_month');
-            $data['ExpYear'] = \Request::get('expires_year');
-            $data['CVV2/PIN'] = \Request::get('cvv');
+            $data['fundId'] = \Request::get('fundId'); // new card maybe ? -> could be from session
+            if($data['fundId'] == '-1'){
+                $data['cardType'] = \Request::get('card_type');
+                $data['cardNum'] = \Request::get('card_number');
+                $data['ExpMonth'] = \Request::get('expires_month');
+                $data['ExpYear'] = \Request::get('expires_year');
+                $data['CVV2/PIN'] = \Request::get('cvv');
+            }
+
             $data['FirstName'] = \Request::get('first_name');
             $data['LastName'] = \Request::get('last_name');
             $data['Address'] = \Request::get('address');
@@ -88,12 +90,14 @@ class PanelController extends Controller {
             $data['email'] = \Request::get('email');
 
             // Testing for Ip change
+            //$data['IPAddress'] = '31.31.224.100'; //  Czech Republic IP
             $data['IPAddress'] = \Request::ip();
 
             // do we need those?
             //$data['State'] = 'NY';
-
+            //dd($data);
             //dd(\Request::all());
+
             $ans = SpotApi::sendRequest('CustomerDeposits', 'add', $data);
             echo json_encode($ans);
 
