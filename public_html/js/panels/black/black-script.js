@@ -10,6 +10,7 @@
                 value: {
                     init: function () {
                         $('.toggles').toggles({
+                            drag:true,
                             text: {
                                 on: $('.toggles').data('on'), // text for the ON position
                                 off: $('.toggles').data('off') // and off

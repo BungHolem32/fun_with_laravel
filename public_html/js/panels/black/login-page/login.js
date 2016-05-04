@@ -10,7 +10,7 @@ $(document).ready(function () {
                 dataType: 'json',
                 data: data,
                 beforeSend: function () {
-                    $('.proccess').addClass('active');
+                    $('.btn-login').html('processing' + ' <i class="fa fa-spinner fa-spin"></i>');
                 },
                 success: function (res) {
                     if (res.err === 0) {
@@ -18,7 +18,7 @@ $(document).ready(function () {
                     }
                     else {
                         alert(res.errs.error);
-                        $('.proccess').removeClass('active');
+                        $('.btn-login').text('Login');
 
                     }
                 },

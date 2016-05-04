@@ -6431,6 +6431,7 @@ button.close {
 /*FONTS*/
 /*BUTTONS*/
 /*TABLES*/
+/*HIDE ELEMENT-FIELD IN DEPOSIT CREDIT CARD*/
 /*MY MIXING */
 /*MIXIN CLASSES*/
 /*BOX SHADOW PREFIXES  IF IT PASS ON PARAM*/
@@ -6551,6 +6552,12 @@ button.close {
   text-transform: capitalize;
 }
 /*FLIP-ABLE WHEN THE LANGUAGE START FROM RTL*/
+.hideField {
+  display: none;
+}
+.showField {
+  display: block;
+}
 /*LOGIN PAGE STYLES*/
 .body-login {
   font-family: 'Helvetica', Arial;
@@ -6587,7 +6594,7 @@ body .login-wrapper .login-form-wrapper {
   width: 25%;
   margin: 0 auto;
   float: none;
-  min-width: 280px;
+  min-width: 300px;
   /*FORM ELEMENTS*/
   /*FORM BTN + LABEL + ICONS*/
 }
@@ -6667,12 +6674,13 @@ body .login-wrapper .login-form-wrapper .form-options .proccess {
   position: absolute;
   top: 141px;
   line-height: 31px !important;
-  display: none;
-  width: 450px;
+  width: 90%;
+  visibility: hidden;
+  min-width: 300px;
   border-radius: 10px;
 }
 body .login-wrapper .login-form-wrapper .form-options .proccess.active {
-  display: block;
+  visibility: visible;
 }
 body .login-wrapper .login-form-wrapper .form-options .forgotpass {
   color: #3E80D4;
@@ -6732,6 +6740,11 @@ body .content-wrapper {
   /*MODAL BASE WRAPPER FOR DEPOSIT FORM*/
   /*MODAL BASE WRAPPER FOR FAQ*/
   /*LOGO BRAND WRAPPER*/
+}
+@media (max-width: 998px) {
+  body .content-wrapper {
+    background-image: none;
+  }
 }
 body .content-wrapper .account-details-desktop {
   width: 205.7px;
@@ -6806,7 +6819,7 @@ body .content-wrapper .account-details-mobile {
   color: black;
   font-size: 1.1em;
 }
-@media (min-width: 994px) and (max-width: 1240px) {
+@media (min-width: 999px) and (max-width: 1240px) {
   body .content-wrapper .account-details-mobile {
     display: block !important;
     margin: 8em 0 0 0;
@@ -6815,6 +6828,11 @@ body .content-wrapper .account-details-mobile {
 @media (max-width: 998px) {
   body .content-wrapper .account-details-mobile {
     margin-top: 3.7em;
+  }
+}
+@media (max-width: 768px) {
+  body .content-wrapper .account-details-mobile {
+    margin-top: 0em ;
   }
 }
 @media (max-width: 400px) {
@@ -6992,7 +7010,7 @@ body .content-wrapper .navbar-mobile .navbar-ul-wrapper .navbar-li-wrapper {
   border-bottom: 1px solid #237EBB;
   font-family: helvetica, arial;
   line-height: 45px;
-  padding: 3px 0 3px 20px;
+  padding: 3px 0 5.4px 20px;
 }
 body .content-wrapper .navbar-mobile .navbar-ul-wrapper .navbar-li-wrapper .navbar-text-mobile {
   color: #ffffff;
@@ -7026,6 +7044,11 @@ body .content-wrapper .activate-method-system {
 @media (max-width: 992px) {
   body .content-wrapper .activate-method-system {
     margin: 3em auto 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  body .content-wrapper .activate-method-system {
+    margin: 0.5em auto 0 auto;
   }
 }
 body .content-wrapper .activate-method-system .active-method-title-wrapper {
@@ -7173,6 +7196,11 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-3 {
     left: -4.2%;
   }
 }
+@media (max-width: 768px) {
+  body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-3 {
+    top: 155.7px;
+  }
+}
 @media (max-width: 560px) {
   body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-3 {
     top: 170.9px;
@@ -7262,6 +7290,11 @@ body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-
   box-shadow: inset 1px 0px 11.6px #444444;
   z-index: -1;
   font-size: 1.5em;
+}
+@media (max-width: 768px) {
+  body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide .toggle-inner .toggle-off {
+    margin-left: -21.2px !important;
+  }
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-switch-button .toggles.toggle-light .toggle-slide .toggle-inner .toggle-off.active {
   height: 50.5px !important;
@@ -7412,6 +7445,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button:ho
 @media (max-width: 410px) {
   body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button {
     font-size: 1.5em;
+    font-weight: 600;
   }
 }
 body .content-wrapper .tabs-wrapper .arrow-rotate {
@@ -7432,7 +7466,7 @@ body .content-wrapper .rb-options-history {
   body .content-wrapper .rb-options-open-trade,
   body .content-wrapper .rb-options-history {
     font-size: 10.6px;
-    margin: 3em 0 0 0;
+    margin: 0 0 3.5em 0;
     overflow: hidden;
     border: none;
     padding: 4px 1px;
@@ -7464,6 +7498,12 @@ body .content-wrapper .rb-options-history .container .table-row .table-header-th
   font-size: 16px;
   height: 34px;
   text-shadow: 1px 1px 1px #7bb2f4;
+}
+@media (max-width: 768px) {
+  body .content-wrapper .rb-options-open-trade .container .table-row .table-header-th,
+  body .content-wrapper .rb-options-history .container .table-row .table-header-th {
+    font-size: 12px;
+  }
 }
 body .content-wrapper .rb-options-open-trade .container .table-row .table-header-th:last-of-type,
 body .content-wrapper .rb-options-history .container .table-row .table-header-th:last-of-type {
@@ -7576,6 +7616,7 @@ body .content-wrapper .modal-welcome {
   color: white;
   background: rgba(0, 0, 0, 0.6);
   padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 body .content-wrapper .modal-welcome .modal-dialog-welcome {
   /*WRAPPER FOR ALL THE CONTENT HEADER + BODY + FOOTER*/
@@ -7663,6 +7704,11 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
   /*IMAGE-WRAPPER DIV*/
   /*STEP CONTENT WRAPPER*/
 }
+@media (max-width: 998px) {
+  body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body-welcome .steps-wrapper .step-wrapper {
+    margin: 2.5em 0;
+  }
+}
 body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-body-welcome .steps-wrapper .step-wrapper.money-wrapper {
   background: #282828 url('/img/panel/black/desktop/money.png') no-repeat;
 }
@@ -7726,6 +7772,7 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
     width: 90% !important;
     font-size: 2.2em;
     min-height: 1.8em;
+    font-weight: bold;
   }
 }
 body .content-wrapper .modal-deposit {
@@ -7795,6 +7842,11 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
   border-bottom: 2px solid black;
   /*DEPOSIT TITLE WRAPPER*/
   /*FORM WRAPPER FOR DEPOSIT*/
+}
+@media (max-width: 768px) {
+  body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit {
+    border-bottom: none;
+  }
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .broker-name {
   border-radius: 4px;
@@ -8050,6 +8102,11 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-footer-deposit .three-steps-for-register-wrapper .step-wrapper .text-step {
   margin: 1em 0 0 0;
 }
+@media (max-width: 768px) {
+  body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-footer-deposit .three-steps-for-register-wrapper .step-wrapper .text-step {
+    margin: 1em 0 1em 0;
+  }
+}
 body .content-wrapper .modal-faq {
   color: white;
   background: rgba(0, 0, 0, 0.6);
@@ -8111,6 +8168,12 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-hea
     height: 24px;
   }
 }
+@media (max-width: 768px) {
+  body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-header-faq .square-logo {
+    height: 30px;
+    top: 0.3%;
+  }
+}
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq {
   padding: 0 0 0 0;
   /*QUESTION N ANSWER WRAPPER*/
@@ -8133,7 +8196,7 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
 }
 @media (max-width: 600px) {
   body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper {
-    margin: 2em 0 0 0;
+    margin: 2em 0 1.2em 0;
   }
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-text {

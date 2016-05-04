@@ -14,6 +14,7 @@
     {{--BASE STYLE SHEET--}}
     <link rel="stylesheet" href="/css/panels/black/style-{{Request::local()->dir}}.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/panels/black/jquery.mobile-1.4.5.min.css">
 
     {{--<style>--}}
     {{--body .content-wrapper {--}}
@@ -28,8 +29,11 @@
     {{--SPOTOPTIONS SOCKET--}}
     <script type="text/javascript" src="//sst-super-c-nl.spotoption.com/socket.io/socket.io.js"></script>
 
-    {{--SOCKETIO SCRIPTS--}}
+    {{--JQUERY SCRIPTS--}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+    {{--JQUERY MOBILE--}}
+    {{--<script src="js/panels/black/libs/jquery.mobile-1.4.5.min.js"></script>--}}
 
     {{--BOOTSTRAP LIBARY--}}
     <script src="/js/panels/black/libs/bootstrap.min.js"></script>

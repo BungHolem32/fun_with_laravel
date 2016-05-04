@@ -39,7 +39,7 @@ body  {
       width: 25%;
       margin: 0 auto;
       float: none;
-      min-width: 280px;
+      min-width: 300px;
 
       /*FORM ELEMENTS*/
       .form-group {
@@ -116,11 +116,12 @@ body  {
           position: absolute;
           top: 141px;
           line-height: 31px !important;
-          display: none;
-          width: 450px;
+          width:90%;
+          visibility: hidden;
+          min-width: 300px;
           border-radius: 10px;
           &.active{
-            display: block;
+            visibility: visible;
           }
         }
         /*HREF FORGOT PASSWORD*/
@@ -143,4 +144,5 @@ body  {
 
     }
   }
+
 }

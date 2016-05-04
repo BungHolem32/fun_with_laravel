@@ -36,6 +36,10 @@ body {
     background-size : contain;
     overflow-x      : hidden;
 
+    @media (max-width : 998px) {
+      background-image : none;
+    }
+
     /*ACCOUNT DETAILS*/
     .account-details-desktop {
       width                      : 205.7px;
@@ -113,7 +117,7 @@ body {
       color     : black;
       font-size : 1.1em;
 
-      @media (min-width : 994px) and (max-width : 1240px) {
+      @media (min-width : 999px) and (max-width : 1240px) {
         display : block !important;
         .margin(8em, 0, 0, 0);
 
@@ -121,8 +125,13 @@ body {
       @media (max-width : 998px) {
         margin-top : 3.7em;
       }
+
+      @media (max-width : 768px) {
+        margin-top : 0em ;
+      }
       @media (max-width : 400px) {
         font-size : 0.8em;
+
       }
 
       .container {
@@ -297,7 +306,7 @@ body {
           border-bottom : @default-border-style #237EBB;
           font-family   : @font-headers-running;
           line-height   : 45px;
-          .padding(3px, 0, 3px, 20px);
+          .padding(3px, 0, 5.4px, 20px);
 
           .navbar-text-mobile {
             color           : #ffffff;
@@ -334,6 +343,10 @@ body {
       @media (max-width : 992px) {
         //todo check how to change this to right to left
         .margin (3em, auto, 0, auto);
+      }
+
+      @media (max-width : 768px) {
+        .margin (0.5em, auto, 0, auto);
       }
       /*METHOD TITLE WRAPPER*/
       .active-method-title-wrapper {
@@ -473,6 +486,10 @@ body {
             .left(-4.2%);
           }
 
+          @media (max-width : 768px) {
+            top : 155.7px
+          }
+
           @media (max-width : 560px) {
             top : 170.9px;
           }
@@ -578,6 +595,10 @@ body {
                         box-shadow                 : inset 1px 0px 11.6px #444444;
                         z-index                    : -1;
                         font-size                  : 1.5em;
+
+                        @media (max-width : 768px) {
+                          margin-left : -21.2px !important;
+                        }
 
                         &.active {
                           height      : 50.5px !important;
@@ -725,7 +746,8 @@ body {
             .btn-color;
 
             @media (max-width : 410px) {
-              font-size : 1.5em;
+              font-size   : 1.5em;
+              font-weight : 600;
             }
           }
         }
@@ -748,7 +770,7 @@ body {
       border : none;
       @media (max-width : 507px) {
         font-size : 10.6px;
-        .margin(3em, 0, 0, 0);
+        .margin(0, 0, 3.5em, 0);
         overflow  : hidden;
         border    : none;
         padding   : 4px 1px;
@@ -773,6 +795,9 @@ body {
             font-size    : 16px;
             height       : 34px;
             text-shadow  : 1px 1px 1px #7bb2f4;
+            @media (max-width : 768px) {
+              font-size : 12px;
+            }
 
             &:last-of-type {
               border-right : none;
@@ -897,6 +922,7 @@ body {
       color      : white;
       background : rgba(0, 0, 0, 0.6);
       .padding-right(0) !important;
+      .padding-left(0) !important;
 
       .modal-dialog-welcome {
         @media (min-width : 768px) {
@@ -970,6 +996,10 @@ body {
                 margin     : 2.5em;
                 min-height : 6.3em;
 
+                @media (max-width : 998px) {
+                  margin : 2.5em 0;
+                }
+
                 /*MONEY WRAPPER BACKGROUND*/
                 &.money-wrapper {
                   background : #282828 url('@{image}desktop/money.png') no-repeat;
@@ -1033,9 +1063,10 @@ body {
               .btn-color;
 
               @media (max-width : 768px) {
-                width      : @width*9 !important;
-                font-size  : 2.2em;
-                min-height : 1.8em;
+                width       : @width*9 !important;
+                font-size   : 2.2em;
+                min-height  : 1.8em;
+                font-weight : bold;
               }
             }
           }
@@ -1098,6 +1129,10 @@ body {
           .modal-body-deposit {
             padding       : 0;
             border-bottom : 2px solid black;
+
+            @media (max-width : 768px) {
+              border-bottom : none;
+            }
             .broker-name {
               border-radius : 4px;
               padding       : 0;
@@ -1364,6 +1399,10 @@ body {
                 /*TEXT STEP (P TAG)*/
                 .text-step {
                   .margin(1em, 0, 0, 0);
+
+                  @media (max-width : 768px) {
+                    .margin (1em, 0, 1em, 0);
+                  }
                 }
               }
             }
@@ -1431,8 +1470,9 @@ body {
                 .padding(0.8%, 0.8%, 0.8%, 0.8%);
                 height : 24px;
               }
-              @media (max-width : px) {
-
+              @media (max-width : 768px) {
+                height : 30px;
+                top    : 0.3%;
               }
             }
           }
@@ -1456,7 +1496,7 @@ body {
                 cursor : pointer;
 
                 @media (max-width : 600px) {
-                  .margin(2em, 0, 0, 0)
+                  .margin(2em ,0, 1.2em, 0)
                 }
 
                 /*QUESTION TEXT WRAPPER*/
