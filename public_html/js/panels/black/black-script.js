@@ -1,9 +1,39 @@
 (function ($) {
         var socket;
-        var panel_object = {}
+        var panel_object = {};
 
         /*OBJECT PANEL BLACK*/
         Object.defineProperties(panel_object, {
+
+            use_credit_card:{
+
+                value: {
+                    onChange: function(){
+                        $('#fundId').on('change', function(){
+                            panel_object.use_credit_card.decideIfShow();
+                        });
+                    },
+                    init: function(){
+                        this.decideIfShow();
+                        this.onChange();
+                    },
+                    decideIfShow: function(){
+                        var fundId = $('#fundId').val();
+                        if(fundId == '-1')
+                            this.showNewFields();
+                        else
+                            this.hideNewFields();
+                    },
+                    showNewFields: function(){
+                        console.log('showFields');
+                        $('.second-part-form').find('.hideField').addClass('showField');
+                    },
+                    hideNewFields: function(){
+                        console.log('hideFields');
+                        $('.second-part-form').find('.hideField').removeClass('showField');
+                    }
+                }
+            },
 
             /*TOGGLE BUTTON (SWITCH BUTTON IN THE ACTIVATE AUTO TRADING)*/
             toggle_switch: {
@@ -189,7 +219,7 @@
                     }
                 },
                 enumerable: true,
-                configurable: true,
+                configurable: true
             },
 
             /*FORM_VALIDATION AND SENDING */
@@ -843,11 +873,18 @@
                 configurable:true,
                 enumerable:true
             }
-        })
+        });
 
         /*=============================================================================================================*/
         /*==========================================INITIATE THE METHODS===============================================*/
         /*=============================================================================================================*/
+
+
+
+        panel_object.use_credit_card.init();
+
+
+
 
         /*LETS INITIATE THE METHODS */
         /*1-SWITCH ADD ON (TO SHOW THE BUTTON SWITCH ON THE SECOND STEP IN THE HOME PAGE)*/
@@ -872,7 +909,7 @@
         /*6- ON RESIZE CHANGE THE LABEL APPEARANCE*/
         $(window).resize(function () {
             panel_object.on_mobile_hide_label();
-        })
+        });
 
         /*7 - SHOW OR HIDE THE ANSWER ON A CLICK && CHANGE BUTTON PICTURE*/
         panel_object.faq.init();

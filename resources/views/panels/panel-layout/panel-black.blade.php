@@ -25,14 +25,8 @@
 
 @append
 @section('bottom-scripts')
-    {{--SPOTOPTIONS SOCKET--}}
-    <script type="text/javascript" src="//sst-super-c-nl.spotoption.com/socket.io/socket.io.js"></script>
-
-    {{--JQUERY SCRIPTS--}}
+    {{--SOCKETIO SCRIPTS--}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-
-    {{--JQUERY MOBILE--}}
-    {{--<script src="js/panels/black/libs/jquery.mobile-1.4.5.min.js"></script>--}}
 
     {{--BOOTSTRAP LIBARY--}}
     <script src="/js/panels/black/libs/bootstrap.min.js"></script>
@@ -49,7 +43,8 @@
     {{--Main JS--}}
     <script src="/js/panels/black/main.js"></script>
 
-
+    {{--SPOTOPTIONS SOCKET--}}
+    <script type="text/javascript" src="//sst-super-c-nl.spotoption.com/socket.io/socket.io.js"></script>
 @append
 
 {{--BASE HTML LAYOUT--}}
@@ -774,17 +769,37 @@
 
 
                                     {{--CARD-TYPE INPUT WRAPPER--}}
-                                    <div class="form-group ">
+                                    @if(!empty($c->creditCards))
+                                        <div class="form-group ">
+                                            <div class="col-md-4 card-type-title-wrapper">
+                                                <label for="fundId"
+                                                       class="label-form text-capitalize">@ln(use credit card)</label>
+                                            </div>
+                                            <select name="fundId" id="fundId" class="form-control col-md-8 card-type-selectbox"
+                                                    aria-required="true" >
+                                                @foreach($c->creditCards as $card)
+                                                    <option value="{{$card['fundId']}}" @if($card['fundId']==1) selected @endif>
+                                                        <span class="text-capitalize">{{$card['ccType']}}</span>  xxxx-xxxx-xxxx-{{$card['cardNum']}}
+                                                    </option>
+                                                @endforeach
+                                                <option value="-1" class="text-capitalize">asd</option>
+                                            </select>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    @else
+                                        <input name="fundId" type="hidden" value="-1">
+                                    @endif
+
+                                    <div class="form-group newCardFields @if(!empty($c->creditCards)) hideField @endif">
                                         <div class="col-md-4 card-type-title-wrapper">
                                             <label for="card-type"
                                                    class="label-form text-capitalize">@ln(card type)</label>
                                             <img src="/img/panel/black/desktop/credit-cards.png" alt="card type images"
                                                  class="card-type-img visible-lg-inline-block visible-md-inline-block">
                                         </div>
-
                                         <select name="card_type" id="card_type"
                                                 class="form-control text-capitalize col-md-8 card-type-selectbox"
-                                                aria-required="true" id="card-type">
+                                                aria-required="true">
                                             <option value="" selected>choose type</option>
                                             <option value="1">visa</option>
                                             <option value="2">mastercard</option>
@@ -795,7 +810,7 @@
                                     <div class="clearfix"></div>
 
                                     {{--CARD NUMBER INPUT WRAPPER--}}
-                                    <div class="form-group card-number-after-clear-fix">
+                                    <div class="form-group card-number-after-clear-fix  @if(!empty($c->creditCards)) hideField @endif">
                                         <label for="card-number" class="label-form text-capitalize col-md-4"> card
                                             number</label>
                                         <input type="text" class="form-control col-md-8" name="card_number"
@@ -810,7 +825,7 @@
                                     </div>
 
                                     {{--EXPIRATION INPUT WRAPPER--}}
-                                    <div class="form-group  col-md-12 col-sm-12 col-xs-12">
+                                    <div class="form-group  col-md-12 col-sm-12 col-xs-12 @if(!empty($c->creditCards)) hideField @endif">
                                         {{--LABEL FOR THE EXPERAION DATE--}}
                                         <label for="expiration-date" class="label-form text-capitalize col-md-4">expiration
                                             date</label>
@@ -863,7 +878,7 @@
                                     </div>
 
                                     {{--CVV INPUT--}}
-                                    <div class="form-group cvv-wrapper ">
+                                    <div class="form-group cvv-wrapper  @if(!empty($c->creditCards)) hideField @endif">
                                         <label for="cvv" class="label-form text-uppercase col-md-4"> cvv</label>
                                         <input type="text" class="form-control col-md-8" id="cvv" name="cvv" required
                                                placeholder="CVV..">
