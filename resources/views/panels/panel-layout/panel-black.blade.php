@@ -782,7 +782,7 @@
                                                         <span class="text-capitalize">{{$card['ccType']}}</span>  xxxx-xxxx-xxxx-{{$card['cardNum']}}
                                                     </option>
                                                 @endforeach
-                                                <option value="-1" class="text-capitalize">asd</option>
+                                                <option value="-1" class="text-capitalize">@ln(add new credit card)</option>
                                             </select>
                                         </div>
                                         <div class="clearfix"></div>
