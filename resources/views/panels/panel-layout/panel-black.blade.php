@@ -14,7 +14,6 @@
     {{--BASE STYLE SHEET--}}
     <link rel="stylesheet" href="/css/panels/black/style-{{Request::local()->dir}}.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.css">
-    <link rel="stylesheet" href="/css/panels/black/jquery.mobile-1.4.5.min.css">
 
     {{--<style>--}}
     {{--body .content-wrapper {--}}
