@@ -15,7 +15,7 @@ class SpotApi
     const ourApiPassword = '56c09fc848049';
     //const API_URL = "http://api-spotplatform.rboptions.com/api";
     //const API_URL = "http://api-v2.rboptions.com/api";
-    const API_URL = "http://api.rboptions.com/api";
+    const API_URL = "http://apiengine.rboptions.com/api";
 
     const TIMEOUT = 60;
 
