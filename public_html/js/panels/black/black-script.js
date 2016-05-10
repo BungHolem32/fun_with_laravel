@@ -9,8 +9,9 @@
 
                 value: {
                     onChange: function(){
+                        var that = this;
                         $('#fundId').on('change', function(){
-                            panel_object.use_credit_card.decideIfShow();
+                            that.decideIfShow();
                         });
                     },
                     init: function(){
@@ -34,6 +35,7 @@
                     }
                 }
             },
+
 
             /*TOGGLE BUTTON (SWITCH BUTTON IN THE ACTIVATE AUTO TRADING)*/
             toggle_switch: {

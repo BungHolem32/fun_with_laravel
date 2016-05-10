@@ -27,7 +27,7 @@ $('#awelcomeModal').on('click',function(){
     $('video').get('0').play();
 
 });
-
+$('#cvv-popover').hide();
 $('#cvv-popover').on('mouseenter',function(){
     $('.popover').css({'display':'block'});
 });
