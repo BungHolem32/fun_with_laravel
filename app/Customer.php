@@ -25,6 +25,7 @@ class Customer
     public $loginStr;
     public $password;
     public $autologin_link = "";
+    public $creditCards=[];
 
     public static function get($arg=null){
 
@@ -60,6 +61,16 @@ class Customer
         $this->currencySymbol = $currencySymbol[$data['currency']]; // this should be handled externally
         //$this->loginStr = strtr(base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_256, md5(self::cipherKey), 'email=rotemg@rboptions.com.com&password=123456', MCRYPT_MODE_CBC, md5(md5(self::cipherKey)))),'+/','-_');
         // dd($this->loginStr);
+
+        if($data['firstDepositDate'] != '0000-00-00'){
+            $ans = SpotApi::sendRequest('CreditCardUser', 'view', ['FILTER'=>['customerId'=>$this->id]]);
+            if($ans['err'] !== 0){
+                throw new SpotException($ans['errs']['error']);
+            }
+            if(array_key_exists('data_0', $ans['status']['CreditCardUser'])){
+                $this->creditCards = ($ans['status']['CreditCardUser']);
+            }
+        }
 
         //$this->setSpotAuthToken();
         //$this->isLogged = true;

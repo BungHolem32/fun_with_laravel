@@ -1,15 +1,48 @@
 (function ($) {
         var socket;
-        var panel_object = {}
+        var panel_object = {};
 
         /*OBJECT PANEL BLACK*/
         Object.defineProperties(panel_object, {
+
+            use_credit_card:{
+
+                value: {
+                    onChange: function(){
+                        var that = this;
+                        $('#fundId').on('change', function(){
+                            that.decideIfShow();
+                        });
+                    },
+                    init: function(){
+                        this.decideIfShow();
+                        this.onChange();
+                    },
+                    decideIfShow: function(){
+                        var fundId = $('#fundId').val();
+                        if(fundId == '-1')
+                            this.showNewFields();
+                        else
+                            this.hideNewFields();
+                    },
+                    showNewFields: function(){
+                        console.log('showFields');
+                        $('.second-part-form').find('.hideField').addClass('showField');
+                    },
+                    hideNewFields: function(){
+                        console.log('hideFields');
+                        $('.second-part-form').find('.hideField').removeClass('showField');
+                    }
+                }
+            },
+
 
             /*TOGGLE BUTTON (SWITCH BUTTON IN THE ACTIVATE AUTO TRADING)*/
             toggle_switch: {
                 value: {
                     init: function () {
                         $('.toggles').toggles({
+                            drag:true,
                             text: {
                                 on: $('.toggles').data('on'), // text for the ON position
                                 off: $('.toggles').data('off') // and off
@@ -188,7 +221,7 @@
                     }
                 },
                 enumerable: true,
-                configurable: true,
+                configurable: true
             },
 
             /*FORM_VALIDATION AND SENDING */
@@ -456,14 +489,11 @@
                                     /*IF THE BALANCE LESS THEN 100 AND BIGGER THEN 25$*/
                                     if (res.customer.accountBalance < 100) {
 
-                                        /*add the class .low-alert*/
-                                        $('.low-alert').fadeIn();
                                     }
                                     /*ELSE
                                      HIDE THE LOW-ALERT THEN THE BALANCE BIGGER THEN 100*/
                                     else {
-                                        /*hide the alert*/
-                                        $('.low-alert').hide();
+
                                     }
 
                                     /*call the method load_positions and at the end get the asset_list*/
@@ -669,7 +699,7 @@
                                 var amount = row.find('.td-amount').text();
 
                                 /*-----------PROFIT-------------*/
-                                   /*calculate the profit value*/
+                                /*calculate the profit value*/
                                 profit = ((profit / 100) + 1) * amount;
 
                                 /*round the amount*/
@@ -691,7 +721,7 @@
                                 row.find('.td-amount').addClass('text-success').prepend(currency);
                             }
 
-                             /*IF THE STATUS IS TIE ON CANCELED*/
+                            /*IF THE STATUS IS TIE ON CANCELED*/
                             else {
                                 row.find('.td-status').removeClass('text-success').removeClass('text-danger')
                             }
@@ -765,8 +795,8 @@
                     $('body').on('click', '.square-logo', function () {
                         $('.modal-deposit').hide();
                         setTimeout(function () {
-                           $('body').removeClass('add_overflow_hidden');
-                        },3000)
+                            $('body').removeClass('add_overflow_hidden');
+                        }, 3000)
                     })
                 }
             },
@@ -835,24 +865,28 @@
                 configurable: true,
                 enumerable: true
             },
-            modal_overflowhide:{
-            value:function () {
-                $('.modal').on('click',function(){
-                    // $('body').addClass('add_overflow_hidden'),
-                        $('.modal').on('click',function () {
-                            setTimeout(function () {
-                                // $('body').removeClass('add_overflow_hidden');
-                            },3000);
-                        })
-                })
+            slide_to_top_on_press_on_modals:{
+                value: function () {
+                    /*ON CALL MODAL SCROLL-TO-TOP*/
+                    $('body').on('click', "[data-toggle='modal']", function () {
+                        $('body').scrollTop(0)
+                    });
+                },
+                configurable:true,
+                enumerable:true
             }
-        }
-
-        })
+        });
 
         /*=============================================================================================================*/
         /*==========================================INITIATE THE METHODS===============================================*/
         /*=============================================================================================================*/
+
+
+
+        panel_object.use_credit_card.init();
+
+
+
 
         /*LETS INITIATE THE METHODS */
         /*1-SWITCH ADD ON (TO SHOW THE BUTTON SWITCH ON THE SECOND STEP IN THE HOME PAGE)*/
@@ -877,7 +911,7 @@
         /*6- ON RESIZE CHANGE THE LABEL APPEARANCE*/
         $(window).resize(function () {
             panel_object.on_mobile_hide_label();
-        })
+        });
 
         /*7 - SHOW OR HIDE THE ANSWER ON A CLICK && CHANGE BUTTON PICTURE*/
         panel_object.faq.init();
@@ -911,11 +945,16 @@
         /*13 SHOW WELCOME SCREEN ON LOAD*/
         panel_object.show_welcome_page_on_load();
 
+        /*14 SCROLL TO TOP BODY ON MODAL SHOWING*/
+        panel_object.slide_to_top_on_press_on_modals();
 
-        panel_object.modal_overflowhide();
+
+        // panel_object.modal_overflowhide();
 
         /*ASSIGN GLOBAL VALUE TO THE OBJECT */
         window._panel = panel_object;
+
+
     }
     ($)
 );

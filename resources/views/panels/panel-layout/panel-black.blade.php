@@ -25,9 +25,6 @@
 
 @append
 @section('bottom-scripts')
-    {{--SPOTOPTIONS SOCKET--}}
-    <script type="text/javascript" src="//sst-super-c-nl.spotoption.com/socket.io/socket.io.js"></script>
-
     {{--SOCKETIO SCRIPTS--}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
@@ -46,7 +43,8 @@
     {{--Main JS--}}
     <script src="/js/panels/black/main.js"></script>
 
-
+    {{--SPOTOPTIONS SOCKET--}}
+    <script type="text/javascript" src="//sst-super-c-nl.spotoption.com/socket.io/socket.io.js"></script>
 @append
 
 {{--BASE HTML LAYOUT--}}
@@ -534,7 +532,7 @@
                     <div class="modal-header-welcome modal-header">
                         <img src="/img/panel/black/desktop/close.png" alt="close square-logo" class="square-logo"
                              data-dismiss="modal">
-                        <h3 class="modal-title-h3 text-uppercase text-center">welcome to {{ $page->title_h1 }} panel
+                        <h3 class="modal-title-h3 text-uppercase text-center">welcome to {{ $page->title_h1 }}
                             method!</h3>
                     </div>
 
@@ -771,17 +769,37 @@
 
 
                                     {{--CARD-TYPE INPUT WRAPPER--}}
-                                    <div class="form-group ">
+                                    @if(!empty($c->creditCards))
+                                        <div class="form-group ">
+                                            <div class="col-md-4 card-type-title-wrapper">
+                                                <label for="fundId"
+                                                       class="label-form text-capitalize">@ln(use credit card)</label>
+                                            </div>
+                                            <select name="fundId" id="fundId" class="form-control col-md-8 card-type-selectbox"
+                                                    aria-required="true" >
+                                                @foreach($c->creditCards as $card)
+                                                    <option value="{{$card['fundId']}}" @if($card['fundId']==1) selected @endif>
+                                                        <span class="text-capitalize">{{$card['ccType']}}</span>  xxxx-xxxx-xxxx-{{$card['cardNum']}}
+                                                    </option>
+                                                @endforeach
+                                                <option value="-1" class="text-capitalize">@ln(add new credit card)</option>
+                                            </select>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    @else
+                                        <input name="fundId" type="hidden" value="-1">
+                                    @endif
+
+                                    <div class="form-group newCardFields @if(!empty($c->creditCards)) hideField @endif">
                                         <div class="col-md-4 card-type-title-wrapper">
                                             <label for="card-type"
                                                    class="label-form text-capitalize">@ln(card type)</label>
                                             <img src="/img/panel/black/desktop/credit-cards.png" alt="card type images"
                                                  class="card-type-img visible-lg-inline-block visible-md-inline-block">
                                         </div>
-
                                         <select name="card_type" id="card_type"
                                                 class="form-control text-capitalize col-md-8 card-type-selectbox"
-                                                aria-required="true" id="card-type">
+                                                aria-required="true">
                                             <option value="" selected>choose type</option>
                                             <option value="1">visa</option>
                                             <option value="2">mastercard</option>
@@ -792,7 +810,7 @@
                                     <div class="clearfix"></div>
 
                                     {{--CARD NUMBER INPUT WRAPPER--}}
-                                    <div class="form-group card-number-after-clear-fix">
+                                    <div class="form-group card-number-after-clear-fix  @if(!empty($c->creditCards)) hideField @endif">
                                         <label for="card-number" class="label-form text-capitalize col-md-4"> card
                                             number</label>
                                         <input type="text" class="form-control col-md-8" name="card_number"
@@ -807,7 +825,7 @@
                                     </div>
 
                                     {{--EXPIRATION INPUT WRAPPER--}}
-                                    <div class="form-group  col-md-12 col-sm-12 col-xs-12">
+                                    <div class="form-group  col-md-12 col-sm-12 col-xs-12 @if(!empty($c->creditCards)) hideField @endif">
                                         {{--LABEL FOR THE EXPERAION DATE--}}
                                         <label for="expiration-date" class="label-form text-capitalize col-md-4">expiration
                                             date</label>
@@ -860,7 +878,7 @@
                                     </div>
 
                                     {{--CVV INPUT--}}
-                                    <div class="form-group cvv-wrapper ">
+                                    <div class="form-group cvv-wrapper  @if(!empty($c->creditCards)) hideField @endif">
                                         <label for="cvv" class="label-form text-uppercase col-md-4"> cvv</label>
                                         <input type="text" class="form-control col-md-8" id="cvv" name="cvv" required
                                                placeholder="CVV..">
@@ -877,7 +895,7 @@
                                     </button>
 
                                     {{--WARNING MESSAGE COMMENT AT THE BOTTOM OF THE FORM--}}
-                                    <div class="warning-massage-beneath-the-button text-center text-capitalize">
+                                    <div class="warning-massage-beneath-the-button text-center text-capitalize col-xs-11">
                                         @ln(deposit funds into your) {{ $page->brand->name }} @ln(trading account. <br>
                                         (Finish button will automatically be available once you've funded your account))
                                     </div>
@@ -890,7 +908,7 @@
                     </div>
 
                     {{--FIX THE HEIGHTS DEFRENCE AND CLEAR THE FLOAT--}}
-                    <div class="clearfix"></div>
+                    <div class="clearfix end-content"></div>
 
                     {{--MODEL FOOTER--}}
                     <div class="modal-footer-deposit modal-footer">
@@ -974,13 +992,13 @@
 
                             {{--QUESTION WRAPPER--}}
                             <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <i class="fa fa-chevron-circle-right question-button" aria-hidden="true"></i>
+                                <i class="fa fa-chevron-circle-down question-button" aria-hidden="true"></i>
                                 <h3 class="question-text text-uppercase">How much
                                     does {{ $page->title_h1 }} Method cost?</h3>
                             </div>
 
                             {{--ANSWER WRPPER--}}
-                            <div class="answer-wrapper hide col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="answer-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <p class="answer text-capitalize">
                                     {{ $page->title_h1 }} Method is completely free of charge. As we said before, we
                                     don’t need nor want your credit card or Paypal details.

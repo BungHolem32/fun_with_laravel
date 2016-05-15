@@ -575,7 +575,7 @@
                                                          role="button" data-trigger="focus" title=""><span
                                                                 class="fa fa-question-circle"></span></div>
                                                     <div class="popover fade top in"
-                                                         style="display:block;opacity: 0;top:-144px;left:233px;">
+                                                         style="display:none;top:-144px;left:233px;">
                                                         <div class="arrow"></div>
                                                         <h3 class="popover-title">CVV EXAMPLE</h3>
                                                         <div class="popover-content"><img
