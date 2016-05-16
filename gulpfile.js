@@ -16,9 +16,9 @@ elixir.config.sourcemaps = true;
 elixir(function(mix) {
 
 
-    mix.less(['panels/black/aussie-black-ltr.less'], 'public_html/css/panels/black/style-0.css')
-        .less(['panels/black/aussie-black-rtl.less'], 'public_html/css/panels/black/style-1.css')
-
+    // mix.less(['panels/black/aussie-black-ltr.less'], 'public_html/css/panels/black/style-0.css')
+    //     .less(['panels/black/aussie-black-rtl.less'], 'public_html/css/panels/black/style-1.css')
+    mix.less(['base-funnel.less'], 'public_html/css/lp/binary-currencies-0.css');
     /*mix.less(['admin.less'], 'public_html/adminpanel/css/admin.css') */
     /*mix.less(['load-ltr.less'], 'public_html/css/bootstrap/rboptions-org-0.css')
         .less(['load-rtl.less'], 'public_html/css/bootstrap/rboptions-org-1.css');*/
