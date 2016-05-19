@@ -51,7 +51,7 @@ class SpotApi
 
     private static function initCurl($data)
     {
-        $ch = curl_init(self::getApiDetails(['api_url']));
+        $ch = curl_init(self::getApiDetails(['api_url'])[0]);
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
