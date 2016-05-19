@@ -155,7 +155,7 @@ class SpotApi
         $domain = $_SERVER['HTTP_HOST'];
         preg_match('/[^.]+\.[^.]+$/', $domain, $domain); // remove any subdomains
         $domain = $domain[0];
-        if(!$domain || !in_array($domain, self::$domains_api)){
+        if(!$domain || !array_key_exists($domain, self::$domains_api)){
             $domain = 'default';
         }
         $data = self::$apis[self::$domains_api[$domain]];
