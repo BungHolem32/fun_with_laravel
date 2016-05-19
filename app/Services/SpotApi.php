@@ -16,6 +16,7 @@ class SpotApi
 
     private static $domains_api = [
         'default' => 'rboptions',
+        'yourway2profit.com' => 'skyline'
     ];
 
     public static function sendRequest($module=null, $command=null, $data, $jsonResponse = 'true')
@@ -151,7 +152,9 @@ class SpotApi
     }
 
     private static function getApiDetails($keys=null){
-        $domain =$_SERVER['HTTP_HOST'];
+        $domain = $_SERVER['HTTP_HOST'];
+        preg_match('/[^.]+\.[^.]+$/', $domain, $domain); // remove any subdomains
+        $domain = $domain[0];
         if(!$domain || !in_array($domain, self::$domains_api)){
             $domain = 'default';
         }
