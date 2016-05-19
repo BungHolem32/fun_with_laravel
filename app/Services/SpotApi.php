@@ -51,7 +51,7 @@ class SpotApi
 
     private static function initCurl($data)
     {
-        $ch = curl_init(self::getApiDetails('api_url'));
+        $ch = curl_init(self::getApiDetails(['api_url']));
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -160,6 +160,8 @@ class SpotApi
         }
         $data = self::$apis[self::$domains_api[$domain]];
         if($keys){
+            if(!is_array($keys))
+                $keys = [$keys];
             $data = array_intersect_key($data, array_flip($keys));
         }
         return $data;
