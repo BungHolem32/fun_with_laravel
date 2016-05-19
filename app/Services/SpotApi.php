@@ -7,24 +7,22 @@ use Log;
 class SpotApi
 {
 
-    /*
-    const ourApiUsername = 'funnels';
-    const ourApiPassword = '5648ac05c4849';
-    */
-    const ourApiUsername = 'Sitev2';
-    const ourApiPassword = '56c09fc848049';
-    //const API_URL = "http://api-spotplatform.rboptions.com/api";
-    const API_URL = "http://api-v2.rboptions.com/api";
-    //const API_URL = "http://apiengine.rboptions.com/api";
-
     const TIMEOUT = 60;
+
+    private static $apis = [
+        'rboptions' => ['api_username'=> 'Sitev2', 'api_password'=>'56c09fc848049', 'api_url'=>'http://api-v2.rboptions.com/api'],
+        'skyline' => ['api_username'=> 'funnels_sky', 'api_password'=>'8bBXMytl66', 'api_url'=>'http://api.skylinemarkets.com/api']
+    ];
+
+    private static $domains_api = [
+        'default' => 'rboptions',
+    ];
 
     public static function sendRequest($module=null, $command=null, $data, $jsonResponse = 'true')
     {
         if($module !== null)  $data['MODULE']  = $module;
         if($command !== null) $data['COMMAND'] = $command;
-        $data['api_username'] = self::ourApiUsername;
-        $data['api_password'] = self::ourApiPassword;
+        $data = self::getApiDetails(['api_username', 'api_password']);
 
         $data['jsonResponse'] = $jsonResponse;
 
@@ -47,14 +45,12 @@ class SpotApi
                 $i++;
             }
         }
-        //d($temp);
-        //dd(http_build_query($temp));
         return self::sendRequest(null, null, $temp);
     }
 
     private static function initCurl($data)
     {
-        $ch = curl_init(self::API_URL);
+        $ch = curl_init(self::getApiDetails('api_url'));
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -152,6 +148,18 @@ class SpotApi
         $newData['registrationCountry']=$location->countryId;
 
         return $newData;
+    }
+
+    private static function getApiDetails($keys=null){
+        $domain =$_SERVER['HTTP_HOST'];
+        if(!$domain || !in_array($domain, self::$domains_api)){
+            $domain = 'default';
+        }
+        $data = self::$apis[self::$domains_api[$domain]];
+        if($keys){
+            $data = array_intersect_key($data, array_flip($keys));
+        }
+        return $data;
     }
 }
 
