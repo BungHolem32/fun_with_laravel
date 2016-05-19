@@ -23,7 +23,7 @@ class SpotApi
     {
         if($module !== null)  $data['MODULE']  = $module;
         if($command !== null) $data['COMMAND'] = $command;
-        $data = self::getApiDetails(['api_username', 'api_password']);
+        $data = array_merge($data, self::getApiDetails(['api_username', 'api_password']));
 
         $data['jsonResponse'] = $jsonResponse;
 
