@@ -413,12 +413,11 @@ class Page extends Entity implements PageInterface
     }
 
     public function inDomain($domain=''){
-        if(!$domain) $domain = $_SERVER['HTTP_HOST'];
+        $domain = domain_name($domain);
         if ($domain == 'funnels') return true; // HACK!
-        preg_match('/[^.]+\.[^.]+$/', $domain, $domain);
         if(strval($this->domain)){
             $domains = explode(',', $this->domain);
-            if(!in_array($domain[0], $domains)){
+            if(!in_array($domain, $domains)){
                 return false;
             }
         }

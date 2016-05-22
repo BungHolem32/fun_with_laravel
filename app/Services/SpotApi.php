@@ -152,9 +152,7 @@ class SpotApi
     }
 
     private static function getApiDetails($keys=null){
-        $domain = $_SERVER['HTTP_HOST'];
-        preg_match('/[^.]+\.[^.]+$/', $domain, $domain); // remove any subdomains
-        $domain = $domain[0];
+        $domain = domain_name();
         if(!$domain || !array_key_exists($domain, self::$domains_api)){
             $domain = 'default';
         }
