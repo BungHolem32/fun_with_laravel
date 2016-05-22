@@ -5,6 +5,7 @@ use App\Http\Requests;
 use App\IpLog;
 use App\Languages;
 use App\mongo;
+use App\Services\Domains;
 use App\Services\SpotApi;
 use App\Services\MailVerify;
 use App\Services\Location;
@@ -62,11 +63,7 @@ class FormController extends Controller {
         $funnelPage = \App\Page::find(Request::get('parentPage'));
         $destenation = $funnelPage->destinationSite->get();
         if(empty($destenation)) $destenation = '';
-        $append = '';
-        if(strpos($destenation,'rboptions.com') !== false)
-            $append = 'users.php?act=check&email='.Request::get('email').'&password='.Request::get('password');
-
-        return $destenation.$append;
+        return Domains::autologinLink($destenation, Customer::get());
     }
 
     public function postEmailForm($lang = 'en'){
