@@ -53,13 +53,7 @@ if(!function_exists('isMongoNotEmpty')){
 }
 
 if(!function_exists('domain_name')){
-	function domain_name($domain=''){
-		if(!$domain) {
-			$domain = $_SERVER['HTTP_HOST'];
-		}
-		preg_match('/[^.]+\.[^.]+$/', $domain, $domain); // remove any subdomains
-		return $domain[0];
-	}
+
 }
 
 $app = new Illuminate\Foundation\Application(

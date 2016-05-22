@@ -2,6 +2,7 @@
 namespace App;
 
 use App\Http\Controllers\RedirectController;
+use App\Services\Domains;
 use Franzose\ClosureTable\Models\Entity;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\RedirectResponse;
@@ -413,7 +414,7 @@ class Page extends Entity implements PageInterface
     }
 
     public function inDomain($domain=''){
-        $domain = domain_name($domain);
+        $domain = Domains::domainName($domain);
         if ($domain == 'funnels') return true; // HACK!
         if(strval($this->domain)){
             $domains = explode(',', $this->domain);
