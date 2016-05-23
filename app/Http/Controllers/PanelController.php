@@ -5,6 +5,7 @@ use App\Customer;
 use App\Http\Requests;
 use App\Languages;
 use App\mongo;
+use App\Services\EmsLog;
 use App\Services\SpotApi;
 use App\Services\MailVerify;
 use Request;
@@ -99,6 +100,10 @@ class PanelController extends Controller {
             //dd(\Request::all());
 
             $ans = SpotApi::sendRequest('CustomerDeposits', 'add', $data);
+            if(env('APP_DEBUG')) {
+                $data['cardNum'] = 'xxxxxxxxxxx';
+                EmsLog::log('INFO', 'deposit', ['request' => $data, 'response' => $ans]);
+            }
             echo json_encode($ans);
 
         }
