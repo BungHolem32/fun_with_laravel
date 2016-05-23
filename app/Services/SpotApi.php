@@ -148,7 +148,7 @@ class SpotApi
 
     private static function getApiDetails($keys=null){
         $domain = Domains::getDestination();
-        $data = self::$apis[self::$domains_api[$domain]];
+        $data = self::$apis[$domain];
         if($keys){
             if(!is_array($keys)) {
                 $data = $data[$keys];
