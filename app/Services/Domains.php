@@ -49,7 +49,7 @@ class Domains
                 $link = 'https://skylinemarkets.com/remoteLogin?login='.$hash;
                 break;
             default:
-                throw new Exception('domain not configured correctly');
+                throw new \Exception('domain not configured correctly');
         }
         return $link;
     }
