@@ -88,7 +88,7 @@ class PanelController extends Controller {
             $data['postCode'] = \Request::get('zip_code');
             $data['amount'] = \Request::get('amount');
             $data['Phone'] = \Request::get('phone');;
-            //$data['email'] = \Request::get('email');
+            $data['email'] = \Request::get('email');
 
             // Testing for Ip change
             //$data['IPAddress'] = '31.31.224.100'; //  Czech Republic IP
