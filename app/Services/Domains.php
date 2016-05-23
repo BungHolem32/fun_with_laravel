@@ -49,7 +49,8 @@ class Domains
                 $link = 'https://skylinemarkets.com/remoteLogin?login='.$hash;
                 break;
             default:
-                throw new \Exception('domain not configured correctly');
+                // destination might be a page (e.g. robot panel) or a different site. return without changing it.
+                $link = $destination;
         }
         return $link;
     }
