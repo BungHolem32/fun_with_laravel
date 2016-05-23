@@ -480,11 +480,11 @@
                                         </div>
                                         <div id="deposit-loading-region"></div>
                                         <div class="form-group saved-cards-group hidden">
-                                            <label for="fund_id" class="col-xs-4 control-label"><i
+                                            <label for="fundId" class="col-xs-4 control-label"><i
                                                         class="fa fa-credit-card"></i> Saved Cards</label>
 
                                             <div class="col-xs-8">
-                                                <select name="fund_id" id="fund_id" class="form-control input-sm">
+                                                <select name="fundId" id="fundId" class="form-control input-sm">
                                                     <option value="-1">Loading Credit Cards...</option>
                                                 </select>
                                             </div>
