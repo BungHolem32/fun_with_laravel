@@ -88,7 +88,7 @@ class PanelController extends Controller {
             $data['postCode'] = \Request::get('zip_code');
             $data['amount'] = \Request::get('amount');
             $data['Phone'] = \Request::get('phone');;
-            $data['email'] = \Request::get('email');
+            //$data['email'] = \Request::get('email');
 
             // Testing for Ip change
             //$data['IPAddress'] = '31.31.224.100'; //  Czech Republic IP
@@ -102,7 +102,8 @@ class PanelController extends Controller {
             $ans = SpotApi::sendRequest('CustomerDeposits', 'add', $data);
             if(env('APP_DEBUG')) {
                 $data['cardNum'] = 'xxxxxxxxxxx';
-                EmsLog::log('INFO', 'deposit', ['request' => $data, 'response' => $ans]);
+                EmsLog::log('INFO', 'deposit request', $data);
+                EmsLog::log('INFO', 'deposit response', $ans);
             }
             echo json_encode($ans);
 
