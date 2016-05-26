@@ -37,18 +37,15 @@ class Domains
         if(!$destination){
             $destination = self::getDestination();
         }
-        switch($destination){
-            case 'rboptions.com':
-                $link = "http://www.rboptions.com/users.php?act=check&email=".$customer->email."&password=".$customer->password;
-                break;
-            case 'skylinemarkets.com':
-                $data = json_encode([$customer->email, $customer->password]);
-                $hash = base64_encode($data);
-                $hash = strtr($hash, '+/', '-_');
-                $hash = trim($hash, '=');
-                $link = 'https://skylinemarkets.com/remoteLogin?login='.$hash;
-                break;
-            default:
+        if(strpos($destination, 'rboptions') !== false) {
+            $link = "http://www.rboptions.com/users.php?act=check&email=" . $customer->email . "&password=" . $customer->password;
+        }elseif(strpos($destination, 'skylinemarkets') !== false) {
+            $data = json_encode([$customer->email, $customer->password]);
+            $hash = base64_encode($data);
+            $hash = strtr($hash, '+/', '-_');
+            $hash = trim($hash, '=');
+            $link = 'https://skylinemarkets.com/remoteLogin?login=' . $hash;
+        }else{
                 // destination might be a page (e.g. robot panel) or a different site. return without changing it.
                 $link = $destination;
         }
