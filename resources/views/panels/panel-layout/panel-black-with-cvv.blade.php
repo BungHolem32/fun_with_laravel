@@ -690,6 +690,7 @@
                                                aria-required="true">
                                     </div>
 
+
                                     {{--EMAIL INPUT WRAPPER--}}
                                     <div class="form-group ">
                                         <label for="email" class="text-capitalize col-md-4 label-form"> email</label>
@@ -753,20 +754,6 @@
                                     <div class="clearfix"></div>
 
 
-                                    {{--Deposit LOADING REGIONS--}}
-                                    {{--<div id="deposit-loading-region"></div>--}}
-                                    {{--<div class="form-group saved-cards-group hidden">--}}
-                                    {{--<label for="fund_id" class="col-xs-4 control-label"><i--}}
-                                    {{--class="fa fa-credit-card"></i> Saved Cards</label>--}}
-
-                                    {{--<div class="col-xs-8">--}}
-                                    {{--<select name="fund_id" id="fund_id" class="form-control input-sm">--}}
-                                    {{--<option value="-1">Loading Credit Cards...</option>--}}
-                                    {{--</select>--}}
-                                    {{--</div>--}}
-                                    {{--</div>--}}
-
-
 
                                     {{--CARD-TYPE INPUT WRAPPER--}}
                                     @if(!empty($c->creditCards))
@@ -788,6 +775,7 @@
                                         <div class="clearfix"></div>
                                     @else
                                         <input name="fundId" type="hidden" value="-1">
+                                        <div class="clearfix"></div>
                                     @endif
 
                                     <div class="form-group newCardFields @if(!empty($c->creditCards)) hideField @endif">
@@ -816,6 +804,7 @@
                                         <input type="text" class="form-control col-md-8" name="card_number"
                                                id="card_number" required placeholder="Card Number..">
                                     </div>
+                                    <div class="clearfix"></div>
 
                                     {{--AMOUNT INPUT WRAPPER--}}
                                     <div class="form-group ">
@@ -823,6 +812,7 @@
                                         <input type="text" class="form-control col-md-8" id="amount" name="amount"
                                                required placeholder="Amount..">
                                     </div>
+                                    <div class="clearfix"></div>
 
                                     {{--EXPIRATION INPUT WRAPPER--}}
                                     <div class="form-group  col-md-12 col-sm-12 col-xs-12 @if(!empty($c->creditCards)) hideField @endif">
@@ -876,9 +866,10 @@
                                             <option value="2034">2034</option>
                                         </select>
                                     </div>
+                                    <div class="clearfix"></div>
 
                                     {{--CVV INPUT--}}
-                                    <div class="form-group cvv-wrapper" style="padding: 0px !important;">
+                                    <div class="form-group cvv-wrapper">
                                         <label for="cvv" class="label-form text-uppercase col-md-4"> cvv</label>
                                         <input type="text" class="form-control col-md-8" id="cvv" name="cvv" required
                                                placeholder="CVV..">

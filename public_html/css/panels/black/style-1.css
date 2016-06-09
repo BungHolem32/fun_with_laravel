@@ -8029,7 +8029,6 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
   margin: -0.5em auto;
   display: block;
   width: 50%;
-  height: 7.5vh;
   font-size: 300%;
   color: black;
   outline: 0;
@@ -8217,9 +8216,6 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .card-type-title-wrapper .card-type-img {
   max-width: 6.9vw;
 }
-body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group.cvv-wrapper {
-  padding-top: 0px !important;
-}
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .card-type-selectbox {
   color: gray;
 }
@@ -8283,9 +8279,9 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-group,
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group {
-  padding: 1em 0;
   clear: both;
   margin-bottom: 0;
+  padding: 1em 0 0 0;
   /*CARD NUMBER FIELD AFTER CLEAR FIX */
   /*INPUTS AND SELECT BOX*/
   /*LABEL TAG FOR ALL THE INPUTS IN THE FORM */
