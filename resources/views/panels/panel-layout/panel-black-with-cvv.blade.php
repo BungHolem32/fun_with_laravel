@@ -878,7 +878,7 @@
                                     </div>
 
                                     {{--CVV INPUT--}}
-                                    <div class="form-group cvv-wrapper">
+                                    <div class="form-group cvv-wrapper" style="padding: 0px !important;">
                                         <label for="cvv" class="label-form text-uppercase col-md-4"> cvv</label>
                                         <input type="text" class="form-control col-md-8" id="cvv" name="cvv" required
                                                placeholder="CVV..">
