@@ -10,8 +10,18 @@ class SpotApi
     const TIMEOUT = 60;
 
     private static $apis = [
-        'rboptions.com' => ['api_username'=> 'Sitev2', 'api_password'=>'56c09fc848049', 'api_url'=>'http://api-v2.rboptions.com/api'],
-        'skylinemarkets.com' => ['api_username'=> 'funnels_sky', 'api_password'=>'8bBXMytl66', 'api_url'=>'http://api.skylinemarkets.com/api']
+        'rboptions.com' => [
+            'api_username'=> 'Sitev2',
+            'api_password'=>'56c09fc848049',
+            'api_url'=>'http://api-v2.rboptions.com/api',
+            'defaultCampaignId'=>29
+        ],
+        'skylinemarkets.com' => [
+            'api_username'=> 'funnels_sky',
+            'api_password'=>'8bBXMytl66',
+            'api_url'=>'http://api.skylinemarkets.com/api',
+            'defaultCampaignId'=>8
+        ]
     ];
 
     public static function sendRequest($module=null, $command=null, $data, $jsonResponse = 'true')
@@ -125,7 +135,7 @@ class SpotApi
         $newData['gender'] = 'male';
         $newData['birthday'] = '1974-10-10';
 
-        $newData['campaignId'] = isset($data['campaign']) ? $data['campaign'] : "29";
+        $newData['campaignId'] = isset($data['campaign']) ? $data['campaign'] : self::getApiDetails('defaultCampaignId');
         //if(isset($data['campaign']))
         //    $newData['campaignId'] = $data['campaign'];
 
