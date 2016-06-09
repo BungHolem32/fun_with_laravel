@@ -6465,9 +6465,6 @@ button.close {
   background-color: transparent;
   border: 0;
 }
-.hidden {
-  display: none !important;
-}
 .affix {
   position: fixed;
 }
@@ -7559,7 +7556,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-
   color: #c10505;
   text-shadow: 1px 0 1px #840202;
   height: 51px;
-  width: 83px !important;
+  width: 88px !important;
   border-bottom-right-radius: 30px;
   border-top-right-radius: 30px;
   margin-left: -27px !important;
