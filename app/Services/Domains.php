@@ -14,7 +14,8 @@ class Domains
 
     private static $domains_destinations = [
         'default' => 'rboptions.com',
-        'yourway2profit.com' => 'skylinemarkets.com'
+        'yourway2profit.com' => 'skylinemarkets.com',
+        'oxfordway2profit.com' => 'skylinemarkets.com'
     ];
 
     public static function domainName($domain=''){
