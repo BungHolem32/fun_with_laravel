@@ -64,7 +64,7 @@
             </div>
 
             {{--PASSWORD INPUT = PASSWORD FIELD--}}
-            <div class="form-group pasword-input">
+            <div class="form-group password-input">
                 <label for="pwd" class="sr-only">@ln(Password):</label>
                 <img src="/img/panel/black/login-password-ico.png" alt="" class="password-login-image">
                 <input name="password" value="{{\Request::get('password')}}"
