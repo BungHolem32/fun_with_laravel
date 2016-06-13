@@ -1,0 +1,22 @@
+{
+	"captcha_groups": {
+		"captcha1": {
+			"dataSiteKey": "6Ld39RMTAAAAALVGhMswy185zq0C2bmP-gydSrSI",
+			"secret": "6Ld39RMTAAAAAPZmYhrvY0sZ1FpwcFSC0oXf9jTn"
+		},
+		"captcha2": {
+			"dataSiteKey": "1233",
+			"secret": "234323"
+		}
+	},
+
+
+	"domains": {
+		"default": {
+			"captcha": "captcha1"
+		},
+		"yourway2profit.com": {
+			"captcha": "captcha2"
+		}
+	}
+}

@@ -51,13 +51,30 @@ class Recaptcha
         return self::getCaptcha()['dataSiteKey'];
     }
 
+    // Get Captcha array from JSON file.
     private static function getCaptcha(){
+        return \Config::get('domainSpecific')['captcha'];
+    }
+
+    // gets captcha array from PHP config file
+    /*private static function getCaptcha(){
         $domain = Domains::domainName();
         if(!in_array($domain, \Config::get('captchas.list')))
             $listKey = 'firstCaptcha';
         else
             $listKey = \Config::get('captchas.list')[$domain];
         return \Config::get('captchas')[$listKey];
-    }
+    }*/
 
+
+    // gets captcha array from INI file.
+    /*private static function getCaptcha(){
+
+        dd(\Config::get('domainSpecific'));
+
+        $domain = Domains::domainName();
+        if(!file_exists(base_path()."/config/domains/".$domain.".ini"))
+            $domain = "default.ini";
+        return parse_ini_file(base_path()."/config/domains/".$domain.".ini",true)['captcha'];
+    }*/
 }
