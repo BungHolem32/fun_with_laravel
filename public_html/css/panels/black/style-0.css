@@ -6852,61 +6852,77 @@ body .login-wrapper .login-form-wrapper {
   margin: 0 auto;
   float: none;
   min-width: 300px;
+}
+body .login-wrapper .login-form-wrapper form {
   /*FORM ELEMENTS*/
+}
+body .login-wrapper .login-form-wrapper form .form-group {
   /*FORM BTN + LABEL + ICONS*/
 }
-body .login-wrapper .login-form-wrapper .form-group {
+body .login-wrapper .login-form-wrapper form .form-group .form-control {
+  font-size: 1.5em;
+  height: 2.3em;
+  padding-left: 30px;
+}
+body .login-wrapper .login-form-wrapper form .form-group.password-input .password-login-image {
+  position: relative;
+  top: 35px;
+  left: 11px;
+  height: 22px;
+}
+body .login-wrapper .login-form-wrapper form .form-group.user-input {
+  margin-bottom: 0;
   /*INPUT DESIGN*/
   /*LABEL DESIGN*/
 }
-body .login-wrapper .login-form-wrapper .form-group.user-input {
-  margin-bottom: 0;
-}
-body .login-wrapper .login-form-wrapper .form-group .form-control {
+body .login-wrapper .login-form-wrapper form .form-group.user-input .form-control {
   font-family: helvetica, arial;
   font-size: 1.5em;
-  text-indent: 23px;
   height: 2.3em;
+  padding-left: 30px;
   /*ERROR ON THE INPUT */
 }
-body .login-wrapper .login-form-wrapper .form-group .form-control.error {
+body .login-wrapper .login-form-wrapper form .form-group.user-input .form-control.error {
   border: 1px solid red;
 }
-body .login-wrapper .login-form-wrapper .form-group label.error,
-body .login-wrapper .login-form-wrapper .form-group label #error {
+body .login-wrapper .login-form-wrapper form .form-group.user-input label.error,
+body .login-wrapper .login-form-wrapper form .form-group.user-input label #error {
   display: none !important;
 }
-body .login-wrapper .login-form-wrapper .form-group .fa-user {
+body .login-wrapper .login-form-wrapper form .form-group.user-input .fa-user {
   position: absolute;
   top: 10px;
   left: 22px;
   font-size: 2.3em;
   color: gray;
 }
-body .login-wrapper .login-form-wrapper .form-group .account-login-image {
+body .login-wrapper .login-form-wrapper form .form-group.user-input .account-login-image {
   position: relative;
   top: 35px;
   left: 11px;
   height: 22px;
 }
-body .login-wrapper .login-form-wrapper .form-group .password-login-image {
+body .login-wrapper .login-form-wrapper form .form-group.user-input .password-login-image {
   position: relative;
   top: 35px;
   left: 11px;
   height: 22px;
 }
-body .login-wrapper .login-form-wrapper .form-group .fa.fa-lock {
+body .login-wrapper .login-form-wrapper form .form-group.user-input .fa.fa-lock {
   position: absolute;
   top: 72px;
   left: 22px;
   font-size: 2em;
   color: gray;
 }
-body .login-wrapper .login-form-wrapper .form-options {
+body .login-wrapper .login-form-wrapper form .form-options {
   /*BUTTON SUBMIT */
   /*HREF FORGOT PASSWORD*/
 }
-body .login-wrapper .login-form-wrapper .form-options .btn {
+body .login-wrapper .login-form-wrapper form .form-options .form-control {
+  height: 40px;
+}
+body .login-wrapper .login-form-wrapper form .form-options .btn {
   width: 100%;
   margin-top: 0.8em;
   min-height: 52px;
@@ -6922,12 +6938,12 @@ body .login-wrapper .login-form-wrapper .form-options .btn {
   border: 1px solid #afe713;
   /*HOVER EFFECT */
 }
-body .login-wrapper .login-form-wrapper .form-options .btn:hover {
+body .login-wrapper .login-form-wrapper form .form-options .btn:hover {
   background: #72a40e;
   background: linear-gradient(to bottom, #72a40e 43%, #aadc1f 96%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72a40e', endColorstr='#aadc1f', GradientType=0);
 }
-body .login-wrapper .login-form-wrapper .form-options .proccess {
+body .login-wrapper .login-form-wrapper form .form-options .proccess {
   position: absolute;
   top: 141px;
   line-height: 31px !important;
@@ -6936,20 +6952,20 @@ body .login-wrapper .login-form-wrapper .form-options .proccess {
   min-width: 300px;
   border-radius: 10px;
 }
-body .login-wrapper .login-form-wrapper .form-options .proccess.active {
+body .login-wrapper .login-form-wrapper form .form-options .proccess.active {
   visibility: visible;
 }
-body .login-wrapper .login-form-wrapper .form-options .forgotpass {
+body .login-wrapper .login-form-wrapper form .form-options .forgotpass {
   color: #3E80D4;
   float: right;
   text-decoration: none;
   padding-right: 0;
   font-family: helvetica, arial;
 }
-body .login-wrapper .login-form-wrapper .form-options .forgotpass:hover {
+body .login-wrapper .login-form-wrapper form .form-options .forgotpass:hover {
   color: #91b7e7;
 }
-body .login-wrapper .login-form-wrapper .form-options .loading {
+body .login-wrapper .login-form-wrapper form .form-options .loading {
   margin-top: -2.4em;
 }
 .hidden {
@@ -7017,8 +7033,8 @@ body .content-wrapper .account-details-desktop {
 }
 body .content-wrapper .account-details-desktop:after {
   content: url('/img/panel/black/account-shadow.png');
-  position: relative;
-  top: 12px;
+  position: absolute;
+  top: 100%;
 }
 @media (min-width: 1240px) and (max-width: 1740px) {
   body .content-wrapper .account-details-desktop {
@@ -7690,7 +7706,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part {
 body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button {
   position: relative;
   top: 0.8em;
-  font-size: 1.7em;
+  font-size: 20px;
   outline: none;
   line-height: 2.033333;
   word-spacing: 1px;
@@ -7712,7 +7728,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button:ho
 }
 @media (max-width: 410px) {
   body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button {
-    font-size: 1.5em;
+    font-size: 17px;
     font-weight: 600;
   }
 }

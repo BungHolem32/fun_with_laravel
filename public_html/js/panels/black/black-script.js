@@ -264,6 +264,7 @@
                                         /*remove the classes from the body + hide the modal-deposit*/
                                         $('body').removeClass('bggray');
                                         $('.modal-deposit').fadeOut('fast');
+                                        $('.modal-backdrop').hide();
 
                                         /*TODO need to check for thanku modal (createone)?*/
                                         /*pop up thank you modal*/
@@ -763,7 +764,7 @@
                         return row;
 
                     },
-                    /*PRPRARE THE SELECTION FOR THE TABLE */
+                    /*PREPARE THE SELECTION FOR THE TABLE */
                     prepare_table: function (tableSelector) {
 
                         /*create variable for the two tables*/
@@ -954,7 +955,11 @@
         /*ASSIGN GLOBAL VALUE TO THE OBJECT */
         window._panel = panel_object;
 
-
+        $('.modal').on('change',function(e){
+           if( !$(e.target).hasClass('in')){
+                $('.modal-backdrop').hide();
+            }
+        })
     }
     ($)
 );
