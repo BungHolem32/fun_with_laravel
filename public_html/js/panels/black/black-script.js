@@ -93,7 +93,7 @@
                                 /*if there no money show the form for deposit money*/
                                 $('.modal-deposit').css({'display': 'block'}).addClass('in');
                                 /*show modal page*/
-                                $('body').append('<div class="modal-backdrop fade in"></div>').addClass('modal-open');
+                               // $('body').append('<div class="modal-backdrop fade in"></div>').addClass('modal-open');
                                 /*turn off the switch*/
                                 $('.toggles').toggles(false).removeClass('switch-on').addClass('switch-off');
 
@@ -476,7 +476,7 @@
                                             $('.modal-deposit').css({'display': 'block'}).addClass('in hidden-ref');
 
                                             /*append the modal-backdrop fade in and the classes modal-open and bg-gray to show the modal for deposit*/
-                                            $('body').append('<div class="modal-backdrop fade in"></div>').addClass('modal-open bggray');
+                                            // $('body').append('<div class="modal-backdrop fade in"></div>').addClass('modal-open bggray');
                                         }
                                     }
 
@@ -961,6 +961,7 @@
                 $('body').css('padding-right',0);
             }
         })
+        
     }
     ($)
 );

@@ -1083,14 +1083,14 @@ if (typeof jQuery === 'undefined') {
     if (this.isShown && this.options.backdrop) {
       var doAnimate = $.support.transition && animate
 
-      this.$backdrop = $('<div class="modal-backdrop ' + animate + '" />')
-        .prependTo(this.$element)
-        .on('click.dismiss.bs.modal', $.proxy(function (e) {
-          if (e.target !== e.currentTarget) return
-          this.options.backdrop == 'static'
-            ? this.$element[0].focus.call(this.$element[0])
-            : this.hide.call(this)
-        }, this))
+      // this.$backdrop = $('<div class="modal-backdrop ' + animate + '" />')
+      //   .prependTo(this.$element)
+      //   .on('click.dismiss.bs.modal', $.proxy(function (e) {
+      //     if (e.target !== e.currentTarget) return
+      //     this.options.backdrop == 'static'
+      //       ? this.$element[0].focus.call(this.$element[0])
+      //       : this.hide.call(this)
+      //   }, this))
 
       if (doAnimate) this.$backdrop[0].offsetWidth // force reflow
 

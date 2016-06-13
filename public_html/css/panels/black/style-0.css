@@ -6864,7 +6864,8 @@ body .login-wrapper .login-form-wrapper form .form-group .form-control {
   height: 2.3em;
   padding-left: 30px;
 }
-body .login-wrapper .login-form-wrapper form .form-group.password-input .password-login-image {
+body .login-wrapper .login-form-wrapper form .form-group.password-input .password-login-image,
+body .login-wrapper .login-form-wrapper form .form-group.pasword-input .password-login-image {
   position: relative;
   top: 35px;
   left: 11px;
@@ -8633,6 +8634,9 @@ body :-ms-input-placeholder {
     padding: 3px;
     vertical-align: middle;
   }
+}
+.modal-backdrop {
+  display: none !important;
 }
 
 /*# sourceMappingURL=style-0.css.map */
