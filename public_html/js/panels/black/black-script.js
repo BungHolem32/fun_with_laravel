@@ -958,6 +958,7 @@
         $('.modal').on('change',function(e){
            if( !$(e.target).hasClass('in')){
                 $('.modal-backdrop').hide();
+                $('body').css('padding-right',0);
             }
         })
     }
