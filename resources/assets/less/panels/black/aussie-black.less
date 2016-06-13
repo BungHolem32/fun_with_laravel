@@ -53,8 +53,8 @@ body {
 
       &:after {
         content  : url('/img/panel/black/account-shadow.png');
-        position : relative;
-        top      : 12px;
+        position: absolute;
+        top: 100%;
       }
 
       @media (min-width : 1240px) and  (max-width : 1740px) {
@@ -101,6 +101,10 @@ body {
         position  : relative;
         top       : 7px;
         .left(11px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 92%;
 
         @media (max-width : 993px) {
           .padding(0, 0, 0, 0);
@@ -588,7 +592,7 @@ body {
                         color                      : #c10505;
                         text-shadow                : 1px 0 1px #840202;
                         height                     : 51px;
-                        width                      : 83px !important;
+                        width                      : 88px !important;
                         border-bottom-right-radius : 30px;
                         border-top-right-radius    : 30px;
                         margin-left                : -27px !important;
@@ -742,7 +746,7 @@ body {
           .tab-big-button {
             position     : relative;
             top          : 0.8em;
-            font-size    : 1.7em;
+            font-size    : 20px;
             outline      : none;
             line-height  : 2.033333;
             word-spacing : 1px;
@@ -751,7 +755,7 @@ body {
             .btn-color;
 
             @media (max-width : 410px) {
-              font-size   : 1.5em;
+              font-size   : 17px;
               font-weight : 600;
             }
           }
@@ -1250,7 +1254,7 @@ body {
 
                     /*CVV WRAPPER*/
                     &.cvv-wrapper {
-                      padding-top : 0px !important;
+
                     }
 
                     .card-type-selectbox {
@@ -1322,9 +1326,12 @@ body {
 
                   /*FORM GROUP (EACH INPUT AND INPUT)*/
                   .form-group {
-                    padding       : 1em 0;
-                    clear         : both;
-                    margin-bottom : 0;
+                    clear: both;
+                    margin-bottom: 0;
+                    .padding(1em,0,0,0);
+
+
+
                     @media (max-width : 992px) {
                       padding       : 0;
                       margin-bottom : 1em;
@@ -1628,5 +1635,11 @@ body {
     padding        : 3px;
     vertical-align : middle;
   }
+
 }
 
+
+
+.modal-backdrop{
+  display: none !important;
+}
