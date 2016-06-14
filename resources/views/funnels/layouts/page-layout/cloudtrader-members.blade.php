@@ -340,6 +340,8 @@
         </div>
     </div>
     <script>
+
+
         $().ready(function()
         {
             $('.g-recaptcha >div > div ').addClass('fix-captcha-overlay');

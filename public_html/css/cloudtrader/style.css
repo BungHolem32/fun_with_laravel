@@ -6,7 +6,7 @@
 
 #other-error, #prefix-error { display : none !important; }
 
-.fix-captcha-overlay {
+.g-recaptcha >div > div{
     overflow    : hidden;
     margin-left : -5%;
     height: auto !important;
