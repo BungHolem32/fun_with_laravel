@@ -6,9 +6,9 @@ return call_user_func(function(){
 
 	if(!file_exists(__DIR__ . '/domains/domain_specific.json') || json_decode(file_get_contents(__DIR__ . '/domains/domain_specific.json'),true) === null){
 		$subject = 'Error missing Domain Specific file in Funnel system.';
-		$msg = 'Missing Domain Specific file in Funnel system for '.$domain;
-		$email1 = new \App\Services\Ems\StandardEmail('rotemg@rboptions.com', $subject, $msg);
-		$email2 = new \App\Services\Ems\StandardEmail('danielp@rboptions.com', $subject, $msg);
+		$msg = 'Missing Domain Specific file in Funnel system for '.$domain[0];
+		$email1 = \App\Services\Ems\StandardEmail::ALERT('rotemg@rboptions.com', $subject, $msg);
+		$email2 = \App\Services\Ems\StandardEmail::ALERT('danielp@rboptions.com', $subject, $msg);
 		$sender = new \App\Services\Ems\Sender(env('EMAIL_SERVER'), env('EMAIL_PASS'), 'funnels');
 		$sender->addEmailToQueue($email1);
 		$sender->addEmailToQueue($email2);
