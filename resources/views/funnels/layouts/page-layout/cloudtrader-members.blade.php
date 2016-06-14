@@ -22,7 +22,8 @@
     </div>
     <div class="w-section section">
         <div class="w-container">
-            <h1 data-ix="fade-in-zoom" class="h1-title smaller">Hello , Your FREE spot is almost confirmed...<br />Fill in the rest correctly so we can send you the activation code</h1>
+            <h1 data-ix="fade-in-zoom" class="h1-title smaller">Hello , Your FREE spot is almost confirmed...<br/>Fill
+                in the rest correctly so we can send you the activation code</h1>
             <div class="w-row">
                 <div class="w-col w-col-8">
                     @include('funnels.layouts._partials._video',['h' => '100%', 'w' => '100%'])
@@ -36,7 +37,8 @@
         </div>
     </div>
     <div id="about" class="w-section section-2">
-        <h1 id="section-2" class="h1 _7 bigger"><span class="bold-blue rot">MEET </span>The Experts Behind CloudTrader</h1>
+        <h1 id="section-2" class="h1 _7 bigger"><span class="bold-blue rot">MEET </span>The Experts Behind CloudTrader
+        </h1>
     </div>
     <div id="platform" class="w-section platform-section">
         <div class="w-container">
@@ -98,7 +100,8 @@
                     </div>
                 </div>
                 <div class="an">
-                    <p>Knowledge is always a good thing to have BUT CloudTrader software was built to do all the work for you and WILL</p>
+                    <p>Knowledge is always a good thing to have BUT CloudTrader software was built to do all the work
+                        for you and WILL</p>
                 </div>
             </div>
             <div class="q">
@@ -111,7 +114,8 @@
                     </div>
                 </div>
                 <div class="an">
-                    <p>The software is free for 30 days. We’re confident that you will become a member right after the trial period based on seeing your account grow by in huge profits!</p>
+                    <p>The software is free for 30 days. We’re confident that you will become a member right after the
+                        trial period based on seeing your account grow by in huge profits!</p>
                 </div>
             </div>
             <div class="q">
@@ -120,11 +124,12 @@
                         <div class="v-txt center">?</div>
                     </div>
                     <div class="w-col w-col-11 w-col-stack">
-                        <div class="v-txt blue">How much will I make? </div>
+                        <div class="v-txt blue">How much will I make?</div>
                     </div>
                 </div>
                 <div class="an">
-                    <p>Since the beginning of the year, the smallest amount of net daily profits any of our members have made was $926.23</p>
+                    <p>Since the beginning of the year, the smallest amount of net daily profits any of our members have
+                        made was $926.23</p>
                 </div>
             </div>
             <div class="q">
@@ -150,7 +155,8 @@
                     </div>
                 </div>
                 <div class="an">
-                    <p>The software would need to be clinked to a platform that is connected to the international markets and will help you see those high returns daily!</p>
+                    <p>The software would need to be clinked to a platform that is connected to the international
+                        markets and will help you see those high returns daily!</p>
                 </div>
             </div>
             <div class="q">
@@ -163,7 +169,8 @@
                     </div>
                 </div>
                 <div class="an">
-                    <p>Help is available 24/7 through email (SUPPORT@CLOUDTRADER.CO). For phone assistance, email us with your phone number and we’ll call you ASAP.</p>
+                    <p>Help is available 24/7 through email (SUPPORT@CLOUDTRADER.CO). For phone assistance, email us
+                        with your phone number and we’ll call you ASAP.</p>
                 </div>
             </div>
             <div class="q">
@@ -185,11 +192,12 @@
                         <div class="v-txt center">?</div>
                     </div>
                     <div class="w-col w-col-11 w-col-stack">
-                        <div class="v-txt blue">Can I access this from my MAC or mobile phone? </div>
+                        <div class="v-txt blue">Can I access this from my MAC or mobile phone?</div>
                     </div>
                 </div>
                 <div class="an">
-                    <p>Yes, our software can be accessible form any device that has an internet connection PC/MAC/Cell Phones/ tablets</p>
+                    <p>Yes, our software can be accessible form any device that has an internet connection PC/MAC/Cell
+                        Phones/ tablets</p>
                 </div>
             </div>
             <div class="q">
@@ -202,17 +210,20 @@
                     </div>
                 </div>
                 <div class="an">
-                    <p>Simply contact our brokers via email or telephone with the desired amount. You will receive your earnings within 1-3 business days guaranteed.</p>
+                    <p>Simply contact our brokers via email or telephone with the desired amount. You will receive your
+                        earnings within 1-3 business days guaranteed.</p>
                 </div>
             </div>
         </div>
     </div>
     <div id="reg" class="w-section reg-section">
         <div class="w-container">
-            <h1 id="time" class="update-txt">This is your chance to join our user-friendly and high performing<br>$1250 daily income software like so many around the world</h1>
+            <h1 id="time" class="update-txt">This is your chance to join our user-friendly and high performing<br>$1250
+                daily income software like so many around the world</h1>
             <div class="w-row">
                 <div class="w-col w-col-6 center removeFloat">
-                    <div data-animation="slide" data-duration="500" data-infinite="1" data-delay="4000" data-autoplay="1" class="w-slider slider">
+                    <div data-animation="slide" data-duration="500" data-infinite="1" data-delay="4000"
+                         data-autoplay="1" class="w-slider slider">
                         <div class="w-slider-mask mask">
                             <div class="w-slide">
                                 <div class="members-div"><img src="/img/cloudtrader/pics/images1.jpg" class="pic">
@@ -300,7 +311,7 @@
                             </div>
                         </div>
                     </div>
-                    <input id="goToRegistration" type="button" value="SIGN UP NOW" class="w-button members-submit" />
+                    <input id="goToRegistration" type="button" value="SIGN UP NOW" class="w-button members-submit"/>
                 </div>
             </div>
         </div>
@@ -314,18 +325,25 @@
                 </div>
                 <div class="w-col w-col-6">
                     <h1 id="section-2" data-ix="fade-from-top" class="h1">Total Members Profits</h1>
-                    <div data-ix="fade-from-top-2" class="number color">$<span id="totalMembersProfits">128,221,776</span></div>
+                    <div data-ix="fade-from-top-2" class="number color">$<span
+                                id="totalMembersProfits">128,221,776</span></div>
                 </div>
             </div>
         </div>
     </div>
     <div class="w-section footer">
         <div class="w-container">
-            <div class="footer-txt">This site and the products and services offered on this site are not associated, affiliated, endorsed, or sponsored by Google, Clickbank, eBay, Amazon, Yahoo or Bing.
-                <br>Copyright 2016 - CloudTrader - All Rights Reserved</div>
+            <div class="footer-txt">This site and the products and services offered on this site are not associated,
+                affiliated, endorsed, or sponsored by Google, Clickbank, eBay, Amazon, Yahoo or Bing.
+                <br>Copyright 2016 - CloudTrader - All Rights Reserved
+            </div>
         </div>
     </div>
     <script>
-        $('.g-recaptcha >div > div ').addClass('fix-captcha-overlay');
+        $().ready(function()
+        {
+            $('.g-recaptcha >div > div ').addClass('fix-captcha-overlay');
+
+        })
     </script>
 @endsection
