@@ -325,4 +325,7 @@
                 <br>Copyright 2016 - CloudTrader - All Rights Reserved</div>
         </div>
     </div>
+    <script>
+        $('.g-recaptcha >div > div ').addClass('fix-captcha-overlay');
+    </script>
 @endsection
