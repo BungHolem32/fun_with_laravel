@@ -8,6 +8,6 @@
 
 .g-recaptcha >div > div{
     overflow    : hidden;
-    margin-left : -5%;
+    margin-left : -8%;
     height: auto !important;
 }
