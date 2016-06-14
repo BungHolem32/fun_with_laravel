@@ -17,7 +17,6 @@ $(document).ready(function(){
 
     /******* Actions *******/
 
-
     $('.amount').on('click',function(){
         var tthis = $(this);
         tthis.parent().parent().find('.active').removeClass('active');
