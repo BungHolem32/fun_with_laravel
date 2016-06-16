@@ -8,7 +8,7 @@
  */
 $uri = explode("?", $_SERVER['REQUEST_URI']);
 $url = $_SERVER['HTTP_HOST'].$uri[0];
-$cache_params = ['epass'];
+$cache_params = ['epass','ap'];
 $params = [];
 foreach($cache_params as $p){
 	if(array_key_exists($p, $_GET)){
