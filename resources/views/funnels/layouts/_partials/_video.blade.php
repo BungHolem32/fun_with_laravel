@@ -3,9 +3,12 @@
     if(!isset($h)) $h = 360;
     if(!isset($autoplay))  $autoplay = 'autoplay="autoplay"';
     else $autoplay = '';
+
+if(Request::get('ap')==1){
+    $autoplay = '';
+}
     if(isset($controls)) $controls ='controls="controls"';
     else $controls = '';
-    //if(!isset($poster)) $poster = '/images/LoadingAnim2.gif';
     if(!isset($poster)) $poster = '';
 
 
@@ -14,8 +17,6 @@
 
 if(!isset($_GET['dev_video'])):
 ?>
-
-
 
 @section('bottom-scripts')
     {!! $page->appendAsset(url('/js/video.js')) !!}
