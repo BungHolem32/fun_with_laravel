@@ -5812,13 +5812,10 @@ button.close {
   border: 0;
   -webkit-appearance: none;
 }
-.modal-open {
-  overflow: hidden;
-}
 .modal {
   display: none;
   overflow: hidden;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -6980,6 +6977,7 @@ body {
   position: relative;
   padding: 0;
   background: black;
+  padding-right: 0 !important;
   /*REMOVE TRANSITION ON DESKTOP VIEW*/
   /*WRAPPER FOR ALL THE CONTENT*/
   /*SCROLL BAR STYLES*/
@@ -8637,6 +8635,9 @@ body :-ms-input-placeholder {
 }
 .modal-backdrop {
   display: none !important;
+}
+.modal {
+  position: absolute;
 }
 
 /*# sourceMappingURL=style-0.css.map */
