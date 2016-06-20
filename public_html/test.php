@@ -3,4 +3,3 @@
 die;
 
 phpinfo();
-

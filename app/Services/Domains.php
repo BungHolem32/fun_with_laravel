@@ -27,7 +27,11 @@ class Domains
         'mapleway2profit.com'   => 'skylinemarkets.com',
         'mapleprofiter.com'     => 'skylinemarkets.com',
         'millionaireway2profit.com' => 'skylinemarkets.com',
-        'millionaireprofitersystem.com' => 'skylinemarkets.com'
+        'millionaireprofitersystem.com' => 'skylinemarkets.com',
+        'bavarianway2profit.com' => 'skylinemarkets.com',
+        'alpineway2profit.com' => 'skylinemarkets.com',
+        'maxiprofiter-de.com' => 'skylinemarkets.com'
+
     ];
 
     public static function domainName($domain=''){
