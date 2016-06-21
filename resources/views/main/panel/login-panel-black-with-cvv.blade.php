@@ -3,7 +3,8 @@
     <link rel="stylesheet" href="/css/panels/black/libs/font-awesome.min.css">
 
     {{--REQUEST THE CSS--}}
-    <link rel="stylesheet" href="/css/panels/black/style-{{Request::local()->dir}}.css"/>
+    <link rel="stylesheet" href="/css/panels/black/style-0.css"/>
+    {{--<link rel="stylesheet" href="/css/panels/black/style-{{Request::local()->dir}}.css"/>--}}
 
     @if(isMongoNotEmpty($page->background_panel))
         <style>

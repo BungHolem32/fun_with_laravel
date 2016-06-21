@@ -23,11 +23,12 @@
 @append
 
 @section('bottom-scripts')
-    <script src="/js/aussie-new/panel/custom.js"></script>
+    <script src="/js/aussie/panel/custom.js"></script>
     {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
 
     <script type="text/javascript" src="//sst-super-c-nl.spotoption.com/socket.io/socket.io.js"></script>
     {!! $page->appendAsset(url('/js/panel-common/panel.js')) !!}
+
 @append
 
 @section('page-layout')
