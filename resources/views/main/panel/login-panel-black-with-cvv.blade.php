@@ -3,6 +3,11 @@
     <link rel="stylesheet" href="/css/panels/black/libs/font-awesome.min.css">
 
     {{--REQUEST THE CSS--}}
+    <style>
+        html{
+            direction:ltr !important;;
+        }
+    </style>
     <link rel="stylesheet" href="/css/panels/black/style-0.css"/>
     {{--<link rel="stylesheet" href="/css/panels/black/style-{{Request::local()->dir}}.css"/>--}}
 
