@@ -4,6 +4,12 @@ $('.close').on('click', function () {
     $('body').removeClass('bggray');
     $(this).closest('.modal').removeClass('fade').removeClass('in').fadeOut('fast');
 });
+$('*:not(".modal")').on('click',function(){
+    if($(this).find('.modal').hasClass('showen')){
+        $('body').removeClass('bggray');
+        $(this).closest('.modal').removeClass('fade').removeClass('in').fadeOut('fast');
+    }
+})
 
 $('#welcomeModal .close,#welcomeModal button').on('click', function () {
     $(this).closest('.modal').fadeOut('fast');
