@@ -30,7 +30,8 @@ class Domains
         'millionaireprofitersystem.com' => 'skylinemarkets.com',
         'bavarianway2profit.com' => 'skylinemarkets.com',
         'alpineway2profit.com' => 'skylinemarkets.com',
-        'maxiprofiter-de.com' => 'skylinemarkets.com'
+        'maxiprofiter-de.com' => 'skylinemarkets.com',
+        'maxway2profit-de.com'=>'skylinemarkets.com'
 
     ];
 
