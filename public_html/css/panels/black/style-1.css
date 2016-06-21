@@ -6727,11 +6727,11 @@ button.close {
 }
 /*NAV BAR BODY CLASS ON MENU CLICK*/
 .push-body-nav-mobile {
-  left: 200px !important;
+  right: 200px !important;
 }
 /*NAV BAR MOBILE NAVIGATION*/
 .push-navbar-mobile {
-  left: 0 !important;
+  right: 0 !important;
 }
 /*TEXT COLORS ON TABLES*/
 .text-colors-on-tables {
@@ -6806,6 +6806,16 @@ button.close {
   text-transform: capitalize;
 }
 /*FLIP-ABLE WHEN THE LANGUAGE START FROM RTL*/
+.flip-able {
+  /* Gecko */
+  /* Opera */
+  -webkit-transform: scaleX(-1);
+  /* Webkit */
+  transform: scaleX(-1);
+  /* Standard */
+  -webkit-filter: FlipH;
+  filter: FlipH;
+}
 .hideField {
   display: none;
 }
@@ -6957,7 +6967,7 @@ body .login-wrapper .login-form-wrapper form .form-options .forgotpass {
   color: #3E80D4;
   float: right;
   text-decoration: none;
-  padding-right: 0;
+  padding-left: 0;
   font-family: helvetica, arial;
 }
 body .login-wrapper .login-form-wrapper form .form-options .forgotpass:hover {
@@ -6972,7 +6982,7 @@ body .login-wrapper .login-form-wrapper form .form-options .loading {
 /*BASE BODY STYLE*/
 body {
   font-family: helvetica, arial;
-  left: 0;
+  right: 0;
   margin: 0;
   position: relative;
   padding: 0;
@@ -7022,7 +7032,7 @@ body .content-wrapper .account-details-desktop {
   width: 205px;
   height: 8.7em;
   position: absolute;
-  right: 14.5%;
+  left: 14.5%;
   border-bottom-right-radius: 0.6em;
   border-bottom-left-radius: 0.6em;
   background-color: white;
@@ -7037,7 +7047,7 @@ body .content-wrapper .account-details-desktop:after {
 }
 @media (min-width: 1240px) and (max-width: 1740px) {
   body .content-wrapper .account-details-desktop {
-    right: 0;
+    left: 0;
   }
 }
 @media (max-width: 1240px) {
@@ -7061,7 +7071,7 @@ body .content-wrapper .account-details-desktop .account-details-title .img-human
   max-width: 100%;
   height: auto;
   position: absolute;
-  left: 9px;
+  right: 9px;
   top: 5px;
 }
 body .content-wrapper .account-details-desktop .account-details-title .title {
@@ -7076,7 +7086,7 @@ body .content-wrapper .account-details-desktop .info-tab {
   font-size: 0.9em;
   position: relative;
   top: 7px;
-  left: 11px;
+  right: 11px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -7154,7 +7164,7 @@ body .content-wrapper .account-details-mobile .container .row .account-detail-pe
 }
 @media (max-width: 500px) {
   body .content-wrapper .account-details-mobile .container .row .account-detail-personal-info p.info-tab.col-xs-5 {
-    padding-right: 0;
+    padding-left: 0;
   }
 }
 body .content-wrapper .navbar-desktop {
@@ -7209,7 +7219,7 @@ body .content-wrapper .navbar-desktop .container .navbar-toggle {
   border-radius: 0;
   background: #2c98e0;
   position: relative;
-  float: right;
+  float: left;
   padding: 20px 20px;
   margin: 0;
   border-left: 1px solid #237EBB;
@@ -7273,7 +7283,7 @@ body .content-wrapper .navbar-desktop .navbar-collapse .navbar-nav .navbar-part 
   background-color: #0082d8;
 }
 body .content-wrapper .navbar-mobile {
-  left: -200px;
+  right: -200px;
   height: 100%;
   position: fixed;
   width: 200px;
@@ -7291,7 +7301,7 @@ body .content-wrapper .navbar-mobile .navbar-ul-wrapper .navbar-li-wrapper {
   border-bottom: 1px solid #237EBB;
   font-family: helvetica, arial;
   line-height: 45px;
-  padding: 3px 0 7px 20px;
+  padding: 3px 20px 7px 0;
 }
 body .content-wrapper .navbar-mobile .navbar-ul-wrapper .navbar-li-wrapper .navbar-text-mobile {
   color: #ffffff;
@@ -7367,7 +7377,7 @@ body .content-wrapper .activate-method-system .active-method-subtitle-wrapper .m
   font-size: 1.2em;
   position: relative;
   line-height: 24px;
-  margin: 0px 0 0 -3px;
+  margin: 0px -3px 0 0;
   letter-spacing: 0px;
   font-style: italic;
   color: #FFDE00;
@@ -7384,7 +7394,7 @@ body .content-wrapper .activate-method-system .active-method-subtitle-wrapper .m
   }
 }
 body .content-wrapper .arrow-img-wrapper .arrow-img {
-  margin: 0 0 0 10.7%;
+  margin: 0 10.7% 0 0;
 }
 @media (max-width: 1200px) {
   body .content-wrapper .arrow-img-wrapper .arrow-img {
@@ -7429,13 +7439,13 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-1 {
   position: absolute;
   top: 171px;
   width: 108.1%;
-  right: -16px;
+  left: -16px;
   opacity: 0;
 }
 @media (max-width: 1200px) {
   body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-1 {
     top: 146px;
-    left: -4.2%;
+    right: -4.2%;
   }
 }
 @media (max-width: 560px) {
@@ -7446,14 +7456,14 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-1 {
 body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-2 {
   position: absolute;
   top: 173px;
-  right: -16px;
+  left: -16px;
   width: 109.9%;
   opacity: 0;
 }
 @media (max-width: 1200px) {
   body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-2 {
     top: 156px;
-    left: -4.2%;
+    right: -4.2%;
   }
 }
 @media (max-width: 998px) {
@@ -7469,14 +7479,14 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-2 {
 body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-3 {
   position: absolute;
   top: 171px;
-  left: -18px;
+  right: -18px;
   width: 108.9%;
   opacity: 0;
 }
 @media (max-width: 1200px) {
   body .content-wrapper .tabs-wrapper .tab-wrapper .tab-shadow-3 {
     top: 146px;
-    left: -4.2%;
+    right: -4.2%;
   }
 }
 @media (max-width: 768px) {
@@ -7619,10 +7629,10 @@ body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-
 }
 body .content-wrapper .tabs-wrapper .tab-wrapper.amount .amount-btn {
   width: 39%;
-  margin: 0 13px 15px 0;
+  margin: 0 0 15px 13px;
   position: relative;
   top: 8px;
-  left: 4px;
+  right: 4px;
   box-shadow: 1px 1px 10px 1px black;
   background: linear-gradient(to top, #222222, #444547);
   color: #cccccc;
@@ -7673,12 +7683,12 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-number-in-circle
 }
 @media (max-width: 1200px) {
   body .content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-number-in-circle {
-    left: 9px;
+    right: 9px;
   }
 }
 @media (max-width: 1012px) {
   body .content-wrapper .tabs-wrapper .tab-wrapper .top-part .tab-number-in-circle {
-    left: 15px;
+    right: 15px;
   }
 }
 @media (max-width: 433px) {
@@ -7733,7 +7743,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button:ho
 }
 body .content-wrapper .tabs-wrapper .arrow-rotate {
   top: 49px;
-  left: -89px;
+  right: -89px;
   position: absolute;
 }
 body .content-wrapper table {
@@ -7898,8 +7908,8 @@ body .content-wrapper .footer-certificate-logos .footer-copyrights {
 body .content-wrapper .modal-welcome {
   color: white;
   background: rgba(0, 0, 0, 0.6);
-  padding-right: 0 !important;
   padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 body .content-wrapper .modal-welcome .modal-dialog-welcome {
   /*WRAPPER FOR ALL THE CONTENT HEADER + BODY + FOOTER*/
@@ -7942,7 +7952,7 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
   }
 }
 body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-header-welcome .square-logo {
-  float: right;
+  float: left;
   margin: -0.5em -0.5em -0.5em -0.5em;
   cursor: pointer;
 }
@@ -8025,7 +8035,7 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
 }
 body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-content .modal-footer-welcome {
   padding: 0 0 30px 0;
-  text-align: right;
+  text-align: left;
   border: none;
   /*FOOTER PLACE IN THE WELCOME FOOTER*/
 }
@@ -8060,8 +8070,8 @@ body .content-wrapper .modal-welcome .modal-dialog-welcome .modal-welcome-conten
 body .content-wrapper .modal-deposit {
   color: white;
   background: rgba(0, 0, 0, 0.6);
-  padding-right: 0 !important;
   padding-left: 0 !important;
+  padding-right: 0 !important;
   /*CONTENT FIRST INNER WRAPPER*/
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit {
@@ -8116,8 +8126,8 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
   text-shadow: 1px 0px 1px black;
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-header-deposit .square-logo {
-  float: right;
-  margin: -0.7em -0.7em 0.7em 0.7em;
+  float: left;
+  margin: -0.7em 0.7em 0.7em -0.7em;
   cursor: pointer;
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit {
@@ -8243,7 +8253,12 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
   }
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .month-exp-selectbox {
-  margin-right: 0.5em;
+  margin-left: 0.5em;
+}
+@media (max-width: 993px) {
+  body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .month-exp-selectbox {
+    margin: 0;
+  }
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .info-logo {
   padding: 0.5vw 0.3vw 0 0.3vw;
@@ -8486,7 +8501,7 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
   color: #009aff;
   text-indent: 1px;
   margin: 0.7em 0 0.5em 0;
-  padding-left: 5px;
+  padding-right: 5px;
 }
 @media (max-width: 993px) {
   body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .question-wrapper .question-text {
@@ -8515,7 +8530,7 @@ body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-bod
 }
 @media (max-width: 768px) {
   body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .answer-wrapper {
-    padding: 1em 0.5em 0 2.4em;
+    padding: 1em 2.4em 0 0.5em;
   }
 }
 body .content-wrapper .modal-faq .modal-dialog-faq .modal-faq-content .modal-body-faq .question-n-answer-wrapper .answer-wrapper .answer {
@@ -8528,16 +8543,16 @@ body .content-wrapper .logo-brand {
 body .content-wrapper .logo-brand .logo-brand-img {
   height: 4.7em;
   position: absolute;
-  left: 0;
   right: 0;
+  left: 0;
   margin: 0.5em auto;
   z-index: 1;
   overflow: hidden;
 }
 @media (max-width: 1240px) {
   body .content-wrapper .logo-brand .logo-brand-img {
-    left: 0;
     right: 0;
+    left: 0;
     margin: 0 auto;
     text-align: center;
   }
@@ -8545,8 +8560,8 @@ body .content-wrapper .logo-brand .logo-brand-img {
 @media (max-width: 998px) {
   body .content-wrapper .logo-brand .logo-brand-img {
     max-height: 53px;
-    left: 0;
     right: 0;
+    left: 0;
     margin: 0 auto;
     top: 3.7em;
     text-align: center;
