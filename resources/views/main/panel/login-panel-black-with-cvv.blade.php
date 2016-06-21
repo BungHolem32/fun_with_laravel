@@ -3,12 +3,18 @@
     <link rel="stylesheet" href="/css/panels/black/libs/font-awesome.min.css">
 
     {{--REQUEST THE CSS--}}
+
+    {{--REMMBER TO REMOVE IT AFTER  GETTING TRANSLATION--}}
     <style>
         html{
             direction:ltr !important;;
         }
     </style>
     <link rel="stylesheet" href="/css/panels/black/style-0.css"/>
+    {{--REMMBER TO REMOVE IT AFTER  GETTING TRANSLATION--}}
+
+
+    {{--REMMBER TO ADD IT AFTER  GETTING TRANSLATION--}}
     {{--<link rel="stylesheet" href="/css/panels/black/style-{{Request::local()->dir}}.css"/>--}}
 
     @if(isMongoNotEmpty($page->background_panel))
