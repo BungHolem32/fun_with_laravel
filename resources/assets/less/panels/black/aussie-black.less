@@ -17,13 +17,13 @@
 
 /*BASE BODY STYLE*/
 body {
-  font-family : @font-headers-running;
+  font-family   : @font-headers-running;
   .left (0);
-  margin      : 0;
-  position    : relative;
-  padding     : 0;
-  background  : black;
-
+  margin        : 0;
+  position      : relative;
+  padding       : 0;
+  background    : black;
+  padding-right : 0 !important;
   /*REMOVE TRANSITION ON DESKTOP VIEW*/
   @media (max-width : 1000px) {
     transition : all 0.5s;
@@ -53,8 +53,8 @@ body {
 
       &:after {
         content  : url('/img/panel/black/account-shadow.png');
-        position: absolute;
-        top: 100%;
+        position : absolute;
+        top      : 100%;
       }
 
       @media (min-width : 1240px) and  (max-width : 1740px) {
@@ -97,14 +97,14 @@ body {
       /*PARAGRAPHS WITH THE INFO TITLE*/
       .info-tab {
         .margin(0, 0, 2px, 0);
-        font-size : 0.9em;
-        position  : relative;
-        top       : 7px;
+        font-size     : 0.9em;
+        position      : relative;
+        top           : 7px;
         .left(11px);
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        max-width: 92%;
+        overflow      : hidden;
+        text-overflow : ellipsis;
+        white-space   : nowrap;
+        max-width     : 92%;
 
         @media (max-width : 993px) {
           .padding(0, 0, 0, 0);
@@ -160,8 +160,8 @@ body {
           /*ACCOUNT DETAIL PERSONAL*/
           .account-detail-personal-info {
             padding-top : 0.4em;
-            @media (max-width:998px){
-              font-size: 0.9em;
+            @media (max-width : 998px) {
+              font-size : 0.9em;
             }
 
             p {
@@ -330,9 +330,9 @@ body {
     /*INCENTIVE GUIDE FOR NEW CUSTOMERS */
     .activate-method-system {
       &.container {
-        @media (max-width:1200px) {
-          width:100%;
-          padding: 0;
+        @media (max-width : 1200px) {
+          width   : 100%;
+          padding : 0;
         }
       }
 
@@ -364,7 +364,7 @@ body {
           font-size      : 1.65em;
           letter-spacing : 0;
           .margin(0.52em, 0, 0, 0);
-          text-align: center;
+          text-align     : center;
 
           @media (max-width : 1024px) {
             text-align : center;
@@ -1254,7 +1254,6 @@ body {
 
                     /*CVV WRAPPER*/
                     &.cvv-wrapper {
-
                     }
 
                     .card-type-selectbox {
@@ -1326,11 +1325,9 @@ body {
 
                   /*FORM GROUP (EACH INPUT AND INPUT)*/
                   .form-group {
-                    clear: both;
-                    margin-bottom: 0;
-                    .padding(1em,0,0,0);
-
-
+                    clear         : both;
+                    margin-bottom : 0;
+                    .padding(1em, 0, 0, 0);
 
                     @media (max-width : 992px) {
                       padding       : 0;
@@ -1507,7 +1504,7 @@ body {
                 cursor : pointer;
 
                 @media (max-width : 600px) {
-                  .margin(2em ,0, 1.2em, 0)
+                  .margin(2em, 0, 1.2em, 0)
                 }
 
                 /*QUESTION TEXT WRAPPER*/
@@ -1637,6 +1634,10 @@ body {
   }
 }
 
-.modal-backdrop{
-  display: none !important;
+.modal-backdrop {
+  display : none !important;
+}
+
+.modal {
+  position : absolute;
 }
