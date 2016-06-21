@@ -1,29 +1,29 @@
 var guider = 0;
+$('#welcomeModal').addClass('show');
 
-$('.close').on('click', function () {
+$('.close').on('click', function (e) {
+    var that = this;
+    closeModal(that);
+});
+
+if($('body:not(".modal")'))
+
+
+function closeModal(elem){
+    console.log($(elem).parents('.modal'));
     $('body').removeClass('bggray');
-    $(this).closest('.modal').removeClass('fade').removeClass('in').fadeOut('fast');
-});
+    $(elem).parents('.modal').removeClass('show').slideUp();
+}
 
-$('#welcomeModal .close,#welcomeModal button').on('click', function () {
-    $(this).closest('.modal').fadeOut('fast');
-    $('video').attr('loop','loop').get('0').pause();
+$('.deposit-btn').on('click',function(){
+    $('#formDepositModal').addClass('show');
+     $('body').addClass('bggray');
+})
 
-    if(!$('#formDepositModal').hasClass('hidden') && !$('#formDepositModal').hasClass('hidden-on')){
-        $('body').addClass('bggray');
-        setTimeout(function(){
-            $('#formDepositModal').fadeIn();
-        },300);
-    }
-    else{
-        $('#formDepositModal').removeClass('hidden');
-    }
-
-});
 
 // popups
 $('#awelcomeModal').on('click',function(){
-    $('#welcomeModal').slideDown();
+    $('#welcomeModal').slideDown().addClass('show');
     $('video').get('0').play();
 
 });
@@ -36,11 +36,11 @@ $('#cvv-popover').on('mouseleave',function(){
 });
 
 
-$('.deposit-btn').on('click', function () {
-    $('#formDepositModal').fadeIn();
-    $('body').addClass('bggray');
-    return false;
-});
+// $('.deposit-btn').on('click', function () {
+//     $('#formDepositModal').fadeIn();
+//     $('body').addClass('bggray');
+//     return false;
+// });
 
 $('#afaqModal').on('click', function () {
     $('#faqModal').addClass('in').slideDown();
