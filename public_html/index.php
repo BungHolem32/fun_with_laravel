@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Checking if the url is cache able - meaning the page should be cached
  * if request is GET
