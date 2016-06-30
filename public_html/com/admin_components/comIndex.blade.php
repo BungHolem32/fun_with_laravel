@@ -21,6 +21,8 @@
     <option value="">Select a state...</option>
     <option value="faq"     @if(in_array('faq' ,    $componentsArr)) selected @endif>FAQ</option>
     <option value="timer"   @if(in_array('timer' ,  $componentsArr)) selected @endif>Timer</option>
+    <option value="magic_button"   @if(in_array('magic_button' ,  $componentsArr)) selected @endif>Magic Disappearing button</option>
+    <option value="email_pop"   @if(in_array('email_pop' ,  $componentsArr)) selected @endif>Email POPUP</option>
 </select>
 
 

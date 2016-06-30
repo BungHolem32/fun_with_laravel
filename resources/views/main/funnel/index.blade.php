@@ -6,6 +6,12 @@
     No Template selected
 @endif
 
+
+@if(isMongoNotEmpty($page->componentsEmailPopCom->interval))
+    @com('email_pop')
+@endif
+
+
 {{--@section('content')
     <h1>{{ $page->title_h1 }}</h1>
     <p class="description">{{ $page->description }}</p>
