@@ -132,7 +132,7 @@ class PanelController extends Controller {
 
     public function runBot(){
         $results = [];
-        $customers = \DB::select('select customer_id from `bot` where `status` = "On"');
+        $customers = \DB::connection('master')->select('select customer_id from `bot` where `status` = "On"');
         Log::debug('bot - found customers', $customers);
         foreach($customers as $customer){
             try {
