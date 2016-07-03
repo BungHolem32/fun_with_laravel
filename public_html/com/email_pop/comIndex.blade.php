@@ -1,18 +1,5 @@
 @section('head')
-    <style>
-        .componentsEmailPopCom{
-            display: none;
-            position: fixed;
-            z-index: 100;
-            transform: translateX(-50%) translateY(-50%);
-            top: 50%;
-            left: 50%;
 
-            width: 300px;
-            height: 200px;
-            background: darkgreen;
-        }
-    </style>
 @append
 
 @section('bottom-scripts')
@@ -48,5 +35,27 @@
 
 
 <div class="componentsEmailPopCom">
-    {!! $page->componentsEmailPopCom->content !!}
+    {{--POPUP TAG--}}
+    <div class="overlay"></div>
+    <div class="popupWrapper container">
+        {{--closeBtn Button--}}
+        <div class="closeBtn"></div>
+
+        {!! Form::open(['url' => url('postEmailForm'.'/'.session('local')->code), 'method'=>'post','align'=>'center']) !!}
+        <input class="form-control" type="hidden" name="pageId" value="{{ $page->id }}">
+
+        <div class="rectangle"></div>
+
+        <div class="form-group email">
+            <input id="emailFieldPopUp" type="email" name="email"
+                   placeholder="Verify email address"
+                   required="required" class="form-control emailInputPopup"/>
+        </div>
+
+        <div class="submit-wrapper">
+            <input type="submit" class="align-center col-md-12 col-sm-12 submit-btn form-control" value=""/>
+        </div>
+        {!! Form::close() !!}
+
+    </div>
 </div>
