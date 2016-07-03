@@ -13,7 +13,6 @@
                 display         : none;
                 background-size : 90%;
             }
-
             .popupWrapper .form-group {
                 width       : 67.7%;
                 margin-top  : 70.1%;
