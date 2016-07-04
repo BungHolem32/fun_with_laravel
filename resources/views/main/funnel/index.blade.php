@@ -7,7 +7,7 @@
 @endif
 
 
-@if(isMongoNotEmpty($page->componentsEmailPopCom->interval))
+@if(isMongoNotEmpty($page->componentsEmailPopCom) && isMongoNotEmpty($page->componentsEmailPopCom->interval))
     @com('email_pop')
 @endif
 
