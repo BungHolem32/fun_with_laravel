@@ -28,12 +28,12 @@
 
     <div class="nav">
         <ul>
-            <li class="current"><a href="#">SPOR</a></li>
-            <li><a href="#">SAĞLIK</a></li>
-            <li><a href="#">GÜZELLİK</a></li>
-            <li><a href="#">YAŞAM TARZI</a></li>
-            <li><a href="#">KİLO VERME</a></li>
-            <li><a href="#">MODA</a></li>
+            <li class="current"><a href="https://skylinemarkets.com/EN/open-account">SPOR</a></li>
+            <li><a href="https://skylinemarkets.com/EN/open-account">SAĞLIK</a></li>
+            <li><a href="https://skylinemarkets.com/EN/open-account">GÜZELLİK</a></li>
+            <li><a href="https://skylinemarkets.com/EN/open-account">YAŞAM TARZI</a></li>
+            <li><a href="https://skylinemarkets.com/EN/open-account">KİLO VERME</a></li>
+            <li><a href="https://skylinemarkets.com/EN/open-account">MODA</a></li>
         </ul>
     </div><!-- nav -->
 
@@ -76,7 +76,7 @@
 
             <div class="clear"></div>
 
-            <p style="margin-top:0;"><b>Londra, İngiltere</b> – Nadir ve samimi bir röportajda, ünlü bir Premier Lig ve İngiltere Milli Takımı futbolcusuyla konuştum ve 3 takım arkadaşından 1'inin tatilde beklemedik şeyler yaptığını açıkladı. Biraz sonra açıklayacaklarım sizi de <a href="#" onclick="generateDeviceButton(this, 'index')" target="_parent">şoke edecek</a>. </p>
+            <p style="margin-top:0;"><b>Londra, İngiltere</b> – Nadir ve samimi bir röportajda, ünlü bir Premier Lig ve İngiltere Milli Takımı futbolcusuyla konuştum ve 3 takım arkadaşından 1'inin tatilde beklemedik şeyler yaptığını açıkladı. Biraz sonra açıklayacaklarım sizi de <a href="https://skylinemarkets.com/EN/open-account" onclick="generateDeviceButton(this, 'index')" target="_parent">şoke edecek</a>. </p>
 
             <p><b>Merhaba, bugün benimle görüştüğünüz için teşekkür ederim.</b></p>
 
@@ -103,7 +103,7 @@
 
             <p><b>İlginç. İnternette yatırım derken neyi kastediyorsunuz?</b></p>
 
-            <p>İnternette <a href="#" onclick="generateDeviceButton(this, 'index')" target="_parent">yatırım</a> yapıyorum. Aslında söylediğimden çok daha basit bir şey. O kadar da akıllı olmayabilirim (bana göz kırpıyor). Tek yapmanız gereken Altın, Apple ya da Google hissesi gibi bir varlığın fiyatının belirli bir süre içinde yukarı mı yoksa aşağıya mı gideceğini tahmin etmek. Doğru tahmin ederseniz – paranızı dakikalar içinde ikiye katlıyorsunuz. Bu yöntemi nasıl kullanacağını öğrenen herkes %100 yasal bir şekilde doğrudan cep telefonunuzdan para kazanabilir.</p>
+            <p>İnternette <a href="https://skylinemarkets.com/EN/open-account" onclick="generateDeviceButton(this, 'index')" target="_parent">yatırım</a> yapıyorum. Aslında söylediğimden çok daha basit bir şey. O kadar da akıllı olmayabilirim (bana göz kırpıyor). Tek yapmanız gereken Altın, Apple ya da Google hissesi gibi bir varlığın fiyatının belirli bir süre içinde yukarı mı yoksa aşağıya mı gideceğini tahmin etmek. Doğru tahmin ederseniz – paranızı dakikalar içinde ikiye katlıyorsunuz. Bu yöntemi nasıl kullanacağını öğrenen herkes %100 yasal bir şekilde doğrudan cep telefonunuzdan para kazanabilir.</p>
 
             <p>Ben çok seviyorum aslında masaj yaptırırken ve havuz başında güneşlenirken başladım. Eşim de, ailemle olmak yerine cep telefonumla çok oynadığım için dırdır etmeye başladı. Ama buna engel olamıyordum, tatilde yatırım yapmayı ve takım arkadaşlarıma kazandığım parayla övünmeyi seviyorum! </p>
 
@@ -117,7 +117,7 @@
 
             <p><b>Ne kadar süredir internetten ikili opsiyonlara yatırım yapıyorsunuz?</b></p>
 
-            <p>3 ay öncesine kadar ben bunu hiç düşünmemiştim; söylentiler bizim kulübe kadar gelip Jamaika'daki tatilimizde birkaç arkadaş bana bunu gösterinceye kadar. Bu konuda uzmanlaşıp para kazanmak zor olur <a href="#" onclick="generateDeviceButton(this, 'index')" target="_parent">diye düşünmüştüm</a> ama düşündüğümden çok daha kolay. Bilinen hisse senedi yatırımının aksine ikili opsiyon yatırımları gerçekten çok hızlı. Genellikle sadece 15 dakika sürüyor, yani çok hızlı bir şekilde yüksek kazanç elde edebiliyor ve daha sonra günlük işlerinize geri dönebiliyorsunuz! </p>
+            <p>3 ay öncesine kadar ben bunu hiç düşünmemiştim; söylentiler bizim kulübe kadar gelip Jamaika'daki tatilimizde birkaç arkadaş bana bunu gösterinceye kadar. Bu konuda uzmanlaşıp para kazanmak zor olur <a href="https://skylinemarkets.com/EN/open-account" onclick="generateDeviceButton(this, 'index')" target="_parent">diye düşünmüştüm</a> ama düşündüğümden çok daha kolay. Bilinen hisse senedi yatırımının aksine ikili opsiyon yatırımları gerçekten çok hızlı. Genellikle sadece 15 dakika sürüyor, yani çok hızlı bir şekilde yüksek kazanç elde edebiliyor ve daha sonra günlük işlerinize geri dönebiliyorsunuz! </p>
 
             <p><b>Çok ilgimi çekti! Herhangi biri bunu yapabilir mi?</b></p>
 
@@ -130,7 +130,7 @@
 
             <p><b>Bu sıradan bir insanın da yapabileceği bir şey mi yoksa yatırım deneyimi mi gerekli?</b></p>
 
-            <p>Asla. <a href="#" onclick="generateDeviceButton(this, 'index')" target="_parent">Yatırım konusunda deneyim ya da bilgi gerektirmiyor.</a> Benim kesinlikle hiç yoktu! Sıradan bir insan da kolayca gelirini arttırabilir. Milyoner olmazlar ama iyi kazançlar elde ederler: ayda birkaç bin sterlin iyidir. Kesinlikle tavsiye ediyorum. Bu ülkedeki çoğu insanın bunu pek duymadığını fark ettim, bu yüzden çok az insan kullanıyor. (Editörün notu: nasıl başlayacağınıza dair ayrıntılı açıklama aşağıda verilmiştir.)</p>
+            <p>Asla. <a href="https://skylinemarkets.com/EN/open-account" onclick="generateDeviceButton(this, 'index')" target="_parent">Yatırım konusunda deneyim ya da bilgi gerektirmiyor.</a> Benim kesinlikle hiç yoktu! Sıradan bir insan da kolayca gelirini arttırabilir. Milyoner olmazlar ama iyi kazançlar elde ederler: ayda birkaç bin sterlin iyidir. Kesinlikle tavsiye ediyorum. Bu ülkedeki çoğu insanın bunu pek duymadığını fark ettim, bu yüzden çok az insan kullanıyor. (Editörün notu: nasıl başlayacağınıza dair ayrıntılı açıklama aşağıda verilmiştir.)</p>
 
             <p><b>Benimle konuştuğunuz ve profesyonel arkadaşlarınızın boş zamanlarını nasıl geçirdiğini açıkladığınız için çok teşekkürler! </b></p>
 
@@ -140,24 +140,24 @@
 
             <p>İddia ettiği kadar etkiliyse gerçekten çok heyecanlı.</p>
 
-            <p>O yüzden hemen onun seçtiği yatırım şirketine gitmeliyim, <a href="#" onclick="generateDeviceButton(this, 'index')" target="_parent">SkyLineMarkets</a>, web sitesine göre ikili opsiyonlar konusunda uzman olan ilk çevrim içi mali yatırım web sitesi.</p>
+            <p>O yüzden hemen onun seçtiği yatırım şirketine gitmeliyim, <a href="https://skylinemarkets.com/EN/open-account" onclick="generateDeviceButton(this, 'index')" target="_parent">SkyLineMarkets</a>, web sitesine göre ikili opsiyonlar konusunda uzman olan ilk çevrim içi mali yatırım web sitesi.</p>
 
             <p>Müthiş görünüyor, aslında çok şüpheliydim.</p>
 
             <p>Neticede, internet para kazanma planlarıyla dolu, ben de bu yüzden kendim denemeye karar verdim. </p>
 
-            <p>Editörümün de teşviki üzerine SkyLineMarkets'da ücretsiz hesaba kaydolmaya ve <a href="#" onclick="generateDeviceButton(this, 'index')" target="_parent">yatırım yapmaya başlamaya</a> karar verdim!</p>
+            <p>Editörümün de teşviki üzerine SkyLineMarkets'da ücretsiz hesaba kaydolmaya ve <a href="https://skylinemarkets.com/EN/open-account" onclick="generateDeviceButton(this, 'index')" target="_parent">yatırım yapmaya başlamaya</a> karar verdim!</p>
 
             <p><b>Peki, nasıldı?</b></p>
 
             <p class="quote">"Sadece bir ay içinde – ve ikili opsiyon yatırımı konusunda sıfır bilgi ve deneyimle – 51 yatırımdan 37'sini doğru bildim ve %72.5 kazanma oranıyla toplam 1.377€ kar elde ettim.”</p>
 
             <p class="main-btn" align="center">
-                <a href="#" class="button" onclick="generateDeviceButton(this, 'register')" target="_parent">Hemen Ücretsiz Bir Hesap Aç!</a>
+                <a href="https://skylinemarkets.com/EN/open-account" class="button" onclick="generateDeviceButton(this, 'register')" target="_parent">Hemen Ücretsiz Bir Hesap Aç!</a>
             </p>
 
             <p class="download-app" align="center" style="display:none;">
-                <a href="#" id="device_button_no_chicken" class="no_chicken button" onclick="generateDeviceButton(this, 'register')" target="_parent">Uygulamayı İndir »</a>
+                <a href="https://skylinemarkets.com/EN/open-account" id="device_button_no_chicken" class="no_chicken button" onclick="generateDeviceButton(this, 'register')" target="_parent">Uygulamayı İndir »</a>
             </p>
 
             <hr />  				Eğer Aliye'nin hikayesinden etkilendiyseniz, ikili opsiyonlar yatırımcısı olarak başlangıç yapmak için gerekli olanlar şöyle... <h2>Nasıl başlanır…</h2>
@@ -167,7 +167,7 @@
                 <span class="step-num">ADIM #1:</span> <span class="step-info"> ÜCRETSİZ KATIL </span>
             </div>
 
-            <p>Bu stratejiyi kullanmaya başlamak için ilk olarak bir yatırım platformuna kaydolmanız gerekiyor. Piyasada birkaç platform var ama bugüne kadarki deneyimlerime göre en iyisi <a href="#" onclick="generateDeviceButton(this, 'index')" target="_parent">SkyLineMarkets</a>, ilk ve en büyük ikili komisyoncu ve Premier Lig yıldızları arasında en popüler olan platform.</p>
+            <p>Bu stratejiyi kullanmaya başlamak için ilk olarak bir yatırım platformuna kaydolmanız gerekiyor. Piyasada birkaç platform var ama bugüne kadarki deneyimlerime göre en iyisi <a href="https://skylinemarkets.com/EN/open-account" onclick="generateDeviceButton(this, 'index')" target="_parent">SkyLineMarkets</a>, ilk ve en büyük ikili komisyoncu ve Premier Lig yıldızları arasında en popüler olan platform.</p>
 
             <p>Web sitelerinde bulunan, yeni başlayanlar için yatırım kılavuzu, videolar ve öğretici videoların bulunduğu 'eğitim akademisi' sayesinde yeni başlayanlar için gerçekten kolay olmakla kalmayıp aynı zamanda gördüğüm en yüksek komisyoncu ödemelerini sunuyorlar ve ödemeleri de hızlı yapıyorlar – bu gerçekten önemli. Ayrıca, piyasadaki diğer birçok şirketten farklı olarak tamamen ücretsiz kaydolabiliyorsunuz!</p>
 
@@ -176,22 +176,22 @@
                 <span class="step-num">ADIM #2:</span> <span class="step-info"> PARA YATIRIN </span>
             </div>
 
-            <p>Elbette, yatırım yapmak için para yatırmanız gerek. Ama endişelenmeyin; çok olması gerekmiyor! Aslında, <a href="#" onclick="generateDeviceButton(this, 'index')" target="_parent">SkyLineMarkets</a> sadece 250€ yatırarak tek seferde 25€ yatırım yapmanıza izin veriyor. Ben de kesinlikle küçük başlamanızı ve daha sonra daha büyük yatırımlara doğru gitmenizi ve deneyim kazandıkça daha büyük karlar elde etmenizi tavsiye ediyorum. </p>
+            <p>Elbette, yatırım yapmak için para yatırmanız gerek. Ama endişelenmeyin; çok olması gerekmiyor! Aslında, <a href="https://skylinemarkets.com/EN/open-account" onclick="generateDeviceButton(this, 'index')" target="_parent">SkyLineMarkets</a> sadece 250€ yatırarak tek seferde 25€ yatırım yapmanıza izin veriyor. Ben de kesinlikle küçük başlamanızı ve daha sonra daha büyük yatırımlara doğru gitmenizi ve deneyim kazandıkça daha büyük karlar elde etmenizi tavsiye ediyorum. </p>
 
             <div class="step">
                 <div class="arrow"></div>
                 <span class="step-num">ADIM #3:</span> <span class="step-info"> YATIRIMINI GERÇEKLEŞTİR! </span>
             </div>
 
-            <p>Kaydolup ilk paranızı yatırdıktan sonra otomatik olarak yatırım sayfasına yönlendirileceksiniz. İyi haber şu ki, aralarından seçim yapabileceğiniz sadece iki opsiyon var: fiyatın YUKARI gideceğini düşünüyorsanız 'call' yatırımı gerçekleştiriyorsunuz. AŞAĞI gideceğini düşünüyorsanız 'put' yatırımı gerçekleştiriyorsunuz. Bu kadar basit! Daha sonra tek yapmanız gereken opsiyonu satın almak için yatırım yapmak istediğiniz tutarı girmek. Tüm yatırımların %70 ile %80 arasında bir getirisi var ve <a href="#" onclick="generateDeviceButton(this, 'index')" target="_parent">15 dakika</a> gibi kısa bir sürede para kazanabiliyorsunuz!</p>
+            <p>Kaydolup ilk paranızı yatırdıktan sonra otomatik olarak yatırım sayfasına yönlendirileceksiniz. İyi haber şu ki, aralarından seçim yapabileceğiniz sadece iki opsiyon var: fiyatın YUKARI gideceğini düşünüyorsanız 'call' yatırımı gerçekleştiriyorsunuz. AŞAĞI gideceğini düşünüyorsanız 'put' yatırımı gerçekleştiriyorsunuz. Bu kadar basit! Daha sonra tek yapmanız gereken opsiyonu satın almak için yatırım yapmak istediğiniz tutarı girmek. Tüm yatırımların %70 ile %80 arasında bir getirisi var ve <a href="https://skylinemarkets.com/EN/open-account" onclick="generateDeviceButton(this, 'index')" target="_parent">15 dakika</a> gibi kısa bir sürede para kazanabiliyorsunuz!</p>
 
 
             <p class="main-btn" align="center">
-                <a href="#" class="button" onclick="generateDeviceButton(this, 'register')" target="_parent">Sadece 250€ İle Yatırıma Başlayın »</a>
+                <a href="https://skylinemarkets.com/EN/open-account" class="button" onclick="generateDeviceButton(this, 'register')" target="_parent">Sadece 250€ İle Yatırıma Başlayın »</a>
             </p>
 
             <p class="download-app" align="center" style="display:none;">
-                <a href="#" id="device_button_no_chicken" class="no_chicken button" onclick="generateDeviceButton(this, 'register')" target="_parent">Uygulamayı İndir »</a>
+                <a href="https://skylinemarkets.com/EN/open-account" id="device_button_no_chicken" class="no_chicken button" onclick="generateDeviceButton(this, 'register')" target="_parent">Uygulamayı İndir »</a>
             </p>
             <p class="disclaimer"> 					* İkili Opsiyon Yatırımı yapmak, yatırımınızın tamamını kaybetme riskini içerir ve sizin için uygun olmayabilir. Lütfen ilgili riskleri tamamen anladığınızdan emin olunuz. </p>
 
@@ -207,8 +207,8 @@
                     <input type="text" placeholder="Web sitesi (isteğe bağlı)" /><br/>
                     <textarea placeholder="Comment"></textarea>
                     <div class="clear"></div>
-                    <a class="main-btn" href="#" onclick="generateDeviceButton(this, 'register')" target="_parent"><div class="submit">Gönder</div></a>
-                    <a class="download-app" style="display:none;" href="#" onclick="generateDeviceButton(this, 'register')" target="_parent"><div class="submit">Gönder</div></a>
+                    <a class="main-btn" href="https://skylinemarkets.com/EN/open-account" onclick="generateDeviceButton(this, 'register')" target="_parent"><div class="submit">Gönder</div></a>
+                    <a class="download-app" style="display:none;" href="https://skylinemarkets.com/EN/open-account" onclick="generateDeviceButton(this, 'register')" target="_parent"><div class="submit">Gönder</div></a>
                     <div class="clear"></div>
 
                 </div><!-- form -->
@@ -281,7 +281,7 @@
                         <div class="user user9"></div>
                         <div class="comment">
                             <div class="comment-title">Paylaşan: Orçun Bahadır</div>
-                            <div class="comment-text">Aslında ben de ikili opsiyon yatırımı yapan bir premier lig oyuncusu tanıyorum. Henüz denemedim ama bu yazıyı okuduktan sonra bu gece <a href="#" onclick="generateDeviceButton(this, 'index')" target="_parent">SkyLineMarkets</a> deneyeceğim. </div>
+                            <div class="comment-text">Aslında ben de ikili opsiyon yatırımı yapan bir premier lig oyuncusu tanıyorum. Henüz denemedim ama bu yazıyı okuduktan sonra bu gece <a href="https://skylinemarkets.com/EN/open-account" onclick="generateDeviceButton(this, 'index')" target="_parent">SkyLineMarkets</a> deneyeceğim. </div>
                         </div>
                     </li>
                     <li>
@@ -295,7 +295,7 @@
                         <div class="user user11"></div>
                         <div class="comment">
                             <div class="comment-title">Paylaşan: Leyla Çamoğlu</div>
-                            <div class="comment-text">Futbolcuların bu kadar akıllı olduğunu hiç bilmiyordum… Ben de bugün <a href="#" onclick="generateDeviceButton(this, 'index')" target="_parent">SkyLineMarkets</a> sitesine katıldım ve ilk seferde paramı kaybettim ama sonra üst üste 4 kez kazandım. Ben bugün 530€ kazandım!!!</div>
+                            <div class="comment-text">Futbolcuların bu kadar akıllı olduğunu hiç bilmiyordum… Ben de bugün <a href="https://skylinemarkets.com/EN/open-account" onclick="generateDeviceButton(this, 'index')" target="_parent">SkyLineMarkets</a> sitesine katıldım ve ilk seferde paramı kaybettim ama sonra üst üste 4 kez kazandım. Ben bugün 530€ kazandım!!!</div>
                         </div>
                     </li>
                     <li>
