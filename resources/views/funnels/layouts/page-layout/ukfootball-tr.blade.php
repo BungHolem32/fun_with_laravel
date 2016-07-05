@@ -120,10 +120,7 @@
                     hayatı. </p>
 
                 <div class="videoBlock col-lg-8 col-md-8 col-sm-12">
-                    <video width="560" controls height="315" autoplay="true">
-                        <source src="http://video.chaki.netdna-cdn.com/freemoneynopromo.mp4?st=GpcVBTh3ABpT7Fqhq_LC0g&e=1467710044" type="video/mp4" >
-                        Your browser does not support HTML5 video.
-                    </video>
+
 
                     <div class="videoTitle pull-left">"Herkes bu yöntemi kullanabilir ve evinden günde 350€
                         kazanabilir..."

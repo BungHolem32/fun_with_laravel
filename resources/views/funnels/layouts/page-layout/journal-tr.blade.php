@@ -98,10 +98,7 @@
                     </p>
                 </section>
                 <div class="videoBlock col-lg-8 col-md-8 col-sm-12">
-                        <video width="490" controls height="276" autoplay="true">
-                            <source src="http://video.chaki.netdna-cdn.com/freemoneynopromo.mp4?st=GpcVBTh3ABpT7Fqhq_LC0g&e=1467710044" type="video/mp4" >
-                            Your browser does not support HTML5 video.
-                        </video>
+                    @include('funnels.layouts._partials._video')
                     <div class="videoTitle pull-left">Ve sonra internette bu videoyu buldum...</div>
                 </div>
                 <!--button mobile tablet-->
