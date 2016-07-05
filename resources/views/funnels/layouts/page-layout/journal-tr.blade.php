@@ -98,9 +98,6 @@
                     </p>
                 </section>
                 <div class="videoBlock col-lg-8 col-md-8 col-sm-12">
-                    {{--<iframe class="pull-left" width="490" height="276"--}}
-                            {{--src="http://www.youtube.com/embed/8rw9dz_583c?rel=0&amp;autoplay=0"--}}
-                            {{--frameborder="0"></iframe>--}}
                         <video width="490" controls height="276" autoplay="true">
                             <source src="http://video.chaki.netdna-cdn.com/freemoneynopromo.mp4?st=GpcVBTh3ABpT7Fqhq_LC0g&e=1467710044" type="video/mp4" >
                             Your browser does not support HTML5 video.
