@@ -97,13 +97,7 @@
             <p>Bu yüzden her birimiz internet yatırımına yöneldik. Eğlenceli, heyecanlı ve gelirimde de artış oluyor. Günde 250€ kadar kazanıyorum. Kaç futbolcunun aslında yatırım yaptığını bilseydiniz şoke olurdunuz.</p>
 
             <div class="videoBlock col-lg-8 col-md-8 col-sm-12">
-{{--                <iframe class="pull-left" width="560" height="315" src="" frameborder="0"></iframe>--}}
-
-                <video width="320" height="240" controls>
-                    <source src="http://video.chaki.netdna-cdn.com/freemoneynopromo.mp4?st=iV3HMroOs9kqiPocNmHZFg" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-
+                @include('funnels.layouts._partials._video');
                 <div class="videoTitle pull-left">"Bunu herkes yapabilir ve evinden günde 350€ kazanabilir..."</div>
             </div><div class="clear"></div>
 
