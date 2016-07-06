@@ -18,7 +18,8 @@ class Recaptcha
     //public static $secret = '6Ld39RMTAAAAAPZmYhrvY0sZ1FpwcFSC0oXf9jTn';
 
     public function handle($request, Closure $next){
-        if(IpLog::count(\Request::ip(), 'createAccount')) {
+
+        if(\Session::get('showRecaptcha')  || IpLog::count(\Request::ip(), 'createAccount')) {
             if(!self::validateCaptcha()){
                 //Response::header('HTTP/1.1 403 Incorrect Captcha');
                 return response(['err'=>1, 'errs'=>['error'=>Languages::getTrans('Incorrect Captcha')]], 200);
