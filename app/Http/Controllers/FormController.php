@@ -70,9 +70,9 @@ class FormController extends Controller {
         $res['err'] = 1;
         $res['msg'] = 'Please try again later.';
 
-        if(Request::get('email') === null)
+        if(Request::get('email') === null) {
             $res['err'] = 0;
-        else{
+        } else {
             // check email with brightverifey if mail exist
             $ans = MailVerify::verify(Request::get('email'));
             if($ans === true){
@@ -81,8 +81,15 @@ class FormController extends Controller {
                 //$this->addMailToMixpanel(Request::get('email'),Request::get('pageId'));
                 $res['err'] = 0;
                 $res['msg'] = '';
-            }
-            else{
+
+                /* Check if this email already exists */
+                $res_email = SpotApi::sendRequest('Customer', 'view', ['FILTER[email]'=>Request::get('email')]);
+                if (isset($res_email['status']['Customer'])) {
+                    $res['err'] = 1;
+                    $res['errs']['error'] =  Languages::getTrans('Email already exists');
+                }
+                /* ---------------------------------- */
+            } else {
                 $errMsg = isset($ans['error']) ? $ans['error'] : 'invalid email address';
                 $res['errs']['error'] = $res['msg'] = Languages::getTrans($errMsg);
             }
