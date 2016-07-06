@@ -1,0 +1,599 @@
+body {
+    font-family : Verdana, Geneva, sans-serif;
+    text-align  : left;
+    font-weight : normal;
+}
+
+.disclaimer { color : #9a9a9a; font-size : 10px; line-height : 14px; }
+
+.cls_center_txt {
+    text-align : center;
+}
+
+.clsLeftTxt {
+    text-align : left;
+}
+
+.clsRightTxt {
+    text-align : right;
+}
+
+.clsWhiteTxt {
+    color : #ffffff;
+}
+
+.clsBlueTxt {
+    color : #2a6aa9;
+}
+
+.clsSemiBold {
+    font-weight : 600;
+}
+
+.wrapper {
+    position : relative;
+    width    : 1016px;
+    margin   : 0 auto;
+}
+
+.clear {
+    clear : both;
+}
+
+.clsUnderline {
+    text-decoration : underline;
+}
+
+.sectionDivider {
+    margin           : 30px 40px 30px 0;
+    width            : 662px;
+    background-color : #f7bd11;
+    height           : 3px;
+    padding-left     : 0;
+    padding-right    : 0;
+    float            : left;
+}
+
+.container-fluid {
+    padding : 0;
+    width   : 100%;
+}
+
+header {
+    position : relative;
+    width    : 100%;
+}
+
+h1.mainTitle {
+    text-align     : center;
+    font-family    : 'Roboto Condensed', sans-serif;
+    font-weight    : bold;
+    font-size      : 46px;
+    text-transform : uppercase;
+}
+
+.row {
+    width  : 100%;
+    margin : 0 auto;
+}
+
+.mainRow {
+    position : relative;
+}
+
+section {
+    padding     : 0 16px 0 0 !important;
+    font-size   : 13px;
+    line-height : 20px;
+}
+
+.articleTitle h2 {
+    font-size   : 25px;
+    line-height : 27px;
+    font-weight : bold;
+    margin-top  : 0px;
+}
+
+.articleTitle h3 {
+    font-size   : 18px;
+    line-height : 20px;
+}
+
+section h2 {
+    font-size     : 24px;
+    line-height   : 25px;
+    font-weight   : bold;
+    margin-bottom : 20px;
+}
+
+section.section1 {
+    margin : 25px 0 0 0;
+}
+
+section.section2 {
+    font-size   : 12px;
+    line-height : 16px;
+}
+
+.clear {
+    clear : both;
+}
+
+.section1 p {
+    margin : 0;
+}
+
+.section1 h4 {
+    font-size   : 18px;
+    line-height : 24px;
+    font-weight : bold;
+    margin-top  : 0;
+    padding-top : 0;
+}
+
+.article_photo {
+    padding : 0 30px 20px 0;
+}
+
+.alexandra_photo {
+    padding : 0 10px 0 0;
+}
+
+.doneBy {
+    margin-bottom : 8px;
+    font-size     : 11px;
+    line-height   : 17px;
+}
+
+.interviewedby {
+    color      : #848484;
+    margin-top : 15px;
+    display    : inline-block;
+}
+
+.interviewedDate {
+    color   : #2a6aa9;
+    display : block;
+}
+
+.trendImg, .trendImgTxt {
+    padding : 0;
+}
+
+.trendRow {
+    margin-bottom : 20px;
+}
+
+.stepCount {
+    font-size : 18px;
+    margin    : 25px 0 15px 0;
+}
+
+.stepArrow {
+    margin-right : 15px;
+}
+
+.clickHereLink {
+    display     : block;
+    font-size   : 18px;
+    line-height : 24px;
+    color       : #d93636;
+    margin      : 30px auto;
+    width       : 50%;
+}
+
+.tradePageImg {
+    margin : 12px 0;
+}
+
+.outroTitle {
+    margin      : 45px 0 0 0;
+    color       : #edb50e;
+    line-height : 30px;
+    font-style  : italic;
+    text-align  : center;
+}
+
+.outroTitle span {
+    font-weight     : normal;
+    text-decoration : none;
+}
+
+.clickHereLink span {
+    text-decoration : underline;
+}
+
+.clickHereLink:hover {
+    text-decoration : none;
+    color           : #d93636;
+}
+
+.button_StartBox {
+    width            : 300px;
+    height           : 58px;
+    margin           : 15px auto 50px;
+    text-align       : center;
+    line-height      : 56px;
+    background-color : #d93636;
+    border-bottom    : 6px solid #ad2b2b;
+    cursor           : pointer;
+    transition       : background 0.2s ease 0s;
+    z-index          : 100;
+    position         : relative;
+    text-transform   : uppercase;
+}
+
+.button_StartBox:hover {
+    background-color : #f04d47;
+    border           : none;
+}
+
+.button_StartBox a {
+    color           : #ffffff;
+    text-decoration : none;
+    display         : block;
+    width           : 100%;
+    height          : 100%;
+    font-family     : 'Roboto Condensed', sans-serif;
+    font-size       : 30px;
+    margin          : 0 auto;
+}
+
+aside {
+    position : relative;
+    width    : 307px;
+    float    : right;
+    margin   : 25px 0 0 0;
+}
+
+aside h2 {
+    color       : #edb50e;
+    font-size   : 24px;
+    font-weight : bold;
+}
+
+.howToBlock {
+    margin-bottom : 50px;
+}
+
+.bannerAO {
+    margin-bottom : 30px;
+}
+
+.asideUnderImageTxt {
+    font-size   : 12px;
+    line-height : 16px;
+}
+
+.clsNotMobile, .clsNotTablet {
+    display : block;
+}
+
+.clsMobile, .clsTablet {
+    display : none;
+}
+
+.noBreakWord {
+    white-space : nowrap;
+}
+
+.img-responsive {
+    display : inline-block !important;
+}
+
+footer {
+    text-align : center;
+}
+
+footer:after, footer:before {
+    display : table;
+    content : " ";
+    clear   : both;
+}
+
+iframe {
+    position : relative;
+}
+
+.videoBlock {
+    margin : 20px 0;
+    width  : 68%;
+}
+
+.clear { cleaR : both; }
+
+/*			LOCALIZATIONS				*/
+
+#DE .button_StartBox a {
+    font-size : 21px;
+}
+
+#TR .button_StartBox a {
+    font-size   : 26px;
+    line-height : 54px;
+}
+
+#DE .col-lg-8 .button_StartBox {
+    width : 400px;
+}
+
+#DE .col-lg-8 .button_StartBox a {
+    font-size   : 24px;
+    line-height : 54px;
+}
+
+#RU .button_StartBox a {
+    font-size : 24px;
+}
+
+#FR .button_StartBox a {
+    font-size : 18px;
+}
+
+#FR .col-lg-8 .button_StartBox a {
+    font-size   : 26px;
+    line-height : 54px;
+}
+
+#FR .col-lg-8 .button_StartBox, #ES .col-lg-8 .button_StartBox {
+    width : 320px;
+}
+
+#DE .bottomButton {
+    width : 400px;
+}
+
+#FR aside h2 {
+    font-size : 23px;
+}
+
+#IT .button_StartBox a {
+    font-size   : 27px;
+    line-height : 54px;
+}
+
+#ES .button_StartBox a {
+    line-height : 54px;
+}
+
+#TR .clickHereLink, #FR .clickHereLink, #ES .clickHereLink {
+    width : 70%;
+}
+
+#RU .clickHereLink {
+    width : 80%;
+}
+
+/*			LOCALIZATIONS				*/
+
+@media (max-width : 500px) {
+    .button_StartBox {
+        width   : 100% !important;
+        padding : 0 !important;
+    }
+
+    #DE .bottomButton a {
+        font-size : 19px;
+    }
+
+    #ES .bottomButton a {
+        font-size : 28px;
+    }
+
+    .peterH_photo {
+        float         : none !important;
+        width         : 100% !important;
+        padding-right : 0;
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width : 991px) {
+    .clsNotMobile, .clsNotTablet {
+        display : none;
+    }
+
+    .clsMobile, .clsTablet {
+        display : block;
+        float   : left;
+        width   : 100%;
+    }
+
+    .clsMobileCenterBlock {
+        margin : 0 auto !important;
+    }
+
+    .wrapper {
+        width   : 100%;
+        padding : 0 2%;
+    }
+
+    header {
+    }
+
+    aside {
+        display : none;
+    }
+
+    .trendImg {
+        text-align : center;
+    }
+
+    .trendImgTxt {
+        text-align : center;
+        margin-top : 20px;
+    }
+
+    section.section1, section.section2 {
+        padding : 0 !important;
+        float   : left;
+    }
+
+    .sectionDivider {
+        width : 100%;
+    }
+
+    .clickHereLink {
+        width : 80%;
+    }
+
+    .article_photo {
+        width : 50%;
+    }
+
+    .android_button, .android_button_no_chicken, .android_button_no_chicken2 {
+        /*background: url(../images/google_play.png) no-repeat 162px 12px;
+        font-size: 20px;
+        text-align: left;
+        padding-left: 10px;
+        width: 100%;
+        height: 100%;*/
+        display : block;
+    }
+
+    .iphone_button, .iphone_button_no_chicken, .iphone_button_no_chicken2 {
+        /*background: url(../images/iphone_appstore.png) no-repeat 162px 10px;
+        font-size: 20px;
+        text-align: left;
+        padding-left: 10px;
+        width: 100%;
+        height: 100%;*/
+        display : block;
+    }
+
+    .title h1 {
+        width : 100%;
+    }
+
+    .title h2 {
+        margin-top : 10px;
+        width      : 100%;
+    }
+
+    .row {
+        width : 100%;
+    }
+
+    .row.clsUl {
+        width  : 520px;
+        margin : 0 auto;
+    }
+
+    .clsMobileCenterTxt {
+        text-align : center;
+    }
+
+    .clsFirstVideo {
+        float : none;
+    }
+
+    .clsVideoP {
+        width : 100%;
+    }
+
+    .clsVideoImage {
+        margin : 0;
+    }
+
+    section.clsOrange h1 {
+        width   : 100%;
+        padding : 0 2%;
+    }
+
+    .clsDark .sectDarkLeftSide h1:nth-of-type(2) {
+        margin-top : 0;
+    }
+
+    .clsDark .sectDarkLeftSide h1:nth-of-type(3) {
+        margin-top : 0;
+    }
+
+    .clsDark .sectDarkRightSide {
+        padding-left : 15px;
+    }
+
+    .clsDark .sectDarkRightSide .testimonialBox {
+        margin-top : 30px;
+    }
+
+    footer p {
+        width : 100%;
+    }
+
+    /*.clsUnderline {
+    text-decoration: none;
+    }
+    .clsBlueTxt {
+    color: #333;
+    }*/
+    #DE .button_StartBox a, #RU .button_StartBox a, #IT .button_StartBox a, #FR .button_StartBox a, #ES .button_StartBox a, #TR .button_StartBox a,
+    #DE .col-lg-8 .button_StartBox a, #RU .col-lg-8 .button_StartBox a, #IT .col-lg-8 .button_StartBox a, #FR .col-lg-8 .button_StartBox a, #ES .col-lg-8 .button_StartBox a, #TR .col-lg-8 .button_StartBox a {
+        font-size : 30px;
+    }
+
+    #DE .col-lg-8 .button_StartBox, #RU .col-lg-8 .button_StartBox, #IT .col-lg-8 .button_StartBox, #FR .col-lg-8 .button_StartBox, #ES .col-lg-8 .button_StartBox, #TR .col-lg-8 .button_StartBox {
+        width : 100%;
+    }
+
+    .col-md-8, .col-lg-8 {
+        padding-right : 0px;
+        padding-left  : 0px;
+    }
+
+    .videoBlock iframe {
+        width : 100% !important;
+    }
+
+    .col-md-8, .col-lg-8 {
+        padding-right : 0px;
+        padding-left  : 0px;
+    }
+
+    .videoBlock {
+        width : 100%;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width : 992px) {
+    .trendImg {
+        text-align : left;
+    }
+
+    .col-lg-8 {
+        width : 66%;
+    }
+
+    .col-lg-4 {
+        width : 33%;
+        float : left;
+    }
+
+    .trendRow .col-lg-8 {
+        width        : 50%;
+        margin-right : 20px;
+        float        : left;
+    }
+
+    .trendRow .col-lg-4 {
+        width : 45%;
+        float : left;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width : 1200px) {
+
+    .trendImg {
+        text-align : left;
+    }
+
+    .col-lg-8 {
+        width : 66%;
+    }
+
+    .col-lg-4 {
+        width : 33%;
+        float : left;
+    }
+}
