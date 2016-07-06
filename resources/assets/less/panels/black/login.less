@@ -5,10 +5,10 @@
 }
 
 
-body  {
+body {
   /*LOGIN PAGE PART*/
   .login-wrapper {
-    font-family: @font-headers-running;
+    font-family : @font-headers-running;
 
     /*BRAND LOGO*/
     .logo-wrapper {
@@ -18,131 +18,153 @@ body  {
 
         /*LOGO IMG TAG*/
         #logo_login {
-          margin: 33px auto;
-          display: block;
+          margin  : 33px auto;
+          display : block;
         }
       }
     }
     /*H3 TAG TITLE (LOGIN)*/
     .login-title-wrapper {
       .login-title {
-        margin-bottom: 0.5em;
-        font-size: 3.1em;
-        font-family: @font-headers-running;
-        letter-spacing: 0px;
-        color: white;
+        margin-bottom  : 0.5em;
+        font-size      : 3.1em;
+        font-family    : @font-headers-running;
+        letter-spacing : 0px;
+        color          : white;
       }
     }
 
     /*FORM INSIDE LOGIN PAGE*/
     .login-form-wrapper {
-      width: 25%;
-      margin: 0 auto;
-      float: none;
-      min-width: 300px;
+      width     : 25%;
+      margin    : 0 auto;
+      float     : none;
+      min-width : 300px;
 
-      /*FORM ELEMENTS*/
-      .form-group {
+      form {
 
-        &.user-input {
-          margin-bottom: 0;
+        /*FORM ELEMENTS*/
+        .form-group {
+
+          .form-control{
+            font-size: 1.5em;
+            height: 2.3em;
+            padding-left: 30px;
+          }
+
+          &.password-input,&.pasword-input{
+
+            .password-login-image{
+              position: relative;
+              top: 35px;
+              left: 11px;
+              height: 22px;
+            }
+          }
+
+          &.user-input {
+            margin-bottom : 0;
+
+            /*INPUT DESIGN*/
+            .form-control {
+              font-family  : @font-headers-running;
+              font-size    : 1.5em;
+              height       : 2.3em;
+              padding-left : 30px;
+
+              /*ERROR ON THE INPUT */
+              &.error {
+                border : 1px solid red;
+              }
+            }
+
+            /*LABEL DESIGN*/
+            label {
+              &.error, #error {
+                display : none !important;
+              }
+            }
+
+            .fa-user {
+              position  : absolute;
+              top       : 10px;
+              left      : 22px;
+              font-size : 2.3em;
+              color     : gray;
+            }
+
+            .account-login-image {
+              position : relative;
+              top      : 35px;
+              left     : 11px;
+              height   : 22px;
+            }
+
+            .password-login-image {
+              position : relative;
+              top      : 35px;
+              left     : 11px;
+              height   : 22px;
+            }
+
+            .fa.fa-lock {
+              position  : absolute;
+              top       : 72px;
+              left      : 22px;
+              font-size : 2em;
+              color     : gray;
+            }
+
+          }
+
+
+
+          /*FORM BTN + LABEL + ICONS*/
         }
+        .form-options {
+          .form-control{
+            height: 40px;
+          }
 
-        /*INPUT DESIGN*/
-        .form-control {
-          font-family: @font-headers-running;
-          font-size: 1.5em;
-          text-indent: 23px;
-          height: 2.3em;
+          /*BUTTON SUBMIT */
+          .btn {
+            width       : 100%;
+            margin-top  : 0.8em;
+            min-height  : 52px;
+            font-size   : 2.1em;
+            font-weight : bold;
+            line-height : 1px;
+            .btn-color;
+          }
+          .proccess {
+            position      : absolute;
+            top           : 141px;
+            line-height   : 31px !important;
+            width         : 90%;
+            visibility    : hidden;
+            min-width     : 300px;
+            border-radius : 10px;
+            &.active {
+              visibility : visible;
+            }
+          }
 
-          /*ERROR ON THE INPUT */
-          &.error {
-            border: 1px solid red;
+          /*HREF FORGOT PASSWORD*/
+          .forgotpass {
+            color           : #3E80D4;
+            float           : right;
+            text-decoration : none;
+            .padding-right(0);;
+            font-family     : @font-headers-running;
+            &:hover {
+              color : lighten(#3E80D4, 20%);
+            }
+          }
+          .loading {
+            margin-top : -2.4em;
           }
         }
-
-        /*LABEL DESIGN*/
-        label {
-          &.error, #error {
-            display: none !important;
-          }
-        }
-
-        .fa-user {
-          position: absolute;
-          top: 10px;
-          left: 22px;
-          font-size: 2.3em;
-          color: gray;
-        }
-
-        .account-login-image {
-          position: relative;
-          top: 35px;
-          left: 11px;
-          height: 22px;
-        }
-
-        .password-login-image {
-          position: relative;
-          top: 35px;
-          left: 11px;
-          height: 22px;
-        }
-
-        .fa.fa-lock {
-          position: absolute;
-          top: 72px;
-          left: 22px;
-          font-size: 2em;
-          color: gray;
-        }
-
       }
-
-      /*FORM BTN + LABEL + ICONS*/
-      .form-options {
-        /*BUTTON SUBMIT */
-        .btn {
-          width: 100%;
-          margin-top: 0.8em;
-          min-height: 52px;
-          font-size: 2.1em;
-          font-weight: bold;
-          line-height: 1px;
-          .btn-color;
-        }
-        .proccess{
-          position: absolute;
-          top: 141px;
-          line-height: 31px !important;
-          width:90%;
-          visibility: hidden;
-          min-width: 300px;
-          border-radius: 10px;
-          &.active{
-            visibility: visible;
-          }
-        }
-        /*HREF FORGOT PASSWORD*/
-        .forgotpass {
-          color: #3E80D4;
-          float: right;
-          text-decoration: none;
-          .padding-right(0);
-        ;
-          font-family: @font-headers-running;
-          &:hover {
-            color: lighten(#3E80D4, 20%);
-
-          }
-        }
-        .loading {
-          margin-top: -2.4em;
-        }
-      }
-
     }
   }
-
 }

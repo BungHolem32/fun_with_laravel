@@ -81,6 +81,9 @@ class PanelController extends Controller {
                 $data['CVV2/PIN'] = \Request::get('cvv');
             }
 
+            if(!empty(\Request::get('cvv')))
+                $data['CVV2/PIN'] = \Request::get('cvv');
+
             $data['FirstName'] = \Request::get('first_name');
             $data['LastName'] = \Request::get('last_name');
             $data['Address'] = \Request::get('address');

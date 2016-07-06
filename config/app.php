@@ -1,5 +1,7 @@
 <?php
 
+// This is some hagai voodoo dont activate at your peril
+/**
 if(($_SERVER['REMOTE_ADDR'] =='31.154.27.50' || $_SERVER['REMOTE_ADDR'] == '127.0.0.1') && !array_key_exists('debugon-43jd3',$_COOKIE)){
 	setcookie('debugon-43jd3','on', 2147483647);
 }
@@ -9,6 +11,7 @@ if(array_key_exists('debugon-43jd3',$_COOKIE)){
 else{
 	$APP_DEBUG = false;
 }
+*/
 
 return [
 
@@ -23,7 +26,8 @@ return [
 	|
 	*/
 
-	'debug' => $APP_DEBUG,
+	'debug' => env('APP_DEBUG'),
+	//'debug' => true,
 
 	/*
 	|--------------------------------------------------------------------------

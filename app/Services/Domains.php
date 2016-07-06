@@ -14,7 +14,20 @@ class Domains
 
     private static $domains_destinations = [
         'default' => 'rboptions.com',
-        'yourway2profit.com' => 'skylinemarkets.com'
+        'yourway2profit.com'    => 'skylinemarkets.com',
+        'oxfordway2profit.com'  => 'skylinemarkets.com',
+        'maxway2profit.com'     => 'skylinemarkets.com',
+        'maxiprofiter.com'      => 'skylinemarkets.com',
+        'cloudway2profit.com'   => 'skylinemarkets.com',
+        'cloudprofiter.com'     => 'skylinemarkets.com',
+        'yourway2profit.com'    => 'skylinemarkets.com',
+        'walterprofiter.com'    => 'skylinemarkets.com',
+        'aussieway2profit.com'  => 'skylinemarkets.com',
+        'aussieprofiter.com'    => 'skylinemarkets.com',
+        'mapleway2profit.com'   => 'skylinemarkets.com',
+        'mapleprofiter.com'     => 'skylinemarkets.com',
+        'millionaireway2profit.com' => 'skylinemarkets.com',
+        'millionaireprofitersystem.com' => 'skylinemarkets.com'
     ];
 
     public static function domainName($domain=''){

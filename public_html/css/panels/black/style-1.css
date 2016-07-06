@@ -5074,6 +5074,14 @@ a.thumbnail.active {
 .alert-danger .alert-link {
   color: #843534;
 }
+@-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
 @keyframes progress-bar-stripes {
   from {
     background-position: 40px 0;
@@ -5109,6 +5117,7 @@ a.thumbnail.active {
 }
 .progress.active .progress-bar,
 .progress-bar.active {
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
   animation: progress-bar-stripes 2s linear infinite;
 }
 .progress-bar-success {
@@ -5819,10 +5828,13 @@ button.close {
   outline: 0;
 }
 .modal.fade .modal-dialog {
+  -webkit-transform: translate(0, -25%);
   transform: translate(0, -25%);
+  transition: -webkit-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
 }
 .modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
 }
 .modal-open .modal {
@@ -6178,23 +6190,29 @@ button.close {
 }
 @media all and (transform-3d), (-webkit-transform-3d) {
   .carousel-inner > .item {
+    transition: -webkit-transform 0.6s ease-in-out;
     transition: transform 0.6s ease-in-out;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    -webkit-perspective: 1000px;
     perspective: 1000px;
   }
   .carousel-inner > .item.next,
   .carousel-inner > .item.active.right {
+    -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
     left: 0;
   }
   .carousel-inner > .item.prev,
   .carousel-inner > .item.active.left {
+    -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
     left: 0;
   }
   .carousel-inner > .item.next.left,
   .carousel-inner > .item.prev.right,
   .carousel-inner > .item.active {
+    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     left: 0;
   }
@@ -6446,9 +6464,6 @@ button.close {
   text-shadow: none;
   background-color: transparent;
   border: 0;
-}
-.hidden {
-  display: none !important;
 }
 .affix {
   position: fixed;
@@ -6797,6 +6812,7 @@ button.close {
 .flip-able {
   /* Gecko */
   /* Opera */
+  -webkit-transform: scaleX(-1);
   /* Webkit */
   transform: scaleX(-1);
   /* Standard */
@@ -6846,61 +6862,78 @@ body .login-wrapper .login-form-wrapper {
   margin: 0 auto;
   float: none;
   min-width: 300px;
+}
+body .login-wrapper .login-form-wrapper form {
   /*FORM ELEMENTS*/
+}
+body .login-wrapper .login-form-wrapper form .form-group {
   /*FORM BTN + LABEL + ICONS*/
 }
-body .login-wrapper .login-form-wrapper .form-group {
+body .login-wrapper .login-form-wrapper form .form-group .form-control {
+  font-size: 1.5em;
+  height: 2.3em;
+  padding-left: 30px;
+}
+body .login-wrapper .login-form-wrapper form .form-group.password-input .password-login-image,
+body .login-wrapper .login-form-wrapper form .form-group.pasword-input .password-login-image {
+  position: relative;
+  top: 35px;
+  left: 11px;
+  height: 22px;
+}
+body .login-wrapper .login-form-wrapper form .form-group.user-input {
+  margin-bottom: 0;
   /*INPUT DESIGN*/
   /*LABEL DESIGN*/
 }
-body .login-wrapper .login-form-wrapper .form-group.user-input {
-  margin-bottom: 0;
-}
-body .login-wrapper .login-form-wrapper .form-group .form-control {
+body .login-wrapper .login-form-wrapper form .form-group.user-input .form-control {
   font-family: helvetica, arial;
   font-size: 1.5em;
-  text-indent: 23px;
   height: 2.3em;
+  padding-left: 30px;
   /*ERROR ON THE INPUT */
 }
-body .login-wrapper .login-form-wrapper .form-group .form-control.error {
+body .login-wrapper .login-form-wrapper form .form-group.user-input .form-control.error {
   border: 1px solid red;
 }
-body .login-wrapper .login-form-wrapper .form-group label.error,
-body .login-wrapper .login-form-wrapper .form-group label #error {
+body .login-wrapper .login-form-wrapper form .form-group.user-input label.error,
+body .login-wrapper .login-form-wrapper form .form-group.user-input label #error {
   display: none !important;
 }
-body .login-wrapper .login-form-wrapper .form-group .fa-user {
+body .login-wrapper .login-form-wrapper form .form-group.user-input .fa-user {
   position: absolute;
   top: 10px;
   left: 22px;
   font-size: 2.3em;
   color: gray;
 }
-body .login-wrapper .login-form-wrapper .form-group .account-login-image {
+body .login-wrapper .login-form-wrapper form .form-group.user-input .account-login-image {
   position: relative;
   top: 35px;
   left: 11px;
   height: 22px;
 }
-body .login-wrapper .login-form-wrapper .form-group .password-login-image {
+body .login-wrapper .login-form-wrapper form .form-group.user-input .password-login-image {
   position: relative;
   top: 35px;
   left: 11px;
   height: 22px;
 }
-body .login-wrapper .login-form-wrapper .form-group .fa.fa-lock {
+body .login-wrapper .login-form-wrapper form .form-group.user-input .fa.fa-lock {
   position: absolute;
   top: 72px;
   left: 22px;
   font-size: 2em;
   color: gray;
 }
-body .login-wrapper .login-form-wrapper .form-options {
+body .login-wrapper .login-form-wrapper form .form-options {
   /*BUTTON SUBMIT */
   /*HREF FORGOT PASSWORD*/
 }
-body .login-wrapper .login-form-wrapper .form-options .btn {
+body .login-wrapper .login-form-wrapper form .form-options .form-control {
+  height: 40px;
+}
+body .login-wrapper .login-form-wrapper form .form-options .btn {
   width: 100%;
   margin-top: 0.8em;
   min-height: 52px;
@@ -6916,12 +6949,12 @@ body .login-wrapper .login-form-wrapper .form-options .btn {
   border: 1px solid #afe713;
   /*HOVER EFFECT */
 }
-body .login-wrapper .login-form-wrapper .form-options .btn:hover {
+body .login-wrapper .login-form-wrapper form .form-options .btn:hover {
   background: #72a40e;
   background: linear-gradient(to bottom, #72a40e 43%, #aadc1f 96%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72a40e', endColorstr='#aadc1f', GradientType=0);
 }
-body .login-wrapper .login-form-wrapper .form-options .proccess {
+body .login-wrapper .login-form-wrapper form .form-options .proccess {
   position: absolute;
   top: 141px;
   line-height: 31px !important;
@@ -6930,20 +6963,20 @@ body .login-wrapper .login-form-wrapper .form-options .proccess {
   min-width: 300px;
   border-radius: 10px;
 }
-body .login-wrapper .login-form-wrapper .form-options .proccess.active {
+body .login-wrapper .login-form-wrapper form .form-options .proccess.active {
   visibility: visible;
 }
-body .login-wrapper .login-form-wrapper .form-options .forgotpass {
+body .login-wrapper .login-form-wrapper form .form-options .forgotpass {
   color: #3E80D4;
   float: right;
   text-decoration: none;
   padding-left: 0;
   font-family: helvetica, arial;
 }
-body .login-wrapper .login-form-wrapper .form-options .forgotpass:hover {
+body .login-wrapper .login-form-wrapper form .form-options .forgotpass:hover {
   color: #91b7e7;
 }
-body .login-wrapper .login-form-wrapper .form-options .loading {
+body .login-wrapper .login-form-wrapper form .form-options .loading {
   margin-top: -2.4em;
 }
 .hidden {
@@ -7011,8 +7044,8 @@ body .content-wrapper .account-details-desktop {
 }
 body .content-wrapper .account-details-desktop:after {
   content: url('/img/panel/black/account-shadow.png');
-  position: relative;
-  top: 12px;
+  position: absolute;
+  top: 100%;
 }
 @media (min-width: 1240px) and (max-width: 1740px) {
   body .content-wrapper .account-details-desktop {
@@ -7056,6 +7089,10 @@ body .content-wrapper .account-details-desktop .info-tab {
   position: relative;
   top: 7px;
   right: 11px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 92%;
   /*SPAN INFO RESULTS*/
 }
 @media (max-width: 993px) {
@@ -7536,7 +7573,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper.auto-trading .bottom-part .tab-
   color: #c10505;
   text-shadow: 1px 0 1px #840202;
   height: 51px;
-  width: 83px !important;
+  width: 88px !important;
   border-bottom-right-radius: 30px;
   border-top-right-radius: 30px;
   margin-left: -27px !important;
@@ -7680,7 +7717,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part {
 body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button {
   position: relative;
   top: 0.8em;
-  font-size: 1.7em;
+  font-size: 20px;
   outline: none;
   line-height: 2.033333;
   word-spacing: 1px;
@@ -7702,7 +7739,7 @@ body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button:ho
 }
 @media (max-width: 410px) {
   body .content-wrapper .tabs-wrapper .tab-wrapper .bottom-part .tab-big-button {
-    font-size: 1.5em;
+    font-size: 17px;
     font-weight: 600;
   }
 }
@@ -8196,9 +8233,6 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .card-type-title-wrapper .card-type-img {
   max-width: 6.9vw;
 }
-body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group.cvv-wrapper {
-  padding-top: 0px !important;
-}
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group .card-type-selectbox {
   color: gray;
 }
@@ -8262,9 +8296,9 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
 }
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .first-part-form .form-group,
 body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit .form-wrapper .form-deposit .second-part-form .form-group {
-  padding: 1em 0;
   clear: both;
   margin-bottom: 0;
+  padding: 1em 0 0 0;
   /*CARD NUMBER FIELD AFTER CLEAR FIX */
   /*INPUTS AND SELECT BOX*/
   /*LABEL TAG FOR ALL THE INPUTS IN THE FORM */
@@ -8615,6 +8649,9 @@ body :-ms-input-placeholder {
     padding: 3px;
     vertical-align: middle;
   }
+}
+.modal-backdrop {
+  display: none !important;
 }
 
 /*# sourceMappingURL=style-1.css.map */

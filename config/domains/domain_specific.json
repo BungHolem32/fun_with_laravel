@@ -1,0 +1,30 @@
+{
+ 	"captcha_groups": {
+ 		"captcha1": {
+ 			"dataSiteKey": "6Ld39RMTAAAAALVGhMswy185zq0C2bmP-gydSrSI",
+ 			"secret": "6Ld39RMTAAAAAPZmYhrvY0sZ1FpwcFSC0oXf9jTn"
+ 		},
+ 		"captcha2": {
+ 			"dataSiteKey": "6LdVjSITAAAAANQRRaqCYEnt240R7CmKvuLn1VQg",
+ 			"secret": "6LdVjSITAAAAAGuMq8NO4dq5U7d_f9M7A0FjnYLs"
+ 		}
+ 	},
+
+ 	"domains": {
+ 		"default": {"captcha": "captcha1"},
+ 		"yourway2profit.com": {"captcha": "captcha2"},
+ 		"oxfordway2profit.com": {"captcha": "captcha2"},
+ 		"maxway2profit.com"     :{"captcha": "captcha2"},
+         "maxiprofiter.com"      :{"captcha": "captcha2"},
+         "cloudway2profit.com"   :{"captcha": "captcha2"},
+         "cloudprofiter.com"     :{"captcha": "captcha2"},
+         "yourway2profit.com"    :{"captcha": "captcha2"},
+         "walterprofiter.com"    :{"captcha": "captcha2"},
+         "aussieway2profit.com"  :{"captcha": "captcha2"},
+         "aussieprofiter.com"    :{"captcha": "captcha2"},
+         "mapleway2profit.com"   :{"captcha": "captcha2"},
+         "mapleprofiter.com"     :{"captcha": "captcha2"},
+         "millionaireway2profit.com" :{"captcha": "captcha2"},
+         "millionaireprofitersystem.com" :{"captcha": "captcha2"}
+ 	}
+ }
