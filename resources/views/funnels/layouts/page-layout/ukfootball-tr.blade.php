@@ -72,7 +72,7 @@
 
 
                 <div class="author">
-                    <img src="img/ukfootball-tr/author.jpg" alt=""/>
+                    <img src="/img/ukfootball-tr/author.jpg" alt=""/>
                     <div class="author-name">Kurum Muhabirimiz Emre Ozturk,</div>
                     <span class="light author-info">tanınmış bir Premier Lig ve İngiliz Milli Takımı futbolcusuyla oturup konuştuğunda keşfettiği şeye inanamadı. En sevdiğiniz futbolcunun saha dışında neyle uğraştığını bildiğinizi düşünüyor musunuz? Tekrar düşünün!</span>
                 </div>
@@ -198,7 +198,7 @@
                     söylemiyorum. Açıkçası sadece kendi deneyimlerime göre konuşuyorum ama bu, gerçekten işe
                     yarıyor.</p>
 
-                <img width="100%" src="img/ukfootball-tr/pic2_euro.jpg" alt=""/>
+                <img width="100%" src="/img/ukfootball-tr/pic2_euro.jpg" alt=""/>
 
                 <p><b>Vay canına, peki çok sayıda takım arkadaşın bunu yaparak bu kadar büyük para kazanıyor mu?</b></p>
 
@@ -553,8 +553,8 @@
             </div>
 
             <div class="sidebar col-sm-4">
-                <img src="img/ukfootball-tr/banner1.jpg" alt=""/>
-                <img src="img/ukfootball-tr/banner2.jpg" alt=""/>
+                <img src="/img/ukfootball-tr/banner1.jpg" alt=""/>
+                <img src="/img/ukfootball-tr/banner2.jpg" alt=""/>
             </div>
 
         </div><!-- row -->
