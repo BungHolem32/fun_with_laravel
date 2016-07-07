@@ -6,7 +6,6 @@
     <META name="robots" content="noodp,noydir" />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="/css/income-tr/landing.css" />
-    <link rel="shortcut icon" href="http://cdn.tradingbinaryoption.com//img/income-tr/favicon.ico" type="image/vnd.microsoft.icon"/>
     <!--[if lte IE 7]> <html class="ie7"> <![endif]-->
     <!--[if IE 8]> <html class="ie8"> <![endif]-->
 </head>
@@ -75,10 +74,8 @@
             <h3>“Peki bir barmen olarak işin nasıl?" diye sordum.</h3>
             <p>Kemal, “Halen oradayım çünkü bunu gerçekten seviyorum. Ama mesaimi azaltmayı başardım, bu da büyük bir fark yaratıyor" şeklinde devam etti.</p>
             <p>“Haftada 60 saat çalışıyordum ve ayrıca çok fazla gece mesaisine kalıyordum. Bu nedenle gün içinde uyumak zorunda kalıyordum ve bu da beni zorluyordu. Bu, sağlığımı, ayrıca evliliğimi etkiliyordu çünkü eşim Marie'yle vakit geçirmek için asla zaman bulamıyordum. Ama <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">SkyLineMarkets</a>'dan gelen ekstra kazanç sayesinde, artık önceki çalıştığım zamanın yarısından az çalışıyorum. Bu da bana, Marie'yle vakit geçirmek için daha çok zaman ve haftasonları sörf yapmak gibi sevdiğim şeyleri yapma imkanı veriyor!</p>
-            <img class="cls_img_center" src="/img/income-tr/binary_options.html" alt="Binary Options Trading" />
             <p class="under_image_text">İkili opsiyon yatırımında tek yapmanız gereken şey; hisse senedi, emtia veya döviz gibi bir varlığın, belirli bir zaman içerisinde ilk işlem fiyatından YUKARIDA mı, AŞAĞIDA mı kapanacağını tahmin etmektir ve getiriler, yatırımın %80'i kadar büyük olabilir.</p>
             <p>Ve işte Kemal'un $7,745.00 bakiye gösteren özel <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">SkyLineMarkets</a> hesabı. İnanılmaz bir görünümde ve bugünün çevrimiçi dünyasında nelerin mümkün olduğunu gösteriyor.</p>
-            <img class="cls_img_center" src="/img/income-tr/account.html" alt="Kemal's account at SkyLineMarkets" />
             <p>Kemal, şimdiye dek başarı hikayesini saklı tutmuştu. Ama benimle telefonda konuştuktan sonra, hikayesini halka açık paylaşmanın, kendisi gibi 9-5 çalışma temposundan kurtulmak isteyen birçok kişiye  faydası olabileceğini düşündü.</p>
             <p>Kemal, "Kendi hayatımı değiştirdiğim gibi insanların hayatını değiştirmeye yardımcı olma fikrini de seviyorum. Ve eğer bu hikaye onlara yardımcı olabilirse, muhteşem olur. <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">SkyLineMarkets</a>'ı keşfetmek, benim gerçekten hayatımı değiştirdi ve eminim ki bu, diğerleri için de aynı şekilde olacak" diye konuştu.</p>
             <p>Eğer Kemal'ın hikayesinden etkilendiyseniz, burada <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent" style="text-decoration:underline;font-weight:bold;">SkyLineMarkets</a>'la başlangıç için yapmanız gereken şeyleri bulabilirsiniz.</p>
