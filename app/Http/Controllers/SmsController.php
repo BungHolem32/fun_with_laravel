@@ -48,6 +48,11 @@ class SmsController extends Controller {
 
         $text = "Hello ".$name . ", " .$code . " is your verification code.";
         $res = NexmoSmsApi::sendSMS(['from'=>'Your Code', 'to'=>$phone, 'text'=>$text]);
+
+        if ($res === false) {
+            die(json_encode (['err'=>1, 'errs'=>['error'=>'Error while sending SMS to '.$phone, 'action'=>'stay']])); // error during SMS sending
+        }
+        
         $res = json_decode($res);
 
         /*
@@ -65,8 +70,7 @@ class SmsController extends Controller {
             public 'network' => string '42501' (length=5)
         */
 
-        //var_dump($res);
-        //die();
+
 
         if ($res->messages[0]->status != 0) {
             echo(json_encode (['err'=>1, 'errs'=>['error'=>'Error while sending SMS to '.$phone, 'action'=>'stay']])); // error during SMS sending
