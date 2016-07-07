@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no" />
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/js/vacation-tr/ie10-viewport-bug-workaround.js"></script>
 
     <script type="text/javascript">
         var is_safari = navigator.userAgent.indexOf("Safari") > -1;
