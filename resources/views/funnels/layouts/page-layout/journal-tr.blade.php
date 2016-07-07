@@ -4,7 +4,7 @@
     <META name="robots" content="noodp,noydir"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
-    <link rel="shortcut icon" href="http://cdn.tradingbinaryoption.com/img/journal-tr/favicon.ico"
+    <link rel="shortcut icon" href="http://cdn.tradingbinaryoption.com"/img/journal-tr/favicon.ico"
           type="image/vnd.microsoft.icon"/>
 
     <title>SkyLineMarkets™</title>
@@ -39,9 +39,9 @@
             <header>
                 <h1 class="mainTitle">Yatırımcı Bülteni</h1>
                 <a href="https://skylinemarkets.com/EN/open-account"  target="_parent"><img
-                            src=/img/journal-tr/topMenu_tr.jpg" alt="" class="img-responsive"/></a>
+                            src="/img/journal-tr/topMenu_tr.jpg" alt="" class="img-responsive"/></a>
                 <a href="https://skylinemarkets.com/EN/open-account"  target="_parent"><img
-                            src=/img/journal-tr/markets_tr.gif" alt="" class="img-responsive"/></a>
+                            src="/img/journal-tr/markets_tr.gif" alt="" class="img-responsive"/></a>
 
             </header>
 
@@ -54,16 +54,16 @@
 
                 <aside class="clsNotTablet clsNotMobile">
                     <a href="https://skylinemarkets.com/EN/open-account"  target="_parent"><img
-                                src=/img/journal-tr/bannerAnyoption_TR.jpg" alt="" class="img-responsive bannerAO"/></a>
-                    <img src=/img/journal-tr/asideManImage.jpg" alt="" class="img-responsive"/>
+                                src="/img/journal-tr/bannerAnyoption_TR.jpg" alt="" class="img-responsive bannerAO"/></a>
+                    <img src="/img/journal-tr/asideManImage.jpg" alt="" class="img-responsive"/>
                     <span class="asideUnderImageTxt">Hızlı kâr elde etmenin yeni dünyası!</span>
                     <div class="howToBlock">
                         <h2>Nasıl başlanır?</h2>
-                        <div class="stepCount"><img src=/img/journal-tr/stepArrow.jpg" alt="" class="img-responsive stepArrow"/>ADIM
+                        <div class="stepCount"><img src="/img/journal-tr/stepArrow.jpg" alt="" class="img-responsive stepArrow"/>ADIM
                             #1: <b>ÜCRETSİZ KATIL</b></div>
-                        <div class="stepCount"><img src=/img/journal-tr/stepArrow.jpg" alt="" class="img-responsive stepArrow"/>ADIM
+                        <div class="stepCount"><img src="/img/journal-tr/stepArrow.jpg" alt="" class="img-responsive stepArrow"/>ADIM
                             #2: <b>PARA YATIR</b></div>
-                        <div class="stepCount"><img src=/img/journal-tr/stepArrow.jpg" alt="" class="img-responsive stepArrow"/>ADIM
+                        <div class="stepCount"><img src="/img/journal-tr/stepArrow.jpg" alt="" class="img-responsive stepArrow"/>ADIM
                             #3: <b>YATIRIMINI YAP!</b></div>
                     </div>
                     <!--button web-->
@@ -73,15 +73,15 @@
                     </div>
                     <!--/button web-->
 
-                    <img src=/img/journal-tr/asideManImage2.jpg" alt="" class="img-responsive"/>
+                    <img src="/img/journal-tr/asideManImage2.jpg" alt="" class="img-responsive"/>
                 </aside>
 
                 <section class="section1 col-lg-8">
-                    <img src=/img/journal-tr/article_photo.jpg" alt="" class="img-responsive pull-left article_photo"/>
+                    <img src="/img/journal-tr/article_photo.jpg" alt="" class="img-responsive pull-left article_photo"/>
                     <p>
                     <h4>Hızlı kâr elde etmenin yeni dünyası!</h4>
                     <div class="doneBy">
-                        <img src=/img/journal-tr/alexandra_photo.jpg" alt="" class="img-responsive pull-left alexandra_photo"/>
+                        <img src="/img/journal-tr/alexandra_photo.jpg" alt="" class="img-responsive pull-left alexandra_photo"/>
                         <span class="interviewedby">Sezen Kahya Röportajı</span>
                         <span class="interviewedDate">12 Ekim 2014</span>
                     </div>
@@ -202,14 +202,14 @@
                     </div>
                     <!--/button mobile tablet-->
                     <div class="row trendRow">
-                        <div class="trendImg col-lg-8"><img src=/img/journal-tr/trendGraphUp.jpg" alt="UP trend"
+                        <div class="trendImg col-lg-8"><img src="/img/journal-tr/trendGraphUp.jpg" alt="UP trend"
                                                             title="UP trend" class="img-responsive"/></div>
                         <div class="trendImgTxt col-lg-4 clsNotTablet clsNotMobile">Gördüğünüz gibi bu grafik, varlığın
                             fiyatının bir saat boyunca yükselmeye devam etmesiyle beraber YUKARI bir eğilim gösteriyor.
                         </div>
                     </div>
                     <div class="row trendRow">
-                        <div class="trendImg col-lg-8"><img src=/img/journal-tr/trendGraphDown.jpg" alt="DOWN trend"
+                        <div class="trendImg col-lg-8"><img src="/img/journal-tr/trendGraphDown.jpg" alt="DOWN trend"
                                                             title="DOWN trend" class="img-responsive"/></div>
                         <div class="trendImgTxt col-lg-4 clsNotTablet clsNotMobile">Buna benzer olarak, aşağı bir
                             eğilimi de tespit etmek oldukça kolaydır.<br/>Bu grafikte, varlığın fiyatının, yaklaşık
@@ -217,7 +217,7 @@
                         </div>
                     </div>
                     <div class="row trendRow">
-                        <div class="trendImg col-lg-8"><img src=/img/journal-tr/trendGraphNeutral.jpg" alt="NEUTRAL trend"
+                        <div class="trendImg col-lg-8"><img src="/img/journal-tr/trendGraphNeutral.jpg" alt="NEUTRAL trend"
                                                             title="NEUTRAL trend" class="img-responsive"/></div>
                         <div class="trendImgTxt col-lg-4 clsNotTablet clsNotMobile">Son olarak, fiyatın tamamen sabit
                             kaldığı NÖTR eğilim vardır.<br/>Bu durumda yapılacak en iyi şey, kesinlikle hiçbir şeydir ve
@@ -241,7 +241,7 @@
                     <p>Pekala, ikili opsiyonlara başlangıç yapmak için atmanız gereken 3 basit adımı burada
                         bulabilirsiniz…</p>
 
-                    <div class="stepCount"><img src=/img/journal-tr/stepArrow.jpg" alt="" class="img-responsive stepArrow"/>ADIM
+                    <div class="stepCount"><img src="/img/journal-tr/stepArrow.jpg" alt="" class="img-responsive stepArrow"/>ADIM
                         #1: ÜCRETSİZ KATIL
                     </div>
                     <p>Piyasadaki en iyi ikili opsiyon yatırım sağlayıcısı SkyLineMarkets’dır. Sektördeki en saygı duyulan,
@@ -259,7 +259,7 @@
                     <a href="https://skylinemarkets.com/EN/open-account"  target="_parent"
                        class="clickHereLink cls_center_txt"><span>SkyLineMarkets’a katılmak için burayı tıkla</span><br/>(ücretsizdir!)</a>
 
-                    <div class="stepCount"><img src=/img/journal-tr/stepArrow.jpg" alt="" class="img-responsive stepArrow"/>ADIM
+                    <div class="stepCount"><img src="/img/journal-tr/stepArrow.jpg" alt="" class="img-responsive stepArrow"/>ADIM
                         #2: PARA YATIR
                     </div>
                     <p>Elbette ki yatırım yapmak için sermayeye ihtiyaç duyarsınız. (Eğer paranızı kullanmadan zengin
@@ -273,7 +273,7 @@
                     <a href="https://skylinemarkets.com/EN/open-account"  target="_parent"
                        class="clickHereLink cls_center_txt"><span>SkyLineMarkets’a katılmak için burayı tıkla</span><br/>(ücretsizdir!)</a>
 
-                    <div class="stepCount"><img src=/img/journal-tr/stepArrow.jpg" alt="" class="img-responsive stepArrow"/>ADIM
+                    <div class="stepCount"><img src="/img/journal-tr/stepArrow.jpg" alt="" class="img-responsive stepArrow"/>ADIM
                         #3: YATIRIMINI YAP!
                     </div>
                     <p>Kayıt olduktan ve para yatırdıktan sonra, opsiyonlarınızın genel görünümünün yer aldığı yatırım
@@ -288,7 +288,7 @@
                             »</a>
                     </div>
                     <!--/button mobile tablet-->
-                    <img src=/img/journal-tr/tradePageImg-tr.jpg" alt="" class="img-responsive tradePageImg"/>
+                    <img src="/img/journal-tr/tradePageImg-tr.jpg" alt="" class="img-responsive tradePageImg"/>
 
                     <p>Ayrıca ne kadar kâr elde etmek istediğinizi (%61, %66, %71, %76 veya %81) seçebilirsiniz ve
                         alacağınız miktar, bu değişkenlere göre hesaplanır.</p>

@@ -1,8 +1,8 @@
 @section('head')
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Sugar's Secrets to Earning Millions</title>
-    <link href="css/lord-sugar-en/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <link href="css/lord-sugar-en/landing.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/lord-sugar-en/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/lord-sugar-en/landing.css" rel="stylesheet" type="text/css"/>
     <meta HTTP-EQUIV="Pragma" CONTENT="no-cache"/>
     <meta name="robots" content="noodp,noydir"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
