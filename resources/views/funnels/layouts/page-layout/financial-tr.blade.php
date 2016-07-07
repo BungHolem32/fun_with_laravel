@@ -6,7 +6,6 @@
     <META name="robots" content="noodp,noydir" />
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="/css/financial-tr/landing.css" />
-    <link rel="shortcut icon" href="http://cdn.tradingbinaryoption.com//img/financial-tr/favicon.ico" type="image/vnd.microsoft.icon"/>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
     <!--[if lte IE 7]> <html class="ie7"> <![endif]-->
     <!--[if IE 8]> <html class="ie8"> <![endif]-->
