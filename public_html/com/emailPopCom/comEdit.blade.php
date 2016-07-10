@@ -19,14 +19,14 @@
         ]) !!}
     </div>
 </div>
-<div class="row form-group">
-    <div class="col-sm-12">
-        {!! Form::textarea('emailPopCom', $page['components']['emailPopCom']['content'], [
-        'name'=>'mongo[components][emailPopCom][content]',
-        'class'=>'direction form-control editor',
-        'placeholder'=>'Popup Content'
-        ]) !!}
-    </div>
-    <div class="clearfix"></div>
-</div>
+{{--<div class="row form-group">--}}
+    {{--<div class="col-sm-12">--}}
+        {{--{!! Form::textarea('emailPopCom', $page['components']['emailPopCom']['content'], [--}}
+        {{--'name'=>'mongo[components][emailPopCom][content]',--}}
+        {{--'class'=>'direction form-control editor',--}}
+        {{--'placeholder'=>'Popup Content'--}}
+        {{--]) !!}--}}
+    {{--</div>--}}
+    {{--<div class="clearfix"></div>--}}
+{{--</div>--}}
 <br><br>

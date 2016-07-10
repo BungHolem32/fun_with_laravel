@@ -265,6 +265,4 @@
         {!! Form::close() !!}
 
     </div>
-
-    {{--{!! $page->components->emailPopCom->content !!}--}}
 </div>
