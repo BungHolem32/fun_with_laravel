@@ -17,8 +17,6 @@ $componentsArr = [];
 if (isMongoNotEmpty($page->components))
 
     $componentsArr = $page->components->get();
-
-
 ?>
 <select id="pageComponents" name="mongo[components][]" multiple class="demo-default" style="width:70%"
         placeholder="Select a state...">

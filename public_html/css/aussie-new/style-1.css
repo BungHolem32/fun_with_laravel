@@ -12817,6 +12817,7 @@ body #wrapper.second-page main section#video_n_form video#video_part {
 @media (max-width: 1200px) {
   body #wrapper.second-page main section#video_n_form video#video_part {
     width: 100%;
+    height: auto;
   }
 }
 body #wrapper.second-page main section#video-how-method-works {
@@ -13195,7 +13196,7 @@ body #wrapper a#back-to-top {
   text-align: center;
   line-height: 30px;
   background: #f5f5f5;
-  color: #444;
+  color: #444444;
   cursor: pointer;
   border: 0;
   border-radius: 2px;
