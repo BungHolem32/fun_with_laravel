@@ -12,7 +12,6 @@
 
  	"domains": {
  		"default": {"captcha": "captcha1"},
- 		"yourway2profit.com": {"captcha": "captcha2"},
  		"oxfordway2profit.com": {"captcha": "captcha2"},
  		"maxway2profit.com"     :{"captcha": "captcha2"},
          "maxiprofiter.com"      :{"captcha": "captcha2"},
@@ -30,7 +29,9 @@
          "alpineway2profit.com" :{"captcha": "captcha2"},
          "maxiprofiter-de.com" :{"captcha": "captcha2"},
 		 "maxway2profit-de.com":{"captcha": "captcha2"},
-		 "aussieroadtosuccess.com":{"captcha":"captcha2"}
-
+		 "aussieroadtosuccess.com":{"captcha":"captcha2"},
+		"oxfordprofiter.com" :{"captcha": "captcha2"},
+		"alpineprofiter.com":{"captcha": "captcha2"},
+		"bavarianprofiter.com":{"captcha":"captcha2"}
  	}
  }

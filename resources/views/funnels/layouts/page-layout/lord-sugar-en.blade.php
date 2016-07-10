@@ -423,9 +423,7 @@
 
                 </div><!-- comments -->
 
-
             </div>
-
             <div class="sidebar col-sm-4">
                 <img src="/img/lord-sugar-en/banner1.jpg" alt=""/>
                 <img src="/img/lord-sugar-en/banner2.jpg" alt=""/>
