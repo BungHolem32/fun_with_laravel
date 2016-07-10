@@ -25,17 +25,17 @@
         </div>
         <nav>
             <ul>
-                <li><a class="" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">Anasayfa</a></li>
-                <li><a class="" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">Finans</a></li>
-                <li><a class="" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">Teknoloji</a></li>
-                <li><a class="" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">Ekonomi</a></li>
-                <li><a class="" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">Medya</a></li>
-                <li><a class="" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">Tüm Haberler</a></li>
-                <li><a class="" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">Portföyler</a></li>
-                <li><a class="" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">Piyasa Haberleri</a></li>
-                <li><a class="" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">Video</a></li>
-                <li><a class="" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">Yatırımcılık</a></li>
-                <li><a class="" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">Daha Fazlası</a></li>
+                <li><a class="" href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">Anasayfa</a></li>
+                <li><a class="" href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">Finans</a></li>
+                <li><a class="" href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">Teknoloji</a></li>
+                <li><a class="" href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">Ekonomi</a></li>
+                <li><a class="" href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">Medya</a></li>
+                <li><a class="" href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">Tüm Haberler</a></li>
+                <li><a class="" href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">Portföyler</a></li>
+                <li><a class="" href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">Piyasa Haberleri</a></li>
+                <li><a class="" href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">Video</a></li>
+                <li><a class="" href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">Yatırımcılık</a></li>
+                <li><a class="" href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">Daha Fazlası</a></li>
             </ul>
         </nav>
         <div class="market_tracker">
@@ -54,7 +54,7 @@
         <section class="section1">
             <aside>
                 <img src="/img/income-tr/aside_small.gif" alt="" />
-                Kemal, barmenlik işini bıraktı ve artık <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">SkyLineMarkets</a> ile haftada birkaç saat mutfak masasından yatırım yaparak para kazanıyor. SkyLineMarkets'un, hayatını, uzun süre para bağlama riski olmaksızın yatırımlarına düzenli getiriler sağlamasıyla değiştirdiğini söylüyor.
+                Kemal, barmenlik işini bıraktı ve artık <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">SkyLineMarkets</a> ile haftada birkaç saat mutfak masasından yatırım yaparak para kazanıyor. SkyLineMarkets'un, hayatını, uzun süre para bağlama riski olmaksızın yatırımlarına düzenli getiriler sağlamasıyla değiştirdiğini söylüyor.
             </aside>
             <h3>Hepimiz para kazanmak isteriz…</h3>
             <p>Ve bunun peşinde giden birçoğumuz, örneğin borsa veya emlak gibi yüksek çapta beklenmedik zenginlik vaadeden yatırım fırsatları ararız. </p>
@@ -68,28 +68,28 @@
             <p>--- Kemal Derin</p>
             <p>Kemal'a İkili Opsiyon yatırımını nasıl keşfettiğini ve bu kadar başarılı olmak için tam olarak ne yaptığını sordum.</p>
             <p>Kemal, “Dürüst olmak gerekirse, bu, insanların düşündükleri kadar zor bir şey değil" diyerek açıkladı.</p>
-            <p>“7 ay önce bir arkadaşım bana <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">SkyLineMarkets</a>'ı anlattı. İkili opsiyon yatırımının ne olduğuna dair hiçbir fikrim yoktu ancak  evvelden başıma gelenlerden sonra, aynı gün kâr elde etme ve yatırımımı kontrol edebilme fikrini sevdim. Bu yüzden ücretsiz bir hesap açtım”. </p>
+            <p>“7 ay önce bir arkadaşım bana <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">SkyLineMarkets</a>'ı anlattı. İkili opsiyon yatırımının ne olduğuna dair hiçbir fikrim yoktu ancak  evvelden başıma gelenlerden sonra, aynı gün kâr elde etme ve yatırımımı kontrol edebilme fikrini sevdim. Bu yüzden ücretsiz bir hesap açtım”. </p>
             <h3>Ve bu muhabirin sonradan keşfettiği gibi, bu, kesinlikle akıllı bir tercihti!</h3>
             <p>Kemal, “İlk yatırım haftası içerisinde $900 kazandım, ilk ay içerisinde ise $2,300 üzerinde kazandım" şeklinde anlattı. "Üçüncü ayım içerisinde, $4,000 üzerinde para kaldırdım ve o zamandan beri bu hiç düşmedi. Artık çevrimiçi olarak ayda $6,000 - $7,000 para kazanıyorum ve tümünü evden yapıyorum."</p>
             <h3>“Peki bir barmen olarak işin nasıl?" diye sordum.</h3>
             <p>Kemal, “Halen oradayım çünkü bunu gerçekten seviyorum. Ama mesaimi azaltmayı başardım, bu da büyük bir fark yaratıyor" şeklinde devam etti.</p>
-            <p>“Haftada 60 saat çalışıyordum ve ayrıca çok fazla gece mesaisine kalıyordum. Bu nedenle gün içinde uyumak zorunda kalıyordum ve bu da beni zorluyordu. Bu, sağlığımı, ayrıca evliliğimi etkiliyordu çünkü eşim Marie'yle vakit geçirmek için asla zaman bulamıyordum. Ama <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">SkyLineMarkets</a>'dan gelen ekstra kazanç sayesinde, artık önceki çalıştığım zamanın yarısından az çalışıyorum. Bu da bana, Marie'yle vakit geçirmek için daha çok zaman ve haftasonları sörf yapmak gibi sevdiğim şeyleri yapma imkanı veriyor!</p>
+            <p>“Haftada 60 saat çalışıyordum ve ayrıca çok fazla gece mesaisine kalıyordum. Bu nedenle gün içinde uyumak zorunda kalıyordum ve bu da beni zorluyordu. Bu, sağlığımı, ayrıca evliliğimi etkiliyordu çünkü eşim Marie'yle vakit geçirmek için asla zaman bulamıyordum. Ama <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">SkyLineMarkets</a>'dan gelen ekstra kazanç sayesinde, artık önceki çalıştığım zamanın yarısından az çalışıyorum. Bu da bana, Marie'yle vakit geçirmek için daha çok zaman ve haftasonları sörf yapmak gibi sevdiğim şeyleri yapma imkanı veriyor!</p>
             <p class="under_image_text">İkili opsiyon yatırımında tek yapmanız gereken şey; hisse senedi, emtia veya döviz gibi bir varlığın, belirli bir zaman içerisinde ilk işlem fiyatından YUKARIDA mı, AŞAĞIDA mı kapanacağını tahmin etmektir ve getiriler, yatırımın %80'i kadar büyük olabilir.</p>
-            <p>Ve işte Kemal'un $7,745.00 bakiye gösteren özel <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">SkyLineMarkets</a> hesabı. İnanılmaz bir görünümde ve bugünün çevrimiçi dünyasında nelerin mümkün olduğunu gösteriyor.</p>
+            <p>Ve işte Kemal'un $7,745.00 bakiye gösteren özel <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">SkyLineMarkets</a> hesabı. İnanılmaz bir görünümde ve bugünün çevrimiçi dünyasında nelerin mümkün olduğunu gösteriyor.</p>
             <p>Kemal, şimdiye dek başarı hikayesini saklı tutmuştu. Ama benimle telefonda konuştuktan sonra, hikayesini halka açık paylaşmanın, kendisi gibi 9-5 çalışma temposundan kurtulmak isteyen birçok kişiye  faydası olabileceğini düşündü.</p>
-            <p>Kemal, "Kendi hayatımı değiştirdiğim gibi insanların hayatını değiştirmeye yardımcı olma fikrini de seviyorum. Ve eğer bu hikaye onlara yardımcı olabilirse, muhteşem olur. <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">SkyLineMarkets</a>'ı keşfetmek, benim gerçekten hayatımı değiştirdi ve eminim ki bu, diğerleri için de aynı şekilde olacak" diye konuştu.</p>
-            <p>Eğer Kemal'ın hikayesinden etkilendiyseniz, burada <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent" style="text-decoration:underline;font-weight:bold;">SkyLineMarkets</a>'la başlangıç için yapmanız gereken şeyleri bulabilirsiniz.</p>
+            <p>Kemal, "Kendi hayatımı değiştirdiğim gibi insanların hayatını değiştirmeye yardımcı olma fikrini de seviyorum. Ve eğer bu hikaye onlara yardımcı olabilirse, muhteşem olur. <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">SkyLineMarkets</a>'ı keşfetmek, benim gerçekten hayatımı değiştirdi ve eminim ki bu, diğerleri için de aynı şekilde olacak" diye konuştu.</p>
+            <p>Eğer Kemal'ın hikayesinden etkilendiyseniz, burada <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent" style="text-decoration:underline;font-weight:bold;">SkyLineMarkets</a>'la başlangıç için yapmanız gereken şeyleri bulabilirsiniz.</p>
         </section>
 
         <hr />
 
         <section class="section2">
             <h1>Nasıl başlangıç yapılır…</h1>
-            <p><span class="cls_red">ADIM #1:</span> Buraya gidin ve ücretsiz <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">SkyLineMarkets</a> hesabı için kayıt olun.</p>
+            <p><span class="cls_red">ADIM #1:</span> Buraya gidin ve ücretsiz <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">SkyLineMarkets</a> hesabı için kayıt olun.</p>
             <p><span class="cls_red">ADIM #2:</span> SkyLineMarkets'un yeni yatırımcılara, yatırımlarında hızlı bir getiri sağlamaya yönelik hazırladığı eğitim merkezi, blog, canlı sohbet hizmeti ve yatırım kılavuzlarından istifade edin...</p>
             <p><span class="cls_red">ADIM #3:</span>  Sadece €250 yatırın ve $25 gibi küçük bir rakamla yatırıma başlayın. Her yaptığınız yatırımda ve sadece 60 dakika içinde %80'e varan getiri elde edebilirsiniz.. Ve ayrıca 7/24 birden çok yatırım yapabilirsiniz.</p>
             <h3>İlgili Bağlantılar:</h3>
-            <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent" style="text-decoration:underline;font-weight:bold;">www.SkyLineMarkets.com</a>
+            <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent" style="text-decoration:underline;font-weight:bold;">www.SkyLineMarkets.com</a>
         </section>
 
 
@@ -97,11 +97,11 @@
 
     <aside>
         <img src="/img/income-tr/aside_big_tr.gif" alt="" />
-        <p>Yatırımlarının uzun süre bağlı kalmasından sıkılan Kemal Derin, ikili opsiyon yatırımlarını keşfetti, ve <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">SkyLineMarkets</a> ile artık evinden ayda $7,000 - $8,000 arası kazanıyor.</p>
+        <p>Yatırımlarının uzun süre bağlı kalmasından sıkılan Kemal Derin, ikili opsiyon yatırımlarını keşfetti, ve <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">SkyLineMarkets</a> ile artık evinden ayda $7,000 - $8,000 arası kazanıyor.</p>
         <p>Kemal ile başlangıçta tam olarak ne yaptığını açıkladığı, muhteşem başarı hikayesi hakkında röportaj yaptım.</p>
         <h3>Kemal'ı taklit etmek ister misiniz?</h3>
         <p>O zaman başarı için 3 adımının takip edin...</p>
-        <p><span class="cls_red">ADIM #1:</span> Buraya gidin ve ücretsiz <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">SkyLineMarkets</a> hesabı için kayıt olun.</p>
+        <p><span class="cls_red">ADIM #1:</span> Buraya gidin ve ücretsiz <a class="cls_blue" href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="getRedirectLinkToPage(this, 'index');"  target="_parent">SkyLineMarkets</a> hesabı için kayıt olun.</p>
         <p><span class="cls_red">ADIM #2:</span> SkyLineMarkets'un yeni yatırımcılara, yatırımlarında hızlı bir getiri sağlamaya yönelik hazırladığı eğitim merkezi, blog, canlı sohbet hizmeti ve yatırım kılavuzlarından istifade edin...</p>
         <p><span class="cls_red">ADIM #3:</span>  Sadece €250 yatırın ve €20 gibi küçük bir rakamla yatırıma başlayın. Her yaptığınız yatırımda ve sadece 60 dakika içinde %80'e varan getiri elde edebilirsiniz.. Ve ayrıca 7/24 birden çok yatırım yapabilirsiniz.</p>
     </aside>

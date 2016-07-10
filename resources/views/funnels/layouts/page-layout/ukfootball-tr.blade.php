@@ -32,12 +32,12 @@
 
         <div class="nav">
             <ul>
-                <li class="current"><a href="https://skylinemarkets.com/EN/open-account">SPOR</a></li>
-                <li><a href="https://skylinemarkets.com/EN/open-account">SAĞLIK</a></li>
-                <li><a href="https://skylinemarkets.com/EN/open-account">GÜZELLİK</a></li>
-                <li><a href="https://skylinemarkets.com/EN/open-account">YAŞAM TARZI</a></li>
-                <li><a href="https://skylinemarkets.com/EN/open-account">KİLO VERME</a></li>
-                <li><a href="https://skylinemarkets.com/EN/open-account">MODA</a></li>
+                <li class="current"><a href="https://skylinemarkets.com/EN/open-account{{$parameters}}">SPOR</a></li>
+                <li><a href="https://skylinemarkets.com/EN/open-account{{$parameters}}">SAĞLIK</a></li>
+                <li><a href="https://skylinemarkets.com/EN/open-account{{$parameters}}">GÜZELLİK</a></li>
+                <li><a href="https://skylinemarkets.com/EN/open-account{{$parameters}}">YAŞAM TARZI</a></li>
+                <li><a href="https://skylinemarkets.com/EN/open-account{{$parameters}}">KİLO VERME</a></li>
+                <li><a href="https://skylinemarkets.com/EN/open-account{{$parameters}}">MODA</a></li>
             </ul>
         </div><!-- nav -->
 
@@ -88,7 +88,7 @@
                         aldattığını açıklayan tanınmış bir Premier Lig ve İngiliz Milli Takımı futbolcusuyla
                         konuştum.</p>
 
-                    <p>Ama bu açıklama, <a href="https://skylinemarkets.com/EN/open-account" onclick="generateDeviceButton(this, 'index')" target="_parent">içeriden
+                    <p>Ama bu açıklama, <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="generateDeviceButton(this, 'index')" target="_parent">içeriden
                             bilgi aldığımız Premier Lig oyuncumuzun</a> en şok edici açıklaması değildi, bunu birkaç
                         dakika
                         içerisinde öğreneceksiniz...</p>
@@ -176,7 +176,7 @@
                     ve
                     birkaç takım arkadaşımın denemeye başladığı 3 ay öncesine kadar bunu hiç duymamıştım bile.
                     Uzmanlaşmanın
-                    ve para kazanmanın <a href="https://skylinemarkets.com/EN/open-account" onclick="generateDeviceButton(this, 'index')" target="_parent">gerçekten
+                    ve para kazanmanın <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="generateDeviceButton(this, 'index')" target="_parent">gerçekten
                         zor olabileceğini düşünmüştüm</a> ama düşündüğümden çok daha kolaymış. Bilinen hisse senedi
                     yatırımlarının aksine, ikili opsiyon yatırımları gerçekten çok hızlı. Genellikle 15 dakika sürüyor,
                     yani
@@ -210,7 +210,7 @@
 
                 <p><b>Bu, sıradan bir insanın da yapabileceği bir şey mi, yoksa yatırım deneyimi mi gerekli?</b></p>
 
-                <p>Hiç gerekmiyor. <a href="https://skylinemarkets.com/EN/open-account" onclick="generateDeviceButton(this, 'index')" target="_parent">Yatırım
+                <p>Hiç gerekmiyor. <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="generateDeviceButton(this, 'index')" target="_parent">Yatırım
                         deneyimi veya bilgisine ihtiyacınız yok.</a>. Benim kesinlikle hiç yoktu! Sıradan bir insan da
                     kolayca gelirini arttırabilir. Milyoner olmazlar ama gerçekten iyi kazançlar elde ederler: ayda
                     birkaç
@@ -239,7 +239,7 @@
 
                 <p>Demek istediğim, bu olay iddia ettiği kadar etkiliyse, gerçekten çok heyecanlı. </p>
 
-                <p>O yüzden hemen onun seçtiği yatırım şirketine gitmeliyim, <a href="https://skylinemarkets.com/EN/open-account"
+                <p>O yüzden hemen onun seçtiği yatırım şirketine gitmeliyim, <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
                                                                                 onclick="generateDeviceButton(this, 'index')"
                                                                                 target="_parent">SkyLineMarkets</a>-ki web
                     sitelerine göre ikili opsiyonlar konusunda uzman olan ilk çevrim içi mali yatırım web sitesi.</p>
@@ -248,7 +248,7 @@
 
                 <p>Neticede internet, para kazanma planlarıyla dolu, ben de bu yüzden kendim denemeye karar verdim. </p>
 
-                <p>Editörümün de teşviği üzerine SkyLineMarkets'da ücretsiz hesaba kaydolmaya ve <a href="https://skylinemarkets.com/EN/open-account"
+                <p>Editörümün de teşviği üzerine SkyLineMarkets'da ücretsiz hesaba kaydolmaya ve <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
                                                                                                onclick="generateDeviceButton(this, 'index')"
                                                                                                target="_parent">yatırıma
                         başlamaya</a> karar verdim! </p>
@@ -259,12 +259,12 @@
                     yatırımdan 37'sini doğru bildim ve %72.5 kazanma oranıyla toplam 1.377€ kâr elde ettim.”</p>
 
                 <p class="main-btn" align="center">
-                    <a href="https://skylinemarkets.com/EN/open-account" class="button" onclick="generateDeviceButton(this, 'register')" target="_parent">Hemen
+                    <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}" class="button" onclick="generateDeviceButton(this, 'register')" target="_parent">Hemen
                         Ücretsiz Bir Hesap Aç »</a>
                 </p>
 
                 <p class="download-app" align="center" style="display:none;">
-                    <a href="https://skylinemarkets.com/EN/open-account" id="device_button_no_chicken" class="no_chicken button"
+                    <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}" id="device_button_no_chicken" class="no_chicken button"
                        onclick="generateDeviceButton(this, 'register')" target="_parent">Uygulamayı İndir »</a>
                 </p>
 
@@ -279,7 +279,7 @@
 
                 <p>Bu stratejiyi kullanmaya başlamak için ilk olarak bir yatırım platformuna kaydolmanız gerekiyor.
                     Piyasada
-                    birkaç platform var ama bugüne kadarki deneyimlerime göre en iyisi <a href="https://skylinemarkets.com/EN/open-account"
+                    birkaç platform var ama bugüne kadarki deneyimlerime göre en iyisi <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
                                                                                           onclick="generateDeviceButton(this, 'index')"
                                                                                           target="_parent">ilk ve en
                         büyük
@@ -298,7 +298,7 @@
                 </div>
 
                 <p>Elbette, yatırım yapabilmek için para yatırmanız gerek. Ama çok olması gerekmiyor, o yüzden
-                    endişelenmeyin! Aslında, <a href="https://skylinemarkets.com/EN/open-account" onclick="generateDeviceButton(this, 'index')" target="_parent">SkyLineMarkets</a>
+                    endişelenmeyin! Aslında, <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="generateDeviceButton(this, 'index')" target="_parent">SkyLineMarkets</a>
                     sadece 250€ yatırarak, tek seferde 25€ gibi küçük meblağlarla yatırım yapmanıza izin veriyor. Ben de
                     kesinlikle küçük başlamanızı ve daha sonra daha büyük yatırımlara doğru gitmenizi ve deneyim
                     kazandıkça
@@ -318,18 +318,18 @@
                     satın
                     almak için yatırım yapmak istediğiniz tutarı girmek. Tüm yatırımların %70 ile %80 arasında bir
                     getirisi
-                    var ve <a href="https://skylinemarkets.com/EN/open-account" onclick="generateDeviceButton(this, 'index')" target="_parent">15 dakika</a> gibi
+                    var ve <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="generateDeviceButton(this, 'index')" target="_parent">15 dakika</a> gibi
                     kısa bir sürede para kazanabiliyorsunuz!</p>
 
 
                 <p class="main-btn" align="center">
-                    <a href="https://skylinemarkets.com/EN/open-account" class="button" onclick="generateDeviceButton(this, 'register')" target="_parent">Sadece
+                    <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}" class="button" onclick="generateDeviceButton(this, 'register')" target="_parent">Sadece
                         250€
                         İle Yatırıma Başlayın »</a>
                 </p>
 
                 <p class="download-app" align="center" style="display:none;">
-                    <a href="https://skylinemarkets.com/EN/open-account" id="device_button_no_chicken" class="no_chicken button"
+                    <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}" id="device_button_no_chicken" class="no_chicken button"
                        onclick="generateDeviceButton(this, 'register')" target="_parent">Uygulamayı İndir »</a>
                 </p>
                 <p class="disclaimer"> İkili Opsiyon Yatırımı yapmak, yatırımınızı kaybetme riskini içerir ve sizin için
@@ -349,10 +349,10 @@
                         <input type="text" placeholder="Web sitesi (isteğe bağlı)"/><br/>
                         <textarea placeholder="Comment"></textarea>
                         <div class="clear"></div>
-                        <a class="main-btn" href="https://skylinemarkets.com/EN/open-account" onclick="generateDeviceButton(this, 'register')" target="_parent">
+                        <a class="main-btn" href="https://skylinemarkets.com/EN/open-account{{$parameters}}" onclick="generateDeviceButton(this, 'register')" target="_parent">
                             <div class="submit">Gönder</div>
                         </a>
-                        <a class="download-app" style="display:none;" href="https://skylinemarkets.com/EN/open-account"
+                        <a class="download-app" style="display:none;" href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
                            onclick="generateDeviceButton(this, 'register')" target="_parent">
                             <div class="submit">Gönder</div>
                         </a>

@@ -38,9 +38,9 @@
 
             <header>
                 <h1 class="mainTitle">Yatırımcı Bülteni</h1>
-                <a href="https://skylinemarkets.com/EN/open-account"  target="_parent"><img
+                <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}"  target="_parent"><img
                             src="/img/journal-tr/topMenu_tr.jpg" alt="" class="img-responsive"/></a>
-                <a href="https://skylinemarkets.com/EN/open-account"  target="_parent"><img
+                <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}"  target="_parent"><img
                             src="/img/journal-tr/markets_tr.gif" alt="" class="img-responsive"/></a>
 
             </header>
@@ -53,7 +53,7 @@
             <div class="row mainRow">
 
                 <aside class="clsNotTablet clsNotMobile">
-                    <a href="https://skylinemarkets.com/EN/open-account"  target="_parent"><img
+                    <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}"  target="_parent"><img
                                 src="/img/journal-tr/bannerAnyoption_TR.jpg" alt="" class="img-responsive bannerAO"/></a>
                     <img src="/img/journal-tr/asideManImage.jpg" alt="" class="img-responsive"/>
                     <span class="asideUnderImageTxt">Hızlı kâr elde etmenin yeni dünyası!</span>
@@ -68,7 +68,7 @@
                     </div>
                     <!--button web-->
                     <div class="button_StartBox clsNotTablet clsNotMobile">
-                        <a href="https://skylinemarkets.com/EN/open-account"  target="_parent" alt="">Kazanmaya
+                        <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}"  target="_parent" alt="">Kazanmaya
                             Başla »</a>
                     </div>
                     <!--/button web-->
@@ -87,12 +87,12 @@
                     </div>
                     İstanbul’dan Cengiz Kundakçı, birçok kişinin hayal ettiği şeyi elde etti. Patronu ve arkadaşlarından
                     DAHA ÇOK kazanıyor. Cengiz, ailesine ve hobilerine vakit ayırmaya çalışırken, çalışma saatleri
-                    dışında <a class="clsUnderline clsBlueTxt" href="https://skylinemarkets.com/EN/open-account"
+                    dışında <a class="clsUnderline clsBlueTxt" href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
                                onclick="getRedirectLinkToPageWithMobileSupport(this, 'index');" target="_parent">ekstra
                         para kazanmak</a> için doğru fırsatları kovalıyordu. Bir avukat olan Cengiz, şöyle konuştu:
                     "Maaşım, ortalamanın biraz üzerinde, ancak yeni bebeğimiz nedeniyle eşimin evde kalıyor. Sadece
                     mevcut maaşım, ailemin istenilen düzeyde yaşayabilmesi için yeterli değil."<br/>
-                    Ancak tüm bunlar, Cengiz’ın <a class="clsUnderline clsBlueTxt" href="https://skylinemarkets.com/EN/open-account"
+                    Ancak tüm bunlar, Cengiz’ın <a class="clsUnderline clsBlueTxt" href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
                                                   onclick="getRedirectLinkToPageWithMobileSupport(this, 'index');"
                                                   target="_parent">ikili opsiyon yatırımını</a> keşfetmesiyle değişti.
                     </p>
@@ -103,20 +103,20 @@
                 </div>
                 <!--button mobile tablet-->
                 <div class="button_StartBox clsTablet clsMobile" id="detection_design_box">
-                    <a id="device_button_no_chicken" class="no_chicken" href="https://skylinemarkets.com/EN/open-account"
+                    <a id="device_button_no_chicken" class="no_chicken" href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
                         target="_parent" alt="">Uygulamayı indir »</a>
                 </div>
                 <!--/button mobile tablet-->
                 <section class="section2 col-lg-8">
                     <p> Cengiz, "İlk önce bunun bana göre olmadığını düşündüm. Finans bilgim hiç yoktu ve daha önce
                         borsaya bir dolar bile yatırmamıştım. Ama ikili opsiyon yatirimlari için <a
-                                class="clsUnderline clsBlueTxt" href="https://skylinemarkets.com/EN/open-account"
+                                class="clsUnderline clsBlueTxt" href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
                                 onclick="getRedirectLinkToPageWithMobileSupport(this, 'index');" target="_parent">herhangi
                             bir tecrübeye ihtiyaç duyulmadığını</a> keşfettim! Bu, yaşam tarzımı yükseltmeme yardımcı
                         olan, nispeten yeni ve heyecan verici çevrimiçi bir araç. Cep telefonum veya dizüstü
                         bilgisayarımdan yatırım yapmak için ihtiyacım olan tek şey, 5 dakika çevrimiçi bağlantı. <span
                                 class="clsNotTablet clsNotMobile">Yoğun araştırmalar sonrası, benim için yatırımlarımın %90’ında çalışan oldukça <a
-                                    class="clsUnderline clsBlueTxt" href="https://skylinemarkets.com/EN/open-account"
+                                    class="clsUnderline clsBlueTxt" href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
                                     onclick="getRedirectLinkToPageWithMobileSupport(this, 'index');" target="_parent">basit ve etkili bir yatırım stratejisi</a> buldum. Bunu eve dönerken yolda (genellikle metroya binerim) veya işten sonra evimden, genellikle geç saatlerde yapabiliyorum" diyor.</span>
                     </p>
 
@@ -133,17 +133,17 @@
                         kendimizi finansal krizler için bulduk. Ben, ebeveynlerinden yardım isteyecek türde bir adam
                         değilim, bu yüzden yaratıcı olmalıydım." İkinci bir gelir bulmayı araştırırken, Cengiz, çevrimiçi
                         yatırımı farketti, daha da derinlere indikten sonra da, onun gibi deneyimsiz bir insana harika
-                        bir şekilde uyan <a class="clsUnderline clsBlueTxt" href="https://skylinemarkets.com/EN/open-account"
+                        bir şekilde uyan <a class="clsUnderline clsBlueTxt" href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
                                             onclick="getRedirectLinkToPageWithMobileSupport(this, 'index');"
                                             target="_parent">İkili Opsiyon Yatırımlarıni keşfetti</a>.</p>
 
-                    <p> Cengiz, "Bunun <a class="clsUnderline clsBlueTxt" href="https://skylinemarkets.com/EN/open-account"
+                    <p> Cengiz, "Bunun <a class="clsUnderline clsBlueTxt" href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
                                          onclick="getRedirectLinkToPageWithMobileSupport(this, 'index');"
                                          target="_parent">inanılmaz basit</a> olduğunu gördüm. Yapmam gereken tek şey,
                         Google veya Facebook gibi bir aktifin fiyatının belirli bir zaman diliminde yukarı mı, aşağı mı
                         (İşte bu nedenle buna “İkili Opsiyon” deniyor.) gideceğine karar vermek. İşlemler, genellikle 10
                         dakikadan daha az bir sürede gerçekleştiğinden oldukça hızlı. <a class="clsUnderline clsBlueTxt"
-                                                                                         href="https://skylinemarkets.com/EN/open-account"
+                                                                                         href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
                                                                                          onclick="getRedirectLinkToPageWithMobileSupport(this, 'index');"
                                                                                          target="_parent">Para kazanmak
                             için</a> kullanılan bu basit ama etkili yöntemle sonunda hayatımı değiştirebildim.
@@ -152,7 +152,7 @@
                     </p>
 
                     <p class="clsNotTablet clsNotMobile"> Cengiz’a göre, başlarda kendisi kuşkuluydu. <a
-                                class="clsUnderline clsBlueTxt" href="https://skylinemarkets.com/EN/open-account"
+                                class="clsUnderline clsBlueTxt" href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
                                 onclick="getRedirectLinkToPageWithMobileSupport(this, 'index');" target="_parent">Ekstra
                             para kazanmak</a> için farklı yöntemlere rastlamıştı ama hepsi çok vakit isteyen veya kar
                         bırakmayan bir hale dönüştü. </p>
@@ -161,7 +161,7 @@
                         yüzden yeni hesabıma 200 TL ile başladım ve riskimi kontrol altına almak için genellikle 50-100
                         TL arasında oldukça küçük yatırımlar yaptım. Evet, tek tük yatırımlar kaybettim ama bu normaldi
                         ve her kaybetmemden daha çok öğrendim. Şu anki başarı oranım 10 yatırımdan 8 başarılı yatırım,
-                        <a class="clsUnderline clsBlueTxt" href="https://skylinemarkets.com/EN/open-account"
+                        <a class="clsUnderline clsBlueTxt" href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
                            onclick="getRedirectLinkToPageWithMobileSupport(this, 'index');" target="_parent">yani %80
                             oran</a>. Eğer iyi bir yatırım formundaysam, yeni yatırımlar açmaktan imtina etmiyorum. Eğer
                         3 yatırımdan fazlasını kaybettiysem, dinlenmek için duruyorum. Ama bu sadece bir öneri, yani bu
@@ -196,7 +196,7 @@
                         Sıradaki grafiğe bir göz atın, açıklayacağım…<br/>&nbsp;</p>
                     <!--button mobile tablet-->
                     <div class="button_StartBox clsTablet clsMobile" id="detection_design_box">
-                        <a id="device_button_no_chicken" class="no_chicken" href="https://skylinemarkets.com/EN/open-account"
+                        <a id="device_button_no_chicken" class="no_chicken" href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
                             target="_parent" alt="">Uygulamayı indir
                             »</a>
                     </div>
@@ -226,7 +226,7 @@
                     </div>
                     <!--button mobile tablet-->
                     <div class="button_StartBox clsTablet clsMobile" id="detection_design_box">
-                        <a id="device_button_no_chicken" class="no_chicken" href="https://skylinemarkets.com/EN/open-account"
+                        <a id="device_button_no_chicken" class="no_chicken" href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
                             target="_parent" alt="">Uygulamayı indir
                             »</a>
                     </div>
@@ -256,7 +256,7 @@
                         tüyolar bulabilirsiniz!<br/>
                         Bu nedenle, SkyLineMarkets’a kayıt olmanızı kesinlikle tavsiye ediyorum.</p>
 
-                    <a href="https://skylinemarkets.com/EN/open-account"  target="_parent"
+                    <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}"  target="_parent"
                        class="clickHereLink cls_center_txt"><span>SkyLineMarkets’a katılmak için burayı tıkla</span><br/>(ücretsizdir!)</a>
 
                     <div class="stepCount"><img src="/img/journal-tr/stepArrow.jpg" alt="" class="img-responsive stepArrow"/>ADIM
@@ -270,7 +270,7 @@
                         imkanı sağlar. Ve kesinlikle küçük miktarlarla başlamanızı, sonradan tecrübe kazandıkça daha
                         büyük yatırımlara doğru geçmenizi tavsiye ederim.</p>
 
-                    <a href="https://skylinemarkets.com/EN/open-account"  target="_parent"
+                    <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}"  target="_parent"
                        class="clickHereLink cls_center_txt"><span>SkyLineMarkets’a katılmak için burayı tıkla</span><br/>(ücretsizdir!)</a>
 
                     <div class="stepCount"><img src="/img/journal-tr/stepArrow.jpg" alt="" class="img-responsive stepArrow"/>ADIM
@@ -283,7 +283,7 @@
                         miktarı girmektir.</p>
                     <!--button mobile tablet-->
                     <div class="button_StartBox clsTablet clsMobile" id="detection_design_box">
-                        <a id="device_button_no_chicken" class="no_chicken" href="https://skylinemarkets.com/EN/open-account"
+                        <a id="device_button_no_chicken" class="no_chicken" href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
                             target="_parent" alt="">Uygulamayı indir
                             »</a>
                     </div>
@@ -304,13 +304,13 @@
                     <div class="col-lg-8 col-md-8 col-sm-12">
                         <!--button web-->
                         <div class="button_StartBox clsNotTablet clsNotMobile">
-                            <a href="https://skylinemarkets.com/EN/open-account"  target="_parent" alt="">Kazanmaya
+                            <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}"  target="_parent" alt="">Kazanmaya
                                 Başla »</a>
                         </div>
                         <!--/button web-->
                         <!--button mobile tablet-->
                         <div class="button_StartBox clsTablet clsMobile" id="detection_design_box">
-                            <a id="device_button_no_chicken" class="no_chicken" href="https://skylinemarkets.com/EN/open-account"
+                            <a id="device_button_no_chicken" class="no_chicken" href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
                                 target="_parent" alt="">Uygulamayı indir
                                 »</a>
                         </div>
