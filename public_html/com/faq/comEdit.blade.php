@@ -19,6 +19,6 @@
     @endforelse
     </div>
     <div>
-        <button class="btn btn-primary addNewRow"><i class="fa fa-plus-square "></i></button>
+        <button class="btn btn-primary addNewRow"><i class="fa fa-plus-square"></i></button>
     </div>
 </div>
