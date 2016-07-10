@@ -51,5 +51,5 @@
 
 
 <div class="componentsEmailPopCom">
-    {!! $page->emailPopCom->content !!}
+    {!! $page->components->emailPopCom->content !!}
 </div>

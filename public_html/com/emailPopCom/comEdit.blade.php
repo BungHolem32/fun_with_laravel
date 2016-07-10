@@ -27,6 +27,6 @@
         'placeholder'=>'Popup Content'
         ]) !!}
     </div>
+    <div class="clearfix"></div>
 </div>
-<div class="clearfix"></div>
-
+<br><br>
