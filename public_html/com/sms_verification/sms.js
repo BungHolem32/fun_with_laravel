@@ -19,12 +19,19 @@ function showSmsForm() {
     $('#phone_number_span').html(fullPhone);
 
     var hiddenSection = $('section.hidden_block');
+
+    var sc_width = $(window).width() + 'px';
+    var sc_height = $(window).height() + 'px';
+    if ($(window).width()<601) {
+        sc_width = '100%';
+        sc_height = '100%';
+    }
+
     hiddenSection.fadeIn()
         .css({ 'display':'block' })
-        .css({ width: $(window).width() + 'px', height: $(window).height() + 'px' })
+        .css({ width: sc_width, height: sc_height })
         .css({ top:($(window).height() - hiddenSection.height())/2 + 'px',
             left:($(window).width() - hiddenSection.width())/2 + 'px' })
-        .css({ 'background-color': 'rgba(0,0,0,0.5)' })
         .appendTo('body');
     $('span.close').click(function(){ $(hiddenSection).fadeOut(); });
 }
