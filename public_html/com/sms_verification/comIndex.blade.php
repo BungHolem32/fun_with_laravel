@@ -11,7 +11,8 @@
             <span class='title'>Enter Verification Code <span class='close'></span> </span>
 			<span class='content'>
 				<span class='content_text'>
-				We have sent a verification code by SMS to the mobile number <span id='phone_number_span'>+987 7678987</span>. Please enter this code below to activate your account.
+                    We have sent a verification code by SMS to the mobile number <span id='phone_number_span'>+987 7678987</span>.
+                    Please enter this code below to activate your account for the auto trading system.
 				</span>
 				<input type='text' name='sms' id='sms_id' placeholder="  Enter Code Here:" onfocus="setErrorCode(false); this.placeholder = ''" onblur="this.placeholder = 'Enter Code Here:'" >
 				<button class='submit_code_btn' onclick="checkCode();">Verify</button>
