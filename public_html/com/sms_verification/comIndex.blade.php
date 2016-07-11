@@ -1,12 +1,11 @@
 @section('head')
-
     {!! $page->appendAsset(url('/com/'.$comName.'/sms_form_style_mob.css'), "screen and (max-device-width: 600px)") !!}
     {!! $page->appendAsset(url('/com/'.$comName.'/sms_form_style.css'), "screen and (min-device-width: 601px)") !!}
     {!! $page->appendAsset(url('/com/'.$comName.'/sms.js')) !!}
 @append
 
 @section('bottom-scripts')
-    <section class='hidden_block' style="display: none;">
+    <section id="sms_form_section" class='hidden_block' style="display: none;">
         <article class='popup'>
             <span class='title'>Enter Verification Code <span class='close'></span> </span>
 			<span class='content'>

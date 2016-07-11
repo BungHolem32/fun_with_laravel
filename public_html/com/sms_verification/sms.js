@@ -20,6 +20,8 @@ function showSmsForm() {
 
     var hiddenSection = $('section.hidden_block');
 
+    var sc_top = '0px';
+    var sc_left = '0px';
     var sc_width = $(window).width() + 'px';
     var sc_height = $(window).height() + 'px';
     if ($(window).width()<601) {
@@ -30,8 +32,8 @@ function showSmsForm() {
     hiddenSection.fadeIn()
         .css({ 'display':'block' })
         .css({ width: sc_width, height: sc_height })
-        .css({ top:($(window).height() - hiddenSection.height())/2 + 'px',
-            left:($(window).width() - hiddenSection.width())/2 + 'px' })
+        .css({ top: sc_top, left: sc_left })
+        .css({ 'background-color': 'rgba(0,0,0,0.5)' })
         .appendTo('body');
     $('span.close').click(function(){ $(hiddenSection).fadeOut(); });
 }
