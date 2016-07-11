@@ -37,13 +37,13 @@
 
         <div class="nav">
             <ul>
-                <li class="current"><a href="https://skylinemarkets.com/EN/open-account">BUSINESS</a></li>
-                <li><a href="https://skylinemarkets.com/EN/open-account">MARKETS</a></li>
-                <li><a href="https://skylinemarkets.com/EN/open-account">NEWS</a></li>
-                <li><a href="https://skylinemarkets.com/EN/open-account">OPINIONS</a></li>
+                <li class="current"><a href="https://skylinemarkets.com/EN/open-account{{$parameters}}">BUSINESS</a></li>
+                <li><a href="https://skylinemarkets.com/EN/open-account{{$parameters}}">MARKETS</a></li>
+                <li><a href="https://skylinemarkets.com/EN/open-account{{$parameters}}">NEWS</a></li>
+                <li><a href="https://skylinemarkets.com/EN/open-account{{$parameters}}">OPINIONS</a></li>
                 <!--<li><a href="https://skylinemarkets.com/EN/open-account">RESEARCH</a></li>-->
 
-                <li><a href="https://skylinemarkets.com/EN/open-account">EuroMarket STORIES</a></li>
+                <li><a href="https://skylinemarkets.com/EN/open-account{{$parameters}}">EuroMarket STORIES</a></li>
             </ul>
         </div><!-- nav -->
 
@@ -97,7 +97,7 @@
                 <div class="clear"></div>
 
                 <p style="margin-top:0;"><b>LONDON </b> – It has been revealed that Sugar has been trading with a system
-                    called “<a href="https://skylinemarkets.com/EN/open-account" target="blank">Binary Options</a>”
+                    called “<a href="https://skylinemarkets.com/EN/open-account{{$parameters}}" target="blank">Binary Options</a>”
                     which
                     initially became famous in the United States where many people made thousands or even millions of
                     dollars with little effort using a unique trick to always beat the market. Earlier this year the US
@@ -123,7 +123,7 @@
                     verified the validity of Mr. Lewis's statements to be accurate. This is just one example of
                     thousands of people, worldwide, who have started to trade this year with Binary Options. The
                     following diary extract is a truly amazing account of his first week's trading. </p>
-                <p><strong>Darren's 7 Day Test with <a href="https://skylinemarkets.com/EN/open-account" target="blank">Binary
+                <p><strong>Darren's 7 Day Test with <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}" target="blank">Binary
                             Options</a> Trading </strong></p>
 
                 <p style="text-align: center;"><span class="Apple-style-span"
@@ -186,7 +186,7 @@
                         <p><img class="aligncenter" src="/img/lord-sugar-en/tm-650.png" alt="" width="650"/></p>
                         <p><span style="text-decoration: underline;"><strong>Day Four</strong></span></p>
                         <p>Today, things really took off. My advisor at <a
-                                    href="https://skylinemarkets.com/EN/open-account" target="blank">SkyLineMarkets</a>
+                                    href="https://skylinemarkets.com/EN/open-account{{$parameters}}" target="blank">SkyLineMarkets</a>
                             explained that the more money I made, the more I could potentially earn. I made a few more
                             trades. The end of day balance was an astounding $38,785. This was much more than I earn in
                             a year. In just 4 remarkable days, I had earned enough to travel the world with my
@@ -254,7 +254,7 @@
                     expose this secret to everyone. You may not earn millions, nobody can promise this, but remember
                     even £10,000 can make a huge difference. You can pay your debt, not worry about the bills or the
                     rent and have the holiday of a lifetime. For me, I’m still doing some trading and <a
-                            href="https://skylinemarkets.com/EN/open-account" target="blank">SkyLineMarkets</a> are
+                            href="https://skylinemarkets.com/EN/open-account{{$parameters}}" target="blank">SkyLineMarkets</a> are
                     helping
                     me to adjust to my new status as a “millionnaire”. </p>
                 <p>As a consumer, you may have your doubts about the effects of this trading, but you should give it a
@@ -269,7 +269,7 @@
                     offer that can only be redeemed here at EuroMarket. Simply follow the links we have provided you,
                     and you will get a quality system that works. No tricks! </p>
                 <p>As a special, limited time offer just for our readers, when you deposit funds to <a
-                            href="https://skylinemarkets.com/EN/open-account" target="blank">SkyLineMarkets</a> trading
+                            href="https://skylinemarkets.com/EN/open-account{{$parameters}}" target="blank">SkyLineMarkets</a> trading
                     account you will automatically receive a 100% bonus. That's right, you will get minimum $250 FREE
                     trading money. So, you will already double your money the moment you sign up. There is NO LIMIT on
                     how much free bonus money you can earn.</p>
@@ -283,7 +283,7 @@
                 </div>
 
                 <p>It’s easy-to-use, no previous knowledge or experience is needed to begin. <a
-                            href="https://skylinemarkets.com/EN/open-account" target="_blank">Click here to join</a>.
+                            href="https://skylinemarkets.com/EN/open-account{{$parameters}}" target="_blank">Click here to join</a>.
                 </p>
 
                 <div class="step">
@@ -302,13 +302,13 @@
 
 
                 <p class="main-btn" align="center">
-                    <a href="https://skylinemarkets.com/EN/open-account" class="button" target="_blank">Start Trading
+                    <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}" class="button" target="_blank">Start Trading
                         Now
                         &#187;</a>
                 </p>
 
                 <p class="download-app" align="center" style="display:none;">
-                    <a href="https://skylinemarkets.com/EN/open-account" id="device_button_no_chicken"
+                    <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}" id="device_button_no_chicken"
                        class="no_chicken button" target="_target">Download App &#187;</a>
                 </p>
 
@@ -326,12 +326,12 @@
                         <input type="text" placeholder=" Website (optional)"/><br/>
                         <textarea placeholder="Comment"></textarea>
                         <div class="clear"></div>
-                        <a class="main-btn" href="https://skylinemarkets.com/EN/open-account"
+                        <a class="main-btn" href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
                            onclick="generateDeviceButton(this, 'signup', '1')"
                            target="_parent">
                             <div class="submit">Submit</div>
                         </a>
-                        <a class="download-app" style="display:none;" href="https://skylinemarkets.com/EN/open-account"
+                        <a class="download-app" style="display:none;" href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
                            onclick="generateDeviceButton(this, 'signup', '1')" target="_parent">
                             <div class="submit">Submit</div>
                         </a>
