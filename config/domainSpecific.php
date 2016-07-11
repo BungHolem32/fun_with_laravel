@@ -4,7 +4,7 @@ return call_user_func(function (){
     $domain = $_SERVER['HTTP_HOST'];
     preg_match('/[^.]+\.[^.]+$/', $domain, $domain); // remove any subdomains
 
-    if (!file_exists(__DIR__ . '\domains\domain_specific.json') || json_decode(file_get_contents(__DIR__ . '\domains\domain_specific.json'), true) === null){
+    if (!file_exists(__DIR__ . '/domains/domain_specific.json') || json_decode(file_get_contents(__DIR__ . '/domains/domain_specific.json'), true) === null){
         $subject = 'Error missing Domain Specific file in Funnel system.';
         $msg = 'Missing Domain Specific file in Funnel system for ' . $domain[0];
         $email1 = \App\Services\Ems\StandardEmail::ALERT('rotemg@rboptions.com', $subject, $msg);
