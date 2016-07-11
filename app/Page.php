@@ -133,8 +133,11 @@ class Page extends Entity implements PageInterface
 
 
     public function __get($key){
+
+        /*if there' isn't attribute of property for the specific key */
         if(!$this->hasGetMutator($key) && !$this->hasAttribute($key)){
 
+            /*check if the base object is mongo key or it has __set method  */
             if($this->isMongo($key) && $this->notFrom__Set())
                 return $this->mongoValue($key);
 
@@ -312,16 +315,16 @@ class Page extends Entity implements PageInterface
 
     }
 
-    public function appendAsset($url){
+    public function appendAsset($url , $media=""){
         if(!in_array($url, $this->loadedAssets)){
             $this->loadedAssets[] = $url;
-            return $this->asset($url);
+            return $this->asset($url, $media);
         }
     }
 
-    private function asset($url){
+    private function asset($url, $media){
         if(substr($url, -3) == 'css')
-            return '<link href="'.$url.'" rel="stylesheet">';
+            return '<link href="'.$url.'" media="'.$media.'" rel="stylesheet" >';
         elseif(substr($url, -2) == 'js')
             return '<script src="'.$url.'"></script>';
         else{
