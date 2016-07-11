@@ -5,11 +5,28 @@
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/trading-system/main.css">
     <script src="/js/jquery.validate.min.js"></script>
+@stop
+
+@section('bottom-scripts')
+
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.main.js"></script>
+
+
+    <script>
+        (function(){
+            var captchaChangeSize = setTimeout(captchaChange, 5000);
+
+            function captchaChange(){
+                var captcha = document.querySelector('.rc-anchor-normal');
+                captcha.style = "width:285px";
+            };
+        })();
+    </script>
     @stop
 
+
     @section('page-layout')
-
-
     </head>
     <body>
     <div id="wrapper">
@@ -140,14 +157,6 @@
         </div>
     </footer>
     </div>
-
-
-    @stop
-
-
-    @section('bottom-scripts')
-
-        <script src="/js/bootstrap.min.js"></script>
-        <script src="/js/jquery.main.js"></script>
-        <script>var jQuery_1_7_0 = $.noConflict(true);</script>
 @stop
+
+

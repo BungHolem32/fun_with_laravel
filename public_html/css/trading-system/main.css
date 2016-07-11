@@ -22,6 +22,18 @@
     font-style  : normal;
 }
 
+.rc-anchor-normal .rc-anchor-pt {
+    margin : 1px 30px 0 0;
+}
+
+.rc-anchor.rc-anchor-normal.rc-anchor-light {
+    width : 285px !important;
+}
+
+iframe {
+    width : 100%;
+}
+
 .jumbotron {
     background : #000000;
     border     : 1px solid #ffffff;
@@ -52,6 +64,14 @@
     white-space   : nowrap; /* 1 */
     text-overflow : ellipsis; /* 2 */
     overflow      : hidden;
+}
+
+.g-recaptcha div {
+    width : 94%;
+}
+
+.g-recaptcha .rc-anchor-normal-footer {
+    margin-left : -16px;
 }
 
 .col-lg-12 {
@@ -322,12 +342,16 @@ h1 mark {
     margin-bottom : 10px;
 }
 
- .form-group.field input + label.error {
+.form-group.field input + label.error, .form-group + label#other-error {
     display : none !important;
 }
 
-.form-group.field input.error{
-    border:1px solid red;
+.form-group.field input.error {
+    border : 1px solid red;
+}
+
+.g-recaptcha {
+    margin-bottom : 10px;
 }
 
 .contact-form p {
@@ -609,6 +633,5 @@ h1 mark {
     #footer .row {
         margin : 0;
     }
-
 }
 
