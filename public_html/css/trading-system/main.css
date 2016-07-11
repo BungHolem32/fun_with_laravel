@@ -1,0 +1,614 @@
+@font-face {
+    font-family : "bignoodletitling";
+    src         : url("/fonts/trading-system/big_noodle_titling-webfont.eot");
+    src         : url("/fonts/trading-system/big_noodle_titling-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/trading-system/big_noodle_titling-webfont.woff2") format("woff2"), url("/fonts/trading-system/big_noodle_titling-webfont.woff") format("woff"), url("/fonts/trading-system/big_noodle_titling-webfont.svg#bignoodletitlingregular") format("svg");
+    font-weight : normal;
+    font-style  : normal;
+}
+
+@font-face {
+    font-family : "crillee-bold";
+    src         : url("/fonts/trading-system/crilleb-webfont.eot");
+    src         : url("/fonts/trading-system/crilleb-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/trading-system/crilleb-webfont.woff2") format("woff2"), url("/fonts/trading-system/crilleb-webfont.woff") format("woff"), url("/fonts/trading-system/crilleb-webfont.svg#crillee-boldregular") format("svg");
+    font-weight : normal;
+    font-style  : normal;
+}
+
+@font-face {
+    font-family : "raleway";
+    src         : url("/fonts/trading-system/raleway-regular-webfont.eot");
+    src         : url("/fonts/trading-system/raleway-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/trading-system/raleway-regular-webfont.woff2") format("woff2"), url("/fonts/trading-system/raleway-regular-webfont.woff") format("woff"), url("/fonts/trading-system/raleway-regular-webfont.svg#ralewayregular") format("svg");
+    font-weight : normal;
+    font-style  : normal;
+}
+
+.jumbotron {
+    background : #000000;
+    border     : 1px solid #ffffff;
+}
+
+.row {
+    margin-left  : 0 !important;
+    margin-right : 0 !important;
+}
+
+.well,
+.list-group,
+.panel-body,
+.breadcrumb a,
+.pagination > li > a,
+.pagination > li > span,
+.pager a {
+    color : #555555;
+}
+
+.clearfix:after {
+    content : "";
+    display : block;
+    clear   : both;
+}
+
+.ellipsis {
+    white-space   : nowrap; /* 1 */
+    text-overflow : ellipsis; /* 2 */
+    overflow      : hidden;
+}
+
+.col-lg-12 {
+    padding : 0 28px;
+}
+
+.contact-form .phone-row {
+    overflow : hidden;
+}
+
+.contact-form .phone-row input {
+    overflow : hidden;
+    width    : 224px;
+}
+
+.contact-form .phone-row input:first-child {
+    width        : 52px;
+    float        : left;
+    margin-right : 11px;
+}
+
+.btn-arrow {
+    overflow       : hidden;
+    max-width      : 286px;
+    height         : 57px;
+    font-size      : 25px !important;
+    line-height    : 57px;
+    font-family    : "crillee-bold";
+    text-transform : uppercase;
+    color          : #ffffff;
+    text-shadow    : 2px 2px 2px #295b01;
+    font-style     : italic;
+    border-radius  : 0;
+    border         : 1px solid #90ec00;
+    padding        : 0 51px 0 10px;
+    display        : block;
+    width          : 100%;
+    text-align     : left;
+    position       : relative;
+    font-weight    : normal;
+    box-shadow     : inset 0 2px 8px #48ff00;
+    background     : #225b01; /* Old browsers */ /* FF3.6-15 */
+    background     : -webkit-linear-gradient(top, #225b01 0%, #225b01 12%, #2a6b01 23%, #3b8f02 38%, #5dd302 64%, #6df403 79%, #71fd03 86%, #71fd03 100%); /* Chrome10-25,Safari5.1-6 */
+    background     : linear-gradient(to bottom, #225b01 0%, #225b01 12%, #2a6b01 23%, #3b8f02 38%, #5dd302 64%, #6df403 79%, #71fd03 86%, #71fd03 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    text-shadow    : #295b01 2px 0, #295b01 2px 2px, #295b01 0 2px, #295b01 -2px 2px, #295b01 -2px 0, #295b01 -2px -2px, #295b01 0 -2px, #295b01 2px -2px;
+}
+
+.btn-arrow span {
+    position   : absolute;
+    top        : 0;
+    right      : 0;
+    bottom     : 0;
+    width      : 51px;
+    display    : block;
+    box-shadow : inset 3px 4px 15px #000000;
+    background : #143e00; /* Old browsers */ /* FF3.6-15 */
+    background : -webkit-linear-gradient(top, #143e00 0%, #144100 43%, #116300 100%); /* Chrome10-25,Safari5.1-6 */
+    background : linear-gradient(to bottom, #143e00 0%, #144100 43%, #116300 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    padding    : 3px 0 0 13px;
+}
+
+.btn-arrow:after {
+    content    : " ";
+    clear      : both;
+    display    : block;
+    position   : absolute;
+    top        : 0;
+    left       : 0;
+    right      : 0;
+    height     : 18px; /* FF3.6-15 */
+    background : -webkit-linear-gradient(top, rgba(226, 226, 226, .45) 0%, rgba(226, 226, 226, .09) 76%, rgba(226, 226, 226, .01) 100%); /* Chrome10-25,Safari5.1-6 */
+    background : linear-gradient(to bottom, rgba(226, 226, 226, .45) 0%, rgba(226, 226, 226, .09) 76%, rgba(226, 226, 226, .01) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.btn-arrow.focus,
+.btn-arrow:focus,
+.btn-arrow:hover {
+    text-decoration : none;
+    color           : #ffffff;
+}
+
+.btn-arrow.focus span,
+.btn-arrow:focus span,
+.btn-arrow:hover span {
+    box-shadow : inset 1px 1px 5px #000000;
+    background : #fcff00; /* Old browsers */ /* FF3.6-15 */
+    background : -webkit-linear-gradient(top, #fcff00 0%, #fcff00 31%, #fcf900 44%, #ffc900 100%); /* Chrome10-25,Safari5.1-6 */
+    background : linear-gradient(to bottom, #fcff00 0%, #fcff00 31%, #fcf900 44%, #ffc900 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.btn-arrow:active:hover,
+.btn-arrow:active {
+    text-decoration : none;
+    color           : #ffffff;
+    background      : #90ec00;
+}
+
+.btn-arrow:active:hover span,
+.btn-arrow:active span {
+    box-shadow : inset 3px 4px 15px #000000;
+    background : #143e00; /* Old browsers */ /* FF3.6-15 */
+    background : -webkit-linear-gradient(top, #143e00 0%, #144100 43%, #116300 100%); /* Chrome10-25,Safari5.1-6 */
+    background : linear-gradient(to bottom, #143e00 0%, #144100 43%, #116300 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.contact-form input {
+    border      : none;
+    height      : 50px;
+    width       : 100%;
+    font-size   : 16px;
+    line-height : 50px;
+    padding     : 0 11px;
+    color       : #878787;
+}
+
+a {
+    color : #ffffff;
+}
+
+a:hover {
+    color : #000000;
+}
+
+button,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border  : none;
+    outline : none;
+}
+
+input[type="text"]::-webkit-input-placeholder,
+input[type="tel"]::-webkit-input-placeholder,
+input[type="email"]::-webkit-input-placeholder,
+input[type="search"]::-webkit-input-placeholder,
+input[type="password"]::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color : #585858;
+}
+
+input[type="text"]::-moz-placeholder,
+input[type="tel"]::-moz-placeholder,
+input[type="email"]::-moz-placeholder,
+input[type="search"]::-moz-placeholder,
+input[type="password"]::-moz-placeholder,
+textarea::-moz-placeholder {
+    opacity : 1;
+    color   : #585858;
+}
+
+input[type="text"]:-moz-placeholder,
+input[type="tel"]:-moz-placeholder,
+input[type="email"]:-moz-placeholder,
+input[type="search"]:-moz-placeholder,
+input[type="password"]:-moz-placeholder,
+textarea:-moz-placeholder {
+    color : #585858;
+}
+
+input[type="text"]:-ms-input-placeholder,
+input[type="tel"]:-ms-input-placeholder,
+input[type="email"]:-ms-input-placeholder,
+input[type="search"]:-ms-input-placeholder,
+input[type="password"]:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color : #585858;
+}
+
+input[type="text"].placeholder,
+input[type="tel"].placeholder,
+input[type="email"].placeholder,
+input[type="search"].placeholder,
+input[type="password"].placeholder,
+textarea.placeholder {
+    color : #585858;
+}
+
+#wrapper {
+    overflow  : hidden;
+    min-width : 320px;
+}
+
+#header {
+    text-align : center;
+    height     : 74px;
+    padding    : 13px 0 0;
+    background : #000000;
+}
+
+.logo {
+    display  : inline-block;
+    position : relative;
+    z-index  : 5;
+}
+
+.logo img {
+    display        : block;
+    vertical-align : top;
+}
+
+#main {
+    position    : relative;
+    padding-top : 43px;
+}
+
+.bg {
+    position   : absolute;
+    top        : -47px;
+    left       : 0;
+    height     : 945px;
+    width      : 100%;
+    text-align : center;
+    z-index    : -1;
+}
+
+.bg img {
+    vertical-align : top;
+    width          : 100%;
+    height         : auto;
+    max-width      : 100%;
+}
+
+.mob-img {
+    display : none;
+}
+
+h1 {
+    font-family    : "bignoodletitling";
+    font-size      : 84px;
+    line-height    : 84px;
+    text-transform : uppercase;
+    color          : #ffffff;
+    font-weight    : normal;
+    margin         : 0 3px 27px;
+    text-align     : center;
+}
+
+h1 mark {
+    color             : #ffc600;
+    display           : block;
+    font-size         : 50px;
+    line-height       : 50px;
+    background        : none;
+    padding           : 0;
+    font-family       : "crillee-bold";
+    -webkit-transform : rotate(-1.5deg);
+    -ms-transform     : rotate(-1.5deg);
+    transform         : rotate(-1.5deg);
+    font-style        : italic;
+    margin            : -14px 5px 0;
+    letter-spacing    : 2px;
+    text-shadow       : 0 0 16px #000000;
+}
+
+.contact-form {
+    width         : 356px;
+    padding       : 13px 34px;
+    margin-left   : -88px;
+    margin-right  : 20px;
+    margin-bottom : 22px;
+    background    : url(/img/trading-system/bg-form.png) no-repeat;
+}
+
+.contact-form .form-group {
+    margin-bottom : 10px;
+}
+
+ .form-group.field input + label.error {
+    display : none !important;
+}
+
+.form-group.field input.error{
+    border:1px solid red;
+}
+
+.contact-form p {
+    font-family   : "bignoodletitling";
+    font-style    : italic;
+    font-size     : 27px;
+    line-height   : 29px;
+    text-align    : center;
+    margin-bottom : 6px;
+}
+
+.contact-form p mark {
+    text-transform : uppercase;
+    background     : none;
+    color          : #fb0100;
+}
+
+.info-box {
+    text-align     : center;
+    line-height    : 22px;
+    margin-left    : -20px;
+    padding-bottom : 8px;
+    margin-bottom  : 61px;
+    background     : url(/img/trading-system/bg-info-box.png) no-repeat 50% 100%;
+}
+
+.info-box h3 {
+    margin      : 0 0 6px;
+    font-size   : 29px;
+    line-height : 32px;
+    font-family : "bignoodletitling";
+    font-weight : normal;
+    text-shadow : 0 0 10px #000000;
+}
+
+.mobile-visible {
+    display    : none;
+    text-align : center;
+}
+
+.mobile-visible .btn-arrow {
+    margin : 26px auto;
+}
+
+.pay-list {
+    margin      : 0 0 26px;
+    padding     : 0;
+    text-align  : center;
+    font-size   : 0;
+    line-height : 0;
+}
+
+.pay-list li {
+    list-style     : none;
+    display        : inline-block;
+    vertical-align : top;
+    margin         : 0 3px;
+}
+
+.pay-list a {
+    border-radius : 5px;
+    border        : 1px solid #414141;
+    display       : block;
+    overflow      : hidden;
+}
+
+#footer {
+    padding-top    : 44px;
+    padding-bottom : 10px;
+    color          : #288991;
+    font-size      : 11px;
+    line-height    : 15px;
+    background     : #00171f url(/img/trading-system/bg-footer.png) no-repeat 50% 0;
+}
+
+#footer dl {
+    text-align    : center;
+    margin-left   : 28px;
+    margin-bottom : 0;
+}
+
+#footer dt {
+    font-weight : normal;
+}
+
+@media (max-width : 1141px) {
+    .contact-form {
+        margin : 0 auto;
+    }
+
+    .info-box {
+        margin : 0 auto 61px;
+    }
+}
+
+@media (max-width : 1023px) {
+    .contact-form {
+        margin : 0 auto 50px;
+    }
+
+    .info-box {
+        margin-bottom : 40px;
+        position      : relative;
+        background    : none;
+        width         : auto;
+    }
+
+    .info-box:after {
+        content    : " ";
+        clear      : both;
+        position   : absolute;
+        top        : 50%;
+        left       : -16px;
+        background : url(/img/trading-system/bg-info-box-l.png) no-repeat;
+        width      : 108px;
+        height     : 203px;
+        margin-top : -102px;
+        z-index    : -1;
+    }
+
+    .info-box:before {
+        content    : " ";
+        clear      : both;
+        display    : block;
+        position   : absolute;
+        top        : 50%;
+        right      : -18px;
+        background : url(/img/trading-system/bg-info-box-r.png) no-repeat;
+        width      : 109px;
+        height     : 203px;
+        margin-top : -102px;
+        z-index    : -1;
+    }
+}
+
+@media (max-width : 767px) {
+    .container {
+        padding-left  : 16px;
+        padding-right : 16px;
+    }
+
+    .col-lg-12 {
+        padding : 0 16px;
+    }
+
+    .contact-form .phone-row input {
+        width : 222px;
+    }
+
+    .btn-arrow {
+        height      : 47px;
+        line-height : 47px;
+        margin-top  : 26px;
+    }
+
+    .btn-arrow span img {
+        width  : 30px;
+        height : auto;
+    }
+
+    .contact-form input {
+        height      : 41px;
+        line-height : 41px;
+        color       : #878787;
+    }
+
+    #header {
+        background  : #000000;
+        height      : 50px;
+        padding-top : 3px;
+    }
+
+    .logo {
+        width  : 88px;
+        height : 43px;
+    }
+
+    .logo img {
+        width  : 100%;
+        height : auto;
+    }
+
+    #main {
+        padding-top : 0;
+    }
+
+    .bg {
+        display : none;
+    }
+
+    .mob-img {
+        display : block;
+        margin  : 0 -5px -129px;
+    }
+
+    .mob-img img {
+        width  : 100%;
+        height : auto;
+    }
+
+    h1 {
+        font-size     : 36px;
+        line-height   : 40px;
+        text-align    : center;
+        margin-bottom : -50px;
+        position      : relative;
+    }
+
+    h1 mark {
+        font-size      : 28px;
+        line-height    : 31px;
+        margin-top     : -9px;
+        letter-spacing : .2px;
+    }
+
+    .contact-form {
+        margin     : 0 auto 50px;
+        background : none;
+        padding    : 0;
+        width      : 285px;
+    }
+
+    .contact-form .form-group {
+        margin-bottom : 17px;
+    }
+
+    .contact-form p {
+        margin-bottom : 6px;
+        text-shadow   : 0 0 10px #000000;
+    }
+
+    .contact-form .btn-arrow {
+        margin : 0;
+    }
+
+    .info-box h3 {
+        margin-bottom  : 8px;
+        line-height    : 33px;
+        font-weight    : normal;
+        letter-spacing : .5px;
+    }
+
+    .info-box h3 br {
+        display : none;
+    }
+
+    .info-box p {
+        margin : 0 28px;
+    }
+
+    .mobile-visible {
+        display        : block;
+        padding-bottom : 20px;
+    }
+
+    .pay-list {
+        margin-top : 35px;
+    }
+
+    .pay-list li {
+        width : 40px;
+    }
+
+    .pay-list li img {
+        width  : 100%;
+        height : auto;
+    }
+
+    #footer {
+        background  : none;
+        padding-top : 0;
+    }
+
+    #footer dl {
+        margin     : 0;
+        text-align : left;
+    }
+
+    #footer .row {
+        margin : 0;
+    }
+
+}
+
