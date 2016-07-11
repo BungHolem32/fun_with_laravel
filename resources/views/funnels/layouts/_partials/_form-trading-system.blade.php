@@ -55,7 +55,7 @@ foreach ($form->membersFields->getChildren() as $field){
             </div>
         @elseif($field[0] == 'phone')
 
-            <div class="phone-row field phoneFields">
+            <div class="phone-row field phoneFields form-group">
                 <input type="phone" id="prefix" class="" name="prefix" required="required" data-cip-id="prefix" />
                 <input type="{{ $field[0] }}" id="{{ $field[1] }}" class="" name="{{ $field[1] }}" required="required" placeholder="{{ \App\Languages::getTrans($field[2]) }}" data-cip-id="{{ $field[1] }}">
             </div>
