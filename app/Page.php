@@ -133,8 +133,11 @@ class Page extends Entity implements PageInterface
 
 
     public function __get($key){
+
+        /*if there' isn't attribute of property for the specific key */
         if(!$this->hasGetMutator($key) && !$this->hasAttribute($key)){
 
+            /*check if the base object is mongo key or it has __set method  */
             if($this->isMongo($key) && $this->notFrom__Set())
                 return $this->mongoValue($key);
 

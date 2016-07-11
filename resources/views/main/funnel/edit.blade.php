@@ -61,7 +61,7 @@
         {!! Form::text('onExitPopupLink', $page['onExitPopup']['link'], ['name'=>'mongo[onExitPopup][link]', 'class'=>'editor form-control']) !!}
     </div>
 
-    <div class="form-group" style="background: #F9CF7F; padding: 1.5em;">
+    <div class="form-group" style="background: #F9CF7F; padding: 1.5em; min-height: 17em;">
         <h3><i class="fa fa-cubes" aria-hidden="true"></i> Components:</h3><small>add your wanted components</small>
         <br/>
         <div class="Components">

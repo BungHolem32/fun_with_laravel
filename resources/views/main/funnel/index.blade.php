@@ -6,9 +6,8 @@
     No Template selected
 @endif
 
-
-@if(isMongoNotEmpty($page->componentsEmailPopCom) && isMongoNotEmpty($page->componentsEmailPopCom->interval))
-    @com('email_pop')
+@if(isMongoNotEmpty($page->components->emailPopCom) && isMongoNotEmpty($page->components->emailPopCom->interval))
+    @com('emailPopCom')
 @endif
 
 {{--@section('content')

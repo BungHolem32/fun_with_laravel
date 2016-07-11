@@ -43,6 +43,7 @@ if(!function_exists('mb_strlen')){
 
 if(!function_exists('isMongoNotEmpty')){
 	function isMongoNotEmpty($mixed){
+		
 		if(is_object($mixed) && get_class($mixed) == 'App\mongo' && !empty($mixed->get()))
 			return true;
 		elseif(is_string($mixed) && !empty($mixed))

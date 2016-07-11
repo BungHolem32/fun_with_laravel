@@ -16,12 +16,15 @@ class Bot
 
     public function __construct(Customer $customer, $forceSetup=true)
     {
+
         $this->customer = $customer;
 
-        foreach($customer->getBotSettings() as $k=>$v){
+        foreach($this->customer->getBotSettings() as $k=>$v){
             $this->{$k} = $v;
         }
+
         if(!$this->status && $forceSetup){
+
             $this->setDefaultSettings();
         }
     }
