@@ -70,7 +70,7 @@ iframe {
     width : 94%;
 }
 
-.g-recaptcha .rc-anchor-normal-footer {
+.g-recaptcha div div iframe html body div .rc-anchor-normal-footer {
     margin-left : -16px;
 }
 
