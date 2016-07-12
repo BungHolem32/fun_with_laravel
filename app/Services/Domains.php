@@ -33,7 +33,9 @@ class Domains
         'maxway2profit-de.com' => 'skylinemarkets.com',
         'oxfordprofiter.com' => 'skylinemarkets.com',
         'alpineprofiter.com' => 'skylinemarkets.com',
-        'bavarianprofiter.com' => 'skylinemarkets.com'
+        'bavarianprofiter.com' => 'skylinemarkets.com',
+        'skylinemarkets.biz' => 'skylinemarkets.com',
+
 
     ];
 
