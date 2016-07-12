@@ -66,6 +66,15 @@ class FormController extends Controller {
         return Domains::autologinLink($destenation, Customer::get());
     }
 
+    private function checkIfEmailExists($email) {
+        $res_email = SpotApi::sendRequest('Customer', 'view', ['FILTER[email]'=>$email]);
+        return isset($res_email['status']['Customer']);
+     }
+
+    public function checkIfEmailExistsForAjax($email="") {
+        die( $this->checkIfEmailExists($email) ? "1" : "0");
+    }
+
     public function postEmailForm($lang = 'en'){
         $res['err'] = 1;
         $res['msg'] = 'Please try again later.';
@@ -83,12 +92,13 @@ class FormController extends Controller {
                 $res['msg'] = '';
 
                 /* Check if this email already exists */
-                $res_email = SpotApi::sendRequest('Customer', 'view', ['FILTER[email]'=>Request::get('email')]);
-                if (isset($res_email['status']['Customer'])) {
+                if ($this->checkIfEmailExists(Request::get('email'))) {
                     $res['err'] = 1;
                     $res['errs']['error'] =  Languages::getTrans('Email already exists');
                 }
                 /* ---------------------------------- */
+
+
             } else {
                 $errMsg = isset($ans['error']) ? $ans['error'] : 'invalid email address';
                 $res['errs']['error'] = $res['msg'] = Languages::getTrans($errMsg);

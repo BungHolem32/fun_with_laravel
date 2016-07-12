@@ -84,15 +84,13 @@ Route::group(['middleware' => 'auth', 'prefix'=>'admin'], function(){
  * Those beyond are for the users / costumer and NOT for admin purposes
  **/
 
-
 Route::post('ajax/sendSms',   ['uses' => 'SmsController@sendSMS'] );
 Route::post('ajax/validateSmsCode',   ['uses' => 'SmsController@validateSmsCode'] );
-
+Route::get('ajax/checkIfEmailExistsForAjax/{email}',   ['uses' => 'FormController@checkIfEmailExistsForAjax'] );
 
 Route::get('getLocation',   ['uses' => 'FormController@location'] );
 Route::post('postForm',     ['middleware'=>['Recaptcha'], 'uses' => 'FormController@postForm'] );
 Route::post('postEmailForm/{lang}', ['uses' => 'FormController@postEmailForm'] );
-
 
 Route::group(['middleware'=>'loggedIn'], function() {
     Route::post('ajax/refresh', ['uses' => 'PanelController@refresh']);
