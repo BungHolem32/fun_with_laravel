@@ -59,6 +59,7 @@
             success: function(res) {
                 if (res=="0") {
                     unique_email = true;
+                    checked_email = email;
                     $('#form').submit();
                 } else {
                     alert("Email already exists!");
