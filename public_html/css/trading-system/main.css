@@ -647,7 +647,7 @@ h1 mark {
         }
 
         .g-recaptcha > div {
-            width : 217px;
+            width : 217px !important;
         }
 
     }
