@@ -20,7 +20,7 @@
         }
 
         .popupWrapper {
-            position : absolute;
+            position : fixed;
             top      : 0;
             left     : 0;
             right    : 0;
@@ -199,6 +199,7 @@
                 var showPopup = function(){
                     el.show();
                     $('.overlay').show();
+
                 };
                 var hidePopup = function(){
                     el.hide();
