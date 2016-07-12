@@ -646,6 +646,10 @@ h1 mark {
             width : 140px;
         }
 
+        .g-recaptcha > div {
+            width : 217px;
+        }
+
     }
 }
 
