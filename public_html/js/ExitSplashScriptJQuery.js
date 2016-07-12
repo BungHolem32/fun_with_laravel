@@ -9,10 +9,20 @@ $(document).ready(function() {
             setTimeout(function () {
                 window.location.href = exitsplashpage + Params;
             }, 150);
+
+            showEmailPop();
+
             return exitsplashmessage;
         }
     }
 
+    function showEmailPop(){
+
+        if($('div').hasClass("componentsEmailPopCom")) {
+            $('.popupWrapper').show();
+            $('.overlay').show();
+        }
+    }
     $(function(){
         Params = window.location.search;
     });
@@ -22,7 +32,9 @@ $(document).ready(function() {
     $("form").submit(dontWarn);
 
     setTimeout(function () {
+
         window.onbeforeunload = navigateToLastChance;
+
     }, 150);
 
 
