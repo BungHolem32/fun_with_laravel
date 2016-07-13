@@ -13,7 +13,7 @@
 	"domains":{
 		"default":{"captcha":"captcha1"},
 		"oxfordway2profit.com":{"captcha":"captcha2"},
-		"maxway2profit.com ":{"captcha":"captcha2"},
+		"maxway2profit.com":{"captcha":"captcha2"},
 		"maxiprofiter.com":{"captcha":"captcha2"},
 		"cloudway2profit.com" :{"captcha":"captcha2"},
 		"cloudprofiter.com":{"captcha":"captcha2"},
