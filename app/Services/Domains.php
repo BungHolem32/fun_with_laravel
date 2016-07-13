@@ -34,9 +34,7 @@ class Domains
         'oxfordprofiter.com' => 'skylinemarkets.com',
         'alpineprofiter.com' => 'skylinemarkets.com',
         'bavarianprofiter.com' => 'skylinemarkets.com',
-        'skylinemarkets.biz' => 'skylinemarkets.com',
-
-
+        'skylinemarkets.biz' => 'skylinemarkets.com'
     ];
 
     public static function domainName($domain = '')
