@@ -37,6 +37,7 @@ class Domains
         'skylinemarkets.biz' => 'skylinemarkets.com'
     ];
 
+    
     public static function domainName($domain = '')
     {
         if (!$domain){
