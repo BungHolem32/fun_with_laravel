@@ -373,25 +373,7 @@
                     </div>
                 </section>
 
-<<<<<<< HEAD
-=======
-                <!--Video How_it_work PIC-->
-                <section id="video-how-method-works" class="container">
-                    <div class="row">
-                        <header class="col-md-12 col-sm-12 col-xs-12">
-                            <h2 class="title-question">How The Maple Method Works</h2>
-                        </header>
 
-                        <div class="video-n-images col-md-12">
-                            <img src="/img/aussie-new/uk/ipad.png" alt="ipad image" class="img-responsive center-block">
-                            <div class="video-tag">
-                                @include('funnels.layouts._partials._video', ['video_url'=>'http://video.chaki.netdna-cdn.com/guide4f.mp4','w'=>'100%', 'h'=>'100%','autoplay'=>'false'])
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
->>>>>>> 525228d115f29169bc5e538c9ca0c9f8c76397a9
                 {{--LIVE THIRD PARTY TRADE--}}
                 <section id="live-third-party" class="container">
                     <div class="row">
@@ -403,11 +385,7 @@
                             {{--table layout--}}
                             <div class="table-trader col-md-12 col-sm-12 col-xs-12 align-center">
                                 <ul class="col-md-12 col-sm-12 col-xs-12 align-center">
-<<<<<<< HEAD
                                     <li class="col-lg-6 col-md-4 col-sm-4 col-xs-4">Oxford Method Member</li>
-=======
-                                    <li class="col-lg-6 col-md-4 col-sm-4 col-xs-4">Maple Method Member</li>
->>>>>>> 525228d115f29169bc5e538c9ca0c9f8c76397a9
                                     <li class="col-lg-1 col-md-2 col-sm-2 col-xs-2">Profit</li>
                                     <li class="col-lg-3 col-md-3 col-sm-3 col-xs-3">Trade Time</li>
                                     <li class="col-lg-2 col-md-3 col-sm-3 col-xs-3">Currency</li>
@@ -442,12 +420,7 @@
         <!--===============================================FOOTER TAG====================================================-->
 
         <footer class="row col-md-12">
-
-<<<<<<< HEAD
             <div id="left-footer" class="col-md-10 col-sm-10 col-xs-9 push-left"> Copyright 2016 Oxford Method. All
-=======
-            <div id="left-footer" class="col-md-10 col-sm-10 col-xs-9 push-left"> Copyright 2016 Maple Method. All
->>>>>>> 525228d115f29169bc5e538c9ca0c9f8c76397a9
                 Right Reserved.
             </div>
             <div id="right-footer" class="col-md-2 col-sm-2 col-xs-3 push-right">
