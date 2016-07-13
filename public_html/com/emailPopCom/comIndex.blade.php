@@ -27,7 +27,9 @@
             z-index  : 100000;
             display  : none;
         }
-
+        .popupWrapper.container{
+            max-width: inherit;
+        }
         .popupWrapper .closeBtn {
             cursor : pointer;
         }
