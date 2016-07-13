@@ -77,10 +77,6 @@
     <div class="row">
         <h3><i class="fa fa-check-square-o"></i> Switches</h3>
         <div class="form-group">
-            {!! Form::checkbox('mongo[switches][showEmailField]', $page['switches']['showEmailField']) !!}
-            {!! Form::label('showEmailField', 'Show Email Field') !!}
-        </div>
-        <div class="form-group">
             {!! Form::checkbox('mongo[switches][showSmsField]', $page['switches']['showSmsField']) !!}
             {!! Form::label('showSmsField', 'Show Sms Field') !!}
         </div>
