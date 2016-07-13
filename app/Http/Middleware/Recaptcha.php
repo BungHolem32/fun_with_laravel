@@ -29,6 +29,12 @@ class Recaptcha
     }
 
     public static function validateCaptcha() {
+        $captcha_state = \Session::get('captchaTrue');
+        if ($captcha_state === true)  {
+            \Session::set('captchaTrue', false);
+            return true;
+        }
+        
         $url = "https://www.google.com/recaptcha/api/siteverify?secret=" . self::getCaptchaSecret() . "&response=" . \Request::get('g-recaptcha-response') . "&remoteip=" . $_SERVER['REMOTE_ADDR'];
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);
