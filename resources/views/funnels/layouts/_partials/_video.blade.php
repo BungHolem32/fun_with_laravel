@@ -7,13 +7,16 @@
 if(Request::get('ap')==1){
     $autoplay = '';
 }
-    if (isset($controls) && $controls !== false) $controls ='controls="controls"';
-    else $controls = '';
-    if(!isset($poster)) $poster = '';
+/**
+ * @var \App\Services\MobileDetect $mobileDetect
+ */
+if ($mobileDetect->isMobile() || $mobileDetect->isTablet() || (isset($controls) && $controls !== false)) $controls ='controls="controls"';
+else $controls = '';
+if(!isset($poster)) $poster = '';
 
 
-    if(isset($video_url))   $videoUrl = $video_url;
-    else                    $videoUrl = $page->video->get();
+if(isset($video_url))   $videoUrl = $video_url;
+else                    $videoUrl = $page->video->get();
 
 if(!isset($_GET['dev_video'])):
 ?>
