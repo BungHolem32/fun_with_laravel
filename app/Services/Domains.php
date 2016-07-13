@@ -34,6 +34,21 @@ class Domains
         'oxfordprofiter.com' => 'skylinemarkets.com',
         'alpineprofiter.com' => 'skylinemarkets.com',
         'bavarianprofiter.com' => 'skylinemarkets.com',
+        'psymoneysystem.com' => 'skylinemarkets.com',
+        'aussiemoneysystem.com' => 'skylinemarkets.com',
+        'oxfordmoneysystem.com' => 'skylinemarkets.com',
+        'maplemoneysystem.com' => 'skylinemarkets.com',
+        'cloudmoneysystem.com' => 'skylinemarkets.com',
+        'millionmoneysystem.com' => 'skylinemarkets.com',
+        'profitmaxmoneysystems.com' => 'skylinemarkets.com',
+        'profitmaxmoneysystem-de.com' => 'skylinemarkets.com',
+        'bavarianmoneysystem.com' => 'skylinemarkets.com',
+        'alpinemoneysystem.com' => 'skylinemarkets.com',
+        'luxvacationturkish.com' => 'skylinemarkets.com',
+        'football-insights.com' => 'skylinemarkets.com',
+        'thefinancialife.com' => 'skylinemarkets.com',
+        'theprofitmagazine.com' => 'skylinemarkets.com',
+        'theweeklyfinancials.com' => 'skylinemarkets.com',
         'skylinemarkets.biz' => 'skylinemarkets.com'
     ];
 
