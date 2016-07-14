@@ -291,7 +291,7 @@
                     <span class="step-num">STEP #2:</span> <span class="step-info"> MAKE A DEPOSIT </span>
                 </div>
 
-                <p>Banc de binary allows you to start trading with just $250</p>
+                <p>SkyLine Markets allows you to start trading with just $250</p>
 
                 <div class="step">
                     <div class="arrow"></div>
@@ -385,7 +385,7 @@
                             <div class="user user2"></div>
                             <div class="comment">
                                 <div class="comment-title">Posted by Rebecca Mackenzi</div>
-                                <div class="comment-text">Banc de binary is the best. My husband makes an average of
+                                <div class="comment-text">SkyLine Markets is the best. My husband makes an average of
                                     $1800 a month which we put in an account for the children. He spends around an hour
                                     a night online, if that. Definitely worth taking a look at.
                                 </div>
