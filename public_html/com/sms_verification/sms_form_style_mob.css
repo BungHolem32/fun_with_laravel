@@ -31,7 +31,6 @@
 	display: block;
 	position: relative;
 	right: 15px;
-	bottom: 1px;
 	opacity: 1;
 }
 #sms_form_section.hidden_block span.close:hover{
@@ -48,7 +47,7 @@
 	font-weight: bold;
 	font-family: sans-serif;
 	text-align: center;
-	padding-left: 40px;
+	padding-left: 10px;
 	padding-top: 10px;
 }
 #sms_form_section.hidden_block span.content {
