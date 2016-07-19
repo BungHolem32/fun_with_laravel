@@ -27,7 +27,14 @@ $cacheable = ($_SERVER['REQUEST_METHOD'] == 'GET'
 				&& $_SERVER['REMOTE_ADDR'] != '31.154.27.50');
 if($cacheable){
 	// its not admin: do cache
-	$filename = '../storage/html/'.md5($url).'.html';
+	require_once ('../vendor/mobiledetect/mobiledetectlib/Mobile_Detect_Copy.php');
+	$subdomain = '';
+	$mobile_Detect = new Mobile_Detect_Copy();
+	if ($mobile_Detect->isMobile() || $mobile_Detect->isTablet()) {
+		$subdomain = 'mobile.';
+	}
+	$virtualUrl = $_SERVER['REQUEST_SCHEME'] . '://' . $subdomain . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+	$filename = '../storage/html/' . md5($virtualUrl) . '.html';
 	/*echo time();
 	echo '<br>'.filemtime($filename);
 	echo '<br>'.(time() - filemtime($filename)).'<br>';*/
