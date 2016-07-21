@@ -8126,6 +8126,10 @@ body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-conten
   /*DEPOSIT TITLE WRAPPER*/
   /*FORM WRAPPER FOR DEPOSIT*/
 }
+body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit.modal-praxis-pay{
+  background-color: #ffffff;
+
+}
 @media (max-width: 768px) {
   body .content-wrapper .modal-deposit .modal-dialog-deposit .modal-deposit-content .modal-body-deposit {
     border-bottom: none;

@@ -18,7 +18,16 @@ use Log;
 class PanelController extends Controller {
 
     public function index($page){
-        return parent::index($page)->with('bot_settings', Bot::create(Customer::get(), false)->getSettings());
+        $pass = Customer::get('email');
+        $pin = Customer::get('id');
+        return parent::index($page)
+            ->with('bot_settings', Bot::create(Customer::get(), false)->getSettings())
+            ->with([
+            'sportsbook' => 'SkyLineM '.Customer::get('currency'),
+            'pin' => $pin,
+            'password' => $pass,
+            'secret' => md5($pin.'-'.$pass.'-'.env('PRAXIS_PAY_SECRET'))
+        ])   ;
     }
 
     public function getPageLayouts(){
