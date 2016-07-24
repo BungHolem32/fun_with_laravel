@@ -126,7 +126,9 @@
                             <p>
                                 I’d say 1 in 3, easily. I’m pretty close to a lot of them (as a friend, he points out laughing), and I know what they get up to. I don’t condone it. But I can’t stop it either. It’s their life at the end of the day.
                             </p>
-                            <p><iframe width="560" height="315" src="http://www.youtube.com/embed/nwe-H6l4beM?wmode=transparent" ></iframe></p>
+                            <p>
+                                @include('funnels.layouts._partials._video')
+                            </p>
                             <p>"Anyone can use this method to make as much as £350 a day from home..."</p>
                             <p><strong>We chat a little more about footballers and their unfaithful ways, but it’s when we turn to the subject of money – which Premier League players are never short of – that the conversation starts to get really interesting.</strong></p>
                             <p>
