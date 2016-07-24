@@ -52,8 +52,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-2 col-lg-offset-6  col-md-12 col-md-offset-5">
-                        <form id="form" class="contact-form" action="#" novalidate>
-                            <p class="form_title">Open your binary options account and start trading <mark>IMMEDIATELY!</mark></p>
+
                             {{--<div class="form-group">--}}
                                 {{--<input type="text" placeholder="First Name" >--}}
                             {{--</div>--}}
@@ -74,7 +73,7 @@
                                 {{--<button type="submit" class="btn-arrow">create account <span><img src="/img/60seconds/btn-arrow.png" height="45" width="34" alt="image description"></span></button>--}}
                             {{--</div>--}}
                             @include('funnels.layouts._partials._form-60seconds', ['funnelId' => $page->getParent()->id])
-                        </form>
+                        </div>
 
                         {{--<div class="form second">--}}
 
@@ -86,8 +85,6 @@
 
 
                         {{--</div>--}}
-                    </div>
-                </div>
                 <div class="row columns-holder">
                     <div class="col-md-2">
                         <div class="info-box">

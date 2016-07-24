@@ -60,8 +60,6 @@ foreach($form->membersFields->getChildren() as $field){
         </div>
 
     </div>
-
-
 </div>
 @if($show_recaptcha)
     <div class="g-recaptcha" data-sitekey="{{\App\Http\Middleware\Recaptcha::getCaptchaDataSiteKey()}}"></div>
