@@ -1,0 +1,166 @@
+/*!
+* direction.less v0.1.0
+*
+* Copyright 2013 Moshe Simantov
+* Licensed under the MIT license
+*
+* Keep tracking: https://github.com/DevelopmentIL/direction.less
+*/
+/*i.fa:before when (@rtl) {
+  display: inline-block;
+  .flip-horizontal();
+}*/
+.transform-mirror {
+  -webkit-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+body {
+  background: black !important;
+}
+body .top-elem .container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 830px;
+}
+body .top-elem .container .row.strip-top-logo-wrapper {
+  background: black;
+  padding: 35px 20px 35px 20px;
+  box-shadow: 0px 1px 3px 1px #222222;
+  z-index: 2;
+  position: relative;
+}
+body .top-elem .container .row.strip-top-logo-wrapper img {
+  width: 50%;
+}
+body .top-elem .container .row.strip-top-logo-wrapper .img img {
+  position: absolute;
+  right: 5px;
+  top: 33px;
+  width: 20%;
+}
+body .top-elem .container .row.strip-center-wrapper {
+  background: linear-gradient(to bottom, #FBFBFB 5%, #f7f7f7 40%, #DEDEDE);
+  box-shadow: inset 0px -6px 20px 1px lightgray;
+}
+body .top-elem .container .row.strip-center-wrapper .content header h2 {
+  font-size: 35px;
+  font-weight: bold;
+  text-shadow: -1px 1px 1px #848484;
+  color: black;
+}
+body .top-elem .container .row.strip-center-wrapper .content .col-md-3 {
+  padding: 0;
+}
+@media (min-width: 640px) {
+  body .top-elem .container .row.strip-center-wrapper .content .col-md-3 {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+body .top-elem .container .row.strip-center-wrapper .content .col-md-3 p {
+  font-size: 15px;
+  font-weight: bold;
+}
+body .top-elem .container .row.strip-center-wrapper .content .col-md-3 p img {
+  width: 10%;
+}
+body .top-elem .container .row.strip-bottom-wrapper {
+  background: #C2AD2E;
+  position: relative;
+}
+body .top-elem .container .row.strip-bottom-wrapper h2 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 43px;
+  color: black;
+  font-weight: bolder;
+  text-shadow: 1px 1px 1px #D2CC78;
+}
+body .top-elem .container .row.strip-bottom-wrapper .bottom-arrow {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+body .top-elem .container .row.strip-bottom-wrapper .bottom-arrow img {
+  position: absolute;
+  width: 100%;
+  top: -1px;
+}
+body .bottom-signs {
+  background: #edede5;
+  padding-bottom: 20px;
+  max-width: 830px;
+  margin: 0 auto;
+}
+body .bottom-signs .container {
+  max-width: 830px;
+  border-top: none;
+  width: 830px;
+}
+body .form-wrapper.container {
+  width: 100%;
+  background: #EDEDE5;
+  max-width: 830px;
+  margin: 0 auto;
+  padding: 30px 0 30px 0;
+  /*FORM TAG*/
+}
+body .form-wrapper.container .form-brand {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 800px;
+}
+body .form-wrapper.container .form-brand #other-error.error {
+  display: none !important;
+}
+body .form-wrapper.container .form-brand .form-group {
+  width: 95%;
+  margin: 10px auto;
+}
+body .form-wrapper.container .form-brand .form-group .form-control {
+  display: block;
+  width: 100%;
+  height: 85px;
+  padding: 6px 12px 6px 12px;
+  border-radius: 0;
+  font-size: 28px;
+  line-height: 1.42857143;
+  font-weight: bold;
+  color: #747474;
+  background: #ffffff none;
+  border: 1px solid #747474;
+  /* border-radius: 4px; */
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+body .form-wrapper.container .form-brand .form-group .form-control#prefix {
+  width: 10%;
+  margin-right: 3%;
+}
+body .form-wrapper.container .form-brand .form-group .form-control#phone,
+body .form-wrapper.container .form-brand .form-group .form-control#phone3 {
+  width: 87%;
+  padding-right: 0;
+}
+body .form-wrapper.container .form-brand .form-group .form-control + label.error {
+  display: none !important;
+}
+body .form-wrapper.container .form-brand .form-group .form-control.error {
+  border: 1px solid red;
+}
+body .form-wrapper.container .form-brand .form-group #submit {
+  background: url('/img/rboptions/bt.png') no-repeat;
+  background-size: 100%;
+  border: none;
+  height: 116px;
+}
+@media (min-width: 420px) {
+  body .form-wrapper.container .form-brand .form-group #submit {
+    height: 116px;
+  }
+}
+
+/*# sourceMappingURL=style-0.css.map */
