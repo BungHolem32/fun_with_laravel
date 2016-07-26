@@ -137,12 +137,12 @@ body .form-wrapper.container .form-brand .form-group .form-control {
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 body .form-wrapper.container .form-brand .form-group .form-control#prefix {
-  width: 10%;
+  width: 13%;
   margin-right: 3%;
 }
 body .form-wrapper.container .form-brand .form-group .form-control#phone,
 body .form-wrapper.container .form-brand .form-group .form-control#phone3 {
-  width: 87%;
+  width: 84%;
   padding-right: 0;
 }
 body .form-wrapper.container .form-brand .form-group .form-control + label.error {
@@ -170,6 +170,14 @@ body .form-wrapper.container .form-brand .form-group #submit:active {
 }
 body section {
   overflow: hidden;
+}
+body .loading {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 23px;
+  color: #5d5c16;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px 1px;
 }
 
 /*# sourceMappingURL=style-0.css.map */
