@@ -167,5 +167,8 @@ body .form-wrapper.container .form-brand .form-group #submit:active {
     height: 116px;
   }
 }
+body section {
+  overflow: hidden;
+}
 
 /*# sourceMappingURL=style-1.css.map */
