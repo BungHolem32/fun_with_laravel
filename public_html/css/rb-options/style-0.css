@@ -156,6 +156,12 @@ body .form-wrapper.container .form-brand .form-group #submit {
   background-size: 100%;
   border: none;
   height: 116px;
+  transition: all 500ms ease-in;
+}
+body .form-wrapper.container .form-brand .form-group #submit:hover,
+body .form-wrapper.container .form-brand .form-group #submit:active {
+  background: url('/img/rboptions/bt-o.png') no-repeat;
+  background-size: 100%;
 }
 @media (min-width: 420px) {
   body .form-wrapper.container .form-brand .form-group #submit {
