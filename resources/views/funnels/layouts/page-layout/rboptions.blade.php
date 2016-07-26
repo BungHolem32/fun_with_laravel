@@ -1,5 +1,4 @@
 @section('head')
-
     <meta name="viewport" content="width=640px, initial-scale=.5, maximum-scale=.5"/>
     <link rel="stylesheet" href="/css/rb-options/style-{{Request::local()->dir}}.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -59,5 +58,7 @@
     </section>
 @stop
 @section('bottom-scripts')
-
+    <script>
+        $('.rc-anchor-normal').css('width', 'auto');
+    </script>
 @stop

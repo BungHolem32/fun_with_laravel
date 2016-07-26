@@ -209,11 +209,31 @@ body {
   }
 
   .loading {
-    margin     : 0 auto;
-    text-align : center;
-    font-size  : 23px;
-    color      : #5d5c16;
-    font-weight: bold;
-    text-shadow: 1px 1px 1px 1px;
+    margin      : 0 auto;
+    text-align  : center;
+    font-size   : 23px;
+    color       : #5d5c16;
+    font-weight : bold;
+    text-shadow : 1px 1px 1px 1px;
+  }
+
+  div.g-recaptcha {
+    margin : 1em auto;
+    div {
+      margin : 0 auto;
+      div {
+        iframe {
+          width : 100%;
+          html {
+            body {
+              div {
+                width : 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
   }
 }
