@@ -136,22 +136,6 @@ class ConsumerStrategies_CurlConsumer extends ConsumerStrategies_AbstractConsume
         }
     }
 
-   /* protected function _execute($url, $data) {
-        $uri = $url ."?". $data;
-        $response = file_get_contents($uri);
-        if (false === $response) {
-            $this->_handleError(100, "Cannot send data to: " . $uri);
-            return false;
-        } else {
-            if (trim($response) == "1") {
-                return true;
-            } else {
-                $this->_handleError(101, "Wrong result from url: " . $uri);
-                return false;
-            }
-        }
-    }*/
-
     /**
      * Write using a forked cURL process
      * @param $url
