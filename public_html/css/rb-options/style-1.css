@@ -16,6 +16,14 @@
 }
 body {
   background: black !important;
+  /*TOP STRIPS*/
+  /*FORM PART*/
+  /*BOTTON SIGNS*/
+  /*CAPTCHA STYLE*/
+  /*WHILE LOADING */
+}
+body section {
+  overflow: hidden;
 }
 body .top-elem .container {
   margin: 0 auto;
@@ -43,26 +51,21 @@ body .top-elem .container .row.strip-center-wrapper {
   box-shadow: inset 0px -6px 20px 1px lightgray;
 }
 body .top-elem .container .row.strip-center-wrapper .content header h2 {
-  font-size: 45px !important;
+  font-size: 65px !important;
   font-size: 35px;
   font-weight: bold;
   text-shadow: -1px 1px 1px #848484;
   color: black;
 }
-body .top-elem .container .row.strip-center-wrapper .content .col-md-3 {
+body .top-elem .container .row.strip-center-wrapper .content .prop-wrapper .col-md-4 {
   padding: 0;
 }
-@media (min-width: 640px) {
-  body .top-elem .container .row.strip-center-wrapper .content .col-md-3 {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-body .top-elem .container .row.strip-center-wrapper .content .col-md-3 p {
-  font-size: 15px;
+body .top-elem .container .row.strip-center-wrapper .content .prop-wrapper .col-md-4 p {
+  font-size: 20px;
   font-weight: bold;
+  font-size: 25PX;
 }
-body .top-elem .container .row.strip-center-wrapper .content .col-md-3 p img {
+body .top-elem .container .row.strip-center-wrapper .content .prop-wrapper .col-md-4 p img {
   width: 10%;
 }
 body .top-elem .container .row.strip-bottom-wrapper {
@@ -76,28 +79,16 @@ body .top-elem .container .row.strip-bottom-wrapper h2 {
   color: black;
   font-weight: bolder;
   text-shadow: 1px 1px 1px #D2CC78;
+  font-size: 65PX;
 }
-body .top-elem .container .row.strip-bottom-wrapper .bottom-arrow {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-body .top-elem .container .row.strip-bottom-wrapper .bottom-arrow img {
-  position: absolute;
-  width: 100%;
-  top: -1px;
-}
-body .bottom-signs {
+body .bottom-arrow.container {
+  max-width: 830px;
   background: #edede5;
-  padding-bottom: 20px;
-  max-width: 830px;
-  margin: 0 auto;
+  padding: 0;
+  width: 100%;
 }
-body .bottom-signs .container {
-  max-width: 830px;
-  border-top: none;
-  width: 830px;
+body .bottom-arrow.container img {
+  width: 100%;
 }
 body .form-wrapper.container {
   width: 100%;
@@ -156,6 +147,10 @@ body .form-wrapper.container .form-brand .form-group #submit {
   border: none;
   height: 116px;
   transition: all 500ms ease-in;
+  font-size: 44px;
+  color: black;
+  text-shadow: 1px 2px 1px gray;
+  font-size: 65PX;
 }
 body .form-wrapper.container .form-brand .form-group #submit:hover,
 body .form-wrapper.container .form-brand .form-group #submit:active {
@@ -167,16 +162,16 @@ body .form-wrapper.container .form-brand .form-group #submit:active {
     height: 116px;
   }
 }
-body section {
-  overflow: hidden;
-}
-body .loading {
+body .bottom-signs {
+  background: #edede5;
+  padding-bottom: 20px;
+  max-width: 830px;
   margin: 0 auto;
-  text-align: center;
-  font-size: 23px;
-  color: #5d5c16;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px 1px;
+}
+body .bottom-signs .container {
+  max-width: 830px;
+  border-top: none;
+  width: 830px;
 }
 body div.g-recaptcha {
   margin: 1em auto;
@@ -187,8 +182,13 @@ body div.g-recaptcha div {
 body div.g-recaptcha div div iframe {
   width: 100%;
 }
-body div.g-recaptcha div div iframe html body div {
-  width: 100%;
+body .loading {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 23px;
+  color: #5d5c16;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px 1px;
 }
 
 /*# sourceMappingURL=style-1.css.map */

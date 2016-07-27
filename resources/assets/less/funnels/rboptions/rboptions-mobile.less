@@ -1,16 +1,13 @@
-@default-space : 20px;
-@container-max-width : 830px;
-
-.transform-mirror {
-  -moz-transform    : scale(-1, 1);
-  -webkit-transform : scale(-1, 1);
-  -o-transform      : scale(-1, 1);
-  -ms-transform     : scale(-1, 1);
-  transform         : scale(-1, 1);
-}
+@import '_partials';
 
 body {
   background : black !important;
+
+  section {
+    overflow : hidden;
+  }
+
+  /*TOP STRIPS*/
   .top-elem {
 
     .container {
@@ -47,7 +44,7 @@ body {
             header {
               h2 {
                 & when (@direction=rtl) {
-                  font-size : 45px !important;
+                  font-size : 65px !important;
                 }
                 font-size   : 35px;
                 font-weight : bold;
@@ -55,23 +52,25 @@ body {
                 color       : black;
               }
             }
-            .col-md-3 {
-              padding : 0;
 
-              @media (min-width : 640px) {
-                .padding-right (15px);
-                .padding-left(15px);
-              }
-              p {
-                font-size   : 15px;
-                font-weight : bold;
-                img {
-                  width : 10%;
+            .prop-wrapper {
+              .col-md-4 {
+                padding : 0;
+
+                p {
+                  font-size   : 20px;
+                  font-weight : bold;
+
+                  & when (@direction = rtl) {
+                    font-size : 25PX;
+                  }
+
+                  img {
+                    width : 10%;
+                  }
                 }
               }
-
             }
-
           }
         }
 
@@ -86,41 +85,29 @@ body {
             color         : black;
             font-weight   : bolder;
             text-shadow   : 1px 1px 1px #D2CC78;
-          }
-
-          .bottom-arrow {
-            width    : 100%;
-            position : absolute;
-            .right(0);
-            bottom   : 0;
-            & when (@direction = ltr) {
-              .transform-mirror;
-            }
-
-            img {
-              position : absolute;
-              width    : 100%;
-              top      : -1px;
+            & when (@direction = rtl) {
+              font-size : 65PX;
             }
           }
+
         }
       }
     }
   }
 
-  .bottom-signs {
-    background     : #edede5;
-    padding-bottom : 20px;
-    max-width      : @container-max-width;
-    margin         : 0 auto;
-
-    .container {
-      max-width  : @container-max-width;
-      border-top : none;
-      width      : 830px;
+  .bottom-arrow {
+    &.container {
+      max-width  : 830px;
+      background : #edede5;
+      padding    : 0;
+      width      : 100%;
+      img {
+        width : 100%;
+      }
     }
   }
 
+  /*FORM PART*/
   .form-wrapper {
     &.container {
       width      : 100%;
@@ -188,6 +175,13 @@ body {
             border             : none;
             height             : 116px;
             -webkit-transition : all 500ms ease-in; -moz-transition : all 500ms ease-in; -ms-transition : all 500ms ease-in; -o-transition : all 500ms ease-in; transition : all 500ms ease-in;
+            font-size          : 44px;
+            color              : black;
+            text-shadow        : 1px 2px 1px gray;
+
+            & when (@direction = rtl) {
+              font-size : 65PX;
+            }
 
             &:hover, &:active {
               background      : url('/img/rboptions/bt-o.png') no-repeat;
@@ -204,10 +198,34 @@ body {
 
   }
 
-  section {
-    overflow : hidden;
+  /*BOTTON SIGNS*/
+  .bottom-signs {
+    background     : #edede5;
+    padding-bottom : 20px;
+    max-width      : @container-max-width;
+    margin         : 0 auto;
+
+    .container {
+      max-width  : @container-max-width;
+      border-top : none;
+      width      : 830px;
+    }
   }
 
+  /*CAPTCHA STYLE*/
+  div.g-recaptcha {
+    margin : 1em auto;
+    div {
+      margin : 0 auto;
+      div {
+        iframe {
+          width : 100%;
+        }
+      }
+    }
+  }
+
+  /*WHILE LOADING */
   .loading {
     margin      : 0 auto;
     text-align  : center;
@@ -216,24 +234,5 @@ body {
     font-weight : bold;
     text-shadow : 1px 1px 1px 1px;
   }
-
-  div.g-recaptcha {
-    margin : 1em auto;
-    div {
-      margin : 0 auto;
-      div {
-        iframe {
-          width : 100%;
-          html {
-            body {
-              div {
-                width : 100%;
-              }
-            }
-          }
-        }
-      }
-    }
-
-  }
 }
+

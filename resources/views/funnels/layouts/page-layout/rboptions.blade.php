@@ -14,35 +14,61 @@
             <div class="row strip-top-logo-wrapper">
                 <img src="/img/rboptions/logo.png" alt="" class="img-responsive center-block">
                 <div class="img">
-                    <img src="/img/rboptions/icon.png" alt="" class="img-responsive">
+                    @if(isMongoNotEmpty($page->switches->stamp))
+                        <img src="{{$page->switches->stamp}}" alt="" class="img-responsive">
+                    @else
+                        <img src="/img/rboptions/en/icon.png" alt="" class="img-responsive">
+                    @endif
                 </div>
             </div>
+
             <div class="row strip-center-wrapper">
                 <div class="content">
                     <header>
                         <h2 class="text-uppercase text-center">@ln(our advantages)</h2>
                     </header>
-                    <div class="pull-left  col-md-3 col-sm-4 col-xs-4 text-center">
-                        <p class="text-capitalize"><img src="/img/rboptions/v.png" alt=""> @ln(same day withdrawal)</p>
-                    </div>
-                    <div class="col-md-3 col-md-offset-1 col-sm-4 col-xs-4 text-center">
-                        <p class="text-capitalize"><img src="/img/rboptions/v.png" alt=""> 100% @ln(bonus)</p>
-                    </div>
-                    <div class="pull-right col-md-3 col-sm-4 col-xs-4 text-center">
-                        <p class="text-capitalize"><img src="/img/rboptions/v.png" alt=""> @ln(education center)</p>
+
+                    <div class="prop-wrapper container">
+                        <div class="col-md-4 col-sm-4 col-xs-4 text-center">
+                            <p class="text-capitalize"><img src="/img/rboptions/v.png" alt="">
+                                @ln(same day withdrawal)</p>
+                        </div>
+
+                        <div class="col-md-4 col-sm-4 col-xs-4 text-center">
+                            <p class="text-capitalize">
+                                <img src="/img/rboptions/v.png" alt="">
+                                @ln(bonus) 100%
+                            </p>
+                        </div>
+
+                        <div class="col-md-4 col-sm-4 col-xs-4 text-center">
+                            <p class="text-capitalize">
+                                <img src="/img/rboptions/v.png" alt="">
+                                @ln(education center)
+                            </p>
+                        </div>
+
+                        {{--*/ $var = ['same day withdrawal','bonus','education center'] /*--}}
+                        {{--@foreach($var as $key => $prop)--}}
+                        {{--<div class="col-md-4 col-sm-4 col-xs-4 text-center">--}}
+                        {{--<p class="text-capitalize">--}}
+                        {{--<img src="/img/rboptions/v.png" alt=""> @ln({{$prop}}) {{$key == 1? '100%' :''}}--}}
+                        {{--</p>--}}
+                        {{--</div>--}}
+                        {{--@endforeach--}}
+
                     </div>
                 </div>
             </div>
+
             <div class="row strip-bottom-wrapper">
                 <h2 class="text-center  text-capitalize">@ln(open an account with rboptions)</h2>
-                <div class="bottom-arrow">
-                    <img src="/img/rboptions/arrow.png" alt="">
-                </div>
             </div>
-
         </div>
     </section>
-
+    <section class="bottom-arrow container">
+        <img src="/img/rboptions/arrow.png" alt="">
+    </section>
 
 
     {{--FORM PART --}}
