@@ -101,6 +101,9 @@ body {
     }
 
     .bottom-arrow {
+      & when (@direction =rtl) {
+        .transform-mirror;
+      }
       &.container {
         max-width  : 830px;
         background : #edede5;

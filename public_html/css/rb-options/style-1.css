@@ -87,6 +87,10 @@ body .wrapper .top-elem .container .row.strip-bottom-wrapper h2 {
   text-shadow: 1px 1px 1px #D2CC78;
   font-size: 65PX;
 }
+body .wrapper .bottom-arrow {
+  -webkit-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
 body .wrapper .bottom-arrow.container {
   max-width: 830px;
   background: #edede5;
