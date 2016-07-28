@@ -41,7 +41,6 @@ class FormController extends Controller {
             }
 
             $res = SpotApi::sendRequest('Customer', 'add', Request::all());
-
             if($res['err'] === 0){
                 Customer::login(\Request::all());
                 IpLog::add(\Request::ip(), 'createAccount');
@@ -49,7 +48,8 @@ class FormController extends Controller {
                 // This send the mail to mixpanel an comment to activate.
                 if($funnelPage->switches->mixPanel === "1") {
                     $phone = Request::get('prefix') . Request::get('phone');
-                    $this->addCustomerToMixpanel(Request::get('FirstName'), Request::get('LastName'), Request::get('email'), $phone);
+                    $realUserId = $res["status"]["Customer"]["data_id"];
+                    $this->addCustomerToMixpanel(Request::get('FirstName'), Request::get('LastName'), Request::get('email'), $phone, $realUserId);
                 }
 
                 $res['destination'] = $this->getDestination();
@@ -151,7 +151,7 @@ class FormController extends Controller {
         $mp->people->set(crc32($email), $data);
     }
 
-    private function addCustomerToMixpanel($firstname, $lastname, $email, $phone){
+    private function addCustomerToMixpanel($firstname, $lastname, $email, $phone, $realUserId){
         require base_path().'/app/Lib/Mixpanel/Mixpanel.php';
         // get the Mixpanel class instance, replace with your project token
         $ip = Request::ip();
@@ -173,9 +173,7 @@ class FormController extends Controller {
             'SubCampaignId' 	=> $subCampaignId,
             'Type' 	            => 'CUSTOMER'
         );
-        $mp->people->set(crc32($email), $data);
-
-        var_dump($data);
+        $mp->people->set($realUserId, $data);
     }
 
 
