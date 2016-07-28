@@ -1,4 +1,4 @@
-<?php //namespace App\Lib\Mixpanel;
+<?php
 
 require_once(dirname(__FILE__) . "/Base/MixpanelBase.php");
 require_once(dirname(__FILE__) . "/Producers/MixpanelPeople.php");

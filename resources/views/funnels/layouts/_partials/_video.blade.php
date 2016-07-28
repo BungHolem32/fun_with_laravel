@@ -105,4 +105,6 @@ if(!isset($_GET['dev_video'])):
     </video>
 @endif
 
+<script src="/js/showControls.js"></script>
+
 <?php endif; ?>

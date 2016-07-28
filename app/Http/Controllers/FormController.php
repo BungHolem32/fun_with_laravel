@@ -5,6 +5,7 @@ use App\Http\Requests;
 use App\IpLog;
 use App\Languages;
 use App\mongo;
+use App\Page;
 use App\Services\Domains;
 use App\Services\SpotApi;
 use App\Services\MailVerify;
@@ -15,9 +16,6 @@ use Request;
 
 
 class FormController extends Controller {
-
-    const mixPanelApiKey = '34b64f3c20373ebb1d955ba2474fa420';
-    const mixPanelProjectToken = 'bcf043092b46487cd826c996282bde8a';
 
     public function getFieldsTypes(){
         return array('text','textarea','email','phone','country','password','submit','hidden');
@@ -47,6 +45,13 @@ class FormController extends Controller {
             if($res['err'] === 0){
                 Customer::login(\Request::all());
                 IpLog::add(\Request::ip(), 'createAccount');
+
+                // This send the mail to mixpanel an comment to activate.
+                if($funnelPage->switches->mixPanel === "1") {
+                    $phone = Request::get('prefix') . Request::get('phone');
+                    $this->addCustomerToMixpanel(Request::get('FirstName'), Request::get('LastName'), Request::get('email'), $phone);
+                }
+
                 $res['destination'] = $this->getDestination();
             }
             elseif($res['errs']['error'] == 'emailAlreadyExists'){
@@ -61,9 +66,9 @@ class FormController extends Controller {
 
     private function getDestination(){
         $funnelPage = \App\Page::find(Request::get('parentPage'));
-        $destenation = $funnelPage->destinationSite->get();
-        if(empty($destenation)) $destenation = '';
-        return Domains::autologinLink($destenation, Customer::get());
+        $destination = $funnelPage->destinationSite->get();
+        if(empty($destination)) $destination = '';
+        return Domains::autologinLink($destination, Customer::get());
     }
 
     private function checkIfEmailExists($email) {
@@ -86,8 +91,13 @@ class FormController extends Controller {
             $ans = MailVerify::verify(Request::get('email'));
             if($ans === true){
                 // TODO: add mixpanel event fire here.
+
                 // This send the mail to mixpanel an comment to activate.
-                //$this->addMailToMixpanel(Request::get('email'),Request::get('pageId'));
+                $funnelPage = Page::find(Request::get('pageId'));
+                if($funnelPage->switches->mixPanel === "1") {
+                    $this->addLeadToMixpanel(Request::get('email'), Request::get('pageId'));
+                }
+
                 $res['err'] = 0;
                 $res['msg'] = '';
 
@@ -118,23 +128,54 @@ class FormController extends Controller {
      * @param int $pageId
      * @return void
      */
-    private function addMailToMixpanel($email,$pageId){
+    private function addLeadToMixpanel($email,$pageId){
         require base_path().'/app/Lib/Mixpanel/Mixpanel.php';
         // get the Mixpanel class instance, replace with your project token
         $ip = Request::ip();
         $pageTitle = \App\Page::find($pageId)->title->get();
         //$countryISO = json_decode(file_get_contents('http://api-v2.rboptions.com/locator/'.$ip),true)['iso'];
         $countryISO = json_decode(file_get_contents('http://locator.rboptions.com/locator/'.$ip),true)['iso'];
+        $mp = \Mixpanel::getInstance(env('MIXPANEL_PROJECT_TOKEN_LEADS'));
 
-        $mp = \Mixpanel::getInstance(self::mixPanelProjectToken);
-        $mp->people->set(crc32($email), array(
-            '$email' 			=> $email,
-            '$ip'               => $ip,
-            '$country_code'     => $countryISO,
-            //'campaignId' 		=> Request::get('campaign'),
-            //'subCampaignId' 	=> Request::get('param'),
-            'funnel' 	        => $pageTitle
-        ));
+        $campaignId = empty(Request::get('campaign')) ? "-" : Request::get('campaign');
+        $subCampaignId = empty(Request::get('param')) ? "-" : Request::get('param');
+        $data = array(
+            'Email' 			=> $email,
+            'Ip'                => $ip,
+            'Country_code'      => $countryISO,
+            'CampaignId' 		=> $campaignId,
+            'SubCampaignId' 	=> $subCampaignId,
+            'Funnel' 	        => $pageTitle,
+            'Type' 	            => 'LEAD'
+        );
+        $mp->people->set(crc32($email), $data);
+    }
+
+    private function addCustomerToMixpanel($firstname, $lastname, $email, $phone){
+        require base_path().'/app/Lib/Mixpanel/Mixpanel.php';
+        // get the Mixpanel class instance, replace with your project token
+        $ip = Request::ip();
+        //$countryISO = json_decode(file_get_contents('http://api-v2.rboptions.com/locator/'.$ip),true)['iso'];
+        $countryISO = json_decode(file_get_contents('http://locator.rboptions.com/locator/'.$ip),true)['iso'];
+        $mp = \Mixpanel::getInstance(env('MIXPANEL_PROJECT_TOKEN_CUSTOMERS'));
+
+        $campaignId = empty(Request::get('campaign')) ? "-" : Request::get('campaign');
+        $subCampaignId = empty(Request::get('param')) ? "-" : Request::get('param');
+
+        $data = array(
+            'Name' 			    => $firstname,
+            'Surname' 			=> $lastname,
+            'Phone' 			=> $phone,
+            'Email' 			=> $email,
+            'Ip'                => $ip,
+            'Country_code'      => $countryISO,
+            'CampaignId' 		=> $campaignId,
+            'SubCampaignId' 	=> $subCampaignId,
+            'Type' 	            => 'CUSTOMER'
+        );
+        $mp->people->set(crc32($email), $data);
+
+        var_dump($data);
     }
 
 
