@@ -67,6 +67,7 @@ foreach($form->membersFields->getChildren() as $field){
     </div>
 {!! Form::close() !!}
 
+
 @section('bottom-scripts')
     @include('funnels.layouts._partials._form-scripts')
 @append
