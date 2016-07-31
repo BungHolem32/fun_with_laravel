@@ -590,7 +590,7 @@ h1 i img {
 }
 
 .contact-form .form-group label.error, .contact-form label#other-error.error {
-    display : none !important;
+    /*display : none !important;*/
 }
 
 .contact-form .form-group.submit {
