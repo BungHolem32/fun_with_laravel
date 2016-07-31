@@ -63,7 +63,6 @@ foreach($form->membersFields->getChildren() as $field){
                     <input type="{{ $field[0] }}" id="{{ $field[1] }}" class="form-control submit-btn text-capitalize" value="@ln(open account)" name="{{ $field[1] }}" value="" data-cip-id="{{ $field[1] }}">
                 </div>
             @endif
-
         @endforeach
     </div>
 {!! Form::close() !!}
