@@ -16,7 +16,7 @@ foreach($form->membersFields->getChildren() as $field){
 }
 ?>
 
-{{--*/ $openAccount = '@ln(open account)'; /*--}}
+{{--*/ $openAccount = '@ln(open account1)'; /*--}}
 <ul class="errorMessages"></ul>
 {!! Form::open(['url' => url('postForm').'?'.$_SERVER["QUERY_STRING"],
                 'id'=>'form',
@@ -62,7 +62,6 @@ foreach($form->membersFields->getChildren() as $field){
                     @if($show_recaptcha)
                         <div class="g-recaptcha" data-sitekey="{{\App\Http\Middleware\Recaptcha::getCaptchaDataSiteKey()}}"></div>
                     @endif
-
                     <input type="{{ $field[0] }}" id="{{ $field[1] }}" class="form-control submit-btn text-capitalize" value="{{$openAccount}}" name="{{ $field[1] }}" value="" data-cip-id="{{ $field[1] }}">
                 </div>
             @endif
