@@ -144,6 +144,13 @@ body .wrapper .form-wrapper.container .form-brand .form-group .form-control + la
 body .wrapper .form-wrapper.container .form-brand .form-group .form-control.error {
   border: 1px solid red;
 }
+body .wrapper .form-wrapper.container .form-brand .form-group .form-control#password,
+body .wrapper .form-wrapper.container .form-brand .form-group .form-control#phone {
+  direction: ltr;
+}
+body .wrapper .form-wrapper.container .form-brand .form-group .form-control#phone {
+  padding-left: 1em ;
+}
 body .wrapper .form-wrapper.container .form-brand .form-group #submit {
   background: url('/img/rboptions/bt.png') no-repeat;
   background-size: 100%;
