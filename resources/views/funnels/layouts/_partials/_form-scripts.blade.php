@@ -43,7 +43,7 @@
 
 
     if(typeof loadingMsg == 'undefined')
-        loadingMsg = '<div class="loading">Processing, please wait...<br/><i class="fa fa-refresh fa-spin"></i></div>';
+        loadingMsg = '<div class="loading text-capitalize">@ln(processing, please wait)...<br/><i class="fa fa-refresh fa-spin"></i></div>';
 
 
     var sms_validated = false;
