@@ -49,7 +49,11 @@ class FormController extends Controller {
                 if($funnelPage->switches->mixPanel === "1") {
                     $phone = Request::get('prefix') . Request::get('phone');
                     $realUserId = $res["status"]["Customer"]["data_id"];
-                    $this->addCustomerToMixpanel(Request::get('FirstName'), Request::get('LastName'), Request::get('email'), $phone, $realUserId);
+                    try {
+                        $this->addCustomerToMixpanel(Request::get('FirstName'), Request::get('LastName'), Request::get('email'), $phone, $realUserId);
+                    } catch (\Exception $e) {
+                        \Log::error('Error sending customer data to mix panel:' . $e->getMessage(), []);
+                    }
                 }
 
                 $res['destination'] = $this->getDestination();
@@ -95,7 +99,11 @@ class FormController extends Controller {
                 // This send the mail to mixpanel an comment to activate.
                 $funnelPage = Page::find(Request::get('pageId'));
                 if($funnelPage->switches->mixPanel === "1") {
-                    $this->addLeadToMixpanel(Request::get('email'), Request::get('pageId'));
+                    try {
+                        $this->addLeadToMixpanel(Request::get('email'), Request::get('pageId'));
+                    } catch (\Exception $e) {
+                        \Log::error('Error sending lead data to mix panel:' . $e->getMessage(), []);
+                    }
                 }
 
                 $res['err'] = 0;
@@ -135,7 +143,7 @@ class FormController extends Controller {
         $pageTitle = \App\Page::find($pageId)->title->get();
         //$countryISO = json_decode(file_get_contents('http://api-v2.rboptions.com/locator/'.$ip),true)['iso'];
         $countryISO = json_decode(file_get_contents('http://locator.rboptions.com/locator/'.$ip),true)['iso'];
-        $mp = \Mixpanel::getInstance(env('MIXPANEL_PROJECT_TOKEN_LEADS'));
+        $mp = \Mixpanel::getInstance(env('MIX_PANEL_FUNNELS_TOKEN_CODE'));
 
         $campaignId = empty(Request::get('campaign')) ? "-" : Request::get('campaign');
         $subCampaignId = empty(Request::get('param')) ? "-" : Request::get('param');
@@ -157,7 +165,7 @@ class FormController extends Controller {
         $ip = Request::ip();
         //$countryISO = json_decode(file_get_contents('http://api-v2.rboptions.com/locator/'.$ip),true)['iso'];
         $countryISO = json_decode(file_get_contents('http://locator.rboptions.com/locator/'.$ip),true)['iso'];
-        $mp = \Mixpanel::getInstance(env('MIXPANEL_PROJECT_TOKEN_CUSTOMERS'));
+        $mp = \Mixpanel::getInstance(env('MIX_PANEL_SKYLINE_TOKEN_CODE'));
 
         $campaignId = empty(Request::get('campaign')) ? "-" : Request::get('campaign');
         $subCampaignId = empty(Request::get('param')) ? "-" : Request::get('param');
