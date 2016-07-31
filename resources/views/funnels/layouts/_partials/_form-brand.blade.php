@@ -16,7 +16,6 @@ foreach($form->membersFields->getChildren() as $field){
 }
 ?>
 
-{{--*/ $openAccount = '@ln(open account1)'; /*--}}
 <ul class="errorMessages"></ul>
 {!! Form::open(['url' => url('postForm').'?'.$_SERVER["QUERY_STRING"],
                 'id'=>'form',
