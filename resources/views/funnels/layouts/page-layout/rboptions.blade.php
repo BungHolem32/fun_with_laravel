@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="/js/jquery.validate.min.js"></script>
 @stop
-
+{{--*/ $openAccount = '@ln(open account)'; /*--}}
 @section('page-layout')
 
 
