@@ -30,5 +30,9 @@
             {!! Form::checkbox('mongo[switches][showCaptcha]', $page['switches']['showCaptcha']) !!}
             {!! Form::label('showCaptcha', 'Show Captcha Always') !!}
         </div>
+        <div class="form-group">
+            {!! Form::checkbox('mongo[switches][mixPanel]', $page['switches']['mixPanel']) !!}
+            {!! Form::label('mixPanel', 'Add Leads To MixPanel') !!}
+        </div>
     </div>
 @stop
