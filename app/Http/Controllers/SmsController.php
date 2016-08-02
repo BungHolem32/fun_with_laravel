@@ -32,11 +32,14 @@ class SmsController extends Controller {
                 return;
         } else {
             if ($smsLog['phone'] == '') {
-                if (\Session::get('showRecaptcha') && !Recaptcha::validateCaptcha()) {
-                    echo(json_encode(['err' => 1, 'errs' => ['error' => 'Please fill captcha!', 'action'=>'stay']])); // error during SMS sending
-                    return;
+                if (\Session::get('showRecaptcha')) {
+                    if (!Recaptcha::validateCaptcha()) {
+                        echo(json_encode(['err' => 1, 'errs' => ['error' => 'Please fill captcha!', 'action' => 'stay']])); // error during SMS sending
+                        return;
+                    } else {
+                        \Session::set('captchaTrue', true);
+                    }
                 }
-
                 $smsLog['phone'] = $phone;
                 \Session::set('smsLog', $smsLog);
             }
@@ -48,6 +51,11 @@ class SmsController extends Controller {
 
         $text = "Hello ".$name . ", " .$code . " is your verification code.";
         $res = NexmoSmsApi::sendSMS(['from'=>'Your Code', 'to'=>$phone, 'text'=>$text]);
+
+        if ($res === false) {
+            die(json_encode (['err'=>1, 'errs'=>['error'=>'Error while sending SMS to '.$phone, 'action'=>'stay']])); // error during SMS sending
+        }
+        
         $res = json_decode($res);
 
         /*
@@ -65,8 +73,7 @@ class SmsController extends Controller {
             public 'network' => string '42501' (length=5)
         */
 
-        //var_dump($res);
-        //die();
+
 
         if ($res->messages[0]->status != 0) {
             echo(json_encode (['err'=>1, 'errs'=>['error'=>'Error while sending SMS to '.$phone, 'action'=>'stay']])); // error during SMS sending

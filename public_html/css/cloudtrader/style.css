@@ -1,4 +1,33 @@
-#about .error   { text-align: center; }
-.center         { margin: 0 auto; }
-.removeFloat    { float: none !important; }
-#other-error, #prefix-error { display: none !important; }
+#about .error { text-align : center; }
+
+.center { margin : 0 auto; }
+
+.removeFloat { float : none !important; }
+
+#other-error, #prefix-error { display : none !important; }
+
+/*
+.g-recaptcha >div > div{
+    overflow    : hidden;
+    margin-left : -8%;
+    height: auto !important;
+}*/
+
+.g-recaptcha > div {
+    height : auto !important;
+    margin : 0 auto;
+}
+
+@media (min-width : 768px) {
+    .g-recaptcha {
+        margin-left : -19.4px;
+    }
+}
+
+input + label.error {
+    display : none !important;
+}
+
+input.error {
+    border : 1px solid red;
+}

@@ -13,7 +13,8 @@
         section.hidden_block {
            /* display: none;*/
             position: fixed;
-			padding: 0px;
+			padding: 0;
+			z-index: 100000000000000;
         }
         section.hidden_block article.popup {
             position: relative;
@@ -24,9 +25,9 @@
             border: 1px solid #333;
             border-radius: 3px;
             margin: 10% auto;
-			-webkit-box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
-			-moz-box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
-			box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
+			-webkit-box-shadow: 0 0 40px 0 rgba(0,0,0,0.75);
+			-moz-box-shadow: 0 0 40px 0 rgba(0,0,0,0.75);
+			box-shadow: 0 0 40px 0 rgba(0,0,0,0.75);
         }
         section.hidden_block span.close {
             background-image: url('../../img/aussie/panel/close.png');
@@ -79,7 +80,7 @@
 			-khtml-border-radius: 6px !important;
 			width: 230px;
 			margin-right: 20px;
-			margin-bottom: 0px;
+			margin-bottom: 0;
 			padding-left: 15px;
 			font-size: 28px;
 			font-weight: bold;
@@ -104,9 +105,7 @@
 			position: relative;
 			bottom: 1px;
 			cursor: pointer;
-
-			border-width: 0px 0px 0px 0px;
-			border-style: solid;
+			border: 0 solid;
 
 			background-color: #3EA8FC; background-image: -webkit-gradient(linear, left top, left bottom, from(#3EA8FC), to(#3292F6));
 			background-image: -webkit-linear-gradient(top, #3EA8FC, #3292F6);
@@ -179,14 +178,14 @@
 			color: white;
 			font-size: 19px;
 			font-weight: bolder;
-			padding-top: 0px;
+			padding-top: 0;
 			font-style: italic;
 			padding-left: 7px;
 			position: relative;
 			z-index: 10000;
-			-webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.3);
-			-moz-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.3);
-			box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.3);
+			-webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.3);
+			-moz-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.3);
+			box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.3);
 
 		}
 		section.hidden_block ul li:nth-child(1) {
@@ -199,16 +198,19 @@
 			left: 215px;
 		}
 
-  		#ins_img_id {
-			position: relative;
-			bottom: 13px;
-		}
+  #ins_img_id {
+	  background: url("/img/aussie/panel/ins-2.jpg") no-repeat center;
+	  height: 130px;
+	  display: block;
+	  margin: 0 auto;
+	  text-align: center;
+	  background-size: contain;
+  }
 
 		section.hidden_block span.wrong_code_span {
 			color: red;
 			font-size: 12px;
 			font-weight: bold;
-			display: block;
 			float: left;
 			margin-bottom: 10px;
 			display: none;

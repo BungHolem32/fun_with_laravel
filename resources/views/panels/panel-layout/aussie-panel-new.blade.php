@@ -23,7 +23,7 @@
 @append
 
 @section('bottom-scripts')
-    <script src="/js/aussie/panel/custom.js"></script>
+    <script src="/js/aussie-new/panel/custom.js"></script>
     {!! $page->appendAsset(url('/js/jquery.validate.js')) !!}
 
     <script type="text/javascript" src="//sst-super-c-nl.spotoption.com/socket.io/socket.io.js"></script>
@@ -63,7 +63,7 @@
                 <div id="accountdetailz" style="width: 22px; height: 22px; display: none; background: #0000ff;"></div>
                 <ul class="side-menu">
 
-                    <li class="col-xm-12 col-md-3 col-lg-3">
+                    <li class="col-xm-12 col-md-3 col-lg-3 welcome-button">
                         <a id="awelcomeModal"  class="capitalize" href="javascript:;">
                             <i class="fa fa-bookmark-o "></i> @ln(view welcome message)
                         </a>
@@ -88,7 +88,7 @@
                         </a>
 
                     </li>
-                    <li class="col-xm-12 col-md-1 col-lg-1">
+                    <li class="col-xm-12 col-md-1 col-lg-1 button-faq">
                         <a id="afaqModal" href="javascript:;" data-toggle="modal" data-target="#faqModal" data-backdrop="false" class="uppercase">
                             <span class="badge pull-right"></span>
                             <i class="fa fa-comments-o "></i> @ln(faq)

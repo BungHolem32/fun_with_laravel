@@ -15,25 +15,10 @@
         $page['formType'],
         ['name'=>'mongo[formType]', 'class'=>'form-control']) !!}
     </div>
-
     <div class="form-group">
         <h3><i class="fa fa-gg"></i> {!! Form::label('title_h1', 'Title:') !!}</h3>
         {!! Form::text('title_h1', $page['title_h1'], ['name'=>'mongo[title_h1]', 'class'=>'direction form-control']) !!}
     </div>
-
-{{--
-    <div class="form-group">
-        {!! Form::label('picture', 'picture:') !!}
-        {!! Form::file('picture', ['name'=>'files[logo_upload]', 'class'=>'form-control']) !!}
-        @if($page->logo_upload) <img src="{{$page->logo_upload}}" width='100' alt=""> @endif
-    </div>
-
-    <div class="form-group">
-        {!! Form::label('picture', 'picture:') !!}
-        {!! Form::file('picture', ['name'=>'files[logo_upload1]', 'class'=>'form-control']) !!}
-        @if($page->logo_upload1) <img src="{{$page->logo_upload1}}" width='100' alt=""> @endif
-    </div>
---}}
 
     <div class="form-group">
         <h3><i class="fa fa-newspaper-o"></i> {!! Form::label('description', 'Description:') !!}</h3>
@@ -59,7 +44,8 @@
         {!! Form::textarea('smallHeader', $page['smallHeader'], ['name'=>'mongo[smallHeader]', 'class'=>'direction editor form-control']) !!}
     </div>
     <div class="form-group">
-        <h3><i class="fa fa-bullhorn"></i> On Exit popup:</h3><small>epass=532 Param to disable</small>
+        <h3><i class="fa fa-bullhorn"></i> On Exit popup:</h3>
+        <small>epass=532 Param to disable</small>
         <br/>
         {!! Form::label('onExitPopupMsg', 'Message:') !!}
         {!! Form::textarea('onExitPopupMsg', $page['onExitPopup']['msg'], ['name'=>'mongo[onExitPopup][msg]', 'class'=>'direction form-control']) !!}
@@ -99,9 +85,20 @@
         </div>
         <div class="form-group">
             {!! Form::text('recaptcha', $page['switches']['recaptcha'], ['name'=>'mongo[switches][recaptcha]', 'class'=>'direction form-control']) !!}
-{{--            {!! Form::input('mongo[switches][recaptcha]', $page['switches']['recaptcha']) !!}--}}
+            {{--            {!! Form::input('mongo[switches][recaptcha]', $page['switches']['recaptcha']) !!}--}}
             {!! Form::label('recaptcha', 'Show Recaptcha after IP has registered this many accounts in one day. (Leave empty to never show.) ') !!}
-
         </div>
+
+        @if($page->funnelType == 'rboptions')
+            <h2>IMAGES </h2>
+            <div class="form-group">
+                {!! Form::text('pic-button', $page['switches']['submit'], ['name'=>'mongo[switches][submit]', 'class'=>'direction form-control']) !!}
+                {!! Form::label('button-submit', 'choose the image for submit button') !!}
+            </div>
+            <div class="form-group">
+                {!! Form::text('pic-button', $page['switches']['stamp'], ['name'=>'mongo[switches][stamp]', 'class'=>'direction form-control']) !!}
+                {!! Form::label('stamp', 'choose the image for stamp button') !!}
+            </div>
+        @endif
     </div>
 @endsection

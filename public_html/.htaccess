@@ -20,6 +20,9 @@
     #RewriteRule ^ /funnel-clean [P]
     #RewriteRule ^$ /funnel-clean [P]
 
+    RewriteCond %{HTTP_HOST} !^panel\. [NC]
+    RewriteRule ^(admin.*) http://panel.%{HTTP_HOST}/$1 [R=301,L]
+
     # Handle Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f

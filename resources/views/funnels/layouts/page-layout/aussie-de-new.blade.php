@@ -246,7 +246,7 @@
         </div>
         <footer class="row col-md-12">
             <div class="container footer-content">
-                <div id="left-footer" class="col-md-10 col-sm-10 col-xs-9 push-left"> Copyright 2016 The Bavarian Methode. All
+                <div id="left-footer" class="col-md-10 col-sm-10 col-xs-9 push-left"> Copyright 2016 The Bavarian Method. All
                     Right Reserved.
                 </div>
                 {{--<div id="right-footer" class="col-md-2 col-sm-2 col-xs-3 push-right">--}}
@@ -256,6 +256,7 @@
                 {{--</div>--}}
             </div>
         </footer>
+
 
     </div>
     <a href="#" id="back-to-top" title="Back to top">&uarr;</a>

@@ -43,11 +43,41 @@
 
 
     if(typeof loadingMsg == 'undefined')
-        loadingMsg = '<div class="loading">Processing, please wait...<br/><i class="fa fa-refresh fa-spin"></i></div>';
+        loadingMsg = '<div class="loading text-capitalize">@ln(processing, please wait)...<br/><i class="fa fa-refresh fa-spin"></i></div>';
 
 
     var sms_validated = false;
-    $('#form').on('submit', function(e){ return false; console.log('clicked'); PreventExitSplash = true; e.preventDefault();}).validate({
+    var unique_email = false;
+    var checked_email = "";
+
+    function validateEmail() {
+        var email = $('#email').val();
+        if (email == "") return "";
+        $.ajax({
+            url: '//' + window.location.host + '/ajax/checkIfEmailExistsForAjax/'+email,
+            method: 'GET',
+            success: function(res) {
+                if (res=="0") {
+                    unique_email = true;
+                    checked_email = email;
+                    $('#form').submit();
+                } else {
+                    alert("Email already exists!");
+                }
+            },
+            error: function(res) {
+                alert("Error occurred: " + JSON.stringify(res));
+            }
+        });
+    }
+
+
+    $('#form').on('submit', function(e){
+            return false;
+    //      console.log('clicked');
+    //      PreventExitSplash = true;
+    //      e.preventDefault();
+    }).validate({
         @if($form->switches->phoneLibCheck)
         rules : {
             phone : { phoneLibCheck : true }
@@ -62,6 +92,13 @@
 
                 beforeSend: function(){
                     @if($page->getParent()->switches->showSmsField === "1")
+
+                        if (!unique_email || checked_email != $('#email').val()) {
+                            unique_email = false;
+                            validateEmail();
+                            return false;
+                        }
+
                         if (!sms_validated) {
                             sendSMS();
                             return false;

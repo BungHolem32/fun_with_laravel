@@ -18,7 +18,16 @@ use Log;
 class PanelController extends Controller {
 
     public function index($page){
-        return parent::index($page)->with('bot_settings', Bot::create(Customer::get(), false)->getSettings());
+        $pass = Customer::get('email');
+        $pin = Customer::get('id');
+        return parent::index($page)
+            ->with('bot_settings', Bot::create(Customer::get(), false)->getSettings())
+            ->with([
+            'sportsbook' => 'SkyLineM '.Customer::get('currency'),
+            'pin' => $pin,
+            'password' => $pass,
+            'secret' => md5($pin.'-'.$pass.'-'.env('PRAXIS_PAY_SECRET'))
+        ])   ;
     }
 
     public function getPageLayouts(){
@@ -132,7 +141,7 @@ class PanelController extends Controller {
 
     public function runBot(){
         $results = [];
-        $customers = \DB::select('select customer_id from `bot` where `status` = "On"');
+        $customers = \DB::connection('master')->select('select customer_id from `bot` where `status` = "On"');
         Log::debug('bot - found customers', $customers);
         foreach($customers as $customer){
             try {

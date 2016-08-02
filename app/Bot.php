@@ -16,12 +16,15 @@ class Bot
 
     public function __construct(Customer $customer, $forceSetup=true)
     {
+
         $this->customer = $customer;
 
-        foreach($customer->getBotSettings() as $k=>$v){
+        foreach($this->customer->getBotSettings() as $k=>$v){
             $this->{$k} = $v;
         }
+
         if(!$this->status && $forceSetup){
+
             $this->setDefaultSettings();
         }
     }
@@ -40,14 +43,14 @@ class Bot
     }
 
     public function setRange($min, $max){
-        $res = \DB::update("UPDATE bot SET `minAmount`=?, `maxAmount`=? where customer_id=?", [$min, $max, $this->customer->id]);
+        $res = \DB::connection('master')->update("UPDATE bot SET `minAmount`=?, `maxAmount`=? where customer_id=?", [$min, $max, $this->customer->id]);
         $this->log('range', $min.' - '.$max.': '.($res ? 'success' : 'fail'));
         return $res;
     }
 
     public function turnOn(){
         if($this->customer->balance > $this->minAmount) {
-            if ($res = \DB::update("UPDATE bot SET status='On' WHERE customer_id=?", [$this->customer->id])) {
+            if ($res = \DB::connection('master')->update("UPDATE bot SET status='On' WHERE customer_id=?", [$this->customer->id])) {
                 $this->log('on', $res);
                 $this->placeOptions();
                 return ['err' => 0];
@@ -61,7 +64,7 @@ class Bot
     public function turnOff(){
         $err = '';
         if($this->status == 'On'){
-            $r = \DB::update("UPDATE bot SET status='Off' WHERE customer_id=?",[$this->customer->id]);
+            $r = \DB::connection('master')->update("UPDATE bot SET status='Off' WHERE customer_id=?",[$this->customer->id]);
             if($r !== 1){
                 $err = 'update failed.';
             }
@@ -177,7 +180,7 @@ class Bot
     protected function setDefaultSettings($save = true){
         $settings = ['customer_id'=>$this->customer->id, 'minAmount'=>self::defaultMin, 'maxAmount'=>self::defaultMax, 'status'=>'Off'];
         if($save){
-            \DB::insert('insert into `bot` (`customer_id`, `minAmount`, `maxAmount`,`status`) values (:customer_id, :minAmount, :maxAmount, :status)', $settings);
+            \DB::connection('master')->insert('insert into `bot` (`customer_id`, `minAmount`, `maxAmount`,`status`) values (:customer_id, :minAmount, :maxAmount, :status)', $settings);
         }
         foreach($settings as $k=>$v){
             $this->{$k} = $v;
@@ -193,7 +196,7 @@ class Bot
             'user' => ($this->customer->isLogged() ? 'user' : 'bot')
         ];
         if($db){
-            \DB::insert('insert into `bot_log` (`customer_id`, `action`, `result`, `user`) VALUES (?, ?, ?, ?)', array_values($data));
+            \DB::connection('master')->insert('insert into `bot_log` (`customer_id`, `action`, `result`, `user`) VALUES (?, ?, ?, ?)', array_values($data));
         }
         if($file){
             Log::info('BotLog - '.$action, $data);

@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Lib\Helpers\Generate;
+use App\Services\MobileDetect;
 use Illuminate\Foundation\Bus\DispatchesCommands;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -14,6 +15,7 @@ abstract class Controller extends BaseController {
 
     public function __construct(){
         \View::share ( 'user', \Auth::getUser());
+        \View::share('mobileDetect', new MobileDetect());
         //throw new SpotException('');
     }
 

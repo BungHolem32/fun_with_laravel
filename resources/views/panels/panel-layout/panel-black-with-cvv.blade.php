@@ -9,12 +9,21 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
 
     {{--ADD FONTAWSOME LIBARARY--}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.css">
     <link rel="stylesheet" href="/css/panels/black/libs/font-awesome.min.css">
 
+    {{--REMMBER TO ADD IT AFTER  GETTING TRANSLATION--}}
     {{--BASE STYLE SHEET--}}
-    <link rel="stylesheet" href="/css/panels/black/style-{{Request::local()->dir}}.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.css">
+    {{--<link rel="stylesheet" href="/css/panels/black/style-{{Request::local()->dir}}.css"/>--}}
 
+    {{--REMMBER TO REMOVE IT AFTER  GETTING TRANSLATION--}}
+    <style>
+        html{
+            direction:ltr !important;
+        }
+    </style>
+    <link rel="stylesheet" href="/css/panels/black/style-0.css"/>
+    {{--REMMBER TO REMOVE IT AFTER  GETTING TRANSLATION--}}
 
 @append
 @section('bottom-scripts')

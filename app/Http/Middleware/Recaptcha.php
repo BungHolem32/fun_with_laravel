@@ -18,7 +18,8 @@ class Recaptcha
     //public static $secret = '6Ld39RMTAAAAAPZmYhrvY0sZ1FpwcFSC0oXf9jTn';
 
     public function handle($request, Closure $next){
-        if(IpLog::count(\Request::ip(), 'createAccount')) {
+
+        if(\Session::get('showRecaptcha')  || IpLog::count(\Request::ip(), 'createAccount')) {
             if(!self::validateCaptcha()){
                 //Response::header('HTTP/1.1 403 Incorrect Captcha');
                 return response(['err'=>1, 'errs'=>['error'=>Languages::getTrans('Incorrect Captcha')]], 200);
@@ -28,6 +29,12 @@ class Recaptcha
     }
 
     public static function validateCaptcha() {
+        $captcha_state = \Session::get('captchaTrue');
+        if ($captcha_state === true)  {
+            \Session::set('captchaTrue', false);
+            return true;
+        }
+        
         $url = "https://www.google.com/recaptcha/api/siteverify?secret=" . self::getCaptchaSecret() . "&response=" . \Request::get('g-recaptcha-response') . "&remoteip=" . $_SERVER['REMOTE_ADDR'];
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);

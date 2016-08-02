@@ -61,7 +61,7 @@
         {!! Form::text('onExitPopupLink', $page['onExitPopup']['link'], ['name'=>'mongo[onExitPopup][link]', 'class'=>'editor form-control']) !!}
     </div>
 
-    <div class="form-group" style="background: #F9CF7F; padding: 1.5em;">
+    <div class="form-group" style="background: #F9CF7F; padding: 1.5em; min-height: 17em;">
         <h3><i class="fa fa-cubes" aria-hidden="true"></i> Components:</h3><small>add your wanted components</small>
         <br/>
         <div class="Components">
@@ -77,16 +77,16 @@
     <div class="row">
         <h3><i class="fa fa-check-square-o"></i> Switches</h3>
         <div class="form-group">
-            {!! Form::checkbox('mongo[switches][showEmailField]', $page['switches']['showEmailField']) !!}
-            {!! Form::label('showEmailField', 'Show Email Field') !!}
-        </div>
-        <div class="form-group">
             {!! Form::checkbox('mongo[switches][showSmsField]', $page['switches']['showSmsField']) !!}
             {!! Form::label('showSmsField', 'Show Sms Field') !!}
         </div>
         <div class="form-group">
             {!! Form::checkbox('mongo[switches][showCaptcha]', $page['switches']['showCaptcha']) !!}
             {!! Form::label('showCaptcha', 'Show Captcha Always') !!}
+        </div>
+        <div class="form-group">
+            {!! Form::checkbox('mongo[switches][mixPanel]', $page['switches']['mixPanel']) !!}
+            {!! Form::label('mixPanel', 'Add Leads To MixPanel') !!}
         </div>
         <h3><i class="fa fa-google"></i> Analytics & Scripts</h3>
         <div class="form-group">

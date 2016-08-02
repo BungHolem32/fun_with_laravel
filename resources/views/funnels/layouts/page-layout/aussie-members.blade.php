@@ -1,5 +1,5 @@
 @section('head')
-    {{-- maybe put it elsewere--}}
+     {{--maybe put it elsewere--}}
     <meta name="viewport" content="width=480px;initial-scale=1">
     <!-- Startup CSS -->
     {!! $page->appendAsset(url('/css/aussie/style.css')) !!}
