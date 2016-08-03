@@ -26,26 +26,23 @@ foreach ($form->membersFields->getChildren() as $field){
 
 <div class="text-holder">
     <p>Open your binary options account and start trading
-        <mark>TODAY!</mark>
+        @if($funnelName == 'freesignals')
+            <mark>TODAY!</mark>
+        @else
+            <mark>Now!</mark>
+        @endif
     </p>
 </div>
 
-<input type="hidden" name="parentPage" value="{{ $funnelId }}" class="form-control">
-@forelse($hiddenFields as $hiddenField)
-    <input type="hidden" id="{{ $hiddenField[0] }}" name="{{ $hiddenField[0] }}" value="">
-@empty
 
-@endforelse
+<div class="contact-form holder">
+    <input type="hidden" name="parentPage" value="{{ $funnelId }}" class="form-control">
+    <input type="hidden" name="funnelName" value="{{ $funnelName }}" class="form-control funnelName">
+    @forelse($hiddenFields as $hiddenField)
+        <input type="hidden" id="{{ $hiddenField[0] }}" name="{{ $hiddenField[0] }}" value="">
+    @empty
+    @endforelse
 
-
-{{--<div class="row">--}}
-{{--<div class="col-lg-2 col-lg-offset-6  col-md-12 col-md-offset-5">--}}
-{{--<form class="contact-form" action="#">--}}
-{{--<p class="form_title">Open your binary options account and start trading <mark>IMMEDIATELY!</mark></p>--}}
-<div class="contact-form">
-    <p class="form_title">Open your binary options account and start trading
-        <mark>IMMEDIATELY!</mark>
-    </p>
     @foreach($fields as $field)
         @if($field[0] == 'text' || $field[0] == 'email' || $field[0] == 'password')
             <div class="form-group">
@@ -69,7 +66,8 @@ foreach ($form->membersFields->getChildren() as $field){
             <div class="column-holder">
                 <div class="column">
                     <div class="form-group phone-row">
-                        <input type="text" id="prefix" class="form-control" name="prefix" data-cip-id="prefix" required/>
+                        <input type="text" id="prefix" class="form-control" name="prefix" data-cip-id="prefix"
+                               required/>
                     </div>
                 </div>
                 <div class="column">
@@ -92,20 +90,23 @@ foreach ($form->membersFields->getChildren() as $field){
 
             <label id="other-error" class="error" style="display: block; top: 260px;">This field is
                 required.</label>
-            <div class="form-group">
-                @if($show_recaptcha)
+
+            @if($show_recaptcha)
+                <div class="form-group">
                     <div class="g-recaptcha"
                          data-sitekey="{{\App\Http\Middleware\Recaptcha::getCaptchaDataSiteKey()}}"></div>
-                @endif
-            </div>
+                </div>
+            @endif
+
             <div class="form-group submit" id="submit">
-                {{--<input type="{{ $field[0] }}" id="{{ $field[1] }}" class="btn-arrow"--}}
-                {{--name="{{ $field[1] }}" value="{{ \App\Languages::getTrans($field[2]) }}" data-cip-id="{{ $field[1] }}">--}}
-                <button type="{{ $field[0] }}" id="{{ $field[1] }}" class="button"
+                <button type="{{ $field[0] }}" id="{{ $field[1] }}"
+                        class="{{$funnelName == 'binarycurrency'? "btn btn-default":'button' }}"
                         name="{{ $field[1] }}" data-cip-id="{{ $field[1] }}">{{@ln('create account')}}
                 </button>
-                <img src="/img/freesignals/ico-arrow.png" alt="image description" width="118" height="116"
-                     class="hidden-xs">
+                @if($funnelName == 'freesignals')
+                    <img src="/img/freesignals/ico-arrow.png" alt="image description" width="118" height="116"
+                         class="hidden-xs">
+                @endif
             </div>
 </div>
 @endif
@@ -117,5 +118,5 @@ foreach ($form->membersFields->getChildren() as $field){
 {!! Form::close() !!}
 
 @section('bottom-scripts')
-    @include('funnels.layouts._partials._form-scripts-freesignals')
+    @include('funnels.layouts._partials.custom-forms._form-scripts-freesignals')
 @append

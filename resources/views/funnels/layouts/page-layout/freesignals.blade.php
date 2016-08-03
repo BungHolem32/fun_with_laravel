@@ -50,8 +50,7 @@
             <div class="row">
                 <div class="">
                     {{--<form action="#" class="account-form">--}}
-                    @include('funnels.layouts._partials._form-freesignals', ['funnelId' => $page->getParent()->id])
-
+                    @include('funnels.layouts._partials.custom-forms._form-freesignals', ['funnelId' => $page->getParent()->id,'funnelName'=>'freesignals'])
                 </div>
             </div>
             <div class="row features-block">
