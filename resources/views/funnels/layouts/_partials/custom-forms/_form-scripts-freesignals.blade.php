@@ -40,15 +40,12 @@
         return false;
     }, "Phone number not valid.");
     @endif
-
-
     if(typeof loadingMsg=='undefined')
         if($('.funnelName').val()=='binarycurrency'){
             loadingMsg = '<div class="loading center-block text-center text-capitalize" style="color:black">@ln(processing, please wait)...<br/><i class="fa fa-refresh fa-spin"></i></div>';
         } else{
             loadingMsg = '<div class="loading center-block text-center text-capitalize">@ln(processing, please wait)...<br/><i class="fa fa-refresh fa-spin"></i></div>';
         }
-
     var sms_validated = false;
     var unique_email = false;
     var checked_email = "";
