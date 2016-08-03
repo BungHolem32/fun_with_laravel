@@ -4,6 +4,7 @@
     <title>TradingSystem</title>
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/trading-system/main.css">
+    <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
     <script src="/js/jquery.validate.min.js"></script>
 @stop
 
@@ -144,12 +145,13 @@
                         </li>
                     </ul>
                     <dl>
-                        <dt>Eligibility:</dt>
-                        <dd>In order to claim your Iphone6 a--nd 100% Bonus, Gold Members need to make a minimum of
-                            $10,0000 deposit. Existing traders speak to your personal broker or contact cs@rboptions.com
-                            to deposit and claimyour rewards. Contract service and any accessories are the
-                            responsibility of the Trader itself. Subjected to quantities and delivery times as supported
-                            by Apple.
+                        <dt>General Risk Warning:</dt>
+                        <dd>
+                            Trading in binary options carries a high level of risk and can result in the loss of all of your investment as such, binary options may not be appropriate for all investors. You should not invest money that you cannot afford to lose. Before deciding to trade, you should become aware of all the risks associated with binary options trading, and seek advice from an independent and suitably licensed financial advisor. For more information about the risks associated with trading binary, see our risk discloser. Under no circumstances shall we have any liability to any person or entity for (a) any loss or damage in whole or part caused by, resulting from, or relating to any transactions related to binary options or (b) any direct, indirect, special, consequential or incidental damages whatsoever.
+                            A number of attractive reward features including; welcome bonuses, contests, give ways and awards are given to new and current customers. All these are part of a promotions program. These bonuses and awards are limited time offers and the terms and conditions associated with any bonus rewards are subject to change. Please read carefully before accepting a special offer, trade refund, benefit, give away or bonus.
+                        </dd>
+                        <dd>
+                            @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/../policy", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Privacy'])
                         </dd>
                     </dl>
                 </div>
@@ -157,6 +159,17 @@
         </div>
     </footer>
     </div>
+
+    <script src="/js/fancybox/jquery.fancybox.js"></script>
+    <script>
+        $(document).on('click', '.fancybox_iframe', function(e) {
+            e.preventDefault();
+            $.fancybox({
+                href : $(this).attr('href'),
+                type : 'iframe'
+            });
+        });
+    </script>
 @stop
 
 
