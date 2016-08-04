@@ -37,7 +37,8 @@
 
         <div class="nav">
             <ul>
-                <li class="current"><a href="https://skylinemarkets.com/EN/open-account{{$parameters}}">BUSINESS</a></li>
+                <li class="current"><a href="https://skylinemarkets.com/EN/open-account{{$parameters}}">BUSINESS</a>
+                </li>
                 <li><a href="https://skylinemarkets.com/EN/open-account{{$parameters}}">MARKETS</a></li>
                 <li><a href="https://skylinemarkets.com/EN/open-account{{$parameters}}">NEWS</a></li>
                 <li><a href="https://skylinemarkets.com/EN/open-account{{$parameters}}">OPINIONS</a></li>
@@ -97,7 +98,8 @@
                 <div class="clear"></div>
 
                 <p style="margin-top:0;"><b>LONDON </b> – It has been revealed that Sugar has been trading with a system
-                    called “<a href="https://skylinemarkets.com/EN/open-account{{$parameters}}" target="blank">Binary Options</a>”
+                    called “<a href="https://skylinemarkets.com/EN/open-account{{$parameters}}" target="blank">Binary
+                        Options</a>”
                     which
                     initially became famous in the United States where many people made thousands or even millions of
                     dollars with little effort using a unique trick to always beat the market. Earlier this year the US
@@ -123,7 +125,8 @@
                     verified the validity of Mr. Lewis's statements to be accurate. This is just one example of
                     thousands of people, worldwide, who have started to trade this year with Binary Options. The
                     following diary extract is a truly amazing account of his first week's trading. </p>
-                <p><strong>Darren's 7 Day Test with <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}" target="blank">Binary
+                <p><strong>Darren's 7 Day Test with <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
+                                                       target="blank">Binary
                             Options</a> Trading </strong></p>
 
                 <p style="text-align: center;"><span class="Apple-style-span"
@@ -254,7 +257,8 @@
                     expose this secret to everyone. You may not earn millions, nobody can promise this, but remember
                     even £10,000 can make a huge difference. You can pay your debt, not worry about the bills or the
                     rent and have the holiday of a lifetime. For me, I’m still doing some trading and <a
-                            href="https://skylinemarkets.com/EN/open-account{{$parameters}}" target="blank">SkyLineMarkets</a> are
+                            href="https://skylinemarkets.com/EN/open-account{{$parameters}}" target="blank">SkyLineMarkets</a>
+                    are
                     helping
                     me to adjust to my new status as a “millionnaire”. </p>
                 <p>As a consumer, you may have your doubts about the effects of this trading, but you should give it a
@@ -269,7 +273,8 @@
                     offer that can only be redeemed here at EuroMarket. Simply follow the links we have provided you,
                     and you will get a quality system that works. No tricks! </p>
                 <p>As a special, limited time offer just for our readers, when you deposit funds to <a
-                            href="https://skylinemarkets.com/EN/open-account{{$parameters}}" target="blank">SkyLineMarkets</a> trading
+                            href="https://skylinemarkets.com/EN/open-account{{$parameters}}" target="blank">SkyLineMarkets</a>
+                    trading
                     account you will automatically receive a 100% bonus. That's right, you will get minimum $250 FREE
                     trading money. So, you will already double your money the moment you sign up. There is NO LIMIT on
                     how much free bonus money you can earn.</p>
@@ -283,7 +288,8 @@
                 </div>
 
                 <p>It’s easy-to-use, no previous knowledge or experience is needed to begin. <a
-                            href="https://skylinemarkets.com/EN/open-account{{$parameters}}" target="_blank">Click here to join</a>.
+                            href="https://skylinemarkets.com/EN/open-account{{$parameters}}" target="_blank">Click here
+                        to join</a>.
                 </p>
 
                 <div class="step">
@@ -302,7 +308,8 @@
 
 
                 <p class="main-btn" align="center">
-                    <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}" class="button" target="_blank">Start Trading
+                    <a href="https://skylinemarkets.com/EN/open-account{{$parameters}}" class="button" target="_blank">Start
+                        Trading
                         Now
                         &#187;</a>
                 </p>
@@ -331,7 +338,8 @@
                            target="_parent">
                             <div class="submit">Submit</div>
                         </a>
-                        <a class="download-app" style="display:none;" href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
+                        <a class="download-app" style="display:none;"
+                           href="https://skylinemarkets.com/EN/open-account{{$parameters}}"
                            onclick="generateDeviceButton(this, 'signup', '1')" target="_parent">
                             <div class="submit">Submit</div>
                         </a>
@@ -430,8 +438,24 @@
                                 <div class="disclaimer">
                                     <dt class="title">General Risk Warning:</dt>
                                     <div class="content">
-                                        Trading in binary options carries a high level of risk and can result in the loss of all of your investment as such, binary options may not be appropriate for all investors. You should not invest money that you cannot afford to lose. Before deciding to trade, you should become aware of all the risks associated with binary options trading, and seek advice from an independent and suitably licensed financial advisor. For more information about the risks associated with trading binary, see our risk discloser. Under no circumstances shall we have any liability to any person or entity for (a) any loss or damage in whole or part caused by, resulting from, or relating to any transactions related to binary options or (b) any direct, indirect, special, consequential or incidental damages whatsoever.
-                                        A number of attractive reward features including; welcome bonuses, contests, give ways and awards are given to new and current customers. All these are part of a promotions program. These bonuses and awards are limited time offers and the terms and conditions associated with any bonus rewards are subject to change. Please read carefully before accepting a special offer, trade refund, benefit, give away or bonus.
+                                        Trading in binary options carries a high level of risk and can result in the
+                                        loss of all of your investment; as such, binary options may not be appropriate
+                                        for all investors. You should not invest money that you cannot afford to lose.
+                                        Before deciding to trade, you should become aware of all the risks associated
+                                        with binary options trading and seek advice from an independent and suitably
+                                        licensed financial adviser. For more information about the risks associated with
+                                        trading binary options, see our risk disclosure. Under no circumstances shall we
+                                        have any liability to any person or entity for (a) any loss or damage in whole
+                                        or part caused by, resulting from, or relating to any transactions related to
+                                        binary options trading or (b) any direct, indirect, special, consequential or
+                                        incidental damages whatsoever.
+                                        A number of attractive reward features are given to new and current
+                                        customers including but not limited to: welcome bonuses, giveaways and
+                                        awards. All these are part of a promotions' program. These bonuses and awards
+                                        are limited-time offers and the
+                                        terms and conditions associated with any bonus rewards are subject to change.
+                                        Please read carefully before accepting a special offer, refund, benefit,
+                                        give away or bonus.
                                     </div>
                                 </div>
                             </div>
@@ -440,11 +464,11 @@
 
                     <script src="/js/fancybox/jquery.fancybox.js"></script>
                     <script>
-                        $(document).on('click', '.fancybox_iframe', function(e) {
+                        $(document).on('click', '.fancybox_iframe', function(e){
                             e.preventDefault();
                             $.fancybox({
-                                href : $(this).attr('href'),
-                                type : 'iframe'
+                                href: $(this).attr('href'),
+                                type: 'iframe'
                             });
                         });
                     </script>
