@@ -179,13 +179,14 @@ hr { margin : 40px 0; border : 1px solid #d93636; }
 }
 
 #footer .container {
-    width     : 1105px;
-    margin    : 0 auto;
-    font-size : 9px;
+    width        : 1105px;
+    margin       : 0 auto;
+    font-size    : 9px;
+    padding-left : 0;
 }
 
 #footer .container .row .col-md-8 {
-    padding-left : 0;
+    padding-left  : 0;
     padding-right : 0;
 }
 
@@ -196,7 +197,20 @@ hr { margin : 40px 0; border : 1px solid #d93636; }
 }
 
 .disclaimer .content {
-    margin-top:5px ;
+    margin-top : 5px;
     text-align : justify;
 }
 
+@media (max-width : 640px) {
+    .disclaimer .title {
+        padding-left : 10px;
+    }
+
+    .disclaimer .content {
+        width         : 33%;
+        text-align    : justify;
+        padding-left  : 10px;
+        padding-right : 10px;
+    }
+
+}
