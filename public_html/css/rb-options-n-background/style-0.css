@@ -1,0 +1,272 @@
+/*!
+* direction.less v0.1.0
+*
+* Copyright 2013 Moshe Simantov
+* Licensed under the MIT license
+*
+* Keep tracking: https://github.com/DevelopmentIL/direction.less
+*/
+/*i.fa:before when (@rtl) {
+  display: inline-block;
+  .flip-horizontal();
+}*/
+.transform-mirror {
+  -webkit-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+body {
+  background: url('/img/rboptions-n-background/bg.jpg') no-repeat;
+  max-height: 900px;
+}
+body .wrapper {
+  background: rgba(0, 0, 0, 0.4);
+  max-width: 800px;
+  overflow: hidden;
+  margin: 0 auto;
+  /*TOP STRIPS*/
+  /*FORM PART*/
+  /*BOTTON SIGNS*/
+  /*CAPTCHA STYLE*/
+  /*WHILE LOADING */
+}
+@media (min-width: 640px) {
+  body .wrapper {
+    max-width: 370px;
+  }
+}
+body .wrapper section {
+  overflow: hidden;
+}
+body .wrapper .top-elem .container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+}
+@media (min-width: 640px) {
+  body .wrapper .top-elem .container {
+    max-width: 370px;
+  }
+}
+body .wrapper .top-elem .container .row.strip-top-logo-wrapper {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 23px 20px 15px 20px;
+  box-shadow: 0px 1px 3px 1px #222222;
+  z-index: 2;
+  position: relative;
+}
+@media (min-width: 990px) {
+  body .wrapper .top-elem .container .row.strip-top-logo-wrapper {
+    max-width: 370px;
+    background: transparent;
+  }
+}
+body .wrapper .top-elem .container .row.strip-top-logo-wrapper img {
+  width: 50%;
+}
+body .wrapper .top-elem .container .row.strip-top-logo-wrapper .img img {
+  position: absolute;
+  right: 5px;
+  top: 33px;
+  width: 20%;
+}
+body .wrapper .top-elem .container .row.strip-center-wrapper {
+  background: linear-gradient(to bottom, #FBFBFB 5%, #f7f7f7 40%, #DEDEDE);
+  box-shadow: inset 0px -6px 20px 1px lightgray;
+}
+body .wrapper .top-elem .container .row.strip-center-wrapper .content header h2 {
+  font-size: 34px;
+  font-weight: bold;
+  text-shadow: -1px 1px 1px #848484;
+  color: black;
+  margin-top: 10px;
+}
+@media (min-width: 640px) {
+  body .wrapper .top-elem .container .row.strip-center-wrapper .content header h2 {
+    font-size: 23px;
+  }
+}
+body .wrapper .top-elem .container .row.strip-center-wrapper .content .prop-wrapper .col-md-4 {
+  padding: 0;
+}
+body .wrapper .top-elem .container .row.strip-center-wrapper .content .prop-wrapper .col-md-4 p {
+  font-size: 15px;
+  font-weight: bold;
+}
+@media (min-width: 640px) {
+  body .wrapper .top-elem .container .row.strip-center-wrapper .content .prop-wrapper .col-md-4 p {
+    font-size: 9px;
+  }
+}
+body .wrapper .top-elem .container .row.strip-center-wrapper .content .prop-wrapper .col-md-4 p img {
+  width: 10%;
+}
+body .wrapper .top-elem .container .row.strip-bottom-wrapper {
+  background: #C2AD2E;
+  position: relative;
+}
+body .wrapper .top-elem .container .row.strip-bottom-wrapper h2 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 30px;
+  color: black;
+  font-weight: bolder;
+  text-shadow: 1px 1px 1px #D2CC78;
+}
+@media (min-width: 640px) {
+  body .wrapper .top-elem .container .row.strip-bottom-wrapper h2 {
+    font-size: 21px;
+  }
+}
+body .wrapper .bottom-arrow.container {
+  max-width: 800px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0;
+  width: 100%;
+}
+@media (min-width: 640px) {
+  body .wrapper .bottom-arrow.container {
+    max-width: 370px;
+  }
+}
+body .wrapper .bottom-arrow.container img {
+  width: 100%;
+  vertical-align: super;
+}
+body .wrapper .form-wrapper .errorMessages {
+  display: none !important;
+}
+body .wrapper .form-wrapper.container {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 0 10px 0;
+  /*FORM TAG*/
+}
+@media (min-width: 640px) {
+  body .wrapper .form-wrapper.container {
+    max-width: 370px;
+  }
+}
+body .wrapper .form-wrapper.container .form-brand {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 800px;
+}
+@media (min-width: 990px) {
+  body .wrapper .form-wrapper.container .form-brand {
+    max-width: 370px;
+  }
+}
+body .wrapper .form-wrapper.container .form-brand #other-error.error {
+  display: none !important;
+}
+body .wrapper .form-wrapper.container .form-brand .form-group {
+  width: 95%;
+  margin: 10px auto;
+}
+body .wrapper .form-wrapper.container .form-brand .form-group .form-control {
+  display: block;
+  width: 100%;
+  height: 60px;
+  padding: 6px 12px 6px 12px;
+  border-radius: 0;
+  font-size: 34px;
+  line-height: 1.42857143;
+  font-weight: bold;
+  color: #747474;
+  background: #ffffff none;
+  border: 1px solid #747474;
+  /* border-radius: 4px; */
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+@media (min-width: 640px) {
+  body .wrapper .form-wrapper.container .form-brand .form-group .form-control {
+    height: 45px;
+    font-size: 22px;
+  }
+}
+body .wrapper .form-wrapper.container .form-brand .form-group .form-control#prefix {
+  width: 13%;
+  margin-right: 3%;
+}
+body .wrapper .form-wrapper.container .form-brand .form-group .form-control#phone,
+body .wrapper .form-wrapper.container .form-brand .form-group .form-control#phone3 {
+  width: 84%;
+  padding-right: 0;
+}
+body .wrapper .form-wrapper.container .form-brand .form-group .form-control + label.error {
+  display: none !important;
+}
+body .wrapper .form-wrapper.container .form-brand .form-group .form-control.error {
+  border: 1px solid red;
+}
+body .wrapper .form-wrapper.container .form-brand .form-group .form-control#password,
+body .wrapper .form-wrapper.container .form-brand .form-group .form-control#phone {
+  direction: ltr;
+}
+body .wrapper .form-wrapper.container .form-brand .form-group .form-control#phone {
+  padding-left: 1em;
+}
+body .wrapper .form-wrapper.container .form-brand .form-group #submit {
+  background: url('/img/rboptions/bt.png') no-repeat;
+  background-size: 100%;
+  border: none;
+  transition: all 500ms ease-in;
+  color: black;
+  text-shadow: 1px 2px 1px gray;
+  height: 67px;
+  font-size: 25px;
+}
+@media (min-width: 640px) {
+  body .wrapper .form-wrapper.container .form-brand .form-group #submit {
+    font-size: 21px;
+    height: 55px;
+  }
+}
+body .wrapper .form-wrapper.container .form-brand .form-group #submit:hover,
+body .wrapper .form-wrapper.container .form-brand .form-group #submit:active {
+  background: url('/img/rboptions/bt-o.png') no-repeat;
+  background-size: 100%;
+}
+body .wrapper .bottom-signs {
+  background: rgba(0, 0, 0, 0.4);
+  padding-bottom: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+@media (min-width: 640px) {
+  body .wrapper .bottom-signs {
+    max-width: 370px;
+  }
+}
+body .wrapper .bottom-signs .container {
+  max-width: 800px;
+  border-top: none;
+  width: 100%;
+}
+@media (min-width: 640px) {
+  body .wrapper .bottom-signs .container {
+    max-width: 370px;
+  }
+}
+body .wrapper div.g-recaptcha {
+  margin: 1em auto;
+}
+body .wrapper div.g-recaptcha div {
+  margin: 0 auto;
+}
+body .wrapper div.g-recaptcha div div iframe {
+  width: 100%;
+}
+body .wrapper .loading {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 23px;
+  color: #5d5c16;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px 1px;
+}
+
+/*# sourceMappingURL=style-0.css.map */
