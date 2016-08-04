@@ -102,7 +102,8 @@ class SmsController extends Controller {
         $code = \Session::get('SMS_CODE');
 
         if (empty($code)) {
-            echo(json_encode (['err'=>1, 'errs'=>['error'=>'No code was entered!', 'action'=>'stay']]));
+            echo(json_encode (['err'=>1, 'errs'=>['error'=>'Code is not in SESSION error!', 'action'=>'stay']]));
+            \Log::error('Code is not in SESSION error!', []);
             return;
         }
 
