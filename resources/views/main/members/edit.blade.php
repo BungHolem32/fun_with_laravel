@@ -88,13 +88,9 @@
             {{--            {!! Form::input('mongo[switches][recaptcha]', $page['switches']['recaptcha']) !!}--}}
             {!! Form::label('recaptcha', 'Show Recaptcha after IP has registered this many accounts in one day. (Leave empty to never show.) ') !!}
         </div>
+        @if($page->funnelType == 'rboptions' || $page->funnelType == 'rboptions-n-background')
+            <h2>IMAGES</h2>
 
-        @if($page->funnelType == 'rboptions')
-            <h2>IMAGES </h2>
-            <div class="form-group">
-                {!! Form::text('pic-button', $page['switches']['submit'], ['name'=>'mongo[switches][submit]', 'class'=>'direction form-control']) !!}
-                {!! Form::label('button-submit', 'choose the image for submit button') !!}
-            </div>
             <div class="form-group">
                 {!! Form::text('pic-button', $page['switches']['stamp'], ['name'=>'mongo[switches][stamp]', 'class'=>'direction form-control']) !!}
                 {!! Form::label('stamp', 'choose the image for stamp button') !!}
