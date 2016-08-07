@@ -1,13 +1,19 @@
 @section('head')
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
     {!! $page->appendAsset(url('/css/60seconds/bootstrap.css')) !!}
     {!! $page->appendAsset(url('/css/60seconds/main.css')) !!}
+        <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen"/>
+
 @append
 
 @section('bottom-scripts')
-    {!! $page->appendAsset(url('/js/60seconds/jquery-1.11.2.min.js')) !!}
+    @com('funnel_scripts')
+    {{--{!! $page->appendAsset(url('/js/firstPage.js')) !!}--}}
+    {!! $page->appendAsset(url('/js/jquery-1.11.2.min.js')) !!}
     {!! $page->appendAsset(url('/js/60seconds/bootstrap.min.js')) !!}
     {!! $page->appendAsset(url('/js/60seconds/jquery.main.js')) !!}
-    {!! $page->appendAsset(url('/js/60seconds/jquery.validate.js')) !!}
+    {!! $page->appendAsset(url('/js/jquery.validate.min.js')) !!}
+
     <script src="/js/fancybox/jquery.fancybox.js"></script>
     <script>
         $(document).on('click', '.fancybox_iframe', function(e){
