@@ -214,16 +214,16 @@ body .wrapper .form-wrapper.container .form-brand .form-group .form-control {
 @media (min-width: 640px) {
   body .wrapper .form-wrapper.container .form-brand .form-group .form-control {
     height: 100%;
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 body .wrapper .form-wrapper.container .form-brand .form-group .form-control#prefix {
-  width: 13%;
+  width: 18%;
   margin-right: 3%;
 }
 body .wrapper .form-wrapper.container .form-brand .form-group .form-control#phone,
 body .wrapper .form-wrapper.container .form-brand .form-group .form-control#phone3 {
-  width: 84%;
+  width: 79%;
   padding-left: 0;
 }
 body .wrapper .form-wrapper.container .form-brand .form-group .form-control + label.error {
