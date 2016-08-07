@@ -589,8 +589,9 @@ h1 i img {
     margin-right : 0 !important;
 }
 
+
 .contact-form .form-group label.error, .contact-form label#other-error.error {
-    /*display : none !important;*/
+    display : none !important;
 }
 
 .contact-form .form-group.submit {
@@ -607,9 +608,15 @@ h1 i img {
     box-sizing: initial !important;
 }
 
+.contact-form .form-group input.error{
+    border:1px solid red !important;
+}
+
 #footer a:hover{
     color:gray !important;
 }
 #footer a{
     text-decoration: underline;
 }
+
+
