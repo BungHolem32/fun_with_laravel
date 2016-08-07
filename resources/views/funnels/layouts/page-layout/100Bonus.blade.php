@@ -134,18 +134,15 @@
                 </div>
             </div>
         </footer>
-    </div>
-@stop
-
-@section('bottom-scripts')
-    <script src="/js/fancybox/jquery.fancybox.js"></script>
-    <script>
-        $(document).on('click', '.fancybox_iframe', function(e){
-            e.preventDefault();
-            $.fancybox({
-                href: $(this).attr('href'),
-                type: 'iframe'
+        <script src="/js/fancybox/jquery.fancybox.js"></script>
+        <script>
+            $(document).on('click', '.fancybox_iframe', function(e){
+                e.preventDefault();
+                $.fancybox({
+                    href: $(this).attr('href'),
+                    type: 'iframe'
+                });
             });
-        });
-    </script>
+        </script>
+    </div>
 @stop
