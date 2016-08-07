@@ -40,7 +40,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-md-offset-8">
-                        @include('funnels.layouts._partials._form_100Bonus', ['funnelId' => $page->getParent()->id])
+                        @include('funnels.layouts._partials._form_100bonus', ['funnelId' => $page->getParent()->id])
                     </div>
                 </div>
                 <div class="row features-block">
