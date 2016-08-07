@@ -606,3 +606,10 @@ h1 i img {
     width: 93% !important;
     box-sizing: initial !important;
 }
+
+#footer a:hover{
+    color:gray !important;
+}
+#footer a{
+    text-decoration: underline;
+}

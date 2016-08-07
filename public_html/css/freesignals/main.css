@@ -720,3 +720,9 @@ h1 {
 #other-error {
     display : none !important;
 }
+
+/*stroke the privacy link*/
+#footer a {
+    color           : lightgray;
+    text-decoration : underline;
+}
