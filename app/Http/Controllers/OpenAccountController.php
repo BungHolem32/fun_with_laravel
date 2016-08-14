@@ -53,7 +53,18 @@ class OpenAccountController extends Controller {
             return $ans;
         }
     }
-
+    public static function autoLogin(){
+        $data = \Request::all();
+        $ans = Customer::login($data);
+        if(Customer::isLogged()){
+            if(isset($data['funnelname']) && isset($data['funnelsubname'])){
+                return \Redirect::to('/'.$data['funnelname'].'/'.$data['funnelsubname']);
+            }else{
+                return \Redirect::to('/');
+            }
+            
+        }
+    }
     public static function ajaxLogout(){
         Customer::logout();
         return ['msg' => 'loggedout'];

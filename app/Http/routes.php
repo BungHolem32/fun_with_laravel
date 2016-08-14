@@ -25,6 +25,8 @@ Route::controllers([
 Route::post('open-account', ['uses' => 'OpenAccountController@store'] );
 Route::post('accountLogin', ['uses' => 'OpenAccountController@login'] );
 Route::post('ajaxLogin', ['uses' => 'OpenAccountController@ajaxLogin'] );
+Route::post('autoLogin', ['middleware' => ['cors'],'uses' => 'OpenAccountController@autoLogin'] );
+Route::get('autoLogin', ['middleware' => ['cors'],'uses' => 'OpenAccountController@autoLogin'] );
 Route::get('logout', ['uses' => 'OpenAccountController@logout'] );
 Route::post('ajaxLogout', ['uses' => 'OpenAccountController@ajaxLogout'] );
 Route::get('aussie/debug', ['uses' => 'PanelController@debug']);
@@ -101,7 +103,7 @@ Route::group(['middleware'=>'loggedIn'], function() {
     Route::get('runBot', ['uses' => 'PanelController@runBot']);
 });
 
-Route::any('{slug}', ['middleware' => 'spotAuth', function(){
+Route::any('{slug}', ['middleware' => ['spotAuth','cors'], function(){
 
     // Set the localization session.
     Request::localization();
