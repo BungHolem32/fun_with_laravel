@@ -49,7 +49,8 @@ class Domains
         'thefinancialife.com' => 'skylinemarkets.com',
         'theprofitmagazine.com' => 'skylinemarkets.com',
         'theweeklyfinancials.com' => 'skylinemarkets.com',
-        'skylinemarkets.biz' => 'skylinemarkets.com'
+        'skylinemarkets.biz' => 'skylinemarkets.com',
+        'autotradingpanel.com' => 'skylinemarkets.com',
     ];
 
     
