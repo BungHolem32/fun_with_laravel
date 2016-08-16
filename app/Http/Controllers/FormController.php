@@ -148,11 +148,11 @@ class FormController extends Controller {
         $campaignId = empty(Request::get('campaign')) ? "-" : Request::get('campaign');
         $subCampaignId = empty(Request::get('param')) ? "-" : Request::get('param');
         $data = array(
-            'Email' 			=> $email,
+            '$email' 			=> $email,
             'Ip'                => $ip,
-            'Country_code'      => $countryISO,
-            'CampaignId' 		=> $campaignId,
-            'SubCampaignId' 	=> $subCampaignId,
+            '$country_code'      => $countryISO,
+            '$campaignId' 		=> $campaignId,
+            '$subCampaignId' 	=> $subCampaignId,
             'Funnel' 	        => $pageTitle,
             'Type' 	            => 'LEAD'
         );
@@ -171,14 +171,14 @@ class FormController extends Controller {
         $subCampaignId = empty(Request::get('param')) ? "-" : Request::get('param');
 
         $data = array(
-            'Name' 			    => $firstname,
-            'Surname' 			=> $lastname,
-            'Phone' 			=> $phone,
-            'Email' 			=> $email,
+            '$first_name' 		=> $firstname,
+            '$last_name' 		=> $lastname,
+            '$phone' 			=> $phone,
+            '$email' 			=> $email,
             'Ip'                => $ip,
-            'Country_code'      => $countryISO,
-            'CampaignId' 		=> $campaignId,
-            'SubCampaignId' 	=> $subCampaignId,
+            '$country_code'      => $countryISO,
+            '$campaignId' 		=> $campaignId,
+            '$subCampaignId' 	=> $subCampaignId,
             'Type' 	            => 'CUSTOMER'
         );
         $mp->people->set($realUserId, $data);
