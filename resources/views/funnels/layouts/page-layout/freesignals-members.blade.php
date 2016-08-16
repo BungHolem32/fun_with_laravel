@@ -164,7 +164,7 @@
                             give away or bonus.
                         </dd>
                         <dd>
-                            @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/../policy", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Privacy'])
+                            @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/../policy", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Privacy Policy'])
                         </dd>
                     </dl>
                 </div>
