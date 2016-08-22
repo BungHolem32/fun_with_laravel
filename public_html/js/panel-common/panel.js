@@ -101,6 +101,15 @@ $(window).on('ajax-refresh', function () {
             console.log(res);
             $('.balance').html(res.customer.currencySign + ' ' + res.customer.accountBalance);
 
+            // Set maximum position size to balance / 2 ----
+            var max_position_size = 10000;
+            if (res.customer.accountBalance < 20000) {
+                max_position_size = Math.floor( res.customer.accountBalance / 2 );
+                max_position_size = max_position_size < 151 ? 151 : max_position_size;
+            }
+            $('#amountOfTrade .btn:last-of-type').attr('data-amount','150-'+max_position_size);
+            // -----------------------------------------------
+
             if(res.customer.accountBalance<25)
             {
                 if(!$('#formDepositModal').hasClass('hidden-ref')){

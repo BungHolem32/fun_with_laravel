@@ -466,6 +466,15 @@
                                     /*set the new balance of the user (from the database in the accounts details) */
                                     $('.balance').html(res.customer.currencySign + ' ' + res.customer.accountBalance);
 
+                                    // Set maximum position size to balance / 2 ----
+                                    var max_position_size = 10000;
+                                    if (res.customer.accountBalance < 20000) {
+                                        max_position_size = Math.floor( res.customer.accountBalance / 2 );
+                                        max_position_size = max_position_size < 151 ? 151 : max_position_size;
+                                    }
+                                    $('.tab-four-buttons .btn:last-of-type').attr('data-amount','150-'+max_position_size);
+                                    // -----------------------------------------------
+
                                     /*if the account balance is lower then 25$*/
                                     if (res.customer.accountBalance < 25) {
 
