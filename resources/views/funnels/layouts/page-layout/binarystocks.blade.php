@@ -45,7 +45,7 @@
                         <div class="info-box">
                             <h3 class="height-title">Valuable Education Tools</h3>
                             <p>Every trader gets a huge packet of educational materials designed to enhance your trading
-                                skills. Our Binary options e-book presents a simple breakdown of trading basics, and our
+                                skills. Our Binary Options e-book presents a simple breakdown of trading basics, and our
                                 team of analysts sends out daily reviews covering important market events.</p>
                         </div>
                         <span class="box-shadow"></span>
@@ -53,7 +53,7 @@
                     <div class="col-md-3">
                         <div class="info-box red-box">
                             <h3 class="height-title">Welcome Bonuses & Rewards</h3>
-                            <p>RBoptions traders always get more! You can make your deposit go farther when we match it
+                            <p>Skyline Markets traders always get more! You can make your deposit go further when we match it
                                 with a 50% deposit bonus directly into your account. Our traders also qualify for high
                                 end Apple products like iPhones and iPads.</p>
                         </div>
@@ -62,8 +62,8 @@
                     <div class="col-md-3">
                         <div class="info-box blue-box">
                             <h3 class="height-title">$50,000 <br> Demo Account</h3>
-                            <p>Every new binary options trading account gets access to a $50,000 demo where you can try
-                                out strategies and techniques risk-free. The demo account offers the same range of
+                            <p>Every new Binary Options trading account gets access to a $50,000 demo where you can
+                                tryout strategies and techniques risk-free. The demo account offers the same range of
                                 assets as your live trading account, offering the perfect training environment.</p>
                         </div>
                         <span class="box-shadow"></span>
@@ -71,9 +71,9 @@
                     <div class="col-md-3">
                         <div class="info-box yellow-box">
                             <h3 class="height-title">Dedicated Account Managers & Customer Service available 24/7</h3>
-                            <p>RBoptions is always here to help, with a team of experienced professionals trained to
+                            <p>Skyline Markets is always here to help with a team of experienced professionals trained to
                                 answer your questions. Feel free to contact us at any time, day or night, for inquiries
-                                about trading or your account. We are devoted to your success.offering the perfect
+                                about trading or your account. We are devoted to your success offering the perfect
                                 training environment.</p>
                         </div>
                         <span class="box-shadow"></span>
@@ -106,24 +106,16 @@
                         <dl>
                             <dt>General Risk Warning:</dt>
                             <dd>
-                                Trading in binary options carries a high level of risk and can result in the
-                                loss of all of your investment; as such, binary options may not be appropriate
-                                for all investors. You should not invest money that you cannot afford to lose.
-                                Before deciding to trade, you should become aware of all the risks associated
-                                with binary options trading and seek advice from an independent and suitably
-                                licensed financial adviser. For more information about the risks associated with
-                                trading binary options, see our risk disclosure. Under no circumstances shall we
-                                have any liability to any person or entity for (a) any loss or damage in whole
-                                or part caused by, resulting from, or relating to any transactions related to
-                                binary options trading or (b) any direct, indirect, special, consequential or
-                                incidental damages whatsoever.
-                                A number of attractive reward features are given to new and current
-                                customers including but not limited to: welcome bonuses, giveaways and
-                                awards. All these are part of a promotions' program. These bonuses and awards
-                                are limited-time offers and the
-                                terms and conditions associated with any bonus rewards are subject to change.
-                                Please read carefully before accepting a special offer, refund, benefit,
-                                give away or bonus.
+                                Trading in Binary Options carries a high level of risk and can result in the loss of all of your investment; as such,
+                                Binary Options may not be appropriate for all investors. You should not invest money that you cannot afford to lose.
+                                Before deciding to trade, you should become aware of all the risks associated with Binary Options trading and seek advice
+                                from an independent and suitably licensed financial adviser. For more information about the risks associated with trading Binary Options,
+                                see our risk disclosure. Under no circumstances shall we be liable to any person or entity for,(a) any loss or damage in whole or
+                                part caused by, resulting from, or relating to any transactions related to Binary Options trading or,(b) any direct, indirect, special,
+                                consequential or incidental damages whatsoever. A number of attractive reward features are given to new and current customers, including
+                                but not limited to: Welcome bonuses, giveaways and awards. All these are part of a promotions program. These bonuses and awards are
+                                limited-time offers and the terms and conditions associated with any bonus rewards are subject to change. Please read carefully before
+                                accepting a special offer, refund, benefit, give away or bonus.
                             </dd>
                             <dd>
                                 @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/../policy", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Privacy Policy'])

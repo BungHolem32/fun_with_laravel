@@ -445,24 +445,16 @@
                         <div class="disclaimer">
                             <dt class="title">General Risk Warning:</dt>
                             <div class="content">
-                                Trading in binary options carries a high level of risk and can result in the
-                                loss of all of your investment; as such, binary options may not be appropriate
-                                for all investors. You should not invest money that you cannot afford to lose.
-                                Before deciding to trade, you should become aware of all the risks associated
-                                with binary options trading and seek advice from an independent and suitably
-                                licensed financial adviser. For more information about the risks associated with
-                                trading binary options, see our risk disclosure. Under no circumstances shall we
-                                have any liability to any person or entity for (a) any loss or damage in whole
-                                or part caused by, resulting from, or relating to any transactions related to
-                                binary options trading or (b) any direct, indirect, special, consequential or
-                                incidental damages whatsoever.
-                                A number of attractive reward features are given to new and current
-                                customers including but not limited to: welcome bonuses, giveaways and
-                                awards. All these are part of a promotions' program. These bonuses and awards
-                                are limited-time offers and the
-                                terms and conditions associated with any bonus rewards are subject to change.
-                                Please read carefully before accepting a special offer, refund, benefit,
-                                give away or bonus.
+                                Trading in Binary Options carries a high level of risk and can result in the loss of all of your investment; as such,
+                                Binary Options may not be appropriate for all investors. You should not invest money that you cannot afford to lose.
+                                Before deciding to trade, you should become aware of all the risks associated with Binary Options trading and seek advice
+                                from an independent and suitably licensed financial adviser. For more information about the risks associated with trading Binary Options,
+                                see our risk disclosure. Under no circumstances shall we be liable to any person or entity for,(a) any loss or damage in whole or
+                                part caused by, resulting from, or relating to any transactions related to Binary Options trading or,(b) any direct, indirect, special,
+                                consequential or incidental damages whatsoever. A number of attractive reward features are given to new and current customers, including
+                                but not limited to: Welcome bonuses, giveaways and awards. All these are part of a promotions program. These bonuses and awards are
+                                limited-time offers and the terms and conditions associated with any bonus rewards are subject to change. Please read carefully before
+                                accepting a special offer, refund, benefit, give away or bonus.
                             </div>
                         </div>
                     </div>

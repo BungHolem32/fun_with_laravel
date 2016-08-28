@@ -21,7 +21,7 @@ foreach($form->membersFields->getChildren() as $field){
                 'target'=>'_self',
                 'method'=>'post',
                 'class'=>'contact-form']) !!}
-<p>Open your binary options account and start trading <span>TODAY!</span></p>
+<p>Open your Binary Options Account and start trading <span>TODAY!</span></p>
 
 <input type="hidden" name="parentPage" value="{{ $funnelId }}">
 @forelse($hiddenFields as $hiddenField)

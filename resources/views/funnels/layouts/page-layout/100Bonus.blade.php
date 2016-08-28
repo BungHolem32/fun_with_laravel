@@ -64,7 +64,7 @@
                         <div class="feature-box">
                             <div class="text-holder">
                                 <h2>Personalized Support</h2>
-                                <p>Advanced training and Customer support is available 24/7.</p>
+                                <p>Advanced training and customer support are available 24/7.</p>
                             </div>
                         </div>
                     </div>

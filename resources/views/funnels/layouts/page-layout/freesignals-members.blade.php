@@ -62,7 +62,7 @@
                                 <h2>Education</h2>
                             </div>
                             <p>Take control of your development through a comprehensive library complete with
-                                eBooks, tutorials and video guides</p>
+                                eBooks, tutorials and video guides.</p>
                             <div class="ico-holder">
                                 <img src="/img/freesignals/ico1.png" alt="image description" width="60" height="38">
                             </div>
@@ -76,7 +76,7 @@
                                 <h2>Excellent Customer Service</h2>
                             </div>
                             <p>Our dedicated and efficient support team is available 24/7 to answer questions and
-                                process requests</p>
+                                process requests.</p>
                             <div class="ico-holder">
                                 <img src="/img/freesignals/ico2.png" alt="image description" width="40" height="48">
                             </div>
@@ -104,7 +104,7 @@
                                 <h2>State of the Art Platform</h2>
                             </div>
                             <p>Discover a platform that makes trading fun and profitable. Choose from the most
-                                popular stocks, currencies, indices, and commodities</p>
+                                popular stocks, currencies, indices, and commodities.</p>
                             <div class="ico-holder">
                                 <img src="/img/freesignals/ico4.png" alt="image description" width="55" height="26">
                             </div>
@@ -144,24 +144,16 @@
                     <dl>
                         <dt>General Risk Warning:</dt>
                         <dd>
-                            Trading in binary options carries a high level of risk and can result in the
-                            loss of all of your investment; as such, binary options may not be appropriate
-                            for all investors. You should not invest money that you cannot afford to lose.
-                            Before deciding to trade, you should become aware of all the risks associated
-                            with binary options trading and seek advice from an independent and suitably
-                            licensed financial adviser. For more information about the risks associated with
-                            trading binary options, see our risk disclosure. Under no circumstances shall we
-                            have any liability to any person or entity for (a) any loss or damage in whole
-                            or part caused by, resulting from, or relating to any transactions related to
-                            binary options trading or (b) any direct, indirect, special, consequential or
-                            incidental damages whatsoever.
-                            A number of attractive reward features are given to new and current
-                            customers including but not limited to: welcome bonuses, giveaways and
-                            awards. All these are part of a promotions' program. These bonuses and awards
-                            are limited-time offers and the
-                            terms and conditions associated with any bonus rewards are subject to change.
-                            Please read carefully before accepting a special offer, refund, benefit,
-                            give away or bonus.
+                            Trading in Binary Options carries a high level of risk and can result in the loss of all of your investment; as such,
+                            Binary Options may not be appropriate for all investors. You should not invest money that you cannot afford to lose.
+                            Before deciding to trade, you should become aware of all the risks associated with Binary Options trading and seek advice
+                            from an independent and suitably licensed financial adviser. For more information about the risks associated with trading Binary Options,
+                            see our risk disclosure. Under no circumstances shall we be liable to any person or entity for,(a) any loss or damage in whole or
+                            part caused by, resulting from, or relating to any transactions related to Binary Options trading or,(b) any direct, indirect, special,
+                            consequential or incidental damages whatsoever. A number of attractive reward features are given to new and current customers, including
+                            but not limited to: Welcome bonuses, giveaways and awards. All these are part of a promotions program. These bonuses and awards are
+                            limited-time offers and the terms and conditions associated with any bonus rewards are subject to change. Please read carefully before
+                            accepting a special offer, refund, benefit, give away or bonus.
                         </dd>
                         <dd>
                             @include('funnels.layouts._partials._link', ['url' => $page->fullSlug() . "/../policy", 'class'=>'fancybox_iframe','target'=>'_blank','text'=>'Privacy Policy'])
