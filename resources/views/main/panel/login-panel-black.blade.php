@@ -78,7 +78,7 @@
                 <button type="submit"
                         class="btn btn-success btn-lg text-center center-block btn-login text-uppercase">@ln(login)</button>
                 {{--FORGOT PASSWORD--}}
-                <a href="http://www.rboptions.com/ForgotPassword"
+                <a href="{{ $page->brand->forgotPassLink ?: "http://www.rboptions.com/ForgotPassword" }}"
                    class=" btn-lg bfloat forgotpass">@ln(Forgot Password)</a>
             </div>
             {!! Form::close() !!}
