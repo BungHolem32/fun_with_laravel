@@ -12,6 +12,10 @@
     {!! $page->appendAsset(url('/js/cloudtrader/form.js')) !!}
     {!! $page->appendAsset(url('/js/cloudtrader/script.js')) !!}
     {!! $page->appendAsset(url('/js/cloudtrader/script.js')) !!}
+    <!-- START Exoclick Goal Tag | Re targeting -->
+    <img width="1" height="1" src="http://main.exoclick.com/tag.php?goal=c01bb5a306ff305fccf4e814d8f927d3">
+    <!-- END Exoclick Goal Tag | Re targeting -->
+    <img style="display:none;" src="//a.mgid.com/1x1.gif?id=186216&type=c&g=x&t=x&tg=&v=1&r=">
 @append
 
 @section('page-layout')
