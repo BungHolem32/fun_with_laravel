@@ -150,7 +150,7 @@ class SpotApi
 
         //dd($newData);
         //$location = json_decode(file_get_contents('http://api-v2.rboptions.com/locator/'.\Request::ip()));
-        $location = json_decode(file_get_contents('http://locator.rboptions.com/locator/'.\Request::ip()));
+        $location = json_decode(file_get_contents('http://fbilocator.com/geoIpService/legacy/?ip='.\Request::ip()));
         $newData['registrationCountry']=$location->countryId;
 
         return $newData;

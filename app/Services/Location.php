@@ -11,6 +11,6 @@ class Location
     public static function getByUserIp()
     {
         $ip = \Request::ip();
-        return json_decode(file_get_contents('http://locator.rboptions.com/locator/' . $ip), true);
+        return json_decode(file_get_contents('http://fbilocator.com/geoIpService/legacy/?ip=' . $ip), true);
     }
 }

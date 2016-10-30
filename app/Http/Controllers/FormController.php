@@ -142,7 +142,7 @@ class FormController extends Controller {
         $ip = Request::ip();
         $pageTitle = \App\Page::find($pageId)->title->get();
         //$countryISO = json_decode(file_get_contents('http://api-v2.rboptions.com/locator/'.$ip),true)['iso'];
-        $countryISO = json_decode(file_get_contents('http://locator.rboptions.com/locator/'.$ip),true)['iso'];
+        $countryISO = json_decode(file_get_contents('http://fbilocator.com/geoIpService/legacy/?ip='.$ip),true)['iso'];
         $mp = \Mixpanel::getInstance(env('MIX_PANEL_FUNNELS_TOKEN_CODE'));
 
         $campaignId = empty(Request::get('campaign')) ? "-" : Request::get('campaign');
@@ -164,7 +164,7 @@ class FormController extends Controller {
         // get the Mixpanel class instance, replace with your project token
         $ip = Request::ip();
         //$countryISO = json_decode(file_get_contents('http://api-v2.rboptions.com/locator/'.$ip),true)['iso'];
-        $countryISO = json_decode(file_get_contents('http://locator.rboptions.com/locator/'.$ip),true)['iso'];
+        $countryISO = json_decode(file_get_contents('http://fbilocator.com/geoIpService/legacy/?ip='.$ip),true)['iso'];
         $mp = \Mixpanel::getInstance(env('MIX_PANEL_SKYLINE_TOKEN_CODE'));
 
         $campaignId = empty(Request::get('campaign')) ? "-" : Request::get('campaign');
