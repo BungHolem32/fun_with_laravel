@@ -51,9 +51,12 @@ class Domains
         'theweeklyfinancials.com' => 'skylinemarkets.com',
         'skylinemarkets.biz' => 'skylinemarkets.com',
         'autotradingpanel.com' => 'skylinemarkets.com',
+        'aff88541.com' => self::BRAND_BCM_WW
     ];
 
-    
+
+    const BRAND_BCM_WW = 'www.binarycm.com';
+
     public static function domainName($domain = '')
     {
         if (!$domain){
@@ -79,6 +82,8 @@ class Domains
         }
         if (strpos($destination, 'rboptions') !== false){
             $link = "http://www.rboptions.com/users.php?act=check&email=" . $customer->email . "&password=" . $customer->password;
+        } elseif (strpos($destination, self::BRAND_BCM_WW) !== false){
+            $link = "http://www.binarycm.com/remoteLogin?email=" . $customer->email . "&password=" . $customer->password;
         } elseif (strpos($destination, 'skylinemarkets') !== false){
             $data = json_encode([$customer->email, $customer->password]);
             $hash = base64_encode($data);

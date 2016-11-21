@@ -21,6 +21,12 @@ class SpotApi
             'api_password'=>'8bBXMytl66',
             'api_url'=>'http://api.skylinemarkets.com/api',
             'defaultCampaignId'=>8
+        ],
+        'www.binarycm.com' => [
+            'api_username'=> 'binarycm-new-funnels',
+            'api_password'=>'HPj84jdw4Q',
+            'api_url'=>'https://api.binarycm.com/api',
+            'defaultCampaignId'=>4
         ]
     ];
 
