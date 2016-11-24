@@ -29,7 +29,6 @@ class FormController extends Controller {
 //        echo $location;
         echo json_encode(Location::getByUserIp());
     }
-
     public function postForm(){
             $funnelPage = \App\Page::find(Request::get('parentPage'));
             if($funnelPage->switches->showSmsField === "1") {

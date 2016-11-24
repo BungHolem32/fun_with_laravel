@@ -51,7 +51,8 @@ class Domains
         'theweeklyfinancials.com' => 'skylinemarkets.com',
         'skylinemarkets.biz' => 'skylinemarkets.com',
         'autotradingpanel.com' => 'skylinemarkets.com',
-        'aff88541.com' => self::BRAND_BCM_WW
+        'aff88541.com' => self::BRAND_BCM_WW,
+        'aff55845.com' => self::BRAND_BCM_WW
     ];
 
 

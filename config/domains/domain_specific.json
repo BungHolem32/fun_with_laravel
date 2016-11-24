@@ -7,7 +7,11 @@
  		"captcha2": {
  			"dataSiteKey": "6LdVjSITAAAAANQRRaqCYEnt240R7CmKvuLn1VQg",
  			"secret": "6LdVjSITAAAAAGuMq8NO4dq5U7d_f9M7A0FjnYLs"
- 		}
+ 		},
+		"captcha_bcm": {
+			"dataSiteKey": "6LdOxwwUAAAAAEqzOZlQIPaSdSkbjv9kFoRDp-JO",
+			"secret": "6LdOxwwUAAAAAJITwfrCwhAyZ8NYWRZYtSCro7lX"
+		}
  	},
 
 	"domains":{
@@ -47,6 +51,7 @@
 		"football-insights.com":{"captcha":"captcha2"},
 		"thefinancialife.com":{"captcha":"captcha2"},
 		"theprofitmagazine.com":{"captcha":"captcha2"},
-		"theweeklyfinancials.com":{"captcha":"captcha2"}
+		"aff55845.com":{"captcha":"captcha_bcm"},
+		"aff88541.com":{"captcha":"captcha_bcm"}
 	}
  }
