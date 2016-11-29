@@ -205,20 +205,20 @@
                     </div>
                 </section>
                 <!--Video How_it_work PIC-->
-                <section id="video-how-method-works" class="container">
-                    <div class="row">
-                        <header class="col-md-12 col-sm-12 col-xs-12">
-                            <h2 class="title-question">How The Aussie Method Works</h2>
-                        </header>
+                {{--<section id="video-how-method-works" class="container">--}}
+                    {{--<div class="row">--}}
+                        {{--<header class="col-md-12 col-sm-12 col-xs-12">--}}
+                            {{--<h2 class="title-question">How The Aussie Method Works</h2>--}}
+                        {{--</header>--}}
 
-                        <div class="video-n-images col-md-12">
-                            <img src="/img/aussie-new/ipad.png" alt="ipad image" class="img-responsive center-block">
-                            <div class="video-tag">
-                                @include('funnels.layouts._partials._video', ['video_url'=>'http://video.chaki.netdna-cdn.com/guide4f.mp4','w'=>'100%', 'h'=>'100%','autoplay'=>'false'])
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                        {{--<div class="video-n-images col-md-12">--}}
+                            {{--<img src="/img/aussie-new/ipad.png" alt="ipad image" class="img-responsive center-block">--}}
+                            {{--<div class="video-tag">--}}
+                                {{--@include('funnels.layouts._partials._video', ['video_url'=>'http://video.chaki.netdna-cdn.com/guide4f.mp4','w'=>'100%', 'h'=>'100%','autoplay'=>'false'])--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</section>--}}
 
                 {{--LIVE THIRD PARTY  PART--}}
                 <section id="live-third-party" class="container center-block">
