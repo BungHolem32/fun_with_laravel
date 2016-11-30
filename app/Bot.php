@@ -50,7 +50,8 @@ class Bot
 
     public function turnOn(){
         if($this->customer->balance > $this->minAmount) {
-            if ($res = \DB::connection('master')->update("UPDATE bot SET status='On' WHERE customer_id=?", [$this->customer->id])) {
+            $res = \DB::connection('master')->update("UPDATE bot SET status='On' WHERE customer_id=?", [$this->customer->id]);
+            if ($res = 0 || $res = 1) {
                 $this->log('on', $res);
                 $this->placeOptions();
                 return ['err' => 0];
