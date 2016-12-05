@@ -146,11 +146,13 @@ class Bot
      * @throws \Exception
      */
     private function getOptions(){
+        $now = date('Y-m-d H:i', time()); // now.
         $startDate = date('Y-m-d H:i', (time() + (2*604800))); // 2 weeks.
         $endDate   = date('Y-m-d H:i', (time() + (4*604800))); // 4 weeks.
 
         //echo $startDate .' - '. $endDate;
 
+        $data['FILTER']['startDate']['max']   = $now;
         $data['FILTER']['endDate']['min']   = $startDate;
         $data['FILTER']['endDate']['max']   = $endDate;
         $data['FILTER']['status']           = 'open';
