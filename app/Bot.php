@@ -43,15 +43,16 @@ class Bot
     }
 
     public function setRange($min, $max){
-        $res = \DB::connection('master')->update("UPDATE bot SET `minAmount`=?, `maxAmount`=? where customer_id=?", [$min, $max, $this->customer->id]);
+        $res = \DB::connection('master')->update("UPDATE bot SET `minAmount`=?, `maxAmount`=? where customer_id=? AND brand_id=?", [$min, $max, $this->customer->id, SpotApi::getBrandId()]);
         $this->log('range', $min.' - '.$max.': '.($res ? 'success' : 'fail'));
         return $res;
     }
 
     public function turnOn(){
         if($this->customer->balance > $this->minAmount) {
-            $res = \DB::connection('master')->update("UPDATE bot SET status='On' WHERE customer_id=?", [$this->customer->id]);
-            if ($res = 0 || $res = 1) {
+            $res = \DB::connection('master')->update("UPDATE bot SET status='On' WHERE customer_id=? AND brand_id=?",
+                [$this->customer->id, SpotApi::getBrandId()]);
+            if ($res !== false) {
                 $this->log('on', $res);
                 $this->placeOptions();
                 return ['err' => 0];
@@ -65,7 +66,8 @@ class Bot
     public function turnOff(){
         $err = '';
         if($this->status == 'On'){
-            $r = \DB::connection('master')->update("UPDATE bot SET status='Off' WHERE customer_id=?",[$this->customer->id]);
+            $r = \DB::connection('master')->update("UPDATE bot SET status='Off' WHERE customer_id=? AND brand_id=?",
+                [$this->customer->id, SpotApi::getBrandId()]);
             if($r !== 1){
                 $err = 'update failed.';
             }
@@ -179,9 +181,14 @@ class Bot
     }
 
     protected function setDefaultSettings($save = true){
-        $settings = ['customer_id'=>$this->customer->id, 'minAmount'=>self::defaultMin, 'maxAmount'=>self::defaultMax, 'status'=>'Off'];
+        $settings = [
+            'customer_id'=>$this->customer->id,
+            'brand_id'=>SpotApi::getBrandId(),
+            'minAmount'=>self::defaultMin,
+            'maxAmount'=>self::defaultMax,
+            'status'=>'Off'];
         if($save){
-            \DB::connection('master')->insert('insert into `bot` (`customer_id`, `minAmount`, `maxAmount`,`status`) values (:customer_id, :minAmount, :maxAmount, :status)', $settings);
+            \DB::connection('master')->insert('insert into `bot` (`customer_id`, `brand_id`, `minAmount`, `maxAmount`,`status`) values (:customer_id, :brand_id, :minAmount, :maxAmount, :status)', $settings);
         }
         foreach($settings as $k=>$v){
             $this->{$k} = $v;
@@ -192,12 +199,13 @@ class Bot
     private function log($action, $result, $db = true, $file = false){
         $data = [
             'customer_id' => $this->customer->id,
+            'brand_id' => SpotApi::getBrandId(),
             'action' => $action,
             'result' => print_r($result, true),
             'user' => ($this->customer->isLogged() ? 'user' : 'bot')
         ];
         if($db){
-            \DB::connection('master')->insert('insert into `bot_log` (`customer_id`, `action`, `result`, `user`) VALUES (?, ?, ?, ?)', array_values($data));
+            \DB::connection('master')->insert('insert into `bot_log` (`customer_id`, `brand_id`, `action`, `result`, `user`) VALUES (?, ?, ?, ?, ?)', array_values($data));
         }
         if($file){
             Log::info('BotLog - '.$action, $data);

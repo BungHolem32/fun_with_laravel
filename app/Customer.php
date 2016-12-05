@@ -147,7 +147,7 @@ class Customer
     }*/
 
     public function getBotSettings(){
-        $row = \DB::connection('master')->select('select * from `bot` where customer_id=?', [$this->id]);
+        $row = \DB::connection('master')->select('select * from `bot` where customer_id=? AND brand_id=?', [$this->id, SpotApi::getBrandId()]);
         if($row)
             return $row[0];
         return [];

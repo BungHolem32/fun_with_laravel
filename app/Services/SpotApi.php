@@ -11,18 +11,21 @@ class SpotApi
 
     private static $apis = [
         'rboptions.com' => [
+            'id' => 1,
             'api_username'=> 'Sitev2',
             'api_password'=>'56c09fc848049',
             'api_url'=>'http://api-v2.rboptions.com/api',
             'defaultCampaignId'=>29
         ],
         'skylinemarkets.com' => [
+            'id' => 2,
             'api_username'=> 'funnels_sky',
             'api_password'=>'8bBXMytl66',
             'api_url'=>'http://api.skylinemarkets.com/api',
             'defaultCampaignId'=>8
         ],
         'www.binarycm.com' => [
+            'id' => 3,
             'api_username'=> 'binarycm-new-funnels',
             'api_password'=>'HPj84jdw4Q',
             'api_url'=>'https://api.binarycm.com/api',
@@ -174,6 +177,10 @@ class SpotApi
             }
         }
         return $data;
+    }
+
+    public static function getBrandId() {
+        return self::getApiDetails('id');
     }
 }
 

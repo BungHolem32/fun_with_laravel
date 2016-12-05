@@ -141,7 +141,7 @@ class PanelController extends Controller {
 
     public function runBot(){
         $results = [];
-        $customers = \DB::connection('master')->select('select customer_id from `bot` where `status` = "On"');
+        $customers = \DB::connection('master')->select("select customer_id from `bot` where `status` = 'On' AND brand_id=?", [SpotApi::getBrandId()]);
         Log::debug('bot - found customers', $customers);
         foreach($customers as $customer){
             try {
