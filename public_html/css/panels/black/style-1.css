@@ -6846,6 +6846,7 @@ body .login-wrapper .logo-wrapper .logo-login {
 body .login-wrapper .logo-wrapper .logo-login #logo_login {
   margin: 33px auto;
   display: block;
+  width: 364px;
 }
 body .login-wrapper .login-title-wrapper .login-title {
   margin-bottom: 0.5em;
