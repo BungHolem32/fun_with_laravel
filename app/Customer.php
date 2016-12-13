@@ -65,10 +65,12 @@ class Customer
         if($data['firstDepositDate'] != '0000-00-00'){
             $ans = SpotApi::sendRequest('CreditCardUser', 'view', ['FILTER'=>['customerId'=>$this->id]]);
             if($ans['err'] !== 0){
-                throw new SpotException($ans['errs']['error']);
-            }
-            if(array_key_exists('data_0', $ans['status']['CreditCardUser'])){
-                $this->creditCards = ($ans['status']['CreditCardUser']);
+//                throw new SpotException($ans['errs']['error']);
+                $this->creditCards = [];
+            } else {
+                if(array_key_exists('data_0', $ans['status']['CreditCardUser'])){
+                    $this->creditCards = ($ans['status']['CreditCardUser']);
+                }
             }
         }
 
