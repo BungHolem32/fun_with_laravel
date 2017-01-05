@@ -261,7 +261,7 @@ $('body').on('click', '.left-button', function () {
 
     /*ADD QUESTION AND ANSWERS*/
     function addQuestionAnswer() {
-        var questions = ['What is the Aussie Method?', 'How much money can I make with this software?', 'How long does each trade last??', 'Do I need to use my credit card when I signup?',
+        var questions = ['What is the Aussie Method?', 'How much money can I make with this software?', 'How long does each trade last?', 'Do I need to use my credit card when I signup?',
             'Does your software work with Mac computers?', 'I don\'t have much free time - Is the Aussie Method really automated?', 'How easy is it to use the software?',
             'What about customer support?'];
         var answers = ['The Aussie Method is a 100% FREE software that will trade on the binary options markets with just 1 click! It\'s fully automated and places the winning trades for you!',
