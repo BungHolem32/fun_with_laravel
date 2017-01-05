@@ -459,7 +459,7 @@
                 <p>What about customer support?</p>
             </div>
             <div class="a-section" style="">
-                <p>Our customer support team operates 7 days per week - 24 hours a day. <strong>We have email support but more importantly we have a FULL live chat system in the members area with our support agents ready to help you at ANY time! 2am? NO PROBLEM!</strong></p>
+                <p>Our customer support team operates 7 days per week - 24 hours a day. <strong>We have email support but more importantly we have a FULL live chat system in the members area with our support agents ready to help you at ANY time! 2 am? NO PROBLEM!</strong></p>
             </div>
         </div>
     </Center>

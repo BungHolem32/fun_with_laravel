@@ -452,13 +452,13 @@
                 <p>How easy is it to use the software?</p>
             </div>
             <div class="a-section" style="">
-                <p>VERY EASY! Once you sign up in the members area by filling in a simple form, the software is infront of you, click play, make profits! There is no complicated setup!</p>
+                <p>VERY EASY! Once you sign up in the members area by filling in a simple form, the software is in front of you, click play, make profits! There is no complicated setup!</p>
             </div>
             <div class="q-section"> <img alt="" src="/img/aussie-ca/plus-icon.png">
                 <p>What about customer support?</p>
             </div>
             <div class="a-section" style="">
-                <p>Our customer support team operates 7 days per week - 24 hours a day. <strong>We have email support but more importantly we have a FULL live chat system in the members area with our support agents ready to help you at ANY time! 2am? NO PROBLEM!</strong></p>
+                <p>Our customer support team operates 7 days per week - 24 hours a day. <strong>We have email support but more importantly we have a FULL live chat system in the members area with our support agents ready to help you at ANY time! 2 am? NO PROBLEM!</strong></p>
             </div>
         </div>
     </Center>

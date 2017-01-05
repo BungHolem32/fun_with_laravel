@@ -261,18 +261,18 @@ $('body').on('click', '.left-button', function () {
 
     /*ADD QUESTION AND ANSWERS*/
     function addQuestionAnswer() {
-        var questions = ['What is the Aussie Method?', 'How much money can I make with this software?', 'How long does each trade last?', 'Do I need to use my credit card when I signup?',
-            'Does your software work with Mac computers?', 'I don\'t have much free time - Is the Aussie Method really automated?', 'How easy is it to use the software?',
+        var questions = ['What is the Aussie Method?', 'How much money can I make with this software?', 'How long does each trade last?', 'Do I need to use my credit card when I signup? ',
+            'Does your software work with Mac computers?', 'I don\'t have much free time - Is the Aussie Method really automated?', 'How easy is it to use the software? ',
             'What about customer support?'];
-        var answers = ['The Aussie Method is a 100% FREE software that will trade on the binary options markets with just 1 click! It\'s fully automated and places the winning trades for you!',
-            'To put it in short, there"s no limit. To put it more technically, it really depends on how much money you fund your account with. Most of our members fund their account with' +
-            '$300, and make about $800-1000 daily. Those who fund their account with $1,000 or over make over $2,500 per day!', 'Anywhere from a minute to an hour. So you will see your profits right' +
-            'away, no more waiting for long periods of time.', 'NO WAY. The Aussie Method App is 100% FREE. You will NOT be asked for your credit card or paypal or bank information when you download the Aussie Method System!' +
-            'Once you are in the members area, we will recommend a binary options broker that you can exploit. For this, you\'ll need funds to deposit in order to start making profits. This is YOUR money that you are just depositing to trade with, and you can withdraw it at' + 'any time!',
-            'It is a web based application which means it can be used on  Windows, Mac or Linux based  systems! You just need a web browser.', ' You simply click play in the software and it will trade for you! You can walk away from' +
-            'your computer, and enjoy your profits! You don\'t have to be anywhere near the software for it to work for you and make you thousands per day!', '<span>VERY EASY!</span> Once you sign up in the members area by' + 'filling in a simple form, the' +
-            'software is infront of you, click play, make profits! There is no complicated setup!', 'Our customer support team operates 7 days per week - 24 hours a day. We have email support but more importantly we have a FULL live chat system in the members area with our' +
-            'support agents ready to help you at ANY time! 2am? NO PROBLEM!'];
+        var answers = ['The Aussie Method is a 100% FREE software that will trade on the binary options markets with just 1 click! It\'s fully automated and places the winning trades for you! ',
+            'To put it in short, there"s no limit. To put it more technically, it really depends on how much money you fund your account with. Most of our members fund their account with ' +
+            '$300, and make about $800-1000 daily. Those who fund their account with $1,000 or over make over $2,500 per day!', 'Anywhere from a minute to an hour. So you will see your profits right ' +
+            'away, no more waiting for long periods of time.', 'NO WAY. The Aussie Method App is 100% FREE. You will NOT be asked for your credit card or paypal or bank information when you download the Aussie Method System! ' +
+            'Once you are in the members area, we will recommend a binary options broker that you can exploit. For this, you\'ll need funds to deposit in order to start making profits. This is YOUR money that you are just depositing to trade with, and you can withdraw it at ' + 'any time! ',
+            'It is a web based application which means it can be used on  Windows, Mac or Linux based  systems! You just need a web browser.', ' You simply click play in the software and it will trade for you! You can walk away from ' +
+            'your computer, and enjoy your profits! You don\'t have to be anywhere near the software for it to work for you and make you thousands per day!', '<span>VERY EASY!</span> Once you sign up in the members area by ' + 'filling in a simple form, the ' +
+            'software is in front of you, click play, make profits! There is no complicated setup! ', 'Our customer support team operates 7 days per week - 24 hours a day. We have email support but more importantly we have a FULL live chat system in the members area with our ' +
+            'support agents ready to help you at ANY time! 2 am? NO PROBLEM!'];
 
         var qN = $('#frequently-asked-questions .container .row .question_n_answer'),
             html = '';
