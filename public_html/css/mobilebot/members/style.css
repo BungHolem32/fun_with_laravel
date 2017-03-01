@@ -1,0 +1,262 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+a{
+	color:white;
+	text-decoration: none;
+}
+
+a:hover{
+	color:grey;
+}
+
+.theLogo{
+	width: 23%;
+	margin-top: -49px;
+}
+
+input{
+	width:100%;
+	background:#ececec;
+	height:45px;
+	border:1px solid #c3c3c3;
+	border-radius: 4px;
+	text-indent: 39px;
+	font-size:14px;
+}
+
+.support_p{
+	text-align: left;font-weight: 300;margin-left: 24px;
+}
+
+input[type="image"]{
+	max-width:397px;
+	width:100%;
+	height:75px;
+	border:none;
+	text-align: center;
+	margin:0 auto;
+	outline: none;
+}
+
+.bubble{
+	background:url('../images/txt_bubble.png')no-repeat;
+	height:250px;
+	max-width:1023px;
+}
+
+
+.bubble_right{
+	background:url('../images/txt_bubble_right.png')no-repeat;
+	height:250px;
+	max-width:1023px;
+}
+
+.bubble p{
+	color:#505050;
+	margin-left:10px;
+	font-style: italic;
+}
+
+.bubble_right p{
+	color:#505050;
+	margin-left:10px;
+	font-style: italic;
+}
+
+.name{
+  background-image:url('../images/icons/name.png');
+  background-repeat:no-repeat;
+  background-position:  10px; 
+}
+
+.mail{
+  background-image:url('../images/icons/mail.png');
+  background-repeat:no-repeat;
+  background-position:  10px; 
+}
+
+.pass{
+  background-image:url('../images/icons/pass.png');
+  background-repeat:no-repeat;
+  background-position:  10px; 
+}
+
+.phone{
+  background-image:url('../images/icons/phone.png');
+  background-repeat:no-repeat;
+  background-position:  10px; 
+}
+
+.form{
+	  padding-top:45px;
+}
+
+
+
+.form iframe{
+	width:100%;height:490px;border:none;outliine:none;
+}
+
+
+.tv_box{
+	  background: url('../images/tv_new.png') no-repeat top left;
+  height: 511px;
+  width: 100%;
+  max-width: 736px;
+  background-size: contain;
+  margin-top: 111px;
+  
+}
+
+.video_container{
+	  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+    margin-left: 630px;
+}
+
+.video-container iframe{
+    width: 85%;
+  margin-right: 68px;
+  height: 352px;
+  margin-top: 27px;
+}
+
+.first_section{
+	background:url('../images/header_bg.jpg')no-repeat;
+	background-position: center;
+	background-size:cover;
+	height:658px;
+/*	  background-position-y: -26px;*/
+}
+
+::-webkit-input-placeholder {
+   font-weight: 300;
+   padding-left: 28px;
+   font-size: 13px;
+   font-style: italic;
+   color:#333333;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   font-weight: 300;
+   padding-left: 28px;
+   font-size: 13px;
+   font-style: italic;
+   color:#333333;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   font-weight: 300;
+   padding-left: 28px;
+   font-size: 13px;
+   font-style: italic;
+   color:#333333;
+}
+
+:-ms-input-placeholder {  
+   font-weight: 300;
+   padding-left: 28px;
+   font-size: 13px;
+   font-style: italic;
+   color:#333333;
+}
+
+.second_section{
+		background:url('../images/bg2.jpg')no-repeat;
+	background-position: center;
+	background-size:contain;
+	height:662px;
+	   background-position: 12px 51px;
+	 background-color:#ececec;
+}
+
+.tableChart{
+	/*background:url('../images/table_bg.png')no-repeat;*/
+	height:676px;
+	width:100%;
+	background-size:contain;
+}
+
+.tableChart iframe{
+	height:676px;
+	width:100%;
+}
+
+.support{
+	background:url('../images/support_bg2.png')no-repeat;
+	height:336px;
+	background-size:contain;
+	background-position: center;
+}
+
+.support p{
+	padding-top: 106px;
+}
+
+@media(max-width: 640px){
+
+		.theLogo{
+	width: 46%;
+}
+
+	.form iframe{
+		height:600px;
+	}
+     
+	.support_p{
+		margin-left:5px;
+		font
+	}
+
+       .video-container iframe{
+    width: 90%;
+  margin-right: 15px;
+    height: 308px;
+  margin-top: 18px;
+}
+	.support p{
+	padding-top: 128px;
+	}
+}
+
+@media(max-width: 960px){
+
+
+.bubble p{
+	font-size: 13px;
+  padding-left: 10px;
+  margin-top: 3px;
+}
+
+.bubble_right p{
+	  font-size: 13px;
+  padding-left: 10px;
+  margin-top:3px;
+}
+
+	.support p{
+		padding-top:125px;
+	}
+
+	.form iframe{
+		  padding-bottom: 45px;
+	}
+
+	.first_section{
+		height:auto;
+	}
+
+	.second_section{
+		background:#ececec;
+	}
+
+	.table{
+		height:auto;
+	}
+}
+
